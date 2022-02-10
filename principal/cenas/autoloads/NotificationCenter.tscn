@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://principal/cenas/scripts/NotificationCenter.gd" type="Script" id=1]
+[ext_resource path="res://principal/recursos/fonts/Stop Bullying.otf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 128
+outline_size = 8
+outline_color = Color( 0.172549, 0.141176, 0.207843, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+RichTextLabel/colors/default_color = Color( 0.952941, 0.913725, 0.976471, 1 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "notify"
+length = 1.4
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("NotificationContainer:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -400, -0.25, 0, 0.25, 0, 400, -0.25, 0, 0.25, 0, 400, -0.25, 0, 0.25, 0, -400, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.4, 1, 1.4 )
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("NotificationContainer/Notification")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "show"
+}, {
+"args": [  ],
+"method": "hide"
+} ]
+}
+
+[node name="NotificationCenter" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NotificationContainer" type="Node2D" parent="."]
+position = Vector2( 0, -348.403 )
+z_index = 1
+
+[node name="Notification" type="RichTextLabel" parent="NotificationContainer"]
+visible = false
+margin_right = 1920.0
+margin_bottom = 259.0
+theme = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center][shake rate=15 level=30] Test"
+text = " Test"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/notify = SubResource( 3 )

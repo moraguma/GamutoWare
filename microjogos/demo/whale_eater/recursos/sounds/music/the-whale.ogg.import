@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/the-whale.ogg-5ad7a581bf785ba268ad7efc6dac005e.oggstr"
+
+[deps]
+
+source_file="res://microjogos/demo/whale_eater/recursos/sounds/music/the-whale.ogg"
+dest_files=[ "res://.import/the-whale.ogg-5ad7a581bf785ba268ad7efc6dac005e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

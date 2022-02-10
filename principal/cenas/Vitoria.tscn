@@ -1,0 +1,172 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://principal/recursos/fonts/Stop Bullying.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://principal/recursos/sprites/excited.png" type="Texture" id=2]
+[ext_resource path="res://principal/cenas/scripts/TransitionButton.gd" type="Script" id=3]
+[ext_resource path="res://principal/recursos/sprites/GMToutline.png" type="Texture" id=4]
+[ext_resource path="res://principal/recursos/sprites/MenuBase.png" type="Texture" id=5]
+[ext_resource path="res://principal/cenas/scripts/AutoplayIdleAnimationPlayer.gd" type="Script" id=6]
+
+[sub_resource type="Shader" id=3]
+code = "shader_type canvas_item;
+
+uniform vec4 color1 : hint_color;
+uniform vec4 color2 : hint_color;
+
+// Size of each diamond, in pixels.
+uniform float diamondPixelSize = 10f;
+
+void fragment() {
+	float xFraction = fract(FRAGCOORD.x / diamondPixelSize);
+	float yFraction = fract(FRAGCOORD.y / diamondPixelSize);
+	float xDistance = abs(xFraction - 0.5);
+	float yDistance = abs(yFraction - 0.5);
+	
+	if ((xDistance + yDistance + UV.x + UV.y > (TIME - (2f * floor(TIME / 2f))) * 3f) || xDistance + yDistance + UV.x + UV.y < (TIME - (2f * floor(TIME / 2f))) * 3f - 2f) {
+		COLOR = color1
+	} else {
+		COLOR = color2
+	}
+}"
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = SubResource( 3 )
+shader_param/color1 = Color( 0.6, 0.254902, 0.772549, 1 )
+shader_param/color2 = Color( 0.682353, 0.254902, 0.784314, 1 )
+shader_param/diamondPixelSize = 50.0
+
+[sub_resource type="Curve" id=5]
+min_value = -360.0
+max_value = 360.0
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.990196, 360 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="DynamicFont" id=1]
+size = 128
+outline_size = 36
+outline_color = Color( 0.172549, 0.141176, 0.207843, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+RichTextLabel/colors/default_color = Color( 0.952941, 0.913725, 0.976471, 1 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 96
+outline_size = 16
+outline_color = Color( 0.172549, 0.141176, 0.207843, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=10]
+default_font = SubResource( 9 )
+RichTextLabel/colors/default_color = Color( 0.952941, 0.913725, 0.976471, 1 )
+
+[sub_resource type="Animation" id=11]
+resource_name = "idle"
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0.2, -0.25, 0, 0, 0.05, 0.2, 0, 0.05, 0.25, 0 ),
+"times": PoolRealArray( 0.8, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0.2, -0.25, 0, 0, 0.05, 0.2, 0, 0.05, 0, 0 ),
+"times": PoolRealArray( 0.8, 1 )
+}
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="DynamicFont" id=7]
+size = 64
+outline_size = 16
+outline_color = Color( 0.172549, 0.141176, 0.207843, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=8]
+default_font = SubResource( 7 )
+Button/colors/font_color = Color( 0.952941, 0.913725, 0.976471, 1 )
+Button/colors/font_color_hover = Color( 0.615686, 0, 1, 1 )
+Button/styles/focus = SubResource( 6 )
+
+[node name="Menu" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+material = SubResource( 4 )
+position = Vector2( 960, 540 )
+texture = ExtResource( 5 )
+
+[node name="GMTParticles" type="CPUParticles2D" parent="."]
+position = Vector2( -880, -1080 )
+amount = 32
+lifetime = 2.5
+preprocess = 2.5
+texture = ExtResource( 4 )
+emission_shape = 2
+emission_rect_extents = Vector2( 1080, 1080 )
+direction = Vector2( 1, 1 )
+gravity = Vector2( 500, 500 )
+initial_velocity = 1000.0
+angle_curve = SubResource( 5 )
+
+[node name="Title" type="RichTextLabel" parent="."]
+margin_left = 264.0
+margin_top = 82.0
+margin_right = 1655.0
+margin_bottom = 328.0
+rect_clip_content = false
+theme = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center][shake rate=20 level=40]VITÓORIA"
+text = "VITÓORIA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mensagem" type="RichTextLabel" parent="."]
+margin_left = 254.0
+margin_top = 443.0
+margin_right = 1666.0
+margin_bottom = 816.0
+rect_clip_content = false
+theme = SubResource( 10 )
+bbcode_enabled = true
+bbcode_text = "[center][wave amp=100 freq=5]Valeu por jogar!"
+text = "Valeu por jogar!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Gamuto" type="Sprite" parent="."]
+position = Vector2( 960, 692 )
+scale = Vector2( 0.237318, 0.237318 )
+texture = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Gamuto"]
+anims/idle = SubResource( 11 )
+script = ExtResource( 6 )
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="Menu" type="Button" parent="Buttons"]
+margin_left = 849.0
+margin_top = 890.0
+margin_right = 1072.0
+margin_bottom = 992.0
+theme = SubResource( 8 )
+text = "MENU"
+flat = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+path = "res://principal/cenas/Menu.tscn"

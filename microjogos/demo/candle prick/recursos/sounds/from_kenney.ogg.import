@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/from_kenney.ogg-a2268961b64a97ca1c378da6f0440be6.oggstr"
+
+[deps]
+
+source_file="res://microjogos/demo/candle prick/recursos/sounds/from_kenney.ogg"
+dest_files=[ "res://.import/from_kenney.ogg-a2268961b64a97ca1c378da6f0440be6.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

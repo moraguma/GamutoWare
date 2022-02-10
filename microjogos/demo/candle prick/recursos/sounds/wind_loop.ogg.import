@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/wind_loop.ogg-3a90c01e9c1fab1f10e642a090c7039f.oggstr"
+
+[deps]
+
+source_file="res://microjogos/demo/candle prick/recursos/sounds/wind_loop.ogg"
+dest_files=[ "res://.import/wind_loop.ogg-3a90c01e9c1fab1f10e642a090c7039f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

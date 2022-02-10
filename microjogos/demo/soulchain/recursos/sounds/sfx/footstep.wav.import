@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/footstep.wav-8b0a0a8f2006b33fc80bed13f2c314e8.sample"
+
+[deps]
+
+source_file="res://microjogos/demo/soulchain/recursos/sounds/sfx/footstep.wav"
+dest_files=[ "res://.import/footstep.wav-8b0a0a8f2006b33fc80bed13f2c314e8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

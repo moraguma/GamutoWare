@@ -1,0 +1,13 @@
+extends Sprite
+
+
+const RADIUS = 8
+const FREQUENCY = 8
+
+
+var time_elapsed = 0
+
+
+func _process(delta):
+	time_elapsed += delta
+	offset = Vector2(0, 1) * RADIUS * sin(FREQUENCY * time_elapsed)

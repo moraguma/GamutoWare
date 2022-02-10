@@ -1,0 +1,46 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://principal/recursos/sounds/music/Menu.ogg" type="AudioStream" id=1]
+[ext_resource path="res://principal/cenas/scripts/SoundController.gd" type="Script" id=2]
+[ext_resource path="res://principal/recursos/sounds/music/GameIntro.ogg" type="AudioStream" id=3]
+[ext_resource path="res://principal/recursos/sounds/music/GameLoop.ogg" type="AudioStream" id=4]
+[ext_resource path="res://principal/recursos/sounds/SFX/Throw.wav" type="AudioStream" id=5]
+[ext_resource path="res://principal/recursos/sounds/SFX/Click.wav" type="AudioStream" id=6]
+[ext_resource path="res://principal/recursos/sounds/SFX/Damage.wav" type="AudioStream" id=7]
+[ext_resource path="res://principal/recursos/sounds/SFX/Win.wav" type="AudioStream" id=8]
+
+[node name="SoundController" type="Node"]
+script = ExtResource( 2 )
+
+[node name="Music" type="Node" parent="."]
+
+[node name="Menu" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 1 )
+bus = "Menu"
+
+[node name="GameIntro" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 3 )
+bus = "Game"
+
+[node name="GameLoop" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 4 )
+bus = "Game"
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Click" type="AudioStreamPlayer" parent="Node"]
+stream = ExtResource( 6 )
+
+[node name="Damage" type="AudioStreamPlayer" parent="Node"]
+stream = ExtResource( 7 )
+volume_db = 10.0
+
+[node name="Throw" type="AudioStreamPlayer" parent="Node"]
+stream = ExtResource( 5 )
+volume_db = 5.0
+
+[node name="Win" type="AudioStreamPlayer" parent="Node"]
+stream = ExtResource( 8 )
+volume_db = 10.0
+
+[connection signal="finished" from="Music/GameIntro" to="." method="start_loop"]

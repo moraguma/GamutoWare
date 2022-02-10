@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/music.ogg-c1f59d529bb2bc82d5da9c57a4fc1815.oggstr"
+
+[deps]
+
+source_file="res://microjogos/demo/hora_da_necromancia/recursos/sounds/music.ogg"
+dest_files=[ "res://.import/music.ogg-c1f59d529bb2bc82d5da9c57a4fc1815.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

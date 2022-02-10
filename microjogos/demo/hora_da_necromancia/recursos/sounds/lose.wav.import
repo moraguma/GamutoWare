@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/lose.wav-e6604912d35c27620719acff334f27e6.sample"
+
+[deps]
+
+source_file="res://microjogos/demo/hora_da_necromancia/recursos/sounds/lose.wav"
+dest_files=[ "res://.import/lose.wav-e6604912d35c27620719acff334f27e6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

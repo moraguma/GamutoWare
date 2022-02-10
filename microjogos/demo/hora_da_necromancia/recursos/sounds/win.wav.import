@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/win.wav-2b0378d8ada0bd902b444112074979df.sample"
+
+[deps]
+
+source_file="res://microjogos/demo/hora_da_necromancia/recursos/sounds/win.wav"
+dest_files=[ "res://.import/win.wav-2b0378d8ada0bd902b444112074979df.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
