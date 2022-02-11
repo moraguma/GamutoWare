@@ -59,7 +59,7 @@ z_index = 1
 [node name="Notification" type="RichTextLabel" parent="NotificationContainer"]
 visible = false
 margin_right = 1920.0
-margin_bottom = 259.0
+margin_bottom = 663.0
 theme = SubResource( 2 )
 bbcode_enabled = true
 bbcode_text = "[center][shake rate=15 level=30] Test"

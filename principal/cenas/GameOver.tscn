@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://principal/recursos/fonts/Stop Bullying.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://principal/recursos/sprites/GMToutline.png" type="Texture" id=2]
 [ext_resource path="res://principal/recursos/sprites/MenuBase.png" type="Texture" id=3]
 [ext_resource path="res://principal/cenas/scripts/GameOver.gd" type="Script" id=4]
 [ext_resource path="res://principal/cenas/scripts/TransitionButton.gd" type="Script" id=5]
+[ext_resource path="res://principal/cenas/scripts/TranslatableText.gd" type="Script" id=6]
 
 [sub_resource type="Shader" id=3]
 code = "shader_type canvas_item;
@@ -70,10 +71,11 @@ font_data = ExtResource( 1 )
 [sub_resource type="Theme" id=8]
 default_font = SubResource( 7 )
 Button/colors/font_color = Color( 0.952941, 0.913725, 0.976471, 1 )
+Button/colors/font_color_focus = Color( 0.615686, 0, 1, 1 )
 Button/colors/font_color_hover = Color( 0.615686, 0, 1, 1 )
 Button/styles/focus = SubResource( 6 )
 
-[node name="Menu" type="Node2D"]
+[node name="GameOver" type="Node2D"]
 script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -102,11 +104,14 @@ margin_bottom = 328.0
 rect_clip_content = false
 theme = SubResource( 2 )
 bbcode_enabled = true
-bbcode_text = "[center][shake rate=20 level=40]GAME   OVER"
-text = "GAME   OVER"
+bbcode_text = "[center][shake rate=20 level=40]FIM   DE   JOGO"
+text = "FIM   DE   JOGO"
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+pt_text = "[center][shake rate=20 level=40]FIM   DE   JOGO"
+en_text = "[center][shake rate=20 level=40]GAME   OVER"
 
 [node name="Score" type="RichTextLabel" parent="."]
 margin_left = 254.0
@@ -138,4 +143,5 @@ script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+start_focused = true
 path = "res://principal/cenas/Menu.tscn"

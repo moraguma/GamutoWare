@@ -1,9 +1,13 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://principal/cenas/scripts/JamButton.gd" type="Script" id=1]
 [ext_resource path="res://principal/recursos/fonts/Stop Bullying.otf" type="DynamicFontData" id=2]
 [ext_resource path="res://principal/recursos/sprites/MenuBase.png" type="Texture" id=3]
 [ext_resource path="res://principal/recursos/sprites/GMToutline.png" type="Texture" id=4]
+[ext_resource path="res://principal/cenas/scripts/TransitionButton.gd" type="Script" id=5]
+[ext_resource path="res://principal/cenas/ToggleButton.tscn" type="PackedScene" id=6]
+[ext_resource path="res://principal/cenas/scripts/TranslatableText.gd" type="Script" id=7]
+[ext_resource path="res://principal/cenas/scripts/ToTitle.gd" type="Script" id=8]
 
 [sub_resource type="Shader" id=3]
 code = "shader_type canvas_item;
@@ -48,6 +52,16 @@ font_data = ExtResource( 2 )
 default_font = SubResource( 1 )
 RichTextLabel/colors/default_color = Color( 0.952941, 0.913725, 0.976471, 1 )
 
+[sub_resource type="DynamicFont" id=9]
+size = 48
+outline_size = 12
+outline_color = Color( 0.172549, 0.141176, 0.207843, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="Theme" id=10]
+default_font = SubResource( 9 )
+RichTextLabel/colors/default_color = Color( 0.952941, 0.913725, 0.976471, 1 )
+
 [sub_resource type="StyleBoxEmpty" id=6]
 
 [sub_resource type="DynamicFont" id=7]
@@ -59,10 +73,12 @@ font_data = ExtResource( 2 )
 [sub_resource type="Theme" id=8]
 default_font = SubResource( 7 )
 Button/colors/font_color = Color( 0.952941, 0.913725, 0.976471, 1 )
+Button/colors/font_color_focus = Color( 0.615686, 0, 1, 1 )
 Button/colors/font_color_hover = Color( 0.615686, 0, 1, 1 )
 Button/styles/focus = SubResource( 6 )
 
-[node name="Menu" type="Node2D"]
+[node name="Jam" type="Node2D"]
+script = ExtResource( 8 )
 
 [node name="Sprite" type="Sprite" parent="."]
 material = SubResource( 4 )
@@ -83,10 +99,10 @@ initial_velocity = 1000.0
 angle_curve = SubResource( 5 )
 
 [node name="Title" type="RichTextLabel" parent="."]
-margin_left = 264.0
-margin_top = 82.0
-margin_right = 1655.0
-margin_bottom = 328.0
+margin_left = -448.0
+margin_top = 64.0
+margin_right = 943.0
+margin_bottom = 310.0
 rect_clip_content = false
 theme = SubResource( 2 )
 bbcode_enabled = true
@@ -96,18 +112,68 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Explanation" type="RichTextLabel" parent="."]
+margin_left = 512.0
+margin_top = 64.0
+margin_right = 1903.0
+margin_bottom = 256.0
+rect_clip_content = false
+theme = SubResource( 10 )
+bbcode_enabled = true
+bbcode_text = "[center][wave]Todos os minigames, uma vez cada! Escolhe os packs pra comecar"
+text = "Todos os minigames, uma vez cada! Escolhe os packs pra comecar"
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+pt_text = "[center][wave]Todos os minigames, uma vez cada! Escolhe os packs pra comecar"
+en_text = "[center][wave]All minigames in a row! Select your packs to begin"
+
 [node name="Buttons" type="Node2D" parent="."]
 
-[node name="Demo" type="Button" parent="Buttons"]
-margin_left = 840.0
-margin_top = 331.0
-margin_right = 1079.0
-margin_bottom = 433.0
+[node name="Toggles" type="Node2D" parent="Buttons"]
+
+[node name="Demo" parent="Buttons/Toggles" instance=ExtResource( 6 )]
+position = Vector2( 256, 576 )
+microgame_paths = [ "res://microjogos/demo/candle prick/cenas/Main.tscn", "res://microjogos/demo/deerskull/cenas/Main.tscn", "res://microjogos/demo/hora_da_necromancia/cenas/Main.tscn", "res://microjogos/demo/ifuv/cenas/Main.tscn", "res://microjogos/demo/soulchain/cenas/Main.tscn", "res://microjogos/demo/whale_eater/cenas/Main.tscn" ]
+toggled = true
+
+[node name="Button" parent="Buttons/Toggles/Demo" index="0"]
+margin_right = 320.0
+focus_neighbour_right = NodePath("../../../Jogar")
+focus_neighbour_bottom = NodePath("../../../Menu")
+text = "DEMO"
+start_focused = true
+
+[node name="Jogar" type="Button" parent="Buttons"]
+margin_left = 1344.0
+margin_top = 512.0
+margin_right = 1728.0
+margin_bottom = 614.0
+focus_neighbour_left = NodePath("../Toggles/Demo/Button")
 theme = SubResource( 8 )
-text = "Demo"
+text = "JOGAR!"
 flat = true
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-microgame_paths = [ "res://microjogos/demo/candle prick/cenas/Main.tscn", "res://microjogos/demo/hora_da_necromancia/cenas/Main.tscn", "res://microjogos/demo/whale_eater/cenas/Main.tscn", "res://microjogos/demo/soulchain/cenas/Main.tscn" ]
+pt_text = "JOGAR!"
+en_text = "PLAY!"
+
+[node name="Menu" type="Button" parent="Buttons"]
+margin_top = 960.0
+margin_right = 384.0
+margin_bottom = 1062.0
+focus_neighbour_top = NodePath("../Toggles/Demo/Button")
+focus_neighbour_right = NodePath("../Toggles/Demo/Button")
+theme = SubResource( 8 )
+text = "MENU"
+flat = true
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+path = "res://principal/cenas/Menu.tscn"
+
+[editable path="Buttons/Toggles/Demo"]

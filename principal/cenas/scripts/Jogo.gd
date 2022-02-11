@@ -22,6 +22,7 @@ var microgame_queue = []
 var total_microgames
 var current_microgame
 var icon_dict = {}
+var microgame_dict = {}
 
 var total_lives = 3
 var score = 0
@@ -59,6 +60,11 @@ func load_icons():
 		if not icon_dict.has(microgame_paths[i]):
 			var path = isolate_folder(microgame_paths[i], 2) + "/capa.png"
 			icon_dict[microgame_paths[i]] = load(isolate_folder(microgame_paths[i], 2) + "/capa.png")
+
+
+func load_microgames():
+	for i in range(len(microgame_paths)):
+		microgame_dict[microgame_paths[i]] = load(microgame_paths[i])
 
 
 func display_icons():
@@ -101,7 +107,7 @@ func setup_jam_mode(microgames):
 
 
 func setup_arcade_mode(microgames):
-	mode = MODE.ARCADE
+	mode = MODE.ENDLESS
 	microgame_paths = microgames
 
 
@@ -111,6 +117,7 @@ func _ready():
 	timer.connect("timeout", self, "finish_game")
 	
 	load_icons()
+	load_microgames()
 	
 	randomize()
 	
@@ -150,7 +157,7 @@ func next_game():
 func start_game(path):
 	SoundController.mute_game()
 	
-	current_microgame = load(path).instance()
+	current_microgame = microgame_dict[path].instance()
 	current_microgame.connect("win", self, "win_microgame")
 	current_microgame.connect("lose", self, "lose_microgame")
 	
@@ -169,7 +176,8 @@ func finish_game():
 	
 	timer_indicator.deactivate()
 	
-	load_next_game()
+	if not (total_lives == 1 and won == false):
+		load_next_game()
 	
 	if won == true:
 		score += 1
@@ -188,7 +196,7 @@ func finish_game():
 		else:
 			if total_microgames <= 0:
 				timer.stop()
-				animation_player.play("win_game")
+				animation_player.play("take_damage_and_win")
 			else:
 				animation_player.play("lose")
 
@@ -204,6 +212,7 @@ func lose_life():
 
 
 func update_lives_counter():
+	SoundController.play_sfx("damage")
 	life.set_lives(total_lives)
 
 
@@ -243,3 +252,11 @@ func play_win():
 
 func stop_music():
 	SoundController.mute_game()
+
+
+func give_instructions():
+	match Global.language:
+		Global.LANGUAGE.PT:
+			NotificationCenter.notify("SETAS E ESPACO!")
+		Global.LANGUAGE.EN:
+			NotificationCenter.notify("ARROWS AND SPACE!")

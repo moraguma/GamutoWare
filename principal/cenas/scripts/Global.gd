@@ -60,3 +60,7 @@ func deferred_goto_scene():
 
 func restart():
 	goto_scene(current_path)
+
+
+func update_translation(code):
+	language = code

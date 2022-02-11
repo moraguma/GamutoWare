@@ -4,8 +4,8 @@ extends "res://principal/cenas/scripts/PressableButton.gd"
 export (String) var path
 
 
-func _ready():
-	connect("pressed", self, "transition")
+func _pressed():
+	transition()
 
 
 func transition():

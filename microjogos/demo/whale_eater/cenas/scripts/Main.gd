@@ -28,7 +28,11 @@ onready var heart_animation_player = $Camera/AnimationPlayer
 
 
 func _ready():
-	NotificationCenter.notify("ESCAPE!")
+	match Global.language:
+		Global.LANGUAGE.PT:
+			NotificationCenter.notify("FOGE!")
+		Global.LANGUAGE.EN:
+			NotificationCenter.notify("GET OUT!")
 	
 	$Music.play()
 	

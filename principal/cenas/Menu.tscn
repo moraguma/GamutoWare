@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://principal/recursos/sprites/MenuBase.png" type="Texture" id=1]
 [ext_resource path="res://principal/cenas/scripts/Logo.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://principal/recursos/sprites/GMToutline.png" type="Texture" id=5]
 [ext_resource path="res://principal/cenas/scripts/TransitionButton.gd" type="Script" id=6]
 [ext_resource path="res://principal/cenas/scripts/Menu.gd" type="Script" id=7]
+[ext_resource path="res://principal/cenas/scripts/TranslationSetButton.gd" type="Script" id=8]
 
 [sub_resource type="Shader" id=3]
 code = "shader_type canvas_item;
@@ -62,6 +63,7 @@ font_data = ExtResource( 4 )
 [sub_resource type="Theme" id=8]
 default_font = SubResource( 7 )
 Button/colors/font_color = Color( 0.952941, 0.913725, 0.976471, 1 )
+Button/colors/font_color_focus = Color( 0.615686, 0, 1, 1 )
 Button/colors/font_color_hover = Color( 0.615686, 0, 1, 1 )
 Button/styles/focus = SubResource( 6 )
 
@@ -113,6 +115,9 @@ margin_left = 872.0
 margin_top = 571.0
 margin_right = 1049.0
 margin_bottom = 673.0
+focus_neighbour_top = NodePath("../PT")
+focus_neighbour_right = NodePath("../PT")
+focus_neighbour_bottom = NodePath("../Arcade")
 theme = SubResource( 8 )
 text = "JAM"
 flat = true
@@ -120,6 +125,7 @@ script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+start_focused = true
 path = "res://principal/cenas/Jam.tscn"
 
 [node name="Arcade" type="Button" parent="Buttons"]
@@ -127,6 +133,9 @@ margin_left = 810.0
 margin_top = 698.0
 margin_right = 1109.0
 margin_bottom = 800.0
+focus_neighbour_top = NodePath("../Jam")
+focus_neighbour_right = NodePath("../PT")
+focus_neighbour_bottom = NodePath("../Creditos")
 theme = SubResource( 8 )
 text = "ARCADE"
 flat = true
@@ -137,10 +146,12 @@ __meta__ = {
 path = "res://principal/cenas/Arcade.tscn"
 
 [node name="Creditos" type="Button" parent="Buttons"]
-margin_left = 775.0
-margin_top = 828.0
-margin_right = 1145.0
-margin_bottom = 930.0
+margin_left = 670.0
+margin_top = 830.0
+margin_right = 1249.0
+margin_bottom = 932.0
+focus_neighbour_top = NodePath("../Arcade")
+focus_neighbour_right = NodePath("../PT")
 theme = SubResource( 8 )
 text = "CREDITOS"
 flat = true
@@ -148,3 +159,40 @@ script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+pt_text = "CREDITOS"
+en_text = "CREDITS"
+path = "res://principal/cenas/Creditos.tscn"
+
+[node name="PT" type="Button" parent="Buttons"]
+margin_left = 1611.0
+margin_top = 30.0
+margin_right = 1737.0
+margin_bottom = 132.0
+focus_neighbour_left = NodePath("../Jam")
+focus_neighbour_right = NodePath("../EN")
+focus_neighbour_bottom = NodePath("../Jam")
+theme = SubResource( 8 )
+text = "PT"
+flat = true
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+focused = null
+
+[node name="EN" type="Button" parent="Buttons"]
+margin_left = 1780.0
+margin_top = 30.0
+margin_right = 1888.0
+margin_bottom = 132.0
+focus_neighbour_left = NodePath("../PT")
+focus_neighbour_bottom = NodePath("../Jam")
+theme = SubResource( 8 )
+text = "EN"
+flat = true
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+focused = null
+translation_code = 1

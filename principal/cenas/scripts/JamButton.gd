@@ -1,15 +1,5 @@
-extends Button
+extends "res://principal/cenas/scripts/GameButton.gd"
 
 
-const GAME_PATH = "res://principal/cenas/Jogo.tscn"
-
-
-export (Array, String) var microgame_paths
-
-
-func _ready():
-	connect("pressed", self, "transition")
-
-
-func transition():
+func call_transition(microgame_paths):
 	Global.goto_scene_and_call(GAME_PATH, "setup_jam_mode", [microgame_paths])

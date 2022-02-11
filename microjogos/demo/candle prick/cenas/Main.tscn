@@ -65,7 +65,8 @@ size = Vector2( 240, 135 )
 
 [node name="Wind" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
-volume_db = -5.0
+volume_db = 5.0
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
+volume_db = 10.0

@@ -1,0 +1,110 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://microjogos/demo/deerskull/recursos/sounds/sfx/shoot.wav" type="AudioStream" id=1]
+[ext_resource path="res://microjogos/demo/deerskull/recursos/sounds/sfx/aim.wav" type="AudioStream" id=2]
+[ext_resource path="res://microjogos/demo/deerskull/cenas/scripts/Shot.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Indicator:default_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "shot"
+length = 1.8
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Indicator:width")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 4, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 4, -0.25, 0, 1, 0.0364609, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.1, 1.2, 1.8 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Indicator:default_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.1 ),
+"transitions": PoolRealArray( 1e+06, 1 ),
+"update": 0,
+"values": [ Color( 0.945098, 0.0823529, 0.447059, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("AimSound")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0.0 ],
+"method": "play"
+} ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("ShootSound")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 1.1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0.0 ],
+"method": "play"
+} ]
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 1.1, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "shoot"
+}, {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
+
+[node name="Shot" type="RayCast2D"]
+enabled = true
+collision_mask = 2
+script = ExtResource( 3 )
+
+[node name="Indicator" type="Line2D" parent="."]
+width = 3.84216
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 1 )
+anims/shot = SubResource( 2 )
+
+[node name="AimSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[node name="ShootSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )

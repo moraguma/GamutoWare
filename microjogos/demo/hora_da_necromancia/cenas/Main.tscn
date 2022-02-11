@@ -475,6 +475,7 @@ volume_db = -20.0
 
 [node name="WowSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
+volume_db = 10.0
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 14 )
