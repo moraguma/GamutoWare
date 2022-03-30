@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/capa.png-ca49450b684abe8a69a08491b81c3bc2.stex"
+path="res://.import/capa.png-b3f8e4c2ad440c41068d8d4c72327467.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/teste/capa.png"
-dest_files=[ "res://.import/capa.png-ca49450b684abe8a69a08491b81c3bc2.stex" ]
+source_file="res://microjogos/2022S1/seu_projeto/capa.png"
+dest_files=[ "res://.import/capa.png-b3f8e4c2ad440c41068d8d4c72327467.stex" ]
 
 [params]
 
