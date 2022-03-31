@@ -10,8 +10,8 @@ const HEIGHT = 90
 
 
 const CURSOR_LERP_WEIGHT = 0.3
-const PASSWORD_LENGTH = 4
-const MAX_LENGTH = 4
+const PASSWORD_LENGTH = 3
+const MAX_LENGTH = 3
 
 
 var correct_password = ""
@@ -77,6 +77,8 @@ func try_selection(new_selection):
 func input_number(number):
 	if len(input) < MAX_LENGTH:
 		input += str(number)
+		if len(input) == PASSWORD_LENGTH:
+			enter()
 	else:
 		error_sound.play()
 

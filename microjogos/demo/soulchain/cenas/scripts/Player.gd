@@ -13,7 +13,7 @@ const ELASTIC_CONSTANT = 100
 
 
 var base_lenght = 0
-var has_soul = false
+var has_soul = true
 var is_hanging = false
 var hanger = null
 var alive = true

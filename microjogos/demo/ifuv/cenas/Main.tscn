@@ -340,6 +340,7 @@ left_path = "../0"
 [node name="Cursor" type="AnimatedSprite" parent="Pad"]
 position = Vector2( 0, -11 )
 frames = SubResource( 11 )
+frame = 1
 playing = true
 
 [node name="Display" type="RichTextLabel" parent="Pad"]
