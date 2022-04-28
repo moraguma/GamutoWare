@@ -140,8 +140,5 @@ theme = SubResource( 8 )
 text = "MENU"
 flat = true
 script = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 start_focused = true
 path = "res://principal/cenas/Menu.tscn"

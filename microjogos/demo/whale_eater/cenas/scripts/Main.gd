@@ -63,16 +63,17 @@ func _ready():
 
 
 func _physics_process(delta):
-	if active:
-		rotation_speed = lerp(rotation_speed, get_input_dir() * MAX_ROT_SPEED, ROT_ACCELERATION)
-		down_dir = down_dir.rotated(-rotation_speed * delta).normalized()
-		
-		camera.rotation = Vector2(0, 1).angle_to(down_dir) 
-		player.set_gravity(down_dir)
+	rotation_speed = lerp(rotation_speed, get_input_dir() * MAX_ROT_SPEED, ROT_ACCELERATION)
+	down_dir = down_dir.rotated(-rotation_speed * delta).normalized()
+	
+	camera.rotation = Vector2(0, 1).angle_to(down_dir) 
+	player.set_gravity(down_dir)
 
 
 func get_input_dir():
-	return Input.get_action_strength("direita") - Input.get_action_strength("esquerda")
+	if active:
+		return Input.get_action_strength("direita") - Input.get_action_strength("esquerda")
+	return 0
 
 
 func win(body):
