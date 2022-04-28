@@ -202,9 +202,6 @@ theme = SubResource( 8 )
 text = "MENU"
 flat = true
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 path = "res://principal/cenas/Menu.tscn"
 
 [node name="Next" type="Button" parent="CreditsContainer/IFUV"]

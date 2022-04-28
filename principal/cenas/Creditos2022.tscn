@@ -1,0 +1,792 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://microjogos/2022S1/race/capa.png" type="Texture" id=1]
+[ext_resource path="res://principal/recursos/credits/Soulchain.png" type="Texture" id=2]
+[ext_resource path="res://principal/recursos/credits/CandlePrick.png" type="Texture" id=3]
+[ext_resource path="res://principal/recursos/credits/HoraDaNecromancia.png" type="Texture" id=4]
+[ext_resource path="res://principal/recursos/credits/DEERSKULL.png" type="Texture" id=5]
+[ext_resource path="res://principal/recursos/credits/WhaleEater.png" type="Texture" id=6]
+[ext_resource path="res://principal/cenas/scripts/MoveScreenButton.gd" type="Script" id=7]
+[ext_resource path="res://principal/cenas/scripts/TranslatableText.gd" type="Script" id=8]
+[ext_resource path="res://principal/cenas/scripts/UrlButton.gd" type="Script" id=9]
+[ext_resource path="res://principal/cenas/scripts/TransitionButton.gd" type="Script" id=10]
+[ext_resource path="res://principal/recursos/fonts/Stop Bullying.otf" type="DynamicFontData" id=11]
+[ext_resource path="res://principal/cenas/scripts/CreditsScreen.gd" type="Script" id=12]
+[ext_resource path="res://principal/recursos/sprites/MenuBase.png" type="Texture" id=13]
+[ext_resource path="res://principal/recursos/sprites/GMToutline.png" type="Texture" id=14]
+
+[sub_resource type="Shader" id=3]
+code = "shader_type canvas_item;
+
+uniform vec4 color1 : hint_color;
+uniform vec4 color2 : hint_color;
+
+// Size of each diamond, in pixels.
+uniform float diamondPixelSize = 10f;
+
+void fragment() {
+	float xFraction = fract(FRAGCOORD.x / diamondPixelSize);
+	float yFraction = fract(FRAGCOORD.y / diamondPixelSize);
+	float xDistance = abs(xFraction - 0.5);
+	float yDistance = abs(yFraction - 0.5);
+	
+	if ((xDistance + yDistance + UV.x + UV.y > (TIME - (2f * floor(TIME / 2f))) * 3f) || xDistance + yDistance + UV.x + UV.y < (TIME - (2f * floor(TIME / 2f))) * 3f - 2f) {
+		COLOR = color1
+	} else {
+		COLOR = color2
+	}
+}"
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = SubResource( 3 )
+shader_param/color1 = Color( 0.6, 0.254902, 0.772549, 1 )
+shader_param/color2 = Color( 0.682353, 0.254902, 0.784314, 1 )
+shader_param/diamondPixelSize = 50.0
+
+[sub_resource type="Curve" id=5]
+min_value = -360.0
+max_value = 360.0
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.990196, 360 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="DynamicFont" id=1]
+size = 128
+outline_size = 36
+outline_color = Color( 0.172549, 0.141176, 0.207843, 1 )
+font_data = ExtResource( 11 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+RichTextLabel/colors/default_color = Color( 0.952941, 0.913725, 0.976471, 1 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 48
+outline_size = 12
+outline_color = Color( 0.172549, 0.141176, 0.207843, 1 )
+font_data = ExtResource( 11 )
+
+[sub_resource type="Theme" id=10]
+default_font = SubResource( 9 )
+RichTextLabel/colors/default_color = Color( 0.952941, 0.913725, 0.976471, 1 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 24
+outline_size = 8
+outline_color = Color( 0.172549, 0.141176, 0.207843, 1 )
+font_data = ExtResource( 11 )
+
+[sub_resource type="Theme" id=12]
+default_font = SubResource( 11 )
+RichTextLabel/colors/default_color = Color( 0.952941, 0.913725, 0.976471, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="DynamicFont" id=7]
+size = 64
+outline_size = 16
+outline_color = Color( 0.172549, 0.141176, 0.207843, 1 )
+font_data = ExtResource( 11 )
+
+[sub_resource type="Theme" id=8]
+default_font = SubResource( 7 )
+Button/colors/font_color = Color( 0.952941, 0.913725, 0.976471, 1 )
+Button/colors/font_color_focus = Color( 0.615686, 0, 1, 1 )
+Button/colors/font_color_hover = Color( 0.615686, 0, 1, 1 )
+Button/styles/focus = SubResource( 6 )
+
+[node name="Credits" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+material = SubResource( 4 )
+position = Vector2( 960, 540 )
+texture = ExtResource( 13 )
+
+[node name="GMTParticles" type="CPUParticles2D" parent="."]
+position = Vector2( -880, -1080 )
+amount = 32
+lifetime = 2.5
+preprocess = 2.5
+texture = ExtResource( 14 )
+emission_shape = 2
+emission_rect_extents = Vector2( 1080, 1080 )
+direction = Vector2( 1, 1 )
+gravity = Vector2( 500, 500 )
+initial_velocity = 1000.0
+angle_curve = SubResource( 5 )
+
+[node name="CreditsContainer" type="Node2D" parent="."]
+script = ExtResource( 12 )
+
+[node name="Race" type="Node2D" parent="CreditsContainer"]
+
+[node name="Title" type="RichTextLabel" parent="CreditsContainer/Race"]
+margin_left = -384.0
+margin_top = 64.0
+margin_right = 1007.0
+margin_bottom = 310.0
+rect_clip_content = false
+mouse_filter = 1
+theme = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center][shake rate=20 level=40]RACE"
+text = "RACE"
+script = ExtResource( 8 )
+
+[node name="Explanation" type="RichTextLabel" parent="CreditsContainer/Race"]
+margin_left = 640.0
+margin_top = 64.0
+margin_right = 1856.0
+margin_bottom = 320.0
+rect_clip_content = false
+mouse_filter = 1
+theme = SubResource( 10 )
+bbcode_enabled = true
+bbcode_text = "[center][wave]Feito por Victor de Moraes"
+text = "Feito por Victor de Moraes"
+script = ExtResource( 8 )
+pt_text = "[center][wave]Feito por Victor de Moraes"
+en_text = "[center][wave]Made by Victor de Moraes"
+
+[node name="Explanation2" type="RichTextLabel" parent="CreditsContainer/Race"]
+margin_top = 389.0
+margin_right = 1152.0
+margin_bottom = 773.0
+rect_clip_content = false
+mouse_filter = 1
+theme = SubResource( 10 )
+bbcode_enabled = true
+bbcode_text = "[center][wave]Musica: Orbital Colossus - Matthew Pablo"
+text = "Musica: Orbital Colossus - Matthew Pablo"
+script = ExtResource( 8 )
+pt_text = "[center][wave]Musica: Orbital Colossus - Matthew Pablo"
+en_text = "[center][wave]Music: Orbital Colossus - Matthew Pablo"
+
+[node name="Explanation4" type="RichTextLabel" parent="CreditsContainer/Race"]
+margin_top = 599.0
+margin_right = 1152.0
+margin_bottom = 983.0
+rect_clip_content = false
+mouse_filter = 1
+theme = SubResource( 10 )
+bbcode_enabled = true
+bbcode_text = "[center]SFX:"
+text = "SFX:"
+script = ExtResource( 8 )
+
+[node name="Explanation3" type="RichTextLabel" parent="CreditsContainer/Race"]
+margin_top = 683.0
+margin_right = 1152.0
+margin_bottom = 1067.0
+rect_clip_content = false
+mouse_filter = 1
+theme = SubResource( 12 )
+bbcode_enabled = true
+bbcode_text = "[center]https://freesound.org/people/Leszek_Szary/sounds/171671/ https://freesound.org/people/Leszek_Szary/sounds/171673/
+https://freesound.org/people/InspectorJ/sounds/403664/
+https://freesound.org/people/InspectorJ/sounds/430632/"
+text = "https://freesound.org/people/Leszek_Szary/sounds/171671/ https://freesound.org/people/Leszek_Szary/sounds/171673/
+https://freesound.org/people/InspectorJ/sounds/403664/
+https://freesound.org/people/InspectorJ/sounds/430632/"
+script = ExtResource( 8 )
+en_text = "[center][wave]Made by @moraguma"
+
+[node name="Menu" type="Button" parent="CreditsContainer/Race"]
+margin_top = 960.0
+margin_right = 384.0
+margin_bottom = 1062.0
+theme = SubResource( 8 )
+text = "MENU"
+flat = true
+script = ExtResource( 10 )
+start_focused = true
+path = "res://principal/cenas/Menu.tscn"
+
+[node name="Next" type="Button" parent="CreditsContainer/Race"]
+visible = false
+margin_left = 1792.0
+margin_top = 512.0
+margin_right = 1920.0
+margin_bottom = 614.0
+theme = SubResource( 8 )
+text = ">"
+flat = true
+script = ExtResource( 7 )
+movement_vector = Vector2( -1920, 0 )
+next_focus_path = NodePath("../../DEERSKULL/Back")
+
+[node name="IFUV" type="Sprite" parent="CreditsContainer/Race"]
+position = Vector2( 1536, 640 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 1 )
+
+[node name="DEERSKULL" type="Node2D" parent="CreditsContainer"]
+position = Vector2( 1920, 0 )
+
+[node name="Title" type="RichTextLabel" parent="CreditsContainer/DEERSKULL"]
+margin_left = -128.0
+margin_top = 64.0
+margin_right = 1263.0
+margin_bottom = 310.0
+rect_clip_content = false
+mouse_filter = 1
+theme = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center][shake rate=20 level=40]DEERSKULL"
+text = "DEERSKULL"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Explanation" type="RichTextLabel" parent="CreditsContainer/DEERSKULL"]
+margin_left = 960.0
+margin_top = 128.0
+margin_right = 1856.0
+margin_bottom = 384.0
+rect_clip_content = false
+mouse_filter = 1
+theme = SubResource( 10 )
+bbcode_enabled = true
+bbcode_text = "[center][wave]Based on DEERSKULL"
+text = "Based on DEERSKULL"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+pt_text = "[center][wave]Baseado em DEERSKULL"
+en_text = "[center][wave]Based on DEERSKULL"
+
+[node name="Explanation2" type="RichTextLabel" parent="CreditsContainer/DEERSKULL"]
+margin_top = 448.0
+margin_right = 1152.0
+margin_bottom = 832.0
+rect_clip_content = false
+mouse_filter = 1
+theme = SubResource( 10 )
+bbcode_enabled = true
+bbcode_text = "[center][wave]Feito por @moraguma"
+text = "Feito por @moraguma"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+pt_text = "[center][wave]Feito por @moraguma"
+en_text = "[center][wave]Made by @moraguma"
+
+[node name="Explanation4" type="RichTextLabel" parent="CreditsContainer/DEERSKULL"]
+margin_top = 640.0
+margin_right = 1152.0
+margin_bottom = 1024.0
+rect_clip_content = false
+mouse_filter = 1
+theme = SubResource( 10 )
+bbcode_enabled = true
+bbcode_text = "[center][wave]Musica por @playwrightsband"
+text = "Musica por @playwrightsband"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+pt_text = "[center][wave]Musica por @playwrightsband"
+en_text = "[center][wave]Music by @playwrightsband"
+
+[node name="Next" type="Button" parent="CreditsContainer/DEERSKULL"]
+margin_left = 1792.0
+margin_top = 512.0
+margin_right = 1920.0
+margin_bottom = 614.0
+focus_neighbour_left = NodePath("../Play")
+theme = SubResource( 8 )
+text = ">"
+flat = true
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+movement_vector = Vector2( -1920, 0 )
+next_focus_path = NodePath("../../Soulchain/Back")
+
+[node name="Back" type="Button" parent="CreditsContainer/DEERSKULL"]
+margin_top = 512.0
+margin_right = 128.0
+margin_bottom = 614.0
+focus_neighbour_right = NodePath("../Play")
+theme = SubResource( 8 )
+text = "<"
+flat = true
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+movement_vector = Vector2( 1920, 0 )
+next_focus_path = NodePath("../../Race/Next")
+
+[node name="Play" type="Button" parent="CreditsContainer/DEERSKULL"]
+margin_left = 1216.0
+margin_top = 768.0
+margin_right = 1600.0
+margin_bottom = 870.0
+focus_neighbour_left = NodePath("../Back")
+focus_neighbour_right = NodePath("../Next")
+theme = SubResource( 8 )
+text = "JOGAR"
+flat = true
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+pt_text = "JOGAR"
+en_text = "PLAY"
+url = "https://moraguma.itch.io/deerskull"
+
+[node name="IFUV" type="Sprite" parent="CreditsContainer/DEERSKULL"]
+position = Vector2( 1408, 512 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 5 )
+
+[node name="Soulchain" type="Node2D" parent="CreditsContainer"]
+position = Vector2( 3840, 0 )
+
+[node name="Title" type="RichTextLabel" parent="CreditsContainer/Soulchain"]
+margin_left = -192.0
+margin_top = 64.0
+margin_right = 1199.0
+margin_bottom = 310.0
+rect_clip_content = false
+mouse_filter = 1
+theme = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center][shake rate=20 level=40]Soulchain"
+text = "Soulchain"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Explanation" type="RichTextLabel" parent="CreditsContainer/Soulchain"]
+margin_left = 960.0
+margin_top = 128.0
+margin_right = 1920.0
+margin_bottom = 384.0
+rect_clip_content = false
+mouse_filter = 1
+theme = SubResource( 10 )
+bbcode_enabled = true
+bbcode_text = "[center][wave]Based on Soulchain"
+text = "Based on Soulchain"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+pt_text = "[center][wave]Baseado em Soulchain"
+en_text = "[center][wave]Based on Soulchain"
+
+[node name="Explanation2" type="RichTextLabel" parent="CreditsContainer/Soulchain"]
+margin_top = 512.0
+margin_right = 1152.0
+margin_bottom = 896.0
+rect_clip_content = false
+mouse_filter = 1
+theme = SubResource( 10 )
+bbcode_enabled = true
+bbcode_text = "[center][wave]Feito por @moraguma"
+text = "Feito por @moraguma"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+pt_text = "[center][wave]Feito por @moraguma"
+en_text = "[center][wave]Made by @moraguma"
+
+[node name="Next" type="Button" parent="CreditsContainer/Soulchain"]
+margin_left = 1792.0
+margin_top = 512.0
+margin_right = 1920.0
+margin_bottom = 614.0
+focus_neighbour_left = NodePath("../Play")
+theme = SubResource( 8 )
+text = ">"
+flat = true
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+movement_vector = Vector2( -1920, 0 )
+next_focus_path = NodePath("../../WhaleEater/Back")
+
+[node name="Back" type="Button" parent="CreditsContainer/Soulchain"]
+margin_top = 512.0
+margin_right = 128.0
+margin_bottom = 614.0
+focus_neighbour_right = NodePath("../Play")
+theme = SubResource( 8 )
+text = "<"
+flat = true
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+movement_vector = Vector2( 1920, 0 )
+next_focus_path = NodePath("../../DEERSKULL/Next")
+
+[node name="Play" type="Button" parent="CreditsContainer/Soulchain"]
+margin_left = 1216.0
+margin_top = 768.0
+margin_right = 1600.0
+margin_bottom = 870.0
+focus_neighbour_left = NodePath("../Back")
+focus_neighbour_right = NodePath("../Next")
+theme = SubResource( 8 )
+text = "JOGAR"
+flat = true
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+pt_text = "JOGAR"
+en_text = "PLAY"
+url = "https://moraguma.itch.io/soulchain"
+
+[node name="IFUV" type="Sprite" parent="CreditsContainer/Soulchain"]
+position = Vector2( 1408, 512 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 2 )
+
+[node name="WhaleEater" type="Node2D" parent="CreditsContainer"]
+position = Vector2( 5760, 0 )
+
+[node name="Title" type="RichTextLabel" parent="CreditsContainer/WhaleEater"]
+margin_left = -64.0
+margin_top = 64.0
+margin_right = 1327.0
+margin_bottom = 310.0
+rect_clip_content = false
+mouse_filter = 1
+theme = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center][shake rate=20 level=40]Whale Eater"
+text = "Whale Eater"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Explanation" type="RichTextLabel" parent="CreditsContainer/WhaleEater"]
+margin_left = 1216.0
+margin_top = 64.0
+margin_right = 1938.0
+margin_bottom = 320.0
+rect_clip_content = false
+mouse_filter = 1
+theme = SubResource( 10 )
+bbcode_enabled = true
+bbcode_text = "[center][wave]Based on Whale Eater, made for the GMTKJam2021"
+text = "Based on Whale Eater, made for the GMTKJam2021"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+pt_text = "[center][wave]Baseado em Whale Eater, feito pra GMTKJam2021"
+en_text = "[center][wave]Based on Whale Eater, made for the GMTKJam2021"
+
+[node name="Explanation2" type="RichTextLabel" parent="CreditsContainer/WhaleEater"]
+margin_top = 448.0
+margin_right = 1152.0
+margin_bottom = 832.0
+rect_clip_content = false
+mouse_filter = 1
+theme = SubResource( 10 )
+bbcode_enabled = true
+bbcode_text = "[center][wave]Feito por @moraguma"
+text = "Feito por @moraguma"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+pt_text = "[center][wave]Feito por @moraguma"
+en_text = "[center][wave]Made by @moraguma"
+
+[node name="Explanation3" type="RichTextLabel" parent="CreditsContainer/WhaleEater"]
+margin_top = 576.0
+margin_right = 1152.0
+margin_bottom = 960.0
+rect_clip_content = false
+mouse_filter = 1
+theme = SubResource( 10 )
+bbcode_enabled = true
+bbcode_text = "[center][wave]Arte por @amoradmora"
+text = "Arte por @amoradmora"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+pt_text = "[center][wave]Arte por @amoradmora"
+en_text = "[center][wave]Art by @amoradmora"
+
+[node name="Explanation4" type="RichTextLabel" parent="CreditsContainer/WhaleEater"]
+margin_top = 704.0
+margin_right = 1152.0
+margin_bottom = 1088.0
+rect_clip_content = false
+mouse_filter = 1
+theme = SubResource( 10 )
+bbcode_enabled = true
+bbcode_text = "[center][wave]Musica por @larchitectemsc"
+text = "Musica por @larchitectemsc"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+pt_text = "[center][wave]Musica por @larchitectemsc"
+en_text = "[center][wave]Music by @larchitectemsc"
+
+[node name="Next" type="Button" parent="CreditsContainer/WhaleEater"]
+margin_left = 1792.0
+margin_top = 512.0
+margin_right = 1920.0
+margin_bottom = 614.0
+focus_neighbour_left = NodePath("../Play")
+theme = SubResource( 8 )
+text = ">"
+flat = true
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+movement_vector = Vector2( -1920, 0 )
+next_focus_path = NodePath("../../CandlePrick/Back")
+
+[node name="Back" type="Button" parent="CreditsContainer/WhaleEater"]
+margin_top = 512.0
+margin_right = 128.0
+margin_bottom = 614.0
+focus_neighbour_right = NodePath("../Play")
+theme = SubResource( 8 )
+text = "<"
+flat = true
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+movement_vector = Vector2( 1920, 0 )
+next_focus_path = NodePath("../../Soulchain/Next")
+
+[node name="Play" type="Button" parent="CreditsContainer/WhaleEater"]
+margin_left = 1216.0
+margin_top = 768.0
+margin_right = 1600.0
+margin_bottom = 870.0
+focus_neighbour_left = NodePath("../Back")
+focus_neighbour_right = NodePath("../Next")
+theme = SubResource( 8 )
+text = "JOGAR"
+flat = true
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+pt_text = "JOGAR"
+en_text = "PLAY"
+url = "https://moraguma.itch.io/whale-eater"
+
+[node name="IFUV" type="Sprite" parent="CreditsContainer/WhaleEater"]
+position = Vector2( 1408, 512 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 6 )
+
+[node name="CandlePrick" type="Node2D" parent="CreditsContainer"]
+position = Vector2( 7680, 0 )
+
+[node name="Title" type="RichTextLabel" parent="CreditsContainer/CandlePrick"]
+margin_left = -64.0
+margin_top = 64.0
+margin_right = 1327.0
+margin_bottom = 310.0
+rect_clip_content = false
+mouse_filter = 1
+theme = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center][shake rate=20 level=40]Candle Prick"
+text = "Candle Prick"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Explanation" type="RichTextLabel" parent="CreditsContainer/CandlePrick"]
+margin_left = 1266.0
+margin_top = 87.0
+margin_right = 1906.0
+margin_bottom = 343.0
+rect_clip_content = false
+mouse_filter = 1
+theme = SubResource( 10 )
+bbcode_enabled = true
+bbcode_text = "[center][wave]Baseado em Candle Prick"
+text = "Baseado em Candle Prick"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+pt_text = "[center][wave]Baseado em Candle Prick"
+en_text = "[center][wave]Based on Candle Prick"
+
+[node name="Explanation2" type="RichTextLabel" parent="CreditsContainer/CandlePrick"]
+margin_top = 512.0
+margin_right = 1152.0
+margin_bottom = 896.0
+rect_clip_content = false
+mouse_filter = 1
+theme = SubResource( 10 )
+bbcode_enabled = true
+bbcode_text = "[center][wave]Feito por @moraguma"
+text = "Feito por @moraguma"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+pt_text = "[center][wave]Feito por @moraguma"
+en_text = "[center][wave]Made by @moraguma"
+
+[node name="Next" type="Button" parent="CreditsContainer/CandlePrick"]
+margin_left = 1792.0
+margin_top = 512.0
+margin_right = 1920.0
+margin_bottom = 614.0
+focus_neighbour_left = NodePath("../Play")
+theme = SubResource( 8 )
+text = ">"
+flat = true
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+movement_vector = Vector2( -1920, 0 )
+next_focus_path = NodePath("../../Abel/Back")
+
+[node name="Back" type="Button" parent="CreditsContainer/CandlePrick"]
+margin_top = 512.0
+margin_right = 128.0
+margin_bottom = 614.0
+focus_neighbour_right = NodePath("../Play")
+theme = SubResource( 8 )
+text = "<"
+flat = true
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+movement_vector = Vector2( 1920, 0 )
+next_focus_path = NodePath("../../WhaleEater/Next")
+
+[node name="Play" type="Button" parent="CreditsContainer/CandlePrick"]
+margin_left = 1216.0
+margin_top = 768.0
+margin_right = 1600.0
+margin_bottom = 870.0
+focus_neighbour_left = NodePath("../Back")
+focus_neighbour_right = NodePath("../Next")
+theme = SubResource( 8 )
+text = "JOGAR"
+flat = true
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+pt_text = "JOGAR"
+en_text = "PLAY"
+url = "https://moraguma.itch.io/candle-prick"
+
+[node name="IFUV" type="Sprite" parent="CreditsContainer/CandlePrick"]
+position = Vector2( 1408, 512 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 3 )
+
+[node name="Abel" type="Node2D" parent="CreditsContainer"]
+position = Vector2( 9600, 0 )
+
+[node name="Title" type="RichTextLabel" parent="CreditsContainer/Abel"]
+margin_left = -384.0
+margin_top = 64.0
+margin_right = 1007.0
+margin_bottom = 310.0
+rect_clip_content = false
+mouse_filter = 1
+theme = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center][shake rate=20 level=40]ABEL"
+text = "ABEL"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Explanation" type="RichTextLabel" parent="CreditsContainer/Abel"]
+margin_left = 704.0
+margin_top = 64.0
+margin_right = 1920.0
+margin_bottom = 320.0
+rect_clip_content = false
+mouse_filter = 1
+theme = SubResource( 10 )
+bbcode_enabled = true
+bbcode_text = "[center][wave]Based on Hora da Necromancia"
+text = "Based on Hora da Necromancia"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+pt_text = "[center][wave]Baseado em Hora da Necromancia"
+en_text = "[center][wave]Based on Hora da Necromancia"
+
+[node name="Explanation2" type="RichTextLabel" parent="CreditsContainer/Abel"]
+margin_top = 512.0
+margin_right = 1152.0
+margin_bottom = 896.0
+rect_clip_content = false
+mouse_filter = 1
+theme = SubResource( 10 )
+bbcode_enabled = true
+bbcode_text = "[center][wave]Feito por @moraguma"
+text = "Feito por @moraguma"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+pt_text = "[center][wave]Feito por @moraguma"
+en_text = "[center][wave]Made by @moraguma"
+
+[node name="Back" type="Button" parent="CreditsContainer/Abel"]
+margin_top = 512.0
+margin_right = 128.0
+margin_bottom = 614.0
+focus_neighbour_right = NodePath("../Play")
+theme = SubResource( 8 )
+text = "<"
+flat = true
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+movement_vector = Vector2( 1920, 0 )
+next_focus_path = NodePath("../../CandlePrick/Next")
+
+[node name="Play" type="Button" parent="CreditsContainer/Abel"]
+margin_left = 1216.0
+margin_top = 768.0
+margin_right = 1600.0
+margin_bottom = 870.0
+focus_neighbour_left = NodePath("../Back")
+theme = SubResource( 8 )
+text = "JOGAR"
+flat = true
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+pt_text = "JOGAR"
+en_text = "PLAY"
+url = "https://batataazul.itch.io/hora-da-necromncia"
+
+[node name="IFUV" type="Sprite" parent="CreditsContainer/Abel"]
+position = Vector2( 1408, 512 )
+texture = ExtResource( 4 )

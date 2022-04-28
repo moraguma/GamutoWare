@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/442943__qubodup__level-up.wav-5d43bfca4254f62aff576a1853c564cb.sample"
+
+[deps]
+
+source_file="res://microjogos/2022S1/seu_projeto/recursos/442943__qubodup__level-up.wav"
+dest_files=[ "res://.import/442943__qubodup__level-up.wav-5d43bfca4254f62aff576a1853c564cb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

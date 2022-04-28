@@ -9,7 +9,7 @@ const HEIGHT = 180
 const WIDTH = 320
 
 
-var Shot = preload("res://microjogos/demo/deerskull/cenas/Shot.tscn")
+
 
 
 const LINE_POINTS = [Vector2(-4, -4), Vector2(324, -4), Vector2(324, 184), Vector2(-4, 184), Vector2(-4, -3)]
@@ -41,6 +41,7 @@ func _ready():
 	
 	timer.start(FIRST_TIME)
 
+var Shot = preload("res://microjogos/demo/deerskull/cenas/Shot.tscn")
 
 func spawn():
 	var shot = Shot.instance()

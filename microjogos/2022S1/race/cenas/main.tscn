@@ -1,0 +1,226 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://microjogos/2022S1/race/cenas/Player.gd" type="Script" id=1]
+[ext_resource path="res://microjogos/2022S1/race/cenas/camera.gd" type="Script" id=2]
+[ext_resource path="res://microjogos/2022S1/race/cenas/caverna.gd" type="Script" id=3]
+[ext_resource path="res://microjogos/2022S1/race/cenas/Enemy.gd" type="Script" id=4]
+[ext_resource path="res://microjogos/2022S1/race/cenas/Goal.gd" type="Script" id=5]
+[ext_resource path="res://microjogos/2022S1/race/cenas/scripts/main.gd" type="Script" id=6]
+[ext_resource path="res://microjogos/2022S1/race/recursos/ships.png" type="Texture" id=7]
+[ext_resource path="res://microjogos/2022S1/race/recursos/goal.png" type="Texture" id=8]
+[ext_resource path="res://microjogos/2022S1/race/recursos/Orbital Colossus_0.mp3" type="AudioStream" id=9]
+[ext_resource path="res://microjogos/2022S1/race/recursos/171671__leszek-szary__success-1.wav" type="AudioStream" id=10]
+[ext_resource path="res://microjogos/2022S1/race/recursos/bg_bg.png" type="Texture" id=11]
+[ext_resource path="res://microjogos/2022S1/race/recursos/bg_mg.png" type="Texture" id=12]
+[ext_resource path="res://microjogos/2022S1/race/recursos/171673__leszek-szary__failure-1.wav" type="AudioStream" id=13]
+[ext_resource path="res://microjogos/2022S1/race/recursos/430632__inspectorj__vacuum-cleaner-on-idle-off-close-a.wav" type="AudioStream" id=14]
+[ext_resource path="res://microjogos/2022S1/race/recursos/bg_fg.png" type="Texture" id=15]
+[ext_resource path="res://microjogos/2022S1/race/recursos/403664__inspectorj__air-extractor-fan-public-toilets-a.wav" type="AudioStream" id=16]
+[ext_resource path="res://microjogos/2022S1/race/recursos/explosion.wav" type="AudioStream" id=17]
+
+[sub_resource type="Curve" id=14]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=17]
+offsets = PoolRealArray( 0, 0.234848 )
+colors = PoolColorArray( 0.195332, 0.219034, 0.90918, 1, 0.320312, 1, 0.988052, 1 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 31.5, 12 )
+
+[sub_resource type="Gradient" id=15]
+offsets = PoolRealArray( 0, 0.242424, 0.643939, 1 )
+colors = PoolColorArray( 1, 0, 0, 1, 1, 0.896484, 0, 1, 1, 0.93375, 0.36, 1, 1, 0.935764, 0.421875, 0 )
+
+[sub_resource type="Gradient" id=18]
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="Gradient" id=13]
+offsets = PoolRealArray( 0, 0.159091, 0.780303, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 64, 700 )
+
+[node name="SeuJogo" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="Enemy" type="KinematicBody2D" parent="."]
+position = Vector2( 570, -4 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 4 )
+
+[node name="Trail" type="CPUParticles2D" parent="Enemy"]
+position = Vector2( -4, 3 )
+amount = 128
+lifetime = 0.5
+local_coords = false
+emission_shape = 2
+emission_rect_extents = Vector2( 9, 4.5 )
+spread = 180.0
+gravity = Vector2( 0, -1 )
+initial_velocity = 24.69
+initial_velocity_random = 0.65
+scale_amount = 7.0
+scale_amount_random = 0.21
+scale_amount_curve = SubResource( 14 )
+color_ramp = SubResource( 17 )
+
+[node name="Sprite" type="Sprite" parent="Enemy"]
+modulate = Color( 1, 0.290196, 0.290196, 1 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 96, 0, 96, 48 )
+
+[node name="BoostSFX" type="AudioStreamPlayer2D" parent="Enemy"]
+stream = ExtResource( 14 )
+volume_db = -8.0
+autoplay = true
+
+[node name="HumSFX" type="AudioStreamPlayer2D" parent="Enemy"]
+stream = ExtResource( 16 )
+volume_db = -2.5
+autoplay = true
+
+[node name="Hitbox" type="CollisionShape2D" parent="Enemy"]
+position = Vector2( 4.5, 0.999999 )
+shape = SubResource( 1 )
+
+[node name="Player" type="KinematicBody2D" parent="."]
+position = Vector2( 700, 0 )
+script = ExtResource( 1 )
+
+[node name="Hitbox" type="CollisionShape2D" parent="Player"]
+position = Vector2( 4.5, 0.999999 )
+shape = SubResource( 1 )
+
+[node name="Trail" type="CPUParticles2D" parent="Player"]
+position = Vector2( -5, 4 )
+amount = 128
+lifetime = 0.5
+local_coords = false
+emission_shape = 2
+emission_rect_extents = Vector2( 9, 4.5 )
+spread = 180.0
+gravity = Vector2( 0, -1 )
+initial_velocity = 24.69
+initial_velocity_random = 0.65
+scale_amount = 7.0
+scale_amount_random = 0.21
+scale_amount_curve = SubResource( 14 )
+color_ramp = SubResource( 15 )
+
+[node name="Sprite" type="Sprite" parent="Player"]
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 96, 48 )
+
+[node name="Explosion" type="CPUParticles2D" parent="Player"]
+emitting = false
+amount = 128
+lifetime = 5.0
+one_shot = true
+explosiveness = 1.0
+emission_shape = 2
+emission_rect_extents = Vector2( 5, 3 )
+spread = 30.0
+initial_velocity = 111.11
+initial_velocity_random = 1.0
+angular_velocity = 720.0
+angular_velocity_random = 1.0
+scale_amount = 4.0
+color_ramp = SubResource( 18 )
+
+[node name="BoostSFX" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource( 14 )
+volume_db = -5.0
+autoplay = true
+
+[node name="HumSFX" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource( 16 )
+volume_db = -2.0
+autoplay = true
+
+[node name="ExplosionSFX" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource( 17 )
+volume_db = 7.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2( 400, 0 )
+current = true
+script = ExtResource( 2 )
+
+[node name="DustParticles" type="CPUParticles2D" parent="Camera2D"]
+position = Vector2( 200, 0 )
+amount = 64
+lifetime = 2.0
+local_coords = false
+emission_shape = 2
+emission_rect_extents = Vector2( 1200, 400 )
+direction = Vector2( 0, -1 )
+initial_velocity = 37.03
+initial_velocity_random = 1.0
+linear_accel = 12.35
+linear_accel_random = 1.0
+scale_amount = 3.0
+color = Color( 0.705882, 0.952941, 1, 1 )
+color_ramp = SubResource( 13 )
+
+[node name="Goal" type="Area2D" parent="."]
+collision_layer = 3
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]
+shape = SubResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="Goal"]
+scale = Vector2( 32, 32 )
+texture = ExtResource( 8 )
+
+[node name="Caverna" type="StaticBody2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="Ceiling" type="CollisionPolygon2D" parent="Caverna"]
+
+[node name="Floor" type="CollisionPolygon2D" parent="Caverna"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+offset = Vector2( 980, 0 )
+transform = Transform2D( 1, 0, 0, 1, 980, 0 )
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 2000, 0 )
+
+[node name="bg_bg" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 11 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.382, 0.382 )
+motion_mirroring = Vector2( 2000, 0 )
+
+[node name="bg_mg" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 12 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.618, 0.618 )
+motion_mirroring = Vector2( 2000, 0 )
+
+[node name="bg_fg" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 15 )
+
+[node name="bgm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+autoplay = true
+
+[node name="VictorySFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+
+[node name="DefeatSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+volume_db = -8.0
+
+[connection signal="body_entered" from="Goal" to="Goal" method="_on_body_entered"]

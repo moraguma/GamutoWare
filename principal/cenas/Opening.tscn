@@ -166,9 +166,6 @@ theme = SubResource( 2 )
 bbcode_enabled = true
 bbcode_text = "[center][wave]@moraguma"
 text = "@moraguma"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Logo" type="Sprite" parent="."]
 position = Vector2( 960, -300 )

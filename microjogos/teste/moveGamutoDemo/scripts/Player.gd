@@ -5,18 +5,21 @@ const SPEED = 300
 const JUMP_SPEED = 600
 const GRAVITY = 800
 
-
-var vel = Vector2(0, 0)
-
+# Declaramos a variável global velocidade como um Vector2,
+# um vetor em duas dimensões
+var velocidade = Vector2(0, 0)
 
 func _physics_process(delta):
-	var dir = Input.get_action_strength("direita") - Input.get_action_strength("esquerda")
+	if Input.is_action_pressed("direita"):
+		velocidade.x = 300
+	elif Input.is_action_pressed("esquerda"):
+		velocidade.x = -300
+	else:
+		velocidade.x = 0
 	
-	vel[0] = SPEED * dir
+	if Input.is_action_just_pressed("acao") and is_on_floor():
+		velocidade.y = -600
 	
-	if is_on_floor():
-		if Input.is_action_just_pressed("acao"):
-			vel[1] = -JUMP_SPEED
-	vel[1] += GRAVITY * delta
+	velocidade.y += 800 * delta
 	
-	vel = move_and_slide(vel, Vector2(0, -1))
+	velocidade = move_and_slide(velocidade, Vector2(0, -1))

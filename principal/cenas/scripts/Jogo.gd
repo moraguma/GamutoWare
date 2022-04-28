@@ -60,6 +60,7 @@ func load_icons():
 		if not icon_dict.has(microgame_paths[i]):
 			var path = isolate_folder(microgame_paths[i], 2) + "/capa.png"
 			icon_dict[microgame_paths[i]] = load(isolate_folder(microgame_paths[i], 2) + "/capa.png")
+			icon_dict[microgame_paths[i]].set_flags(Texture.FLAG_FILTER)
 
 
 func load_microgames():

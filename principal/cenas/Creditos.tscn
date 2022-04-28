@@ -207,20 +207,32 @@ __meta__ = {
 
 [node name="Demo" type="Button" parent="Buttons"]
 margin_left = 1536.0
-margin_top = 576.0
+margin_top = 448.0
 margin_right = 1792.0
-margin_bottom = 678.0
+margin_bottom = 550.0
 focus_neighbour_left = NodePath("../Menu")
-focus_neighbour_bottom = NodePath("../Menu")
+focus_neighbour_bottom = NodePath("../2022")
 theme = SubResource( 8 )
 text = "DEMO"
 flat = true
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 start_focused = true
 path = "res://principal/cenas/CreditosDemo.tscn"
+
+[node name="2022" type="Button" parent="Buttons"]
+margin_left = 1536.0
+margin_top = 576.0
+margin_right = 1792.0
+margin_bottom = 678.0
+focus_neighbour_left = NodePath("../Menu")
+focus_neighbour_top = NodePath("../Demo")
+focus_neighbour_bottom = NodePath("../Menu")
+theme = SubResource( 8 )
+text = "2022"
+flat = true
+script = ExtResource( 2 )
+start_focused = true
+path = "res://principal/cenas/Creditos2022.tscn"
 
 [node name="Menu" type="Button" parent="Buttons"]
 margin_top = 960.0

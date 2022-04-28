@@ -2,7 +2,7 @@ extends RayCast2D
 
 
 const RAYCAST_LENGHT = 500
-
+const TIME = 1
 
 onready var indicator = $Indicator
 onready var animation_player = $AnimationPlayer

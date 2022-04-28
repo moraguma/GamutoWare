@@ -134,16 +134,28 @@ en_text = "[center][wave]Survive for as long as you can! Pick some packs to get 
 [node name="Toggles" type="Node2D" parent="Buttons"]
 
 [node name="Demo" parent="Buttons/Toggles" instance=ExtResource( 7 )]
-position = Vector2( 256, 576 )
+position = Vector2( 256, 448 )
 microgame_paths = [ "res://microjogos/demo/candle prick/cenas/Main.tscn", "res://microjogos/demo/deerskull/cenas/Main.tscn", "res://microjogos/demo/hora_da_necromancia/cenas/Main.tscn", "res://microjogos/demo/ifuv/cenas/Main.tscn", "res://microjogos/demo/soulchain/cenas/Main.tscn", "res://microjogos/demo/whale_eater/cenas/Main.tscn" ]
 toggled = true
 
 [node name="Button" parent="Buttons/Toggles/Demo" index="0"]
 margin_right = 320.0
 focus_neighbour_right = NodePath("../../../Jogar")
-focus_neighbour_bottom = NodePath("../../../Menu")
+focus_neighbour_bottom = NodePath("../../2022/Button")
 text = "DEMO"
 start_focused = true
+
+[node name="2022" parent="Buttons/Toggles" instance=ExtResource( 7 )]
+position = Vector2( 256, 640 )
+microgame_paths = [ "res://microjogos/2022S1/race/cenas/main.tscn" ]
+toggled = true
+
+[node name="Button" parent="Buttons/Toggles/2022" index="0"]
+margin_right = 320.0
+focus_neighbour_top = NodePath("../../Demo/Button")
+focus_neighbour_right = NodePath("../../../Jogar")
+focus_neighbour_bottom = NodePath("../../../Menu")
+text = "2022"
 
 [node name="Jogar" type="Button" parent="Buttons"]
 margin_left = 1344.0
@@ -165,7 +177,7 @@ en_text = "PLAY!"
 margin_top = 960.0
 margin_right = 384.0
 margin_bottom = 1062.0
-focus_neighbour_top = NodePath("../Toggles/Demo/Button")
+focus_neighbour_top = NodePath("../Toggles/2022/Button")
 focus_neighbour_right = NodePath("../Toggles/Demo/Button")
 theme = SubResource( 8 )
 text = "MENU"
@@ -177,3 +189,4 @@ __meta__ = {
 path = "res://principal/cenas/Menu.tscn"
 
 [editable path="Buttons/Toggles/Demo"]
+[editable path="Buttons/Toggles/2022"]
