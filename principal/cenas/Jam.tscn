@@ -147,7 +147,7 @@ start_focused = true
 
 [node name="2022" parent="Buttons/Toggles" instance=ExtResource( 6 )]
 position = Vector2( 256, 640 )
-microgame_paths = [ "res://microjogos/2022S1/race/cenas/main.tscn" ]
+microgame_paths = [ "res://microjogos/2022S1/race/cenas/main.tscn", "res://microjogos/2022S1/baleia/cenas/baleiaGame.tscn" ]
 toggled = true
 
 [node name="Button" parent="Buttons/Toggles/2022" index="0"]
@@ -183,9 +183,6 @@ theme = SubResource( 8 )
 text = "MENU"
 flat = true
 script = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 path = "res://principal/cenas/Menu.tscn"
 
 [editable path="Buttons/Toggles/Demo"]

@@ -4,7 +4,7 @@
 [ext_resource path="res://principal/recursos/credits/Soulchain.png" type="Texture" id=2]
 [ext_resource path="res://principal/recursos/credits/CandlePrick.png" type="Texture" id=3]
 [ext_resource path="res://principal/recursos/credits/HoraDaNecromancia.png" type="Texture" id=4]
-[ext_resource path="res://principal/recursos/credits/DEERSKULL.png" type="Texture" id=5]
+[ext_resource path="res://microjogos/2022S1/baleia/capa.png" type="Texture" id=5]
 [ext_resource path="res://principal/recursos/credits/WhaleEater.png" type="Texture" id=6]
 [ext_resource path="res://principal/cenas/scripts/MoveScreenButton.gd" type="Script" id=7]
 [ext_resource path="res://principal/cenas/scripts/TranslatableText.gd" type="Script" id=8]
@@ -193,6 +193,7 @@ en_text = "[center][wave]Made by @moraguma"
 margin_top = 960.0
 margin_right = 384.0
 margin_bottom = 1062.0
+focus_neighbour_right = NodePath("../Next")
 theme = SubResource( 8 )
 text = "MENU"
 flat = true
@@ -201,6 +202,55 @@ start_focused = true
 path = "res://principal/cenas/Menu.tscn"
 
 [node name="Next" type="Button" parent="CreditsContainer/Race"]
+margin_left = 1792.0
+margin_top = 512.0
+margin_right = 1920.0
+margin_bottom = 614.0
+focus_neighbour_left = NodePath("../Menu")
+theme = SubResource( 8 )
+text = ">"
+flat = true
+script = ExtResource( 7 )
+movement_vector = Vector2( -1920, 0 )
+next_focus_path = NodePath("../../WHALE/Back")
+
+[node name="IFUV" type="Sprite" parent="CreditsContainer/Race"]
+position = Vector2( 1536, 640 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 1 )
+
+[node name="WHALE" type="Node2D" parent="CreditsContainer"]
+position = Vector2( 1920, 0 )
+
+[node name="Title" type="RichTextLabel" parent="CreditsContainer/WHALE"]
+margin_left = -128.0
+margin_top = 64.0
+margin_right = 1263.0
+margin_bottom = 310.0
+rect_clip_content = false
+mouse_filter = 1
+theme = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center][shake rate=20 level=40]WHALE"
+text = "WHALE"
+script = ExtResource( 8 )
+
+[node name="Explanation2" type="RichTextLabel" parent="CreditsContainer/WHALE"]
+margin_left = 832.0
+margin_top = 64.0
+margin_right = 1984.0
+margin_bottom = 448.0
+rect_clip_content = false
+mouse_filter = 1
+theme = SubResource( 10 )
+bbcode_enabled = true
+bbcode_text = "[center][wave]Feito por Lucca Fuke"
+text = "Feito por Lucca Fuke"
+script = ExtResource( 8 )
+pt_text = "[center][wave]Feito por Lucca Fuke"
+en_text = "[center][wave]Made by Lucca Fuke"
+
+[node name="Next" type="Button" parent="CreditsContainer/WHALE"]
 visible = false
 margin_left = 1792.0
 margin_top = 512.0
@@ -211,135 +261,21 @@ text = ">"
 flat = true
 script = ExtResource( 7 )
 movement_vector = Vector2( -1920, 0 )
-next_focus_path = NodePath("../../DEERSKULL/Back")
-
-[node name="IFUV" type="Sprite" parent="CreditsContainer/Race"]
-position = Vector2( 1536, 640 )
-scale = Vector2( 1.2, 1.2 )
-texture = ExtResource( 1 )
-
-[node name="DEERSKULL" type="Node2D" parent="CreditsContainer"]
-position = Vector2( 1920, 0 )
-
-[node name="Title" type="RichTextLabel" parent="CreditsContainer/DEERSKULL"]
-margin_left = -128.0
-margin_top = 64.0
-margin_right = 1263.0
-margin_bottom = 310.0
-rect_clip_content = false
-mouse_filter = 1
-theme = SubResource( 2 )
-bbcode_enabled = true
-bbcode_text = "[center][shake rate=20 level=40]DEERSKULL"
-text = "DEERSKULL"
-script = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Explanation" type="RichTextLabel" parent="CreditsContainer/DEERSKULL"]
-margin_left = 960.0
-margin_top = 128.0
-margin_right = 1856.0
-margin_bottom = 384.0
-rect_clip_content = false
-mouse_filter = 1
-theme = SubResource( 10 )
-bbcode_enabled = true
-bbcode_text = "[center][wave]Based on DEERSKULL"
-text = "Based on DEERSKULL"
-script = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-pt_text = "[center][wave]Baseado em DEERSKULL"
-en_text = "[center][wave]Based on DEERSKULL"
-
-[node name="Explanation2" type="RichTextLabel" parent="CreditsContainer/DEERSKULL"]
-margin_top = 448.0
-margin_right = 1152.0
-margin_bottom = 832.0
-rect_clip_content = false
-mouse_filter = 1
-theme = SubResource( 10 )
-bbcode_enabled = true
-bbcode_text = "[center][wave]Feito por @moraguma"
-text = "Feito por @moraguma"
-script = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-pt_text = "[center][wave]Feito por @moraguma"
-en_text = "[center][wave]Made by @moraguma"
-
-[node name="Explanation4" type="RichTextLabel" parent="CreditsContainer/DEERSKULL"]
-margin_top = 640.0
-margin_right = 1152.0
-margin_bottom = 1024.0
-rect_clip_content = false
-mouse_filter = 1
-theme = SubResource( 10 )
-bbcode_enabled = true
-bbcode_text = "[center][wave]Musica por @playwrightsband"
-text = "Musica por @playwrightsband"
-script = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-pt_text = "[center][wave]Musica por @playwrightsband"
-en_text = "[center][wave]Music by @playwrightsband"
-
-[node name="Next" type="Button" parent="CreditsContainer/DEERSKULL"]
-margin_left = 1792.0
-margin_top = 512.0
-margin_right = 1920.0
-margin_bottom = 614.0
-focus_neighbour_left = NodePath("../Play")
-theme = SubResource( 8 )
-text = ">"
-flat = true
-script = ExtResource( 7 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-movement_vector = Vector2( -1920, 0 )
 next_focus_path = NodePath("../../Soulchain/Back")
 
-[node name="Back" type="Button" parent="CreditsContainer/DEERSKULL"]
+[node name="Back" type="Button" parent="CreditsContainer/WHALE"]
 margin_top = 512.0
 margin_right = 128.0
 margin_bottom = 614.0
-focus_neighbour_right = NodePath("../Play")
 theme = SubResource( 8 )
 text = "<"
 flat = true
 script = ExtResource( 7 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 movement_vector = Vector2( 1920, 0 )
 next_focus_path = NodePath("../../Race/Next")
 
-[node name="Play" type="Button" parent="CreditsContainer/DEERSKULL"]
-margin_left = 1216.0
-margin_top = 768.0
-margin_right = 1600.0
-margin_bottom = 870.0
-focus_neighbour_left = NodePath("../Back")
-focus_neighbour_right = NodePath("../Next")
-theme = SubResource( 8 )
-text = "JOGAR"
-flat = true
-script = ExtResource( 9 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-pt_text = "JOGAR"
-en_text = "PLAY"
-url = "https://moraguma.itch.io/deerskull"
-
-[node name="IFUV" type="Sprite" parent="CreditsContainer/DEERSKULL"]
-position = Vector2( 1408, 512 )
+[node name="Whale" type="Sprite" parent="CreditsContainer/WHALE"]
+position = Vector2( 1408, 576 )
 scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 5 )
 
@@ -426,7 +362,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 movement_vector = Vector2( 1920, 0 )
-next_focus_path = NodePath("../../DEERSKULL/Next")
+next_focus_path = NodePath("../../WHALE/Next")
 
 [node name="Play" type="Button" parent="CreditsContainer/Soulchain"]
 margin_left = 1216.0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/530704__szegvari__water-wave-beach-peoples-ships-field-recording-200815-0038.wav-082a5f0711b2d76b68640512b0d053de.sample"
+
+[deps]
+
+source_file="res://microjogos/2022S1/baleia/recursos/530704__szegvari__water-wave-beach-peoples-ships-field-recording-200815-0038.wav"
+dest_files=[ "res://.import/530704__szegvari__water-wave-beach-peoples-ships-field-recording-200815-0038.wav-082a5f0711b2d76b68640512b0d053de.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

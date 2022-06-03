@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/398701__inspectorj__water-swirl-small-10.wav-1338b687a8f91f6b7a3b727d923c137c.sample"
+
+[deps]
+
+source_file="res://microjogos/2022S1/baleia/recursos/398701__inspectorj__water-swirl-small-10.wav"
+dest_files=[ "res://.import/398701__inspectorj__water-swirl-small-10.wav-1338b687a8f91f6b7a3b727d923c137c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

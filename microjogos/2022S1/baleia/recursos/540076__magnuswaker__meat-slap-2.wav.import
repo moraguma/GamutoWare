@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/540076__magnuswaker__meat-slap-2.wav-2d9c3deaaf324ed5de9311580a8e78f8.sample"
+
+[deps]
+
+source_file="res://microjogos/2022S1/baleia/recursos/540076__magnuswaker__meat-slap-2.wav"
+dest_files=[ "res://.import/540076__magnuswaker__meat-slap-2.wav-2d9c3deaaf324ed5de9311580a8e78f8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
