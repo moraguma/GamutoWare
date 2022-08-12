@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/slash.wav-f11361f09926f52626044ec59ed5fd58.sample"
+
+[deps]
+
+source_file="res://microjogos/2022S1/gamuturai/sons/slash.wav"
+dest_files=[ "res://.import/slash.wav-f11361f09926f52626044ec59ed5fd58.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

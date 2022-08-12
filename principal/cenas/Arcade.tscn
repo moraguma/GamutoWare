@@ -147,7 +147,7 @@ start_focused = true
 
 [node name="2022" parent="Buttons/Toggles" instance=ExtResource( 7 )]
 position = Vector2( 256, 640 )
-microgame_paths = [ "res://microjogos/2022S1/race/cenas/main.tscn", "res://microjogos/2022S1/baleia/cenas/baleiaGame.tscn" ]
+microgame_paths = [ "res://microjogos/2022S1/race/cenas/main.tscn", "res://microjogos/2022S1/baleia/cenas/baleiaGame.tscn", "res://microjogos/2022S1/gamuturai/cenas/main.tscn" ]
 toggled = true
 
 [node name="Button" parent="Buttons/Toggles/2022" index="0"]

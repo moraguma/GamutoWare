@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Musica.ogg-5383fe680f87c11aae175cb94b77cc8d.oggstr"
+
+[deps]
+
+source_file="res://microjogos/2022S1/gamuturai/sons/Musica.ogg"
+dest_files=[ "res://.import/Musica.ogg-5383fe680f87c11aae175cb94b77cc8d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
