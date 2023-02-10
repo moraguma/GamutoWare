@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://minigames/SpaceShooter/scenes/Laser.tscn" type="PackedScene" id=1]
+[ext_resource path="res://minigames/SpaceShooter/scripts/Laser_Ship.gd" type="Script" id=2]
+[ext_resource path="res://minigames/SpaceShooter/sprites/laser_ship.png" type="Texture" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 3.0
+height = 6.0
+
+[node name="Laser_Ship" instance=ExtResource( 1 )]
+
+script/script = ExtResource( 2 )
+speed = Vector2( 500, 500 )
+
+[node name="Sprite" parent="."]
+
+texture = ExtResource( 3 )
+
+[node name="Shape" parent="."]
+
+shape = SubResource( 1 )
+
+[node name="Visibility_Notifier" parent="."]
+
+rect = Rect2( -3, -6, 6, 12 )
+
+

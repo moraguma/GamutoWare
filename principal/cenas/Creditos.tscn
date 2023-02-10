@@ -3,7 +3,7 @@
 [ext_resource path="res://principal/recursos/fonts/Stop Bullying.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://principal/cenas/scripts/TransitionButton.gd" type="Script" id=2]
 [ext_resource path="res://principal/recursos/shaders/Diamond.tres" type="Material" id=3]
-[ext_resource path="res://microjogos/teste/moveGamutoDemo/capa.png" type="Texture" id=4]
+[ext_resource path="res://microjogos/not_implemented/teste/moveGamutoDemo/capa.png" type="Texture" id=4]
 [ext_resource path="res://principal/cenas/scripts/TranslatableText.gd" type="Script" id=5]
 [ext_resource path="res://principal/recursos/themes/ButtonTheme.tres" type="Theme" id=6]
 [ext_resource path="res://principal/recursos/sprites/MenuBase.png" type="Texture" id=7]

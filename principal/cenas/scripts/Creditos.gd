@@ -75,11 +75,9 @@ func _process(delta):
 	credits.position = credits.position.linear_interpolate(aim_pos, LERP_WEIGHT)
 
 
-func update_last_focus(last):
-	last_focus = last
-
-
-func detail(path):
+func detail(path, button):
+	last_focus = button
+	
 	block_menu = true
 	
 	SoundController.play_sfx("click")

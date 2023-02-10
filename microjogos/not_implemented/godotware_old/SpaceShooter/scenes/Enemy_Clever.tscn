@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://minigames/SpaceShooter/scenes/Enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://minigames/SpaceShooter/scripts/Enemy_Clever.gd" type="Script" id=2]
+[ext_resource path="res://minigames/SpaceShooter/sprites/enemy_clever.png" type="Texture" id=3]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -10, -13, -18, 16, 18, 16, 10, -13 )
+
+[node name="Enemy_Clever" instance=ExtResource( 1 )]
+
+script/script = ExtResource( 2 )
+armor = 2
+
+[node name="Sprite" parent="."]
+
+texture = ExtResource( 3 )
+
+[node name="Shape" parent="."]
+
+shape = SubResource( 1 )
+
+[node name="Cannon" type="Position2D" parent="."]
+
+transform/pos = Vector2( 0, 4 )
+
+

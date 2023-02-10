@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://principal/recursos/fonts/Stop Bullying.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://principal/recursos/sprites/GMToutline.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://principal/cenas/scripts/TransitionButton.gd" type="Script" id=5]
 [ext_resource path="res://principal/cenas/scripts/TranslatableText.gd" type="Script" id=6]
 [ext_resource path="res://principal/recursos/shaders/Diamond.tres" type="Material" id=7]
+[ext_resource path="res://principal/recursos/themes/ButtonTheme.tres" type="Theme" id=8]
 
 [sub_resource type="Curve" id=5]
 min_value = -360.0
@@ -88,19 +89,25 @@ en_text = "[center][shake rate=20 level=40]GAME   OVER"
 
 [node name="Score" type="RichTextLabel" parent="."]
 margin_left = 254.0
-margin_top = 443.0
+margin_top = 403.0
 margin_right = 1666.0
-margin_bottom = 816.0
+margin_bottom = 776.0
 rect_clip_content = false
 theme = SubResource( 10 )
 bbcode_enabled = true
-bbcode_text = "[center][wave amp=100 freq=5]SCORE:
-50"
-text = "SCORE:
-50"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+bbcode_text = "[center][wave amp=100 freq=5]SCORE: 50"
+text = "SCORE: 50"
+
+[node name="Highscore" type="RichTextLabel" parent="."]
+margin_left = 254.0
+margin_top = 611.0
+margin_right = 1666.0
+margin_bottom = 984.0
+rect_clip_content = false
+theme = ExtResource( 8 )
+bbcode_enabled = true
+bbcode_text = "[center][shake level=20]HIGHSCORE: 210"
+text = "HIGHSCORE: 210"
 
 [node name="Buttons" type="Node2D" parent="."]
 

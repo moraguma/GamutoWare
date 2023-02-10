@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/music.ogg-0f1ca4964089d2286723d01dc71d95f6.oggstr"
+
+[deps]
+
+source_file="res://microjogos/not_implemented/godotware_old/SpaceShooter/sounds/music.ogg"
+dest_files=[ "res://.import/music.ogg-0f1ca4964089d2286723d01dc71d95f6.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

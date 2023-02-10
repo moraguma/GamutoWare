@@ -35,8 +35,6 @@ func load_button(active, path, to_call):
 	load_button_ref()
 	
 	if active:
-		button.connect("pressed", to_call, "detail", [path])
+		button.connect("pressed", to_call, "detail", [path, button])
 	else:
 		button.connect("pressed", to_call, "fail_detail")
-	
-	connect("focus_entered", to_call, "update_last_focus", [self])

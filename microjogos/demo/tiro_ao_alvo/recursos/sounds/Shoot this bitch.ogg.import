@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Shoot this bitch.ogg-8e82bd594b382ae6237fc9a4c74d7fb5.oggstr"
+
+[deps]
+
+source_file="res://microjogos/demo/tiro_ao_alvo/recursos/sounds/Shoot this bitch.ogg"
+dest_files=[ "res://.import/Shoot this bitch.ogg-8e82bd594b382ae6237fc9a4c74d7fb5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

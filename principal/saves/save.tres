@@ -12,6 +12,10 @@ played_minigames = {
 "res://microjogos/2022S1/race/cenas/main.tscn": true,
 "res://microjogos/demo+/frogger/cenas/main.tscn": true,
 "res://microjogos/demo+/tiro_ao_alvo/cenas/main.tscn": true,
+"res://microjogos/demo/frogger/cenas/main.tscn": true,
+"res://microjogos/demo/tiro_ao_alvo/cenas/main.tscn": true,
+"res://microjogos/godotware/Bang/Main.tscn": true,
+"res://microjogos/godotware/Simon/Main.tscn": true,
 "res://microjogos/moraguma/candle prick/cenas/Main.tscn": true,
 "res://microjogos/moraguma/deerskull/cenas/Main.tscn": true,
 "res://microjogos/moraguma/hora_da_necromancia/cenas/Main.tscn": true,
@@ -19,8 +23,8 @@ played_minigames = {
 "res://microjogos/moraguma/soulchain/cenas/Main.tscn": true,
 "res://microjogos/moraguma/whale_eater/cenas/Main.tscn": true
 }
-minigame_settings = [ true, true, true ]
+minigame_settings = [ true, false, true, false ]
 filter_settings = [ false ]
-highscore = 0
+highscore = 4
 misc = {
 }

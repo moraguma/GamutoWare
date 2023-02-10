@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://microjogos/godotware/SpaceShooter/Main.gd" type="Script" id=1]
+[ext_resource path="res://microjogos/godotware/SpaceShooter/scenes/Audio_Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://microjogos/godotware/SpaceShooter/scenes/Spawner_Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://microjogos/godotware/SpaceShooter/sprites/stars_far.png" type="Texture" id=4]
+[ext_resource path="res://microjogos/godotware/SpaceShooter/scripts/Camera.gd" type="Script" id=5]
+[ext_resource path="res://microjogos/godotware/SpaceShooter/scenes/Ship.tscn" type="PackedScene" id=6]
+
+[node name="Main" type="Node2D"]
+
+script/script = ExtResource( 1 )
+NAME = "Space Shooter"
+INSTRUCTION = "Survive!"
+DURATION = 6
+TIMEOUT_WIN = true
+USE_KEYS_HUD = true
+USE_MOUSE_HUD = true
+
+[node name="Audio_Player" parent="." instance=ExtResource( 2 )]
+
+[node name="Spawner_Enemy" parent="." instance=ExtResource( 3 )]
+
+[node name="Stars_0" type="Sprite" parent="."]
+
+transform/pos = Vector2( -24, -24 )
+transform/scale = Vector2( 2.5, 2.5 )
+texture = ExtResource( 4 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Stars_1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 400, -24 )
+transform/scale = Vector2( 2.5, 2.5 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="Camera" type="Camera2D" parent="."]
+
+anchor_mode = 0
+rotating = false
+current = false
+zoom = Vector2( 1, 1 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+script/script = ExtResource( 5 )
+
+[node name="Ship" parent="." instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 320, 200 )
+
+

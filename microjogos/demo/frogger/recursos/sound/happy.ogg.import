@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/happy.ogg-789ec6573ce51799a4314cbb3eb9e755.oggstr"
+
+[deps]
+
+source_file="res://microjogos/demo/frogger/recursos/sound/happy.ogg"
+dest_files=[ "res://.import/happy.ogg-789ec6573ce51799a4314cbb3eb9e755.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

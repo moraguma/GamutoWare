@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://minigames/Dont_move/dont.png" type="Texture" id=1]
+
+[node name="Main" type="Node2D"]
+
+[node name="TextureFrame" type="TextureFrame" parent="."]
+
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -2.0
+margin/top = -41.0
+margin/right = 1278.0
+margin/bottom = 855.0
+texture = ExtResource( 1 )
+stretch_mode = 0
+
+

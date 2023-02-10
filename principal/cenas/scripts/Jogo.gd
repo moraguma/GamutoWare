@@ -30,6 +30,8 @@ var score = 0
 var mode = MODE.ENDLESS
 
 var won = false
+
+onready var minigame_data = preload("res://principal/recursos/data/Minigames.gd").new()
 # ------------------------------------------------------------------------------
 # NÓS
 # ------------------------------------------------------------------------------
@@ -58,8 +60,8 @@ func isolate_folder(path, tolerance):
 func load_icons():
 	for i in range(len(microgame_paths)):
 		if not icon_dict.has(microgame_paths[i]):
-			var path = isolate_folder(microgame_paths[i], 2) + "/capa.png"
-			icon_dict[microgame_paths[i]] = load(isolate_folder(microgame_paths[i], 2) + "/capa.png")
+			var path = minigame_data.cover_paths[microgame_paths[i]]
+			icon_dict[microgame_paths[i]] = load(path)
 			icon_dict[microgame_paths[i]].set_flags(Texture.FLAG_FILTER)
 
 

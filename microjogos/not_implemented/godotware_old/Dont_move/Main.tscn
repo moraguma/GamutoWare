@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://minigames/Dont_move/Main.gd" type="Script" id=1]
+[ext_resource path="res://minigames/Dont_move/fundo1.png" type="Texture" id=2]
+[ext_resource path="res://minigames/Dont_move/dont.png" type="Texture" id=3]
+
+[node name="Main" type="Node2D"]
+
+script/script = ExtResource( 1 )
+NAME = "dont_move"
+INSTRUCTION = "Don't move!"
+DURATION = 3
+TIMEOUT_WIN = true
+USE_KEYS_HUD = false
+USE_MOUSE_HUD = false
+
+[node name="TextureFrame" type="TextureFrame" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1984.0
+margin/bottom = 1216.0
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="dont" type="Sprite" parent="."]
+
+transform/pos = Vector2( 314.427, 173.523 )
+transform/scale = Vector2( 0.499641, 0.499641 )
+texture = ExtResource( 3 )
+
+

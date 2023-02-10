@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://microjogos/demo+/seu_projeto/capa.png" type="Texture" id=1]
+[ext_resource path="res://microjogos/demo/seu_projeto/capa.png" type="Texture" id=1]
 [ext_resource path="res://principal/cenas/scripts/CoverButton.gd" type="Script" id=2]
 
 [sub_resource type="StyleBoxFlat" id=1]

@@ -141,3 +141,12 @@ func check_minigame(path):
 	if path in save.played_minigames:
 		return save.played_minigames[path]
 	return false
+
+
+func get_highscore():
+	return save.highscore
+
+
+func set_highscore(highscore):
+	save.highscore = highscore
+	save_game()

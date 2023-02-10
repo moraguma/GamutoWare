@@ -1,0 +1,527 @@
+[gd_scene load_steps=24 format=1]
+
+[ext_resource path="res://Gameplay.gd" type="Script" id=1]
+[ext_resource path="res://Gandhi.gd" type="Script" id=2]
+[ext_resource path="res://Personagens/Gandhi1.png" type="Texture" id=3]
+[ext_resource path="res://Pontuações.gd" type="Script" id=4]
+[ext_resource path="res://Soldado.gd" type="Script" id=5]
+[ext_resource path="res://Personagens/Soldado1.png" type="Texture" id=6]
+[ext_resource path="res://Indiano.gd" type="Script" id=7]
+[ext_resource path="res://Personagens/Indiano1.png" type="Texture" id=8]
+[ext_resource path="res://Cenas/India_painting.jpg" type="Texture" id=9]
+[ext_resource path="res://Churchill.gd" type="Script" id=10]
+[ext_resource path="res://Personagens/Churchill.png" type="Texture" id=11]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 42.1144, 45.3328 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 49.627, 48.4404 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 15.9954, 371.677 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 751.864, 10 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 751.787, 10 )
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 12.275, 432.167 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 27.2317, 49.4225 )
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 24.4319, 50.3865 )
+
+[sub_resource type="RectangleShape2D" id=9]
+
+custom_solver_bias = 0.0
+extents = Vector2( 27.552, 54.4247 )
+
+[sub_resource type="RectangleShape2D" id=10]
+
+custom_solver_bias = 0.0
+extents = Vector2( 44.5938, 113.913 )
+
+[sub_resource type="RectangleShape2D" id=11]
+
+custom_solver_bias = 0.0
+extents = Vector2( 59.9206, 10 )
+
+[sub_resource type="RectangleShape2D" id=12]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 120.269 )
+
+[node name="Node2D" type="Node2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="Gandhi" type="KinematicBody2D" parent="."]
+
+transform/pos = Vector2( 686.296, 333.104 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -19.6577, 257.408 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Gandhi"]
+
+transform/pos = Vector2( 86.7316, 266.696 )
+transform/scale = Vector2( 1.45942, 1.59975 )
+input/pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="Sprite" type="Sprite" parent="Gandhi"]
+
+transform/pos = Vector2( -19.1926, 244.548 )
+transform/scale = Vector2( 0.156608, 0.114724 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gandhi"]
+
+transform/pos = Vector2( -19.6577, 257.408 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Area2D 2" type="Area2D" parent="Gandhi"]
+
+input/pickable = true
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -21.5347, 258.072 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gandhi/Area2D 2"]
+
+transform/pos = Vector2( -21.5347, 258.072 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+script/script = ExtResource( 4 )
+
+[node name="Bordas" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Bordas"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -15.9706, 358.474 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bordas/StaticBody2D"]
+
+transform/pos = Vector2( -15.9706, 358.474 )
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D 2" type="StaticBody2D" parent="Bordas"]
+
+editor/display_folded = true
+input/pickable = false
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 588.446, -10.0841 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bordas/StaticBody2D 2"]
+
+transform/pos = Vector2( 588.446, -10.0841 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D 3" type="StaticBody2D" parent="Bordas"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 566.375, 730.003 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bordas/StaticBody2D 3"]
+
+transform/pos = Vector2( 566.375, 730.003 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D 4" type="StaticBody2D" parent="Bordas"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 1292.4, 294.917 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bordas/StaticBody2D 4"]
+
+transform/pos = Vector2( 1292.4, 294.917 )
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Soldado" type="KinematicBody2D" parent="."]
+
+transform/pos = Vector2( 745.194, 285.157 )
+input/pickable = false
+shapes/0/shape = SubResource( 7 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -303.521, -14.19 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="Soldado"]
+
+transform/pos = Vector2( -303.532, -15.0547 )
+transform/scale = Vector2( 0.16711, 0.0887926 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Soldado"]
+
+transform/pos = Vector2( -303.521, -14.19 )
+shape = SubResource( 7 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Soldado4" type="KinematicBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 1101.99, 131.366 )
+input/pickable = false
+shapes/0/shape = SubResource( 7 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -303.521, -15.0045 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="Soldado4"]
+
+transform/pos = Vector2( -303.532, -15.0547 )
+transform/scale = Vector2( 0.16711, 0.0887926 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Soldado4"]
+
+transform/pos = Vector2( -303.521, -15.0045 )
+shape = SubResource( 7 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Soldado3" type="KinematicBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 862.075, 133.417 )
+input/pickable = false
+shapes/0/shape = SubResource( 7 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -302.706, -15.819 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="Soldado3"]
+
+transform/pos = Vector2( -303.532, -15.0547 )
+transform/scale = Vector2( 0.16711, 0.0887926 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Soldado3"]
+
+transform/pos = Vector2( -302.706, -15.819 )
+shape = SubResource( 7 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Soldado2" type="KinematicBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 974.29, 285.157 )
+input/pickable = false
+shapes/0/shape = SubResource( 7 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -303.521, -15.819 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="Soldado2"]
+
+transform/pos = Vector2( -303.532, -15.0547 )
+transform/scale = Vector2( 0.16711, 0.0887926 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Soldado2"]
+
+transform/pos = Vector2( -303.521, -15.819 )
+shape = SubResource( 7 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Soldado1" type="KinematicBody2D" parent="."]
+
+transform/pos = Vector2( 983.057, 289.258 )
+input/pickable = false
+shapes/0/shape = SubResource( 7 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -75.0948, -28.0652 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="Soldado1"]
+
+transform/pos = Vector2( -75.9213, -29.4085 )
+transform/scale = Vector2( 0.16711, 0.0887926 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Soldado1"]
+
+transform/pos = Vector2( -75.0948, -28.0652 )
+shape = SubResource( 7 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Indiano" type="KinematicBody2D" parent="."]
+
+transform/pos = Vector2( 257.219, 348.601 )
+input/pickable = false
+shapes/0/shape = SubResource( 8 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 1.22354, 8.3118 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Indiano"]
+
+transform/pos = Vector2( 1.22354, 8.3118 )
+shape = SubResource( 8 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Sprite" type="Sprite" parent="Indiano"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 1.93646, 10.7665 )
+transform/scale = Vector2( 0.104658, 0.0958121 )
+texture = ExtResource( 8 )
+
+[node name="Area2D" type="Area2D" parent="Indiano"]
+
+visibility/behind_parent = true
+input/pickable = true
+shapes/0/shape = SubResource( 9 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 1.76053, 8.80255 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Indiano/Area2D"]
+
+transform/pos = Vector2( 1.76053, 8.80255 )
+shape = SubResource( 9 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Label" type="Label" parent="."]
+
+rect/scale = Vector2( 3, 3 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 533.0
+margin/top = 42.0
+margin/right = 622.0
+margin/bottom = 56.0
+text = "Seguidores: 0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Sprite" type="Sprite" parent="."]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 639.441, 358.968 )
+transform/scale = Vector2( 2.25787, 1.61568 )
+texture = ExtResource( 9 )
+
+[node name="Churchill" type="KinematicBody2D" parent="."]
+
+transform/pos = Vector2( -254.653, 115.783 )
+input/pickable = false
+shapes/0/shape = SubResource( 10 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -21.9919, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="Churchill"]
+
+transform/pos = Vector2( -15.6011, -5.77223 )
+transform/scale = Vector2( 0.175258, 0.205452 )
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Churchill"]
+
+transform/pos = Vector2( -21.9919, 0 )
+shape = SubResource( 10 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( -275.58, -16.7018 )
+input/pickable = false
+shapes/0/shape = SubResource( 11 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+
+shape = SubResource( 11 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D1" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( -275.58, 246.336 )
+input/pickable = false
+shapes/0/shape = SubResource( 11 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D1"]
+
+shape = SubResource( 11 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D 2" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( -195.411, 113.572 )
+input/pickable = false
+shapes/0/shape = SubResource( 12 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -15.0316, 1.67017 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D 2"]
+
+transform/pos = Vector2( -15.0316, 1.67017 )
+shape = SubResource( 12 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( -327.355, 115.242 )
+input/pickable = false
+shapes/0/shape = SubResource( 12 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -15.0316, 1.67017 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+
+transform/pos = Vector2( -15.0316, 1.67017 )
+shape = SubResource( 12 )
+trigger = false
+_update_shape_index = 0
+
+[connection signal="body_enter" from="Gandhi/Area2D 2" to="Gandhi/Area2D 2/CollisionShape2D" method="_on_Area2D_2_body_enter"]
+
+[connection signal="body_enter" from="Indiano/Area2D" to="." method="_on_Area2D_body_enter"]
+
+[connection signal="body_enter" from="Indiano/Area2D" to="Indiano" method="_on_Area2D_body_enter"]
+
+
