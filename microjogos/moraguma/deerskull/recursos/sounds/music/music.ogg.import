@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/music.ogg-c9c58109338eee39393efd7fd16657c5.oggstr"
+
+[deps]
+
+source_file="res://microjogos/moraguma/deerskull/recursos/sounds/music/music.ogg"
+dest_files=[ "res://.import/music.ogg-c9c58109338eee39393efd7fd16657c5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

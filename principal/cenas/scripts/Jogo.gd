@@ -156,6 +156,8 @@ func next_game():
 
 
 func start_game(path):
+	Global.register_minigame(path)
+	
 	SoundController.mute_game()
 	
 	current_microgame = microgame_dict[path].instance()

@@ -195,7 +195,6 @@ position = Vector2( -2, -112 )
 scale = Vector2( 2.4375, 2.4375 )
 frames = SubResource( 19 )
 animation = "baleia"
-frame = 1
 speed_scale = 1.5
 playing = true
 

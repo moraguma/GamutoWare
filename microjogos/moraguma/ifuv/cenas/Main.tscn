@@ -1,0 +1,405 @@
+[gd_scene load_steps=38 format=2]
+
+[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sprites/closewall.png" type="Texture" id=1]
+[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/door.wav" type="AudioStream" id=2]
+[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sprites/bg.png" type="Texture" id=3]
+[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sprites/monster.png" type="Texture" id=4]
+[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sprites/door.png" type="Texture" id=5]
+[ext_resource path="res://microjogos/moraguma/ifuv/cenas/scripts/Main.gd" type="Script" id=6]
+[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/Key3.wav" type="AudioStream" id=7]
+[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/Key4.wav" type="AudioStream" id=8]
+[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/Key1.wav" type="AudioStream" id=9]
+[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/Key2.wav" type="AudioStream" id=10]
+[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/Key5.wav" type="AudioStream" id=11]
+[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/error.wav" type="AudioStream" id=12]
+[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sprites/pad.png" type="Texture" id=13]
+[ext_resource path="res://microjogos/moraguma/ifuv/cenas/NumberButton.tscn" type="PackedScene" id=14]
+[ext_resource path="res://microjogos/moraguma/ifuv/cenas/EnterButton.tscn" type="PackedScene" id=15]
+[ext_resource path="res://microjogos/moraguma/ifuv/cenas/EraseButton.tscn" type="PackedScene" id=16]
+[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sprites/cursor.png" type="Texture" id=17]
+[ext_resource path="res://microjogos/moraguma/ifuv/recursos/fonts/Pixel Millennium.ttf" type="DynamicFontData" id=18]
+[ext_resource path="res://microjogos/moraguma/ifuv/cenas/scripts/Arrow.gd" type="Script" id=19]
+[ext_resource path="res://microjogos/moraguma/ifuv/cenas/scripts/Twitcher.gd" type="Script" id=20]
+[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sprites/paperslip.png" type="Texture" id=21]
+[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sounds/music/ifuv.ogg" type="AudioStream" id=22]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 76, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 72, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath(".:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 2, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath(".:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 2, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "approaching"
+length = 7.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 77, -0.25, 0, 0.25, 0, 76, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 7 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 65, -0.25, 0, 0.25, 0, 72, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 7 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath(".:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 2, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 7 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath(".:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 2, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 7 )
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "close"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "show"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("../DoorCloseSound")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0.0 ],
+"method": "play"
+} ]
+}
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 17 )
+region = Rect2( 0, 0, 18, 18 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 17 )
+region = Rect2( 18, 0, 18, 18 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 17 )
+region = Rect2( 36, 0, 18, 18 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 17 )
+region = Rect2( 54, 0, 18, 18 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 17 )
+region = Rect2( 72, 0, 18, 18 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 17 )
+region = Rect2( 90, 0, 18, 18 )
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="DynamicFont" id=14]
+size = 8
+outline_color = Color( 0.121569, 0.0745098, 0.101961, 1 )
+font_data = ExtResource( 18 )
+
+[sub_resource type="Theme" id=13]
+default_font = SubResource( 14 )
+RichTextLabel/colors/default_color = Color( 0.121569, 0.0745098, 0.101961, 1 )
+
+[sub_resource type="DynamicFont" id=16]
+outline_color = Color( 0.121569, 0.0745098, 0.101961, 1 )
+font_data = ExtResource( 18 )
+
+[sub_resource type="Theme" id=15]
+default_font = SubResource( 16 )
+RichTextLabel/colors/default_color = Color( 0.368627, 0.294118, 0.25098, 1 )
+
+[node name="IFUV" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2( 80, 45 )
+current = true
+
+[node name="BG" type="Sprite" parent="."]
+position = Vector2( 80, 45 )
+texture = ExtResource( 3 )
+
+[node name="Monster" type="Sprite" parent="."]
+position = Vector2( 76, 72 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Monster"]
+anims/RESET = SubResource( 1 )
+anims/approaching = SubResource( 2 )
+
+[node name="Door" type="Sprite" parent="."]
+visible = false
+position = Vector2( 80, 45 )
+texture = ExtResource( 5 )
+hframes = 4
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Door"]
+anims/RESET = SubResource( 3 )
+anims/close = SubResource( 4 )
+
+[node name="FG" type="Sprite" parent="."]
+position = Vector2( 80, 45 )
+texture = ExtResource( 1 )
+
+[node name="Pad" type="Sprite" parent="."]
+position = Vector2( 133, 56 )
+texture = ExtResource( 13 )
+script = ExtResource( 19 )
+
+[node name="1" parent="Pad" instance=ExtResource( 14 )]
+position = Vector2( -14, -11 )
+right_path = "../2"
+down_path = "../4"
+number = 1
+
+[node name="2" parent="Pad" instance=ExtResource( 14 )]
+position = Vector2( 0, -11 )
+right_path = "../3"
+down_path = "../5"
+left_path = "../1"
+number = 2
+
+[node name="3" parent="Pad" instance=ExtResource( 14 )]
+position = Vector2( 14, -11 )
+down_path = "../6"
+left_path = "../2"
+number = 3
+
+[node name="4" parent="Pad" instance=ExtResource( 14 )]
+position = Vector2( -14, 2 )
+up_path = "../1"
+right_path = "../5"
+down_path = "../7"
+number = 4
+
+[node name="5" parent="Pad" instance=ExtResource( 14 )]
+position = Vector2( 0, 2 )
+up_path = "../2"
+right_path = "../6"
+down_path = "../8"
+left_path = "../4"
+number = 5
+
+[node name="6" parent="Pad" instance=ExtResource( 14 )]
+position = Vector2( 14, 2 )
+up_path = "../3"
+down_path = "../9"
+left_path = "../5"
+number = 6
+
+[node name="7" parent="Pad" instance=ExtResource( 14 )]
+position = Vector2( -14, 15 )
+up_path = "../4"
+right_path = "../8"
+down_path = "../Erase"
+number = 7
+
+[node name="8" parent="Pad" instance=ExtResource( 14 )]
+position = Vector2( 0, 15 )
+up_path = "../5"
+right_path = "../9"
+down_path = "../0"
+left_path = "../7"
+number = 8
+
+[node name="9" parent="Pad" instance=ExtResource( 14 )]
+position = Vector2( 14, 15 )
+up_path = "../6"
+down_path = "../Enter"
+left_path = "../8"
+number = 9
+
+[node name="0" parent="Pad" instance=ExtResource( 14 )]
+position = Vector2( 0, 28 )
+up_path = "../8"
+right_path = "../Enter"
+left_path = "../Erase"
+
+[node name="Erase" parent="Pad" instance=ExtResource( 16 )]
+position = Vector2( -14, 28 )
+up_path = "../7"
+right_path = "../0"
+
+[node name="Enter" parent="Pad" instance=ExtResource( 15 )]
+position = Vector2( 14, 28 )
+up_path = "../9"
+left_path = "../0"
+
+[node name="Cursor" type="AnimatedSprite" parent="Pad"]
+position = Vector2( 0, -11 )
+frames = SubResource( 11 )
+frame = 1
+playing = true
+
+[node name="Display" type="RichTextLabel" parent="Pad"]
+margin_left = -7.0
+margin_top = -31.0
+margin_right = 9.0
+margin_bottom = -20.0
+theme = SubResource( 13 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Paper" type="Sprite" parent="."]
+position = Vector2( 29, 71 )
+texture = ExtResource( 21 )
+script = ExtResource( 20 )
+
+[node name="Password" type="RichTextLabel" parent="Paper"]
+margin_left = -12.0
+margin_top = -7.0
+margin_right = 44.0
+margin_bottom = 37.0
+theme = SubResource( 15 )
+bbcode_enabled = true
+text = "1234
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DoorCloseSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = 10.0
+
+[node name="ErrorSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+volume_db = 10.0
+
+[node name="Key1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = 10.0
+
+[node name="Key2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = 10.0
+
+[node name="Key3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = 10.0
+
+[node name="Key4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = 10.0
+
+[node name="Key5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = 10.0
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 22 )
+volume_db = 10.0

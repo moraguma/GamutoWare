@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/wind_loop.ogg-c5569f7f50f3c03681ccbf62ffd235b5.oggstr"
+
+[deps]
+
+source_file="res://microjogos/moraguma/candle prick/recursos/sounds/wind_loop.ogg"
+dest_files=[ "res://.import/wind_loop.ogg-c5569f7f50f3c03681ccbf62ffd235b5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

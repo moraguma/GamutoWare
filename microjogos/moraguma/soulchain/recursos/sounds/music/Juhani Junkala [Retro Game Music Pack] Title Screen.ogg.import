@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Juhani Junkala [Retro Game Music Pack] Title Screen.ogg-2e1f3bf218dd88867dca98b5c1f2088c.oggstr"
+
+[deps]
+
+source_file="res://microjogos/moraguma/soulchain/recursos/sounds/music/Juhani Junkala [Retro Game Music Pack] Title Screen.ogg"
+dest_files=[ "res://.import/Juhani Junkala [Retro Game Music Pack] Title Screen.ogg-2e1f3bf218dd88867dca98b5c1f2088c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,29 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[sub_resource type="Shader" id=3]
+code = "shader_type canvas_item;
+
+uniform vec4 color1 : hint_color;
+uniform vec4 color2 : hint_color;
+
+// Size of each diamond, in pixels.
+uniform float diamondPixelSize = 10.0;
+
+void fragment() {
+	float xFraction = fract(FRAGCOORD.x / diamondPixelSize);
+	float yFraction = fract(FRAGCOORD.y / diamondPixelSize);
+	float xDistance = abs(xFraction - 0.5);
+	float yDistance = abs(yFraction - 0.5);
+	
+	if ((xDistance + yDistance + UV.x + UV.y > (TIME - (2.0 * floor(TIME / 2.0))) * 3.0) || xDistance + yDistance + UV.x + UV.y < (TIME - (2.0 * floor(TIME / 2.0))) * 3.0 - 2.0) {
+		COLOR = color1
+	} else {
+		COLOR = color2
+	}
+}"
+
+[resource]
+shader = SubResource( 3 )
+shader_param/color1 = Color( 0.6, 0.254902, 0.772549, 1 )
+shader_param/color2 = Color( 0.682353, 0.254902, 0.784314, 1 )
+shader_param/diamondPixelSize = 50.0
