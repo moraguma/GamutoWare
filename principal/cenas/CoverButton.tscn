@@ -1,6 +1,5 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://microjogos/demo/seu_projeto/capa.png" type="Texture" id=1]
 [ext_resource path="res://principal/cenas/scripts/CoverButton.gd" type="Script" id=2]
 
 [sub_resource type="StyleBoxFlat" id=1]
@@ -25,7 +24,6 @@ Button/styles/focus = SubResource( 1 )
 [node name="CoverButton" type="TextureRect"]
 margin_right = 40.0
 margin_bottom = 40.0
-texture = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="Button" type="Button" parent="."]

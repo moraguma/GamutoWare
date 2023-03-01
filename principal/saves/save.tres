@@ -23,7 +23,7 @@ played_minigames = {
 "res://microjogos/moraguma/soulchain/cenas/Main.tscn": true,
 "res://microjogos/moraguma/whale_eater/cenas/Main.tscn": true
 }
-minigame_settings = [ true, false, true, false ]
+minigame_settings = [ false, false, true, false ]
 filter_settings = [ false ]
 highscore = 4
 misc = {
