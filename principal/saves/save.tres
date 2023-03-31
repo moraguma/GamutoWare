@@ -1,9 +1,9 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" load_steps=2 format=3]
 
-[ext_resource path="res://principal/cenas/scripts/SaveFile.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://principal/cenas/scripts/SaveFile.gd" id="1"]
 
 [resource]
-script = ExtResource( 1 )
+script = ExtResource("1")
 current_version = 2.0
 played_minigames = {
 "gamutoware": true,
@@ -23,8 +23,7 @@ played_minigames = {
 "res://microjogos/moraguma/soulchain/cenas/Main.tscn": true,
 "res://microjogos/moraguma/whale_eater/cenas/Main.tscn": true
 }
-minigame_settings = [ false, false, true, false ]
-filter_settings = [ false ]
+minigame_settings = [true, false, false, false]
+filter_settings = [false]
 highscore = 4
-misc = {
-}
+misc = {}

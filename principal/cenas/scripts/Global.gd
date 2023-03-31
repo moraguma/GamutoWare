@@ -29,7 +29,7 @@ func _ready():
 	var root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() - 1)
 	
-	current_path = current_scene.filename
+	current_path = current_scene.scene_file_path
 	
 	
 	load_game()
@@ -49,7 +49,7 @@ func goto_scene(path):
 		
 		transitioning = true
 		GlobalCamera.animate_transition()
-		yield(GlobalCamera, "transition_time")
+		await GlobalCamera.transition_time
 		call_deferred("deferred_goto_scene")
 
 
@@ -59,7 +59,7 @@ func deferred_goto_scene():
 	current_scene.free()
 	
 	var s = ResourceLoader.load(current_path)
-	current_scene = s.instance()
+	current_scene = s.instantiate()
 	
 	if call_queued:
 		current_scene.callv(queued_method, queued_parameters)
@@ -96,16 +96,14 @@ func validate_save(save):
 
 
 func save_game():
-	var dir = Directory.new()
-	if not dir.dir_exists(SAVE_PATH):
-		dir.make_dir_recursive(SAVE_PATH)
+	if not DirAccess.dir_exists_absolute(SAVE_PATH):
+		DirAccess.make_dir_recursive_absolute(SAVE_PATH)
 	
-	ResourceSaver.save(SAVE_PATH + SAVE_NAME, save)
+	ResourceSaver.save(save, SAVE_PATH + SAVE_NAME)
 
 
 func load_game():
-	var dir = Directory.new()
-	if not dir.file_exists(SAVE_PATH + SAVE_NAME):
+	if not FileAccess.file_exists(SAVE_PATH + SAVE_NAME):
 		save = SaveFile.new()
 		save_game()
 		

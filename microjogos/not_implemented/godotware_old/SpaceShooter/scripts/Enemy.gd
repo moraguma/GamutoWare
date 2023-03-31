@@ -4,7 +4,7 @@ extends Area2D
 
 # declare enemy's speed and armor (life)
 var speed = Vector2()
-export var armor = 1 setget set_armor
+@export var armor = 1 : set = set_armor
 
 # store explosion scene
 const scn_explosion = preload('res://minigames/SpaceShooter/scenes/Explosion.tscn')
@@ -13,7 +13,7 @@ const scn_explosion = preload('res://minigames/SpaceShooter/scenes/Explosion.tsc
 func _ready():
 	set_process(true) # enable _process
 	add_to_group('Enemy') # add to Enemy group
-	connect('area_enter', self, '_on_area_enter') # if something collides, call the function _on_area_enter
+	connect('area_enter',Callable(self,'_on_area_enter')) # if something collides, call the function _on_area_enter
 
 # called every frame
 func _process(delta):
@@ -49,6 +49,6 @@ func set_armor(new_value):
 
 # creates explosion effect
 func create_explosion():
-	var explosion = scn_explosion.instance() # instanciate scn_explosion
+	var explosion = scn_explosion.instantiate() # instanciate scn_explosion
 	explosion.set_pos(get_pos()) # set the effect position to enemy's position
 	global.main_node.add_child(explosion) # add it to main node

@@ -1,7 +1,7 @@
 extends "res://principal/cenas/scripts/ToTitle.gd"
 
 
-onready var animation_player = $AnimationPlayer
+@onready var animation_player = $AnimationPlayer
 
 
 func _ready():

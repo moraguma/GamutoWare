@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://microjogos/moraguma/candle prick/cenas/LightModule.tscn" type="PackedScene" id=1]
-[ext_resource path="res://microjogos/moraguma/candle prick/recursos/sprites/flame.png" type="Texture" id=2]
+[ext_resource path="res://microjogos/moraguma/candle prick/recursos/sprites/flame.png" type="Texture2D" id=2]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 2 )
@@ -35,7 +35,7 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[node name="Flame" type="AnimatedSprite"]
+[node name="Flame" type="AnimatedSprite2D"]
 frames = SubResource( 7 )
 frame = 5
 playing = true

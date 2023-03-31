@@ -1,15 +1,15 @@
 [gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://minigames/SuperTank/Main.gd" type="Script" id=1]
-[ext_resource path="res://minigames/SuperTank/cenario.png" type="Texture" id=2]
-[ext_resource path="res://minigames/SuperTank/tank.png" type="Texture" id=3]
-[ext_resource path="res://minigames/SuperTank/target.png" type="Texture" id=4]
+[ext_resource path="res://minigames/SuperTank/cenario.png" type="Texture2D" id=2]
+[ext_resource path="res://minigames/SuperTank/tank.png" type="Texture2D" id=3]
+[ext_resource path="res://minigames/SuperTank/target.png" type="Texture2D" id=4]
 [ext_resource path="res://minigames/SuperTank/Tile.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 16.3495, 16.2418 )
+size = Vector2( 16.3495, 16.2418 )
 
 [sub_resource type="CircleShape2D" id=2]
 
@@ -27,7 +27,7 @@ TIMEOUT_WIN = false
 USE_KEYS_HUD = false
 USE_MOUSE_HUD = true
 
-[node name="Sprite 2" type="Sprite" parent="."]
+[node name="Sprite2D 2" type="Sprite2D" parent="."]
 
 transform/pos = Vector2( 320.001, 202.001 )
 texture = ExtResource( 2 )
@@ -41,7 +41,7 @@ input/pickable = true
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, -1.72025, 2.03439 )
 shapes/0/trigger = false
-gravity_vec = Vector2( 0, 1 )
+gravity_direction = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
@@ -53,7 +53,7 @@ shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 
-[node name="Sprite" type="Sprite" parent="jogador"]
+[node name="Sprite2D" type="Sprite2D" parent="jogador"]
 
 transform/pos = Vector2( -2.56969, 1.28872 )
 transform/scale = Vector2( 0.600477, 0.648911 )
@@ -65,7 +65,7 @@ input/pickable = true
 shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 4.17956, 0, 0, 4.02019, 581.844, 62.7856 )
 shapes/0/trigger = false
-gravity_vec = Vector2( 0, 1 )
+gravity_direction = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
@@ -78,7 +78,7 @@ shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 
-[node name="Sprite" type="Sprite" parent="final/CollisionShape2D"]
+[node name="Sprite2D" type="Sprite2D" parent="final/CollisionShape2D"]
 
 transform/pos = Vector2( -0.438815, -0.5566 )
 transform/scale = Vector2( 0.347676, 0.353684 )

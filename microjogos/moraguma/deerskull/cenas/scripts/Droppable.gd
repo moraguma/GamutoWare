@@ -1,4 +1,4 @@
-extends Sprite
+extends Sprite2D
 
 
 const GRAVITY = 300
@@ -20,5 +20,5 @@ func _process(delta):
 
 func drop():
 	falling = true
-	rot_speed = rand_range(-MAX_ROT_SPEED, MAX_ROT_SPEED)
-	vel = Vector2(0, -LAUNCH_SPEED).rotated(rand_range(-LAUNCH_SPREAD, LAUNCH_SPREAD))
+	rot_speed = randf_range(-MAX_ROT_SPEED, MAX_ROT_SPEED)
+	vel = Vector2(0, -LAUNCH_SPEED).rotated(randf_range(-LAUNCH_SPREAD, LAUNCH_SPREAD))

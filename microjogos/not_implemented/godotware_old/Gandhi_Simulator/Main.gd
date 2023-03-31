@@ -26,12 +26,12 @@ func start():
 	for node in get_node("Node2D").get_children():
 		if node.is_in_group("inimigo"):
 			node.set_fixed_process(true)
-	.start()
+	super.start()
 	pass
 
 func stop():
 	#Be sure to disable active minigame elements in this method.
-	.stop()
+	super.stop()
 	pass
 	
 func lost():

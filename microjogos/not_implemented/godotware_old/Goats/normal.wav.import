@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/normal.wav-f301c995b3f14d10d34aafb79135165b.sample"
+type="AudioStreamWAV"
+uid="uid://dd4aydwlvyclq"
+path="res://.godot/imported/normal.wav-f301c995b3f14d10d34aafb79135165b.sample"
 
 [deps]
 
 source_file="res://microjogos/not_implemented/godotware_old/Goats/normal.wav"
-dest_files=[ "res://.import/normal.wav-f301c995b3f14d10d34aafb79135165b.sample" ]
+dest_files=["res://.godot/imported/normal.wav-f301c995b3f14d10d34aafb79135165b.sample"]
 
 [params]
 

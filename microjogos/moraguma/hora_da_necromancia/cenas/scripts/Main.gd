@@ -18,14 +18,14 @@ var selection = 0
 var active = true
 
 
-onready var animation_player = $AnimationPlayer
-onready var text_boxes = [$T1, $T2, $T3]
+@onready var animation_player = $AnimationPlayer
+@onready var text_boxes = [$T1, $T2, $T3]
 
-onready var win_sound = $WinSound
-onready var lose_sound = $LoseSound
-onready var choose_sound = $ChooseSound
-onready var wow_sound = $WowSound
-onready var music = $Music
+@onready var win_sound = $WinSound
+@onready var lose_sound = $LoseSound
+@onready var choose_sound = $ChooseSound
+@onready var wow_sound = $WowSound
+@onready var music = $Music
 
 
 func _ready():
@@ -98,8 +98,8 @@ func _physics_process(delta):
 
 func set_texts():
 	for i in range(len(text_boxes)):
-		text_boxes[i].bbcode_text = "[center]" + texts[i]
+		text_boxes[i].text = "[center]" + texts[i]
 
 
 func select(n):
-	text_boxes[n].bbcode_text = "[center][color=aqua][wave]" + texts[n]
+	text_boxes[n].text = "[center][color=aqua][wave]" + texts[n]

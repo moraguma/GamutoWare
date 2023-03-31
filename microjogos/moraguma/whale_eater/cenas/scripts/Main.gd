@@ -23,8 +23,8 @@ var rotation_speed = 0
 var active = true
 
 
-onready var camera = $Camera
-onready var heart_animation_player = $Camera/AnimationPlayer
+@onready var camera = $Camera3D
+@onready var heart_animation_player = $Camera3D/AnimationPlayer
 
 
 func _ready():
@@ -42,7 +42,7 @@ func _ready():
 	var gravity_indicator = randi() % 4
 	var exit_pos = randi() % 3
 	
-	player = Player.instance()
+	player = Player.instantiate()
 	player.position = POSSIBLE_SPAWN_POSITIONS[spawn_pos]
 	
 	match gravity_indicator:

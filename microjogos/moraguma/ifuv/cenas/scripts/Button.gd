@@ -1,10 +1,10 @@
-extends Sprite
+extends Sprite2D
 
 
-export (String) var up_path
-export (String) var right_path
-export (String) var down_path
-export (String) var left_path
+@export var up_path: String
+@export var right_path: String
+@export var down_path: String
+@export var left_path: String
 
 
 var up = null
@@ -13,8 +13,8 @@ var down = null
 var left = null
 
 
-onready var main = get_parent().get_parent()
-onready var animation_player = $AnimationPlayer
+@onready var main = get_parent().get_parent()
+@onready var animation_player = $AnimationPlayer
 
 
 func _ready():

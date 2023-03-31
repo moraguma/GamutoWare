@@ -32,8 +32,8 @@ func _ready():
 	filhos3[random_6].queue_free()
 	
 	set_process(true)
-	get_node("jogador").connect("mouse_enter", self, "mouse_chegou")
-	get_node("jogador").connect("area_enter", self, "area_jogador")
+	get_node("jogador").connect("mouse_enter",Callable(self,"mouse_chegou"))
+	get_node("jogador").connect("area_enter",Callable(self,"area_jogador"))
 
 func mouse_chegou():
 	seguindo_mouse = true
@@ -52,10 +52,10 @@ func _process(delta):
 
 func start():
 	#Be sure to only enable minigame elements in this method.
-	.start()
+	super.start()
 	pass
 
 func stop():
 	#Be sure to disable active minigame elements in this method.
-	.stop()
+	super.stop()
 	pass

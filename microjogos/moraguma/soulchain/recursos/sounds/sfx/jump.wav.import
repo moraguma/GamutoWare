@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/jump.wav-7eff018e60d08d4e156bddf16edfd476.sample"
+type="AudioStreamWAV"
+uid="uid://b7xocw0oplct5"
+path="res://.godot/imported/jump.wav-7eff018e60d08d4e156bddf16edfd476.sample"
 
 [deps]
 
 source_file="res://microjogos/moraguma/soulchain/recursos/sounds/sfx/jump.wav"
-dest_files=[ "res://.import/jump.wav-7eff018e60d08d4e156bddf16edfd476.sample" ]
+dest_files=["res://.godot/imported/jump.wav-7eff018e60d08d4e156bddf16edfd476.sample"]
 
 [params]
 

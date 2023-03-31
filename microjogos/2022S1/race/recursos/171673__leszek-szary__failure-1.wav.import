@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/171673__leszek-szary__failure-1.wav-2194a07a2a789ae49f6f74e5d3f4857f.sample"
+type="AudioStreamWAV"
+uid="uid://bjqfpbrl30qr4"
+path="res://.godot/imported/171673__leszek-szary__failure-1.wav-2194a07a2a789ae49f6f74e5d3f4857f.sample"
 
 [deps]
 
 source_file="res://microjogos/2022S1/race/recursos/171673__leszek-szary__failure-1.wav"
-dest_files=[ "res://.import/171673__leszek-szary__failure-1.wav-2194a07a2a789ae49f6f74e5d3f4857f.sample" ]
+dest_files=["res://.godot/imported/171673__leszek-szary__failure-1.wav-2194a07a2a789ae49f6f74e5d3f4857f.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

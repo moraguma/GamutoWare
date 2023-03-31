@@ -3,7 +3,7 @@
 [ext_resource path="res://microjogos/godotware/SpaceShooter/Main.gd" type="Script" id=1]
 [ext_resource path="res://microjogos/godotware/SpaceShooter/scenes/Audio_Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://microjogos/godotware/SpaceShooter/scenes/Spawner_Enemy.tscn" type="PackedScene" id=3]
-[ext_resource path="res://microjogos/godotware/SpaceShooter/sprites/stars_far.png" type="Texture" id=4]
+[ext_resource path="res://microjogos/godotware/SpaceShooter/sprites/stars_far.png" type="Texture2D" id=4]
 [ext_resource path="res://microjogos/godotware/SpaceShooter/scripts/Camera.gd" type="Script" id=5]
 [ext_resource path="res://microjogos/godotware/SpaceShooter/scenes/Ship.tscn" type="PackedScene" id=6]
 
@@ -21,7 +21,7 @@ USE_MOUSE_HUD = true
 
 [node name="Spawner_Enemy" parent="." instance=ExtResource( 3 )]
 
-[node name="Stars_0" type="Sprite" parent="."]
+[node name="Stars_0" type="Sprite2D" parent="."]
 
 transform/pos = Vector2( -24, -24 )
 transform/scale = Vector2( 2.5, 2.5 )
@@ -31,17 +31,17 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Stars_1" type="Sprite" parent="."]
+[node name="Stars_1" type="Sprite2D" parent="."]
 
 transform/pos = Vector2( 400, -24 )
 transform/scale = Vector2( 2.5, 2.5 )
 texture = ExtResource( 4 )
 centered = false
 
-[node name="Camera" type="Camera2D" parent="."]
+[node name="Camera3D" type="Camera2D" parent="."]
 
 anchor_mode = 0
-rotating = false
+ignore_rotation =true # reversed "rotating" for Camera2D
 current = false
 zoom = Vector2( 1, 1 )
 limit/left = -10000000

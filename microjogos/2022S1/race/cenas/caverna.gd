@@ -1,8 +1,8 @@
 extends StaticBody2D
 
 var path = Array()
-var poly1 = PoolVector2Array()
-var poly2 = PoolVector2Array()
+var poly1 = PackedVector2Array()
+var poly2 = PackedVector2Array()
 var origin = Vector2(0, 0)
 var tileset
 
@@ -44,7 +44,7 @@ func _ready():
 	
 	tileset = preload("res://microjogos/2022S1/race/recursos/tileset.png")
 
-onready var tile_size = 48.0
+@onready var tile_size = 48.0
 	
 func draw_textured_poly(poly, ceiling):
 	var colors = [Color(1,1,1,1),Color(1,1,1,1),Color(1,1,1,1),Color(1,1,1,1)]
@@ -76,7 +76,7 @@ func draw_textured_poly(poly, ceiling):
 			var t = l*step
 			var w = 16.0/128.0
 			var uv_pos = w*Vector2(randi()%4, 1)
-			var uvs = PoolVector2Array([uv_pos+Vector2(0, w), uv_pos+Vector2(w, w),
+			var uvs = PackedVector2Array([uv_pos+Vector2(0, w), uv_pos+Vector2(w, w),
 										uv_pos+Vector2(w, 0), uv_pos+Vector2(0, 0)])
 			
 			# TODO: Create 3x upscaled version of tileset and import it as non-pixelart 

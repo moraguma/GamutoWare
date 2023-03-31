@@ -4,7 +4,7 @@ extends Area2D
 const STEP_SIZE = 16
 
 
-onready var animation_player = $AnimationPlayer
+@onready var animation_player = $AnimationPlayer
 
 
 func _ready():

@@ -12,7 +12,7 @@ var ACC = 2 # value to increase speed every frame if ship is in movement
 var speed = Vector2() # amount to increase/decrease from position every frame
 
 # export ship's armor (life)
-export var armor = 1 setget set_armor
+@export var armor = 1 : set = set_armor
 
 # first function called (just one time)
 func _ready():
@@ -52,18 +52,18 @@ func shoot():
 		var pos_right = get_node('Cannons/Cannon_Right').get_global_pos()
 		
 		# if is pressing left button mouse, shoots from left cannon.
-		if Input.is_mouse_button_pressed(BUTTON_LEFT):
+		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 			create_laser(pos_left)
 		# if is pressing right button mouse, shoots from right cannon.
-		if Input.is_mouse_button_pressed(BUTTON_RIGHT):
+		if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
 	    	create_laser(pos_right)
 		
 		# wait shoot delay time in seconds
-		yield(global.create_timer(0.33), 'timeout')
+		await global.create_timer(0.33).timeout
 	
 # creates laser
 func create_laser(pos):
-	var laser = scn_laser.instance() # instanciate scn_laser
+	var laser = scn_laser.instantiate() # instanciate scn_laser
 	laser.set_pos(pos) # set laser's position to given parameter
 	
 	# get ship and mouse global positions
@@ -84,7 +84,7 @@ func create_laser(pos):
 func set_armor(new_value):
 	if new_value < armor: # if ship got damaged...
 		global.main_node.get_node('Audio_Player').play('hit_ship') # play hit_ship sound
-		global.main_node.add_child(scn_flash.instance()) # flash the view
+		global.main_node.add_child(scn_flash.instantiate()) # flash the view
 	
 	armor = new_value # armor is set to the given parameter
 	
@@ -94,6 +94,6 @@ func set_armor(new_value):
 
 # creates explosion effect
 func create_explosion():
-	var explosion = scn_explosion.instance() # instanciate scn_explosion
+	var explosion = scn_explosion.instantiate() # instanciate scn_explosion
 	explosion.set_pos(get_pos()) # set the effect position to enemy's position
 	global.main_node.add_child(explosion) # add it to main node

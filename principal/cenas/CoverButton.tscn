@@ -22,12 +22,12 @@ expand_margin_bottom = 35.0
 Button/styles/focus = SubResource( 1 )
 
 [node name="CoverButton" type="TextureRect"]
-margin_right = 40.0
-margin_bottom = 40.0
+offset_right = 40.0
+offset_bottom = 40.0
 script = ExtResource( 2 )
 
 [node name="Button" type="Button" parent="."]
-margin_right = 448.0
-margin_bottom = 448.0
+offset_right = 448.0
+offset_bottom = 448.0
 theme = SubResource( 2 )
 flat = true

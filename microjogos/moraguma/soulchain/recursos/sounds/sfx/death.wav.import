@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/death.wav-71731ead6160cfd62e6a4b601ea8da43.sample"
+type="AudioStreamWAV"
+uid="uid://byruvwtu5laim"
+path="res://.godot/imported/death.wav-71731ead6160cfd62e6a4b601ea8da43.sample"
 
 [deps]
 
 source_file="res://microjogos/moraguma/soulchain/recursos/sounds/sfx/death.wav"
-dest_files=[ "res://.import/death.wav-71731ead6160cfd62e6a4b601ea8da43.sample" ]
+dest_files=["res://.godot/imported/death.wav-71731ead6160cfd62e6a4b601ea8da43.sample"]
 
 [params]
 

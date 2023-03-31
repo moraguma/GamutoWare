@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://minigames/Hammer/Main.gd" type="Script" id=1]
-[ext_resource path="res://minigames/Hammer/wood-background.png" type="Texture" id=2]
-[ext_resource path="res://minigames/Hammer/arrow.png" type="Texture" id=3]
-[ext_resource path="res://minigames/Hammer/barred.png" type="Texture" id=4]
-[ext_resource path="res://minigames/Hammer/bargreen.png" type="Texture" id=5]
+[ext_resource path="res://minigames/Hammer/wood-background.png" type="Texture2D" id=2]
+[ext_resource path="res://minigames/Hammer/arrow.png" type="Texture2D" id=3]
+[ext_resource path="res://minigames/Hammer/barred.png" type="Texture2D" id=4]
+[ext_resource path="res://minigames/Hammer/bargreen.png" type="Texture2D" id=5]
 
 [sub_resource type="Animation" id=1]
 
@@ -33,12 +33,12 @@ TIMEOUT_WIN = false
 USE_KEYS_HUD = true
 USE_MOUSE_HUD = false
 
-[node name="background" type="Sprite" parent="."]
+[node name="background" type="Sprite2D" parent="."]
 
 texture = ExtResource( 2 )
 centered = false
 
-[node name="arrow" type="Sprite" parent="."]
+[node name="arrow" type="Sprite2D" parent="."]
 
 transform/pos = Vector2( 20, 150 )
 texture = ExtResource( 3 )
@@ -54,13 +54,13 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
 
-[node name="barred" type="Sprite" parent="."]
+[node name="barred" type="Sprite2D" parent="."]
 
 transform/pos = Vector2( 20, 180 )
 texture = ExtResource( 4 )
 centered = false
 
-[node name="bargreen" type="Sprite" parent="."]
+[node name="bargreen" type="Sprite2D" parent="."]
 
 transform/pos = Vector2( 250, 180 )
 texture = ExtResource( 5 )

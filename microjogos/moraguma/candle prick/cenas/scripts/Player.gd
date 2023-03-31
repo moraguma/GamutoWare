@@ -1,13 +1,13 @@
 extends "res://microjogos/moraguma/candle prick/cenas/scripts/Element.gd"
 
 
-onready var hit_detector = $HitDetector
-onready var move_sound = $MoveSound
-onready var nope_sound = $NopeSound
+@onready var hit_detector = $HitDetector
+@onready var move_sound = $MoveSound
+@onready var nope_sound = $NopeSound
 
-onready var parent = get_parent()
+@onready var parent = get_parent()
 
-onready var camera = parent.get_node("Camera")
+@onready var camera = parent.get_node("Camera3D")
 
 
 func _physics_process(delta):
@@ -15,7 +15,7 @@ func _physics_process(delta):
 	
 	if dir != Vector2(0, 0):
 		if parent.has_floor(cell_pos + dir):
-			hit_detector.cast_to = dir * CELL_SIZE
+			hit_detector.target_position = dir * CELL_SIZE
 			hit_detector.force_raycast_update()
 			if hit_detector.is_colliding():
 				hit_detector.get_collider().move(dir)

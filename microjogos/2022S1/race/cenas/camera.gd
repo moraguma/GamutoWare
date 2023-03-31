@@ -1,6 +1,6 @@
 extends Camera2D
 
-onready var player = get_node("../Player")
+@onready var player = get_node("../Player")
 const ACCEL = 20
 
 
@@ -9,4 +9,4 @@ func _ready():
 	position = player.position
 	
 func _process(delta):
-	position = position.linear_interpolate(player.position, min(ACCEL*delta, 1))
+	position = position.lerp(player.position, min(ACCEL*delta, 1))

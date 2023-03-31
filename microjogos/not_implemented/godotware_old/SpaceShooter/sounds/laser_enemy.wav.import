@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/laser_enemy.wav-473d169504f57b7f2f573e739bef920d.sample"
+type="AudioStreamWAV"
+uid="uid://d4heilbhir5s1"
+path="res://.godot/imported/laser_enemy.wav-473d169504f57b7f2f573e739bef920d.sample"
 
 [deps]
 
 source_file="res://microjogos/not_implemented/godotware_old/SpaceShooter/sounds/laser_enemy.wav"
-dest_files=[ "res://.import/laser_enemy.wav-473d169504f57b7f2f573e739bef920d.sample" ]
+dest_files=["res://.godot/imported/laser_enemy.wav-473d169504f57b7f2f573e739bef920d.sample"]
 
 [params]
 

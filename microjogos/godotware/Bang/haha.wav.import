@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/haha.wav-e6559a176906a8f45e44f514638ffbae.sample"
+type="AudioStreamWAV"
+uid="uid://leni44enii48"
+path="res://.godot/imported/haha.wav-e6559a176906a8f45e44f514638ffbae.sample"
 
 [deps]
 
 source_file="res://microjogos/godotware/Bang/haha.wav"
-dest_files=[ "res://.import/haha.wav-e6559a176906a8f45e44f514638ffbae.sample" ]
+dest_files=["res://.godot/imported/haha.wav-e6559a176906a8f45e44f514638ffbae.sample"]
 
 [params]
 

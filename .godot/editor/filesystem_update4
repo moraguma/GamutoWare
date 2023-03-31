@@ -1,0 +1,20 @@
+res://default_env.tres
+res://principal/cenas/Jam.tscn
+res://principal/recursos/themes/TitleTheme.tres
+res://principal/recursos/shaders/Diamond.tres
+res://principal/recursos/themes/ButtonTheme.tres
+res://principal/recursos/themes/GameTheme.tres
+res://microjogos/moraguma/whale_eater/recursos/tilesets/Tiles.tres
+res://principal/recursos/data/Minigames.gd
+res://principal/cenas/Vitoria.tscn
+res://Godot4TODO.txt
+res://principal/cenas/GameOver.tscn
+res://principal/cenas/Jogo.tscn
+res://microjogos/moraguma/hora_da_necromancia/cenas/Main.tscn
+res://microjogos/moraguma/whale_eater/cenas/Main.tscn
+res://microjogos/moraguma/deerskull/cenas/Shot.tscn
+res://microjogos/moraguma/deerskull/cenas/Main.tscn
+res://microjogos/moraguma/candle prick/cenas/Candle.tscn
+res://microjogos/moraguma/candle prick/cenas/Main.tscn
+res://microjogos/moraguma/candle prick/cenas/Game.tscn
+res://microjogos/moraguma/candle prick/cenas/Player.tscn

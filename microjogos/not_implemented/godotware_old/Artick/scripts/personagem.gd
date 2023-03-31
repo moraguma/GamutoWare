@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 var velocidade = Vector2(0,0)
 var gravidade = 1
 var pos = 0

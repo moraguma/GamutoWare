@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/GameIntro.ogg-92c8347272b7d8ffb49e533e7dc8ef6d.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c33urwvdqrcb2"
+path="res://.godot/imported/GameIntro.ogg-92c8347272b7d8ffb49e533e7dc8ef6d.oggvorbisstr"
 
 [deps]
 
 source_file="res://principal/recursos/sounds/music/GameIntro.ogg"
-dest_files=[ "res://.import/GameIntro.ogg-92c8347272b7d8ffb49e533e7dc8ef6d.oggstr" ]
+dest_files=["res://.godot/imported/GameIntro.ogg-92c8347272b7d8ffb49e533e7dc8ef6d.oggvorbisstr"]
 
 [params]
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,212 +1,155 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=12 format=3 uid="uid://bhkyw6qpi38e6"]
 
-[ext_resource path="res://principal/recursos/fonts/Stop Bullying.otf" type="DynamicFontData" id=1]
-[ext_resource path="res://principal/cenas/scripts/TransitionButton.gd" type="Script" id=2]
-[ext_resource path="res://principal/recursos/shaders/Diamond.tres" type="Material" id=3]
-[ext_resource path="res://microjogos/not_implemented/teste/moveGamutoDemo/capa.png" type="Texture" id=4]
-[ext_resource path="res://principal/cenas/scripts/TranslatableText.gd" type="Script" id=5]
-[ext_resource path="res://principal/recursos/themes/ButtonTheme.tres" type="Theme" id=6]
-[ext_resource path="res://principal/recursos/sprites/MenuBase.png" type="Texture" id=7]
-[ext_resource path="res://principal/recursos/sprites/GMToutline.png" type="Texture" id=8]
-[ext_resource path="res://principal/recursos/themes/TitleTheme.tres" type="Theme" id=9]
-[ext_resource path="res://principal/cenas/scripts/PressableButton.gd" type="Script" id=10]
-[ext_resource path="res://principal/cenas/scripts/Creditos.gd" type="Script" id=11]
-[ext_resource path="res://principal/recursos/sprites/toggle_unchecked.png" type="Texture" id=12]
-[ext_resource path="res://principal/recursos/sprites/toggle_checked.png" type="Texture" id=13]
+[ext_resource type="Script" path="res://principal/cenas/scripts/TransitionButton.gd" id="2"]
+[ext_resource type="Material" uid="uid://bfefepnpbds1x" path="res://principal/recursos/shaders/Diamond.tres" id="3"]
+[ext_resource type="Texture2D" uid="uid://b4rk8gfyi2o6m" path="res://microjogos/not_implemented/teste/moveGamutoDemo/capa.png" id="4"]
+[ext_resource type="Script" path="res://principal/cenas/scripts/TranslatableText.gd" id="5"]
+[ext_resource type="Theme" uid="uid://dt5djib7huxvm" path="res://principal/recursos/themes/ButtonTheme.tres" id="6"]
+[ext_resource type="Texture2D" uid="uid://ja6urlsch5m7" path="res://principal/recursos/sprites/MenuBase.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://cs75vvw01oafl" path="res://principal/recursos/sprites/GMToutline.png" id="8"]
+[ext_resource type="Theme" uid="uid://cb4tlwb81nq48" path="res://principal/recursos/themes/TitleTheme.tres" id="9"]
+[ext_resource type="Script" path="res://principal/cenas/scripts/PressableButton.gd" id="10"]
+[ext_resource type="Script" path="res://principal/cenas/scripts/Creditos.gd" id="11"]
 
-[sub_resource type="Curve" id=5]
+[sub_resource type="Curve" id="Curve_l4sie"]
 min_value = -360.0
 max_value = 360.0
-_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.990196, 360 ), 0.0, 0.0, 0, 0 ]
-
-[sub_resource type="StyleBoxEmpty" id=6]
-
-[sub_resource type="StyleBoxFlat" id=8]
-bg_color = Color( 0.952941, 0.913725, 0.976471, 1 )
-border_color = Color( 0.952941, 0.913725, 0.976471, 1 )
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id=10]
-bg_color = Color( 0.615686, 0, 1, 1 )
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id=11]
-bg_color = Color( 0.615686, 0, 1, 1 )
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id=9]
-bg_color = Color( 0.172549, 0.141176, 0.207843, 1 )
-border_width_left = 10
-border_width_right = 10
-border_color = Color( 0.172549, 0.141176, 0.207843, 1 )
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
-[sub_resource type="StyleBoxFlat" id=12]
-bg_color = Color( 0.172549, 0.141176, 0.207843, 1 )
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="DynamicFont" id=13]
-size = 32
-outline_size = 4
-outline_color = Color( 0.172549, 0.141176, 0.207843, 1 )
-font_data = ExtResource( 1 )
-
-[sub_resource type="Theme" id=14]
-default_font = SubResource( 13 )
-Button/colors/font_color = Color( 0.952941, 0.913725, 0.976471, 1 )
-Button/colors/font_color_focus = Color( 0.615686, 0, 1, 1 )
-Button/colors/font_color_hover = Color( 0.615686, 0, 1, 1 )
-Button/styles/focus = SubResource( 6 )
-CheckBox/colors/font_color_focus = Color( 0.615686, 0, 1, 1 )
-CheckBox/colors/font_color_focus_pressed = Color( 0.615686, 0, 1, 1 )
-CheckBox/colors/font_color_hover = Color( 0.615686, 0, 1, 1 )
-CheckBox/colors/font_color_hover_pressed = Color( 0.615686, 0, 1, 1 )
-CheckBox/colors/font_color_pressed = Color( 0.615686, 0, 1, 1 )
-CheckBox/constants/hseparation = 24
-CheckBox/icons/checked = ExtResource( 13 )
-CheckBox/icons/unchecked = ExtResource( 12 )
-HBoxContainer/constants/separation = 64
-VBoxContainer/constants/separation = 55
-VScrollBar/styles/grabber = SubResource( 8 )
-VScrollBar/styles/grabber_highlight = SubResource( 10 )
-VScrollBar/styles/grabber_pressed = SubResource( 11 )
-VScrollBar/styles/scroll = SubResource( 9 )
-VScrollBar/styles/scroll_focus = SubResource( 12 )
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.990196, 360), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [node name="Credits" type="Node2D"]
-script = ExtResource( 11 )
+script = ExtResource("11")
 
-[node name="Sprite" type="Sprite" parent="."]
-material = ExtResource( 3 )
-position = Vector2( 960, 540 )
-texture = ExtResource( 7 )
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = ExtResource("3")
+position = Vector2(960, 540)
+texture = ExtResource("7")
 
 [node name="GMTParticles" type="CPUParticles2D" parent="."]
-position = Vector2( -880, -1080 )
+position = Vector2(128, -264)
 amount = 32
-lifetime = 2.5
-preprocess = 2.5
-texture = ExtResource( 8 )
-emission_shape = 2
-emission_rect_extents = Vector2( 1080, 1080 )
-direction = Vector2( 1, 1 )
-gravity = Vector2( 500, 500 )
-initial_velocity = 1000.0
-angle_curve = SubResource( 5 )
+lifetime = 3.0
+preprocess = 3.0
+texture = ExtResource("8")
+emission_shape = 3
+emission_rect_extents = Vector2(1080, 540)
+direction = Vector2(1, 1)
+gravity = Vector2(500, 500)
+angle_max = 1.0
+angle_curve = SubResource("Curve_l4sie")
 
 [node name="Credits" type="Node2D" parent="."]
 
 [node name="Minigames" type="Control" parent="Credits"]
-margin_right = 1920.0
-margin_bottom = 1088.0
-rect_clip_content = true
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1088.0
 
 [node name="Menu" type="Button" parent="Credits/Minigames"]
-margin_right = 384.0
-margin_bottom = 102.0
-theme = ExtResource( 6 )
+layout_mode = 0
+offset_top = 8.0
+offset_right = 384.0
+offset_bottom = 112.0
+theme = ExtResource("6")
 text = "MENU"
 flat = true
-script = ExtResource( 2 )
+script = ExtResource("2")
 path = "res://principal/cenas/Menu.tscn"
 
 [node name="Title" type="RichTextLabel" parent="Credits/Minigames"]
-margin_top = 49.0
-margin_right = 1920.0
-margin_bottom = 177.0
-rect_clip_content = false
-theme = ExtResource( 9 )
+clip_contents = false
+layout_mode = 0
+offset_top = 49.0
+offset_right = 1920.0
+offset_bottom = 177.0
+theme = ExtResource("9")
 bbcode_enabled = true
-bbcode_text = "[center][shake rate=20 level=40]CREDITS"
-text = "CREDITS"
-script = ExtResource( 5 )
+text = "[center]
+CREDITS"
+script = ExtResource("5")
 pt_text = "[center][shake rate=20 level=40]CREDITOS"
 en_text = "[center][shake rate=20 level=40]CREDITS"
 
 [node name="MinigameControl" type="Control" parent="Credits/Minigames"]
-margin_left = 64.0
-margin_top = 224.0
-margin_right = 1856.0
-margin_bottom = 1080.0
-rect_clip_content = true
-theme = ExtResource( 6 )
+clip_contents = true
+anchors_preset = 0
+offset_left = 64.0
+offset_top = 224.0
+offset_right = 1856.0
+offset_bottom = 1080.0
+theme = ExtResource("6")
 
 [node name="Minigames" type="ScrollContainer" parent="Credits/Minigames/MinigameControl"]
-margin_left = 64.0
-margin_top = 32.0
-margin_right = 1728.0
-margin_bottom = 832.0
-rect_clip_content = false
-theme = ExtResource( 6 )
+clip_contents = false
+layout_mode = 0
+offset_left = 64.0
+offset_top = 32.0
+offset_right = 1728.0
+offset_bottom = 832.0
+theme = ExtResource("6")
 follow_focus = true
-scroll_horizontal_enabled = false
+horizontal_scroll_mode = 0
 
 [node name="GridContainer" type="GridContainer" parent="Credits/Minigames/MinigameControl/Minigames"]
-grow_horizontal = 2
-grow_vertical = 2
-custom_constants/vseparation = 50
-custom_constants/hseparation = 147
+layout_mode = 2
+theme_override_constants/h_separation = 147
+theme_override_constants/v_separation = 35
 columns = 3
 
 [node name="Details" type="Control" parent="Credits"]
-margin_top = 1088.0
-margin_right = 1920.0
-margin_bottom = 2176.0
+layout_mode = 3
+anchors_preset = 0
+offset_top = 1088.0
+offset_right = 1920.0
+offset_bottom = 2176.0
 
 [node name="Back" type="Button" parent="Credits/Details"]
-margin_right = 384.0
-margin_bottom = 102.0
-focus_neighbour_bottom = NodePath("../Details")
-theme = ExtResource( 6 )
+layout_mode = 0
+offset_top = 8.0
+offset_right = 384.0
+offset_bottom = 112.0
+focus_neighbor_bottom = NodePath("../Details")
+theme = ExtResource("6")
 text = "BACK"
 flat = true
-script = ExtResource( 10 )
+script = ExtResource("10")
 pt_text = "VOLTA"
 en_text = "BACK"
 
 [node name="Cover" type="TextureRect" parent="Credits/Details"]
-margin_left = 144.0
-margin_top = 128.0
-margin_right = 594.0
-margin_bottom = 578.0
+layout_mode = 0
+offset_left = 144.0
+offset_top = 128.0
+offset_right = 594.0
+offset_bottom = 578.0
 grow_horizontal = 2
-texture = ExtResource( 4 )
+texture = ExtResource("4")
 
 [node name="Title" type="RichTextLabel" parent="Credits/Details"]
-margin_top = 608.0
-margin_right = 736.0
-margin_bottom = 736.0
-rect_clip_content = false
-theme = ExtResource( 9 )
+clip_contents = false
+layout_mode = 0
+offset_top = 608.0
+offset_right = 736.0
+offset_bottom = 752.0
+theme = ExtResource("9")
+theme_override_font_sizes/normal_font_size = 64
 bbcode_enabled = true
-bbcode_text = "[center][shake rate=20 level=40]CREDITS"
-text = "CREDITS"
-fit_content_height = true
+text = "[center]CREDITS"
+scroll_active = false
 
 [node name="Details" type="RichTextLabel" parent="Credits/Details"]
-margin_left = 736.0
-margin_top = 32.0
-margin_right = 1888.0
-margin_bottom = 1056.0
-focus_neighbour_top = NodePath("../Back")
-theme = SubResource( 14 )
+clip_contents = false
+layout_mode = 0
+offset_left = 736.0
+offset_top = 32.0
+offset_right = 1888.0
+offset_bottom = 1056.0
+focus_neighbor_top = NodePath("../Back")
+theme = ExtResource("6")
+theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
-bbcode_text = "[center]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis quis nibh sed lobortis. Quisque sed elit vel magna viverra bibendum vitae et lectus. Praesent non sagittis odio. Proin feugiat finibus ante, vel cursus felis dapibus nec. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam pharetra dolor faucibus est lobortis, congue fermentum lacus dapibus. Morbi leo ex, malesuada et sapien laoreet, semper sagittis velit. "
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis quis nibh sed lobortis. Quisque sed elit vel magna viverra bibendum vitae et lectus. Praesent non sagittis odio. Proin feugiat finibus ante, vel cursus felis dapibus nec. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam pharetra dolor faucibus est lobortis, congue fermentum lacus dapibus. Morbi leo ex, malesuada et sapien laoreet, semper sagittis velit. "
 
 [connection signal="pressed" from="Credits/Details/Back" to="." method="back_to_covers"]

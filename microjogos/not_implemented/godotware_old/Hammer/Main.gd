@@ -36,12 +36,12 @@ func _process(delta):
 func start():
 	#Be sure to only enable minigame elements in this method.
 	set_process_input(true)
-	.start()
+	super.start()
 	pass
 
 func stop():
 	#Be sure to disable active minigame elements in this method.
-	.stop()
+	super.stop()
 	pass
 
 func _input(event):

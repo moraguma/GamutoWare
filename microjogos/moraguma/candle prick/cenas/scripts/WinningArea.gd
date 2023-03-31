@@ -12,11 +12,11 @@ var time_elapsed = 0
 var active = true
 
 
-onready var parent = get_parent()
-onready var candle = parent.get_node("Candle")
+@onready var parent = get_parent()
+@onready var candle = parent.get_node("Candle")
 
-onready var arrow_1 = $Arrow1
-onready var arrow_2 = $Arrow2
+@onready var arrow_1 = $Arrow1
+@onready var arrow_2 = $Arrow2
 
 
 func _physics_process(delta):
@@ -24,8 +24,8 @@ func _physics_process(delta):
 		if candle.position.distance_to(position) < CANDLE_TOLERANCE:
 			active = false
 			
-			parent.win()
-			candle.win()
+			parent.register_win()
+			candle.register_win()
 
 
 func _process(delta):

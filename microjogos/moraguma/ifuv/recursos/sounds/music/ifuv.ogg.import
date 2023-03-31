@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/ifuv.ogg-161117d750bcf9e8a1dc913fe42eef7b.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bv852g6lkjsm6"
+path="res://.godot/imported/ifuv.ogg-161117d750bcf9e8a1dc913fe42eef7b.oggvorbisstr"
 
 [deps]
 
 source_file="res://microjogos/moraguma/ifuv/recursos/sounds/music/ifuv.ogg"
-dest_files=[ "res://.import/ifuv.ogg-161117d750bcf9e8a1dc913fe42eef7b.oggstr" ]
+dest_files=["res://.godot/imported/ifuv.ogg-161117d750bcf9e8a1dc913fe42eef7b.oggvorbisstr"]
 
 [params]
 
 loop=true
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

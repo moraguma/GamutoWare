@@ -1,10 +1,10 @@
-extends Sprite
+extends Sprite2D
 
 var t = 0
 var active = true
 
-onready var base = get_parent()
-onready var gamuturai_animation_player = get_node('../Gamuturai/AnimationPlayer')
+@onready var base = get_parent()
+@onready var gamuturai_animation_player = get_node('../Gamuturai/AnimationPlayer')
 
 
 func _ready():

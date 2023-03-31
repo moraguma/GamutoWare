@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/shoot.wav-b06c205cb4a37922b98858cac6df1522.sample"
+type="AudioStreamWAV"
+uid="uid://b58jv4o262lad"
+path="res://.godot/imported/shoot.wav-b06c205cb4a37922b98858cac6df1522.sample"
 
 [deps]
 
 source_file="res://microjogos/godotware/Bang/shoot.wav"
-dest_files=[ "res://.import/shoot.wav-b06c205cb4a37922b98858cac6df1522.sample" ]
+dest_files=["res://.godot/imported/shoot.wav-b06c205cb4a37922b98858cac6df1522.sample"]
 
 [params]
 

@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/yellow.wav-dee9bf393eb987f9dc86d1575231e312.sample"
+type="AudioStreamWAV"
+uid="uid://jqqn6xng1rtd"
+path="res://.godot/imported/yellow.wav-dee9bf393eb987f9dc86d1575231e312.sample"
 
 [deps]
 
 source_file="res://microjogos/godotware/Simon/yellow.wav"
-dest_files=[ "res://.import/yellow.wav-dee9bf393eb987f9dc86d1575231e312.sample" ]
+dest_files=["res://.godot/imported/yellow.wav-dee9bf393eb987f9dc86d1575231e312.sample"]
 
 [params]
 

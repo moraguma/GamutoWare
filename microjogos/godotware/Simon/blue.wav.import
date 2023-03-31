@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/blue.wav-49eaeb36b8e2806db7c09dff3b9da01d.sample"
+type="AudioStreamWAV"
+uid="uid://1mwdma1tsbjc"
+path="res://.godot/imported/blue.wav-49eaeb36b8e2806db7c09dff3b9da01d.sample"
 
 [deps]
 
 source_file="res://microjogos/godotware/Simon/blue.wav"
-dest_files=[ "res://.import/blue.wav-49eaeb36b8e2806db7c09dff3b9da01d.sample" ]
+dest_files=["res://.godot/imported/blue.wav-49eaeb36b8e2806db7c09dff3b9da01d.sample"]
 
 [params]
 

@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/Heartbeat.wav-7d77a44443ed31692ab9814a6387557d.sample"
+type="AudioStreamWAV"
+uid="uid://caxyjothj1mkg"
+path="res://.godot/imported/Heartbeat.wav-7d77a44443ed31692ab9814a6387557d.sample"
 
 [deps]
 
 source_file="res://microjogos/moraguma/whale_eater/recursos/sounds/sfx/Heartbeat.wav"
-dest_files=[ "res://.import/Heartbeat.wav-7d77a44443ed31692ab9814a6387557d.sample" ]
+dest_files=["res://.godot/imported/Heartbeat.wav-7d77a44443ed31692ab9814a6387557d.sample"]
 
 [params]
 

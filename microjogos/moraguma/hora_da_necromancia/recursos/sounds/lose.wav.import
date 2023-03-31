@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/lose.wav-3a49f5e914df9d6ab05e3be731e7b30d.sample"
+type="AudioStreamWAV"
+uid="uid://b82dbutl8phql"
+path="res://.godot/imported/lose.wav-3a49f5e914df9d6ab05e3be731e7b30d.sample"
 
 [deps]
 
 source_file="res://microjogos/moraguma/hora_da_necromancia/recursos/sounds/lose.wav"
-dest_files=[ "res://.import/lose.wav-3a49f5e914df9d6ab05e3be731e7b30d.sample" ]
+dest_files=["res://.godot/imported/lose.wav-3a49f5e914df9d6ab05e3be731e7b30d.sample"]
 
 [params]
 

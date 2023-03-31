@@ -1,11 +1,11 @@
 extends Button
 
 
-export var start_focused = false
+@export var start_focused = false
 
 
-export (String) var pt_text
-export (String) var en_text
+@export var pt_text: String
+@export var en_text: String
 
 
 func _ready():
@@ -20,7 +20,7 @@ func _ready():
 
 func try_set_focus_neighbour(margin, path):
 	if path != "":
-		set_focus_neighbour(margin, path)
+		set_focus_neighbor(margin, path)
 
 
 func _pressed():

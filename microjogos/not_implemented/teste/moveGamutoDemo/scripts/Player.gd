@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 
 const SPEED = 300
@@ -22,4 +22,7 @@ func _physics_process(delta):
 	
 	velocidade.y += 800 * delta
 	
-	velocidade = move_and_slide(velocidade, Vector2(0, -1))
+	set_velocity(velocidade)
+	set_up_direction(Vector2(0, -1))
+	move_and_slide()
+	velocidade = velocity

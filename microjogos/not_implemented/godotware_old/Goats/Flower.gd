@@ -7,14 +7,14 @@ extends Area2D
 var has_started = false
 
 func _ready():
-	#get_node("Sprite").set_frame(
+	#get_node("Sprite2D").set_frame(
 	pass
 	
 func _process(delta):
 	for body in get_overlapping_bodies ( ) :
 		#print(str('Body entered: ', body.get_groups()))
 		if body.is_in_group("Goats"):
-			get_node("Sprite").set_frame(5)
+			get_node("Sprite2D").set_frame(5)
 	pass
 
 

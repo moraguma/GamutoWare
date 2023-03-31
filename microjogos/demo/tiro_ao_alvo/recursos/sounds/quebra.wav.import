@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/quebra.wav-9bd473ecc6490433f8e192097b008cb3.sample"
+type="AudioStreamWAV"
+uid="uid://ci1qq50g4sav"
+path="res://.godot/imported/quebra.wav-9bd473ecc6490433f8e192097b008cb3.sample"
 
 [deps]
 
 source_file="res://microjogos/demo/tiro_ao_alvo/recursos/sounds/quebra.wav"
-dest_files=[ "res://.import/quebra.wav-9bd473ecc6490433f8e192097b008cb3.sample" ]
+dest_files=["res://.godot/imported/quebra.wav-9bd473ecc6490433f8e192097b008cb3.sample"]
 
 [params]
 

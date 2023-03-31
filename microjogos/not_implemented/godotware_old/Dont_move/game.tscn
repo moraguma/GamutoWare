@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=1]
 
-[ext_resource path="res://minigames/Dont_move/dont.png" type="Texture" id=1]
+[ext_resource path="res://minigames/Dont_move/dont.png" type="Texture2D" id=1]
 
 [node name="Main" type="Node2D"]
 

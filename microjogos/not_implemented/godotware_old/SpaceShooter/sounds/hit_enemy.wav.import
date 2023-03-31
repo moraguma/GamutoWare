@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/hit_enemy.wav-add2d437906097b4e3a34dfe924cea6c.sample"
+type="AudioStreamWAV"
+uid="uid://dxlvnyc22xjeq"
+path="res://.godot/imported/hit_enemy.wav-add2d437906097b4e3a34dfe924cea6c.sample"
 
 [deps]
 
 source_file="res://microjogos/not_implemented/godotware_old/SpaceShooter/sounds/hit_enemy.wav"
-dest_files=[ "res://.import/hit_enemy.wav-add2d437906097b4e3a34dfe924cea6c.sample" ]
+dest_files=["res://.godot/imported/hit_enemy.wav-add2d437906097b4e3a34dfe924cea6c.sample"]
 
 [params]
 

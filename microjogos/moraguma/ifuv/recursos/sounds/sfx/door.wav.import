@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/door.wav-8f7e2a4340b4c8e4f46729c168444e81.sample"
+type="AudioStreamWAV"
+uid="uid://baxuq5bxfupah"
+path="res://.godot/imported/door.wav-8f7e2a4340b4c8e4f46729c168444e81.sample"
 
 [deps]
 
 source_file="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/door.wav"
-dest_files=[ "res://.import/door.wav-8f7e2a4340b4c8e4f46729c168444e81.sample" ]
+dest_files=["res://.godot/imported/door.wav-8f7e2a4340b4c8e4f46729c168444e81.sample"]
 
 [params]
 

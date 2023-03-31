@@ -17,17 +17,17 @@ const MAX_LENGTH = 3
 var correct_password = ""
 var input = ""
 var enabled = true
-onready var selection = get_node("Pad/5")
+@onready var selection = get_node("Pad/5")
 
 
-onready var keys = [$Key1, $Key2, $Key3, $Key4, $Key5]
-onready var error_sound = $ErrorSound
-onready var door_animation_player = $Door/AnimationPlayer
-onready var monster_animation_player = $Monster/AnimationPlayer
-onready var cursor = $Pad/Cursor
-onready var display = $Pad/Display
-onready var password = $Paper/Password
-onready var music = $Music
+@onready var keys = [$Key1, $Key2, $Key3, $Key4, $Key5]
+@onready var error_sound = $ErrorSound
+@onready var door_animation_player = $Door/AnimationPlayer
+@onready var monster_animation_player = $Monster/AnimationPlayer
+@onready var cursor = $Pad/Cursor
+@onready var display = $Pad/Display
+@onready var password = $Paper/Password
+@onready var music = $Music
 
 
 func _ready():
@@ -50,8 +50,8 @@ func _ready():
 
 
 func _process(delta):
-	display.bbcode_text = "[center]" + str(input)
-	cursor.position = cursor.position.linear_interpolate(selection.position, CURSOR_LERP_WEIGHT)
+	display.text = "[center]" + str(input)
+	cursor.position = cursor.position.lerp(selection.position, CURSOR_LERP_WEIGHT)
 
 
 func _physics_process(delta):

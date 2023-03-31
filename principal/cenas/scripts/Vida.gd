@@ -3,8 +3,8 @@ extends "res://principal/cenas/scripts/Droppable.gd"
 
 const AMOUNT_TO_FRAME = {1: 2, 2: 0, 3: 1}
 
-onready var amount = get_parent().get_node("Amount")
-onready var animation_player = $AnimationPlayer
+@onready var amount = get_parent().get_node("Amount")
+@onready var animation_player = $AnimationPlayer
 
 
 func _ready():

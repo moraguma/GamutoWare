@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/403664__inspectorj__air-extractor-fan-public-toilets-a.wav-0492970455ab02e959dcc41a6c389b2f.sample"
+type="AudioStreamWAV"
+uid="uid://bshhfp2u8p02"
+path="res://.godot/imported/403664__inspectorj__air-extractor-fan-public-toilets-a.wav-0492970455ab02e959dcc41a6c389b2f.sample"
 
 [deps]
 
 source_file="res://microjogos/2022S1/race/recursos/403664__inspectorj__air-extractor-fan-public-toilets-a.wav"
-dest_files=[ "res://.import/403664__inspectorj__air-extractor-fan-public-toilets-a.wav-0492970455ab02e959dcc41a6c389b2f.sample" ]
+dest_files=["res://.godot/imported/403664__inspectorj__air-extractor-fan-public-toilets-a.wav-0492970455ab02e959dcc41a6c389b2f.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

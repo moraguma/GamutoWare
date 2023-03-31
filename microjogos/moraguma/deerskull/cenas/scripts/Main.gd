@@ -18,9 +18,9 @@ const SPAWN_TIME = 0.389
 const MAX_SPREAD = PI/3
 
 
-onready var spawn_pos = $SpawnPos.curve
-onready var timer = $Timer
-onready var music = $Music
+@onready var spawn_pos = $SpawnPos.curve
+@onready var timer = $Timer
+@onready var music = $Music
 
 
 func _ready():
@@ -44,15 +44,15 @@ func _ready():
 var Shot = preload("res://microjogos/moraguma/deerskull/cenas/Shot.tscn")
 
 func spawn():
-	var shot = Shot.instance()
-	shot.position = spawn_pos.interpolate_baked(randf() * spawn_pos.get_baked_length())
+	var shot = Shot.instantiate()
+	shot.position = spawn_pos.sample_baked(randf() * spawn_pos.get_baked_length())
 	add_child(shot)
-	shot.call_deferred("aim", (Vector2(160, 90) - shot.position).rotated(rand_range(-1, 1) * MAX_SPREAD).normalized())
+	shot.call_deferred("aim", (Vector2(160, 90) - shot.position).rotated(randf_range(-1, 1) * MAX_SPREAD).normalized())
 	
 	timer.start(SPAWN_TIME)
 
 
-func lose():
+func register_lose():
 	timer.stop()
 	
 	emit_signal("lose")

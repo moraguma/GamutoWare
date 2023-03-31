@@ -1,124 +1,85 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=10 format=3 uid="uid://cf75c4hsvrv76"]
 
-[ext_resource path="res://principal/recursos/fonts/Stop Bullying.otf" type="DynamicFontData" id=1]
-[ext_resource path="res://principal/recursos/sprites/GMToutline.png" type="Texture" id=2]
-[ext_resource path="res://principal/recursos/sprites/MenuBase.png" type="Texture" id=3]
-[ext_resource path="res://principal/cenas/scripts/GameOver.gd" type="Script" id=4]
-[ext_resource path="res://principal/cenas/scripts/TransitionButton.gd" type="Script" id=5]
-[ext_resource path="res://principal/cenas/scripts/TranslatableText.gd" type="Script" id=6]
-[ext_resource path="res://principal/recursos/shaders/Diamond.tres" type="Material" id=7]
-[ext_resource path="res://principal/recursos/themes/ButtonTheme.tres" type="Theme" id=8]
+[ext_resource type="Texture2D" uid="uid://cs75vvw01oafl" path="res://principal/recursos/sprites/GMToutline.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://ja6urlsch5m7" path="res://principal/recursos/sprites/MenuBase.png" id="3"]
+[ext_resource type="Script" path="res://principal/cenas/scripts/GameOver.gd" id="4"]
+[ext_resource type="Script" path="res://principal/cenas/scripts/TransitionButton.gd" id="5"]
+[ext_resource type="Theme" uid="uid://cb4tlwb81nq48" path="res://principal/recursos/themes/TitleTheme.tres" id="5_oy72l"]
+[ext_resource type="Script" path="res://principal/cenas/scripts/TranslatableText.gd" id="6"]
+[ext_resource type="Material" uid="uid://bfefepnpbds1x" path="res://principal/recursos/shaders/Diamond.tres" id="7"]
+[ext_resource type="Theme" uid="uid://dt5djib7huxvm" path="res://principal/recursos/themes/ButtonTheme.tres" id="8"]
 
-[sub_resource type="Curve" id=5]
+[sub_resource type="Curve" id="Curve_bvt3g"]
 min_value = -360.0
 max_value = 360.0
-_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.990196, 360 ), 0.0, 0.0, 0, 0 ]
-
-[sub_resource type="DynamicFont" id=1]
-size = 128
-outline_size = 36
-outline_color = Color( 0.172549, 0.141176, 0.207843, 1 )
-font_data = ExtResource( 1 )
-
-[sub_resource type="Theme" id=2]
-default_font = SubResource( 1 )
-RichTextLabel/colors/default_color = Color( 0.952941, 0.913725, 0.976471, 1 )
-
-[sub_resource type="DynamicFont" id=9]
-size = 96
-outline_size = 16
-outline_color = Color( 0.172549, 0.141176, 0.207843, 1 )
-font_data = ExtResource( 1 )
-
-[sub_resource type="Theme" id=10]
-default_font = SubResource( 9 )
-RichTextLabel/colors/default_color = Color( 0.952941, 0.913725, 0.976471, 1 )
-
-[sub_resource type="StyleBoxEmpty" id=6]
-
-[sub_resource type="DynamicFont" id=7]
-size = 64
-outline_size = 16
-outline_color = Color( 0.172549, 0.141176, 0.207843, 1 )
-font_data = ExtResource( 1 )
-
-[sub_resource type="Theme" id=8]
-default_font = SubResource( 7 )
-Button/colors/font_color = Color( 0.952941, 0.913725, 0.976471, 1 )
-Button/colors/font_color_focus = Color( 0.615686, 0, 1, 1 )
-Button/colors/font_color_hover = Color( 0.615686, 0, 1, 1 )
-Button/styles/focus = SubResource( 6 )
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.990196, 360), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [node name="GameOver" type="Node2D"]
-script = ExtResource( 4 )
+script = ExtResource("4")
 
-[node name="Sprite" type="Sprite" parent="."]
-material = ExtResource( 7 )
-position = Vector2( 960, 540 )
-texture = ExtResource( 3 )
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = ExtResource("7")
+position = Vector2(960, 540)
+texture = ExtResource("3")
 
 [node name="GMTParticles" type="CPUParticles2D" parent="."]
-position = Vector2( -880, -1080 )
+position = Vector2(128, -264)
 amount = 32
-lifetime = 2.5
-preprocess = 2.5
-texture = ExtResource( 2 )
-emission_shape = 2
-emission_rect_extents = Vector2( 1080, 1080 )
-direction = Vector2( 1, 1 )
-gravity = Vector2( 500, 500 )
-initial_velocity = 1000.0
-angle_curve = SubResource( 5 )
+lifetime = 3.0
+preprocess = 3.0
+texture = ExtResource("2")
+emission_shape = 3
+emission_rect_extents = Vector2(1080, 540)
+direction = Vector2(1, 1)
+gravity = Vector2(500, 500)
+angle_max = 1.0
+angle_curve = SubResource("Curve_bvt3g")
 
 [node name="Title" type="RichTextLabel" parent="."]
-margin_left = 264.0
-margin_top = 82.0
-margin_right = 1655.0
-margin_bottom = 328.0
-rect_clip_content = false
-theme = SubResource( 2 )
+clip_contents = false
+offset_left = 264.0
+offset_top = 82.0
+offset_right = 1655.0
+offset_bottom = 328.0
+theme = ExtResource("5_oy72l")
 bbcode_enabled = true
-bbcode_text = "[center][shake rate=20 level=40]FIM   DE   JOGO"
 text = "FIM   DE   JOGO"
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+script = ExtResource("6")
 pt_text = "[center][shake rate=20 level=40]FIM   DE   JOGO"
 en_text = "[center][shake rate=20 level=40]GAME   OVER"
 
 [node name="Score" type="RichTextLabel" parent="."]
-margin_left = 254.0
-margin_top = 403.0
-margin_right = 1666.0
-margin_bottom = 776.0
-rect_clip_content = false
-theme = SubResource( 10 )
+clip_contents = false
+offset_left = 254.0
+offset_top = 403.0
+offset_right = 1666.0
+offset_bottom = 776.0
+theme = ExtResource("5_oy72l")
+theme_override_font_sizes/normal_font_size = 64
 bbcode_enabled = true
-bbcode_text = "[center][wave amp=100 freq=5]SCORE: 50"
 text = "SCORE: 50"
 
 [node name="Highscore" type="RichTextLabel" parent="."]
-margin_left = 254.0
-margin_top = 611.0
-margin_right = 1666.0
-margin_bottom = 984.0
-rect_clip_content = false
-theme = ExtResource( 8 )
+clip_contents = false
+offset_left = 254.0
+offset_top = 611.0
+offset_right = 1666.0
+offset_bottom = 984.0
+theme = ExtResource("8")
 bbcode_enabled = true
-bbcode_text = "[center][shake level=20]HIGHSCORE: 210"
 text = "HIGHSCORE: 210"
 
 [node name="Buttons" type="Node2D" parent="."]
 
 [node name="Menu" type="Button" parent="Buttons"]
-margin_left = 849.0
-margin_top = 890.0
-margin_right = 1072.0
-margin_bottom = 992.0
-theme = SubResource( 8 )
+offset_left = 849.0
+offset_top = 890.0
+offset_right = 1072.0
+offset_bottom = 992.0
+theme = ExtResource("8")
 text = "MENU"
 flat = true
-script = ExtResource( 5 )
-start_focused = true
+script = ExtResource("5")
 path = "res://principal/cenas/Menu.tscn"
+start_focused = true

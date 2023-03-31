@@ -20,13 +20,13 @@ func _ready():
 	randomize()
 
 
-func win():
+func register_win():
 	if(winnable):
 		losable = false
 		get_node("VictorySFX").play()
 		emit_signal("win")
 
-func lose():
+func register_lose():
 	if(losable):
 		winnable = false
 		losable = false

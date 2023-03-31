@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/slash.wav-f11361f09926f52626044ec59ed5fd58.sample"
+type="AudioStreamWAV"
+uid="uid://0453uyrhkp48"
+path="res://.godot/imported/slash.wav-f11361f09926f52626044ec59ed5fd58.sample"
 
 [deps]
 
 source_file="res://microjogos/2022S1/gamuturai/sons/slash.wav"
-dest_files=[ "res://.import/slash.wav-f11361f09926f52626044ec59ed5fd58.sample" ]
+dest_files=["res://.godot/imported/slash.wav-f11361f09926f52626044ec59ed5fd58.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

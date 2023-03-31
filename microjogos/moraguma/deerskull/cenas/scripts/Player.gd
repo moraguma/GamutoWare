@@ -1,28 +1,30 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 
 const ACCEL = 0.09
 const MAX_SPEED = 120
 
 
-var velocity = Vector2(0, 0)
 var alive = true
 
 
-onready var parent = get_parent()
-onready var nav = $Nav
-onready var deerskull = $Deerskull
-onready var animation_player = $AnimationPlayer
-onready var hit_sound = $HitSound
+@onready var parent = get_parent()
+@onready var nav = $Nav
+@onready var deerskull = $Deerskull
+@onready var animation_player = $AnimationPlayer
+@onready var hit_sound = $HitSound
 
 
 func _ready():
+	velocity = Vector2(0, 0)
+	
 	animation_player.play("idle")
 
 
 func _physics_process(delta):
 	if alive:
-		velocity = move_and_slide(velocity.linear_interpolate(get_input_dir() * MAX_SPEED, ACCEL))
+		set_velocity(velocity.lerp(get_input_dir() * MAX_SPEED, ACCEL))
+		move_and_slide()
 
 
 func get_input_dir():
@@ -34,6 +36,6 @@ func die():
 	
 	nav.drop()
 	deerskull.drop()
-	parent.lose()
+	parent.register_lose()
 	
 	hit_sound.play()

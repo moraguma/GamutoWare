@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/error.wav-5a53fa719e4298f6a30e19ea9ba7ddaf.sample"
+type="AudioStreamWAV"
+uid="uid://yk083ye2bw2h"
+path="res://.godot/imported/error.wav-5a53fa719e4298f6a30e19ea9ba7ddaf.sample"
 
 [deps]
 
 source_file="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/error.wav"
-dest_files=[ "res://.import/error.wav-5a53fa719e4298f6a30e19ea9ba7ddaf.sample" ]
+dest_files=["res://.godot/imported/error.wav-5a53fa719e4298f6a30e19ea9ba7ddaf.sample"]
 
 [params]
 

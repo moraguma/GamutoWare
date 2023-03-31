@@ -7,13 +7,13 @@ var active = true
 const STEP_SIZE = 16
 
 
-onready var main = get_parent()
-onready var animation_player = $AnimationPlayer
-onready var sprite = $Sprite
+@onready var main = get_parent()
+@onready var animation_player = $AnimationPlayer
+@onready var sprite = $Sprite2D
 
-onready var music = $Music
-onready var splat = $Splat
-onready var yay = $Yay
+@onready var music = $Music
+@onready var splat = $Splat
+@onready var yay = $Yay
 
 
 func _ready():
@@ -49,7 +49,7 @@ func _physics_process(delta):
 				yay.play()
 				
 				active = false
-				main.win()
+				main.register_win()
 
 
 # Chamada quando entra em outra. Mata o jogador
@@ -60,4 +60,4 @@ func hit(area):
 	active = false
 	hide()
 	
-	main.lose()
+	main.register_lose()

@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/sleep.wav-2bbde12b03a98c25af5b057ab130952a.sample"
+type="AudioStreamWAV"
+uid="uid://bm5mvimktk4m7"
+path="res://.godot/imported/sleep.wav-2bbde12b03a98c25af5b057ab130952a.sample"
 
 [deps]
 
 source_file="res://microjogos/not_implemented/godotware_old/Goats/sleep.wav"
-dest_files=[ "res://.import/sleep.wav-2bbde12b03a98c25af5b057ab130952a.sample" ]
+dest_files=["res://.godot/imported/sleep.wav-2bbde12b03a98c25af5b057ab130952a.sample"]
 
 [params]
 

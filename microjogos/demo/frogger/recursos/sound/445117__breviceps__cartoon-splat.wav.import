@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/445117__breviceps__cartoon-splat.wav-1e7d85ed2dae65a1b83d4ed7ff0f4964.sample"
+type="AudioStreamWAV"
+uid="uid://de06u585m3bje"
+path="res://.godot/imported/445117__breviceps__cartoon-splat.wav-1e7d85ed2dae65a1b83d4ed7ff0f4964.sample"
 
 [deps]
 
 source_file="res://microjogos/demo/frogger/recursos/sound/445117__breviceps__cartoon-splat.wav"
-dest_files=[ "res://.import/445117__breviceps__cartoon-splat.wav-1e7d85ed2dae65a1b83d4ed7ff0f4964.sample" ]
+dest_files=["res://.godot/imported/445117__breviceps__cartoon-splat.wav-1e7d85ed2dae65a1b83d4ed7ff0f4964.sample"]
 
 [params]
 

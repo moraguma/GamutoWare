@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/wow.wav-8f9dbabb198af89bf7daa811a818c4db.sample"
+type="AudioStreamWAV"
+uid="uid://bs70lnnsdb2u6"
+path="res://.godot/imported/wow.wav-8f9dbabb198af89bf7daa811a818c4db.sample"
 
 [deps]
 
 source_file="res://microjogos/moraguma/hora_da_necromancia/recursos/sounds/wow.wav"
-dest_files=[ "res://.import/wow.wav-8f9dbabb198af89bf7daa811a818c4db.sample" ]
+dest_files=["res://.godot/imported/wow.wav-8f9dbabb198af89bf7daa811a818c4db.sample"]
 
 [params]
 

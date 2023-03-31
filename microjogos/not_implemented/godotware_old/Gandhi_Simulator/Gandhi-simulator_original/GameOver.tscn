@@ -1,16 +1,16 @@
 [gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://GameOver.gd" type="Script" id=1]
-[ext_resource path="res://Personagens/Soldado1.png" type="Texture" id=2]
+[ext_resource path="res://Personagens/Soldado1.png" type="Texture2D" id=2]
 [ext_resource path="res://Audio/autão.ogg" type="AudioStream" id=3]
-[ext_resource path="res://Cenas/menu.png" type="Texture" id=4]
-[ext_resource path="res://Cenas/India_painting.jpg" type="Texture" id=5]
+[ext_resource path="res://Cenas/menu.png" type="Texture2D" id=4]
+[ext_resource path="res://Cenas/India_painting.jpg" type="Texture2D" id=5]
 
 [node name="Node2D" type="Node2D"]
 
 script/script = ExtResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 
 transform/pos = Vector2( 381.195, 652.643 )
 transform/scale = Vector2( 1.91982, 1.3197 )
@@ -38,11 +38,11 @@ margin/top = 367.0
 margin/right = 1134.0
 margin/bottom = 440.0
 toggle_mode = false
-enabled_focus_mode = 2
+focus_mode = 2
 shortcut = null
 flat = false
 
-[node name="Sprite" type="Sprite" parent="MainMenu"]
+[node name="Sprite2D" type="Sprite2D" parent="MainMenu"]
 
 transform/pos = Vector2( 122.6, 37.8144 )
 transform/scale = Vector2( 0.794602, 0.617761 )
@@ -78,7 +78,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Sprite 2" type="Sprite" parent="."]
+[node name="Sprite2D 2" type="Sprite2D" parent="."]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 640.654, 368.195 )

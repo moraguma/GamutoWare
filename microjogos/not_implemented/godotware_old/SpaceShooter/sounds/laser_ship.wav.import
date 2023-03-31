@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/laser_ship.wav-c87e1832701d4398352ac3f247c99e52.sample"
+type="AudioStreamWAV"
+uid="uid://hy7p12j6t8sd"
+path="res://.godot/imported/laser_ship.wav-c87e1832701d4398352ac3f247c99e52.sample"
 
 [deps]
 
 source_file="res://microjogos/not_implemented/godotware_old/SpaceShooter/sounds/laser_ship.wav"
-dest_files=[ "res://.import/laser_ship.wav-c87e1832701d4398352ac3f247c99e52.sample" ]
+dest_files=["res://.godot/imported/laser_ship.wav-c87e1832701d4398352ac3f247c99e52.sample"]
 
 [params]
 

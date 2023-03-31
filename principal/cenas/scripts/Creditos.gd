@@ -16,20 +16,20 @@ var last_focus
 var aim_pos = MINIGAMES_POS
 
 
-onready var minigame_data = preload("res://principal/recursos/data/Minigames.gd").new()
-onready var credits = $Credits
-onready var minigames_container = $Credits/Minigames/MinigameControl/Minigames/GridContainer
-onready var menu_button = $Credits/Minigames/Menu
-onready var back_button = $Credits/Details/Back
+@onready var minigame_data = preload("res://principal/recursos/data/Minigames.gd").new()
+@onready var credits = $Credits
+@onready var minigames_container = $Credits/Minigames/MinigameControl/Minigames/GridContainer
+@onready var menu_button = $Credits/Minigames/Menu
+@onready var back_button = $Credits/Details/Back
 
-onready var cover = $Credits/Details/Cover
-onready var title = $Credits/Details/Title
-onready var details = $Credits/Details/Details
+@onready var cover = $Credits/Details/Cover
+@onready var title = $Credits/Details/Title
+@onready var details = $Credits/Details/Details
 
 
 func _ready():
 	for minigame in minigame_data.credit_paths:
-		var new_cover_button = CoverButton.instance()
+		var new_cover_button = CoverButton.instantiate()
 		var active = Global.check_minigame(minigame)
 		new_cover_button.load_button(active, minigame, self)
 		
@@ -57,11 +57,11 @@ func _ready():
 		var left = cover_buttons[i].button.get_path_to(cover_buttons[min(i + TOTAL_COVER_COLLUMS - i % TOTAL_COVER_COLLUMS - 1, len(cover_buttons) - 1)].button)
 		if i % TOTAL_COVER_COLLUMS != 0 and i - 1 >= 0:
 			left = cover_buttons[i].button.get_path_to(cover_buttons[i - 1].button)
-		 
+		
 		cover_buttons[i].set_focuses(top, right, bottom, left)
 	
-	menu_button.focus_neighbour_top = menu_button.get_path_to(cover_buttons[len(cover_buttons) - 1].button)
-	menu_button.focus_neighbour_bottom = menu_button.get_path_to(cover_buttons[0].button)
+	menu_button.focus_neighbor_top = menu_button.get_path_to(cover_buttons[len(cover_buttons) - 1].button)
+	menu_button.focus_neighbor_bottom = menu_button.get_path_to(cover_buttons[0].button)
 	
 	menu_button.grab_focus()
 
@@ -72,7 +72,7 @@ func _input(event):
 
 
 func _process(delta):
-	credits.position = credits.position.linear_interpolate(aim_pos, LERP_WEIGHT)
+	credits.position = credits.position.lerp(aim_pos, LERP_WEIGHT)
 
 
 func detail(path, button):
@@ -88,11 +88,11 @@ func detail(path, button):
 	
 	match Global.language:
 		Global.LANGUAGE.PT:
-			title.bbcode_text = "[center]" + credits_data.title_pt
-			details.bbcode_text = "[center]" + credits_data.credits_pt
+			title.text = "[center]" + credits_data.title_pt
+			details.text = "[center]" + credits_data.credits_pt
 		Global.LANGUAGE.EN:
-			title.bbcode_text = "[center]" + credits_data.title_en
-			details.bbcode_text = "[center]" + credits_data.credits_en
+			title.text = "[center]" + credits_data.title_en
+			details.text = "[center]" + credits_data.credits_en
 	
 	back_button.grab_focus()
 	

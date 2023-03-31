@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/270333__littlerobotsoundfactory__jingle_win_00.wav-f3ca71a30870a7a1e140481d8e182d5e.sample"
+type="AudioStreamWAV"
+uid="uid://cmxsgo5g7yj07"
+path="res://.godot/imported/270333__littlerobotsoundfactory__jingle_win_00.wav-f3ca71a30870a7a1e140481d8e182d5e.sample"
 
 [deps]
 
 source_file="res://microjogos/godotware/Simon/270333__littlerobotsoundfactory__jingle_win_00.wav"
-dest_files=[ "res://.import/270333__littlerobotsoundfactory__jingle_win_00.wav-f3ca71a30870a7a1e140481d8e182d5e.sample" ]
+dest_files=["res://.godot/imported/270333__littlerobotsoundfactory__jingle_win_00.wav-f3ca71a30870a7a1e140481d8e182d5e.sample"]
 
 [params]
 

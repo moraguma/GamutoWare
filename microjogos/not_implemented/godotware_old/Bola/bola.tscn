@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://minigames/Bola/bola.gd" type="Script" id=1]
-[ext_resource path="res://minigames/Bola/0.png" type="Texture" id=2]
-[ext_resource path="res://minigames/Bola/3_1.png" type="Texture" id=3]
-[ext_resource path="res://minigames/Bola/1.png" type="Texture" id=4]
-[ext_resource path="res://minigames/Bola/intervalo.png" type="Texture" id=5]
-[ext_resource path="res://minigames/Bola/2.png" type="Texture" id=6]
+[ext_resource path="res://minigames/Bola/0.png" type="Texture2D" id=2]
+[ext_resource path="res://minigames/Bola/3_1.png" type="Texture2D" id=3]
+[ext_resource path="res://minigames/Bola/1.png" type="Texture2D" id=4]
+[ext_resource path="res://minigames/Bola/intervalo.png" type="Texture2D" id=5]
+[ext_resource path="res://minigames/Bola/2.png" type="Texture2D" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -39,13 +39,13 @@ animations = [ {
 [node name="Bola" type="Area2D"]
 
 input/pickable = true
-gravity_vec = Vector2( 0, 1 )
+gravity_direction = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
 script/script = ExtResource( 1 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 
 frames = SubResource( 1 )
 animation = "Zero"

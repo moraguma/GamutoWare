@@ -16,7 +16,7 @@ const MICROGAME_TIME = 6
 # ------------------------------------------------------------------------------
 # VARIÁVEIS
 # ------------------------------------------------------------------------------
-export (Array, String) var microgame_paths
+@export var microgame_paths: Array
 var microgame_queue = []
 
 var total_microgames
@@ -31,19 +31,19 @@ var mode = MODE.ENDLESS
 
 var won = false
 
-onready var minigame_data = preload("res://principal/recursos/data/Minigames.gd").new()
+@onready var minigame_data = preload("res://principal/recursos/data/Minigames.gd").new()
 # ------------------------------------------------------------------------------
 # NÓS
 # ------------------------------------------------------------------------------
-onready var display = $Display
-onready var game = $Display/Game
-onready var animation_player = $AnimationPlayer
-onready var timer = $Timer
+@onready var display = $Display
+@onready var game = $Display/Game
+@onready var animation_player = $AnimationPlayer
+@onready var timer = $Timer
 
-onready var life = $GameUI/Life
-onready var game_icons = [$GameUI/GameIcons/Game1, $GameUI/GameIcons/Game2, $GameUI/GameIcons/Game3, $GameUI/GameIcons/Game4]
-onready var gamuto = $GameUI/GameIcons/Gamuto
-onready var timer_indicator = $TimerIndicator
+@onready var life = $GameUI/Life
+@onready var game_icons = [$GameUI/GameIcons/Game1, $GameUI/GameIcons/Game2, $GameUI/GameIcons/Game3, $GameUI/GameIcons/Game4]
+@onready var gamuto = $GameUI/GameIcons/Gamuto
+@onready var timer_indicator = $TimerIndicator
 
 
 func isolate_folder(path, tolerance):
@@ -62,7 +62,7 @@ func load_icons():
 		if not icon_dict.has(microgame_paths[i]):
 			var path = minigame_data.cover_paths[microgame_paths[i]]
 			icon_dict[microgame_paths[i]] = load(path)
-			icon_dict[microgame_paths[i]].set_flags(Texture.FLAG_FILTER)
+			#icon_dict[microgame_paths[i]].set_flags(Texture2D.FLAG_FILTER)
 
 
 func load_microgames():
@@ -117,7 +117,7 @@ func setup_arcade_mode(microgames):
 func _ready():
 	SoundController.play_game()
 	
-	timer.connect("timeout", self, "finish_game")
+	timer.connect("timeout",Callable(self,"finish_game"))
 	
 	load_icons()
 	load_microgames()
@@ -162,13 +162,14 @@ func start_game(path):
 	
 	SoundController.mute_game()
 	
-	current_microgame = microgame_dict[path].instance()
-	current_microgame.connect("win", self, "win_microgame")
-	current_microgame.connect("lose", self, "lose_microgame")
+	current_microgame = microgame_dict[path].instantiate()
+	current_microgame.connect("win",Callable(self,"win_microgame"))
+	current_microgame.connect("lose",Callable(self,"lose_microgame"))
 	
-	#display.scale = Vector2(BASE_WIDTH/current_microgame.WIDTH, -BASE_HEIGHT/current_microgame.HEIGHT)
+	display.stretch = false
 	game.size = Vector2(current_microgame.WIDTH, current_microgame.HEIGHT)
-	game.update_worlds()
+	display.stretch = true
+	display.texture_filter = current_microgame.texture_filter
 	
 	game.add_child(current_microgame)
 	

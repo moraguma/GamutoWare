@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/explosion.wav-cfaa236505eeb4e7d4157fa73be3d094.sample"
+type="AudioStreamWAV"
+uid="uid://ir8fhtqqb5xh"
+path="res://.godot/imported/explosion.wav-cfaa236505eeb4e7d4157fa73be3d094.sample"
 
 [deps]
 
 source_file="res://microjogos/not_implemented/godotware_old/SpaceShooter/sounds/explosion.wav"
-dest_files=[ "res://.import/explosion.wav-cfaa236505eeb4e7d4157fa73be3d094.sample" ]
+dest_files=["res://.godot/imported/explosion.wav-cfaa236505eeb4e7d4157fa73be3d094.sample"]
 
 [params]
 

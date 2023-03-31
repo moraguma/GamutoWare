@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/shoot.wav-98fb561f08d955d0434242a472aec11d.sample"
+type="AudioStreamWAV"
+uid="uid://1h41b0vdkm4o"
+path="res://.godot/imported/shoot.wav-98fb561f08d955d0434242a472aec11d.sample"
 
 [deps]
 
 source_file="res://microjogos/moraguma/deerskull/recursos/sounds/sfx/shoot.wav"
-dest_files=[ "res://.import/shoot.wav-98fb561f08d955d0434242a472aec11d.sample" ]
+dest_files=["res://.godot/imported/shoot.wav-98fb561f08d955d0434242a472aec11d.sample"]
 
 [params]
 

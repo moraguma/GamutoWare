@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/win.wav-05d5eff75f67e87344de168029f8ffb0.sample"
+type="AudioStreamWAV"
+uid="uid://cjouuuqlanr6"
+path="res://.godot/imported/win.wav-05d5eff75f67e87344de168029f8ffb0.sample"
 
 [deps]
 
 source_file="res://microjogos/moraguma/hora_da_necromancia/recursos/sounds/win.wav"
-dest_files=[ "res://.import/win.wav-05d5eff75f67e87344de168029f8ffb0.sample" ]
+dest_files=["res://.godot/imported/win.wav-05d5eff75f67e87344de168029f8ffb0.sample"]
 
 [params]
 

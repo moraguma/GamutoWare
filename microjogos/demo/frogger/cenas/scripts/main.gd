@@ -21,8 +21,8 @@ const STEP_SIZE = 16
 var turns = 0
 
 
-onready var car_container = $CarContainer
-onready var frog = $Frog
+@onready var car_container = $CarContainer
+@onready var frog = $Frog
 
 
 func _ready():
@@ -63,7 +63,7 @@ func spawn_car():
 
 # Dada uma posição x, cria um carro numa posição válida aleatória
 func spawn_car_y(x_pos):
-	var new_car = Car.instance()
+	var new_car = Car.instantiate()
 	
 	# Seleciona a posição y do carros aleatoriamente. STEP_SIZE * 1.5 é a primeira posição válida, que é somada a 16 multiplicado por um inteiro entre 0 e o valor máximo tal que a posição continua válida
 	new_car.position = Vector2(x_pos, STEP_SIZE * 1.5 + STEP_SIZE * (randi() % ((HEIGHT - 3 * STEP_SIZE) / STEP_SIZE)))
@@ -71,9 +71,9 @@ func spawn_car_y(x_pos):
 	car_container.add_child(new_car)
 
 
-func win():
+func register_win():
 	emit_signal("win")
 
 
-func lose():
+func register_lose():
 	emit_signal("lose")

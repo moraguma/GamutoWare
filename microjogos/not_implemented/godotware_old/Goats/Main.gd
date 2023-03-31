@@ -51,11 +51,11 @@ func start():
 	#Be sure to only enable minigame elements in this method.
 	get_node("Aim").set_process(true)
 	get_node("Aim").set_process_input(true)
-	get_node("EndTimer").connect("timeout",self,"_on_timeout")
+	get_node("EndTimer").connect("timeout",Callable(self,"_on_timeout"))
 	var maior_tempo = 0
 	for goat in get_node("Goats").get_children():
 		goat.set_process(true)
-		goat.connect("morreu", self, "_on_morreu")
+		goat.connect("morreu",Callable(self,"_on_morreu"))
 		var defWait
 		if difficulty == 1:
 			defWait = 0.7
@@ -73,12 +73,12 @@ func start():
 		for flower in flowerbed.get_children():
 			flower.set_process(true)
 			if flower.get_name() == "FinalFlower":
-				flower.connect("perdeu", self, "_on_perdeu")
+				flower.connect("perdeu",Callable(self,"_on_perdeu"))
 	
-	.start()
+	super.start()
 	pass
 
 func stop():
 	#Be sure to disable active minigame elements in this method.
-	.stop()
+	super.stop()
 	pass

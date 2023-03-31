@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/talk.wav-b23be017fc949c003234d558a70a08cf.sample"
+type="AudioStreamWAV"
+uid="uid://rscpcobhlo4g"
+path="res://.godot/imported/talk.wav-b23be017fc949c003234d558a70a08cf.sample"
 
 [deps]
 
 source_file="res://microjogos/moraguma/deerskull/recursos/sounds/sfx/talk.wav"
-dest_files=[ "res://.import/talk.wav-b23be017fc949c003234d558a70a08cf.sample" ]
+dest_files=["res://.godot/imported/talk.wav-b23be017fc949c003234d558a70a08cf.sample"]
 
 [params]
 

@@ -23,11 +23,11 @@ var color_order = []
 var active = false
 
 
-onready var color_sprites = [$Green, $Red, $Blue, $Yellow]
-onready var color_sounds = [$GreenSound, $RedSound, $BlueSound, $YellowSound]
-onready var timer = $Timer
-onready var win_sound = $Win
-onready var fail_sound = $Fail
+@onready var color_sprites = [$Green, $Red, $Blue, $Yellow]
+@onready var color_sounds = [$GreenSound, $RedSound, $BlueSound, $YellowSound]
+@onready var timer = $Timer
+@onready var win_sound = $Win
+@onready var fail_sound = $Fail
 
 
 func _ready():
@@ -41,10 +41,10 @@ func _ready():
 		color_order.append(randi() % 4)
 	
 	timer.start(START_EXTRA_TIME)
-	yield(timer, "timeout")
+	await timer.timeout
 	for color_code in color_order:
 		timer.start(WAIT_TIME)
-		yield(timer, "timeout")
+		await timer.timeout
 		
 		play_color(color_code)
 	
@@ -70,7 +70,7 @@ func _physics_process(delta):
 
 func _process(delta):
 	for sprite in color_sprites:
-		sprite.modulate.a = lerp(sprite.modulate.a, 1, LERP_WEIGHT)
+		sprite.modulate.a = lerp(sprite.modulate.a, 1.0, LERP_WEIGHT)
 
 
 func button_click(color_code):

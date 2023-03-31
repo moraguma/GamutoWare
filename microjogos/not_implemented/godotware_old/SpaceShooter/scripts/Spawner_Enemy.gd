@@ -22,11 +22,11 @@ func spawn():
 		
 		if ranPos == 0: # spawn from top
 			if ranEnemy == 0 or ranEnemy == 1 or ranEnemy == 2: # spawn kamikaze
-				var enemy = kamikaze.instance() # instanciate enemy
+				var enemy = kamikaze.instantiate() # instanciate enemy
 				var pos = Vector2() # declare position
 				
 				# calculate random position
-				pos.x = rand_range(16, global.view_size.width-16)
+				pos.x = randf_range(16, global.view_size.width-16)
 				pos.y = -16
 				
 				# set speed, position and rotation
@@ -38,11 +38,11 @@ func spawn():
 				global.main_node.add_child(enemy)
 				
 			elif ranEnemy == 3: # spawn clever
-				var enemy = clever.instance() # instanciate enemy
+				var enemy = clever.instantiate() # instanciate enemy
 				var pos = Vector2() # declare position
 				
 				# calculate random position
-				pos.x = rand_range(16, global.view_size.width-16)
+				pos.x = randf_range(16, global.view_size.width-16)
 				pos.y = -16
 				
 				# set speed, position and rotation
@@ -55,11 +55,11 @@ func spawn():
 				
 		elif ranPos == 1: # spawn from right
 			if ranEnemy == 0 or ranEnemy == 1 or ranEnemy == 2: # spawn kamikaze
-				var enemy = kamikaze.instance() # instanciate enemy
+				var enemy = kamikaze.instantiate() # instanciate enemy
 				var pos = Vector2() # declare position
 				
 				# calculate random position
-				pos.y = rand_range(16, global.view_size.height-16)
+				pos.y = randf_range(16, global.view_size.height-16)
 				pos.x = global.view_size.width+16
 				
 				# set speed, position and rotation
@@ -71,11 +71,11 @@ func spawn():
 				global.main_node.add_child(enemy)
 				
 			elif ranEnemy == 3: # spawn clever
-				var enemy = clever.instance() # instanciate enemy
+				var enemy = clever.instantiate() # instanciate enemy
 				var pos = Vector2() # declare position
 				
 				# calculate random position
-				pos.y = rand_range(16, global.view_size.height-16)
+				pos.y = randf_range(16, global.view_size.height-16)
 				pos.x = global.view_size.width+16
 				
 				# set speed, position and rotation
@@ -88,11 +88,11 @@ func spawn():
 				
 		elif ranPos == 2: # spawn from bottom
 			if ranEnemy == 0 or ranEnemy == 1 or ranEnemy == 2: # spawn kamikaze
-				var enemy = kamikaze.instance() # instanciate enemy
+				var enemy = kamikaze.instantiate() # instanciate enemy
 				var pos = Vector2() # declare position
 				
 				# calculate random position
-				pos.x = rand_range(16, global.view_size.width-16)
+				pos.x = randf_range(16, global.view_size.width-16)
 				pos.y = global.view_size.height+16
 				
 				# set speed, position and rotation
@@ -104,11 +104,11 @@ func spawn():
 				global.main_node.add_child(enemy)
 				
 			elif ranEnemy == 3: # spawn clever
-				var enemy = clever.instance() # instanciate enemy
+				var enemy = clever.instantiate() # instanciate enemy
 				var pos = Vector2() # declare position
 				
 				# calculate random position
-				pos.x = rand_range(16, global.view_size.width-16)
+				pos.x = randf_range(16, global.view_size.width-16)
 				pos.y = global.view_size.height+16
 				
 				# set speed, position and rotation
@@ -121,11 +121,11 @@ func spawn():
 				
 		elif ranPos == 3: #spawn from left
 			if ranEnemy == 0 or ranEnemy == 1 or ranEnemy == 2: # spawn kamikaze
-				var enemy = kamikaze.instance() # instanciate enemy
+				var enemy = kamikaze.instantiate() # instanciate enemy
 				var pos = Vector2() # declare position
 				
 				# calculate random position
-				pos.y = rand_range(16, global.view_size.height-16)
+				pos.y = randf_range(16, global.view_size.height-16)
 				pos.x = -16
 				
 				# set speed, position and rotation
@@ -137,11 +137,11 @@ func spawn():
 				global.main_node.add_child(enemy)
 				
 			elif ranEnemy == 3: # spawn clever
-				var enemy = clever.instance() # instanciate enemy
+				var enemy = clever.instantiate() # instanciate enemy
 				var pos = Vector2() # declare position
 				
 				# calculate random position
-				pos.y = rand_range(16, global.view_size.height-16)
+				pos.y = randf_range(16, global.view_size.height-16)
 				pos.x = -16
 				
 				# set speed, position and rotation
@@ -153,4 +153,4 @@ func spawn():
 				global.main_node.add_child(enemy)
 			
 		# wait time until next enemy spawn
-		yield(global.create_timer(SPAWN_TIME), 'timeout')
+		await global.create_timer(SPAWN_TIME).timeout

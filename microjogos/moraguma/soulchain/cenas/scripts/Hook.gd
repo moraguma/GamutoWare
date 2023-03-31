@@ -1,4 +1,4 @@
-extends Sprite
+extends Sprite2D
 
 
 const ACCEL = 0.2
@@ -8,8 +8,8 @@ var player = null
 var stuck = true
 
 
-onready var chain = $Chain
-onready var animation_player = $AnimationPlayer
+@onready var chain = $Chain
+@onready var animation_player = $AnimationPlayer
 
 
 func _ready():
@@ -24,7 +24,7 @@ func _process(delta):
 
 func _physics_process(delta):
 	if not stuck:
-		position = position.linear_interpolate(player.position, ACCEL)
+		position = position.lerp(player.position, ACCEL)
 		animation_player.play("air")
 	else:
 		animation_player.play("idle")

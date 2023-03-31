@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/443808__tissman__fail.wav-0ff77ca9e75a5a7243788c814561717d.sample"
+type="AudioStreamWAV"
+uid="uid://cu7apk8avk5w3"
+path="res://.godot/imported/443808__tissman__fail.wav-0ff77ca9e75a5a7243788c814561717d.sample"
 
 [deps]
 
 source_file="res://microjogos/godotware/Simon/443808__tissman__fail.wav"
-dest_files=[ "res://.import/443808__tissman__fail.wav-0ff77ca9e75a5a7243788c814561717d.sample" ]
+dest_files=["res://.godot/imported/443808__tissman__fail.wav-0ff77ca9e75a5a7243788c814561717d.sample"]
 
 [params]
 

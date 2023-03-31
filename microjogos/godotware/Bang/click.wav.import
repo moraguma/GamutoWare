@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/click.wav-5314956a4ab206abdbe66eb1ecb64e72.sample"
+type="AudioStreamWAV"
+uid="uid://cecjcutv41i2r"
+path="res://.godot/imported/click.wav-5314956a4ab206abdbe66eb1ecb64e72.sample"
 
 [deps]
 
 source_file="res://microjogos/godotware/Bang/click.wav"
-dest_files=[ "res://.import/click.wav-5314956a4ab206abdbe66eb1ecb64e72.sample" ]
+dest_files=["res://.godot/imported/click.wav-5314956a4ab206abdbe66eb1ecb64e72.sample"]
 
 [params]
 

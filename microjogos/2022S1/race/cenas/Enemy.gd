@@ -1,13 +1,12 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
-onready var caverna = get_node("../Caverna")
-onready var player = get_node("../Player")
+@onready var caverna = get_node("../Caverna")
+@onready var player = get_node("../Player")
 
-var velocity = Vector2.ZERO
 var vel_mul = 1.1
 
 func _ready():
-	pass
+	velocity = Vector2.ZERO
 	
 func _process(delta):
 	velocity.x = player.BG_VEL*vel_mul

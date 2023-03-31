@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 
 const GRAVITY = 0.08
@@ -13,10 +13,10 @@ var was_on_floor = true
 var active = true
 
 
-onready var sprite = $Sprite
-onready var animation_player = $AnimationPlayer
-onready var land_sound = $LandSound
-onready var camera = get_parent().get_node("Camera")
+@onready var sprite = $Sprite2D
+@onready var animation_player = $AnimationPlayer
+@onready var land_sound = $LandSound
+@onready var camera = get_parent().get_node("Camera3D")
 
 
 func _physics_process(delta):
@@ -25,8 +25,11 @@ func _physics_process(delta):
 
 
 func movement_process():
-	velocity = velocity.linear_interpolate(gravity_dir * TERMINAL_SPEED, GRAVITY)
-	velocity = move_and_slide(velocity, -gravity_dir)
+	velocity = velocity.lerp(gravity_dir * TERMINAL_SPEED, GRAVITY)
+	set_velocity(velocity)
+	set_up_direction(-gravity_dir)
+	move_and_slide()
+	velocity = velocity
 
 
 func animation_process():

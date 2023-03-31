@@ -23,12 +23,12 @@ func _process(delta):
 
 func start():
 	#Be sure to only enable minigame elements in this method.
-	.start()
+	super.start()
 	pass
 
 func stop():
 	#Be sure to disable active minigame elements in this method.
-	.stop()
+	super.stop()
 	pass
 	
 func on_timeout():

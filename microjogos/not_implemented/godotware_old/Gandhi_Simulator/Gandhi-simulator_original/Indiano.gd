@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 var x = randi()%1200+40 
 var y = (randi()%600+60)

@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/Musica.ogg-5383fe680f87c11aae175cb94b77cc8d.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://chjalloa3y17r"
+path="res://.godot/imported/Musica.ogg-5383fe680f87c11aae175cb94b77cc8d.oggvorbisstr"
 
 [deps]
 
 source_file="res://microjogos/2022S1/gamuturai/sons/Musica.ogg"
-dest_files=[ "res://.import/Musica.ogg-5383fe680f87c11aae175cb94b77cc8d.oggstr" ]
+dest_files=["res://.godot/imported/Musica.ogg-5383fe680f87c11aae175cb94b77cc8d.oggvorbisstr"]
 
 [params]
 
 loop=true
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

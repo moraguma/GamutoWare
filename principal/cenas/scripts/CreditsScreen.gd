@@ -8,4 +8,4 @@ var aim_pos = Vector2(0, 0)
 
 
 func _process(delta):
-	position = position.linear_interpolate(aim_pos, LERP_WEIGHT)
+	position = position.lerp(aim_pos, LERP_WEIGHT)

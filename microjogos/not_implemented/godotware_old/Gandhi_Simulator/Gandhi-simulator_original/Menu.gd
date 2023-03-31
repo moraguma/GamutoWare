@@ -11,10 +11,10 @@ func _ready():
 
 
 func _on_Button_pressed():
-	get_tree().change_scene("res://Instruções.tscn")
+	get_tree().change_scene_to_file("res://Instruções.tscn")
 	pass # replace with function body
 
 
 func _on_Button_2_pressed():
-	get_tree().change_scene("res://Credits.tscn")
+	get_tree().change_scene_to_file("res://Credits.tscn")
 	pass # replace with function body

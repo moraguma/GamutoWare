@@ -18,13 +18,13 @@ func _ready():
 
 func set_focuses(top, right, bottom, left):
 	if top != null:
-		button.focus_neighbour_top = top
+		button.focus_neighbor_top = top
 	if right != null:
-		button.focus_neighbour_right = right
+		button.focus_neighbor_right = right
 	if bottom != null:
-		button.focus_neighbour_bottom = bottom
+		button.focus_neighbor_bottom = bottom
 	if left != null:
-		button.focus_neighbour_left = left
+		button.focus_neighbor_left = left
 
 
 func load_cover(cover):
@@ -35,6 +35,6 @@ func load_button(active, path, to_call):
 	load_button_ref()
 	
 	if active:
-		button.connect("pressed", to_call, "detail", [path, button])
+		button.connect("pressed",Callable(to_call,"detail").bind(path, button))
 	else:
-		button.connect("pressed", to_call, "fail_detail")
+		button.connect("pressed",Callable(to_call,"fail_detail"))

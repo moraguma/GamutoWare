@@ -7,7 +7,7 @@ extends "res://scripts/minigame.gd"
 # This signal is called when the minigame finishes
 signal minigame_end(win)
 
-onready var ratio = 1
+@onready var ratio = 1
 
 func _ready():
 	#= MINIGAME SETUP =#
@@ -27,12 +27,12 @@ func start():
 	#Be sure to only enable minigame elements in this method.
 	ratio = OS.get_time_scale() # Ajusts character speed by increasing difficuty
 	get_node("Personagem/Area2D").ratio = ratio
-	.start()
+	super.start()
 	pass
 
 func stop():
 	#Be sure to disable active minigame elements in this method.
-	.stop()
+	super.stop()
 	pass
 	
 func lost():

@@ -11,17 +11,17 @@ var velocity = Vector2(0, 0)
 var targets = []
 
 
-onready var main = get_parent()
-onready var sprite = $Sprite
+@onready var main = get_parent()
+@onready var sprite = $Sprite2D
 
-onready var acerto_sfx = $Acerto
-onready var tiro_sfx = $Tiro
+@onready var acerto_sfx = $Acerto
+@onready var tiro_sfx = $Tiro
 
 
 func _process(delta):
 	# Interpola a posição do sprite para a posição normal. Em conjunto com a levantada que cara tiro
 	# dá no sprite, dá o efeito da arma pulando a cada tiro
-	sprite.position = sprite.position.linear_interpolate(Vector2(0, 0), SPRITE_LERP_WEIGHT)
+	sprite.position = sprite.position.lerp(Vector2(0, 0), SPRITE_LERP_WEIGHT)
 
 
 func _physics_process(delta):
@@ -47,7 +47,7 @@ func _physics_process(delta):
 	var dir = (Vector2(1, 0) * (Input.get_action_strength("direita") - Input.get_action_strength("esquerda")) + Vector2(0, 1) * (Input.get_action_strength("baixo") - Input.get_action_strength("cima"))).normalized()
 	
 	# Interpola a velocidade para a velocidade máxima na direção escolhida
-	velocity = velocity.linear_interpolate(dir * SPEED, ACCEL)
+	velocity = velocity.lerp(dir * SPEED, ACCEL)
 	# delta_s = v * delta_t
 	position += velocity * delta 
 	

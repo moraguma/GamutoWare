@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/footstep.wav-98b66a2406362888fedb042aad34011c.sample"
+type="AudioStreamWAV"
+uid="uid://clupmcd8fp3ug"
+path="res://.godot/imported/footstep.wav-98b66a2406362888fedb042aad34011c.sample"
 
 [deps]
 
 source_file="res://microjogos/moraguma/soulchain/recursos/sounds/sfx/footstep.wav"
-dest_files=[ "res://.import/footstep.wav-98b66a2406362888fedb042aad34011c.sample" ]
+dest_files=["res://.godot/imported/footstep.wav-98b66a2406362888fedb042aad34011c.sample"]
 
 [params]
 

@@ -6,11 +6,11 @@ const GAME_PATH = "res://principal/cenas/Jogo.tscn"
 const MinigameButton = preload("res://principal/cenas/MinigameButton.tscn")
 
 
-onready var minigame_data = load("res://principal/recursos/data/Minigames.gd").new()
+@onready var minigame_data = load("res://principal/recursos/data/Minigames.gd").new()
 
-onready var minigame_button_container = $"../Checkboxes/MinigameButtons/VBoxContainer"
-onready var filter_button_container = $"../Checkboxes/FilterButtons/VBoxContainer"
-onready var menu_button = $"../Menu"
+@onready var minigame_button_container = $"../Checkboxes/MinigameButtons/VBoxContainer"
+@onready var filter_button_container = $"../Checkboxes/FilterButtons/VBoxContainer"
+@onready var menu_button = $"../Menu"
 
 var minigame_buttons
 var filter_buttons
@@ -31,30 +31,30 @@ func _ready():
 		
 		var pos = 0
 		for title in data_dicts[i]:
-			var new_button = MinigameButton.instance()
+			var new_button = MinigameButton.instantiate()
 			new_button.load_minigames(title, data_dicts[i][title])
-			new_button.pressed = settings[i][pos]
+			new_button.button_pressed = settings[i][pos]
 			parents[i].add_child(new_button)
 			
 			if last_button != null:
-				last_button.focus_neighbour_bottom = last_button.get_path_to(new_button)
-				new_button.focus_neighbour_top = new_button.get_path_to(last_button)
+				last_button.focus_neighbor_bottom = last_button.get_path_to(new_button)
+				new_button.focus_neighbor_top = new_button.get_path_to(last_button)
 			
 			last_button = new_button
 			pos += 1
 		
-		last_button.focus_neighbour_bottom = last_button.get_path_to(menu_button)
+		last_button.focus_neighbor_bottom = last_button.get_path_to(menu_button)
 	
 	minigame_buttons = minigame_button_container.get_children()
 	filter_buttons = filter_button_container.get_children()
 	
 	for minigame_button in minigame_buttons:
-		minigame_button.focus_neighbour_right = minigame_button.get_path_to(filter_buttons[0])
+		minigame_button.focus_neighbor_right = minigame_button.get_path_to(filter_buttons[0])
 	for filter_button in filter_buttons:
-		filter_button.focus_neighbour_left = filter_button.get_path_to(minigame_buttons[0])
-		filter_button.focus_neighbour_right = filter_button.get_path_to(self)
-	menu_button.focus_neighbour_top = menu_button.get_path_to(minigame_buttons[-1])
-	focus_neighbour_left = get_path_to(filter_buttons[0])
+		filter_button.focus_neighbor_left = filter_button.get_path_to(minigame_buttons[0])
+		filter_button.focus_neighbor_right = filter_button.get_path_to(self)
+	menu_button.focus_neighbor_top = menu_button.get_path_to(minigame_buttons[-1])
+	focus_neighbor_left = get_path_to(filter_buttons[0])
 	
 	minigame_buttons[0].grab_focus()
 
@@ -64,16 +64,16 @@ func _pressed():
 	
 	var minigame_settings = []
 	for minigame_button in minigame_buttons:
-		minigame_settings.append(minigame_button.pressed)
+		minigame_settings.append(minigame_button.button_pressed)
 		
-		if minigame_button.pressed:
+		if minigame_button.button_pressed:
 			microgame_paths.append_array(minigame_button.get_minigames())
 	Global.set_minigame_settings(minigame_settings)
 	
 	var filter_settings = []
 	for filter_button in filter_buttons:
-		filter_settings.append(filter_button.pressed)
-		if filter_button.pressed:
+		filter_settings.append(filter_button.button_pressed)
+		if filter_button.button_pressed:
 			for minigame in filter_button.get_minigames():
 				microgame_paths.erase(minigame)
 	Global.set_filter_settings(filter_settings)

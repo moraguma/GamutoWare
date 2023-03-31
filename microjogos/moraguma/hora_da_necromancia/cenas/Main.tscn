@@ -1,481 +1,537 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=3 uid="uid://xtfvsj68ofq3"]
 
-[ext_resource path="res://microjogos/moraguma/hora_da_necromancia/recursos/sprites/head.png" type="Texture" id=1]
-[ext_resource path="res://microjogos/moraguma/hora_da_necromancia/recursos/sprites/cloak.png" type="Texture" id=2]
-[ext_resource path="res://microjogos/moraguma/hora_da_necromancia/recursos/sprites/hearteye.png" type="Texture" id=3]
-[ext_resource path="res://microjogos/moraguma/hora_da_necromancia/recursos/sprites/eye.png" type="Texture" id=4]
-[ext_resource path="res://microjogos/moraguma/hora_da_necromancia/recursos/sprites/bg.png" type="Texture" id=5]
-[ext_resource path="res://microjogos/moraguma/hora_da_necromancia/cenas/scripts/Twitcher.gd" type="Script" id=6]
-[ext_resource path="res://microjogos/moraguma/hora_da_necromancia/cenas/scripts/Main.gd" type="Script" id=7]
-[ext_resource path="res://microjogos/moraguma/hora_da_necromancia/recursos/fonts/dum1.ttf" type="DynamicFontData" id=8]
-[ext_resource path="res://microjogos/moraguma/hora_da_necromancia/recursos/sprites/heartparticle.png" type="Texture" id=9]
-[ext_resource path="res://microjogos/moraguma/hora_da_necromancia/recursos/sounds/choose.wav" type="AudioStream" id=10]
-[ext_resource path="res://microjogos/moraguma/hora_da_necromancia/recursos/sounds/win.wav" type="AudioStream" id=11]
-[ext_resource path="res://microjogos/moraguma/hora_da_necromancia/recursos/sounds/lose.wav" type="AudioStream" id=12]
-[ext_resource path="res://microjogos/moraguma/hora_da_necromancia/recursos/sounds/wow.wav" type="AudioStream" id=13]
-[ext_resource path="res://microjogos/moraguma/hora_da_necromancia/recursos/sounds/music.ogg" type="AudioStream" id=14]
+[ext_resource type="Texture2D" uid="uid://cd5huovw57d5r" path="res://microjogos/moraguma/hora_da_necromancia/recursos/sprites/head.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://ctlcgkr7lnhsq" path="res://microjogos/moraguma/hora_da_necromancia/recursos/sprites/cloak.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bsnhh2gvefdda" path="res://microjogos/moraguma/hora_da_necromancia/recursos/sprites/hearteye.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://cl3fmkyy2xxck" path="res://microjogos/moraguma/hora_da_necromancia/recursos/sprites/eye.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://d1y72x6lkwxx3" path="res://microjogos/moraguma/hora_da_necromancia/recursos/sprites/bg.png" id="5"]
+[ext_resource type="Script" path="res://microjogos/moraguma/hora_da_necromancia/cenas/scripts/Twitcher.gd" id="6"]
+[ext_resource type="Script" path="res://microjogos/moraguma/hora_da_necromancia/cenas/scripts/Main.gd" id="7"]
+[ext_resource type="FontFile" uid="uid://chgt5ebxijjmi" path="res://microjogos/moraguma/hora_da_necromancia/recursos/fonts/dum1.ttf" id="8"]
+[ext_resource type="Texture2D" uid="uid://d3c7ip18se6tx" path="res://microjogos/moraguma/hora_da_necromancia/recursos/sprites/heartparticle.png" id="9"]
+[ext_resource type="AudioStream" uid="uid://by03pp6yya3h7" path="res://microjogos/moraguma/hora_da_necromancia/recursos/sounds/choose.wav" id="10"]
+[ext_resource type="AudioStream" uid="uid://cjouuuqlanr6" path="res://microjogos/moraguma/hora_da_necromancia/recursos/sounds/win.wav" id="11"]
+[ext_resource type="AudioStream" uid="uid://b82dbutl8phql" path="res://microjogos/moraguma/hora_da_necromancia/recursos/sounds/lose.wav" id="12"]
+[ext_resource type="AudioStream" uid="uid://bs70lnnsdb2u6" path="res://microjogos/moraguma/hora_da_necromancia/recursos/sounds/wow.wav" id="13"]
+[ext_resource type="AudioStream" uid="uid://dwdidpoyd1a20" path="res://microjogos/moraguma/hora_da_necromancia/recursos/sounds/music.ogg" id="14"]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id="1"]
 length = 0.001
 tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("Abelarde/Head:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"points": PoolRealArray( 127, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
+"handle_modes": PackedInt32Array(),
+"points": PackedFloat32Array(),
+"times": PackedFloat32Array()
 }
 tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("Abelarde/Head:position:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"points": PoolRealArray( -266, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
+"handle_modes": PackedInt32Array(),
+"points": PackedFloat32Array(),
+"times": PackedFloat32Array()
 }
 tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/path = NodePath("Abelarde/Body:position:x")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
 tracks/2/keys = {
-"points": PoolRealArray( 960, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
+"handle_modes": PackedInt32Array(),
+"points": PackedFloat32Array(),
+"times": PackedFloat32Array()
 }
 tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/path = NodePath("Abelarde/Body:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
 tracks/3/keys = {
-"points": PoolRealArray( 519, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
+"handle_modes": PackedInt32Array(),
+"points": PackedFloat32Array(),
+"times": PackedFloat32Array()
 }
 tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/path = NodePath("Abelarde/Head:rotation_degrees")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
 tracks/4/keys = {
-"points": PoolRealArray( -5, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-5, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
 }
 tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/path = NodePath("Abelarde/Body:rotation_degrees")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
 tracks/5/keys = {
-"points": PoolRealArray( -3, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-3, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id="4"]
 resource_name = "hate"
 tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("Abelarde/Body:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"points": PoolRealArray( 960, -0.25, 0, 0.25, 0, 947, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3 )
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(960, -0.25, 0, 0.25, 0, 947, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
 }
 tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("Abelarde/Body:position:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"points": PoolRealArray( 519, -0.25, 0, 0.25, 0, 548, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3 )
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(519, -0.25, 0, 0.25, 0, 548, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
 }
 tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/path = NodePath("Abelarde/Body:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
 tracks/2/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, -3, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3 )
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -3, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
 }
 tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/path = NodePath("Abelarde/Head:position:x")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
 tracks/3/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, -74, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3 )
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -74, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
 }
 tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/path = NodePath("Abelarde/Head:position:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
 tracks/4/keys = {
-"points": PoolRealArray( -24, -0.25, 0, 0.25, 0, 82, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3 )
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-24, -0.25, 0, 0.25, 0, 82, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
 }
 tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/path = NodePath("Abelarde/Head:rotation_degrees")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
 tracks/5/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, -5, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3 )
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -5, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
 }
 tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
 tracks/6/path = NodePath("Abelarde/Head/Eye")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "hide"
-} ]
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"hide"
+}]
 }
 tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
 tracks/7/path = NodePath("Abelarde/Head")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [ 0.5 ],
-"method": "set_trauma"
-} ]
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.5],
+"method": &"set_trauma"
+}]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id="3"]
 resource_name = "idle"
 tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("Abelarde/Head:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
 }
 tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("Abelarde/Head:position:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"points": PoolRealArray( -24, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-24, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
 }
 tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/path = NodePath("Abelarde/Head:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
 tracks/2/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
 }
 tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/path = NodePath("Abelarde/Body:position:x")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
 tracks/3/keys = {
-"points": PoolRealArray( 960, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(960, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
 }
 tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/path = NodePath("Abelarde/Body:position:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
 tracks/4/keys = {
-"points": PoolRealArray( 519, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(519, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
 }
 tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/path = NodePath("Abelarde/Body:rotation_degrees")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
 tracks/5/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id="2"]
 resource_name = "love"
 tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("Abelarde/Head:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 127, -0.1, 88.3595, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3 )
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 127, -0.1, 88.3595, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
 }
 tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("Abelarde/Head:position:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"points": PoolRealArray( -24, -0.25, 0, 0.25, 0, -266, -0.1, -65.0755, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3 )
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-24, -0.25, 0, 0.25, 0, -266, -0.1, -65.0755, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
 }
 tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/path = NodePath("Abelarde/Body:position:x")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
 tracks/2/keys = {
-"points": PoolRealArray( 960, -0.25, 0, 0.25, 0, 915, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3 )
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(960, -0.25, 0, 0.25, 0, 915, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
 }
 tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/path = NodePath("Abelarde/Body:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
 tracks/3/keys = {
-"points": PoolRealArray( 519, -0.25, 0, 0.25, 0, 567, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3 )
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(519, -0.25, 0, 0.25, 0, 567, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
 }
 tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/path = NodePath("Abelarde/Head/Eye")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "hide"
-} ]
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"hide"
+}]
 }
 tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/path = NodePath("Abelarde/Head/HeartEye")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "show"
-} ]
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"show"
+}]
 }
 tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
 tracks/6/path = NodePath("Abelarde/Head:rotation_degrees")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
 tracks/6/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 10, -0.1, 5.8543, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3 )
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 10, -0.1, 5.8543, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
 }
 tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
 tracks/7/path = NodePath("Abelarde/Body:rotation_degrees")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
 tracks/7/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, -5, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.3 )
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -5, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
 }
 tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
 tracks/8/path = NodePath("Abelarde/Head")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [ 0.5 ],
-"method": "set_trauma"
-} ]
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.5],
+"method": &"set_trauma"
+}]
 }
 tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
 tracks/9/path = NodePath("ParticulasCoracao:emitting")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ true ]
+"values": [true]
 }
 
-[sub_resource type="DynamicFont" id=5]
-size = 96
-outline_size = 8
-outline_color = Color( 0.0901961, 0.141176, 0.141176, 1 )
-font_data = ExtResource( 8 )
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q6pnd"]
+_data = {
+"RESET": SubResource("1"),
+"hate": SubResource("4"),
+"idle": SubResource("3"),
+"love": SubResource("2")
+}
 
-[sub_resource type="Theme" id=6]
-default_font = SubResource( 5 )
+[sub_resource type="FontFile" id="5"]
+fallbacks = Array[Font]([ExtResource("8")])
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/64/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/96/0 = Vector2(0, 0)
+cache/0/48/0/ascent = 0.0
+cache/0/48/0/descent = 0.0
+cache/0/48/0/underline_position = 0.0
+cache/0/48/0/underline_thickness = 0.0
+cache/0/48/0/scale = 1.0
+cache/0/48/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/48/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/48/0/kerning_overrides/64/0 = Vector2(0, 0)
+cache/0/48/0/kerning_overrides/96/0 = Vector2(0, 0)
+cache/0/64/0/ascent = 0.0
+cache/0/64/0/descent = 0.0
+cache/0/64/0/underline_position = 0.0
+cache/0/64/0/underline_thickness = 0.0
+cache/0/64/0/scale = 1.0
+cache/0/64/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/64/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/64/0/kerning_overrides/64/0 = Vector2(0, 0)
+cache/0/64/0/kerning_overrides/96/0 = Vector2(0, 0)
+cache/0/96/0/ascent = 0.0
+cache/0/96/0/descent = 0.0
+cache/0/96/0/underline_position = 0.0
+cache/0/96/0/underline_thickness = 0.0
+cache/0/96/0/scale = 1.0
+cache/0/96/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/96/0/kerning_overrides/48/0 = Vector2(0, 0)
+cache/0/96/0/kerning_overrides/64/0 = Vector2(0, 0)
+cache/0/96/0/kerning_overrides/96/0 = Vector2(0, 0)
+
+[sub_resource type="Theme" id="6"]
+default_font = SubResource("5")
+default_font_size = 96
+RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
+RichTextLabel/constants/outline_size = 16
 
 [node name="Necromancia" type="Node2D"]
-script = ExtResource( 7 )
+script = ExtResource("7")
 
-[node name="Camera" type="Camera2D" parent="."]
-position = Vector2( 960, 540 )
-current = true
+[node name="Camera3D" type="Camera2D" parent="."]
+position = Vector2(960, 540)
 
-[node name="BG" type="Sprite" parent="."]
-position = Vector2( 960, 540 )
-texture = ExtResource( 5 )
-__meta__ = {
-"_edit_lock_": true
-}
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("5")
 
 [node name="ParticulasCoracao" type="CPUParticles2D" parent="."]
-position = Vector2( 960, 540 )
+position = Vector2(960, 540)
 emitting = false
 amount = 16
 lifetime = 1.5
-texture = ExtResource( 9 )
-direction = Vector2( 0, -1 )
+texture = ExtResource("9")
+emission_shape = 1
+emission_sphere_radius = 20.0
+direction = Vector2(0, -1)
 spread = 90.0
-gravity = Vector2( 0, -500 )
-initial_velocity = 500.0
-damping = 50.0
+gravity = Vector2(0, -500)
+initial_velocity_min = 200.0
+initial_velocity_max = 250.0
 
 [node name="Abelarde" type="Node2D" parent="."]
 
-[node name="Body" type="Sprite" parent="Abelarde"]
-position = Vector2( 960, 519 )
+[node name="Body" type="Sprite2D" parent="Abelarde"]
+position = Vector2(960, 519)
 rotation = -0.0523599
-scale = Vector2( 1.05, 1.05 )
-texture = ExtResource( 2 )
-script = ExtResource( 6 )
+scale = Vector2(1.05, 1.05)
+texture = ExtResource("2")
+script = ExtResource("6")
 
-[node name="Head" type="Sprite" parent="Abelarde"]
-position = Vector2( 127, -266 )
+[node name="Head" type="Sprite2D" parent="Abelarde"]
+position = Vector2(0, -24)
 rotation = -0.0872665
-texture = ExtResource( 1 )
+texture = ExtResource("1")
 centered = false
-script = ExtResource( 6 )
+script = ExtResource("6")
 
-[node name="Eye" type="Sprite" parent="Abelarde/Head"]
-position = Vector2( 0, -2 )
-texture = ExtResource( 4 )
+[node name="Eye" type="Sprite2D" parent="Abelarde/Head"]
+position = Vector2(0, -2)
+texture = ExtResource("4")
 centered = false
-script = ExtResource( 6 )
+script = ExtResource("6")
 trauma = 0.7
 
-[node name="HeartEye" type="Sprite" parent="Abelarde/Head"]
+[node name="HeartEye" type="Sprite2D" parent="Abelarde/Head"]
 visible = false
-position = Vector2( 0, -2 )
-texture = ExtResource( 3 )
+position = Vector2(0, -2)
+texture = ExtResource("3")
 centered = false
-script = ExtResource( 6 )
+script = ExtResource("6")
 trauma = 1.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/RESET = SubResource( 1 )
-anims/hate = SubResource( 4 )
-anims/idle = SubResource( 3 )
-anims/love = SubResource( 2 )
+libraries = {
+"": SubResource("AnimationLibrary_q6pnd")
+}
 
 [node name="T1" type="RichTextLabel" parent="."]
-margin_left = 240.0
-margin_top = 540.0
-margin_right = 1680.0
-margin_bottom = 645.0
-rect_clip_content = false
-theme = SubResource( 6 )
+clip_contents = false
+offset_left = 240.0
+offset_top = 540.0
+offset_right = 1680.0
+offset_bottom = 645.0
+theme = SubResource("6")
 bbcode_enabled = true
-bbcode_text = "[center][color=aqua][wave]Fala ae ossudo!"
 text = "Fala ae ossudo!"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="T2" type="RichTextLabel" parent="."]
-margin_left = 240.0
-margin_top = 675.0
-margin_right = 1680.0
-margin_bottom = 780.0
-rect_clip_content = false
-theme = SubResource( 6 )
+clip_contents = false
+offset_left = 240.0
+offset_top = 675.0
+offset_right = 1680.0
+offset_bottom = 780.0
+theme = SubResource("6")
 bbcode_enabled = true
-bbcode_text = "[center][color=aqua][wave]Fala ae ossudo!"
 text = "Fala ae ossudo!"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="T3" type="RichTextLabel" parent="."]
-margin_left = 240.0
-margin_top = 810.0
-margin_right = 1680.0
-margin_bottom = 915.0
-rect_clip_content = false
-theme = SubResource( 6 )
+clip_contents = false
+offset_left = 240.0
+offset_top = 810.0
+offset_right = 1680.0
+offset_bottom = 915.0
+theme = SubResource("6")
 bbcode_enabled = true
-bbcode_text = "[center][color=aqua][wave]Fala ae ossudo!"
 text = "Fala ae ossudo!"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="WinSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 11 )
+stream = ExtResource("11")
 
 [node name="LoseSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 12 )
+stream = ExtResource("12")
 
 [node name="ChooseSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 10 )
+stream = ExtResource("10")
 volume_db = -20.0
 
 [node name="WowSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 13 )
+stream = ExtResource("13")
 volume_db = 10.0
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 14 )
+stream = ExtResource("14")

@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 
 const AIR_INTERVAL = 30
@@ -23,8 +23,8 @@ var was_on_floor = false
 var velocity = Vector2(0, 0)
 
 
-onready var animation_player = $AnimationPlayer
-onready var jump_sound = $JumpSound
+@onready var animation_player = $AnimationPlayer
+@onready var jump_sound = $JumpSound
 
 
 
@@ -53,19 +53,22 @@ func _physics_process(delta):
 			velocity += FREE_GRAVITY * delta
 			if is_on_floor():
 				velocity = Vector2(lerp(velocity[0], MOVE_SPEED, ACCELERATION), velocity[1])
-		velocity = move_and_slide(velocity, Vector2(0, -1))
+		set_velocity(velocity)
+		set_up_direction(Vector2(0, -1))
+		move_and_slide()
+		velocity = velocity
 		
 		animation_process()
 		
-		for i in get_slide_count():
+		for i in get_slide_collision_count():
 			var col = get_slide_collision(i)
-			if col.collider.get_collision_layer_bit(1):
+			if col.collider.get_collision_layer_value(1):
 				velocity = col.normal * DEATH_IMPULSE
 				alive = false
 				animation_player.play("death")
 		
 	else:
-		velocity = velocity.linear_interpolate(Vector2(0, 0), DAMPENING)
+		velocity = velocity.lerp(Vector2(0, 0), DAMPENING)
 		position += velocity * delta
 
 

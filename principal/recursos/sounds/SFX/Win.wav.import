@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/Win.wav-d0f2ec9846f7313ee7fcaeba89fd8ff4.sample"
+type="AudioStreamWAV"
+uid="uid://b36begoryac2l"
+path="res://.godot/imported/Win.wav-d0f2ec9846f7313ee7fcaeba89fd8ff4.sample"
 
 [deps]
 
 source_file="res://principal/recursos/sounds/SFX/Win.wav"
-dest_files=[ "res://.import/Win.wav-d0f2ec9846f7313ee7fcaeba89fd8ff4.sample" ]
+dest_files=["res://.godot/imported/Win.wav-d0f2ec9846f7313ee7fcaeba89fd8ff4.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

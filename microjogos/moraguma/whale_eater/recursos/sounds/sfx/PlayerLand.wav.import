@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/PlayerLand.wav-5d36f37a07c3894d553c8e65bd72dc4c.sample"
+type="AudioStreamWAV"
+uid="uid://buoq3th5ltucr"
+path="res://.godot/imported/PlayerLand.wav-5d36f37a07c3894d553c8e65bd72dc4c.sample"
 
 [deps]
 
 source_file="res://microjogos/moraguma/whale_eater/recursos/sounds/sfx/PlayerLand.wav"
-dest_files=[ "res://.import/PlayerLand.wav-5d36f37a07c3894d553c8e65bd72dc4c.sample" ]
+dest_files=["res://.godot/imported/PlayerLand.wav-5d36f37a07c3894d553c8e65bd72dc4c.sample"]
 
 [params]
 

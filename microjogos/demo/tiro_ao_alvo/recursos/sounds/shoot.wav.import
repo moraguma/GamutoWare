@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/shoot.wav-8324227af370963e94553a916e516c84.sample"
+type="AudioStreamWAV"
+uid="uid://r3s65mbfbchm"
+path="res://.godot/imported/shoot.wav-8324227af370963e94553a916e516c84.sample"
 
 [deps]
 
 source_file="res://microjogos/demo/tiro_ao_alvo/recursos/sounds/shoot.wav"
-dest_files=[ "res://.import/shoot.wav-8324227af370963e94553a916e516c84.sample" ]
+dest_files=["res://.godot/imported/shoot.wav-8324227af370963e94553a916e516c84.sample"]
 
 [params]
 

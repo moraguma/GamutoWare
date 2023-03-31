@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://microjogos/godotware/Bola/Main.gd" type="Script" id=1]
-[ext_resource path="res://microjogos/godotware/Bola/grama.png" type="Texture" id=2]
-[ext_resource path="res://microjogos/godotware/Bola/corda.png" type="Texture" id=3]
+[ext_resource path="res://microjogos/godotware/Bola/grama.png" type="Texture2D" id=2]
+[ext_resource path="res://microjogos/godotware/Bola/corda.png" type="Texture2D" id=3]
 [ext_resource path="res://microjogos/godotware/Bola/ar.tscn" type="PackedScene" id=4]
-[ext_resource path="res://microjogos/godotware/Bola/base.png" type="Texture" id=5]
+[ext_resource path="res://microjogos/godotware/Bola/base.png" type="Texture2D" id=5]
 [ext_resource path="res://microjogos/godotware/Bola/bola.tscn" type="PackedScene" id=6]
 
 [node name="Main" type="Node2D"]
@@ -17,13 +17,13 @@ TIMEOUT_WIN = false
 USE_KEYS_HUD = false
 USE_MOUSE_HUD = true
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 
 transform/scale = Vector2( 0.55574, 0.626138 )
 texture = ExtResource( 2 )
 centered = false
 
-[node name="Corda" type="Sprite" parent="."]
+[node name="Corda" type="Sprite2D" parent="."]
 
 transform/pos = Vector2( 388.404, 189.448 )
 transform/scale = Vector2( 0.735621, 0.647716 )
@@ -33,7 +33,7 @@ texture = ExtResource( 3 )
 
 transform/pos = Vector2( 469.558, 97.1703 )
 
-[node name="Base" type="Sprite" parent="."]
+[node name="Base" type="Sprite2D" parent="."]
 
 transform/pos = Vector2( 470.853, 315.512 )
 transform/scale = Vector2( 0.568018, 0.605886 )
@@ -43,7 +43,7 @@ texture = ExtResource( 5 )
 
 transform/pos = Vector2( 56.8184, -2.34735 )
 
-[node name="AnimatedSprite" parent="Bola"]
+[node name="AnimatedSprite2D" parent="Bola"]
 
 transform/pos = Vector2( 185.967, 156.185 )
 

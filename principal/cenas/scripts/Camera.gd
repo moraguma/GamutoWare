@@ -25,16 +25,15 @@ var trauma = 0.0
 var aim_rot = 0
 var base_rotation = 0
 
-onready var noise = OpenSimplexNoise.new()
+@onready var noise = FastNoiseLite.new()
 var noise_y = 0
 
-onready var animation_player = $AnimationPlayer
+@onready var animation_player = $AnimationPlayer
 
 func _ready():
 	randomize()
 	noise.seed = randi()
-	noise.period = 4
-	noise.octaves = 2
+	noise.frequency = 0.25
 
 
 func _process(delta):
@@ -55,11 +54,11 @@ func shake():
 	
 	var amount = pow(trauma, TRAUMA_POWER)
 	
-	noise_y += 1
+	rotation = base_rotation + MAX_ROLL * amount * noise.get_noise_1d(noise_y)
+	offset[0] = MAX_OFFSET[0] * amount * noise.get_noise_1d(noise_y)
+	offset[1] = MAX_OFFSET[1] * amount * noise.get_noise_1d(noise_y + 9999)
 	
-	rotation = base_rotation + MAX_ROLL * amount * noise.get_noise_2d(noise.seed, noise_y)
-	offset[0] = MAX_OFFSET[0] * amount * noise.get_noise_2d(noise.seed * 2, noise_y)
-	offset[1] = MAX_OFFSET[1] * amount * noise.get_noise_2d(noise.seed * 3, noise_y)
+	noise_y += 1
 
 
 func animate_transition():

@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/aim.wav-316b447abac0f7a3d2189f90dcedf537.sample"
+type="AudioStreamWAV"
+uid="uid://c3sd64ekm814b"
+path="res://.godot/imported/aim.wav-316b447abac0f7a3d2189f90dcedf537.sample"
 
 [deps]
 
 source_file="res://microjogos/moraguma/deerskull/recursos/sounds/sfx/aim.wav"
-dest_files=[ "res://.import/aim.wav-316b447abac0f7a3d2189f90dcedf537.sample" ]
+dest_files=["res://.godot/imported/aim.wav-316b447abac0f7a3d2189f90dcedf537.sample"]
 
 [params]
 

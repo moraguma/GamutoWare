@@ -2,58 +2,58 @@
 
 [ext_resource path="res://minigames/Gandhi_Simulator/Main.gd" type="Script" id=1]
 [ext_resource path="res://minigames/Gandhi_Simulator/Gandhi-simulator_original/Soldado.gd" type="Script" id=2]
-[ext_resource path="res://minigames/Gandhi_Simulator/Gandhi-simulator_original/Personagens/Soldado1.png" type="Texture" id=3]
-[ext_resource path="res://minigames/Gandhi_Simulator/Gandhi-simulator_original/Personagens/Churchill.png" type="Texture" id=4]
+[ext_resource path="res://minigames/Gandhi_Simulator/Gandhi-simulator_original/Personagens/Soldado1.png" type="Texture2D" id=3]
+[ext_resource path="res://minigames/Gandhi_Simulator/Gandhi-simulator_original/Personagens/Churchill.png" type="Texture2D" id=4]
 [ext_resource path="res://minigames/Gandhi_Simulator/Gandhi-simulator_original/Gandhi.gd" type="Script" id=5]
-[ext_resource path="res://minigames/Gandhi_Simulator/Gandhi-simulator_original/Personagens/Gandhi1.png" type="Texture" id=6]
+[ext_resource path="res://minigames/Gandhi_Simulator/Gandhi-simulator_original/Personagens/Gandhi1.png" type="Texture2D" id=6]
 [ext_resource path="res://minigames/Gandhi_Simulator/Gandhi-simulator_original/Pontuacoes.gd" type="Script" id=7]
-[ext_resource path="res://minigames/Gandhi_Simulator/india_background.jpg" type="Texture" id=8]
+[ext_resource path="res://minigames/Gandhi_Simulator/india_background.jpg" type="Texture2D" id=8]
 
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 12.7517, 37.1809 )
+size = Vector2( 12.7517, 37.1809 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 12.7517, 37.1809 )
+size = Vector2( 12.7517, 37.1809 )
 
 [sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
-extents = Vector2( 26.2591, 49.5634 )
+size = Vector2( 26.2591, 49.5634 )
 
 [sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
-extents = Vector2( 16.5363, 24.098 )
+size = Vector2( 16.5363, 24.098 )
 
 [sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
-extents = Vector2( 19.7559, 26.4591 )
+size = Vector2( 19.7559, 26.4591 )
 
 [sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
-extents = Vector2( 365.048, 10 )
+size = Vector2( 365.048, 10 )
 
 [sub_resource type="RectangleShape2D" id=7]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 210.465 )
+size = Vector2( 10, 210.465 )
 
 [sub_resource type="RectangleShape2D" id=8]
 
 custom_solver_bias = 0.0
-extents = Vector2( 334.288, 10 )
+size = Vector2( 334.288, 10 )
 
 [sub_resource type="RectangleShape2D" id=9]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 202.29 )
+size = Vector2( 10, 202.29 )
 
 [node name="Main" type="Node2D"]
 
@@ -67,7 +67,7 @@ USE_MOUSE_HUD = false
 
 [node name="Node2D" type="Node2D" parent="."]
 
-[node name="Soldado" type="KinematicBody2D" parent="Node2D"]
+[node name="Soldado" type="CharacterBody2D" parent="Node2D"]
 
 editor/display_folded = true
 transform/pos = Vector2( 125.657, 55.6451 )
@@ -80,7 +80,7 @@ collision/mask = 1
 collision/margin = 0.08
 script/script = ExtResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="Node2D/Soldado"]
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Soldado"]
 
 transform/pos = Vector2( 2.79195, 21.7276 )
 transform/scale = Vector2( 0.0796268, 0.0647667 )
@@ -93,7 +93,7 @@ shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 
-[node name="Soldado1" type="KinematicBody2D" parent="Node2D"]
+[node name="Soldado1" type="CharacterBody2D" parent="Node2D"]
 
 editor/display_folded = true
 transform/pos = Vector2( 529.731, 57.8503 )
@@ -106,7 +106,7 @@ collision/mask = 1
 collision/margin = 0.08
 script/script = ExtResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="Node2D/Soldado1"]
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Soldado1"]
 
 transform/pos = Vector2( 2.79195, 21.7276 )
 transform/scale = Vector2( 0.0796268, 0.0647667 )
@@ -119,7 +119,7 @@ shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 
-[node name="Soldado2" type="KinematicBody2D" parent="Node2D"]
+[node name="Soldado2" type="CharacterBody2D" parent="Node2D"]
 
 editor/display_folded = true
 transform/pos = Vector2( 312.193, 29.798 )
@@ -132,7 +132,7 @@ collision/mask = 1
 collision/margin = 0.08
 script/script = ExtResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="Node2D/Soldado2"]
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Soldado2"]
 
 transform/pos = Vector2( 2.79195, 21.7276 )
 transform/scale = Vector2( 0.0796268, 0.0647667 )
@@ -145,7 +145,7 @@ shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 
-[node name="Soldado3" type="KinematicBody2D" parent="Node2D"]
+[node name="Soldado3" type="CharacterBody2D" parent="Node2D"]
 
 editor/display_folded = true
 transform/pos = Vector2( 140.814, 225.673 )
@@ -158,7 +158,7 @@ collision/mask = 1
 collision/margin = 0.08
 script/script = ExtResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="Node2D/Soldado3"]
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Soldado3"]
 
 transform/pos = Vector2( 2.79195, 21.7276 )
 transform/scale = Vector2( 0.0796268, 0.0647667 )
@@ -171,7 +171,7 @@ shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 
-[node name="Soldado4" type="KinematicBody2D" parent="Node2D"]
+[node name="Soldado4" type="CharacterBody2D" parent="Node2D"]
 
 editor/display_folded = true
 transform/pos = Vector2( 469.124, 221.812 )
@@ -184,7 +184,7 @@ collision/mask = 1
 collision/margin = 0.08
 script/script = ExtResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="Node2D/Soldado4"]
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Soldado4"]
 
 transform/pos = Vector2( 2.79195, 21.7276 )
 transform/scale = Vector2( 0.0796268, 0.0647667 )
@@ -197,7 +197,7 @@ shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 
-[node name="Churchill" type="KinematicBody2D" parent="Node2D"]
+[node name="Churchill" type="CharacterBody2D" parent="Node2D"]
 
 editor/display_folded = true
 transform/pos = Vector2( 307.092, 132.635 )
@@ -210,7 +210,7 @@ collision/mask = 1
 collision/margin = 0.08
 script/script = ExtResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="Node2D/Churchill"]
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Churchill"]
 
 transform/pos = Vector2( 14.5283, 36.6 )
 transform/scale = Vector2( 0.112228, 0.0880048 )
@@ -223,7 +223,7 @@ shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 
-[node name="Gandhi" type="KinematicBody2D" parent="Node2D"]
+[node name="Gandhi" type="CharacterBody2D" parent="Node2D"]
 
 transform/pos = Vector2( 319.886, 340.748 )
 input/pickable = false
@@ -235,7 +235,7 @@ collision/mask = 1
 collision/margin = 0.08
 script/script = ExtResource( 5 )
 
-[node name="Sprite" type="Sprite" parent="Node2D/Gandhi"]
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Gandhi"]
 
 transform/pos = Vector2( 1.55856, 11.866 )
 transform/scale = Vector2( 0.0676009, 0.0592323 )
@@ -254,7 +254,7 @@ input/pickable = true
 shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 3.00494, 19.5321 )
 shapes/0/trigger = false
-gravity_vec = Vector2( 0, 1 )
+gravity_direction = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0

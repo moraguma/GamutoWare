@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/nope.wav-49f816a55537b39d2672170f8394f238.sample"
+type="AudioStreamWAV"
+uid="uid://cl4mtgihtemco"
+path="res://.godot/imported/nope.wav-49f816a55537b39d2672170f8394f238.sample"
 
 [deps]
 
 source_file="res://microjogos/moraguma/candle prick/recursos/sounds/nope.wav"
-dest_files=[ "res://.import/nope.wav-49f816a55537b39d2672170f8394f238.sample" ]
+dest_files=["res://.godot/imported/nope.wav-49f816a55537b39d2672170f8394f238.sample"]
 
 [params]
 

@@ -1,4 +1,4 @@
-extends Sprite
+extends Sprite2D
 
 const DROP_SPEED = 800
 const DROP_SPREAD = PI/6
@@ -26,5 +26,5 @@ func _process(delta):
 func drop():
 	dropping = true
 	
-	velocity = Vector2(0, -1).rotated(rand_range(-DROP_SPREAD, DROP_SPREAD)) * DROP_SPEED
-	spin_vel = rand_range(SPIN_VEL_MIN, SPIN_VEL_MAX)
+	velocity = Vector2(0, -1).rotated(randf_range(-DROP_SPREAD, DROP_SPREAD)) * DROP_SPEED
+	spin_vel = randf_range(SPIN_VEL_MIN, SPIN_VEL_MAX)

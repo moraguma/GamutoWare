@@ -1,4 +1,4 @@
-extends Sprite
+extends Sprite2D
 
 
 const ROT_SPEED = PI/12

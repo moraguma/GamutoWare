@@ -12,7 +12,7 @@ const SHOOTING_DELAY = 2.5 # set shooting period
 func _ready():
 	set_process(true) # enable _process
 	
-	yield(global.create_timer(1), 'timeout') # wait 1s until start shooting
+	await global.create_timer(1).timeout # wait 1s until start shooting
 	shoot() # calls shoot()
 
 # called every frame
@@ -30,7 +30,7 @@ func _process(delta):
 # keeps shooting until it get's destroyed
 func shoot():
 	while true: # infinite loop
-		var laser = scn_laser.instance() # instanciate enemy's laser
+		var laser = scn_laser.instantiate() # instanciate enemy's laser
 		laser.set_pos(get_node('Cannon').get_global_pos()) # set laser position to enemy's Cannon node
 		global.main_node.add_child(laser) # add its laser to main node
 		
@@ -53,4 +53,4 @@ func shoot():
 				laser.set_rotd(0)
 			laser.speed.x = 0
 		
-		yield(global.create_timer(SHOOTING_DELAY), 'timeout') # shooting delay
+		await global.create_timer(SHOOTING_DELAY).timeout # shooting delay

@@ -24,15 +24,15 @@ func shake(new_magnitude, lifetime):
 	while timeleft > 0:
 		# set position to a random value within the magnitude
 		var pos = Vector2()
-		pos.x = rand_range(-magnitude, magnitude)
-		pos.y = rand_range(-magnitude, magnitude)
+		pos.x = randf_range(-magnitude, magnitude)
+		pos.y = randf_range(-magnitude, magnitude)
 		set_pos(pos)
 		
 		# decrease timeleft
 		timeleft -= get_process_delta_time()
 		
 		# wait to the next frame
-		yield(get_tree(), 'idle_frame')
+		await get_tree().idle_frame
 	
 	# reset magnitude to 0
 	magnitude = 0

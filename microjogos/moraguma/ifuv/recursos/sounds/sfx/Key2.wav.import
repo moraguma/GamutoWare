@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/Key2.wav-bab49addd82ac9cf47ba8edbf2348b42.sample"
+type="AudioStreamWAV"
+uid="uid://bygng5g5eqvtm"
+path="res://.godot/imported/Key2.wav-bab49addd82ac9cf47ba8edbf2348b42.sample"
 
 [deps]
 
 source_file="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/Key2.wav"
-dest_files=[ "res://.import/Key2.wav-bab49addd82ac9cf47ba8edbf2348b42.sample" ]
+dest_files=["res://.godot/imported/Key2.wav-bab49addd82ac9cf47ba8edbf2348b42.sample"]
 
 [params]
 

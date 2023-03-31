@@ -26,7 +26,7 @@ func _ready():
 	# Cria um total de [TOTAL_TARGETS] alvos
 	
 	for i in range(TOTAL_TARGETS):
-		var new_target = Target.instance()										# Instancia os alvos
+		var new_target = Target.instantiate()										# Instancia os alvos
 		add_child(new_target)													# Adiciona os alvos na cena
 	
 	$Musica.play()																# Toca a música
@@ -36,12 +36,12 @@ func _ready():
 func register_hit():
 	hits += 1
 	if hits >= TOTAL_TARGETS:
-		win()
+		register_win()
 
 
-func win():
+func register_win():
 	emit_signal("win")
 
-func lose():
+func register_lose():
 	emit_signal("lose")
 

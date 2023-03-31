@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/grunt2.wav-dca057e48792b80401d278f2fa5a16ac.sample"
+type="AudioStreamWAV"
+uid="uid://ntvyu3ls4e3u"
+path="res://.godot/imported/grunt2.wav-dca057e48792b80401d278f2fa5a16ac.sample"
 
 [deps]
 
 source_file="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/grunt2.wav"
-dest_files=[ "res://.import/grunt2.wav-dca057e48792b80401d278f2fa5a16ac.sample" ]
+dest_files=["res://.godot/imported/grunt2.wav-dca057e48792b80401d278f2fa5a16ac.sample"]
 
 [params]
 

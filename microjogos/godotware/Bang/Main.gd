@@ -16,21 +16,21 @@ const MAX_WAIT_TIME = 5
 # Feito por Arthur Lucas da Silva Nogueira
 # feat. Henrique Finger Zimerman
 
-var ready = false
+var set = false
 
 var status = false
 
 var end = false
 
 
-onready var shoot_timer = $ShootTimer
-onready var wait_timer = $WaitTimer
-onready var end_timer = $EndTimer
-onready var animated_sprite = $AnimatedSprite
+@onready var shoot_timer = $ShootTimer
+@onready var wait_timer = $WaitTimer
+@onready var end_timer = $EndTimer
+@onready var animated_sprite = $AnimatedSprite2D
 
-onready var click = $Click
-onready var music = $Music
-onready var shoot = $Shoot
+@onready var click = $Click
+@onready var music = $Music
+@onready var shoot = $Shoot
 
 
 func _ready():
@@ -41,9 +41,9 @@ func _ready():
 			NotificationCenter.notify("GET READY...")
 	
 	shoot_timer.set_wait_time(SHOOT_TIME)
-	wait_timer.set_wait_time(rand_range(MIN_WAIT_TIME, MAX_WAIT_TIME))
-	shoot_timer.connect("timeout",self,"_on_shoot_timeout")
-	wait_timer.connect("timeout",self,"_on_wait_timeout")
+	wait_timer.set_wait_time(randf_range(MIN_WAIT_TIME, MAX_WAIT_TIME))
+	shoot_timer.connect("timeout",Callable(self,"_on_shoot_timeout"))
+	wait_timer.connect("timeout",Callable(self,"_on_wait_timeout"))
 	wait_timer.start()
 	
 	music.play()
@@ -58,7 +58,7 @@ func _input(event):
 		
 		shoot.play()
 		
-		if ready:
+		if set:
 			animated_sprite.set_animation("win")
 			emit_signal("win")
 		else:
@@ -67,7 +67,7 @@ func _input(event):
 
 
 func _on_wait_timeout():
-	ready = true
+	set = true
 	
 	animated_sprite.set_animation("ready")
 	click.play()
@@ -76,7 +76,7 @@ func _on_wait_timeout():
 
 
 func _on_shoot_timeout():
-	ready = false
+	set = false
 	end = true
 	
 	animated_sprite.set_animation("bang")

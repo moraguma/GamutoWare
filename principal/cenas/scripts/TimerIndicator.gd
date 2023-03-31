@@ -10,9 +10,9 @@ var aim_pos = DEACTIVATED_POSITION
 var active = false
 
 
-onready var main = get_parent()
-onready var timer = main.get_node("Timer")
-onready var bar = $TimerProgressBar
+@onready var main = get_parent()
+@onready var timer = main.get_node("Timer")
+@onready var bar = $TimerProgressBar
 
 
 func _process(delta):

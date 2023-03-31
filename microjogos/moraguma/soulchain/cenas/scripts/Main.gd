@@ -15,9 +15,9 @@ const MAX_GOAL_MOVEMENT_2 = Vector2(16, 16)
 const MAX_PLAYER_VARIATION = Vector2(-16, 0)
 
 
-onready var player = $Player
-onready var hook = $Hook
-onready var goal = $Goal
+@onready var player = $Player
+@onready var hook = $Hook
+@onready var goal = $Goal
 
 
 func _ready():

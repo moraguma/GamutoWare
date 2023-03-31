@@ -20,14 +20,14 @@ func _process(delta):
 
 # function to be called when the curtains are fully opened
 func start():
-	.start()
+	super.start()
 	
 	# start _process
 	set_process(true)
 	
 	# spawn nodes
 	get_node('Ship').set_process(true)
-	get_node('Camera').make_current()
+	get_node('Camera3D').make_current()
 	
 	# play background music
 	get_node('Audio_Player').get_node('Stream_Player').play()
@@ -35,7 +35,7 @@ func start():
 	# spawn more/less enemies based on game's difficulty
 	for i in range(difficulty):
 		get_node('Spawner_Enemy').spawn()
-		yield(global.create_timer(0.4), 'timeout')
+		await global.create_timer(0.4).timeout
 
 # function to be called on winning/losing
 func stop():
@@ -51,4 +51,4 @@ func stop():
 			get_child(i).get_name() != 'Explosion':
 				get_child(i).queue_free()
 
-	.stop()
+	super.stop()

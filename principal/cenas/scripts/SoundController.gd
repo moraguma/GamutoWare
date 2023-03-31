@@ -1,8 +1,8 @@
 extends Node
 
 
-const OFF_DB = -80
-const ON_DB = 0
+const OFF_DB = -80.0
+const ON_DB = 0.0
 
 const MENU_IDX = 1
 const GAME_IDX = 2
@@ -10,14 +10,14 @@ const GAME_IDX = 2
 const DECAY_ACCEL = 0.05
 
 
-var menu_aim_db = -80
-var game_aim_db = -80
+var menu_aim_db = -80.0
+var game_aim_db = -80.0
 
 
-onready var menu = $Music/Menu
-onready var intro = $Music/GameIntro
-onready var loop = $Music/GameLoop
-onready var sfx = {"click": $Node/Click, "damage": $Node/Damage, "throw": $Node/Throw, "win": $Node/Win}
+@onready var menu = $Music/Menu
+@onready var intro = $Music/GameIntro
+@onready var loop = $Music/GameLoop
+@onready var sfx = {"click": $Node/Click, "damage": $Node/Damage, "throw": $Node/Throw, "win": $Node/Win}
 
 
 func _process(delta):

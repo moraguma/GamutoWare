@@ -1,508 +1,546 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=37 format=3 uid="uid://cqphd8ut3m756"]
 
-[ext_resource path="res://microjogos/2022S1/gamuturai/cenas/scripts/main.gd" type="Script" id=1]
-[ext_resource path="res://microjogos/2022S1/gamuturai/recursos/Barrinha.png" type="Texture" id=2]
-[ext_resource path="res://microjogos/2022S1/gamuturai/recursos/New Piskel-1.png.png" type="Texture" id=3]
-[ext_resource path="res://microjogos/2022S1/gamuturai/cenas/Espada.gd" type="Script" id=4]
-[ext_resource path="res://microjogos/2022S1/gamuturai/recursos/gamutorai-todos.png" type="Texture" id=5]
-[ext_resource path="res://microjogos/2022S1/gamuturai/cenas/Gamuturai.gd" type="Script" id=6]
-[ext_resource path="res://microjogos/2022S1/gamuturai/recursos/FGUNDAO2.png" type="Texture" id=7]
-[ext_resource path="res://microjogos/2022S1/gamuturai/recursos/folha.png" type="Texture" id=8]
-[ext_resource path="res://microjogos/2022S1/gamuturai/recursos/folha(amongus).png" type="Texture" id=9]
-[ext_resource path="res://microjogos/2022S1/gamuturai/recursos/BambuDoBalocobaco.png" type="Texture" id=10]
-[ext_resource path="res://microjogos/2022S1/gamuturai/recursos/Panda.png" type="Texture" id=11]
-[ext_resource path="res://microjogos/2022S1/gamuturai/cenas/ShakeCamera2D.gd" type="Script" id=12]
-[ext_resource path="res://microjogos/2022S1/gamuturai/cenas/PandaDoBalacobaco.gd" type="Script" id=13]
-[ext_resource path="res://microjogos/2022S1/gamuturai/sons/morte.wav" type="AudioStream" id=14]
-[ext_resource path="res://microjogos/2022S1/gamuturai/sons/slash.wav" type="AudioStream" id=15]
-[ext_resource path="res://microjogos/2022S1/gamuturai/sons/panda.wav" type="AudioStream" id=16]
-[ext_resource path="res://microjogos/2022S1/gamuturai/sons/Musica.ogg" type="AudioStream" id=17]
+[ext_resource type="Script" path="res://microjogos/2022S1/gamuturai/cenas/scripts/main.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://c6nfyxsgdqr8c" path="res://microjogos/2022S1/gamuturai/recursos/Barrinha.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://ca0ywq7o242hd" path="res://microjogos/2022S1/gamuturai/recursos/FGUNDAO2.png" id="3_frve6"]
+[ext_resource type="Script" path="res://microjogos/2022S1/gamuturai/cenas/Espada.gd" id="4"]
+[ext_resource type="Texture2D" uid="uid://boomx1qux1pq7" path="res://microjogos/2022S1/gamuturai/recursos/gamutorai-todos.png" id="5"]
+[ext_resource type="Script" path="res://microjogos/2022S1/gamuturai/cenas/Gamuturai.gd" id="6"]
+[ext_resource type="Texture2D" uid="uid://bgy2kbi5l5ni8" path="res://microjogos/2022S1/gamuturai/recursos/New Piskel.png" id="7_1p18t"]
+[ext_resource type="Texture2D" uid="uid://bmulo4yi83sa" path="res://microjogos/2022S1/gamuturai/recursos/folha.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://oaay72pklbd6" path="res://microjogos/2022S1/gamuturai/recursos/BambuDoBalocobaco.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://dtitgbci3fhpl" path="res://microjogos/2022S1/gamuturai/recursos/Panda.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://5m6yp3avumvy" path="res://microjogos/2022S1/gamuturai/recursos/folha(amongus)(1).png" id="11_7ysg3"]
+[ext_resource type="Script" path="res://microjogos/2022S1/gamuturai/cenas/ShakeCamera2D.gd" id="12"]
+[ext_resource type="Script" path="res://microjogos/2022S1/gamuturai/cenas/PandaDoBalacobaco.gd" id="13"]
+[ext_resource type="AudioStream" uid="uid://dvqb0rqjq6vt8" path="res://microjogos/2022S1/gamuturai/sons/morte.wav" id="14"]
+[ext_resource type="AudioStream" uid="uid://0453uyrhkp48" path="res://microjogos/2022S1/gamuturai/sons/slash.wav" id="15"]
+[ext_resource type="AudioStream" uid="uid://cm70fysg5nvag" path="res://microjogos/2022S1/gamuturai/sons/panda.wav" id="16"]
+[ext_resource type="AudioStream" uid="uid://chjalloa3y17r" path="res://microjogos/2022S1/gamuturai/sons/Musica.ogg" id="17"]
 
-[sub_resource type="AtlasTexture" id=35]
-flags = 4
-atlas = ExtResource( 7 )
-region = Rect2( 0, 0, 3200, 1800 )
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmpcp"]
+atlas = ExtResource("3_frve6")
+region = Rect2(0, 0, 3200, 1800)
 
-[sub_resource type="AtlasTexture" id=36]
-flags = 4
-atlas = ExtResource( 7 )
-region = Rect2( 3200, 0, 3200, 1800 )
+[sub_resource type="AtlasTexture" id="AtlasTexture_f44e3"]
+atlas = ExtResource("3_frve6")
+region = Rect2(3200, 0, 3200, 1800)
 
-[sub_resource type="AtlasTexture" id=37]
-flags = 4
-atlas = ExtResource( 7 )
-region = Rect2( 0, 1800, 3200, 1800 )
+[sub_resource type="AtlasTexture" id="AtlasTexture_b7l4d"]
+atlas = ExtResource("3_frve6")
+region = Rect2(0, 1800, 3200, 1800)
 
-[sub_resource type="AtlasTexture" id=38]
-flags = 4
-atlas = ExtResource( 7 )
-region = Rect2( 3200, 1800, 3200, 1800 )
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqaow"]
+atlas = ExtResource("3_frve6")
+region = Rect2(3200, 1800, 3200, 1800)
 
-[sub_resource type="AtlasTexture" id=39]
-flags = 4
-atlas = ExtResource( 7 )
-region = Rect2( 0, 3600, 3200, 1800 )
+[sub_resource type="AtlasTexture" id="AtlasTexture_nb1xd"]
+atlas = ExtResource("3_frve6")
+region = Rect2(0, 3600, 3200, 1800)
 
-[sub_resource type="SpriteFrames" id=40]
-animations = [ {
-"frames": [ SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ) ],
+[sub_resource type="SpriteFrames" id="SpriteFrames_ggg6m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmpcp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f44e3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b7l4d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqaow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nb1xd")
+}],
 "loop": true,
-"name": "default",
+"name": &"default",
 "speed": 5.0
-} ]
+}]
 
-[sub_resource type="Animation" id=49]
+[sub_resource type="Animation" id="Animation_ij1mx"]
 resource_name = "Iddle"
 length = 0.9
-loop = true
+loop_mode = 1
 step = 0.15
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.15, 0.3, 0.45, 0.6, 0.75 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45, 0.6, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ 10, 11, 12, 13, 14, 15 ]
+"values": [10, 11, 12, 13, 14, 15]
 }
 
-[sub_resource type="Animation" id=50]
+[sub_resource type="Animation" id="Animation_3dxoi"]
 length = 0.001
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0 ]
-}
-
-[sub_resource type="Animation" id=53]
-resource_name = "half"
-length = 0.8
-step = 0.04
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.04, 0.12, 0.16, 0.2, 0.24, 0.28, 0.6, 0.64, 0.68, 0.72, 0.76 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ 0, 1, 2, 3, 4, 8, 9, 8, 3, 2, 1, 0 ]
+"values": [0]
 }
 tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath(".:position:x")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"points": PoolRealArray( 417, -0.25, 0, 0.25, 0, 397, -0.25, 0, 0.25, 0, 1597, -0.25, 0, 0.25, 0, 1497, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.04, 0.24, 0.28 )
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(417, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
 }
 tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/path = NodePath(".:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
 tracks/2/keys = {
-"points": PoolRealArray(  ),
-"times": PoolRealArray(  )
-}
-tracks/3/type = "method"
-tracks/3/path = NodePath("../ShakeCamera2D")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0.36 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [ 0.5 ],
-"method": "add_trauma"
-} ]
-}
-tracks/4/type = "method"
-tracks/4/path = NodePath("../BambuDoBalocobaco")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0.36 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "drop"
-} ]
-}
-tracks/5/type = "method"
-tracks/5/path = NodePath("../Corte")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0.36 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [ 0.0 ],
-"method": "play"
-} ]
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(770, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
 }
 
-[sub_resource type="Animation" id=52]
+[sub_resource type="Animation" id="Animation_s7te6"]
 resource_name = "lose"
 length = 0.5
 step = 0.04
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.04, 0.12, 0.16, 0.2, 0.24, 0.28 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.04, 0.12, 0.16, 0.2, 0.24, 0.28),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ 0, 1, 2, 3, 4, 8, 9 ]
+"values": [0, 1, 2, 3, 4, 8, 9]
 }
 tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath(".:position:x")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"points": PoolRealArray( 417, -0.25, 0, 0.25, 0, 397, -0.25, 0, 0.25, 0, 1597, -0.25, 0, 0.25, 0, 1497, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.04, 0.24, 0.28 )
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(417, -0.25, 0, 0.25, 0, 397, -0.25, 0, 0.25, 0, 1597, -0.25, 0, 0.25, 0, 1497, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.04, 0.24, 0.28)
 }
 tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/path = NodePath(".:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
 tracks/2/keys = {
-"points": PoolRealArray(  ),
-"times": PoolRealArray(  )
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(770, -0.25, 0, 0.25, 0, 770, -0.25, 0, 0.25, 0, 770, -0.25, 0, 0.25, 0, 770, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.04, 0.24, 0.28)
 }
 tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/path = NodePath("../ShakeCamera2D")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0.36 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [ 0.5 ],
-"method": "add_trauma"
-} ]
+"times": PackedFloat32Array(0.36),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.5],
+"method": &"add_trauma"
+}]
 }
 tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/path = NodePath(".")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0.36 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "drop"
-} ]
+"times": PackedFloat32Array(0.36),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"drop"
+}]
 }
 tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/path = NodePath("../Morte")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0.36 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [ 0.0 ],
-"method": "play"
-} ]
+"times": PackedFloat32Array(0.36),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
 }
 
-[sub_resource type="Animation" id=54]
+[sub_resource type="Animation" id="Animation_enu8l"]
+resource_name = "half"
+length = 0.8
+step = 0.04
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.04, 0.12, 0.16, 0.2, 0.24, 0.28, 0.6, 0.64, 0.68, 0.72, 0.76),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 8, 9, 8, 3, 2, 1, 0]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(417, -0.25, 0, 0.25, 0, 397, -0.25, 0, 0.25, 0, 1597, -0.25, 0, 0.25, 0, 1497, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.04, 0.24, 0.28)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(770, -0.25, 0, 0.25, 0, 770, -0.25, 0, 0.25, 0, 770, -0.25, 0, 0.25, 0, 770, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.04, 0.24, 0.28)
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../ShakeCamera2D")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.36),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.5],
+"method": &"add_trauma"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../BambuDoBalacobaco")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.36),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"drop"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Corte")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.36),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_em2wn"]
 resource_name = "win"
 length = 0.8
 step = 0.04
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.04, 0.12, 0.16, 0.2, 0.24, 0.28, 0.6, 0.64, 0.68, 0.72, 0.76 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.04, 0.12, 0.16, 0.2, 0.24, 0.28, 0.6, 0.64, 0.68, 0.72, 0.76),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ 0, 1, 2, 3, 4, 8, 9, 8, 3, 2, 1, 0 ]
+"values": [0, 1, 2, 3, 4, 8, 9, 8, 3, 2, 1, 0]
 }
 tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath(".:position:x")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"points": PoolRealArray( 417, -0.25, 0, 0.25, 0, 397, -0.25, 0, 0.25, 0, 1597, -0.25, 0, 0.25, 0, 1497, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.04, 0.24, 0.28 )
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(417, -0.25, 0, 0.25, 0, 397, -0.25, 0, 0.25, 0, 1597, -0.25, 0, 0.25, 0, 1497, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.04, 0.24, 0.28)
 }
 tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/path = NodePath(".:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
 tracks/2/keys = {
-"points": PoolRealArray(  ),
-"times": PoolRealArray(  )
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(770, -0.25, 0, 0.25, 0, 770, -0.25, 0, 0.25, 0, 770, -0.25, 0, 0.25, 0, 770, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.04, 0.24, 0.28)
 }
 tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/path = NodePath("../ShakeCamera2D")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0.36 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [ 0.5 ],
-"method": "add_trauma"
-} ]
+"times": PackedFloat32Array(0.36),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.5],
+"method": &"add_trauma"
+}]
 }
 tracks/4/type = "method"
-tracks/4/path = NodePath("../BambuDoBalocobaco")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
+tracks/4/path = NodePath("../BambuDoBalacobaco")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PoolRealArray( 0.36 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "drop"
-} ]
+"times": PackedFloat32Array(0.36),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"drop"
+}]
 }
 tracks/5/type = "method"
-tracks/5/path = NodePath("../PandaDoBalacobaco")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
+tracks/5/path = NodePath("../Corte")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PoolRealArray( 0.36 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "drop"
-} ]
+"times": PackedFloat32Array(0.36),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
 }
 tracks/6/type = "method"
-tracks/6/path = NodePath("../Corte")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
+tracks/6/path = NodePath("../PandaDoBalacobaco")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PoolRealArray( 0.36 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [ 0.0 ],
-"method": "play"
-} ]
+"times": PackedFloat32Array(0.36),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"drop"
+}]
 }
 tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
 tracks/7/path = NodePath("../Panda")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0.8 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [ 0.0 ],
-"method": "play"
-} ]
+"times": PackedFloat32Array(0.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
 }
 
-[sub_resource type="Shader" id=32]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k7gop"]
+_data = {
+"Iddle": SubResource("Animation_ij1mx"),
+"RESET": SubResource("Animation_3dxoi"),
+"half": SubResource("Animation_enu8l"),
+"lose": SubResource("Animation_s7te6"),
+"win": SubResource("Animation_em2wn")
+}
 
-[sub_resource type="ShaderMaterial" id=33]
-shader = SubResource( 32 )
+[sub_resource type="AtlasTexture" id="AtlasTexture_bp15f"]
+atlas = ExtResource("11")
+region = Rect2(0, 0, 4096, 4096)
 
-[sub_resource type="Curve" id=34]
-min_value = -360.0
-max_value = 360.0
-_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 360 ), -2356.11, 0.0, 0, 0 ]
+[sub_resource type="AtlasTexture" id="AtlasTexture_6pna7"]
+atlas = ExtResource("11")
+region = Rect2(4096, 0, 4096, 4096)
 
-[sub_resource type="AtlasTexture" id=41]
-flags = 4
-atlas = ExtResource( 11 )
-region = Rect2( 0, 0, 4096, 4096 )
+[sub_resource type="AtlasTexture" id="AtlasTexture_6xf05"]
+atlas = ExtResource("11")
+region = Rect2(0, 4096, 4096, 4096)
 
-[sub_resource type="AtlasTexture" id=42]
-flags = 4
-atlas = ExtResource( 11 )
-region = Rect2( 4096, 0, 4096, 4096 )
+[sub_resource type="AtlasTexture" id="AtlasTexture_ms83d"]
+atlas = ExtResource("11")
+region = Rect2(4096, 4096, 4096, 4096)
 
-[sub_resource type="AtlasTexture" id=43]
-flags = 4
-atlas = ExtResource( 11 )
-region = Rect2( 0, 4096, 4096, 4096 )
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4fs4"]
+atlas = ExtResource("11")
+region = Rect2(0, 8192, 4096, 4096)
 
-[sub_resource type="AtlasTexture" id=44]
-flags = 4
-atlas = ExtResource( 11 )
-region = Rect2( 4096, 4096, 4096, 4096 )
+[sub_resource type="AtlasTexture" id="AtlasTexture_kd8w4"]
+atlas = ExtResource("11")
+region = Rect2(4096, 8192, 4096, 4096)
 
-[sub_resource type="AtlasTexture" id=45]
-flags = 4
-atlas = ExtResource( 11 )
-region = Rect2( 0, 8192, 4096, 4096 )
-
-[sub_resource type="AtlasTexture" id=46]
-flags = 4
-atlas = ExtResource( 11 )
-region = Rect2( 4096, 8192, 4096, 4096 )
-
-[sub_resource type="SpriteFrames" id=47]
-animations = [ {
-"frames": [ SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ) ],
+[sub_resource type="SpriteFrames" id="SpriteFrames_882d2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bp15f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6pna7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6xf05")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ms83d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4fs4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kd8w4")
+}],
 "loop": true,
-"name": "default",
+"name": &"default",
 "speed": 5.0
-} ]
+}]
 
 [node name="SeuJogo" type="Node2D"]
-script = ExtResource( 1 )
+script = ExtResource("1")
 
 [node name="ShakeCamera2D" type="Camera2D" parent="."]
-position = Vector2( 366, 809 )
-scale = Vector2( 0.18869, 0.18869 )
-script = ExtResource( 12 )
-
-[node name="Node2D" type="Node2D" parent="."]
-position = Vector2( 459, 489 )
-
-[node name="Control" type="Control" parent="Node2D"]
-margin_top = -761.0
-margin_right = 801.0
-margin_bottom = 40.0
+anchor_mode = 0
+script = ExtResource("12")
 
 [node name="Timer" type="Timer" parent="."]
 
-[node name="Background" type="AnimatedSprite" parent="."]
-position = Vector2( 953.111, 538.25 )
-scale = Vector2( 0.600278, 0.600278 )
-frames = SubResource( 40 )
-frame = 1
-playing = true
+[node name="Background" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_ggg6m")
+centered = false
 
-[node name="Barrinha" type="Sprite" parent="."]
-position = Vector2( 967, 213 )
-scale = Vector2( 8.99072, 8.99072 )
-texture = ExtResource( 2 )
+[node name="Barrinha" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(967, 213)
+scale = Vector2(8.991, 8.991)
+texture = ExtResource("2")
 
-[node name="BambuDoBalocobaco" type="Sprite" parent="."]
-position = Vector2( 1398, 811 )
-scale = Vector2( 0.248108, 0.248108 )
-texture = ExtResource( 10 )
-script = ExtResource( 6 )
+[node name="BambuDoBalacobaco" type="Sprite2D" parent="."]
+position = Vector2(1398, 811)
+scale = Vector2(0.248, 0.248)
+texture = ExtResource("10")
+script = ExtResource("6")
 
-[node name="Espada" type="Sprite" parent="."]
-position = Vector2( 959, 196 )
-scale = Vector2( 7.58594, 7.58594 )
-texture = ExtResource( 3 )
-script = ExtResource( 4 )
+[node name="Espada" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(959, 196)
+scale = Vector2(7.586, 7.586)
+texture = ExtResource("7_1p18t")
+script = ExtResource("4")
 
-[node name="Gamuturai" type="Sprite" parent="."]
-position = Vector2( 417, 770 )
-scale = Vector2( 6.78678, 6.78678 )
-texture = ExtResource( 5 )
+[node name="Gamuturai" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(417, 770)
+scale = Vector2(6.787, 6.787)
+texture = ExtResource("5")
 hframes = 4
 vframes = 4
-script = ExtResource( 6 )
+script = ExtResource("6")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Gamuturai"]
-anims/Iddle = SubResource( 49 )
-anims/RESET = SubResource( 50 )
-anims/half = SubResource( 53 )
-anims/lose = SubResource( 52 )
-anims/win = SubResource( 54 )
-
-[node name="Folha(amongus)" type="CPUParticles2D" parent="."]
-position = Vector2( 1998, 455 )
-amount = 1
-lifetime = 5.0
-texture = ExtResource( 9 )
-emission_shape = 2
-emission_rect_extents = Vector2( 1, 600 )
-direction = Vector2( -1, 0 )
-spread = 30.0
-gravity = Vector2( -50, 150 )
-initial_velocity = 800.0
-scale_amount = 3.0
+libraries = {
+"": SubResource("AnimationLibrary_k7gop")
+}
 
 [node name="Folha" type="CPUParticles2D" parent="."]
-material = SubResource( 33 )
-position = Vector2( 1996, 357 )
+position = Vector2(2020, 540)
 amount = 32
 lifetime = 5.0
-texture = ExtResource( 8 )
-emission_shape = 2
-emission_rect_extents = Vector2( 1, 600 )
-direction = Vector2( -1, 0 )
+texture = ExtResource("8")
+emission_shape = 3
+emission_rect_extents = Vector2(1, 600)
+direction = Vector2(-1, 0)
 spread = 30.0
-gravity = Vector2( -50, 150 )
-initial_velocity = 800.0
-angle_curve = SubResource( 34 )
-scale_amount = 3.0
+gravity = Vector2(-50, 150)
+initial_velocity_min = 800.0
+initial_velocity_max = 800.0
+angle_min = 80.0
+angle_max = 100.0
+scale_amount_min = 3.0
+scale_amount_max = 3.0
 
-[node name="Folha" type="Sprite" parent="Folha"]
-position = Vector2( 58, 849 )
-texture = ExtResource( 8 )
+[node name="Folha(amongus)" type="CPUParticles2D" parent="."]
+position = Vector2(2020, 540)
+amount = 4
+lifetime = 5.0
+texture = ExtResource("11_7ysg3")
+emission_shape = 3
+emission_rect_extents = Vector2(1, 600)
+direction = Vector2(-1, 0)
+spread = 30.0
+gravity = Vector2(-50, 150)
+initial_velocity_min = 800.0
+initial_velocity_max = 800.0
+angle_min = 80.0
+angle_max = 100.0
+scale_amount_min = 3.0
+scale_amount_max = 3.0
 
-[node name="PandaDoBalacobaco" type="AnimatedSprite" parent="."]
-position = Vector2( 966, -229 )
-scale = Vector2( 0.18869, 0.18869 )
-frames = SubResource( 47 )
-playing = true
-script = ExtResource( 13 )
+[node name="PandaDoBalacobaco" type="AnimatedSprite2D" parent="."]
+position = Vector2(966, -229)
+scale = Vector2(0.189, 0.189)
+sprite_frames = SubResource("SpriteFrames_882d2")
+script = ExtResource("13")
 
 [node name="Musica" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 17 )
+stream = ExtResource("17")
 
 [node name="Corte" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 15 )
+stream = ExtResource("15")
 
 [node name="Morte" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 14 )
+stream = ExtResource("14")
 
 [node name="Panda" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 16 )
-volume_db = 6.0
-pitch_scale = 1.5
+stream = ExtResource("16")
