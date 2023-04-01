@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bab2k31jkjyp4"
-path="res://.godot/imported/capa.png-351e255927b4dd383cf939f1f0a4680f.ctex"
+uid="uid://divtma143n451"
+path="res://.godot/imported/gamuto boca aberta.png-4a34fd49fa2444b61ed573076e7b138f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2023S1/bis-limao/capa.png"
-dest_files=["res://.godot/imported/capa.png-351e255927b4dd383cf939f1f0a4680f.ctex"]
+source_file="res://microjogos/2023S1/bis-limao/recursos/gamuto boca aberta.png"
+dest_files=["res://.godot/imported/gamuto boca aberta.png-4a34fd49fa2444b61ed573076e7b138f.ctex"]
 
 [params]
 

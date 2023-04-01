@@ -11,7 +11,7 @@ signal lose
 const WIDTH = 1920
 const HEIGHT = 1080
 
-
+var rng = RandomNumberGenerator.new()
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES PADRÃO
 # --------------------------------------------------------------------------------------------------
@@ -22,15 +22,28 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
+			NotificationCenter.notify("BIS LIMAO SUPREMACY")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FACA ALGO!")
+			NotificationCenter.notify("LEMON BIS SUPREMACY")
+	
+	register_win()
+	
+	rng.randomize()
+	
+	# Add a timer to this node
+	var timer = Timer.new()
+	self.add_child(timer)
+
+	timer.connect("timeout", spawnBis)
+	timer.set_wait_time(0.4)
+	timer.start()
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
 # a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
 # a última chamada desta função. O comando pass não faz nada
 func _physics_process(delta):
+	
 	pass
 
 
@@ -43,6 +56,21 @@ func _process(delta):
 
 # --------------------------------------------------------------------------------------------------
 # SUAS FUNÇÕES
+
+func spawnBis():
+	var n = rng.randf_range(1, 100)
+	if n > 35:
+		spawnBisPadrao()
+	else:
+		spawnBisLimao()
+	
+func spawnBisPadrao():
+	var bis = preload("res://microjogos/2023S1/bis-limao/cenas/bis_normal.tscn").instantiate()
+	add_child(bis)
+
+func spawnBisLimao():
+	var bis = preload("res://microjogos/2023S1/bis-limao/cenas/bis_limao.tscn").instantiate()
+	add_child(bis)
 # --------------------------------------------------------------------------------------------------
 
 
@@ -68,4 +96,5 @@ func register_win():
 
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
+	#NotificationCenter.notify("PERDEU :D")
 	emit_signal("lose")

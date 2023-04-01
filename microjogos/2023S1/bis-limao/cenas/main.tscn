@@ -1,9 +1,33 @@
-[gd_scene load_steps=2 format=3 uid="uid://dqrysxq7nwgft"]
+[gd_scene load_steps=6 format=3 uid="uid://dqrysxq7nwgft"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/seu_projeto/cenas/scripts/main.gd" id="1"]
+[ext_resource type="Script" path="res://microjogos/2023S1/bis-limao/cenas/scripts/main.gd" id="1_ow836"]
+[ext_resource type="Texture2D" uid="uid://csgyvio782t8q" path="res://microjogos/2023S1/bis-limao/recursos/background.jpg" id="2_e637n"]
+[ext_resource type="Texture2D" uid="uid://ci0eq5fj5mmlx" path="res://microjogos/2023S1/bis-limao/recursos/gamuto.png" id="2_yqach"]
+[ext_resource type="Script" path="res://microjogos/2023S1/bis-limao/cenas/scripts/gamuto.gd" id="4_stjrp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f76t1"]
+size = Vector2(24, 528)
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1")
+script = ExtResource("1_ow836")
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.643137)
+position = Vector2(972, 578.875)
+scale = Vector2(1.75, 1.6675)
+texture = ExtResource("2_e637n")
 
 [node name="Camera3D" type="Camera2D" parent="."]
 anchor_mode = 0
+
+[node name="Gamuto" type="Sprite2D" parent="."]
+position = Vector2(928, 832)
+texture = ExtResource("2_yqach")
+script = ExtResource("4_stjrp")
+
+[node name="Area que engole" type="Area2D" parent="Gamuto"]
+position = Vector2(-992, -832)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamuto/Area que engole"]
+position = Vector2(996, 416)
+shape = SubResource("RectangleShape2D_f76t1")

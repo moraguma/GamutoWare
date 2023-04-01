@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bab2k31jkjyp4"
-path="res://.godot/imported/capa.png-351e255927b4dd383cf939f1f0a4680f.ctex"
+uid="uid://ldurbn1bxdpe"
+path="res://.godot/imported/bis normal.png-3b9a86511001e2c54c19b9706b9c32b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2023S1/bis-limao/capa.png"
-dest_files=["res://.godot/imported/capa.png-351e255927b4dd383cf939f1f0a4680f.ctex"]
+source_file="res://microjogos/2023S1/bis-limao/recursos/bis normal.png"
+dest_files=["res://.godot/imported/bis normal.png-3b9a86511001e2c54c19b9706b9c32b3.ctex"]
 
 [params]
 
