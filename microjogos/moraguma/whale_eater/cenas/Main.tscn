@@ -1,6 +1,5 @@
-[gd_scene load_steps=16 format=3 uid="uid://dvwoaxdlv7rpl"]
+[gd_scene load_steps=15 format=3 uid="uid://dvwoaxdlv7rpl"]
 
-[ext_resource type="TileSet" uid="uid://8qc1nwk0m48f" path="res://microjogos/moraguma/whale_eater/recursos/tilesets/Tiles.tres" id="1"]
 [ext_resource type="Script" path="res://microjogos/moraguma/whale_eater/cenas/scripts/Main.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://bxqe3ioudqa82" path="res://microjogos/moraguma/whale_eater/recursos/sprites/BG.png" id="3"]
 [ext_resource type="AudioStream" uid="uid://chc2dqarb0qtp" path="res://microjogos/moraguma/whale_eater/recursos/sounds/music/the-whale.ogg" id="4"]
@@ -147,26 +146,6 @@ libraries = {
 
 [node name="HeartbeatSound" type="AudioStreamPlayer" parent="Camera3D"]
 stream = ExtResource("11")
-
-[node name="Block1" type="TileMap" parent="."]
-z_index = 1
-tile_set = ExtResource("1")
-format = 2
-
-[node name="Block2" type="TileMap" parent="."]
-z_index = 1
-tile_set = ExtResource("1")
-format = 2
-
-[node name="Block3" type="TileMap" parent="."]
-z_index = 1
-tile_set = ExtResource("1")
-format = 2
-
-[node name="Tiles" type="TileMap" parent="."]
-z_index = 1
-tile_set = ExtResource("1")
-format = 2
 
 [node name="Arrow1" type="Sprite2D" parent="."]
 visible = false

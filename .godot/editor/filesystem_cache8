@@ -1,5 +1,5 @@
 2a60927148abd1d33b818b535e306557
-::res://::1680372306
+::res://::1680372615
 default_bus_layout.tres::AudioBusLayout::-1::1677696896::0::1::::<><>::
 default_env.tres::Environment::6435969514969214528::1680356811::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1677696787::0::1::::<><>::
@@ -433,10 +433,7 @@ spikes.png::CompressedTexture2D::5389261793750172816::1677696787::1677696974::1:
 tiles.png::CompressedTexture2D::8702441451711850296::1677696787::1677696974::1::::<><>::
 tinydeath.png::CompressedTexture2D::5731309304041905289::1677696787::1677696974::1::::<><>::
 tinydeathhook.png::CompressedTexture2D::5817293696706249745::1677696787::1677696974::1::::<><>::
-::res://microjogos/moraguma/soulchain/recursos/tilesets/::1678893277
-decoration.tres::TileSet::-1::1677696898::0::1::::<><>::res://microjogos/moraguma/soulchain/recursos/sprites/decoration.png
-spikes.tres::TileSet::-1::1677696898::0::1::::<><>::res://microjogos/moraguma/soulchain/recursos/sprites/spikes.png
-tiles.tres::TileSet::7459018098093353991::1678893277::0::1::::<><>::uid://dv8r6617okhdg
+::res://microjogos/moraguma/soulchain/recursos/tilesets/::1680372425
 ::res://microjogos/moraguma/whale_eater/::1677696974
 capa.png::CompressedTexture2D::7179542193610317720::1677696787::1677696974::1::::<><>::
 creditos.gd::GDScript::-1::1677696898::0::1::::<>Resource<>::
@@ -465,9 +462,7 @@ player.png::CompressedTexture2D::3513440533586605103::1677696787::1677696974::1:
 right.png::CompressedTexture2D::349402839986967154::1677696787::1677696974::1::::<><>::
 tileset.png::CompressedTexture2D::7298845203057066466::1677696787::1677696974::1::::<><>::
 walls.png::CompressedTexture2D::962819013353159151::1677696787::1677696974::1::::<><>::
-::res://microjogos/moraguma/whale_eater/recursos/tilesets/::1680356808
-Tiles.tres::TileSet::2349430466024603275::1680356808::0::1::::<><>::uid://db8u6cytdci6e
-Walls.tres::TileSet::-1::1677696898::0::1::::<><>::res://microjogos/moraguma/whale_eater/recursos/sprites/walls.png
+::res://microjogos/moraguma/whale_eater/recursos/tilesets/::1680372416
 ::res://microjogos/not_implemented/::1677696788
 ::res://microjogos/not_implemented/godotware_old/::1677696788
 ::res://microjogos/not_implemented/godotware_old/Artick/::1677696975
