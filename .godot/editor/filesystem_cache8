@@ -1,9 +1,9 @@
 2a60927148abd1d33b818b535e306557
-::res://::1680231268
+::res://::1680372306
 default_bus_layout.tres::AudioBusLayout::-1::1677696896::0::1::::<><>::
-default_env.tres::Environment::6435969514969214528::1678978228::0::1::::<><>::
+default_env.tres::Environment::6435969514969214528::1680356811::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1677696787::0::1::::<><>::
-Godot4TODO.txt::TextFile::-1::1678978229::0::1::::<><>::
+Godot4TODO.txt::TextFile::-1::1680231498::0::1::::<><>::
 icon.png::CompressedTexture2D::4626567692130692406::1677696787::1677696986::1::::<><>::
 ::res://microjogos/::1679968689
 ::res://microjogos/2022S1/::1677696787
@@ -244,14 +244,14 @@ yellow.wav::AudioStreamWAV::665725988366351709::1677696787::1677697010::1::::<><
 ::res://microjogos/moraguma/candle prick/::1677697007
 capa.png::CompressedTexture2D::5232683017869764507::1677696787::1677697007::1::::<><>::
 creditos.gd::GDScript::-1::1677696899::0::1::::<>Resource<>::
-::res://microjogos/moraguma/candle prick/cenas/::1678895225
-Candle.tscn::PackedScene::-1::1677696899::0::1::::<><>::res://microjogos/moraguma/candle prick/cenas/scripts/Element.gd<>res://microjogos/moraguma/candle prick/cenas/LightModule.tscn<>res://microjogos/moraguma/candle prick/recursos/sprites/candle.png<>res://microjogos/moraguma/candle prick/recursos/sounds/stab.wav
+::res://microjogos/moraguma/candle prick/cenas/::1680356810
+Candle.tscn::PackedScene::5429616468679342589::1680356810::0::1::::<><>::res://microjogos/moraguma/candle prick/cenas/scripts/Element.gd<>res://microjogos/moraguma/candle prick/cenas/LightModule.tscn<>uid://bmeepox12qo7g<>uid://b3e1jdefk3tox
 Flame.tscn::PackedScene::-1::1677696899::0::1::::<><>::res://microjogos/moraguma/candle prick/cenas/LightModule.tscn<>res://microjogos/moraguma/candle prick/recursos/sprites/flame.png
-Game.tscn::PackedScene::6416580994697887389::1678895225::0::1::::<><>::res://microjogos/moraguma/candle prick/cenas/scripts/Game.gd<>uid://ccmq78qsk4i1m<>res://microjogos/moraguma/candle prick/cenas/Player.tscn<>res://microjogos/moraguma/candle prick/cenas/scripts/Camera.gd<>res://microjogos/moraguma/candle prick/cenas/Candle.tscn<>res://microjogos/moraguma/candle prick/cenas/WinningArea.tscn<>res://microjogos/moraguma/candle prick/cenas/Flame.tscn<>uid://dhqayss1khvwq<>uid://dw6oygeioj0or
+Game.tscn::PackedScene::6416580994697887389::1680356810::0::1::::<><>::res://microjogos/moraguma/candle prick/cenas/scripts/Game.gd<>uid://ccmq78qsk4i1m<>uid://dv28f7nw1t7i1<>res://microjogos/moraguma/candle prick/cenas/scripts/Camera.gd<>uid://cjme8wnqg17an<>res://microjogos/moraguma/candle prick/cenas/WinningArea.tscn<>res://microjogos/moraguma/candle prick/cenas/Flame.tscn<>uid://dhqayss1khvwq<>uid://dw6oygeioj0or
 Light.tscn::PackedScene::-1::1677696899::0::1::::<><>::res://microjogos/moraguma/candle prick/cenas/scripts/Light.gd<>res://microjogos/moraguma/candle prick/recursos/sprites/lightbig.png<>res://microjogos/moraguma/candle prick/recursos/sprites/lightsmall.png
 LightModule.tscn::PackedScene::-1::1677696899::0::1::::<><>::res://microjogos/moraguma/candle prick/cenas/scripts/LightModule.gd<>res://microjogos/moraguma/candle prick/cenas/Light.tscn
-Main.tscn::PackedScene::5764137758937966579::1678895224::0::1::::<><>::uid://cxoiffe5hbttt<>uid://gabkryriv8my<>uid://213h2twagxp6<>res://microjogos/moraguma/candle prick/cenas/scripts/Main.gd
-Player.tscn::PackedScene::-1::1677696899::0::1::::<><>::res://microjogos/moraguma/candle prick/cenas/scripts/Player.gd<>res://microjogos/moraguma/candle prick/recursos/sprites/ghost.png<>res://microjogos/moraguma/candle prick/cenas/LightModule.tscn<>res://microjogos/moraguma/candle prick/recursos/sounds/move.wav<>res://microjogos/moraguma/candle prick/recursos/sounds/nope.wav
+Main.tscn::PackedScene::5764137758937966579::1680356809::0::1::::<><>::uid://cxoiffe5hbttt<>uid://gabkryriv8my<>uid://213h2twagxp6<>res://microjogos/moraguma/candle prick/cenas/scripts/Main.gd
+Player.tscn::PackedScene::8690980258433185122::1680356810::0::1::::<><>::res://microjogos/moraguma/candle prick/cenas/scripts/Player.gd<>uid://c7utftnuq5qdp<>res://microjogos/moraguma/candle prick/cenas/LightModule.tscn<>uid://b7o588l46lavp<>uid://cl4mtgihtemco
 WinningArea.tscn::PackedScene::-1::1677696899::0::1::::<><>::res://microjogos/moraguma/candle prick/recursos/sprites/candleoutline.png<>res://microjogos/moraguma/candle prick/cenas/scripts/WinningArea.gd<>res://microjogos/moraguma/candle prick/recursos/sprites/arrowpressed.png<>res://microjogos/moraguma/candle prick/cenas/LightModule.tscn
 ::res://microjogos/moraguma/candle prick/cenas/scripts/::1678894968
 Camera.gd::GDScript::-1::1678821972::0::1::::<>Camera2D<>::
@@ -287,10 +287,10 @@ tiles.png::CompressedTexture2D::4939021963819980648::1677696787::1677697006::1::
 capa.png::CompressedTexture2D::2331412019196673982::1677696787::1677696973::1::::<><>::
 creditos.gd::GDScript::-1::1677696899::0::1::::<>Resource<>::
 creditos.txt::TextFile::-1::1677696787::0::1::::<><>::
-::res://microjogos/moraguma/deerskull/cenas/::1678895254
-Main.tscn::PackedScene::5389558238436989336::1678895225::0::1::::<><>::uid://ctrgtmrh5lpp6<>uid://dkeg421ef3dsq<>res://microjogos/moraguma/deerskull/cenas/scripts/Main.gd<>res://microjogos/moraguma/deerskull/cenas/scripts/BG.gd<>res://microjogos/moraguma/deerskull/cenas/Player.tscn
-Player.tscn::PackedScene::2721991758832552496::1678895254::0::1::::<><>::res://microjogos/moraguma/deerskull/cenas/scripts/Droppable.gd<>res://microjogos/moraguma/deerskull/cenas/scripts/Player.gd<>uid://bc5iv6csyrdae<>uid://clkc60blh6s0r<>uid://rscpcobhlo4g
-Shot.tscn::PackedScene::-1::1677696899::0::1::::<><>::res://microjogos/moraguma/deerskull/cenas/scripts/Shot.gd<>res://microjogos/moraguma/deerskull/recursos/sounds/sfx/shoot.wav<>res://microjogos/moraguma/deerskull/recursos/sounds/sfx/aim.wav
+::res://microjogos/moraguma/deerskull/cenas/::1680356811
+Main.tscn::PackedScene::5389558238436989336::1680356809::0::1::::<><>::uid://ctrgtmrh5lpp6<>uid://dkeg421ef3dsq<>res://microjogos/moraguma/deerskull/cenas/scripts/Main.gd<>res://microjogos/moraguma/deerskull/cenas/scripts/BG.gd<>uid://be1s2on25iqi7
+Player.tscn::PackedScene::2721991758832552496::1680356811::0::1::::<><>::res://microjogos/moraguma/deerskull/cenas/scripts/Droppable.gd<>res://microjogos/moraguma/deerskull/cenas/scripts/Player.gd<>uid://bc5iv6csyrdae<>uid://clkc60blh6s0r<>uid://rscpcobhlo4g
+Shot.tscn::PackedScene::5982274862387715134::1680356809::0::1::::<><>::res://microjogos/moraguma/deerskull/cenas/scripts/Shot.gd<>uid://1h41b0vdkm4o<>uid://c3sd64ekm814b
 ::res://microjogos/moraguma/deerskull/cenas/scripts/::1678895224
 BG.gd::GDScript::-1::1677696899::0::1::::<>Sprite2D<>::
 Droppable.gd::GDScript::-1::1677696899::0::1::::<>Sprite2D<>::
@@ -317,8 +317,8 @@ trishatalk.png::CompressedTexture2D::4730801741868743478::1677696787::1677697007
 capa.png::CompressedTexture2D::5851317031798144066::1677696787::1677696973::1::::<><>::
 creditos.gd::GDScript::-1::1677696899::0::1::::<>Resource<>::
 creditos.txt::TextFile::-1::1677696787::0::1::::<><>::
-::res://microjogos/moraguma/hora_da_necromancia/cenas/::1678977079
-Main.tscn::PackedScene::1653908628414411888::1678977079::0::1::::<><>::uid://cd5huovw57d5r<>uid://ctlcgkr7lnhsq<>uid://bsnhh2gvefdda<>uid://cl3fmkyy2xxck<>uid://d1y72x6lkwxx3<>res://microjogos/moraguma/hora_da_necromancia/cenas/scripts/Twitcher.gd<>res://microjogos/moraguma/hora_da_necromancia/cenas/scripts/Main.gd<>uid://chgt5ebxijjmi<>uid://d3c7ip18se6tx<>uid://by03pp6yya3h7<>uid://cjouuuqlanr6<>uid://b82dbutl8phql<>uid://bs70lnnsdb2u6<>uid://dwdidpoyd1a20
+::res://microjogos/moraguma/hora_da_necromancia/cenas/::1680356809
+Main.tscn::PackedScene::1653908628414411888::1680356809::0::1::::<><>::uid://cd5huovw57d5r<>uid://ctlcgkr7lnhsq<>uid://bsnhh2gvefdda<>uid://cl3fmkyy2xxck<>uid://d1y72x6lkwxx3<>res://microjogos/moraguma/hora_da_necromancia/cenas/scripts/Twitcher.gd<>res://microjogos/moraguma/hora_da_necromancia/cenas/scripts/Main.gd<>uid://chgt5ebxijjmi<>uid://d3c7ip18se6tx<>uid://by03pp6yya3h7<>uid://cjouuuqlanr6<>uid://b82dbutl8phql<>uid://bs70lnnsdb2u6<>uid://dwdidpoyd1a20
 ::res://microjogos/moraguma/hora_da_necromancia/cenas/scripts/::1678821972
 Main.gd::GDScript::-1::1677696899::0::1::::<>Node2D<>::
 Twitcher.gd::GDScript::-1::1678821972::0::1::::<>Sprite2D<>::
@@ -440,8 +440,8 @@ tiles.tres::TileSet::7459018098093353991::1678893277::0::1::::<><>::uid://dv8r66
 ::res://microjogos/moraguma/whale_eater/::1677696974
 capa.png::CompressedTexture2D::7179542193610317720::1677696787::1677696974::1::::<><>::
 creditos.gd::GDScript::-1::1677696898::0::1::::<>Resource<>::
-::res://microjogos/moraguma/whale_eater/cenas/::1678978228
-Main.tscn::PackedScene::8679495329166625981::1678978228::0::1::::<><>::res://microjogos/moraguma/whale_eater/recursos/tilesets/Tiles.tres<>res://microjogos/moraguma/whale_eater/cenas/scripts/Main.gd<>uid://bxqe3ioudqa82<>uid://chc2dqarb0qtp<>res://microjogos/moraguma/whale_eater/cenas/scripts/Arrow.gd<>uid://cftdvajkxfn21<>res://microjogos/moraguma/whale_eater/cenas/scripts/Camera.gd<>uid://0ke1wn2i2afl<>uid://e8iu4p5ny6v3<>uid://bl0h0n1p6qyg<>uid://caxyjothj1mkg
+::res://microjogos/moraguma/whale_eater/cenas/::1680356809
+Main.tscn::PackedScene::8679495329166625981::1680356809::0::1::::<><>::uid://8qc1nwk0m48f<>res://microjogos/moraguma/whale_eater/cenas/scripts/Main.gd<>uid://bxqe3ioudqa82<>uid://chc2dqarb0qtp<>res://microjogos/moraguma/whale_eater/cenas/scripts/Arrow.gd<>uid://cftdvajkxfn21<>res://microjogos/moraguma/whale_eater/cenas/scripts/Camera.gd<>uid://0ke1wn2i2afl<>uid://e8iu4p5ny6v3<>uid://bl0h0n1p6qyg<>uid://caxyjothj1mkg
 Player.tscn::PackedScene::-1::1677696898::0::1::::<><>::res://microjogos/moraguma/whale_eater/cenas/scripts/Player.gd<>res://microjogos/moraguma/whale_eater/recursos/sprites/player.png<>res://microjogos/moraguma/whale_eater/recursos/sounds/sfx/PlayerLand.wav<>res://microjogos/moraguma/whale_eater/cenas/scripts/AnimationPlayer.gd
 ::res://microjogos/moraguma/whale_eater/cenas/scripts/::1678821972
 AnimationPlayer.gd::GDScript::-1::1677696898::0::1::::<>AnimationPlayer<>::
@@ -465,8 +465,8 @@ player.png::CompressedTexture2D::3513440533586605103::1677696787::1677696974::1:
 right.png::CompressedTexture2D::349402839986967154::1677696787::1677696974::1::::<><>::
 tileset.png::CompressedTexture2D::7298845203057066466::1677696787::1677696974::1::::<><>::
 walls.png::CompressedTexture2D::962819013353159151::1677696787::1677696974::1::::<><>::
-::res://microjogos/moraguma/whale_eater/recursos/tilesets/::1678978228
-Tiles.tres::TileSet::2349430466024603275::1678978228::0::1::::<><>::uid://db8u6cytdci6e
+::res://microjogos/moraguma/whale_eater/recursos/tilesets/::1680356808
+Tiles.tres::TileSet::2349430466024603275::1680356808::0::1::::<><>::uid://db8u6cytdci6e
 Walls.tres::TileSet::-1::1677696898::0::1::::<><>::res://microjogos/moraguma/whale_eater/recursos/sprites/walls.png
 ::res://microjogos/not_implemented/::1677696788
 ::res://microjogos/not_implemented/godotware_old/::1677696788
@@ -645,25 +645,25 @@ Tile.tscn::PackedScene::-1::1677696897::0::1::::<><>::res://minigames/SuperTank/
 ::res://microjogos/not_implemented/teste/::1677696788
 ::res://microjogos/not_implemented/teste/moveGamutoDemo/::1677696973
 capa.png::CompressedTexture2D::4457657996107924858::1677696788::1677696973::1::::<><>::
-::res://microjogos/not_implemented/teste/moveGamutoDemo/cenas/::1677696788
-GamutoMoveDemo.tscn::PackedScene::-1::1677696897::0::1::::<><>::res://icon.png<>res://microjogos/teste/moveGamutoDemo/cenas/Player.tscn
-Player.tscn::PackedScene::-1::1677696897::0::1::::<><>::res://microjogos/teste/moveGamutoDemo/scripts/Player.gd<>res://icon.png
-::res://microjogos/not_implemented/teste/moveGamutoDemo/scripts/::1677696788
-Player.gd::GDScript::-1::1677696897::0::1::::<>CharacterBody2D<>::
+::res://microjogos/not_implemented/teste/moveGamutoDemo/cenas/::1680356811
+GamutoMoveDemo.tscn::PackedScene::4212397595324473435::1680356811::0::1::::<><>::uid://b66e5nnnnmg11<>uid://cg2kpxdcc4kav
+Player.tscn::PackedScene::5250347798176409925::1680356811::0::1::::<><>::res://microjogos/not_implemented/teste/moveGamutoDemo/scripts/Player.gd<>uid://b66e5nnnnmg11
+::res://microjogos/not_implemented/teste/moveGamutoDemo/scripts/::1680316616
+Player.gd::GDScript::-1::1680316616::0::1::::<>CharacterBody2D<>::
 ::res://principal/::1677696788
 creditos.gd::GDScript::-1::1677696896::0::1::::<>Resource<>::
 creditos.txt::TextFile::-1::1677696788::0::1::::<><>::
-::res://principal/cenas/::1678977078
+::res://principal/cenas/::1680356809
 Arcade.tscn::PackedScene::6901281340921739597::1677781203::0::1::::<><>::uid://ja6urlsch5m7<>uid://cs75vvw01oafl<>res://principal/cenas/scripts/ArcadeButton.gd<>res://principal/cenas/scripts/TransitionButton.gd<>uid://cb4tlwb81nq48<>res://principal/cenas/scripts/TranslatableText.gd<>uid://dt5djib7huxvm<>res://principal/cenas/scripts/ToTitle.gd<>uid://bfefepnpbds1x
 CoverButton.tscn::PackedScene::-1::1677696897::0::1::::<><>::res://principal/cenas/scripts/CoverButton.gd
 Creditos.tscn::PackedScene::2899884515626314347::1677781203::0::1::::<><>::res://principal/cenas/scripts/TransitionButton.gd<>uid://bfefepnpbds1x<>uid://b4rk8gfyi2o6m<>res://principal/cenas/scripts/TranslatableText.gd<>uid://dt5djib7huxvm<>uid://ja6urlsch5m7<>uid://cs75vvw01oafl<>uid://cb4tlwb81nq48<>res://principal/cenas/scripts/PressableButton.gd<>res://principal/cenas/scripts/Creditos.gd
-GameOver.tscn::PackedScene::5191672289914459915::1678977078::0::1::::<><>::uid://cs75vvw01oafl<>uid://ja6urlsch5m7<>res://principal/cenas/scripts/GameOver.gd<>res://principal/cenas/scripts/TransitionButton.gd<>uid://cb4tlwb81nq48<>res://principal/cenas/scripts/TranslatableText.gd<>uid://bfefepnpbds1x<>uid://dt5djib7huxvm
-Jam.tscn::PackedScene::5830762979502948351::1678977078::0::1::::<><>::res://principal/cenas/scripts/JamButton.gd<>uid://ja6urlsch5m7<>uid://cs75vvw01oafl<>res://principal/cenas/scripts/TransitionButton.gd<>uid://cb4tlwb81nq48<>uid://dt5djib7huxvm<>res://principal/cenas/scripts/TranslatableText.gd<>res://principal/cenas/scripts/ToTitle.gd<>uid://bfefepnpbds1x
-Jogo.tscn::PackedScene::1271853140156200493::1678977078::0::1::::<><>::uid://d1pcvjogk0whm<>res://principal/cenas/scripts/Jogo.gd<>uid://wvr13kxa83wa<>uid://n5yo736vdclg<>res://principal/cenas/scripts/Bateria.gd<>res://principal/cenas/scripts/Relogio.gd<>uid://cf6e7k0jprikg<>uid://d2g21riptaer<>uid://chkkxnuifd6go<>res://principal/cenas/scripts/Vida.gd<>uid://cb4tlwb81nq48<>uid://ctijuu2jh4eyo<>uid://bwhscrkgcredi<>res://principal/cenas/scripts/Droppable.gd<>res://principal/recursos/shaders/mask.gdshader<>res://principal/cenas/scripts/TimerIndicator.gd<>res://principal/cenas/scripts/Twitcher.gd<>uid://b83mxv1sg7wbc
+GameOver.tscn::PackedScene::5191672289914459915::1680356809::0::1::::<><>::uid://cs75vvw01oafl<>uid://ja6urlsch5m7<>res://principal/cenas/scripts/GameOver.gd<>res://principal/cenas/scripts/TransitionButton.gd<>uid://cb4tlwb81nq48<>res://principal/cenas/scripts/TranslatableText.gd<>uid://bfefepnpbds1x<>uid://dt5djib7huxvm
+Jam.tscn::PackedScene::5830762979502948351::1680356808::0::1::::<><>::res://principal/cenas/scripts/JamButton.gd<>uid://ja6urlsch5m7<>uid://cs75vvw01oafl<>res://principal/cenas/scripts/TransitionButton.gd<>uid://cb4tlwb81nq48<>uid://dt5djib7huxvm<>res://principal/cenas/scripts/TranslatableText.gd<>res://principal/cenas/scripts/ToTitle.gd<>uid://bfefepnpbds1x
+Jogo.tscn::PackedScene::1271853140156200493::1680356809::0::1::::<><>::uid://d1pcvjogk0whm<>res://principal/cenas/scripts/Jogo.gd<>uid://wvr13kxa83wa<>uid://n5yo736vdclg<>res://principal/cenas/scripts/Bateria.gd<>res://principal/cenas/scripts/Relogio.gd<>uid://cf6e7k0jprikg<>uid://d2g21riptaer<>uid://chkkxnuifd6go<>res://principal/cenas/scripts/Vida.gd<>uid://cb4tlwb81nq48<>uid://ctijuu2jh4eyo<>uid://bwhscrkgcredi<>res://principal/cenas/scripts/Droppable.gd<>res://principal/recursos/shaders/mask.gdshader<>res://principal/cenas/scripts/TimerIndicator.gd<>res://principal/cenas/scripts/Twitcher.gd<>uid://b83mxv1sg7wbc
 Menu.tscn::PackedScene::8186920016833593607::1677781203::0::1::::<><>::uid://ja6urlsch5m7<>res://principal/cenas/scripts/Logo.gd<>uid://bk1fle4aty18<>uid://cs75vvw01oafl<>res://principal/cenas/scripts/TransitionButton.gd<>res://principal/cenas/scripts/Menu.gd<>uid://cb4tlwb81nq48<>res://principal/cenas/scripts/TranslationSetButton.gd<>uid://dt5djib7huxvm<>uid://bfefepnpbds1x
 MinigameButton.tscn::PackedScene::6890322079678538680::1678888875::0::1::::<><>::uid://dt5djib7huxvm<>res://principal/cenas/scripts/MinigameButton.gd
 Opening.tscn::PackedScene::4386439153873623756::1677776162::0::1::::<><>::uid://blcw2hkcbcxid<>uid://c2sgtas737d1o<>uid://c2mwty1vwy3f4<>res://principal/cenas/scripts/Opening.gd
-Vitoria.tscn::PackedScene::645856437965792312::1678977078::0::1::::<><>::uid://dogwrk2nqqk03<>res://principal/cenas/scripts/TransitionButton.gd<>uid://cs75vvw01oafl<>uid://ja6urlsch5m7<>uid://cb4tlwb81nq48<>res://principal/cenas/scripts/AutoplayIdleAnimationPlayer.gd<>res://principal/cenas/scripts/TranslatableText.gd<>res://principal/cenas/scripts/ToTitle.gd<>uid://bfefepnpbds1x<>uid://dt5djib7huxvm
+Vitoria.tscn::PackedScene::645856437965792312::1680356808::0::1::::<><>::uid://dogwrk2nqqk03<>res://principal/cenas/scripts/TransitionButton.gd<>uid://cs75vvw01oafl<>uid://ja6urlsch5m7<>uid://cb4tlwb81nq48<>res://principal/cenas/scripts/AutoplayIdleAnimationPlayer.gd<>res://principal/cenas/scripts/TranslatableText.gd<>res://principal/cenas/scripts/ToTitle.gd<>uid://bfefepnpbds1x<>uid://dt5djib7huxvm
 ::res://principal/cenas/autoloads/::1678888875
 Camera.tscn::PackedScene::704360461285479859::1678888875::0::1::::<><>::res://principal/cenas/scripts/Camera.gd
 Global.tscn::PackedScene::8160151261848261098::1677776162::0::1::::<><>::res://principal/cenas/scripts/Global.gd
@@ -710,8 +710,8 @@ HoraDaNecromancia.png::CompressedTexture2D::8389387196124347138::1677696788::167
 IFUV.png::CompressedTexture2D::1306547255249637281::1677696788::1677696973::1::::<><>::
 Soulchain.png::CompressedTexture2D::506685793628054260::1677696788::1677696973::1::::<><>::
 WhaleEater.png::CompressedTexture2D::9099472615465771518::1677696788::1677696973::1::::<><>::
-::res://principal/recursos/data/::1677696788
-Minigames.gd::GDScript::-1::1677696897::0::1::::<>Resource<>::
+::res://principal/recursos/data/::1680231484
+Minigames.gd::GDScript::-1::1680231484::0::1::::<>Resource<>::
 ::res://principal/recursos/fonts/::1677697007
 coolvetica compressed hv.otf::FontFile::6748932284294176630::1677696788::1677696973::1::::<><>::
 coolvetica condensed rg.otf::FontFile::4092841145352543133::1677696788::1677696973::1::::<><>::
@@ -722,8 +722,8 @@ More Info.txt::TextFile::-1::1677696788::0::1::::<><>::
 Stop Bullying.jpg::CompressedTexture2D::3867893690973747793::1677696788::1677697007::1::::<><>::
 Stop Bullying.otf::FontFile::3164011092699679055::1677696788::1677696973::1::::<><>::
 Stop Bullying.ttf::FontFile::8686695694300270358::1677696788::1677696973::1::::<><>::
-::res://principal/recursos/shaders/::1678976986
-Diamond.tres::ShaderMaterial::2745933949654670875::1678976986::0::1::::<><>::
+::res://principal/recursos/shaders/::1680356808
+Diamond.tres::ShaderMaterial::2745933949654670875::1680356808::0::1::::<><>::
 LightMask.tres::CanvasItemMaterial::-1::1677696897::0::1::::<><>::
 mask.gdshader::Shader::-1::1678812522::0::1::::<><>::
 ::res://principal/recursos/sounds/::1677696788
@@ -758,9 +758,9 @@ MenuBase.png::CompressedTexture2D::633618446106771336::1677696788::1677696984::1
 toggle.png::CompressedTexture2D::7127972561077136915::1677696788::1677696986::1::::<><>::
 toggle_checked.png::CompressedTexture2D::5366956985596676485::1677696788::1677696986::1::::<><>::
 toggle_unchecked.png::CompressedTexture2D::1529152158646614683::1677696788::1677696986::1::::<><>::
-::res://principal/recursos/themes/::1678976986
-ButtonTheme.tres::Theme::8554980059142862082::1678976986::0::1::::<><>::uid://blcw2hkcbcxid<>uid://cip186bal41rd<>uid://v1y6bapablah
-GameTheme.tres::Theme::975870234295688012::1678976986::0::1::::<><>::uid://bh37fuggg4bip
-TitleTheme.tres::Theme::4904071591080636451::1678976986::0::1::::<><>::uid://dv05ux65ppls5
+::res://principal/recursos/themes/::1680356808
+ButtonTheme.tres::Theme::8554980059142862082::1680356808::0::1::::<><>::uid://blcw2hkcbcxid<>uid://cip186bal41rd<>uid://v1y6bapablah
+GameTheme.tres::Theme::975870234295688012::1680356808::0::1::::<><>::uid://bh37fuggg4bip
+TitleTheme.tres::Theme::4904071591080636451::1680356808::0::1::::<><>::uid://dv05ux65ppls5
 ::res://principal/saves/::1677696788
-save.tres::Resource::-1::1678893424::0::1::::<><>::res://principal/cenas/scripts/SaveFile.gd
+save.tres::Resource::-1::1680232080::0::1::::<><>::res://principal/cenas/scripts/SaveFile.gd
