@@ -1,6 +1,8 @@
-CPUParticles2D
-AnimatedSprite2D
+PathFollow2D
+Path2D
 Sprite2D
+AnimatedSprite2D
+CPUParticles2D
 AudioStreamPlayer
 AnimationPlayer
 Timer

@@ -1,9 +1,10 @@
 res://default_env.tres
-res://principal/cenas/Vitoria.tscn
+res://microjogos/2023S1/ericles-gamuto/cenas/main.tscn
 res://principal/recursos/themes/TitleTheme.tres
-res://principal/recursos/shaders/Diamond.tres
 res://principal/recursos/themes/ButtonTheme.tres
+res://principal/recursos/shaders/Diamond.tres
 res://principal/recursos/themes/GameTheme.tres
+res://microjogos/2023S1/ericles-gamuto/cenas/Little-mercury.gd
 res://principal/cenas/Jam.tscn
 res://principal/cenas/GameOver.tscn
 res://principal/cenas/Jogo.tscn
@@ -19,3 +20,5 @@ res://microjogos/not_implemented/teste/moveGamutoDemo/cenas/Player.tscn
 res://microjogos/moraguma/deerskull/cenas/Player.tscn
 res://microjogos/moraguma/whale_eater/cenas/Main.tscn
 res://microjogos/moraguma/soulchain/cenas/Main.tscn
+res://microjogos/2023S1/ericles-gamuto/cenas/Little-venus.gd
+res://microjogos/2023S1/ericles-gamuto/cenas/Little-earth.gd

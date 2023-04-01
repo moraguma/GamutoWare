@@ -1,10 +1,83 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=16 format=3 uid="uid://dpkarb7ui7eji"]
 
 [ext_resource type="Script" path="res://microjogos/2023S1/seu_projeto/cenas/scripts/main.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dxfoim36x58rc" path="res://microjogos/2023S1/ericles-gamuto/recursos/little-sun.png" id="2_61ei3"]
+[ext_resource type="Texture2D" uid="uid://dx7xeexi44c2" path="res://microjogos/2023S1/ericles-gamuto/recursos/little-mercury.png" id="3_wd8ly"]
+[ext_resource type="Script" path="res://microjogos/2023S1/ericles-gamuto/cenas/Little-mercury.gd" id="4_xpb66"]
+[ext_resource type="Texture2D" uid="uid://dvh5oocn1a3f6" path="res://microjogos/2023S1/ericles-gamuto/recursos/little-venus.png" id="5_f5phc"]
+[ext_resource type="Texture2D" uid="uid://da4n5l0y42wl4" path="res://microjogos/2023S1/ericles-gamuto/recursos/little-earth.png" id="6_4twkr"]
+[ext_resource type="Script" path="res://microjogos/2023S1/ericles-gamuto/cenas/Little-venus.gd" id="6_a3rle"]
+[ext_resource type="Texture2D" uid="uid://rudhj6g4ifnp" path="res://microjogos/2023S1/ericles-gamuto/recursos/little-mars.png" id="7_i3hv4"]
+[ext_resource type="Texture2D" uid="uid://cy168cggojj88" path="res://microjogos/2023S1/ericles-gamuto/recursos/little-jupiter.png" id="8_8dyrt"]
+[ext_resource type="Script" path="res://microjogos/2023S1/ericles-gamuto/cenas/Little-earth.gd" id="8_b50rq"]
+[ext_resource type="Texture2D" uid="uid://dnivuxcaownvp" path="res://microjogos/2023S1/ericles-gamuto/recursos/little-saturn.png" id="9_p6rtf"]
+[ext_resource type="Texture2D" uid="uid://dxek4667pguq3" path="res://microjogos/2023S1/ericles-gamuto/recursos/little-uranus.png" id="10_f7lvc"]
+[ext_resource type="Texture2D" uid="uid://b7hys545wqsrd" path="res://microjogos/2023S1/ericles-gamuto/recursos/little-neptune.png" id="11_c7cn7"]
+[ext_resource type="Texture2D" uid="uid://blewbek5hsaac" path="res://microjogos/2023S1/ericles-gamuto/recursos/little-pluto.png" id="12_sc543"]
+[ext_resource type="Texture2D" uid="uid://cqheowfxy606b" path="res://microjogos/2023S1/ericles-gamuto/recursos/nave-norm.png" id="13_mksyi"]
 
 [node name="Main" type="Node2D"]
-script = ExtResource( 1 )
+script = ExtResource("1")
 
 [node name="Camera3D" type="Camera2D" parent="."]
 anchor_mode = 0
-current = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Little-mercury" type="Sprite2D" parent="."]
+position = Vector2(554.5, 421.885)
+scale = Vector2(0.0716668, 0.0716668)
+texture = ExtResource("3_wd8ly")
+script = ExtResource("4_xpb66")
+
+[node name="Little-venus" type="Sprite2D" parent="."]
+position = Vector2(670.365, 425.562)
+scale = Vector2(0.0705321, 0.0705321)
+texture = ExtResource("5_f5phc")
+script = ExtResource("6_a3rle")
+
+[node name="Little-earth" type="Sprite2D" parent="."]
+position = Vector2(776, 432)
+scale = Vector2(0.0675835, 0.0675835)
+texture = ExtResource("6_4twkr")
+script = ExtResource("8_b50rq")
+
+[node name="Little-mars" type="Sprite2D" parent="."]
+position = Vector2(928, 424)
+scale = Vector2(0.089238, 0.089238)
+texture = ExtResource("7_i3hv4")
+
+[node name="Little-jupiter" type="Sprite2D" parent="."]
+position = Vector2(1156.41, 430.875)
+scale = Vector2(0.262066, 0.262066)
+texture = ExtResource("8_8dyrt")
+
+[node name="Little-saturn" type="Sprite2D" parent="."]
+position = Vector2(1440, 456)
+scale = Vector2(0.197727, 0.197727)
+texture = ExtResource("9_p6rtf")
+
+[node name="Little-uranus" type="Sprite2D" parent="."]
+position = Vector2(1647.83, 475.75)
+scale = Vector2(0.0915841, 0.0915841)
+texture = ExtResource("10_f7lvc")
+
+[node name="Little-neptune" type="Sprite2D" parent="."]
+position = Vector2(1800, 504)
+scale = Vector2(0.103715, 0.103715)
+texture = ExtResource("11_c7cn7")
+
+[node name="Little-pluto" type="Sprite2D" parent="."]
+position = Vector2(1976, 496)
+scale = Vector2(0.061382, 0.061382)
+texture = ExtResource("12_sc543")
+
+[node name="Nave-norm" type="Sprite2D" parent="."]
+position = Vector2(1912, 1072)
+rotation = -0.958186
+texture = ExtResource("13_mksyi")
+
+[node name="Little-sun" type="Sprite2D" parent="."]
+position = Vector2(320, 360)
+scale = Vector2(0.45202, 0.45202)
+texture = ExtResource("2_61ei3")
