@@ -1,8 +1,11 @@
+CollisionShape2D
+Area2D
+AnimationPlayer
+Sprite2D
+Node
 CPUParticles2D
 AnimatedSprite2D
-Sprite2D
 AudioStreamPlayer
-AnimationPlayer
 Timer
 Camera2D
 SubViewport
