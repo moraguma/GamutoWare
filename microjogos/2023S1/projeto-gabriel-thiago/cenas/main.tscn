@@ -1,10 +1,64 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=11 format=3 uid="uid://bgmkhysifpd0v"]
 
 [ext_resource type="Script" path="res://microjogos/2023S1/seu_projeto/cenas/scripts/main.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://b0iihu1ksrv0h" path="res://microjogos/2023S1/projeto-gabriel-thiago/recursos/bg.png" id="2_5oi6b"]
+[ext_resource type="Texture2D" uid="uid://dpurvvi16n3he" path="res://microjogos/2023S1/projeto-gabriel-thiago/recursos/gol.png" id="3_eas3m"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-gabriel-thiago/cenas/scripts/mira.gd" id="4_gwpxb"]
+[ext_resource type="Texture2D" uid="uid://7ww15f6fooqn" path="res://microjogos/2023S1/projeto-gabriel-thiago/recursos/mira.png" id="4_r2nd0"]
+[ext_resource type="Texture2D" uid="uid://dhwk81b4kqh4s" path="res://microjogos/2023S1/projeto-gabriel-thiago/recursos/Alvo.png" id="5_tcs7e"]
+[ext_resource type="Texture2D" uid="uid://od3rn7ismgg6" path="res://microjogos/2023S1/projeto-gabriel-thiago/recursos/bola.png" id="6_kwu5m"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-gabriel-thiago/cenas/scripts/bola.gd" id="7_keca1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jtqee"]
+radius = 31.3832
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fjx23"]
+radius = 86.6741
 
 [node name="Main" type="Node2D"]
-script = ExtResource( 1 )
+position = Vector2(936, 568)
+scale = Vector2(1.01965, 1)
+script = ExtResource("1")
 
 [node name="Camera3D" type="Camera2D" parent="."]
 anchor_mode = 0
-current = true
+
+[node name="Fundo" type="Sprite2D" parent="."]
+position = Vector2(15.6917, -168)
+scale = Vector2(11.7074, 8.1875)
+texture = ExtResource("2_5oi6b")
+
+[node name="SpriteGol" type="Sprite2D" parent="."]
+position = Vector2(31.3832, -184)
+scale = Vector2(1.03814, 0.913451)
+texture = ExtResource("3_eas3m")
+
+[node name="player" type="CharacterBody2D" parent="."]
+script = ExtResource("4_gwpxb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+shape = SubResource("CircleShape2D_jtqee")
+
+[node name="SpriteMira" type="Sprite2D" parent="player"]
+z_index = 1
+scale = Vector2(0.17549, 0.167369)
+texture = ExtResource("4_r2nd0")
+
+[node name="alvo" type="Sprite2D" parent="."]
+position = Vector2(-360.907, -320)
+scale = Vector2(0.252291, 0.217183)
+texture = ExtResource("5_tcs7e")
+
+[node name="CharacterBody2D" type="RigidBody2D" parent="."]
+position = Vector2(0, 400)
+gravity_scale = 0.0
+script = ExtResource("7_keca1")
+
+[node name="bola" type="Sprite2D" parent="CharacterBody2D"]
+scale = Vector2(6.5, 6.24)
+texture = ExtResource("6_kwu5m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-7.84583, 0)
+shape = SubResource("CircleShape2D_fjx23")
+disabled = true
