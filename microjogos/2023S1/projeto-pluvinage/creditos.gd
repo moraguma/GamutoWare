@@ -7,17 +7,27 @@ extends Resource
 
 
 # Título do seu jogo
-var title_pt = "Titulo em Portugues"
-var title_en = "Title in English"
+var title_pt = "Jogo de Jean Fredric Pluvinage"
+var title_en = "Jean Frederic Pluvinage's Game"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
-Criado por: [Seu nome!]
+Criado por: [Jean Frederic Pluvinage]
+Confira meu website: www.foxtablet.com.br
 
-Você pode preencher o resto deste campo com creditos de assets utilizados, links para sua redes sociais ou qualquer outro detalhe que ache relevante
+Arte do background por Luis Zuno (@ansimuz) (www.opengameart.org)
+Arte das plataformas por  Killy Vera (www.opengameart.org)
+Arte da estrela por Rafaelchm (www.opengameart.org)
+Arte do powerup por KonitaTutorials (www.opengameart.org)
+Arte do morcego vermelho por Segel (www.opengameart.org)
 """
 var credits_en = """
-Made by: [Your name!]
+Made by: [Jean Frederic Pluvinage]
+Check my website: www.foxtablet.com
 
-Fill this space with credits to used assets, links to your social medias and whatever other details you think are important
+Background art by Luis Zuno (@ansimuz) (www.opengameart.org)
+Platform art by Killy Vera (www.opengameart.org)
+Star art by Rafaelchm (www.opengameart.org)
+Powerup art by KonitaTutorials (www.opengameart.org)
+Red bat art by Segel (www.opengameart.org)
 """
