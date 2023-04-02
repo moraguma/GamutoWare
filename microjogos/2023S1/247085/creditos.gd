@@ -7,17 +7,27 @@ extends Resource
 
 
 # Título do seu jogo
-var title_pt = "Titulo em Portugues"
-var title_en = "Title in English"
+var title_pt = "Doce memória"
+var title_en = "Sweet memory"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
 Criado por: Felipe Brabes
+sons:
+	beepbox.com
+imagens:
+	Laranja: Original: Jpbrigand2
+	Banana: Original: Justus Blümer from Deutschland - Derivative:Kimberli Mäkäräinen
+	Maçã: Original: Abhijit Tembhekar from Mumbai, India	
 
-Você pode preencher o resto deste campo com creditos de assets utilizados, links para sua redes sociais ou qualquer outro detalhe que ache relevante
 """
 var credits_en = """
 Made by: Felipe Brabes
-
-Fill this space with credits to used assets, links to your social medias and whatever other details you think are important
+sounds: 
+	beepbox.com
+images:
+	orange: Original: Jpbrigand2
+	Banana: Original: Justus Blümer from Deutschland - Derivative:Kimberli Mäkäräinen
+	apple: Original: Abhijit Tembhekar from Mumbai, India	
 """
+
