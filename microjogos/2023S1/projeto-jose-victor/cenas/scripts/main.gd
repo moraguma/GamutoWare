@@ -13,18 +13,18 @@ func _ready():
 	random.randomize()
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
+			NotificationCenter.notify("Eat the Fruits!")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FACA ALGO!")
+			NotificationCenter.notify("Coma as frutas!")
 	var spawns = [ 
 		{ "min": Vector2(96,896), "max": Vector2(1760,992) },
 		{ "min": Vector2(1760,208), "max": Vector2(1824,944) },
 		{ "min": Vector2(96,96), "max": Vector2(1760,160) },
-		{ "min": Vector2(96,208), "max": Vector2(160,944) }
 	]
-	var miojos = [$Miojin1, $Miojin2, $Miojin3, $Miojin4]
-	for i in range(4):
-		var spawn = spawns[i]  
+	var miojos = [$Miojin1, $Miojin2, $Miojin3]
+	for i in range(3):
+		var spawn = spawns[i]
+		print(miojos)  
 		miojos[i].position = Vector2(random.randi_range(spawn.min.x,spawn.max.x),random.randi_range(spawn.min.y,spawn.max.y))
 		
 

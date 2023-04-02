@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dwlyvqew40syg"]
+[gd_scene load_steps=12 format=3 uid="uid://dwlyvqew40syg"]
 
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto-jose-victor/cenas/scripts/main.gd" id="1_nwctk"]
 [ext_resource type="PackedScene" uid="uid://dsqlfkk0wh851" path="res://microjogos/2023S1/projeto-jose-victor/cenas/player.tscn" id="2_7ilmr"]
@@ -331,10 +331,6 @@ region = Rect2(0, 336, 16, 16)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_itg8m"]
 size = Vector2(64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rmvea"]
-atlas = ExtResource("2_tu0jd")
-region = Rect2(0, 336, 16, 16)
-
 [node name="Main" type="Node2D"]
 script = ExtResource("1_nwctk")
 
@@ -443,21 +439,8 @@ texture = SubResource("AtlasTexture_evgqu")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Miojin3"]
 shape = SubResource("RectangleShape2D_itg8m")
 
-[node name="Miojin4" type="Area2D" parent="."]
-position = Vector2(160, 512)
-script = ExtResource("3_3v2m1")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Miojin4"]
-texture_filter = 1
-scale = Vector2(4, 4)
-texture = SubResource("AtlasTexture_rmvea")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Miojin4"]
-shape = SubResource("RectangleShape2D_itg8m")
-
 [node name="player" parent="." instance=ExtResource("2_7ilmr")]
-position = Vector2(960, 544)
+position = Vector2(152, 544)
 
 [connection signal="body_entered" from="Miojin1" to="." method="ganhar_ponto"]
 [connection signal="body_entered" from="Miojin1" to="Miojin1" method="_on_body_entered"]
@@ -465,5 +448,3 @@ position = Vector2(960, 544)
 [connection signal="body_entered" from="Miojin2" to="Miojin2" method="_on_body_entered"]
 [connection signal="body_entered" from="Miojin3" to="." method="ganhar_ponto"]
 [connection signal="body_entered" from="Miojin3" to="Miojin3" method="_on_body_entered"]
-[connection signal="body_entered" from="Miojin4" to="." method="ganhar_ponto"]
-[connection signal="body_entered" from="Miojin4" to="Miojin4" method="_on_body_entered"]

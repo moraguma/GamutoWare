@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 800.0   
+const SPEED = 700.0   
 var perdeu = false
 func _ready():
 	velocity = Vector2(SPEED, 0)
