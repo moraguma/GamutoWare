@@ -1,147 +1,68 @@
-[gd_scene load_steps=14 format=3 uid="uid://bnf72gff18p7h"]
+[gd_scene load_steps=10 format=3 uid="uid://bnf72gff18p7h"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/seu_projeto/cenas/scripts/main.gd" id="1"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-viniwaki/cenas/main.gd" id="1_cnk73"]
 [ext_resource type="Texture2D" uid="uid://b75ddenytue1h" path="res://microjogos/2023S1/projeto-viniwaki/recursos/fruitninja-bg.png" id="2_7semu"]
-[ext_resource type="Texture2D" uid="uid://b775j1kclmr80" path="res://microjogos/2023S1/projeto-viniwaki/recursos/Banana.svg" id="3_nbaqk"]
-[ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="4_udvxi"]
-[ext_resource type="Texture2D" uid="uid://qpdgh5rnvr1w" path="res://microjogos/2023S1/projeto-viniwaki/recursos/kb-arrow.png" id="5_ssytw"]
-[ext_resource type="Texture2D" uid="uid://dlf6xxtxrmaqm" path="res://microjogos/2023S1/projeto-viniwaki/recursos/Red_Apple.svg" id="6_xo6ko"]
-[ext_resource type="Texture2D" uid="uid://qjjmu3nhe0ul" path="res://microjogos/2023S1/projeto-viniwaki/recursos/Pineapple.svg" id="7_6oq7j"]
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-viniwaki/cenas/arrow.gd" id="7_n2kvf"]
-[ext_resource type="Texture2D" uid="uid://c1n3dqy244cwm" path="res://microjogos/2023S1/projeto-viniwaki/recursos/Watermelon.svg" id="8_j0ep8"]
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-viniwaki/cenas/fruit.gd" id="8_tksr1"]
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-viniwaki/cenas/events-timer.gd" id="14_4i63n"]
+[ext_resource type="Texture2D" uid="uid://sk30xhvchy13" path="res://microjogos/2023S1/projeto-viniwaki/recursos/slash_1.png" id="3_2xmy6"]
+[ext_resource type="Texture2D" uid="uid://o6witdog2nbq" path="res://microjogos/2023S1/projeto-viniwaki/recursos/slash_2.png" id="4_25ll2"]
+[ext_resource type="Texture2D" uid="uid://b7beo15csbpk1" path="res://microjogos/2023S1/projeto-viniwaki/recursos/slash_4.png" id="6_88stg"]
+[ext_resource type="Texture2D" uid="uid://dyu14como8da3" path="res://microjogos/2023S1/projeto-viniwaki/recursos/slash_5.png" id="7_c0l31"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-viniwaki/cenas/slice.gd" id="9_rl7mx"]
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_p5a2k"]
-a = Vector2(-1320, -15)
-b = Vector2(1594, -15)
+[sub_resource type="Curve2D" id="Curve2D_ngptm"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 476.445, 2432, 0, 0, 0, 0, 1111.7, 2432)
+}
+point_count = 2
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_22b81"]
-radius = 32.0
+[sub_resource type="SpriteFrames" id="SpriteFrames_p0m2f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_2xmy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_25ll2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_88stg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_c0l31")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Main" type="Node2D"]
-position = Vector2(944, 728)
-script = ExtResource("1")
-
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(40, 600)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, -1)
-shape = SubResource("SegmentShape2D_p5a2k")
-debug_color = Color(0.717647, 0, 0.0666667, 0.419608)
+script = ExtResource("1_cnk73")
 
 [node name="bg" type="Sprite2D" parent="."]
-position = Vector2(24, -188)
+position = Vector2(968, 542)
 scale = Vector2(2.025, 1.52222)
 texture = ExtResource("2_7semu")
 
-[node name="Camera3D" type="Camera2D" parent="."]
-
-[node name="banana" type="RigidBody2D" parent="."]
-position = Vector2(-424, 480)
-constant_force = Vector2(0, 600)
-script = ExtResource("8_tksr1")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="banana"]
-shape = SubResource("CircleShape2D_22b81")
-disabled = true
-
-[node name="initial-sprite" type="Sprite2D" parent="banana"]
-position = Vector2(1.52588e-05, 0)
-scale = Vector2(1.75, 1.75)
-texture = ExtResource("3_nbaqk")
-
-[node name="cut-sprite" type="Sprite2D" parent="banana"]
-visible = false
-texture = ExtResource("4_udvxi")
-
-[node name="arrow" type="Sprite2D" parent="banana"]
-position = Vector2(-1.52588e-05, 6.10352e-05)
-scale = Vector2(1.69247, 1.69247)
-texture = ExtResource("5_ssytw")
-script = ExtResource("7_n2kvf")
-
-[node name="apple" type="RigidBody2D" parent="."]
-position = Vector2(544, 472)
-linear_velocity = Vector2(-400, -1800)
-angular_velocity = 1.0
-constant_force = Vector2(0, 600)
-script = ExtResource("8_tksr1")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="apple"]
-shape = SubResource("CircleShape2D_22b81")
-disabled = true
-
-[node name="initial-sprite" type="Sprite2D" parent="apple"]
-position = Vector2(6.10352e-05, 6.10352e-05)
-scale = Vector2(1.54073, 1.54073)
-texture = ExtResource("6_xo6ko")
-
-[node name="cut-sprite" type="Sprite2D" parent="apple"]
-visible = false
-texture = ExtResource("4_udvxi")
-
-[node name="arrow" type="Sprite2D" parent="apple"]
-position = Vector2(6.10352e-05, -3.05176e-05)
-scale = Vector2(1.625, 1.625)
-texture = ExtResource("5_ssytw")
-script = ExtResource("7_n2kvf")
-
-[node name="pineapple" type="RigidBody2D" parent="."]
-position = Vector2(264, 520)
-linear_velocity = Vector2(-170, -1600)
-angular_velocity = -1.5
-constant_force = Vector2(0, 600)
-script = ExtResource("8_tksr1")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="pineapple"]
-shape = SubResource("CircleShape2D_22b81")
-disabled = true
-
-[node name="initial-sprite" type="Sprite2D" parent="pineapple"]
-position = Vector2(7.99997, -16)
-scale = Vector2(1.54286, 1.54286)
-texture = ExtResource("7_6oq7j")
-
-[node name="cut-sprite" type="Sprite2D" parent="pineapple"]
-visible = false
-texture = ExtResource("4_udvxi")
-
-[node name="arrow" type="Sprite2D" parent="pineapple"]
-scale = Vector2(1.6875, 1.6875)
-texture = ExtResource("5_ssytw")
-script = ExtResource("7_n2kvf")
-
-[node name="watermelon" type="RigidBody2D" parent="."]
-position = Vector2(-152, 488)
-linear_velocity = Vector2(-200, -1500)
-angular_velocity = -1.0
-constant_force = Vector2(0, 600)
-script = ExtResource("8_tksr1")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="watermelon"]
-shape = SubResource("CircleShape2D_22b81")
-disabled = true
-
-[node name="initial-sprite" type="Sprite2D" parent="watermelon"]
-position = Vector2(3.05176e-05, 0)
-scale = Vector2(1.81911, 1.81911)
-texture = ExtResource("8_j0ep8")
-
-[node name="cut-sprite" type="Sprite2D" parent="watermelon"]
-visible = false
-texture = ExtResource("4_udvxi")
-
-[node name="arrow" type="Sprite2D" parent="watermelon"]
-scale = Vector2(1.70312, 1.70312)
-texture = ExtResource("5_ssytw")
-script = ExtResource("7_n2kvf")
-
-[node name="katana-cut" type="Sprite2D" parent="."]
-position = Vector2(-37, 642)
-
 [node name="Timer" type="Timer" parent="."]
-one_shot = true
+wait_time = 1.2
 autostart = true
-script = ExtResource("14_4i63n")
+
+[node name="Path2D" type="Path2D" parent="."]
+scale = Vector2(1.20896, 0.5)
+curve = SubResource("Curve2D_ngptm")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(1111.7, 2432)
+progress = 668.537
+rotates = false
+
+[node name="slice" type="AnimatedSprite2D" parent="."]
+visible = false
+z_index = 1
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_p0m2f")
+script = ExtResource("9_rl7mx")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="animation_finished" from="slice" to="slice" method="_on_animation_finished"]
+[connection signal="animation_looped" from="slice" to="." method="_on_slice_animation_looped"]
+[connection signal="animation_looped" from="slice" to="slice" method="_on_animation_looped"]

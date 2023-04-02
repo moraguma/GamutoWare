@@ -1,6 +1,6 @@
 extends Sprite2D
 
-var correct_rotation
+var correct_rotation = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -10,8 +10,11 @@ func _ready():
 func _process(_delta):
 	pass
 	
+	
+func set_correct_rotation(rot):
+	correct_rotation = rot
 
 
 func _physics_process(_delta):
-	correct_rotation = 
-	rotation = deg_to_rad(correct_rotation) - get_node("..").rotation
+	#position = get_node("../rigid_body").global_position + Vector2(100, 0)
+	rotation = correct_rotation - get_parent().rotation
