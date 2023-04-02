@@ -33,6 +33,8 @@ func _ready():
 			NotificationCenter.notify("SLICE!")
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("CORTE!")
+			
+	register_win()
 	
 
 
@@ -93,6 +95,7 @@ func my_method():
 func remove_from_slice_queue(d, fruit):
 	slice_queues[d].erase(fruit)
 	$audio_lose.play()
+	register_lose()
 	
 func throw_fruit():
 	var new_fruit = fruit_scene.instantiate()

@@ -44,7 +44,5 @@ func _process(_delta):
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
 	if cut == false:
-		emit_signal("lose")
-		print("lose")
 		get_parent().remove_from_slice_queue(dir, self)
 	queue_free()
