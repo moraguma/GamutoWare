@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://boovp3h0xf1yv"]
+
+[ext_resource type="Texture2D" uid="uid://bpcmcva7v7ahu" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/Nave_1.png" id="1_nrios"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/nave_1.gd" id="2_8s553"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hkw4i"]
+size = Vector2(256, 80)
+
+[node name="Nave1" type="Sprite2D"]
+position = Vector2(328, 504)
+texture = ExtResource("1_nrios")
+script = ExtResource("2_8s553")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_hkw4i")
+
+[node name="Area2D" type="Area2D" parent="."]

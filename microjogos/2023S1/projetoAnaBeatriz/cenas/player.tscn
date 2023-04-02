@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqwdde2v241xr"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/player.gd" id="1_1ywkb"]
+[ext_resource type="Texture2D" uid="uid://cywen6tasoke4" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/SpaceShip.png" id="2_87uws"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/SpaceShip.gd" id="3_081xl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_68caw"]
+size = Vector2(92.1212, 93.617)
+
+[node name="Area2D2" type="CharacterBody2D"]
+position = Vector2(885.5, 974)
+scale = Vector2(1.65, 1.88)
+script = ExtResource("1_1ywkb")
+
+[node name="SpaceShip" type="Sprite2D" parent="."]
+texture = ExtResource("2_87uws")
+script = ExtResource("3_081xl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.909058, 1.06378)
+shape = SubResource("RectangleShape2D_68caw")
