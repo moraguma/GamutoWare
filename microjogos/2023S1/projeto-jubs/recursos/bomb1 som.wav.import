@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ssf1b7llp7in"
+path="res://.godot/imported/bomb1 som.wav-149ff80104a0ca2bdea2498aba774a77.sample"
+
+[deps]
+
+source_file="res://microjogos/2023S1/projeto-jubs/recursos/bomb1 som.wav"
+dest_files=["res://.godot/imported/bomb1 som.wav-149ff80104a0ca2bdea2498aba774a77.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
