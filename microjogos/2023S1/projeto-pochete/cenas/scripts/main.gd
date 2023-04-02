@@ -42,11 +42,25 @@ func _physics_process(delta):
 	pass
 
 
+var last_draw_won = 0
+var won_i
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a renderização, 
 # como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
 # desde a última chamada desta função. O comando pass não faz nada
 func _process(delta):
-	pass
+	if won:
+		last_draw_won += delta
+		if last_draw_won > 0.07:
+			last_draw_won = 0
+			if won_i > 0:
+				for j in range(won_i - 1):
+					head.tail_nodes[j].position = head.tail_nodes[j+1].position
+				won_i -= 1
+			if won_i == 1:
+				head.visible = false
+				for j in range(len(head.tail_nodes)):
+					head.tail_nodes[j].visible = false
+				$Music.stop()
 
 
 # --------------------------------------------------------------------------------------------------
@@ -112,3 +126,9 @@ func _on_head_area_entered(area):
 	if area == final_apple and len(gotten_apples) == 2:
 		register_win()
 		won = true
+		won_i = len(head.tail_nodes)
+		#head.tail_nodes[-1].position = head.position
+		for j in range(won_i - 1):
+			head.tail_nodes[j].position = head.tail_nodes[j+1].position
+		for apple in chosen_apples + [final_apple]:
+			apple.visible = false

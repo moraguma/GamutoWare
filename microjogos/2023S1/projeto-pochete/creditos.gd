@@ -8,7 +8,7 @@ extends Resource
 
 # Título do seu jogo
 var title_pt = "Tessstemunha"
-var title_en = "Witnesss"
+var title_en = "The Witnesss"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
