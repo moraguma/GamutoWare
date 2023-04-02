@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://baanv0h6aciec"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-marcos-evers/cenas/scripts/controler.gd" id="1_42yn8"]
+[ext_resource type="Texture2D" uid="uid://cs5ne002fcrm2" path="res://microjogos/2023S1/projeto-marcos-evers/recursos/spaceRockets_002.png" id="2_sgpy0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gsfx2"]
+radius = 56.0
+height = 304.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_42yn8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("2_sgpy0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_gsfx2")

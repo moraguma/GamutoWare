@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8vba6bv26abo"
-path="res://.godot/imported/capa.png-d3bb5b406c8e9bf209069b3a3cf328c0.ctex"
+uid="uid://rb2b55ptbmrb"
+path="res://.godot/imported/spaceMeteors_001.png-3fbaaed753df5e1938436c54b0998c6b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2023S1/projeto-marcos-evers/capa.png"
-dest_files=["res://.godot/imported/capa.png-d3bb5b406c8e9bf209069b3a3cf328c0.ctex"]
+source_file="res://microjogos/2023S1/projeto-marcos-evers/recursos/spaceMeteors_001.png"
+dest_files=["res://.godot/imported/spaceMeteors_001.png-3fbaaed753df5e1938436c54b0998c6b.ctex"]
 
 [params]
 

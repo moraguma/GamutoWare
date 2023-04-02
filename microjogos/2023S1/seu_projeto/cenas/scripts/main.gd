@@ -24,7 +24,8 @@ func _ready():
 		Global.LANGUAGE.EN:
 			NotificationCenter.notify("DO SOMETHING!")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FACA ALGO!")
+			NotificationCenter.notify("DESVIE!")
+	register_win()
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
@@ -47,8 +48,9 @@ func _process(delta):
 
 
 # Um método genérico. Crie quantos métodos você precisar!
-func my_method():
-	pass
+func _on_hit(body):
+	remove_child(body)
+	register_lose()
 
 
 # --------------------------------------------------------------------------------------------------

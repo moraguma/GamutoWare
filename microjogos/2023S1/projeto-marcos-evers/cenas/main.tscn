@@ -1,9 +1,49 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0e36vkwwwbi7"]
+[gd_scene load_steps=6 format=3 uid="uid://b0e36vkwwwbi7"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/seu_projeto/cenas/scripts/main.gd" id="1"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-marcos-evers/cenas/scripts/main.gd" id="1_rkkh5"]
+[ext_resource type="PackedScene" uid="uid://baanv0h6aciec" path="res://microjogos/2023S1/projeto-marcos-evers/cenas/nave.tscn" id="2_t6ek1"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-marcos-evers/cenas/Spawner.gd" id="3_5tnvt"]
+[ext_resource type="PackedScene" uid="uid://do2ner0jnwv10" path="res://microjogos/2023S1/projeto-marcos-evers/cenas/obstaculo.tscn" id="3_ltru6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tfewu"]
+size = Vector2(1930, 56)
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1")
+script = ExtResource("1_rkkh5")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -32.0
+offset_top = -40.0
+offset_right = 1960.0
+offset_bottom = 1168.0
+color = Color(0.0352941, 0.0313726, 0.0784314, 1)
 
 [node name="Camera3D" type="Camera2D" parent="."]
 anchor_mode = 0
+
+[node name="Player" parent="." instance=ExtResource("2_t6ek1")]
+position = Vector2(288, 560)
+SPEED = 800.0
+GRAVITY = 50.0
+
+[node name="Spawner" type="Node" parent="."]
+script = ExtResource("3_5tnvt")
+obstaculo_scene = ExtResource("3_ltru6")
+
+[node name="SpawnTimer" type="Timer" parent="Spawner"]
+wait_time = 0.7
+autostart = true
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(960, 1112)
+shape = SubResource("RectangleShape2D_tfewu")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(960, -32)
+shape = SubResource("RectangleShape2D_tfewu")
+
+[connection signal="timeout" from="Spawner/SpawnTimer" to="Spawner" method="_on_spawn_timer_timeout"]
