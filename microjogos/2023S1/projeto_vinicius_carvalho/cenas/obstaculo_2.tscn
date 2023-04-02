@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5d378qv55jwf"]
+
+[ext_resource type="Texture2D" uid="uid://cq7d0dfvt2m8r" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Tiles_rock/tile35.png" id="1_hpc1e"]
+[ext_resource type="Texture2D" uid="uid://cip7dcnbvq27b" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Tiles_rock/tile36.png" id="2_bqv1t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_44aw1"]
+size = Vector2(71.5, 312.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1hxel"]
+size = Vector2(28.75, 31.25)
+
+[node name="Node2D" type="Node2D"]
+texture_filter = 1
+scale = Vector2(2, 2)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Tile35" type="Sprite2D" parent="Area2D"]
+position = Vector2(188, 350)
+rotation = -3.14159
+scale = Vector2(2, 2)
+texture = ExtResource("1_hpc1e")
+
+[node name="Tile40" type="Sprite2D" parent="Area2D"]
+position = Vector2(125.5, 475)
+rotation = -3.14159
+scale = Vector2(2, 2)
+texture = ExtResource("2_bqv1t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2(188.75, 380.75)
+shape = SubResource("RectangleShape2D_44aw1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2(180.25, 34.75)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_1hxel")
+
+[node name="Tile36" type="Sprite2D" parent="Area2D"]
+position = Vector2(181, 66.5)
+scale = Vector2(2, 2)
+texture = ExtResource("2_bqv1t")
+
+[node name="Tile37" type="Sprite2D" parent="Area2D"]
+position = Vector2(187.5, 478)
+rotation = -3.14159
+scale = Vector2(2, 2)
+texture = ExtResource("1_hpc1e")
+
+[node name="Tile38" type="Sprite2D" parent="Area2D"]
+position = Vector2(188, 222.5)
+rotation = -3.14159
+scale = Vector2(2, 2)
+texture = ExtResource("2_bqv1t")
+
+[node name="Tile39" type="Sprite2D" parent="Area2D"]
+position = Vector2(228, 477.5)
+rotation = -3.14159
+scale = Vector2(2, 2)
+texture = ExtResource("2_bqv1t")

@@ -5,3 +5,6 @@ As pastas aqui dentro tem arquivos de texto explicando seu propósito, e a cena 
 Lembre de preencher o arquivo creditos.gd antes de entregar o seu jogo!
 
 Eu sobrevivi o workshop de Git!
+
+
+

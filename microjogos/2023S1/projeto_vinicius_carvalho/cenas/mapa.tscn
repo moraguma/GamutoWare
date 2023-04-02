@@ -1,0 +1,67 @@
+[gd_scene load_steps=14 format=3 uid="uid://b07e6j2l3hlm4"]
+
+[ext_resource type="Texture2D" uid="uid://d3bvdjjxe4tnq" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Background/Bright/rock5.png" id="1_tuq42"]
+[ext_resource type="Texture2D" uid="uid://ca4tv8up2fyck" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Background/Bright/bg.png" id="2_ec62q"]
+[ext_resource type="Texture2D" uid="uid://231nt1p6wvbe" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Background/Bright/rock3.png" id="3_uum8i"]
+[ext_resource type="Texture2D" uid="uid://bgmrg2uic1ugq" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Background/Bright/myst.png" id="4_w15of"]
+[ext_resource type="Texture2D" uid="uid://b4agjeihhoewm" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Background/Bright/rock1.png" id="5_imvjj"]
+[ext_resource type="Texture2D" uid="uid://lbraunvhm7kl" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Background/Bright/rock2.png" id="6_naq32"]
+[ext_resource type="Texture2D" uid="uid://byvq5aest5ji1" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Background/Bright/Background.png" id="7_ogeo8"]
+[ext_resource type="PackedScene" uid="uid://b2ao8lfo1ker2" path="res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/obstaculo_3.tscn" id="8_iq8lj"]
+[ext_resource type="PackedScene" uid="uid://b5d378qv55jwf" path="res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/obstaculo_2.tscn" id="9_h0iah"]
+[ext_resource type="PackedScene" uid="uid://dxmgvrnios2fy" path="res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/obstaculo_1.tscn" id="10_qmp00"]
+[ext_resource type="PackedScene" uid="uid://dtj03ehck05tb" path="res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/Player.tscn" id="11_xlwkk"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i8yxx"]
+texture = ExtResource("7_ogeo8")
+
+[sub_resource type="TileSet" id="TileSet_i2iot"]
+sources/0 = SubResource("TileSetAtlasSource_i8yxx")
+
+[node name="Mapa" type="Node2D"]
+texture_filter = 1
+
+[node name="background" type="Node2D" parent="."]
+scale = Vector2(2, 2)
+
+[node name="Rock5" type="Sprite2D" parent="background"]
+position = Vector2(482, 267)
+texture = ExtResource("1_tuq42")
+
+[node name="Bg" type="Sprite2D" parent="background"]
+position = Vector2(484.5, 269)
+texture = ExtResource("2_ec62q")
+
+[node name="Rock3" type="Sprite2D" parent="background/Bg"]
+position = Vector2(2, 7)
+texture = ExtResource("3_uum8i")
+
+[node name="Myst" type="Sprite2D" parent="background/Bg"]
+position = Vector2(-4.5, 0.5)
+texture = ExtResource("4_w15of")
+
+[node name="Rock1" type="Sprite2D" parent="background/Bg/Myst"]
+position = Vector2(4.5, 8.5)
+texture = ExtResource("5_imvjj")
+
+[node name="Rock2" type="Sprite2D" parent="background/Bg/Myst"]
+position = Vector2(2.5, 0)
+texture = ExtResource("6_naq32")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_i2iot")
+format = 2
+
+[node name="Obstaculos" type="Node2D" parent="."]
+
+[node name="Obstaculo1" parent="Obstaculos" instance=ExtResource("10_qmp00")]
+position = Vector2(1221, 3)
+
+[node name="Obstaculo3" parent="Obstaculos" instance=ExtResource("8_iq8lj")]
+position = Vector2(657, 4)
+
+[node name="Node2D2" parent="Obstaculos" instance=ExtResource("9_h0iah")]
+position = Vector2(156, 0)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("11_xlwkk")]
+position = Vector2(-724, 72)
