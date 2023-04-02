@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://bgmkhysifpd0v"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/seu_projeto/cenas/scripts/main.gd" id="1"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-gabriel-thiago/cenas/scripts/main.gd" id="1_t115o"]
 [ext_resource type="Texture2D" uid="uid://b0iihu1ksrv0h" path="res://microjogos/2023S1/projeto-gabriel-thiago/recursos/bg.png" id="2_5oi6b"]
 [ext_resource type="Texture2D" uid="uid://dpurvvi16n3he" path="res://microjogos/2023S1/projeto-gabriel-thiago/recursos/gol.png" id="3_eas3m"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto-gabriel-thiago/cenas/scripts/mira.gd" id="4_gwpxb"]
@@ -317,7 +317,7 @@ _data = {
 [node name="Main" type="Node2D"]
 position = Vector2(936, 568)
 scale = Vector2(1.01965, 1)
-script = ExtResource("1")
+script = ExtResource("1_t115o")
 
 [node name="Camera3D" type="Camera2D" parent="."]
 anchor_mode = 0
