@@ -1,12 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://bys7ujbdmjddd"]
+[gd_scene load_steps=10 format=3 uid="uid://drosyf6u1slha"]
 
 [ext_resource type="Script" path="res://microjogos/2023S1/GamutoVeiga/cenas/scripts/main.gd" id="1_c6idw"]
 [ext_resource type="Texture2D" uid="uid://1u0g71ylh48m" path="res://microjogos/2023S1/GamutoVeiga/recursos/Fundo.png" id="1_lvxrl"]
 [ext_resource type="Texture2D" uid="uid://cec6re48kw561" path="res://microjogos/2023S1/GamutoVeiga/recursos/Copo.png" id="2_gmdpa"]
-[ext_resource type="Script" path="res://Copo 1.gd" id="3_b2vgy"]
 [ext_resource type="Texture2D" uid="uid://dhw3jfaacuwt2" path="res://microjogos/2023S1/GamutoVeiga/recursos/gamuto.png" id="3_snixi"]
-[ext_resource type="Script" path="res://Copo2.gd" id="6_l6eo8"]
-[ext_resource type="Script" path="res://Copo 3.gd" id="7_2ll3w"]
+[ext_resource type="Script" path="res://microjogos/2023S1/GamutoVeiga/cenas/scripts/Copo 1.gd" id="5_2t00f"]
+[ext_resource type="Script" path="res://microjogos/2023S1/GamutoVeiga/cenas/scripts/Copo2.gd" id="6_ygp6o"]
+[ext_resource type="Script" path="res://microjogos/2023S1/GamutoVeiga/cenas/scripts/Copo 3.gd" id="7_aruu5"]
 [ext_resource type="Texture2D" uid="uid://yvq13i5yjmd1" path="res://microjogos/2023S1/GamutoVeiga/recursos/seta.png" id="8_2xkjg"]
 [ext_resource type="AudioStream" uid="uid://crryaotppgsso" path="res://microjogos/2023S1/GamutoVeiga/recursos/Glassmuto_song.ogg" id="9_av7es"]
 
@@ -31,21 +31,21 @@ position = Vector2(750, 554.932)
 rotation = -3.14159
 scale = Vector2(0.7002, 0.652805)
 texture = ExtResource("2_gmdpa")
-script = ExtResource("3_b2vgy")
+script = ExtResource("5_2t00f")
 
 [node name="Copo2" type="Sprite2D" parent="."]
 position = Vector2(1000, 554.932)
 rotation = 3.14159
 scale = Vector2(0.7, 0.653)
 texture = ExtResource("2_gmdpa")
-script = ExtResource("6_l6eo8")
+script = ExtResource("6_ygp6o")
 
 [node name="Copo3" type="Sprite2D" parent="."]
 position = Vector2(1250, 554.932)
 rotation = 3.14159
 scale = Vector2(0.7, 0.653)
 texture = ExtResource("2_gmdpa")
-script = ExtResource("7_2ll3w")
+script = ExtResource("7_aruu5")
 
 [node name="Left" type="Sprite2D" parent="."]
 position = Vector2(750, 678)
