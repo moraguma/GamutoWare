@@ -10,6 +10,7 @@ signal lose
 # 16:9
 const WIDTH = 1920
 const HEIGHT = 1080
+var player
 
 
 # --------------------------------------------------------------------------------------------------
@@ -22,16 +23,16 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
+			NotificationCenter.notify("Dodge the Vehicles")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FACA ALGO!")
-
-
+			NotificationCenter.notify("Desvie dos Veiculos")
+	player = get_node("Jogador")
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
 # a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
 # a última chamada desta função. O comando pass não faz nada
 func _physics_process(delta):
 	pass
+	
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a renderização, 

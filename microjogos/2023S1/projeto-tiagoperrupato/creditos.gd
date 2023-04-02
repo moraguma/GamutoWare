@@ -7,17 +7,35 @@ extends Resource
 
 
 # Título do seu jogo
-var title_pt = "Titulo em Portugues"
-var title_en = "Title in English"
+var title_pt = "Corridinha Dahora"
+var title_en = "Goofy Ass Ride"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
-Criado por: [Seu nome!]
+Criado por: Tiago Perrupato Antunes
 
-Você pode preencher o resto deste campo com creditos de assets utilizados, links para sua redes sociais ou qualquer outro detalhe que ache relevante
+Links de imagens utilizadas:
+	https://opengameart.org/content/top-view-car-truck-sprites
+	https://opengameart.org/content/explosion-3
+	https://opengameart.org/content/red-car
+	https://opengameart.org/content/car-porsche-911-carrera-1998
+	https://opengameart.org/content/cars-trucks-and-a-limo
+
+Links para Sons:
+	https://opengameart.org/content/explosion-0
+	https://opengameart.org/content/high-traffic-road-sounds
 """
 var credits_en = """
-Made by: [Your name!]
+Made by: Tiago Perrupato Antunes
 
-Fill this space with credits to used assets, links to your social medias and whatever other details you think are important
+Links to images:
+	https://opengameart.org/content/top-view-car-truck-sprites
+	https://opengameart.org/content/explosion-3
+	https://opengameart.org/content/red-car
+	https://opengameart.org/content/car-porsche-911-carrera-1998
+	https://opengameart.org/content/cars-trucks-and-a-limo
+
+Links to sounds:
+	https://opengameart.org/content/explosion-0
+	https://opengameart.org/content/high-traffic-road-sounds
 """

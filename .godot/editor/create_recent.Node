@@ -1,6 +1,11 @@
-CPUParticles2D
-AnimatedSprite2D
 Sprite2D
+AnimatedSprite2D
+AudioStreamPlayer2D
+CollisionShape2D
+CharacterBody2D
+StaticBody2D
+Area2D
+CPUParticles2D
 AudioStreamPlayer
 AnimationPlayer
 Timer
