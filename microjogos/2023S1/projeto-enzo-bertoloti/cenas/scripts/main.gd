@@ -15,17 +15,16 @@ const HEIGHT = 1080
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES PADRÃO
 # --------------------------------------------------------------------------------------------------
-
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
 	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
+			NotificationCenter.notify("GET THE RAMEN!")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FACA ALGO!")
-
+			NotificationCenter.notify("PEGUE O MIOJO!")
+	instanciar_objeto()
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
 # a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
@@ -45,6 +44,11 @@ func _process(delta):
 # SUAS FUNÇÕES
 # --------------------------------------------------------------------------------------------------
 
+func instanciar_objeto():
+	var escolha = (randi() % 2) +1 
+	var cena = load("res://microjogos/2023S1/projeto-enzo-bertoloti/cenas/mapa%d.tscn" % escolha)
+	var objeto = cena.instantiate()
+	add_child(objeto)
 
 # Um método genérico. Crie quantos métodos você precisar!
 func my_method():
