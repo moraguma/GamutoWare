@@ -74,6 +74,13 @@ stream = ExtResource("9_vdora")
 [node name="audio_slice" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_u6r4u")
 
+[node name="score_count" type="RichTextLabel" parent="."]
+offset_left = 24.0
+offset_right = 448.0
+offset_bottom = 152.0
+theme_override_font_sizes/normal_font_size = 50
+text = "0"
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="animation_finished" from="slice" to="slice" method="_on_animation_finished"]
 [connection signal="animation_looped" from="slice" to="." method="_on_slice_animation_looped"]

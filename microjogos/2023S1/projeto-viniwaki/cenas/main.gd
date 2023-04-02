@@ -51,35 +51,19 @@ func _physics_process(_delta):
 func _process(_delta):
 	if Input.is_action_just_pressed("cima"):
 		if slice_queues[1].size() != 0:
-			var f = slice_queues[1].pop_front()
-			f.set_cut()
-			$slice.position = f.position
-			$slice.animate_once(1)
-			$audio_slice.play()
+			successful_cut(1)
 	
 	if Input.is_action_just_pressed("direita"):
 		if slice_queues[2].size() != 0:
-			var f = slice_queues[2].pop_front()
-			f.set_cut()
-			$slice.position = f.position
-			$slice.animate_once(2)
-			$audio_slice.play()
+			successful_cut(2)
 	
 	if Input.is_action_just_pressed("baixo"):
 		if slice_queues[3].size() != 0:
-			var f = slice_queues[3].pop_front()
-			f.set_cut()
-			$slice.position = f.position
-			$slice.animate_once(3)
-			$audio_slice.play()
+			successful_cut(3)
 	
 	if Input.is_action_just_pressed("esquerda"):
 		if slice_queues[4].size() != 0:
-			var f = slice_queues[4].pop_front()
-			f.set_cut()
-			$slice.position = f.position
-			$slice.animate_once(4)
-			$audio_slice.play()
+			successful_cut(4)
 	
 
 
@@ -89,8 +73,13 @@ func _process(_delta):
 
 
 # Um método genérico. Crie quantos métodos você precisar!
-func my_method():
-	pass
+func successful_cut(dir: int):
+		var f = slice_queues[dir].pop_front()
+		f.set_cut()
+		$slice.position = f.position
+		$slice.animate_once(dir)
+		$audio_slice.play()
+		$score_count.text = str(int($score_count.text) + 1)
 
 func remove_from_slice_queue(d, fruit):
 	slice_queues[d].erase(fruit)
