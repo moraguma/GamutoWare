@@ -29,7 +29,12 @@ func _timeout_explosao():
 		$"..".register_win()
 		print("viveu")
 
-
+	
 func dar_ignite():
 	for i in get_children():
 		i.ignite()
+
+
+func sumir_fumaca():
+	for i in get_children():
+		i.hide()

@@ -7,6 +7,9 @@ func explode():
 func ignite():
 	pass
 
+func hide():
+	pass
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	start(2)
