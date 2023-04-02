@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://ekjctg7mjfuj"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/seu_projeto/cenas/scripts/main.gd" id="1"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/scripts/main.gd" id="1_luxrx"]
 [ext_resource type="Texture2D" uid="uid://boenun8pc8oc1" path="res://microjogos/2023S1/projeto-gabriel-morais/recursos/fundo.png" id="2_di1wt"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/CharacterBody2D.gd" id="2_uik7r"]
 [ext_resource type="Texture2D" uid="uid://bk77807kefqvp" path="res://microjogos/2023S1/projeto-gabriel-morais/recursos/pedra-1.png.png" id="3_f6xe8"]
@@ -20,7 +20,7 @@ radius = 43.0
 height = 104.0
 
 [node name="Newton\'s vengeance" type="Node2D"]
-script = ExtResource("1")
+script = ExtResource("1_luxrx")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1920.0
