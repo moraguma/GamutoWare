@@ -1,10 +1,9 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=2 format=3 uid="uid://dxnxyoyn785of"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/seu_projeto/cenas/scripts/main.gd" id="1"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-jose-victor/cenas/scripts/main.gd" id="1_ep6yf"]
 
 [node name="Main" type="Node2D"]
-script = ExtResource( 1 )
+script = ExtResource("1_ep6yf")
 
 [node name="Camera3D" type="Camera2D" parent="."]
 anchor_mode = 0
-current = true
