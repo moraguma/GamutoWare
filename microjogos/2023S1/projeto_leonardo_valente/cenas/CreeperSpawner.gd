@@ -28,3 +28,8 @@ func _timeout_explosao():
 		$"../Player".morto = 1
 		$"..".register_win()
 		print("viveu")
+
+
+func dar_ignite():
+	for i in get_children():
+		i.ignite()

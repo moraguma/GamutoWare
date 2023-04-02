@@ -11,6 +11,7 @@ var ignited = false
 var intersect = false
 
 func _ready():
+	$"AnimationPlayer".play("Idle")
 	print("ok")
 	position = Vector2(randi_range(0,WIDTH),randi_range(0,HEIGHT))
 	
@@ -27,14 +28,13 @@ func _physics_process(delta):
 func explode():
 	print("explodiu", intersect)
 	exploded = true
-	$"SpriteCreeper".hide()
-	$"SpriteExplosao".show()
-	
+	$"AnimationPlayer".play("Explosion")
 	var pai = get_parent()
 	
 	pai.perdeu=pai.perdeu or intersect
 
-
+func ignite():
+	$"AnimationPlayer".play("Ignited")
 
 func saiu(body):
 	intersect = false

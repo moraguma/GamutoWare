@@ -43,6 +43,7 @@ one_shot = true
 script = ExtResource("6_eykoc")
 
 [node name="TimerIgnite" type="Timer" parent="CreeperSpawner"]
+one_shot = true
 script = ExtResource("5_gttv2")
 
 [node name="Player" type="CharacterBody2D" parent="."]
@@ -86,3 +87,4 @@ stream = ExtResource("7_te30o")
 autoplay = true
 
 [connection signal="timeout" from="CreeperSpawner/TimerExplosão" to="CreeperSpawner" method="_timeout_explosao"]
+[connection signal="timeout" from="CreeperSpawner/TimerIgnite" to="CreeperSpawner" method="dar_ignite"]
