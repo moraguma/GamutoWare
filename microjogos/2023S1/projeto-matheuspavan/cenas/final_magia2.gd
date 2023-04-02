@@ -14,5 +14,5 @@ func _process(delta):
 func _on_area_2d_body_entered(body):
 	print("colidiu")
 	get_parent().register_win()
-	# 
+	
 	pass # Replace with function body.

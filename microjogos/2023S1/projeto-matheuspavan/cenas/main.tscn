@@ -293,7 +293,7 @@ rotation = -0.359538
 scale = Vector2(9.17857, 10.5089)
 sprite_frames = SubResource("SpriteFrames_rnlde")
 autoplay = "default"
-frame_progress = 0.381954
+frame_progress = 0.959727
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -302,7 +302,7 @@ rotation = 0.120428
 scale = Vector2(9.17857, 10.5089)
 sprite_frames = SubResource("SpriteFrames_rnlde")
 autoplay = "default"
-frame_progress = 0.381954
+frame_progress = 0.959727
 
 [node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -311,7 +311,7 @@ rotation = 0.120428
 scale = Vector2(9.17857, 10.5089)
 sprite_frames = SubResource("SpriteFrames_rnlde")
 autoplay = "default"
-frame_progress = 0.498352
+frame_progress = 0.0761245
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("34_b4wt2")
