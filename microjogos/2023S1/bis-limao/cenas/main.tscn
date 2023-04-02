@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c6mi7vi6r5nd6"]
+[gd_scene load_steps=13 format=3 uid="uid://c6mi7vi6r5nd6"]
 
 [ext_resource type="Script" path="res://microjogos/2023S1/bis-limao/cenas/scripts/main.gd" id="1_ow836"]
 [ext_resource type="Texture2D" uid="uid://csgyvio782t8q" path="res://microjogos/2023S1/bis-limao/recursos/background.jpg" id="2_e637n"]
@@ -8,6 +8,7 @@
 [ext_resource type="Animation" uid="uid://ce7mea400wrua" path="res://microjogos/2023S1/bis-limao/recursos/bye_lemon_anim.res" id="5_2w07m"]
 [ext_resource type="Texture2D" uid="uid://hrdus5lya23d" path="res://microjogos/2023S1/bis-limao/recursos/spacebar.png" id="6_2kbr5"]
 [ext_resource type="Animation" uid="uid://caevc0qoga1sm" path="res://microjogos/2023S1/bis-limao/recursos/blue_eaten_anim.res" id="6_tjyqm"]
+[ext_resource type="AudioStream" uid="uid://vt7w2jqinv10" path="res://microjogos/2023S1/bis-limao/recursos/bis limao song.ogg" id="9_qag4m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f76t1"]
 size = Vector2(88, 528)
@@ -96,3 +97,8 @@ texture = ExtResource("5_1ywgu")
 position = Vector2(806.14, 118.706)
 scale = Vector2(0.143143, 0.132784)
 texture = ExtResource("6_2kbr5")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(744, 544)
+stream = ExtResource("9_qag4m")
+autoplay = true
