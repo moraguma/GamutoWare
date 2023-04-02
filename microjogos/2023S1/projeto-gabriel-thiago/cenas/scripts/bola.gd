@@ -1,21 +1,45 @@
-extends RigidBody2D
+extends Area2D
 
-var speed = 300;
-@onready var mira = $"../player"
+@onready var mira = $"../mira"
+#@onready var alvo = $"../alvo"
+var chegouMira = false;
+var comecouMov = false;
+#var target = mira.position;
+
+#var positionXDif = mira.position.x - position.x;
+#var positionYDif = mira.position.y - position.y;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 	
-func get_input():
-	if Input.is_action_pressed("ui_select"):
-		apply_central_impulse(Vector2(mira.position.x,-300))
-		
-
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	get_input()
+	if Input.is_action_pressed("ui_select"):
+		comecouMov = true
+		$AnimationPlayer.play("chutei")
+		
+	if chegouMira == false && comecouMov == true:
+				position = position.move_toward(mira.position, delta*3000)
+				if(position == mira.position):
+					chegouMira = true;
+	
+	if chegouMira == true:
+		$Spritebola.hide()
 	
 	pass
+
+	
+
+func _on_area_entered(area):
+	
+	var acertou = false;
+	#if area.name == "gol":
+	if area.name == "alvo":
+		#print("entrou alvo")
+		#if saber:
+		acertou = true
+		print("ganho")
+		$Spritebola.hide()
+	pass # Replace with function body.

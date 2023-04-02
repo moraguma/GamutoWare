@@ -10,8 +10,7 @@ signal lose
 # 16:9
 const WIDTH = 1920
 const HEIGHT = 1080
-
-
+@onready var bola = $"../bola"
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES PADRÃO
 # --------------------------------------------------------------------------------------------------
@@ -22,7 +21,7 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
+			NotificationCenter.notify("MAKE THE GOAL!")
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("FACA O GOL!")
 
@@ -63,8 +62,12 @@ func my_method():
 
 # Chame esta função para registrar que o jogador venceu o jogo
 func register_win():
-	emit_signal("win")
-
+	if bola.acertou == true:
+		match Global.language:
+			Global.LANGUAGE.EN:
+				NotificationCenter.notify("GOLLLLLLLLLLLLLLLL!")
+		
+		emit_signal("win")
 
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
