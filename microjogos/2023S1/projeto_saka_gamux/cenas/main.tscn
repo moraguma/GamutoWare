@@ -16,15 +16,17 @@ anchor_mode = 0
 
 [node name="pimenteiro" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(184, -200)
+position = Vector2(1151, 224)
 rotation = 1.30202
+scale = Vector2(1.319, 1.319)
 texture = ExtResource("2_tsf6h")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(920, 296)
 sprite_frames = SubResource("SpriteFrames_o5r8s")
 
 [node name="particulas_pi" type="CPUParticles2D" parent="AnimatedSprite2D"]
-position = Vector2(0, -110)
+position = Vector2(0, 8)
 emitting = false
 amount = 75
 speed_scale = 0.7
@@ -38,15 +40,19 @@ hue_variation_min = -0.27
 hue_variation_max = 0.08
 script = ExtResource("3_lmbp8")
 
+[node name="Timer" type="Timer" parent="AnimatedSprite2D/particulas_pi"]
+wait_time = 0.5
+one_shot = true
+
 [node name="panela" type="Sprite2D" parent="."]
-position = Vector2(0, 352)
+position = Vector2(968, 1032)
+scale = Vector2(1.528, 1.528)
 texture = ExtResource("3_keklf")
-
-[node name="Mesa Estática" type="StaticBody2D" parent="."]
-disable_mode = 1
-
-[node name="Mesa hitbox" type="CollisionShape2D" parent="Mesa Estática"]
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -5
+position = Vector2(967, 521.925)
+scale = Vector2(2.137, 2.137)
 texture = ExtResource("2_4btfk")
+
+[connection signal="timeout" from="AnimatedSprite2D/particulas_pi/Timer" to="AnimatedSprite2D/particulas_pi" method="_on_timer_timeout"]

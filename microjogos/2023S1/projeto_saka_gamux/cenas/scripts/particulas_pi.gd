@@ -8,7 +8,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-
+	pass
 #Emitting do partículas_pi
 #emitting = off
 #space_press = número de vezes que o espaço foi pressionado
@@ -25,16 +25,29 @@ func _process(delta):
 # vou usar isso https://godotengine.org/qa/97936/how-to-reference-a-variable-or-property-of-a-node
 
 #segunda tentativa
-pepperEmission = get_node
-pepperEmission = false
-var spacePress = 0  
-var pressDone = 12
+var spacePress = 0 
+var pressDone = RandomNumberGenerator.new().randi_range(15,20)
 
-func _input(event):
-	if Input.is_action_just_pressed("Space") and spacePress <= pressDone :
-		emmiting = true
+func _input(event):  
+	if Input.is_action_just_pressed("acao") and spacePress<pressDone:
+		$Timer.start()
+		self.emitting = true
 		spacePress += 1
+		print(spacePress)
+	if spacePress >= pressDone:      
+		get_owner().register_win()
+		print("its winning time")
 		
-		
-		
-		
+ 
+
+func _on_timer_timeout():
+	self.emitting = false
+
+
+
+
+
+
+
+
+
