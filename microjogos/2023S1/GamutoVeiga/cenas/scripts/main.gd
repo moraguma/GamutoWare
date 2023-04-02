@@ -1,5 +1,20 @@
 extends Node2D
 
+var gamuto
+var copo_1
+var pos_almejada_1 = Vector2(750, 554.932)
+var copo_2
+var pos_almejada_2 = Vector2(1000, 554.932)
+var copo_3
+var pos_almejada_3 = Vector2(1250, 554.932)
+var tempo = 0
+var list = [Vector2(750, 554.932), Vector2(1000, 554.932), Vector2(1250, 554.932)]
+var i = 0
+var timer: Timer
+var escolha_flag = false
+var ja_escolheu = false
+
+
 # Declaração dos sinais win e lose
 signal win
 signal lose
@@ -22,44 +37,115 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
+			NotificationCenter.notify("Find Gamuto!")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FACA ALGO!")
+			NotificationCenter.notify("Ache o Gamuto!")
+	
+	copo_1 = $Copo1
+	copo_2 = $Copo2
+	copo_3 = $Copo3
+	gamuto = $Personagem
+	timer = $Timer
+	
+	timer.connect("timeout", subir)
+	timer.set_wait_time(1.1)
+	timer.one_shot = true
+	timer.start()
 
-
-# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
-# a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
-# a última chamada desta função. O comando pass não faz nada
-func _physics_process(delta):
-	pass
-
-
-# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a renderização, 
-# como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
-# desde a última chamada desta função. O comando pass não faz nada
 func _process(delta):
-	pass
+	if (not escolha_flag) or ja_escolheu:
+		return
+		
+	if Input.is_action_pressed("esquerda"):
+		ja_escolheu = true
+		apenas_subir()
+		if round(copo_2.position.x) == 750:
+			print("VENCEU")
+			emit_signal("win")
+		else:
+			print("PERDEU")
+			emit_signal("lose")
+	elif Input.is_action_pressed("cima"):
+		ja_escolheu = true
+		apenas_subir()
+		if round(copo_2.position.x) == 1000:
+			print("VENCEU")
+			emit_signal("win")
+		else:
+			print("PERDEU")
+			emit_signal("lose")
+	elif Input.is_action_pressed("direita"):
+		ja_escolheu = true
+		apenas_subir()
+		if round(copo_2.position.x) == 1250:
+			print("VENCEU")
+			emit_signal("win")
+		else:
+			print("PERDEU")
+			emit_signal("lose")
+			
+func apenas_subir():
+	copo_1.subir()
+	copo_2.subir()
+	copo_3.subir()
+	
+func subir():
+	copo_1.subir()
+	copo_2.subir()
+	copo_3.subir()
+	
+	timer.disconnect("timeout", subir)
+	timer.connect("timeout", descer)
+	timer.set_wait_time(0.5)
+	timer.one_shot = true
+	timer.start()
+	
+func descer():
+	copo_1.descer()
+	copo_2.descer()
+	copo_3.descer()
+	
+	timer.disconnect("timeout", descer)
+	timer.connect("timeout", esconder)
+	timer.set_wait_time(0.35)
+	timer.one_shot = true
+	timer.start()
 
+func esconder():
+	gamuto.hide()
+	timer.disconnect("timeout", esconder)
+	timer.connect("timeout", troca)
+	timer.set_wait_time(0.5)
+	timer.one_shot = false
+	timer.start()
+	
+func troca():
+	var l = [list[0], list[1]]
+	randomize()
+	list.shuffle()
+	
+	if list[0] == l[0] and list[1] == l[1]:
+		list.shuffle()
+	
+	if list[0] == l[0] and list[1] == l[1]:
+		list = [list[1], list[0], list[2]]
+	
+	copo_1.mover_para(list[0])
+	copo_2.mover_para(list[1])
+	copo_3.mover_para(list[2])
+	i = i + 1
+	if i == 4:
+		timer.disconnect("timeout", troca)
+		timer.connect("timeout", mostrar)
+		timer.set_wait_time(1)
+		timer.one_shot = true
+		timer.start()
+		
 
-# --------------------------------------------------------------------------------------------------
-# SUAS FUNÇÕES
-# --------------------------------------------------------------------------------------------------
-
-
-# Um método genérico. Crie quantos métodos você precisar!
-func my_method():
-	pass
-
-
-# --------------------------------------------------------------------------------------------------
-# CONDIÇÕES DE VITÓRIA
-# --------------------------------------------------------------------------------------------------
-# Quando o jogo começa, ela assume que o jogador não conseguiu vencer o jogo ainda, ou seja, se não
-# acontecer nada, o jogador vai perder o jogo. A verificação se o jogador venceu o minigame é feita
-# com base na emissão dos sinais "win" e "lose". Se "win" foi o último sinal emitido, o jogador
-# vencerá o jogo, e se "lose" foi o último sinal emitido ou nenhum sinal foi emitido, o jogador
-# perderá o jogo
-
+func mostrar():
+	gamuto.position = Vector2(copo_2.position.x, 592)
+	gamuto.show()
+	escolha_flag = true
 
 # Chame esta função para registrar que o jogador venceu o jogo
 func register_win():

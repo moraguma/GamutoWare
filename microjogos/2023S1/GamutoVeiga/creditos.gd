@@ -7,17 +7,24 @@ extends Resource
 
 
 # Título do seu jogo
-var title_pt = "Titulo em Portugues"
-var title_en = "Title in English"
+var title_pt = "Glassmuto"
+var title_en = "Glassmuto"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
-Criado por: [Seu nome!]
+Criado por: Matheus Veiga - mvl18;
+			Tiago Zaparoli - TZShinobi;
+			Rafael Hoyos - TochaFh;
+			
+Imagens Utilizadas Retiradas de: Freepik.com e Gamuxunicamp.github.io/website/
+Capa feita utilizando Canva.com
 
-Você pode preencher o resto deste campo com creditos de assets utilizados, links para sua redes sociais ou qualquer outro detalhe que ache relevante
 """
 var credits_en = """
-Made by: [Your name!]
+Made by: Matheus Veiga - mvl18;
+		 Tiago Zaparoli - TZShinobi;
+		 Rafael Hoyos - TochaFh;
 
-Fill this space with credits to used assets, links to your social medias and whatever other details you think are important
+Images Taken From: Freepik.com and Gamuxunicamp.github.io/website/
+Front Cover Made With Canva.com
 """
