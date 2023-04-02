@@ -7,17 +7,25 @@ extends Resource
 
 
 # Título do seu jogo
-var title_pt = "Titulo em Portugues"
-var title_en = "Title in English"
+var title_pt = "Deus da Morte"
+var title_en = "Death God"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
-Criado por: [Seu nome!]
+Criado por: Andreas Cisi Ramos
 
-Você pode preencher o resto deste campo com creditos de assets utilizados, links para sua redes sociais ou qualquer outro detalhe que ache relevante
+- Artes: autorais
+- Sons: freesound.org
+
+Instagram: @the_deas_
+GitHub: TheDeas343
 """
 var credits_en = """
-Made by: [Your name!]
+Made by: [Andreas Cisi Ramos
 
-Fill this space with credits to used assets, links to your social medias and whatever other details you think are important
+- Arts: authorial
+- Sounds:  freesound.org
+
+Instagram: @the_deas_
+GitHub: TheDeas343
 """

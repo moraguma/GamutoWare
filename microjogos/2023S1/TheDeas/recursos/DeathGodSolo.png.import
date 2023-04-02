@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br81ywaqpuhem"
-path="res://.godot/imported/capa.png-16bfe59bd9f9bff7e5cf0c47c1577ed3.ctex"
+uid="uid://cyv3rnv3gaxg8"
+path="res://.godot/imported/DeathGodSolo.png-75de0f6a475d0b52d3cfa2816c34992f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2023S1/TheDeas/capa.png"
-dest_files=["res://.godot/imported/capa.png-16bfe59bd9f9bff7e5cf0c47c1577ed3.ctex"]
+source_file="res://microjogos/2023S1/TheDeas/recursos/DeathGodSolo.png"
+dest_files=["res://.godot/imported/DeathGodSolo.png-75de0f6a475d0b52d3cfa2816c34992f.ctex"]
 
 [params]
 

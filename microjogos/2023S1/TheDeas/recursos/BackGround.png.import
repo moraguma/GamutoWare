@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br81ywaqpuhem"
-path="res://.godot/imported/capa.png-16bfe59bd9f9bff7e5cf0c47c1577ed3.ctex"
+uid="uid://dmfv2vlqeqb7c"
+path="res://.godot/imported/BackGround.png-84abaab7b31f3079a8a5a7810c0133df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2023S1/TheDeas/capa.png"
-dest_files=["res://.godot/imported/capa.png-16bfe59bd9f9bff7e5cf0c47c1577ed3.ctex"]
+source_file="res://microjogos/2023S1/TheDeas/recursos/BackGround.png"
+dest_files=["res://.godot/imported/BackGround.png-84abaab7b31f3079a8a5a7810c0133df.ctex"]
 
 [params]
 
