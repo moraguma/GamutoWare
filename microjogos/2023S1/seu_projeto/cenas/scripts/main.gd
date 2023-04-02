@@ -1,6 +1,8 @@
 extends Node2D
 
-# Declaração dos sinais win e lose
+var death_god 
+var Timer6sec 
+#Declaração dos sinais win e lose
 signal win
 signal lose
 
@@ -22,9 +24,13 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
+			NotificationCenter.notify("FREE THEM!")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FACA ALGO!")
+			NotificationCenter.notify("LIBERTE ELES!")
+	death_god = get_child(8)	
+	$GodDeathAnimation.play("Arms")
+	
+	
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
@@ -41,14 +47,18 @@ func _process(delta):
 	pass
 
 
+
+
 # --------------------------------------------------------------------------------------------------
 # SUAS FUNÇÕES
 # --------------------------------------------------------------------------------------------------
 
 
 # Um método genérico. Crie quantos métodos você precisar!
-func my_method():
-	pass
+
+	
+	
+	
 
 
 # --------------------------------------------------------------------------------------------------
@@ -69,3 +79,23 @@ func register_win():
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
 	emit_signal("lose")
+
+
+func _on_timer_timeout():
+	if death_god.deathCounter == 5:
+		match Global.language:
+			Global.LANGUAGE.EN:
+				NotificationCenter.notify("Death God")
+			Global.LANGUAGE.PT:
+				NotificationCenter.notify("Deus da Morte")
+		register_win()
+		
+	else:
+		match Global.language:
+			Global.LANGUAGE.EN:
+				NotificationCenter.notify("Pathetic")
+			Global.LANGUAGE.PT:
+				NotificationCenter.notify("Patetico")
+		register_lose()
+
+	
