@@ -26,9 +26,9 @@ func push_movement():
 	if position.y > 900:
 		self.queue_free()
 		if not is_lemon:
-			self.get_parent().register_lose()
+			self.get_parent().register_lose("blue_eaten")
 
 func time_to_go():
 	if is_lemon:
-		self.get_parent().register_lose()
+		self.get_parent().register_lose("bye_lemon")
 	self.queue_free()

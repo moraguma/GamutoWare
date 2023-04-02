@@ -12,6 +12,7 @@ const WIDTH = 1920
 const HEIGHT = 1080
 
 var rng = RandomNumberGenerator.new()
+var alreadyLost = false
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES PADRÃO
 # --------------------------------------------------------------------------------------------------
@@ -31,19 +32,19 @@ func _ready():
 	rng.randomize()
 	
 	# Add a timer to this node
-	var timer = Timer.new()
-	self.add_child(timer)
+	var timer_init = Timer.new()
+	self.add_child(timer_init)
 
-	timer.connect("timeout", spawnBis)
-	timer.set_wait_time(0.4)
-	timer.start()
+	timer_init.connect("timeout", startBisLoop)
+	timer_init.set_wait_time(1.5)
+	timer_init.one_shot = true
+	timer_init.start()
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
 # a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
 # a última chamada desta função. O comando pass não faz nada
 func _physics_process(delta):
-	
 	pass
 
 
@@ -56,6 +57,14 @@ func _process(delta):
 
 # --------------------------------------------------------------------------------------------------
 # SUAS FUNÇÕES
+
+func startBisLoop():
+	var timer = Timer.new()
+	self.add_child(timer)
+
+	timer.connect("timeout", spawnBis)
+	timer.set_wait_time(0.4)
+	timer.start()
 
 func spawnBis():
 	var n = rng.randf_range(1, 100)
@@ -95,6 +104,14 @@ func register_win():
 
 
 # Chame esta função para registrar que o jogador perdeu o jogo
-func register_lose():
-	#NotificationCenter.notify("PERDEU :D")
+func register_lose(reason: String):
+	if alreadyLost:
+		return
 	emit_signal("lose")
+	alreadyLost = true
+	match Global.language:
+		Global.LANGUAGE.EN:
+			NotificationCenter.notify("Perdeu :/")
+		Global.LANGUAGE.PT:
+			NotificationCenter.notify("You lost :/")
+	get_node("Gamuto").loseAnim(reason)
