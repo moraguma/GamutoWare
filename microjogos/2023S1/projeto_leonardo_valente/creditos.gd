@@ -7,17 +7,21 @@ extends Resource
 
 
 # Título do seu jogo
-var title_pt = "Titulo em Portugues"
-var title_en = "Title in English"
+var title_pt = "Vinicinho em Perigo"
+var title_en = "Little Viniccius in Danger"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
-Criado por: [Seu nome!]
+Criado por: Leonardo Valente Nascimento
 
-Você pode preencher o resto deste campo com creditos de assets utilizados, links para sua redes sociais ou qualquer outro detalhe que ache relevante
+Arte e Programação por Leonardo Valente Nascimento
+Música por Gabriel Morais Barros
 """
 var credits_en = """
-Made by: [Your name!]
+Made by: Leonardo Valente Nascimento
 
-Fill this space with credits to used assets, links to your social medias and whatever other details you think are important
+Art and Programming by Leonardo Valente Nascimento
+Music by Gabriel Morais Barros
+
+B
 """
