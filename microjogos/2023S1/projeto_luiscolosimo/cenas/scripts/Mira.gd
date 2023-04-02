@@ -4,7 +4,7 @@ extends Area2D
 const SPEED = 600
 const ACCEL = 0.15
 const SPRITE_LERP_WEIGHT = 0.2
-
+const RECOIL = Vector2(0, -64)
 
 var velocity = Vector2(0, 0)
 var targets = []
@@ -21,11 +21,16 @@ var targets = []
 func _process(delta):
 	# Interpola a posição do sprite para a posição normal. Em conjunto com a levantada que cara tiro
 	# dá no sprite, dá o efeito da arma pulando a cada tiro
-	sprite.position = sprite.position.lerp(Vector2(0, 0), SPRITE_LERP_WEIGHT)
+	pass
 
 
 func _physics_process(delta):
-
+	if Input.is_action_just_pressed("acao"):
+		print($"../Cria".dentro)
+		$"../Cria/cria".hide()
+		$"../Cria/Kobeni".show()
+		print("oi")
+		get_parent().register_win()
 	
 	var dir = (
 		Vector2(1, 0) * 
@@ -41,11 +46,4 @@ func _physics_process(delta):
 	position[1] = clamp(position[1], 0, 1080)
 
 
-# Chamado por um sinal quando uma área enconsta nessa
-func add_target(target):
-	targets.append(target)
 
-
-# Chamado por um sinal quando uma área sai dessa
-func remove_target(target):
-	targets.erase(target)
