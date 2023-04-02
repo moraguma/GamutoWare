@@ -1,0 +1,114 @@
+extends Node2D
+
+# Declaração dos sinais win e lose
+signal win
+signal lose
+
+# Estas constantes são usadas para determinar o tamanho da tela do seu jogo. Por padrão, definem uma
+# tela 1920x1080, que é padrão para monitores full HD. Caso você queira uma resolução menor para 
+# atingir uma estética mais pixelada, você pode mudar estes números para qualquer outra resolução 
+# 16:9
+const WIDTH = 1920
+const HEIGHT = 1080
+
+var chosen_apples = []
+var gotten_apples = []
+var won = false
+@onready var snake = get_node("Snake")
+@onready var head = get_node("Snake/Head")
+@onready var final_apple = get_node("Apples/Apple1")
+
+# --------------------------------------------------------------------------------------------------
+# FUNÇÕES PADRÃO
+# --------------------------------------------------------------------------------------------------
+
+# Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
+func _ready():
+	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
+	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
+	match Global.language:
+		Global.LANGUAGE.EN:
+			NotificationCenter.notify("EAT!")
+		Global.LANGUAGE.PT:
+			NotificationCenter.notify("COMA!")
+			
+	choose_apples()
+
+
+# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
+# a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
+# a última chamada desta função. O comando pass não faz nada
+func _physics_process(delta):
+	pass
+
+
+# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a renderização, 
+# como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
+# desde a última chamada desta função. O comando pass não faz nada
+func _process(delta):
+	pass
+
+
+# --------------------------------------------------------------------------------------------------
+# SUAS FUNÇÕES
+# --------------------------------------------------------------------------------------------------
+
+
+# Um método genérico. Crie quantos métodos você precisar!
+func my_method():
+	pass
+
+func choose_apples():
+	var apples = [0,0]
+	while true:
+		apples[0] = randi() % 12 + 2
+		apples[1] = randi() % 12 + 2
+		if (apples[0] != apples[1]
+			and ((2 not in apples or 3 not in apples)
+				and (8 not in apples or 13 not in apples))):
+			break
+	for i in apples:
+		var apple = get_node('Apples/Apple%d' % i)
+		apple.show()
+		chosen_apples.append(apple)
+
+# --------------------------------------------------------------------------------------------------
+# CONDIÇÕES DE VITÓRIA
+# --------------------------------------------------------------------------------------------------
+# Quando o jogo começa, ela assume que o jogador não conseguiu vencer o jogo ainda, ou seja, se não
+# acontecer nada, o jogador vai perder o jogo. A verificação se o jogador venceu o minigame é feita
+# com base na emissão dos sinais "win" e "lose". Se "win" foi o último sinal emitido, o jogador
+# vencerá o jogo, e se "lose" foi o último sinal emitido ou nenhum sinal foi emitido, o jogador
+# perderá o jogo
+
+
+# Chame esta função para registrar que o jogador venceu o jogo
+func register_win():
+	emit_signal("win")
+
+
+# Chame esta função para registrar que o jogador perdeu o jogo
+func register_lose():
+	emit_signal("lose")
+
+
+func _on_head_area_exited(area):
+	if area in chosen_apples:
+		var in_tail = false
+		print('oiii',head.tail_nodes)
+		for tail in head.tail_nodes:
+			if area.overlaps_area(tail):
+				in_tail = true
+				gotten_apples.append(area)
+		if not in_tail:
+			var i = gotten_apples.find(area)
+			if i > -1:
+				gotten_apples.remove_at(i)
+
+
+func _on_head_area_entered(area):
+	if area in chosen_apples + [final_apple] and area not in gotten_apples:
+		$AppleBite.play()
+	if area == final_apple and len(gotten_apples) == 2:
+		register_win()
+		won = true
