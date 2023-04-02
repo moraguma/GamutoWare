@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkvcg7ivmjl0d"
-path="res://.godot/imported/capa.png-79bdb6db8d2e7245ec6c28d4a0e35419.ctex"
+uid="uid://cuqq0hu2kkhto"
+path="res://.godot/imported/Xaropinho.png-f78cc3efd929ce038c5af8ac46929820.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2023S1/projeto-yan-oliveira/capa.png"
-dest_files=["res://.godot/imported/capa.png-79bdb6db8d2e7245ec6c28d4a0e35419.ctex"]
+source_file="res://microjogos/2023S1/projeto-yan-oliveira/recursos/Xaropinho.png"
+dest_files=["res://.godot/imported/Xaropinho.png-f78cc3efd929ce038c5af8ac46929820.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkvcg7ivmjl0d"
-path="res://.godot/imported/capa.png-79bdb6db8d2e7245ec6c28d4a0e35419.ctex"
+uid="uid://b8ec68y6dkig"
+path="res://.godot/imported/Lagoa.png-d942e3e6372816dfb6ea2ce12094190e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2023S1/projeto-yan-oliveira/capa.png"
-dest_files=["res://.godot/imported/capa.png-79bdb6db8d2e7245ec6c28d4a0e35419.ctex"]
+source_file="res://microjogos/2023S1/projeto-yan-oliveira/recursos/Lagoa.png"
+dest_files=["res://.godot/imported/Lagoa.png-d942e3e6372816dfb6ea2ce12094190e.ctex"]
 
 [params]
 

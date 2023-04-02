@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkvcg7ivmjl0d"
-path="res://.godot/imported/capa.png-79bdb6db8d2e7245ec6c28d4a0e35419.ctex"
+uid="uid://cnphsv83553wa"
+path="res://.godot/imported/mosca nova.png-b9538eaf9e04bc9992736db585bf5d16.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2023S1/projeto-yan-oliveira/capa.png"
-dest_files=["res://.godot/imported/capa.png-79bdb6db8d2e7245ec6c28d4a0e35419.ctex"]
+source_file="res://microjogos/2023S1/projeto-yan-oliveira/recursos/mosca nova.png"
+dest_files=["res://.godot/imported/mosca nova.png-b9538eaf9e04bc9992736db585bf5d16.ctex"]
 
 [params]
 
