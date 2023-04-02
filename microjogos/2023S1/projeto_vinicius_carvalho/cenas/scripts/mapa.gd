@@ -1,7 +1,7 @@
 extends Node2D
 
 var timer
-var timer_title
+var timer_win
 var som
 var obstaculo1 = preload("res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/obstaculo_1.tscn")
 var obstaculo2 = preload("res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/obstaculo_2.tscn")
@@ -14,8 +14,8 @@ func _ready():
 	som.play()
 	timer = $Timer
 	timer.start(0.5)
-
-	
+	timer_win = $TimersWin
+	timer_win.start(10)
 	NotificationCenter.notify("Sobreviva!")
 
 	
@@ -40,3 +40,6 @@ func _on_timer_timeout():
 	instanciar_obj()
 
 
+func _on_timers_win_timeout():
+	NotificationCenter.notify("VOCE GANHOU!")
+	queue_free()

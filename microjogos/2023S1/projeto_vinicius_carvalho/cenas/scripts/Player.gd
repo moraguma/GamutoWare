@@ -10,16 +10,23 @@ var vivo = true
 var timer
 var death_s
 var fly_s
+var ativar = false
+var timer_ativ
 
+func _ready():
+	timer_ativ = $Timer2
+	timer_ativ.start(1)
+	
 func _physics_process(delta):
 	if vivo:
 		$AnimatedSprite2D.play("Fly")
-		velocity.y += gravity;
-		if Input.is_action_just_pressed("ui_select"):
-			fly_s = $Som_asa
-			fly_s.play()
-			velocity.y = JUMP_VELOCITY*2
-		move_and_slide()
+		if ativar:
+			velocity.y += gravity;
+			if Input.is_action_just_pressed("ui_select"):
+				fly_s = $Som_asa
+				fly_s.play()
+				velocity.y = JUMP_VELOCITY*2
+			move_and_slide()
 		
 func _on_hitbox_body_entered(body):
 	vivo = false
@@ -27,6 +34,7 @@ func _on_hitbox_body_entered(body):
 	death_s = $SomDeath
 	death_s.play()
 	timer = $Timer
+	NotificationCenter.notify("VOCE PERDEU!")
 	timer.start(1)
 
 
@@ -34,3 +42,6 @@ func _on_timer_timeout():
 	death_s.stop()
 	$AnimatedSprite2D.visible = false
 
+
+func _on_timer_2_timeout():
+	ativar = true

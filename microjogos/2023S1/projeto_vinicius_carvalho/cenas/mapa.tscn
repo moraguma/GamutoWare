@@ -24,7 +24,7 @@
 size = Vector2(1936, 34)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_18q0r"]
-size = Vector2(1925, 76)
+size = Vector2(1931, 53)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mkjcv"]
 size = Vector2(22, 1096)
@@ -79,16 +79,15 @@ position = Vector2(-1, 6)
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
+[node name="RigidBody2D" type="StaticBody2D" parent="."]
 collision_layer = 2
-gravity_scale = 0.0
 
 [node name="ColisaoSup" type="CollisionShape2D" parent="RigidBody2D"]
 position = Vector2(958, 7)
 shape = SubResource("RectangleShape2D_sk5nb")
 
 [node name="ColisaoInf" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(952.5, 1047)
+position = Vector2(949.5, 1058.5)
 shape = SubResource("RectangleShape2D_18q0r")
 
 [node name="ColisEsq" type="CollisionShape2D" parent="RigidBody2D"]
@@ -197,8 +196,10 @@ position = Vector2(1752, 1040)
 scale = Vector2(4.75, 1.5)
 texture = ExtResource("17_6n048")
 
-[node name="Timer_titles" type="Timer" parent="."]
+[node name="TimersWin" type="Timer" parent="."]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="timeout" from="Timer_titles" to="." method="_on_timerwins_timeout"]
-[connection signal="timeout" from="Timer_titles" to="." method="_on_timer_titles_timeout"]
+[connection signal="timeout" from="TimersWin" to="." method="_on_timers_win_timeout"]
+[connection signal="timeout" from="TimersWin" to="." method="_on_timer_titles_timeout"]
+[connection signal="timeout" from="TimersWin" to="." method="_on_timer_win_timeout"]
+[connection signal="timeout" from="TimersWin" to="." method="_on_timerwins_timeout"]

@@ -149,6 +149,9 @@ stream = ExtResource("4_td4oj")
 [node name="Som_asa" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_vmcn3")
 
+[node name="Timer2" type="Timer" parent="."]
+
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
