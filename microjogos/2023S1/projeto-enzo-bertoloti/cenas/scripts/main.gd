@@ -10,7 +10,7 @@ signal lose
 # 16:9
 const WIDTH = 1920
 const HEIGHT = 1080
-
+@onready var musica = get_node("AudioStreamPlayer")
 
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES PADRÃO
@@ -25,7 +25,8 @@ func _ready():
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("PEGUE O MIOJO!")
 	instanciar_objeto()
-
+	musica.play()
+	
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
 # a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
 # a última chamada desta função. O comando pass não faz nada
@@ -45,7 +46,7 @@ func _process(delta):
 # --------------------------------------------------------------------------------------------------
 
 func instanciar_objeto():
-	var escolha = (randi() % 2) +1 
+	var escolha = (randi() % 4) +1 
 	var cena = load("res://microjogos/2023S1/projeto-enzo-bertoloti/cenas/mapa%d.tscn" % escolha)
 	var objeto = cena.instantiate()
 	add_child(objeto)
