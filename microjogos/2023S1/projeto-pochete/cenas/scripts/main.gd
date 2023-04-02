@@ -109,7 +109,6 @@ func register_lose():
 func _on_head_area_exited(area):
 	if area in chosen_apples:
 		var in_tail = false
-		print('oiii',head.tail_nodes)
 		for tail in head.tail_nodes:
 			if area.overlaps_area(tail):
 				in_tail = true
