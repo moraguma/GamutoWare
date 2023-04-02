@@ -6,14 +6,31 @@ const JUMP_VELOCITY = -400.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = 30;
-
+var vivo = true
+var timer
+var death_s
+var fly_s
 
 func _physics_process(delta):
-	$AnimationPlayer.play("Fly")
-	velocity.x = move_toward(velocity.x, 300, SPEED)
-	velocity.y += gravity;
-	
-	# Handle Jump.
-	if Input.is_action_just_pressed("ui_select"):
-		velocity.y = JUMP_VELOCITY*2
-	move_and_slide()
+	if vivo:
+		$AnimatedSprite2D.play("Fly")
+		velocity.y += gravity;
+		if Input.is_action_just_pressed("ui_select"):
+			fly_s = $Som_asa
+			fly_s.play()
+			velocity.y = JUMP_VELOCITY*2
+		move_and_slide()
+		
+func _on_hitbox_body_entered(body):
+	vivo = false
+	$AnimatedSprite2D.play("Hit")
+	death_s = $SomDeath
+	death_s.play()
+	timer = $Timer
+	timer.start(1)
+
+
+func _on_timer_timeout():
+	death_s.stop()
+	$AnimatedSprite2D.visible = false
+

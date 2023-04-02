@@ -1,25 +1,40 @@
-[gd_scene load_steps=14 format=3 uid="uid://b07e6j2l3hlm4"]
+[gd_scene load_steps=23 format=3 uid="uid://b07e6j2l3hlm4"]
 
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/scripts/mapa.gd" id="1_1u4qj"]
 [ext_resource type="Texture2D" uid="uid://d3bvdjjxe4tnq" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Background/Bright/rock5.png" id="1_tuq42"]
 [ext_resource type="Texture2D" uid="uid://ca4tv8up2fyck" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Background/Bright/bg.png" id="2_ec62q"]
 [ext_resource type="Texture2D" uid="uid://231nt1p6wvbe" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Background/Bright/rock3.png" id="3_uum8i"]
 [ext_resource type="Texture2D" uid="uid://bgmrg2uic1ugq" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Background/Bright/myst.png" id="4_w15of"]
 [ext_resource type="Texture2D" uid="uid://b4agjeihhoewm" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Background/Bright/rock1.png" id="5_imvjj"]
 [ext_resource type="Texture2D" uid="uid://lbraunvhm7kl" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Background/Bright/rock2.png" id="6_naq32"]
-[ext_resource type="Texture2D" uid="uid://byvq5aest5ji1" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Background/Bright/Background.png" id="7_ogeo8"]
-[ext_resource type="PackedScene" uid="uid://b2ao8lfo1ker2" path="res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/obstaculo_3.tscn" id="8_iq8lj"]
-[ext_resource type="PackedScene" uid="uid://b5d378qv55jwf" path="res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/obstaculo_2.tscn" id="9_h0iah"]
-[ext_resource type="PackedScene" uid="uid://dxmgvrnios2fy" path="res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/obstaculo_1.tscn" id="10_qmp00"]
+[ext_resource type="Texture2D" uid="uid://dkili4hf46w4o" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Tiles_rock/tile23.png" id="10_yxv2i"]
+[ext_resource type="Texture2D" uid="uid://cip7dcnbvq27b" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Tiles_rock/tile36.png" id="11_trymq"]
 [ext_resource type="PackedScene" uid="uid://dtj03ehck05tb" path="res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/Player.tscn" id="11_xlwkk"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i8yxx"]
-texture = ExtResource("7_ogeo8")
+[ext_resource type="Texture2D" uid="uid://bn0a7c1igdai8" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Tiles_rock/tile24.png" id="12_q1gav"]
+[ext_resource type="Texture2D" uid="uid://cuw3eyedlfcf2" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Tiles_rock/tile7.png" id="13_uwlos"]
+[ext_resource type="AudioStream" uid="uid://elknmp5wdlmm" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sons/Dungeon 01.ogg" id="13_v1qqu"]
+[ext_resource type="Texture2D" uid="uid://py3ry616wj18" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Tiles_rock/tile8.png" id="14_5dmml"]
+[ext_resource type="Texture2D" uid="uid://pniglnmvr4ah" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Tiles_rock/tile9.png" id="15_ay6x0"]
+[ext_resource type="Texture2D" uid="uid://dwi2xrj0a7vrd" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Tiles_lava/lava_tile3.png" id="16_fr2rh"]
+[ext_resource type="Texture2D" uid="uid://c5m8kcbdn4u3a" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Tiles_lava/lava_tile4.png" id="17_6n048"]
 
 [sub_resource type="TileSet" id="TileSet_i2iot"]
-sources/0 = SubResource("TileSetAtlasSource_i8yxx")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sk5nb"]
+size = Vector2(1936, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_18q0r"]
+size = Vector2(1925, 76)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mkjcv"]
+size = Vector2(22, 1096)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ex77q"]
+size = Vector2(18, 1103)
 
 [node name="Mapa" type="Node2D"]
 texture_filter = 1
+script = ExtResource("1_1u4qj")
 
 [node name="background" type="Node2D" parent="."]
 scale = Vector2(2, 2)
@@ -54,14 +69,136 @@ format = 2
 
 [node name="Obstaculos" type="Node2D" parent="."]
 
-[node name="Obstaculo1" parent="Obstaculos" instance=ExtResource("10_qmp00")]
-position = Vector2(1221, 3)
-
-[node name="Obstaculo3" parent="Obstaculos" instance=ExtResource("8_iq8lj")]
-position = Vector2(657, 4)
-
-[node name="Node2D2" parent="Obstaculos" instance=ExtResource("9_h0iah")]
-position = Vector2(156, 0)
+[node name="camera" type="Camera2D" parent="."]
+position = Vector2(1, 4)
+anchor_mode = 0
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("11_xlwkk")]
-position = Vector2(-724, 72)
+position = Vector2(-1, 6)
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+collision_layer = 2
+gravity_scale = 0.0
+
+[node name="ColisaoSup" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(958, 7)
+shape = SubResource("RectangleShape2D_sk5nb")
+
+[node name="ColisaoInf" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(952.5, 1047)
+shape = SubResource("RectangleShape2D_18q0r")
+
+[node name="ColisEsq" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(1, 538)
+shape = SubResource("RectangleShape2D_mkjcv")
+
+[node name="ColisDir" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(1920, 541.5)
+shape = SubResource("RectangleShape2D_ex77q")
+
+[node name="som_cavern" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_v1qqu")
+
+[node name="no_superior" type="Node2D" parent="."]
+
+[node name="Tile25" type="Sprite2D" parent="no_superior"]
+position = Vector2(776, 32)
+texture = ExtResource("10_yxv2i")
+
+[node name="Tile36" type="Sprite2D" parent="no_superior"]
+position = Vector2(520, 32)
+texture = ExtResource("11_trymq")
+
+[node name="Tile24" type="Sprite2D" parent="no_superior"]
+position = Vector2(440, 32)
+texture = ExtResource("12_q1gav")
+
+[node name="Tile23" type="Sprite2D" parent="no_superior"]
+position = Vector2(400, 32)
+texture = ExtResource("10_yxv2i")
+
+[node name="Tile7" type="Sprite2D" parent="no_superior"]
+position = Vector2(144, 32)
+texture = ExtResource("13_uwlos")
+
+[node name="Tile8" type="Sprite2D" parent="no_superior"]
+position = Vector2(80, 32)
+texture = ExtResource("14_5dmml")
+
+[node name="Tile9" type="Sprite2D" parent="no_superior"]
+position = Vector2(24, 32)
+texture = ExtResource("15_ay6x0")
+
+[node name="Tile8" type="Sprite2D" parent="."]
+position = Vector2(824, 32)
+texture = ExtResource("14_5dmml")
+
+[node name="Tile9" type="Sprite2D" parent="."]
+position = Vector2(224, 32)
+texture = ExtResource("15_ay6x0")
+
+[node name="Tile7" type="Sprite2D" parent="."]
+position = Vector2(288, 32)
+texture = ExtResource("13_uwlos")
+
+[node name="Tile10" type="Sprite2D" parent="."]
+position = Vector2(1128, 32)
+texture = ExtResource("15_ay6x0")
+
+[node name="Tile11" type="Sprite2D" parent="."]
+position = Vector2(1192, 32)
+texture = ExtResource("13_uwlos")
+
+[node name="Tile12" type="Sprite2D" parent="."]
+position = Vector2(888, 32)
+texture = ExtResource("13_uwlos")
+
+[node name="Tile13" type="Sprite2D" parent="."]
+position = Vector2(1312, 32)
+texture = ExtResource("15_ay6x0")
+
+[node name="Tile14" type="Sprite2D" parent="."]
+position = Vector2(1376, 32)
+texture = ExtResource("13_uwlos")
+
+[node name="Tile23" type="Sprite2D" parent="."]
+position = Vector2(1488, 40)
+texture = ExtResource("10_yxv2i")
+
+[node name="Tile24" type="Sprite2D" parent="."]
+position = Vector2(1544, 40)
+texture = ExtResource("12_q1gav")
+
+[node name="LavaTile3" type="Sprite2D" parent="."]
+position = Vector2(180, 1040)
+scale = Vector2(5.125, 1.5)
+texture = ExtResource("16_fr2rh")
+
+[node name="LavaTile4" type="Sprite2D" parent="."]
+position = Vector2(552, 1040)
+scale = Vector2(6.5, 1.5)
+texture = ExtResource("17_6n048")
+
+[node name="LavaTile5" type="Sprite2D" parent="."]
+position = Vector2(972, 1036)
+scale = Vector2(6.625, 1.625)
+texture = ExtResource("17_6n048")
+
+[node name="LavaTile6" type="Sprite2D" parent="."]
+position = Vector2(1392, 1040)
+scale = Vector2(6.5, 1.5)
+texture = ExtResource("17_6n048")
+
+[node name="LavaTile7" type="Sprite2D" parent="."]
+position = Vector2(1752, 1040)
+scale = Vector2(4.75, 1.5)
+texture = ExtResource("17_6n048")
+
+[node name="Timer_titles" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer_titles" to="." method="_on_timerwins_timeout"]
+[connection signal="timeout" from="Timer_titles" to="." method="_on_timer_titles_timeout"]

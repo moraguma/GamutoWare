@@ -1,7 +1,7 @@
 2a60927148abd1d33b818b535e306557
-::res://::1680387222
+::res://::1680474626
 default_bus_layout.tres::AudioBusLayout::-1::1680373832::0::1::::<><>::
-default_env.tres::Environment::6435969514969214528::1680387222::0::1::::<><>::
+default_env.tres::Environment::6435969514969214528::1680474525::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1680373832::0::1::::<><>::
 Godot4TODO.txt::TextFile::-1::1680373832::0::1::::<><>::
 icon.png::CompressedTexture2D::4626567692130692406::1680373832::1680373832::1::::<><>::
@@ -11,9 +11,9 @@ icon.png::CompressedTexture2D::4626567692130692406::1680373832::1680373832::1:::
 capa.png::CompressedTexture2D::6606896027340137710::1680373832::1680373832::1::::<><>::
 creditos.gd::GDScript::-1::1680373832::0::1::::<>Resource<>::
 seu projeto.txt::TextFile::-1::1680373834::0::1::::<><>::
-::res://microjogos/2022S1/baleia/cenas/::1680373832
-baleia.gd::GDScript::-1::1680373832::0::1::::<>CharacterBody2D<>::
-baleiaGame.gd::GDScript::-1::1680373832::0::1::::<>Node2D<>::
+::res://microjogos/2022S1/baleia/cenas/::1680468169
+baleia.gd::GDScript::-1::1680468169::0::1::::<>CharacterBody2D<>::
+baleiaGame.gd::GDScript::-1::1680468169::0::1::::<>Node2D<>::
 baleiaGame.tscn::PackedScene::6269722728472038239::1680373832::0::1::::<><>::res://microjogos/2022S1/baleia/cenas/baleia.gd<>uid://b3ddkpemxekph<>uid://dpyb1tu0hjtqc<>uid://cemuvnlendoct<>uid://ydhh7dtqupqw<>uid://cbingfi5rwqgx<>uid://dknehm2ucrw66<>uid://y0qgyt2xcye0<>uid://77bxwie5m2j3<>uid://pw3v1b4kydm<>res://microjogos/2022S1/baleia/cenas/baleiaGame.gd
 cenas.txt::TextFile::-1::1680373832::0::1::::<><>::
 main.tscn::PackedScene::8749591662180128491::1680373832::0::1::::<><>::res://microjogos/2022S1/gamuturai/cenas/scripts/main.gd
@@ -104,8 +104,8 @@ slash.wav::AudioStreamWAV::1816460646155350935::1680373850::1680373850::1::::<><
 capa.png::CompressedTexture2D::7884594416567397246::1680373850::1680373850::1::::<><>::
 creditos.gd::GDScript::-1::1680373850::0::1::::<>Resource<>::
 seu projeto.txt::TextFile::-1::1680373851::0::1::::<><>::
-::res://microjogos/2022S1/race/cenas/::1680373850
-camera.gd::GDScript::-1::1680373850::0::1::::<>Camera2D<>::
+::res://microjogos/2022S1/race/cenas/::1680468169
+camera.gd::GDScript::-1::1680468169::0::1::::<>Camera2D<>::
 caverna.gd::GDScript::-1::1680373850::0::1::::<>StaticBody2D<>::
 cenas.txt::TextFile::-1::1680373850::0::1::::<><>::
 Enemy.gd::GDScript::-1::1680373850::0::1::::<>CharacterBody2D<>::
@@ -146,24 +146,156 @@ creditos.txt::TextFile::-1::1680373851::0::1::::<><>::
 ::res://microjogos/2022S1/seu_projeto/recursos/::1680373851
 recursos.txt::TextFile::-1::1680373851::0::1::::<><>::
 ::res://microjogos/2023S1/::1680375456
-::res://microjogos/2023S1/projeto_vinicius_carvalho/::1680377419
-capa.png::CompressedTexture2D::3131794895733829673::1680373852::1680375456::1::::<><>::
-creditos.gd::GDScript::-1::1680373852::0::1::::<>Resource<>::
+::res://microjogos/2023S1/projeto_vinicius_carvalho/::1680474244
+capa.png::CompressedTexture2D::5238400496906031227::1680472406::1680474240::1::::<><>::
+creditos.gd::GDScript::-1::1680471761::0::1::::<>Resource<>::
 seu projeto.txt::TextFile::-1::1680377419::0::1::::<><>::
-::res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/::1680387222
+::res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/::1680474525
 cenas.txt::TextFile::-1::1680375565::0::1::::<><>::
+coletavel.tscn::PackedScene::5689673423535617818::1680474525::0::1::::<><>::uid://bgep77rh46bpk
 main.tscn::PackedScene::5456949995653827081::1680383443::0::1::::<><>::res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/scripts/main.gd<>uid://c58hv2o2etv7f
-obstaculo_1.tscn::PackedScene::8798780704793707742::1680387211::0::1::::<><>::uid://cip7dcnbvq27b<>uid://cq7d0dfvt2m8r
-obstaculo_2.tscn::PackedScene::4500038106281519237::1680387212::0::1::::<><>::uid://cq7d0dfvt2m8r<>uid://cip7dcnbvq27b
-obstaculo_3.tscn::PackedScene::4282429017169680093::1680387212::0::1::::<><>::uid://cip7dcnbvq27b<>uid://cq7d0dfvt2m8r
-mapa.tscn::PackedScene::4207500605313307001::1680387212::0::1::::<><>::uid://d3bvdjjxe4tnq<>uid://ca4tv8up2fyck<>uid://231nt1p6wvbe<>uid://bgmrg2uic1ugq<>uid://b4agjeihhoewm<>uid://lbraunvhm7kl<>uid://byvq5aest5ji1<>uid://b2ao8lfo1ker2<>uid://b5d378qv55jwf<>uid://dxmgvrnios2fy<>uid://dtj03ehck05tb
-Player.tscn::PackedScene::8512997628049238759::1680387222::0::1::::<><>::res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/scripts/Player.gd<>uid://c58hv2o2etv7f
-::res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/scripts/::1680387211
+mapa.tscn::PackedScene::4207500605313307001::1680474525::0::1::::<><>::res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/scripts/mapa.gd<>uid://d3bvdjjxe4tnq<>uid://ca4tv8up2fyck<>uid://231nt1p6wvbe<>uid://bgmrg2uic1ugq<>uid://b4agjeihhoewm<>uid://lbraunvhm7kl<>uid://dkili4hf46w4o<>uid://cip7dcnbvq27b<>uid://dtj03ehck05tb<>uid://bn0a7c1igdai8<>uid://cuw3eyedlfcf2<>uid://elknmp5wdlmm<>uid://py3ry616wj18<>uid://pniglnmvr4ah<>uid://dwi2xrj0a7vrd<>uid://c5m8kcbdn4u3a
+obstaculo_1.tscn::PackedScene::8798780704793707742::1680474524::0::1::::<><>::uid://cip7dcnbvq27b<>res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/scripts/obstaculo1.gd<>uid://cq7d0dfvt2m8r
+obstaculo_2.tscn::PackedScene::4500038106281519237::1680474524::0::1::::<><>::uid://cq7d0dfvt2m8r<>res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/scripts/Obstaculo2.gd<>uid://cip7dcnbvq27b
+obstaculo_3.tscn::PackedScene::4282429017169680093::1680474524::0::1::::<><>::res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/scripts/Obstaculo3.gd<>uid://cip7dcnbvq27b<>uid://cq7d0dfvt2m8r
+Player.tscn::PackedScene::8512997628049238759::1680474525::0::1::::<><>::res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/scripts/Player.gd<>uid://dx12ewaodcqch<>uid://bgifxsftfv8yd<>uid://bdovraa5gpfl4<>uid://by20h831n5pul
+::res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/scripts/::1680474523
+Gerador.gd::GDScript::-1::1680463576::0::1::::<>Node2D<>::
 main.gd::GDScript::-1::1680373852::0::1::::<>Node2D<>::
-Player.gd::GDScript::-1::1680387211::0::1::::<>CharacterBody2D<>::
+mapa.gd::GDScript::-1::1680474523::0::1::::<>Node2D<>::
+obstaculo1.gd::GDScript::-1::1680474458::0::1::::<>StaticBody2D<>::
+Obstaculo2.gd::GDScript::-1::1680474458::0::1::::<>StaticBody2D<>::
+Obstaculo3.gd::GDScript::-1::1680474458::0::1::::<>StaticBody2D<>::
+Player.gd::GDScript::-1::1680473696::0::1::::<>CharacterBody2D<>::
 scripts.txt::TextFile::-1::1680373852::0::1::::<><>::
-::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/::1680378569
+::res://microjogos/2023S1/projeto_vinicius_carvalho/Pixel Adventure 2/::1680452136
+Hello.png::CompressedTexture2D::1052239604336675775::1569883360::1680452136::1::::<><>::
+::res://microjogos/2023S1/projeto_vinicius_carvalho/Pixel Adventure 2/Enemies/::1680452088
+::res://microjogos/2023S1/projeto_vinicius_carvalho/Pixel Adventure 2/Enemies/AngryPig/::1680452137
+Hit 1 (36x30).png::CompressedTexture2D::3472179344742852138::1569003928::1680452137::1::::<><>::
+Hit 2 (36x30).png::CompressedTexture2D::3785110086543260325::1569003950::1680452137::1::::<><>::
+Idle (36x30).png::CompressedTexture2D::2756104094298782246::1569003880::1680452137::1::::<><>::
+Run (36x30).png::CompressedTexture2D::1371861782340562569::1569003940::1680452137::1::::<><>::
+Walk (36x30).png::CompressedTexture2D::1129407362602590282::1569003918::1680452137::1::::<><>::
+::res://microjogos/2023S1/projeto_vinicius_carvalho/Pixel Adventure 2/Enemies/Bat/::1680452137
+Ceiling In (46x30).png::CompressedTexture2D::7322816539840144999::1569163452::1680452137::1::::<><>::
+Ceiling Out (46x30).png::CompressedTexture2D::5443743596962998682::1569163440::1680452137::1::::<><>::
+Flying (46x30).png::CompressedTexture2D::2824414379792562255::1569163408::1680452137::1::::<><>::
+Hit (46x30).png::CompressedTexture2D::8828926934493821579::1569163462::1680452137::1::::<><>::
+Idle (46x30).png::CompressedTexture2D::8852809714991368772::1569171672::1680452137::1::::<><>::
+::res://microjogos/2023S1/projeto_vinicius_carvalho/Pixel Adventure 2/Enemies/Bee/::1680452137
+Attack (36x34).png::CompressedTexture2D::1428584168520803586::1566867308::1680452137::1::::<><>::
+Bullet Pieces.png::CompressedTexture2D::6849117117661259024::1566870752::1680452137::1::::<><>::
+Bullet.png::CompressedTexture2D::3483599438311547533::1566867342::1680452137::1::::<><>::
+Hit (36x34).png::CompressedTexture2D::1223032461316899084::1566867322::1680452137::1::::<><>::
+Idle (36x34).png::CompressedTexture2D::931227211832862383::1566867234::1680452137::1::::<><>::
+::res://microjogos/2023S1/projeto_vinicius_carvalho/Pixel Adventure 2/Enemies/BlueBird/::1680452137
+Flying (32x32).png::CompressedTexture2D::7037046058490238045::1566659854::1680452137::1::::<><>::
+Hit (32x32).png::CompressedTexture2D::6563864546895851504::1566659866::1680452137::1::::<><>::
+::res://microjogos/2023S1/projeto_vinicius_carvalho/Pixel Adventure 2/Enemies/Bunny/::1680452137
+Fall.png::CompressedTexture2D::9210814427525138661::1569200044::1680452137::1::::<><>::
+Hit (34x44).png::CompressedTexture2D::7944740055346800486::1569200018::1680452137::1::::<><>::
+Idle (34x44).png::CompressedTexture2D::3136724274937208422::1569200006::1680452137::1::::<><>::
+Jump.png::CompressedTexture2D::370705267194415176::1569200038::1680452137::1::::<><>::
+Run (34x44).png::CompressedTexture2D::1260394583130882995::1569200026::1680452137::1::::<><>::
+::res://microjogos/2023S1/projeto_vinicius_carvalho/Pixel Adventure 2/Enemies/Chameleon/::1680452137
+Attack (84x38).png::CompressedTexture2D::4130801745521557326::1567629408::1680452137::1::::<><>::
+Hit (84x38).png::CompressedTexture2D::2891161970475770552::1567629394::1680452137::1::::<><>::
+Idle (84x38).png::CompressedTexture2D::8604226448840562119::1567629370::1680452137::1::::<><>::
+Run (84x38).png::CompressedTexture2D::8901434048797955554::1567629384::1680452137::1::::<><>::
+::res://microjogos/2023S1/projeto_vinicius_carvalho/Pixel Adventure 2/Enemies/Chicken/::1680452137
+Hit (32x34).png::CompressedTexture2D::260669573756472211::1566698280::1680452137::1::::<><>::
+Idle (32x34).png::CompressedTexture2D::7589174041211242819::1566698236::1680452137::1::::<><>::
+Run (32x34).png::CompressedTexture2D::2081738010684146869::1566698266::1680452137::1::::<><>::
+::res://microjogos/2023S1/projeto_vinicius_carvalho/Pixel Adventure 2/Enemies/Duck/::1680452137
+Fall (36x36).png::CompressedTexture2D::942217117787948837::1567273712::1680452137::1::::<><>::
+Hit (36x36).png::CompressedTexture2D::7129065413618982981::1567273724::1680452137::1::::<><>::
+Idle (36x36).png::CompressedTexture2D::3086201900576535543::1567273646::1680452137::1::::<><>::
+Jump (36x36).png::CompressedTexture2D::3443949381714679988::1567273700::1680452137::1::::<><>::
+Jump Anticipation (36x36).png::CompressedTexture2D::5732477261144530140::1567273676::1680452137::1::::<><>::
+::res://microjogos/2023S1/projeto_vinicius_carvalho/Pixel Adventure 2/Enemies/FatBird/::1680452137
+Fall (40x48).png::CompressedTexture2D::2250204017268513943::1568860940::1680452137::1::::<><>::
+Ground (40x48).png::CompressedTexture2D::295012732631931928::1568861004::1680452137::1::::<><>::
+Hit (40x48).png::CompressedTexture2D::5223719688082059608::1568861032::1680452137::1::::<><>::
+Idle (40x48).png::CompressedTexture2D::4217570576106304699::1568860926::1680452137::1::::<><>::
+::res://microjogos/2023S1/projeto_vinicius_carvalho/Pixel Adventure 2/Enemies/Ghost/::1680452137
+Appear (44x30).png::CompressedTexture2D::7108463358372376064::1567350180::1680452137::1::::<><>::
+Desappear (44x30).png::CompressedTexture2D::2513476400066847705::1567350170::1680452137::1::::<><>::
+Gost Particles (48x16).png::CompressedTexture2D::8045654808595695121::1567377660::1680452137::1::::<><>::
+Hit (44x30).png::CompressedTexture2D::1912129412675459500::1567644214::1680452137::1::::<><>::
+Idle (44x30).png::CompressedTexture2D::1067470499341307578::1567350130::1680452137::1::::<><>::
+::res://microjogos/2023S1/projeto_vinicius_carvalho/Pixel Adventure 2/Enemies/Mushroom/::1680452137
+Hit.png::CompressedTexture2D::839624537568768447::1566495684::1680452137::1::::<><>::
+Idle (32x32).png::CompressedTexture2D::2355578103850640813::1566495668::1680452137::1::::<><>::
+Run (32x32).png::CompressedTexture2D::5004732171452305235::1566495676::1680452137::1::::<><>::
+::res://microjogos/2023S1/projeto_vinicius_carvalho/Pixel Adventure 2/Enemies/Plant/::1680452137
+Attack (44x42).png::CompressedTexture2D::7291276205437195760::1566843410::1680452137::1::::<><>::
+Bullet Pieces.png::CompressedTexture2D::6539505720053212640::1566846724::1680452137::1::::<><>::
+Bullet.png::CompressedTexture2D::3031347255366859408::1566846690::1680452137::1::::<><>::
+Hit (44x42).png::CompressedTexture2D::4025555808463210670::1566843428::1680452136::1::::<><>::
+Idle (44x42).png::CompressedTexture2D::5248469830808242539::1566843310::1680452136::1::::<><>::
+::res://microjogos/2023S1/projeto_vinicius_carvalho/Pixel Adventure 2/Enemies/Radish/::1680452136
+Hit (30x38).png::CompressedTexture2D::2942622105099527249::1567107316::1680452136::1::::<><>::
+Idle 1 (30x38).png::CompressedTexture2D::8031413717082307793::1567107284::1680452136::1::::<><>::
+Idle 2 (30x38).png::CompressedTexture2D::9046070520141637369::1567107296::1680452136::1::::<><>::
+Leafs.png::CompressedTexture2D::4098096841575696837::1567107384::1680452136::1::::<><>::
+Run (30x38).png::CompressedTexture2D::710361085735013267::1567107306::1680452136::1::::<><>::
+::res://microjogos/2023S1/projeto_vinicius_carvalho/Pixel Adventure 2/Enemies/Rino/::1680452136
+Hit (52x34).png::CompressedTexture2D::2707982653473089626::1568756478::1680452136::1::::<><>::
+Hit Wall (52x34).png::CompressedTexture2D::4386063068566572698::1568756462::1680452136::1::::<><>::
+Idle (52x34).png::CompressedTexture2D::3261229799785849384::1568756424::1680452136::1::::<><>::
+Run (52x34).png::CompressedTexture2D::4039851459923699300::1568756444::1680452136::1::::<><>::
+::res://microjogos/2023S1/projeto_vinicius_carvalho/Pixel Adventure 2/Enemies/Rocks/::1680452136
+Rock1_Hit.png::CompressedTexture2D::2149918368194841674::1567430546::1680452136::1::::<><>::
+Rock1_Idle (38x34).png::CompressedTexture2D::7966134418483610992::1567430522::1680452136::1::::<><>::
+Rock1_Run (38x34).png::CompressedTexture2D::7852153528528783828::1567430534::1680452136::1::::<><>::
+Rock2_Hit (32x28).png::CompressedTexture2D::8205337548623915612::1567430632::1680452136::1::::<><>::
+Rock2_Idle (32x28).png::CompressedTexture2D::1591301846251644594::1567430612::1680452136::1::::<><>::
+Rock2_Run (32x28).png::CompressedTexture2D::4251232588219513110::1567430622::1680452136::1::::<><>::
+Rock3_Hit (22x18).png::CompressedTexture2D::1145632160693512653::1567430684::1680452136::1::::<><>::
+Rock3_Idle (22x18).png::CompressedTexture2D::5156734056604921655::1567430664::1680452136::1::::<><>::
+Rock3_Run (22x18).png::CompressedTexture2D::6773375816846863341::1567430674::1680452136::1::::<><>::
+::res://microjogos/2023S1/projeto_vinicius_carvalho/Pixel Adventure 2/Enemies/Skull/::1680452137
+Hit (52x54).png::CompressedTexture2D::4991785426637591467::1569097202::1680452136::1::::<><>::
+Hit Wall 1 (52x54).png::CompressedTexture2D::89777575340516468::1569097174::1680452136::1::::<><>::
+Hit Wall 2 (52x54).png::CompressedTexture2D::2702802015133083156::1569097188::1680452136::1::::<><>::
+Idle 1 (52x54).png::CompressedTexture2D::8264733022049191727::1569097096::1680452136::1::::<><>::
+Idle 2 (52x54).png::CompressedTexture2D::4103586696166910420::1569097150::1680452137::1::::<><>::
+Orange Particle.png::CompressedTexture2D::8973513174303424123::1569108268::1680452137::1::::<><>::
+Red Particle.png::CompressedTexture2D::8760069381033963104::1569108238::1680452137::1::::<><>::
+::res://microjogos/2023S1/projeto_vinicius_carvalho/Pixel Adventure 2/Enemies/Slime/::1680452137
+Hit (44x30).png::CompressedTexture2D::1697269974085925132::1567732306::1680452137::1::::<><>::
+Idle-Run (44x30).png::CompressedTexture2D::2826140246604160122::1567732266::1680452137::1::::<><>::
+Particles (62x16).png::CompressedTexture2D::6440756817713196259::1567732426::1680452137::1::::<><>::
+::res://microjogos/2023S1/projeto_vinicius_carvalho/Pixel Adventure 2/Enemies/Snail/::1680452137
+Hit (38x24).png::CompressedTexture2D::6690551644047259471::1566945018::1680452137::1::::<><>::
+Idle (38x24).png::CompressedTexture2D::443182739620857003::1566944972::1680452137::1::::<><>::
+Shell Idle (38x24).png::CompressedTexture2D::6388013541790258434::1566945140::1680452137::1::::<><>::
+Shell Top Hit (38x24).png::CompressedTexture2D::5466551781873652161::1566945206::1680452137::1::::<><>::
+Shell Wall Hit (38x24).png::CompressedTexture2D::7881446927821886154::1566945180::1680452137::1::::<><>::
+Snail without shell.png::CompressedTexture2D::3360881527976205160::1566945068::1680452137::1::::<><>::
+Walk (38x24).png::CompressedTexture2D::5761167749712905663::1566944994::1680452137::1::::<><>::
+::res://microjogos/2023S1/projeto_vinicius_carvalho/Pixel Adventure 2/Enemies/Trunk/::1680452137
+Attack (64x32).png::CompressedTexture2D::1824326352030815524::1566587824::1680452137::1::::<><>::
+Bullet Pieces.png::CompressedTexture2D::8134777030307559874::1566587958::1680452137::1::::<><>::
+Bullet.png::CompressedTexture2D::3617043348148097336::1566587898::1680452137::1::::<><>::
+Hit (64x32).png::CompressedTexture2D::8144374815653237646::1566588618::1680452137::1::::<><>::
+Idle (64x32).png::CompressedTexture2D::6554485161391620351::1566587792::1680452137::1::::<><>::
+Run (64x32).png::CompressedTexture2D::4192854627782218960::1566659744::1680452137::1::::<><>::
+::res://microjogos/2023S1/projeto_vinicius_carvalho/Pixel Adventure 2/Enemies/Turtle/::1680452136
+Hit (44x26).png::CompressedTexture2D::3653133599063123450::1568832020::1680452136::1::::<><>::
+Idle 1 (44x26).png::CompressedTexture2D::3034068421943783821::1568831962::1680452136::1::::<><>::
+Idle 2 (44x26).png::CompressedTexture2D::3334935467870118861::1568831974::1680452136::1::::<><>::
+Spikes in (44x26).png::CompressedTexture2D::2651147402676761154::1568831996::1680452136::1::::<><>::
+Spikes out (44x26).png::CompressedTexture2D::8396646555191930513::1568832010::1680452136::1::::<><>::
+::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/::1680469504
 recursos.txt::TextFile::-1::1680373852::0::1::::<><>::
+::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sons/::1680473919
+bat_01.mp3::AudioStreamMP3::2627193919880190527::1680470784::1680470992::1::::<><>::
+dragonflap.mp3::AudioStreamMP3::1304054564320240495::1680473600::1680473622::1::::<><>::
+dragonflap.wav::AudioStreamWAV::8667567831986986182::1680473755::1680473775::1::::<><>::
+Dungeon 01.ogg::AudioStreamOggVorbis::304094569940076488::1680469468::1680469584::1::::<><>::
+wings_flap_large.ogg::AudioStreamOggVorbis::4128223333466957039::1638244784::1680473919::1::::<><>::
 ::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/::1680387600
 ::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/::1680370976
 License.txt::TextFile::-1::1492255736::0::1::::<><>::
@@ -473,7 +605,7 @@ Vendor4.png::CompressedTexture2D::7798753418104478456::1660422448::1680378574::1
 ::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/::1680387601
 ::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/AI/::1651011336
 ::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/::1651011336
-::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_1/::1651011336
+::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_1/::1680387606
 Explosion_1.png::CompressedTexture2D::2285843346032593858::1645562324::1680387606::1::::<><>::
 Explosion_2.png::CompressedTexture2D::4040603933958676544::1645562328::1680387606::1::::<><>::
 Explosion_3.png::CompressedTexture2D::1447621748037741611::1645562334::1680387606::1::::<><>::
@@ -484,7 +616,7 @@ Explosion_7.png::CompressedTexture2D::7961789975846866748::1645562360::168038760
 Explosion_8.png::CompressedTexture2D::8952436586545908726::1645562364::1680387605::1::::<><>::
 Explosion_9.png::CompressedTexture2D::4862549652619547277::1645562370::1680387605::1::::<><>::
 Explosion_10.png::CompressedTexture2D::8158832298712074049::1645562376::1680387605::1::::<><>::
-::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_2/::1651011336
+::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_2/::1680387605
 Explosion_1.png::CompressedTexture2D::2180427369671778262::1645563580::1680387605::1::::<><>::
 Explosion_2.png::CompressedTexture2D::5750732309583769869::1645563582::1680387605::1::::<><>::
 Explosion_3.png::CompressedTexture2D::6097376479342968364::1645563586::1680387605::1::::<><>::
@@ -495,7 +627,7 @@ Explosion_7.png::CompressedTexture2D::7153338767524832825::1645563606::168038760
 Explosion_8.png::CompressedTexture2D::6736557806341620505::1645563612::1680387605::1::::<><>::
 Explosion_9.png::CompressedTexture2D::479983342703940747::1645563620::1680387605::1::::<><>::
 Explosion_10.png::CompressedTexture2D::3471151086659027151::1645563626::1680387605::1::::<><>::
-::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_3/::1651011336
+::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_3/::1680387606
 Explosion_1.png::CompressedTexture2D::5577548229768059393::1645565260::1680387605::1::::<><>::
 Explosion_2.png::CompressedTexture2D::4319537243261691354::1645565264::1680387605::1::::<><>::
 Explosion_3.png::CompressedTexture2D::7479988864651630294::1645565270::1680387605::1::::<><>::
@@ -507,21 +639,21 @@ Explosion_8.png::CompressedTexture2D::8654956967397806804::1645565304::168038760
 Explosion_9.png::CompressedTexture2D::6366329797377054369::1645565308::1680387606::1::::<><>::
 Explosion_10.png::CompressedTexture2D::1051306810950009789::1645565314::1680387606::1::::<><>::
 ::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_4/::1651011336
-::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_4/1/::1651011336
+::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_4/1/::1680387606
 Explosion_1.png::CompressedTexture2D::799983807745823962::1645566460::1680387606::1::::<><>::
 Explosion_2.png::CompressedTexture2D::6324978085137884129::1645566464::1680387606::1::::<><>::
 Explosion_3.png::CompressedTexture2D::1659382063216870833::1645566468::1680387606::1::::<><>::
 Explosion_4.png::CompressedTexture2D::8962899890756649551::1645566472::1680387606::1::::<><>::
 Explosion_5.png::CompressedTexture2D::5243259348859502919::1645566478::1680387606::1::::<><>::
 Explosion_6.png::CompressedTexture2D::1342951265394841179::1645566482::1680387606::1::::<><>::
-::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_4/2/::1651011336
+::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_4/2/::1680387606
 Explosion_1_1.png::CompressedTexture2D::722005294268797747::1645566264::1680387606::1::::<><>::
 Explosion_1_2.png::CompressedTexture2D::2520693330368174466::1645566272::1680387606::1::::<><>::
 Explosion_1_3.png::CompressedTexture2D::8035027758776526728::1645566278::1680387606::1::::<><>::
 Explosion_1_4.png::CompressedTexture2D::4874324619372603132::1645566282::1680387606::1::::<><>::
 Explosion_1_5.png::CompressedTexture2D::117956337026983068::1645566288::1680387606::1::::<><>::
 Explosion_1_6.png::CompressedTexture2D::7283301876653267589::1645566350::1680387606::1::::<><>::
-::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_5/::1651011336
+::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_5/::1680387606
 Explosion_1.png::CompressedTexture2D::601157750274529091::1645623422::1680387606::1::::<><>::
 Explosion_2.png::CompressedTexture2D::3415241471734831388::1645623426::1680387606::1::::<><>::
 Explosion_3.png::CompressedTexture2D::4654369299450059890::1645623432::1680387606::1::::<><>::
@@ -532,7 +664,7 @@ Explosion_7.png::CompressedTexture2D::8097707607071273392::1645623448::168038760
 Explosion_8.png::CompressedTexture2D::7294463341457779396::1645623454::1680387606::1::::<><>::
 Explosion_9.png::CompressedTexture2D::4561799315063193486::1645623462::1680387606::1::::<><>::
 Explosion_10.png::CompressedTexture2D::1111775876936472614::1645623468::1680387606::1::::<><>::
-::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_6/::1651011336
+::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_6/::1680387606
 Explosion_1.png::CompressedTexture2D::2578223405521744596::1645624036::1680387606::1::::<><>::
 Explosion_2.png::CompressedTexture2D::1013789760795186899::1645624042::1680387606::1::::<><>::
 Explosion_3.png::CompressedTexture2D::2835205885232240253::1645624050::1680387606::1::::<><>::
@@ -544,29 +676,29 @@ Explosion_8.png::CompressedTexture2D::6528004583450454837::1645624086::168038760
 Explosion_9.png::CompressedTexture2D::706778731562194581::1645624092::1680387604::1::::<><>::
 Explosion_10.png::CompressedTexture2D::4313442568869134432::1645624096::1680387604::1::::<><>::
 ::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_7/::1651011336
-::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_7/1/::1651011336
+::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_7/1/::1680387603
 Explosion_1.png::CompressedTexture2D::6207882622677943636::1645625928::1680387603::1::::<><>::
 Explosion_2.png::CompressedTexture2D::9171432377507536052::1645625934::1680387603::1::::<><>::
 Explosion_3.png::CompressedTexture2D::2433004576909244032::1645625940::1680387603::1::::<><>::
 Explosion_4.png::CompressedTexture2D::4394915855387141825::1645625946::1680387603::1::::<><>::
 Explosion_5.png::CompressedTexture2D::2216174021588816523::1645625952::1680387603::1::::<><>::
-::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_7/2/::1651011336
+::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_7/2/::1680387603
 Explosion_1_1.png::CompressedTexture2D::1021840647887129317::1645626024::1680387603::1::::<><>::
 Explosion_1_2.png::CompressedTexture2D::387350572978420690::1645626028::1680387603::1::::<><>::
 Explosion_1_3.png::CompressedTexture2D::1430291514476278254::1645626032::1680387603::1::::<><>::
-::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_7/3/::1651011336
+::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_7/3/::1680387603
 Explosion_2_1.png::CompressedTexture2D::1926526483956969401::1645626068::1680387603::1::::<><>::
 Explosion_2_2.png::CompressedTexture2D::7596044272512726239::1645626074::1680387603::1::::<><>::
 Explosion_2_3.png::CompressedTexture2D::1123139798177766275::1645626078::1680387603::1::::<><>::
 Explosion_2_4.png::CompressedTexture2D::5833959579988930173::1645626082::1680387603::1::::<><>::
 Explosion_2_5.png::CompressedTexture2D::2126168737149358000::1645626088::1680387603::1::::<><>::
 Explosion_2_6.png::CompressedTexture2D::7252357590872824964::1645626094::1680387603::1::::<><>::
-::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_7/4/::1651011336
+::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_7/4/::1680387603
 Explosion_3_1.png::CompressedTexture2D::2007466025390108514::1645626102::1680387603::1::::<><>::
 Explosion_3_2.png::CompressedTexture2D::2170531769094443110::1645626106::1680387603::1::::<><>::
 Explosion_3_3.png::CompressedTexture2D::8062576050111196685::1645626110::1680387603::1::::<><>::
 Explosion_3_4.png::CompressedTexture2D::3043553783674013920::1645626114::1680387603::1::::<><>::
-::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_8/::1651011336
+::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_8/::1680387605
 Explosion_1.png::CompressedTexture2D::4406238255051365392::1645626722::1680387603::1::::<><>::
 Explosion_2.png::CompressedTexture2D::1406913300813232378::1645626726::1680387603::1::::<><>::
 Explosion_3.png::CompressedTexture2D::6166619167169857561::1645626732::1680387605::1::::<><>::
@@ -577,7 +709,7 @@ Explosion_7.png::CompressedTexture2D::2309433569920247194::1645626754::168038760
 Explosion_8.png::CompressedTexture2D::7752311447893156340::1645626756::1680387605::1::::<><>::
 Explosion_9.png::CompressedTexture2D::6159654501201680722::1645626760::1680387605::1::::<><>::
 Explosion_10.png::CompressedTexture2D::7874112614976252236::1645626766::1680387605::1::::<><>::
-::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_9/::1651011336
+::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_9/::1680387605
 Explosion_1.png::CompressedTexture2D::1235475095009709595::1645628734::1680387605::1::::<><>::
 Explosion_2.png::CompressedTexture2D::4323716429768023700::1645628738::1680387604::1::::<><>::
 Explosion_3.png::CompressedTexture2D::7668280344157558413::1645628744::1680387604::1::::<><>::
@@ -588,7 +720,7 @@ Explosion_7.png::CompressedTexture2D::7075929700614197841::1645628764::168038760
 Explosion_8.png::CompressedTexture2D::2046866782129558447::1645628770::1680387604::1::::<><>::
 Explosion_9.png::CompressedTexture2D::31243687498130776::1645628774::1680387604::1::::<><>::
 Explosion_10.png::CompressedTexture2D::7685467361115811440::1645628778::1680387604::1::::<><>::
-::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_10/::1651011336
+::res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-net-840730-free-animated-explosion-sprite-pack/PNG/Explosion_10/::1680387604
 Explosion_1.png::CompressedTexture2D::1678970221899455470::1645630264::1680387604::1::::<><>::
 Explosion_2.png::CompressedTexture2D::1103314577352323454::1645630268::1680387604::1::::<><>::
 Explosion_3.png::CompressedTexture2D::446782777973709938::1645630274::1680387604::1::::<><>::
@@ -606,13 +738,13 @@ readme.txt::TextFile::-1::1530304316::0::1::::<><>::
 ::res://microjogos/demo/frogger/::1680373852
 capa.png::CompressedTexture2D::2635372846758623883::1680373852::1680373852::1::::<><>::
 creditos.gd::GDScript::-1::1680373852::0::1::::<>Resource<>::
-::res://microjogos/demo/frogger/cenas/::1680373852
+::res://microjogos/demo/frogger/cenas/::1680468169
 Car.tscn::PackedScene::392659209127008164::1680373852::0::1::::<><>::res://microjogos/demo/frogger/cenas/scripts/Car.gd<>uid://d3hdg7tbswwhp
-cenas.txt::TextFile::-1::1680373852::0::1::::<><>::
+cenas.txt::TextFile::-1::1680468169::0::1::::<><>::
 Frog.tscn::PackedScene::4441009588237996374::1680373852::0::1::::<><>::uid://cnage6e7bhl5f<>res://microjogos/demo/frogger/cenas/scripts/Frog.gd<>uid://o3ie5n0vbvir<>uid://de06u585m3bje<>uid://cqebbp3yibyf3
 main.tscn::PackedScene::8787119778940358580::1680373852::0::1::::<><>::res://microjogos/demo/frogger/cenas/scripts/main.gd<>uid://brge38x1oasu4<>uid://b4ji1qu54goc1
-::res://microjogos/demo/frogger/cenas/scripts/::1680373852
-Car.gd::GDScript::-1::1680373852::0::1::::<>Area2D<>::
+::res://microjogos/demo/frogger/cenas/scripts/::1680468169
+Car.gd::GDScript::-1::1680468169::0::1::::<>Area2D<>::
 Frog.gd::GDScript::-1::1680373852::0::1::::<>Area2D<>::
 main.gd::GDScript::-1::1680373852::0::1::::<>Node2D<>::
 scripts.txt::TextFile::-1::1680373852::0::1::::<><>::
@@ -697,8 +829,8 @@ LightModule.tscn::PackedScene::-1::1680373859::0::1::::<><>::res://microjogos/mo
 Main.tscn::PackedScene::5764137758937966579::1680377420::0::1::::<><>::uid://cxoiffe5hbttt<>uid://gabkryriv8my<>uid://213h2twagxp6<>res://microjogos/moraguma/candle prick/cenas/scripts/Main.gd
 Player.tscn::PackedScene::8690980258433185122::1680377421::0::1::::<><>::res://microjogos/moraguma/candle prick/cenas/scripts/Player.gd<>uid://c7utftnuq5qdp<>res://microjogos/moraguma/candle prick/cenas/LightModule.tscn<>uid://b7o588l46lavp<>uid://cl4mtgihtemco
 WinningArea.tscn::PackedScene::-1::1680373859::0::1::::<><>::res://microjogos/moraguma/candle prick/recursos/sprites/candleoutline.png<>res://microjogos/moraguma/candle prick/cenas/scripts/WinningArea.gd<>res://microjogos/moraguma/candle prick/recursos/sprites/arrowpressed.png<>res://microjogos/moraguma/candle prick/cenas/LightModule.tscn
-::res://microjogos/moraguma/candle prick/cenas/scripts/::1680373859
-Camera.gd::GDScript::-1::1680373859::0::1::::<>Camera2D<>::
+::res://microjogos/moraguma/candle prick/cenas/scripts/::1680468169
+Camera.gd::GDScript::-1::1680468169::0::1::::<>Camera2D<>::
 Element.gd::GDScript::-1::1680373859::0::1::::<>Area2D<>::
 Game.gd::GDScript::-1::1680373859::0::1::::<>Node2D<>::
 Light.gd::GDScript::-1::1680373859::0::1::::<>Node2D<>::
@@ -800,9 +932,9 @@ EnterButton.tscn::PackedScene::-1::1680373864::0::1::::<><>::res://microjogos/mo
 EraseButton.tscn::PackedScene::-1::1680373865::0::1::::<><>::res://microjogos/moraguma/ifuv/cenas/scripts/EraseButton.gd<>res://microjogos/moraguma/ifuv/recursos/sprites/button.png<>res://microjogos/moraguma/ifuv/recursos/sprites/trash.png
 Main.tscn::PackedScene::-1::1680373865::0::1::::<><>::res://microjogos/moraguma/ifuv/recursos/sprites/closewall.png<>res://microjogos/moraguma/ifuv/recursos/sounds/sfx/door.wav<>res://microjogos/moraguma/ifuv/recursos/sprites/bg.png<>res://microjogos/moraguma/ifuv/recursos/sprites/monster.png<>res://microjogos/moraguma/ifuv/recursos/sprites/door.png<>res://microjogos/moraguma/ifuv/cenas/scripts/Main.gd<>res://microjogos/moraguma/ifuv/recursos/sounds/sfx/Key3.wav<>res://microjogos/moraguma/ifuv/recursos/sounds/sfx/Key4.wav<>res://microjogos/moraguma/ifuv/recursos/sounds/sfx/Key1.wav<>res://microjogos/moraguma/ifuv/recursos/sounds/sfx/Key2.wav<>res://microjogos/moraguma/ifuv/recursos/sounds/sfx/Key5.wav<>res://microjogos/moraguma/ifuv/recursos/sounds/sfx/error.wav<>res://microjogos/moraguma/ifuv/recursos/sprites/pad.png<>res://microjogos/moraguma/ifuv/cenas/NumberButton.tscn<>res://microjogos/moraguma/ifuv/cenas/EnterButton.tscn<>res://microjogos/moraguma/ifuv/cenas/EraseButton.tscn<>res://microjogos/moraguma/ifuv/recursos/sprites/cursor.png<>res://microjogos/moraguma/ifuv/recursos/fonts/Pixel Millennium.ttf<>res://microjogos/moraguma/ifuv/cenas/scripts/Arrow.gd<>res://microjogos/moraguma/ifuv/cenas/scripts/Twitcher.gd<>res://microjogos/moraguma/ifuv/recursos/sprites/paperslip.png<>res://microjogos/moraguma/ifuv/recursos/sounds/music/ifuv.ogg
 NumberButton.tscn::PackedScene::-1::1680373865::0::1::::<><>::res://microjogos/moraguma/ifuv/recursos/fonts/Pixel Millennium.ttf<>res://microjogos/moraguma/ifuv/cenas/scripts/NumberButton.gd<>res://microjogos/moraguma/ifuv/recursos/sprites/button.png
-::res://microjogos/moraguma/ifuv/cenas/scripts/::1680373865
+::res://microjogos/moraguma/ifuv/cenas/scripts/::1680468169
 Arrow.gd::GDScript::-1::1680373865::0::1::::<>Sprite2D<>::
-Button.gd::GDScript::-1::1680373865::0::1::::<>Sprite2D<>::
+Button.gd::GDScript::-1::1680468169::0::1::::<>Sprite2D<>::
 EnterButton.gd::GDScript::-1::1680373865::0::1::::<>Sprite2D<>::
 EraseButton.gd::GDScript::-1::1680373865::0::1::::<>Sprite2D<>::
 Main.gd::GDScript::-1::1680373865::0::1::::<>Node2D<>::
@@ -1101,16 +1233,16 @@ Menu.tscn::PackedScene::8186920016833593607::1680373880::0::1::::<><>::uid://ja6
 MinigameButton.tscn::PackedScene::6890322079678538680::1680373880::0::1::::<><>::uid://dt5djib7huxvm<>res://principal/cenas/scripts/MinigameButton.gd
 Opening.tscn::PackedScene::4386439153873623756::1680373880::0::1::::<><>::uid://blcw2hkcbcxid<>uid://c2sgtas737d1o<>uid://c2mwty1vwy3f4<>res://principal/cenas/scripts/Opening.gd
 Vitoria.tscn::PackedScene::645856437965792312::1680377419::0::1::::<><>::uid://dogwrk2nqqk03<>res://principal/cenas/scripts/TransitionButton.gd<>uid://cs75vvw01oafl<>uid://ja6urlsch5m7<>uid://cb4tlwb81nq48<>res://principal/cenas/scripts/AutoplayIdleAnimationPlayer.gd<>res://principal/cenas/scripts/TranslatableText.gd<>res://principal/cenas/scripts/ToTitle.gd<>uid://bfefepnpbds1x<>uid://dt5djib7huxvm
-::res://principal/cenas/autoloads/::1680373881
-Camera.tscn::PackedScene::704360461285479859::1680373880::0::1::::<><>::res://principal/cenas/scripts/Camera.gd
+::res://principal/cenas/autoloads/::1680389077
+Camera.tscn::PackedScene::704360461285479859::1680389077::0::1::::<><>::res://principal/cenas/scripts/Camera.gd
 Global.tscn::PackedScene::8160151261848261098::1680373881::0::1::::<><>::res://principal/cenas/scripts/Global.gd
 NotificationCenter.tscn::PackedScene::2037513135938680773::1680373881::0::1::::<><>::res://principal/cenas/scripts/NotificationCenter.gd<>uid://cb4tlwb81nq48
 SoundController.tscn::PackedScene::-1::1680373881::0::1::::<><>::res://principal/recursos/sounds/music/Menu.ogg<>res://principal/cenas/scripts/SoundController.gd<>res://principal/recursos/sounds/music/GameIntro.ogg<>res://principal/recursos/sounds/music/GameLoop.ogg<>res://principal/recursos/sounds/SFX/Throw.wav<>res://principal/recursos/sounds/SFX/Click.wav<>res://principal/recursos/sounds/SFX/Damage.wav<>res://principal/recursos/sounds/SFX/Win.wav
-::res://principal/cenas/scripts/::1680373881
-ArcadeButton.gd::GDScript::-1::1680373881::0::1::::<>Button<>::
+::res://principal/cenas/scripts/::1680468169
+ArcadeButton.gd::GDScript::-1::1680468169::0::1::::<>Button<>::
 AutoplayIdleAnimationPlayer.gd::GDScript::-1::1680373881::0::1::::<>AnimationPlayer<>::
-Bateria.gd::GDScript::-1::1680373881::0::1::::<>TextureRect<>::
-Camera.gd::GDScript::-1::1680373881::0::1::::<>Camera2D<>::
+Bateria.gd::GDScript::-1::1680468169::0::1::::<>TextureRect<>::
+Camera.gd::GDScript::-1::1680468169::0::1::::<>Camera2D<>::
 CoverButton.gd::GDScript::-1::1680373881::0::1::::<>TextureRect<>::
 Creditos.gd::GDScript::-1::1680373881::0::1::::<>Node2D<>::
 CreditsScreen.gd::GDScript::-1::1680373881::0::1::::<>Node2D<>::
@@ -1195,9 +1327,9 @@ MenuBase.png::CompressedTexture2D::633618446106771336::1680373882::1680373882::1
 toggle.png::CompressedTexture2D::7127972561077136915::1680373883::1680373883::1::::<><>::
 toggle_checked.png::CompressedTexture2D::5366956985596676485::1680373883::1680373883::1::::<><>::
 toggle_unchecked.png::CompressedTexture2D::1529152158646614683::1680373883::1680373883::1::::<><>::
-::res://principal/recursos/themes/::1680375090
-ButtonTheme.tres::Theme::8554980059142862082::1680375090::0::1::::<><>::uid://blcw2hkcbcxid<>uid://cip186bal41rd<>uid://v1y6bapablah
+::res://principal/recursos/themes/::1680451700
+ButtonTheme.tres::Theme::8554980059142862082::1680451700::0::1::::<><>::uid://blcw2hkcbcxid<>uid://cip186bal41rd<>uid://v1y6bapablah
 GameTheme.tres::Theme::975870234295688012::1680375090::0::1::::<><>::uid://bh37fuggg4bip
-TitleTheme.tres::Theme::4904071591080636451::1680375090::0::1::::<><>::uid://dv05ux65ppls5
+TitleTheme.tres::Theme::4904071591080636451::1680451700::0::1::::<><>::uid://dv05ux65ppls5
 ::res://principal/saves/::1680373883
-save.tres::Resource::-1::1680375379::0::1::::<><>::res://principal/cenas/scripts/SaveFile.gd
+save.tres::Resource::-1::1680377619::0::1::::<><>::res://principal/cenas/scripts/SaveFile.gd
