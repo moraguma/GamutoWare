@@ -22,9 +22,9 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
+			NotificationCenter.notify("REACH THE PLATAFORM AND DON'T DIE!")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FACA ALGO!")
+			NotificationCenter.notify("CHEGUE NA PLATAFORMA E NÃO MORRA!")
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
@@ -63,6 +63,7 @@ func my_method():
 
 # Chame esta função para registrar que o jogador venceu o jogo
 func register_win():
+	print("eba")
 	emit_signal("win")
 
 

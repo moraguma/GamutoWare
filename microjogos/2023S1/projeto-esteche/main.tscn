@@ -1,0 +1,118 @@
+[gd_scene load_steps=17 format=3 uid="uid://csiisnal8j2bo"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-esteche/cenas/scripts/main.gd" id="1_mw6wy"]
+[ext_resource type="Texture2D" uid="uid://0lmefolnfly5" path="res://microjogos/2023S1/projeto-esteche/cenas/imkv74m4q5g41.png" id="2_fbts5"]
+[ext_resource type="Texture2D" uid="uid://1432e4pf8x24" path="res://microjogos/2023S1/projeto-esteche/cenas/Plataforma1.png" id="3_gnan2"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-esteche/PlataformaDireita.gd" id="3_xrdns"]
+[ext_resource type="Texture2D" uid="uid://b6xw1gt12jghc" path="res://microjogos/2023S1/projeto-esteche/cenas/plataforma.png" id="4_3wmt8"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-esteche/Astronauta.gd" id="5_aybri"]
+[ext_resource type="Texture2D" uid="uid://befk2dswrptd8" path="res://microjogos/2023S1/projeto-esteche/cenas/olaaa.png" id="5_dk40o"]
+[ext_resource type="Texture2D" uid="uid://dkoxknssj14kl" path="res://microjogos/2023S1/projeto-esteche/cenas/picwish.png" id="6_kyp0c"]
+[ext_resource type="PackedScene" uid="uid://n7g7kj0h3vxt" path="res://microjogos/2023S1/projeto-esteche/cenas/area_2d.tscn" id="8_yy8e7"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-esteche/areadepouso.gd" id="10_hryy6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wf0wd"]
+size = Vector2(136, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r2qju"]
+size = Vector2(120, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oj1ji"]
+size = Vector2(32, 109.25)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r6qcd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_dk40o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kyp0c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_51rqe"]
+size = Vector2(104, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_amtwy"]
+size = Vector2(1970, 20)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_mw6wy")
+
+[node name="Camera3D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1960.0
+offset_bottom = 1184.0
+texture = ExtResource("2_fbts5")
+
+[node name="PlataformaDireita" type="StaticBody2D" parent="."]
+script = ExtResource("3_xrdns")
+
+[node name="Sprite2D" type="Sprite2D" parent="PlataformaDireita"]
+position = Vector2(106.625, 832.125)
+scale = Vector2(0.43146, 0.4019)
+texture = ExtResource("3_gnan2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlataformaDireita"]
+position = Vector2(148, 832)
+shape = SubResource("RectangleShape2D_wf0wd")
+
+[node name="PlataformaEsquerda" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlataformaEsquerda"]
+position = Vector2(1772, 712)
+shape = SubResource("RectangleShape2D_r2qju")
+
+[node name="Sprite2D" type="Sprite2D" parent="PlataformaEsquerda"]
+position = Vector2(1816, 712)
+scale = Vector2(0.405079, 0.352847)
+texture = ExtResource("4_3wmt8")
+
+[node name="Astronauta" type="CharacterBody2D" parent="."]
+script = ExtResource("5_aybri")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Astronauta"]
+position = Vector2(152, 750.625)
+shape = SubResource("RectangleShape2D_oj1ji")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Astronauta"]
+position = Vector2(154.063, 744)
+scale = Vector2(0.176044, 0.178144)
+sprite_frames = SubResource("SpriteFrames_r6qcd")
+
+[node name="Asteroide" parent="." instance=ExtResource("8_yy8e7")]
+position = Vector2(672, 360)
+
+[node name="Asteroide2" parent="." instance=ExtResource("8_yy8e7")]
+position = Vector2(1096, 264)
+
+[node name="Asteroide3" parent="." instance=ExtResource("8_yy8e7")]
+position = Vector2(904, 752)
+
+[node name="Asteroide4" parent="." instance=ExtResource("8_yy8e7")]
+position = Vector2(1320, 576)
+
+[node name="Asteroide5" parent="." instance=ExtResource("8_yy8e7")]
+position = Vector2(1536, 288)
+
+[node name="areadevictoria" type="Area2D" parent="."]
+script = ExtResource("10_hryy6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="areadevictoria"]
+position = Vector2(1776, 696)
+shape = SubResource("RectangleShape2D_51rqe")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(975, 0)
+shape = SubResource("RectangleShape2D_amtwy")
+
+[node name="Asteroide6" parent="." instance=ExtResource("8_yy8e7")]
+position = Vector2(280, 304)
