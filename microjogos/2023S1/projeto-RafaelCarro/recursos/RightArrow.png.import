@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdtlu3ct35ljc"
-path="res://.godot/imported/capa.png-bb8e11ddf337bf4186f8ebf2b5241850.ctex"
+uid="uid://bckmdna5i5gv7"
+path="res://.godot/imported/RightArrow.png-634f9931f6d6605d5dd4ac546bd3ef4f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2023S1/projeto-RafaelCarro/capa.png"
-dest_files=["res://.godot/imported/capa.png-bb8e11ddf337bf4186f8ebf2b5241850.ctex"]
+source_file="res://microjogos/2023S1/projeto-RafaelCarro/recursos/RightArrow.png"
+dest_files=["res://.godot/imported/RightArrow.png-634f9931f6d6605d5dd4ac546bd3ef4f.ctex"]
 
 [params]
 

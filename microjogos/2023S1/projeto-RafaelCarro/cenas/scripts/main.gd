@@ -4,6 +4,8 @@ extends Node2D
 signal win
 signal lose
 
+signal StartInput(Input)
+
 # Estas constantes são usadas para determinar o tamanho da tela do seu jogo. Por padrão, definem uma
 # tela 1920x1080, que é padrão para monitores full HD. Caso você queira uma resolução menor para 
 # atingir uma estética mais pixelada, você pode mudar estes números para qualquer outra resolução 
@@ -11,6 +13,7 @@ signal lose
 const WIDTH = 1920
 const HEIGHT = 1080
 
+var Acertos = 0
 
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES PADRÃO
@@ -22,9 +25,10 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
+			NotificationCenter.notify("PLAY THE DRUMS!")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FACA ALGO!")
+			NotificationCenter.notify("TOQUE A BATERIA!")
+	
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
@@ -49,6 +53,11 @@ func _process(delta):
 # Um método genérico. Crie quantos métodos você precisar!
 func my_method():
 	pass
+	
+func aumentar_acertos():
+	Acertos += 1
+	if Acertos >= 5:
+		register_win()
 
 
 # --------------------------------------------------------------------------------------------------

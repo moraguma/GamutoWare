@@ -7,17 +7,21 @@ extends Resource
 
 
 # Título do seu jogo
-var title_pt = "Titulo em Portugues"
-var title_en = "Title in English"
+var title_pt = "Bateria Dreamwave"
+var title_en = "Dreamwave Drums"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
-Criado por: [Seu nome!]
+Criado por: Rafael Carro Gaudim
+	GitHub : https://github.com/RafaelCarro
+	Linkedin: https://www.linkedin.com/in/rafaelcarrog/
 
-Você pode preencher o resto deste campo com creditos de assets utilizados, links para sua redes sociais ou qualquer outro detalhe que ache relevante
+Background por pikisuperstar no Freepik 
 """
 var credits_en = """
-Made by: [Your name!]
+Made by: Rafael Carro Gaudim
+	GitHub : https://github.com/RafaelCarro
+	Linkedin: https://www.linkedin.com/in/rafaelcarrog/
 
-Fill this space with credits to used assets, links to your social medias and whatever other details you think are important
+Background by pikisuperstar on Freepik 
 """

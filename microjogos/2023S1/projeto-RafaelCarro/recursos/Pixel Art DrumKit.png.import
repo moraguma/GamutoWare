@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdtlu3ct35ljc"
-path="res://.godot/imported/capa.png-bb8e11ddf337bf4186f8ebf2b5241850.ctex"
+uid="uid://bs3rdw0e2ob0t"
+path="res://.godot/imported/Pixel Art DrumKit.png-d7f112110882a279c1e68cfb7c614bde.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2023S1/projeto-RafaelCarro/capa.png"
-dest_files=["res://.godot/imported/capa.png-bb8e11ddf337bf4186f8ebf2b5241850.ctex"]
+source_file="res://microjogos/2023S1/projeto-RafaelCarro/recursos/Pixel Art DrumKit.png"
+dest_files=["res://.godot/imported/Pixel Art DrumKit.png-d7f112110882a279c1e68cfb7c614bde.ctex"]
 
 [params]
 
