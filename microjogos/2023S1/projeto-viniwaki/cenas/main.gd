@@ -53,6 +53,7 @@ func _process(_delta):
 			f.set_cut()
 			$slice.position = f.position
 			$slice.animate_once(1)
+			$audio_slice.play()
 	
 	if Input.is_action_just_pressed("direita"):
 		if slice_queues[2].size() != 0:
@@ -60,6 +61,7 @@ func _process(_delta):
 			f.set_cut()
 			$slice.position = f.position
 			$slice.animate_once(2)
+			$audio_slice.play()
 	
 	if Input.is_action_just_pressed("baixo"):
 		if slice_queues[3].size() != 0:
@@ -67,6 +69,7 @@ func _process(_delta):
 			f.set_cut()
 			$slice.position = f.position
 			$slice.animate_once(3)
+			$audio_slice.play()
 	
 	if Input.is_action_just_pressed("esquerda"):
 		if slice_queues[4].size() != 0:
@@ -74,6 +77,7 @@ func _process(_delta):
 			f.set_cut()
 			$slice.position = f.position
 			$slice.animate_once(4)
+			$audio_slice.play()
 	
 
 
@@ -88,6 +92,7 @@ func my_method():
 
 func remove_from_slice_queue(d, fruit):
 	slice_queues[d].erase(fruit)
+	$audio_lose.play()
 	
 func throw_fruit():
 	var new_fruit = fruit_scene.instantiate()
@@ -100,6 +105,9 @@ func throw_fruit():
 	
 	slice_queues[dir].append(new_fruit)
 	add_child(new_fruit)
+	
+	$audio_throw.play()
+	
 
 func _on_timer_timeout():
 	throw_fruit()
