@@ -7,17 +7,17 @@ extends Resource
 
 
 # Título do seu jogo
-var title_pt = "Titulo em Portugues"
-var title_en = "Title in English"
+var title_pt = "Prateleira"
+var title_en = "Bookshelf"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
-Criado por: [Seu nome!]
-
-Você pode preencher o resto deste campo com creditos de assets utilizados, links para sua redes sociais ou qualquer outro detalhe que ache relevante
+Criado por: Alexia Bettoni do Nascimento
+Artes feitas por : Alexia Bettoni do Nascimento, no Canva
+Inspirado em: A little to the left
 """
 var credits_en = """
-Made by: [Your name!]
-
-Fill this space with credits to used assets, links to your social medias and whatever other details you think are important
+Made by: Alexia Bettoni do Nascimento
+Arts made by : Alexia Bettoni do Nascimento, on Canva
+Inspired in: A little to the left
 """
