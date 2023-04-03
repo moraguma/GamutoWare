@@ -12,8 +12,8 @@ var intersect = false
 
 func _ready():
 	$"AnimationPlayer".play("Idle")
-	print("ok")
-	position = Vector2(randi_range(0,WIDTH),randi_range(0,HEIGHT))
+	#print("ok")
+	position = Vector2(randi_range(0,WIDTH-1),randi_range(0,HEIGHT-1))
 	
 
 
@@ -26,7 +26,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 func explode():
-	print("explodiu", intersect)
+	#print("explodiu", intersect)
 	exploded = true
 	$"AnimationPlayer".play("Explosion")
 	var pai = get_parent()
@@ -38,11 +38,11 @@ func ignite():
 
 func saiu(body):
 	intersect = false
-	print("saiu")
+	#print("saiu")
 	pass # Replace with function body.
 
 
 func entrou(body):
 	intersect = true;
-	print("entrou")
+	#print("entrou")
 	pass # Replace with function body.

@@ -23,18 +23,13 @@ func _timeout_explosao():
 	if(perdeu):
 		$"../Player".morrer()
 		$"..".register_lose()
-		print("morreu")
+		#print("morreu")
 	else:
-		$"../Player".morto = 1
 		$"..".register_win()
-		print("viveu")
+		
+		#print("viveu")
 
 	
 func dar_ignite():
 	for i in get_children():
 		i.ignite()
-
-
-func sumir_fumaca():
-	for i in get_children():
-		i.hide()
