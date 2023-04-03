@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://cilbxm2mlh3j"]
 
 [ext_resource type="TileSet" uid="uid://b47o3eh6wmwgj" path="res://microjogos/2023S1/projeto-enzo-bertoloti/cenas/tileset.tres" id="1_w4agt"]
-[ext_resource type="Texture2D" uid="uid://bdthk0213dkir" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/MIOJO_DO_MAL.png" id="3_rmpe1"]
+[ext_resource type="Texture2D" uid="uid://cjxhnaatfs63g" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/MIOJO_DO_MAL_pb.png" id="2_q5boy"]
 [ext_resource type="Texture2D" uid="uid://c80aeiwc24s6a" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/player.png" id="4_d2j25"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto-enzo-bertoloti/cenas/scripts/CharacterBody2D.gd" id="4_syy0o"]
 [ext_resource type="AudioStream" uid="uid://dy2dhshmjh5pp" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/Sons/SFX_Explosion_01.wav" id="6_2pu86"]
@@ -28,7 +28,7 @@ metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Win"]
 scale = Vector2(2.13681, 1)
-texture = ExtResource("3_rmpe1")
+texture = ExtResource("2_q5boy")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Win"]
 polygon = PackedVector2Array(-304, 88, -152, -128, 320, -128, 120, 144, -312, 104)

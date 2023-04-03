@@ -47,7 +47,9 @@ func _process(delta):
 
 func instanciar_objeto():
 	var escolha = (randi() % 4) +1 
+	print(escolha)
 	var cena = load("res://microjogos/2023S1/projeto-enzo-bertoloti/cenas/mapa%d.tscn" % escolha)
+#	var cena = load("res://microjogos/2023S1/projeto-enzo-bertoloti/cenas/mapa4.tscn")
 	var objeto = cena.instantiate()
 	add_child(objeto)
 
