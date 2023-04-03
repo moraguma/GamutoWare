@@ -20,6 +20,7 @@ radius = 43.0
 height = 104.0
 
 [node name="Newton\'s vengeance" type="Node2D"]
+position = Vector2(1, 0)
 script = ExtResource("1_luxrx")
 
 [node name="TextureRect" type="TextureRect" parent="."]
