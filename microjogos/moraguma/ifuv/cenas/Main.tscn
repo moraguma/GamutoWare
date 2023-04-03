@@ -1,405 +1,459 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=40 format=3 uid="uid://cukdi0t5sqxm8"]
 
-[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sprites/closewall.png" type="Texture2D" id=1]
-[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/door.wav" type="AudioStream" id=2]
-[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sprites/bg.png" type="Texture2D" id=3]
-[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sprites/monster.png" type="Texture2D" id=4]
-[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sprites/door.png" type="Texture2D" id=5]
-[ext_resource path="res://microjogos/moraguma/ifuv/cenas/scripts/Main.gd" type="Script" id=6]
-[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/Key3.wav" type="AudioStream" id=7]
-[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/Key4.wav" type="AudioStream" id=8]
-[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/Key1.wav" type="AudioStream" id=9]
-[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/Key2.wav" type="AudioStream" id=10]
-[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/Key5.wav" type="AudioStream" id=11]
-[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/error.wav" type="AudioStream" id=12]
-[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sprites/pad.png" type="Texture2D" id=13]
-[ext_resource path="res://microjogos/moraguma/ifuv/cenas/NumberButton.tscn" type="PackedScene" id=14]
-[ext_resource path="res://microjogos/moraguma/ifuv/cenas/EnterButton.tscn" type="PackedScene" id=15]
-[ext_resource path="res://microjogos/moraguma/ifuv/cenas/EraseButton.tscn" type="PackedScene" id=16]
-[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sprites/cursor.png" type="Texture2D" id=17]
-[ext_resource path="res://microjogos/moraguma/ifuv/recursos/fonts/Pixel Millennium.ttf" type="FontFile" id=18]
-[ext_resource path="res://microjogos/moraguma/ifuv/cenas/scripts/Arrow.gd" type="Script" id=19]
-[ext_resource path="res://microjogos/moraguma/ifuv/cenas/scripts/Twitcher.gd" type="Script" id=20]
-[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sprites/paperslip.png" type="Texture2D" id=21]
-[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sounds/music/ifuv.ogg" type="AudioStream" id=22]
+[ext_resource type="Texture2D" uid="uid://bmnffsuvmvut8" path="res://microjogos/moraguma/ifuv/recursos/sprites/closewall.png" id="1"]
+[ext_resource type="AudioStream" uid="uid://baxuq5bxfupah" path="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/door.wav" id="2"]
+[ext_resource type="Texture2D" uid="uid://bfvh54l5qqwar" path="res://microjogos/moraguma/ifuv/recursos/sprites/bg.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dsshfvye1lmdi" path="res://microjogos/moraguma/ifuv/recursos/sprites/monster.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://baudtlmadlgyv" path="res://microjogos/moraguma/ifuv/recursos/sprites/door.png" id="5"]
+[ext_resource type="Script" path="res://microjogos/moraguma/ifuv/cenas/scripts/Main.gd" id="6"]
+[ext_resource type="AudioStream" uid="uid://beaxyttumkqns" path="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/Key3.wav" id="7"]
+[ext_resource type="AudioStream" uid="uid://xjc2c27wxqvb" path="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/Key4.wav" id="8"]
+[ext_resource type="AudioStream" uid="uid://ch03yulh8pnlf" path="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/Key1.wav" id="9"]
+[ext_resource type="AudioStream" uid="uid://bygng5g5eqvtm" path="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/Key2.wav" id="10"]
+[ext_resource type="AudioStream" uid="uid://433hpoillbtc" path="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/Key5.wav" id="11"]
+[ext_resource type="AudioStream" uid="uid://yk083ye2bw2h" path="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/error.wav" id="12"]
+[ext_resource type="Texture2D" uid="uid://b06io5t3210bh" path="res://microjogos/moraguma/ifuv/recursos/sprites/pad.png" id="13"]
+[ext_resource type="PackedScene" uid="uid://bjm26yvl38ria" path="res://microjogos/moraguma/ifuv/cenas/NumberButton.tscn" id="14"]
+[ext_resource type="PackedScene" path="res://microjogos/moraguma/ifuv/cenas/EnterButton.tscn" id="15"]
+[ext_resource type="PackedScene" path="res://microjogos/moraguma/ifuv/cenas/EraseButton.tscn" id="16"]
+[ext_resource type="Texture2D" uid="uid://bu010d1nfpkst" path="res://microjogos/moraguma/ifuv/recursos/sprites/cursor.png" id="17"]
+[ext_resource type="FontFile" uid="uid://censsrpbpgb4h" path="res://microjogos/moraguma/ifuv/recursos/fonts/Pixel Millennium.ttf" id="18"]
+[ext_resource type="Script" path="res://microjogos/moraguma/ifuv/cenas/scripts/Arrow.gd" id="19"]
+[ext_resource type="Script" path="res://microjogos/moraguma/ifuv/cenas/scripts/Twitcher.gd" id="20"]
+[ext_resource type="Texture2D" uid="uid://dg6fsfxrkkikj" path="res://microjogos/moraguma/ifuv/recursos/sprites/paperslip.png" id="21"]
+[ext_resource type="AudioStream" uid="uid://bv852g6lkjsm6" path="res://microjogos/moraguma/ifuv/recursos/sounds/music/ifuv.ogg" id="22"]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id="1"]
 length = 0.001
 tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"points": PackedFloat32Array( 76, -0.25, 0, 0.25, 0 ),
-"times": PackedFloat32Array( 0 )
+"handle_modes": PackedInt32Array(),
+"points": PackedFloat32Array(),
+"times": PackedFloat32Array()
 }
 tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath(".:position:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"points": PackedFloat32Array( 72, -0.25, 0, 0.25, 0 ),
-"times": PackedFloat32Array( 0 )
+"handle_modes": PackedInt32Array(),
+"points": PackedFloat32Array(),
+"times": PackedFloat32Array()
 }
 tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/path = NodePath(".:scale:x")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
 tracks/2/keys = {
-"points": PackedFloat32Array( 2, -0.25, 0, 0.25, 0 ),
-"times": PackedFloat32Array( 0 )
+"handle_modes": PackedInt32Array(),
+"points": PackedFloat32Array(),
+"times": PackedFloat32Array()
 }
 tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/path = NodePath(".:scale:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
 tracks/3/keys = {
-"points": PackedFloat32Array( 2, -0.25, 0, 0.25, 0 ),
-"times": PackedFloat32Array( 0 )
+"handle_modes": PackedInt32Array(),
+"points": PackedFloat32Array(),
+"times": PackedFloat32Array()
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id="2"]
 resource_name = "approaching"
 length = 7.0
 tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"points": PackedFloat32Array( 77, -0.25, 0, 0.25, 0, 76, -0.25, 0, 0.25, 0 ),
-"times": PackedFloat32Array( 0, 7 )
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(76, -0.25, 0, 0.25, 0, 76, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 7)
 }
 tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath(".:position:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"points": PackedFloat32Array( 65, -0.25, 0, 0.25, 0, 72, -0.25, 0, 0.25, 0 ),
-"times": PackedFloat32Array( 0, 7 )
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(65, -0.25, 0, 0.25, 0, 73, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 7)
 }
 tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/path = NodePath(".:scale:x")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
 tracks/2/keys = {
-"points": PackedFloat32Array( 1, -0.25, 0, 0.25, 0, 2, -0.25, 0, 0.25, 0 ),
-"times": PackedFloat32Array( 0, 7 )
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 3, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 7)
 }
 tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/path = NodePath(".:scale:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
 tracks/3/keys = {
-"points": PackedFloat32Array( 1, -0.25, 0, 0.25, 0, 2, -0.25, 0, 0.25, 0 ),
-"times": PackedFloat32Array( 0, 7 )
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 3, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 7)
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_os2gd"]
+_data = {
+"RESET": SubResource("1"),
+"approaching": SubResource("2")
+}
+
+[sub_resource type="Animation" id="3"]
 length = 0.001
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ 1 ]
+"values": [0]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id="4"]
 resource_name = "close"
 length = 0.4
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.1, 0.2, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ 0, 1, 2, 3 ]
+"values": [0, 1, 2, 3]
 }
 tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"values": [ {
-"args": [  ],
-"method": "show"
-} ]
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"show"
+}]
 }
 tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/path = NodePath("../DoorCloseSound")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
 tracks/2/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"values": [ {
-"args": [ 0.0 ],
-"method": "play"
-} ]
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
 }
 
-[sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 17 )
-region = Rect2( 0, 0, 18, 18 )
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t6uk2"]
+_data = {
+"RESET": SubResource("3"),
+"close": SubResource("4")
+}
 
-[sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 17 )
-region = Rect2( 18, 0, 18, 18 )
+[sub_resource type="AtlasTexture" id="5"]
+atlas = ExtResource("17")
+region = Rect2(0, 0, 18, 18)
 
-[sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 17 )
-region = Rect2( 36, 0, 18, 18 )
+[sub_resource type="AtlasTexture" id="6"]
+atlas = ExtResource("17")
+region = Rect2(18, 0, 18, 18)
 
-[sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 17 )
-region = Rect2( 54, 0, 18, 18 )
+[sub_resource type="AtlasTexture" id="7"]
+atlas = ExtResource("17")
+region = Rect2(36, 0, 18, 18)
 
-[sub_resource type="AtlasTexture" id=9]
-atlas = ExtResource( 17 )
-region = Rect2( 72, 0, 18, 18 )
+[sub_resource type="AtlasTexture" id="8"]
+atlas = ExtResource("17")
+region = Rect2(54, 0, 18, 18)
 
-[sub_resource type="AtlasTexture" id=10]
-atlas = ExtResource( 17 )
-region = Rect2( 90, 0, 18, 18 )
+[sub_resource type="AtlasTexture" id="9"]
+atlas = ExtResource("17")
+region = Rect2(72, 0, 18, 18)
 
-[sub_resource type="SpriteFrames" id=11]
-animations = [ {
-"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+[sub_resource type="AtlasTexture" id="10"]
+atlas = ExtResource("17")
+region = Rect2(90, 0, 18, 18)
+
+[sub_resource type="SpriteFrames" id="11"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("5")
+}, {
+"duration": 1.0,
+"texture": SubResource("6")
+}, {
+"duration": 1.0,
+"texture": SubResource("7")
+}, {
+"duration": 1.0,
+"texture": SubResource("8")
+}, {
+"duration": 1.0,
+"texture": SubResource("9")
+}, {
+"duration": 1.0,
+"texture": SubResource("10")
+}],
 "loop": true,
-"name": "default",
+"name": &"default",
 "speed": 10.0
-} ]
+}]
 
-[sub_resource type="FontFile" id=14]
-size = 8
-outline_color = Color( 0.121569, 0.0745098, 0.101961, 1 )
-font_data = ExtResource( 18 )
+[sub_resource type="FontFile" id="14"]
+fallbacks = Array[Font]([ExtResource("18")])
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/8/0 = Vector2(0, 0)
+cache/0/8/0/ascent = 0.0
+cache/0/8/0/descent = 0.0
+cache/0/8/0/underline_position = 0.0
+cache/0/8/0/underline_thickness = 0.0
+cache/0/8/0/scale = 1.0
+cache/0/8/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/8/0/kerning_overrides/8/0 = Vector2(0, 0)
 
-[sub_resource type="Theme" id=13]
-default_font = SubResource( 14 )
-RichTextLabel/colors/default_color = Color( 0.121569, 0.0745098, 0.101961, 1 )
+[sub_resource type="Theme" id="13"]
+default_font = SubResource("14")
+RichTextLabel/colors/default_color = Color(0.121569, 0.0745098, 0.101961, 1)
+RichTextLabel/font_sizes/normal_font_size = 8
 
-[sub_resource type="FontFile" id=16]
-outline_color = Color( 0.121569, 0.0745098, 0.101961, 1 )
-font_data = ExtResource( 18 )
+[sub_resource type="FontFile" id="16"]
+fallbacks = Array[Font]([ExtResource("18")])
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
-[sub_resource type="Theme" id=15]
-default_font = SubResource( 16 )
-RichTextLabel/colors/default_color = Color( 0.368627, 0.294118, 0.25098, 1 )
+[sub_resource type="Theme" id="15"]
+default_font = SubResource("16")
+RichTextLabel/colors/default_color = Color(0.368627, 0.294118, 0.25098, 1)
 
 [node name="IFUV" type="Node2D"]
-script = ExtResource( 6 )
+texture_filter = 1
+script = ExtResource("6")
 
 [node name="Camera3D" type="Camera2D" parent="."]
-position = Vector2( 80, 45 )
-current = true
+position = Vector2(80, 45)
 
 [node name="BG" type="Sprite2D" parent="."]
-position = Vector2( 80, 45 )
-texture = ExtResource( 3 )
+position = Vector2(80, 45)
+texture = ExtResource("3")
 
 [node name="Monster" type="Sprite2D" parent="."]
-position = Vector2( 76, 72 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 4 )
+position = Vector2(76, 65)
+texture = ExtResource("4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Monster"]
-anims/RESET = SubResource( 1 )
-anims/approaching = SubResource( 2 )
+libraries = {
+"": SubResource("AnimationLibrary_os2gd")
+}
 
 [node name="Door" type="Sprite2D" parent="."]
-visible = false
-position = Vector2( 80, 45 )
-texture = ExtResource( 5 )
+position = Vector2(80, 45)
+texture = ExtResource("5")
 hframes = 4
-frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Door"]
-anims/RESET = SubResource( 3 )
-anims/close = SubResource( 4 )
+libraries = {
+"": SubResource("AnimationLibrary_t6uk2")
+}
 
 [node name="FG" type="Sprite2D" parent="."]
-position = Vector2( 80, 45 )
-texture = ExtResource( 1 )
+position = Vector2(80, 45)
+texture = ExtResource("1")
 
 [node name="Pad" type="Sprite2D" parent="."]
-position = Vector2( 133, 56 )
-texture = ExtResource( 13 )
-script = ExtResource( 19 )
+position = Vector2(133, 56)
+texture = ExtResource("13")
+script = ExtResource("19")
 
-[node name="1" parent="Pad" instance=ExtResource( 14 )]
-position = Vector2( -14, -11 )
+[node name="1" parent="Pad" instance=ExtResource("14")]
+position = Vector2(-14, -11)
+number = 1
 right_path = "../2"
 down_path = "../4"
-number = 1
 
-[node name="2" parent="Pad" instance=ExtResource( 14 )]
-position = Vector2( 0, -11 )
+[node name="2" parent="Pad" instance=ExtResource("14")]
+position = Vector2(0, -11)
+number = 2
 right_path = "../3"
 down_path = "../5"
 left_path = "../1"
-number = 2
 
-[node name="3" parent="Pad" instance=ExtResource( 14 )]
-position = Vector2( 14, -11 )
+[node name="3" parent="Pad" instance=ExtResource("14")]
+position = Vector2(14, -11)
+number = 3
 down_path = "../6"
 left_path = "../2"
-number = 3
 
-[node name="4" parent="Pad" instance=ExtResource( 14 )]
-position = Vector2( -14, 2 )
+[node name="4" parent="Pad" instance=ExtResource("14")]
+position = Vector2(-14, 2)
+number = 4
 up_path = "../1"
 right_path = "../5"
 down_path = "../7"
-number = 4
 
-[node name="5" parent="Pad" instance=ExtResource( 14 )]
-position = Vector2( 0, 2 )
+[node name="5" parent="Pad" instance=ExtResource("14")]
+position = Vector2(0, 2)
+number = 5
 up_path = "../2"
 right_path = "../6"
 down_path = "../8"
 left_path = "../4"
-number = 5
 
-[node name="6" parent="Pad" instance=ExtResource( 14 )]
-position = Vector2( 14, 2 )
+[node name="6" parent="Pad" instance=ExtResource("14")]
+position = Vector2(14, 2)
+number = 6
 up_path = "../3"
 down_path = "../9"
 left_path = "../5"
-number = 6
 
-[node name="7" parent="Pad" instance=ExtResource( 14 )]
-position = Vector2( -14, 15 )
+[node name="7" parent="Pad" instance=ExtResource("14")]
+position = Vector2(-14, 15)
+number = 7
 up_path = "../4"
 right_path = "../8"
 down_path = "../Erase"
-number = 7
 
-[node name="8" parent="Pad" instance=ExtResource( 14 )]
-position = Vector2( 0, 15 )
+[node name="8" parent="Pad" instance=ExtResource("14")]
+position = Vector2(0, 15)
+number = 8
 up_path = "../5"
 right_path = "../9"
 down_path = "../0"
 left_path = "../7"
-number = 8
 
-[node name="9" parent="Pad" instance=ExtResource( 14 )]
-position = Vector2( 14, 15 )
+[node name="9" parent="Pad" instance=ExtResource("14")]
+position = Vector2(14, 15)
+number = 9
 up_path = "../6"
 down_path = "../Enter"
 left_path = "../8"
-number = 9
 
-[node name="0" parent="Pad" instance=ExtResource( 14 )]
-position = Vector2( 0, 28 )
+[node name="0" parent="Pad" instance=ExtResource("14")]
+position = Vector2(0, 28)
 up_path = "../8"
 right_path = "../Enter"
 left_path = "../Erase"
 
-[node name="Erase" parent="Pad" instance=ExtResource( 16 )]
-position = Vector2( -14, 28 )
+[node name="Erase" parent="Pad" instance=ExtResource("16")]
+position = Vector2(-14, 28)
 up_path = "../7"
 right_path = "../0"
 
-[node name="Enter" parent="Pad" instance=ExtResource( 15 )]
-position = Vector2( 14, 28 )
+[node name="Enter" parent="Pad" instance=ExtResource("15")]
+position = Vector2(14, 28)
 up_path = "../9"
 left_path = "../0"
 
 [node name="Cursor" type="AnimatedSprite2D" parent="Pad"]
-position = Vector2( 0, -11 )
-frames = SubResource( 11 )
+position = Vector2(0, -11)
+sprite_frames = SubResource("11")
 frame = 1
-playing = true
 
 [node name="Display" type="RichTextLabel" parent="Pad"]
 offset_left = -7.0
 offset_top = -31.0
 offset_right = 9.0
 offset_bottom = -20.0
-theme = SubResource( 13 )
+theme = SubResource("13")
 bbcode_enabled = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Paper" type="Sprite2D" parent="."]
-position = Vector2( 29, 71 )
-texture = ExtResource( 21 )
-script = ExtResource( 20 )
+position = Vector2(29, 71)
+texture = ExtResource("21")
+script = ExtResource("20")
 
 [node name="Password" type="RichTextLabel" parent="Paper"]
 offset_left = -12.0
 offset_top = -7.0
 offset_right = 44.0
 offset_bottom = 37.0
-theme = SubResource( 15 )
+theme = SubResource("15")
 bbcode_enabled = true
 text = "1234
 "
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="DoorCloseSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 2 )
+stream = ExtResource("2")
 volume_db = 10.0
 
 [node name="ErrorSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 12 )
+stream = ExtResource("12")
 volume_db = 10.0
 
 [node name="Key1" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 9 )
+stream = ExtResource("9")
 volume_db = 10.0
 
 [node name="Key2" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 10 )
+stream = ExtResource("10")
 volume_db = 10.0
 
 [node name="Key3" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 7 )
+stream = ExtResource("7")
 volume_db = 10.0
 
 [node name="Key4" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 8 )
+stream = ExtResource("8")
 volume_db = 10.0
 
 [node name="Key5" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 11 )
+stream = ExtResource("11")
 volume_db = 10.0
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 22 )
+stream = ExtResource("22")
 volume_db = 10.0
