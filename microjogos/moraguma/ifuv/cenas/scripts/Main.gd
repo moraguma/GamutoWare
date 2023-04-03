@@ -47,6 +47,7 @@ func _ready():
 	password.text = str(correct_password)
 	
 	monster_animation_player.play("approaching")
+	cursor.play("default")
 
 
 func _process(delta):

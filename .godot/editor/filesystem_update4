@@ -1,21 +1,13 @@
 res://default_env.tres
-res://principal/cenas/Vitoria.tscn
+res://microjogos/moraguma/ifuv/cenas/NumberButton.tscn
 res://principal/recursos/themes/TitleTheme.tres
 res://principal/recursos/shaders/Diamond.tres
 res://principal/recursos/themes/ButtonTheme.tres
 res://principal/recursos/themes/GameTheme.tres
-res://principal/cenas/Jam.tscn
-res://principal/cenas/GameOver.tscn
-res://principal/cenas/Jogo.tscn
-res://microjogos/moraguma/hora_da_necromancia/cenas/Main.tscn
-res://microjogos/moraguma/deerskull/cenas/Main.tscn
-res://microjogos/moraguma/deerskull/cenas/Shot.tscn
-res://microjogos/moraguma/candle prick/cenas/Main.tscn
-res://microjogos/moraguma/candle prick/cenas/Game.tscn
-res://microjogos/moraguma/candle prick/cenas/Player.tscn
-res://microjogos/moraguma/candle prick/cenas/Candle.tscn
-res://microjogos/not_implemented/teste/moveGamutoDemo/cenas/GamutoMoveDemo.tscn
-res://microjogos/not_implemented/teste/moveGamutoDemo/cenas/Player.tscn
-res://microjogos/moraguma/deerskull/cenas/Player.tscn
-res://microjogos/moraguma/whale_eater/cenas/Main.tscn
-res://microjogos/moraguma/soulchain/cenas/Main.tscn
+res://microjogos/moraguma/ifuv/cenas/Main.tscn
+res://microjogos/moraguma/ifuv/cenas/scripts/NumberButton.gd
+res://principal/cenas/autoloads/Camera.tscn
+res://microjogos/moraguma/ifuv/cenas/scripts/Main.gd
+res://principal/creditos.txt
+res://Godot4TODO.txt
+res://principal/recursos/data/Minigames.gd
