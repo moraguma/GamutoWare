@@ -14,10 +14,28 @@ var title_en = "Lemon Bis"
 var credits_pt = """
 Criado por: Rafael Hoyos
 
-@rafachoyos
+GitHub - TochaFh
+Instagram - @rafachoyos
+
+---
+
+Sprite do Gamuto por Gustavo Gamux (moraguma)
+
+Imagem de fundo - disponível em http://megagraphic.com.br/personalizacao-de-embalagens/material-de-pdv-grande/
+Sprite Bis Limao - disponível em https://aclassealta.com/wp-content/uploads/2012/03/bislimao.png
+Sprite Bis padrão - disponível em http://www.cestasbauru.com.br/index.php?route=product/product&path=141&product_id=890
 """
 var credits_en = """
 Made by: Rafael Hoyos
 
-@rafachoyos
+GitHub - TochaFh
+Instagram - @rafachoyos
+
+---
+
+Gamuto sprite by Gustavo Gamux (moraguma)
+
+Background image - available on http://megagraphic.com.br/personalizacao-de-embalagens/material-de-pdv-grande/
+Sprite Bis Limao - available on https://aclassealta.com/wp-content/uploads/2012/03/bislimao.png
+Sprite Bis padrão - available on http://www.cestasbauru.com.br/index.php?route=product/product&path=141&product_id=890
 """
