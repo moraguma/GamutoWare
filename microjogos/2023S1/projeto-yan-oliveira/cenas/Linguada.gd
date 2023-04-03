@@ -20,7 +20,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_just_pressed("acao"):
-		position = Vector2(0, -115)
+		position = Vector2(0, -118)
 		timer.start()
 		lingua.show()
 		

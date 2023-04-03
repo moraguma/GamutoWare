@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var velocidade = 0.06
+var velocidade = 0.055
 var giro = 0
 
 var linguada
