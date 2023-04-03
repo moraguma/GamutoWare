@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bnf72gff18p7h"]
+[gd_scene load_steps=14 format=3 uid="uid://bnf72gff18p7h"]
 
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto-viniwaki/cenas/main.gd" id="1_cnk73"]
 [ext_resource type="Texture2D" uid="uid://b75ddenytue1h" path="res://microjogos/2023S1/projeto-viniwaki/recursos/fruitninja-bg.png" id="2_7semu"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto-viniwaki/cenas/slice.gd" id="9_rl7mx"]
 [ext_resource type="AudioStream" uid="uid://cycxh1stplo2i" path="res://principal/recursos/sounds/SFX/Throw.wav" id="9_vdora"]
 [ext_resource type="AudioStream" uid="uid://cyertbwgcrgxi" path="res://microjogos/2023S1/projeto-viniwaki/recursos/Sword-swipe-5.wav" id="10_u6r4u"]
+[ext_resource type="AudioStream" uid="uid://baoe3evj8qynm" path="res://microjogos/2023S1/projeto-viniwaki/recursos/Samurai.mp3" id="11_c0g2u"]
 
 [sub_resource type="Curve2D" id="Curve2D_ngptm"]
 _data = {
@@ -80,6 +81,10 @@ offset_right = 448.0
 offset_bottom = 152.0
 theme_override_font_sizes/normal_font_size = 50
 text = "0"
+
+[node name="bg_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_c0g2u")
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="animation_finished" from="slice" to="slice" method="_on_animation_finished"]
