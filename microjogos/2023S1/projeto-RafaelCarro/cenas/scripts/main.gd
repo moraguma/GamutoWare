@@ -15,6 +15,7 @@ const HEIGHT = 1080
 
 var Acertos = 0
 
+
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES PADRÃO
 # --------------------------------------------------------------------------------------------------
@@ -28,7 +29,6 @@ func _ready():
 			NotificationCenter.notify("PLAY THE DRUMS!")
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("TOQUE A BATERIA!")
-	
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
@@ -58,6 +58,19 @@ func aumentar_acertos():
 	Acertos += 1
 	if Acertos >= 5:
 		register_win()
+		
+func hit_sounds():
+	if Acertos == 0:
+		$Hit1.play()
+	elif Acertos == 1:
+		$Hit2.play()
+	elif Acertos == 2:
+		$Hit3.play()
+	elif Acertos == 3:
+		$Hit4.play()
+	elif Acertos == 4:
+		$Hit5.play()
+	
 
 
 # --------------------------------------------------------------------------------------------------
