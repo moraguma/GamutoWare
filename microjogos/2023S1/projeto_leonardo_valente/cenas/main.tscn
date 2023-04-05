@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://btr34bopgnxs3"]
 
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto_leonardo_valente/cenas/main.gd" id="1_m3egb"]
-[ext_resource type="Texture2D" uid="uid://dmynxhuo477c8" path="res://microjogos/2023S1/projeto_leonardo_valente/recursos/fundo.png" id="2_j5wg4"]
+[ext_resource type="Texture2D" uid="uid://bmdqosyr64d3c" path="res://microjogos/2023S1/projeto_leonardo_valente/recursos/fundotentativa2.png" id="2_e7kly"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto_leonardo_valente/cenas/vinicinho.gd" id="2_uyjpj"]
 [ext_resource type="Texture2D" uid="uid://cfgbqnlef1y3c" path="res://microjogos/2023S1/projeto_leonardo_valente/recursos/vinicinho.png" id="3_slgyu"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto_leonardo_valente/cenas/TimerIgnite.gd" id="5_gttv2"]
@@ -28,9 +28,13 @@ normal = Vector2(-1, 0)
 script = ExtResource("1_m3egb")
 
 [node name="Background" type="TextureRect" parent="."]
-offset_right = 300.0
-offset_bottom = 300.0
-texture = ExtResource("2_j5wg4")
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_e7kly")
+expand_mode = 1
+stretch_mode = 1
 
 [node name="Camera3D" type="Camera2D" parent="."]
 anchor_mode = 0
