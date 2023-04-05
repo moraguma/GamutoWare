@@ -1,9 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://btr34bopgnxs3"]
+[gd_scene load_steps=17 format=3 uid="uid://btr34bopgnxs3"]
 
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto_leonardo_valente/cenas/main.gd" id="1_m3egb"]
 [ext_resource type="Texture2D" uid="uid://bmdqosyr64d3c" path="res://microjogos/2023S1/projeto_leonardo_valente/recursos/fundotentativa2.png" id="2_e7kly"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto_leonardo_valente/cenas/vinicinho.gd" id="2_uyjpj"]
 [ext_resource type="Texture2D" uid="uid://cfgbqnlef1y3c" path="res://microjogos/2023S1/projeto_leonardo_valente/recursos/vinicinho.png" id="3_slgyu"]
+[ext_resource type="AudioStream" uid="uid://im7msfyrsens" path="res://microjogos/2023S1/projeto_leonardo_valente/recursos/bad-explosion-6855.mp3" id="5_0tfti"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto_leonardo_valente/cenas/Delay.gd" id="5_ccmjg"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto_leonardo_valente/cenas/TimerIgnite.gd" id="5_gttv2"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto_leonardo_valente/cenas/CreeperSpawner.gd" id="5_ttrfa"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto_leonardo_valente/cenas/Timer.gd" id="6_eykoc"]
@@ -46,6 +48,15 @@ script = ExtResource("5_ttrfa")
 one_shot = true
 script = ExtResource("6_eykoc")
 
+[node name="Delay" type="Timer" parent="CreeperSpawner/TimerExplosão"]
+wait_time = 0.07
+one_shot = true
+script = ExtResource("5_ccmjg")
+
+[node name="BarulhoExplosão" type="AudioStreamPlayer" parent="CreeperSpawner/TimerExplosão/Delay"]
+stream = ExtResource("5_0tfti")
+volume_db = -10.0
+
 [node name="TimerIgnite" type="Timer" parent="CreeperSpawner"]
 one_shot = true
 script = ExtResource("5_gttv2")
@@ -86,9 +97,10 @@ shape = SubResource("WorldBoundaryShape2D_xe0ga")
 position = Vector2(1920, 1080)
 shape = SubResource("WorldBoundaryShape2D_apv5h")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="CorreVinicinho" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_te30o")
 autoplay = true
 
 [connection signal="timeout" from="CreeperSpawner/TimerExplosão" to="CreeperSpawner" method="_timeout_explosao"]
+[connection signal="timeout" from="CreeperSpawner/TimerExplosão/Delay" to="CreeperSpawner/TimerExplosão/Delay" method="_on_timeout"]
 [connection signal="timeout" from="CreeperSpawner/TimerIgnite" to="CreeperSpawner" method="dar_ignite"]

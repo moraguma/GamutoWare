@@ -71,3 +71,7 @@ func register_win():
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
 	emit_signal("lose")
+
+
+func _matar_player():
+	pass # Replace with function body.
