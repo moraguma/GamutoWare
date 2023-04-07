@@ -6,6 +6,8 @@ extends "res://principal/cenas/scripts/ToTitle.gd"
 
 func _ready():
 	animation_player.play("opening")
+	
+	GlobalCamera.enabled = true
 
 
 func _input(event):
