@@ -2,9 +2,13 @@ res://default_env.tres
 res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/Player.tscn
 res://principal/recursos/themes/TitleTheme.tres
 res://principal/recursos/themes/ButtonTheme.tres
-res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/scripts/Player.gd
+res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/mapa.tscn
 res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/obstaculo_1.tscn
 res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/obstaculo_3.tscn
 res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/obstaculo_2.tscn
-res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/mapa.tscn
 res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/scripts/mapa.gd
+res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/scripts/obstaculo1.gd
+res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/scripts/Obstaculo3.gd
+res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/scripts/Obstaculo2.gd
+res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/new_tilemap.tscn
+res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/background.tscn

@@ -1,3 +1,7 @@
+Sprite2D
+ParallaxLayer
+ParallaxBackground
+TileMap
 Timer
 StaticBody2D
 Label
@@ -11,8 +15,6 @@ Camera2D
 AnimatedSprite2D
 AnimationPlayer
 CharacterBody2D
-TileMap
-Sprite2D
 CPUParticles2D
 SubViewport
 SubViewportContainer

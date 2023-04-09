@@ -1,8 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://dtj03ehck05tb"]
+[gd_scene load_steps=21 format=3 uid="uid://cxx5cafpq3hq5"]
 
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/scripts/Player.gd" id="1_inn2u"]
-[ext_resource type="Texture2D" uid="uid://dx12ewaodcqch" path="res://microjogos/2023S1/projeto_vinicius_carvalho/Pixel Adventure 2/Enemies/Bat/Hit (46x30).png" id="2_0wrgg"]
-[ext_resource type="Texture2D" uid="uid://bgifxsftfv8yd" path="res://microjogos/2023S1/projeto_vinicius_carvalho/Pixel Adventure 2/Enemies/Bat/Flying (46x30).png" id="2_6h80i"]
+[ext_resource type="Texture2D" uid="uid://bgifxsftfv8yd" path="res://microjogos/2023S1/projeto_vinicius_carvalho/Player/Sprites_do_morcego/Flying (46x30).png" id="2_tniwm"]
+[ext_resource type="Texture2D" uid="uid://dx12ewaodcqch" path="res://microjogos/2023S1/projeto_vinicius_carvalho/Player/Sprites_do_morcego/Hit (46x30).png" id="3_j11kq"]
 [ext_resource type="AudioStream" uid="uid://bdovraa5gpfl4" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sons/bat_01.mp3" id="4_td4oj"]
 [ext_resource type="AudioStream" uid="uid://by20h831n5pul" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sons/wings_flap_large.ogg" id="4_vmcn3"]
 
@@ -11,51 +11,51 @@ radius = 30.0
 height = 60.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_om60l"]
-atlas = ExtResource("2_6h80i")
+atlas = ExtResource("2_tniwm")
 region = Rect2(0, 0, 46, 30)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w2ldc"]
-atlas = ExtResource("2_6h80i")
+atlas = ExtResource("2_tniwm")
 region = Rect2(46, 0, 46, 30)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sws3q"]
-atlas = ExtResource("2_6h80i")
+atlas = ExtResource("2_tniwm")
 region = Rect2(92, 0, 46, 30)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wnfeo"]
-atlas = ExtResource("2_6h80i")
+atlas = ExtResource("2_tniwm")
 region = Rect2(138, 0, 46, 30)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d5uxm"]
-atlas = ExtResource("2_6h80i")
+atlas = ExtResource("2_tniwm")
 region = Rect2(184, 0, 46, 30)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1ssjv"]
-atlas = ExtResource("2_6h80i")
+atlas = ExtResource("2_tniwm")
 region = Rect2(230, 0, 46, 30)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2o1bc"]
-atlas = ExtResource("2_6h80i")
+atlas = ExtResource("2_tniwm")
 region = Rect2(276, 0, 46, 30)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_63ao1"]
-atlas = ExtResource("2_0wrgg")
+atlas = ExtResource("3_j11kq")
 region = Rect2(0, 0, 46, 30)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uq0q1"]
-atlas = ExtResource("2_0wrgg")
+atlas = ExtResource("3_j11kq")
 region = Rect2(46, 0, 46, 30)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1fouk"]
-atlas = ExtResource("2_0wrgg")
+atlas = ExtResource("3_j11kq")
 region = Rect2(92, 0, 46, 30)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k0u45"]
-atlas = ExtResource("2_0wrgg")
+atlas = ExtResource("3_j11kq")
 region = Rect2(138, 0, 46, 30)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xb40g"]
-atlas = ExtResource("2_0wrgg")
+atlas = ExtResource("3_j11kq")
 region = Rect2(184, 0, 46, 30)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o7p0f"]
@@ -121,14 +121,14 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
-position = Vector2(608, 278)
+position = Vector2(271, 301)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_5omdq")
 debug_color = Color(0.635294, 0.294118, 0.52549, 1)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(712.5, 400.25)
+position = Vector2(375.5, 423.25)
 scale = Vector2(3.19565, 3.48333)
 sprite_frames = SubResource("SpriteFrames_o7p0f")
 animation = &"Fly"
@@ -137,7 +137,7 @@ flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visibility_layer = 3
-position = Vector2(714, 398)
+position = Vector2(377, 421)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_masu5")
 

@@ -15,7 +15,7 @@ func _ready():
 	timer = $Timer
 	timer.start(0.5)
 	timer_win = $TimersWin
-	timer_win.start(10)
+	timer_win.start(6)
 	NotificationCenter.notify("Sobreviva!")
 
 	

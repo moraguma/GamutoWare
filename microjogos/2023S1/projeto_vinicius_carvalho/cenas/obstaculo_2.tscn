@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cip7dcnbvq27b" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Tiles_rock/tile36.png" id="2_bqv1t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_44aw1"]
-size = Vector2(31, 254.5)
+size = Vector2(46, 265)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1hxel"]
 size = Vector2(21, 35.125)
@@ -55,7 +55,7 @@ scale = Vector2(2, 2.14132)
 texture = ExtResource("2_bqv1t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(887, 408.25)
+position = Vector2(885.5, 403)
 shape = SubResource("RectangleShape2D_44aw1")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]

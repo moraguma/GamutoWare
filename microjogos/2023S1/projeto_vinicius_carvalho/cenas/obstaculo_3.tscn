@@ -11,7 +11,7 @@ size = Vector2(19.5, 85.7501)
 size = Vector2(19.25, 14.5625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bfhv1"]
-size = Vector2(20.5, 83.375)
+size = Vector2(22, 86.125)
 
 [node name="Obstaculo3" type="Node2D"]
 texture_filter = 1
@@ -53,5 +53,5 @@ position = Vector2(441.125, 7.71875)
 shape = SubResource("RectangleShape2D_nyk3f")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Obstaculo3"]
-position = Vector2(454.25, 42.0625)
+position = Vector2(455, 43.4375)
 shape = SubResource("RectangleShape2D_bfhv1")
