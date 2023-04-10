@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://qacbbpw4thjv"
+path="res://.godot/imported/gatve Varniu.ogg-47e9d40eb3ff0b94d8f78e1e411660cc.oggvorbisstr"
+
+[deps]
+
+source_file="res://microjogos/2023S1/projeto-tiagoperrupato/recursos/gatve Varniu.ogg"
+dest_files=["res://.godot/imported/gatve Varniu.ogg-47e9d40eb3ff0b94d8f78e1e411660cc.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
