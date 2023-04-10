@@ -12,3 +12,4 @@ func _physics_process(delta):
 		if collider.has_method("explode"):	# se colidir com jogador
 			collider.explode()
 			collider.velocity.y = 0
+			$"../".register_lose()
