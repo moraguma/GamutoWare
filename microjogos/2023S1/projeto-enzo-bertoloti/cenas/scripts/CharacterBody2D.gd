@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 700.0
 const JUMP_VELOCITY = -1000
-@onready var base = get_parent()
+@onready var base = get_parent().get_parent()
 @onready var som_pulo = get_node("Pulo")
 @onready var som_morte = get_node("Morte")
 var jogo_acabou = false
@@ -37,7 +37,7 @@ func _physics_process(delta):
 func _on_win_body_entered(body):
 	var player = $"../Player"
 	if body == player:
-		base.emit_signal("win")
+		base.register_win()
 		print("Voce ganhou!")
 		jogo_acabou = true
 		som_morte.play()
