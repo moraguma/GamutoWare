@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=3 uid="uid://cyn28vj7c3oxc"]
+
+[ext_resource type="TileSet" uid="uid://b47o3eh6wmwgj" path="res://microjogos/2023S1/projeto-enzo-bertoloti/cenas/tileset.tres" id="1_rr7ft"]
+[ext_resource type="Texture2D" uid="uid://cjxhnaatfs63g" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/MIOJO_DO_MAL_pb.png" id="2_srlsx"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-enzo-bertoloti/cenas/scripts/CharacterBody2D.gd" id="4_r08ml"]
+[ext_resource type="Texture2D" uid="uid://c80aeiwc24s6a" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/player.png" id="4_t8bm3"]
+[ext_resource type="AudioStream" uid="uid://dy2dhshmjh5pp" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/Sons/SFX_Explosion_01.wav" id="6_defxt"]
+[ext_resource type="AudioStream" uid="uid://cybxjnaru36rm" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/Sons/pulo.wav" id="6_keuon"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fdhyd"]
+size = Vector2(64, 54)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h85sy"]
+size = Vector2(576, 48)
+
+[node name="TileMap" type="TileMap"]
+position = Vector2(1256, 480)
+tile_set = ExtResource("1_rr7ft")
+format = 2
+layer_0/tile_data = PackedInt32Array(262138, 1048578, 12, 262139, 1048578, 16, 262140, 1048578, 12, 262141, 1048578, 12, 262142, 1048578, 12, 262143, 1048578, 16, 196608, 1048578, 16, 196622, 1048578, 12, 196623, 1114114, 12, 262137, 1048578, 12, 262135, 1048578, 12, 262136, 1048578, 16, 262134, 1048578, 12, 262133, 1179650, 16, 327677, 1245185, 16, 327676, 1245185, 13, 196632, 983042, 13, 196633, 1048577, 16, 196634, 1048577, 16, 196635, 1048577, 16, 196637, 1048577, 16, 196638, 1048577, 16, 196639, 1048577, 16, 196640, 1048577, 16, 196641, 1048577, 16, 196642, 1048577, 16, 196643, 1048577, 16, 196644, 1048577, 16, 196645, 1048577, 16, 196646, 1048577, 16, 196647, 1048577, 16, 196648, 1048577, 16, 196649, 1048577, 16, 196650, 1048577, 16, 196651, 1048577, 16, 196652, 1048577, 16, 196653, 1048577, 16, 196654, 1114113, 16, 131064, 458754, 9, 196600, 458754, 10, 131065, 524290, 9, 196601, 524290, 10, 131066, 589826, 9, 196602, 589826, 10, -65544, 458754, 4, -8, 458754, 5, 65528, 458754, 6, -65543, 524290, 4, -7, 524290, 5, 65529, 524290, 6, -65542, 589826, 4, -6, 589826, 5, 65530, 589826, 6, 196597, 1179650, 14, 131061, 1179650, 14, 65525, 1179650, 14, -11, 1179650, 14, -65547, 1179650, 14, -131083, 1179650, 14, -196619, 1179650, 14, -262155, 1179650, 14, -327691, 1179650, 14, -393227, 1179650, 14, -458763, 1179650, 14, -524299, 1179650, 14, -589835, 1179650, 14, 196609, 1114114, 13, 196621, 1048578, 16, 196620, 1048578, 16, 196619, 1048578, 16, 196618, 983042, 12, 131082, 196610, 9, 131083, 196610, 9, 131084, 196610, 9, 131085, 196610, 9, 131086, 196610, 9, 196636, 1048578, 16, 262145, 1179650, 14, 327681, 983042, 15, 327682, 1048578, 12, 327683, 1048578, 16, 327684, 1048578, 12, 327685, 1048578, 16, 327686, 1114114, 13, 65539, 196610, 7, 8, 196610, 7, 65548, 196610, 7, 131087, 196610, 9, 393222, 1179650, 14, 458758, 1179650, 14, 524294, 1179650, 14, 589830, 983042, 15, 589831, 1048578, 16, 589832, 1048578, 12, 589833, 1048578, 12, 589834, 1048578, 12, 589835, 1048578, 12, 589836, 1048578, 16, 589837, 1114114, 15, 524301, 1179650, 14, 458765, 983042, 13, 458766, 1048578, 16, 458767, 1048578, 16, 458768, 1114114, 15, 393232, 983042, 13, 262168, 1179650, 10, 327704, 1179650, 14, 393233, 1048578, 16, 393235, 1048578, 16, 393236, 1048578, 16, 393234, 1048578, 16, 393238, 1048578, 12, 393237, 1048578, 16, 393239, 1048578, 16, 393240, 1114114, 15, 131097, 458754, 10, 65562, 524290, 9, 131098, 524290, 10, 131099, 589826, 10, 26, 524290, 9, -65510, 524290, 9, 65563, 589826, 9, 25, 458754, 9, -131047, 524290, 6, -131046, 524290, 6, -131045, 524290, 6, -131048, 458754, 6, -131044, 589826, 6, -196583, 524290, 5, -196582, 524290, 5, -196581, 524290, 5, -196580, 589826, 5, -196584, 458754, 5, -262120, 458754, 5, -327656, 458754, 5, -393192, 458754, 4, -393191, 524290, 4, -393190, 524290, 4, -393189, 524290, 4, -393188, 589826, 4, -262116, 589826, 5, -327652, 589826, 5, -327655, 524290, 5, -327654, 524290, 5, -327653, 524290, 5, -262117, 524290, 5, -262118, 524290, 5, -262119, 524290, 5, 131100, 1179650, 1, 131101, 851970, 1, 131102, 1179650, 1, 131103, 1179650, 1, 131104, 1114114, 0, 131110, 1048578, 0, 131106, 851970, 2, 131108, 1179650, 1, 131105, 1179650, 0, 131107, 1114114, 0, 131109, 1048578, 0, 262146, 851970, 2, 262149, 1048578, 0, 262148, 1048578, 0, 262150, 851970, 1, 262147, 1114114, 0, 524296, 1048578, 0, 524297, 851970, 2, 524300, 851970, 1, 524299, 1179650, 0, 524298, 1114114, 0, 524295, 1179650, 1, 131073, 1114114, 0, 196607, 1179650, 1, 131072, 1179650, 0, 196606, 851970, 2)
+
+[node name="Win" type="Area2D" parent="."]
+position = Vector2(1904, 328)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Win"]
+scale = Vector2(2.13681, 1)
+texture = ExtResource("2_srlsx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Win"]
+polygon = PackedVector2Array(-304, 88, -152, -128, 320, -128, 120, 144, -312, 104)
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(-304, 248)
+floor_constant_speed = true
+script = ExtResource("4_r08ml")
+metadata/_edit_group_ = true
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(8, -104)
+position_smoothing_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_fdhyd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("4_t8bm3")
+
+[node name="Pulo" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource("6_keuon")
+volume_db = -5.0
+
+[node name="Morte" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource("6_defxt")
+
+[node name="Espinhos" type="Area2D" parent="."]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Espinhos"]
+position = Vector2(1248, 264)
+shape = SubResource("RectangleShape2D_h85sy")
+
+[connection signal="body_entered" from="Win" to="Player" method="_on_win_body_entered" flags=18]
+[connection signal="body_entered" from="Espinhos" to="Player" method="_on_espinhos_body_entered" flags=18]
