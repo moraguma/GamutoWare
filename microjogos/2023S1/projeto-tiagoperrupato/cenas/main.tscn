@@ -1,6 +1,6 @@
 [gd_scene load_steps=27 format=3 uid="uid://po8vn66jxlsb"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/seu_projeto/cenas/scripts/main.gd" id="1"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-tiagoperrupato/cenas/scripts/main.gd" id="1_hgnl4"]
 [ext_resource type="Texture2D" uid="uid://d0l14csrhiv4l" path="res://microjogos/2023S1/projeto-tiagoperrupato/recursos/rua.png" id="2_1u4oe"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto-tiagoperrupato/cenas/scripts/Jogador.gd" id="3_exa5e"]
 [ext_resource type="Texture2D" uid="uid://cq027ahf7xtnu" path="res://microjogos/2023S1/projeto-tiagoperrupato/recursos/Porsche 911 Carrera 1998.png" id="4_orguo"]
@@ -49,7 +49,7 @@ size = Vector2(776, 192)
 
 [node name="Main" type="Node2D"]
 position = Vector2(960, 544)
-script = ExtResource("1")
+script = ExtResource("1_hgnl4")
 
 [node name="Camera" type="Camera2D" parent="."]
 metadata/_edit_lock_ = true
