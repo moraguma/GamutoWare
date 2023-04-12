@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bhf2ikw0qgj4j" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/fundo.jpg" id="3_os28u"]
 [ext_resource type="Texture2D" uid="uid://x16mdibspdi0" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/selector.png" id="4_y0ywg"]
 [ext_resource type="Texture2D" uid="uid://c2vm7dx80mb12" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/TeclaRemovida.png" id="6_kjf1i"]
-[ext_resource type="AudioStream" uid="uid://ciy242iixx563" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/musica.wav" id="7_o8tac"]
+[ext_resource type="AudioStream" uid="uid://dsftntsxt8ye" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/musica.ogg" id="8_0qffv"]
 [ext_resource type="AudioStream" uid="uid://cy73rnjfl0tdq" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/key_1.wav" id="9_h1vjl"]
 [ext_resource type="AudioStream" uid="uid://b1t8615mpc5g3" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/key_2.wav" id="10_mym4i"]
 [ext_resource type="AudioStream" uid="uid://b71wlywxrypcx" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/win.wav" id="11_cyat6"]
@@ -319,7 +319,7 @@ modulate = Color(0, 1, 0.00784314, 1)
 texture = ExtResource("4_y0ywg")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_o8tac")
+stream = ExtResource("8_0qffv")
 autoplay = true
 
 [node name="Key1" type="AudioStreamPlayer" parent="."]
