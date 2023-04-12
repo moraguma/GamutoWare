@@ -21,6 +21,8 @@ var d
 @onready var lis = []
 @onready var lis1 = []
 @onready var lis_sel = []
+
+var missed = false
 func _ready():
 	randomize()
 	sel_tec1 = get_node("Seletor teclado1")
@@ -64,7 +66,7 @@ func _ready():
 	
 func _mudar():
 	if(i!=0):
-		get_parent().register_lose()
+		missed = true
 	lis.pop_at(i)
 	j+=1
 	if(j < 4):
@@ -73,7 +75,8 @@ func _mudar():
 		lis_sel[j].position = lis[rnd]
 		i = rnd
 	else:
-		get_parent().register_win()
+		if not missed:
+			get_parent().register_win()
 
 func _process(delta):
 	if(Input.is_action_just_pressed("direita") and lis.size() != 0):
