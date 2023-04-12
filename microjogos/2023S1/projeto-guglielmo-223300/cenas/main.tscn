@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dqgxc73w0nr63"]
+[gd_scene load_steps=13 format=3 uid="uid://dqgxc73w0nr63"]
 
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto-guglielmo-223300/cenas/scripts/main.gd" id="1_1neoh"]
 [ext_resource type="Texture2D" uid="uid://bce3wwnq3ewwx" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/Tecladoyomik70-removebg-preview.png" id="2_x0qvo"]
@@ -8,6 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://x16mdibspdi0" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/selector.png" id="4_y0ywg"]
 [ext_resource type="Texture2D" uid="uid://c2vm7dx80mb12" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/TeclaRemovida.png" id="6_kjf1i"]
 [ext_resource type="AudioStream" uid="uid://ciy242iixx563" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/musica.wav" id="7_o8tac"]
+[ext_resource type="AudioStream" uid="uid://cy73rnjfl0tdq" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/key_1.wav" id="9_h1vjl"]
+[ext_resource type="AudioStream" uid="uid://b1t8615mpc5g3" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/key_2.wav" id="10_mym4i"]
+[ext_resource type="AudioStream" uid="uid://b71wlywxrypcx" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/win.wav" id="11_cyat6"]
+[ext_resource type="AudioStream" uid="uid://5pj1v4nxoapb" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/lose.wav" id="12_1n5ej"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_1neoh")
@@ -317,3 +321,15 @@ texture = ExtResource("4_y0ywg")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_o8tac")
 autoplay = true
+
+[node name="Key1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_h1vjl")
+
+[node name="Key2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_mym4i")
+
+[node name="Win" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_cyat6")
+
+[node name="Lose" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_1n5ej")

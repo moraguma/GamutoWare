@@ -22,6 +22,10 @@ var d
 @onready var lis1 = []
 @onready var lis_sel = []
 
+@onready var key_sounds = [$"../Key1", $"../Key2"]
+@onready var win_sound = $"../Win"
+@onready var lose_sound = $"../Lose"
+
 var missed = false
 func _ready():
 	randomize()
@@ -65,6 +69,8 @@ func _ready():
 	i = rnd
 	
 func _mudar():
+	key_sounds[randi() % len(key_sounds)].play()
+	
 	if(i!=0):
 		missed = true
 	lis.pop_at(i)
@@ -77,6 +83,9 @@ func _mudar():
 	else:
 		if not missed:
 			get_parent().register_win()
+			win_sound.play()
+		else:
+			lose_sound.play()
 
 func _process(delta):
 	if(Input.is_action_just_pressed("direita") and lis.size() != 0):
