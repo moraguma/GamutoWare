@@ -200,9 +200,9 @@ scale = Vector2(6.11851, 7.34376)
 texture = ExtResource("13_ljev4")
 metadata/_edit_lock_ = true
 
-[node name="Musica-Trafico" type="AudioStreamPlayer2D" parent="."]
+[node name="Musica-Trafico" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_3d6um")
 script = ExtResource("14_7qofw")
 
-[node name="Musica-Explosao" type="AudioStreamPlayer2D" parent="."]
+[node name="Musica-Explosao" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("15_trkbh")
