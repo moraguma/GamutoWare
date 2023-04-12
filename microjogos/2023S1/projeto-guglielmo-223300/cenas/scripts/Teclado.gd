@@ -28,6 +28,8 @@ var d
 
 var missed = false
 func _ready():
+	$"../AudioStreamPlayer2D".play()
+	
 	randomize()
 	sel_tec1 = get_node("Seletor teclado1")
 	sel_tec2 = get_node("Seletor teclado2")
