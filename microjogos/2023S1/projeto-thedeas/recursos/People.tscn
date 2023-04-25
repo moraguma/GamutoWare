@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvhqevojcttds"]
+
+[ext_resource type="Texture2D" uid="uid://de0sewuerm257" path="res://microjogos/2023S1/TheDeas/recursos/Monge.png" id="1_fhvfl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bekob"]
+size = Vector2(224.551, 168)
+
+[node name="Area2D" type="Area2D"]
+position = Vector2(1648, 912)
+scale = Vector2(0.427521, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 12)
+shape = SubResource("RectangleShape2D_bekob")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.00012207, 8)
+scale = Vector2(2.12988, 1)
+texture = ExtResource("1_fhvfl")
