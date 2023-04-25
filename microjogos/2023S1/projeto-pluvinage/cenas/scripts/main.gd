@@ -22,9 +22,9 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("Fly me to the moon!")
+			NotificationCenter.notify("DO SOMETHING!")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("Pegue a estrela!")
+			NotificationCenter.notify("FACA ALGO!")
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
