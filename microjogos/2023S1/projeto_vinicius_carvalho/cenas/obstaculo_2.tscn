@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://b5d378qv55jwf"]
+
+[ext_resource type="Texture2D" uid="uid://cq7d0dfvt2m8r" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Tiles_rock/tile35.png" id="1_hpc1e"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/scripts/Obstaculo2.gd" id="1_xdsd4"]
+[ext_resource type="Texture2D" uid="uid://cip7dcnbvq27b" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Tiles_rock/tile36.png" id="2_bqv1t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_44aw1"]
+size = Vector2(46, 265)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1hxel"]
+size = Vector2(21, 35.125)
+
+[node name="Node2D" type="Node2D"]
+texture_filter = 1
+scale = Vector2(2, 2)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(2.5, 0)
+collision_layer = 3
+script = ExtResource("1_xdsd4")
+
+[node name="Tile35" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(887, 358.579)
+rotation = -3.14159
+scale = Vector2(2, 1.68502)
+texture = ExtResource("1_hpc1e")
+
+[node name="Tile40" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(921, 477.94)
+rotation = -3.14159
+scale = Vector2(2, 2.09189)
+texture = ExtResource("2_bqv1t")
+
+[node name="Tile36" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(887.25, 81.75)
+scale = Vector2(2.22656, 2.64844)
+texture = ExtResource("2_bqv1t")
+
+[node name="Tile37" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(889.5, 476.955)
+rotation = -3.14159
+scale = Vector2(2, 2.06108)
+texture = ExtResource("1_hpc1e")
+
+[node name="Tile38" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(887, 260)
+rotation = -3.14159
+scale = Vector2(2, 1.70471)
+texture = ExtResource("2_bqv1t")
+
+[node name="Tile39" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(838, 477.522)
+rotation = -3.14159
+scale = Vector2(2, 2.14132)
+texture = ExtResource("2_bqv1t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(885.5, 403)
+shape = SubResource("RectangleShape2D_44aw1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(886, 37.875)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_1hxel")
