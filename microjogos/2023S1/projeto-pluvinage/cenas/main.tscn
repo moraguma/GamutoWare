@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://ti82fb7ed1ir"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/seu_projeto/cenas/scripts/main.gd" id="1"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-pluvinage/cenas/scripts/main.gd" id="1_vdjjx"]
 [ext_resource type="Texture2D" uid="uid://bjbaijxjheufl" path="res://microjogos/2023S1/projeto-pluvinage/recursos/icon.png" id="2_2vvsw"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto-pluvinage/cenas/CharacterBody2D.gd" id="2_wmwpe"]
 [ext_resource type="Texture2D" uid="uid://bdejlfihec1k" path="res://microjogos/2023S1/projeto-pluvinage/recursos/star1.png" id="5_cxjg0"]
@@ -21,10 +21,10 @@ size = Vector2(20, 160)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yq0do"]
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1")
+script = ExtResource("1_vdjjx")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(480, 272)
+anchor_mode = 0
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(300, 256)
