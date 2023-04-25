@@ -3,6 +3,7 @@ extends Node2D
 # Declaração dos sinais win e lose
 signal win
 signal lose
+var mosca_morta = 0
 
 # Estas constantes são usadas para determinar o tamanho da tela do seu jogo. Por padrão, definem uma
 # tela 1920x1080, que é padrão para monitores full HD. Caso você queira uma resolução menor para 
@@ -22,9 +23,11 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
+			NotificationCenter.notify("EAT THE FLIES!")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FACA ALGO!")
+			NotificationCenter.notify("COMA AS MOSCAS!")
+	
+	get_node("AnimationPlayer").play("anim mosca")
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
