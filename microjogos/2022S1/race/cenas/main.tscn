@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bg780bjjn3cse"]
+[gd_scene load_steps=22 format=3 uid="uid://bg780bjjn3cse"]
 
 [ext_resource type="Script" path="res://microjogos/2022S1/race/cenas/Player.gd" id="1"]
 [ext_resource type="Script" path="res://microjogos/2022S1/race/cenas/camera.gd" id="2"]
@@ -8,14 +8,12 @@
 [ext_resource type="Script" path="res://microjogos/2022S1/race/cenas/scripts/main.gd" id="6"]
 [ext_resource type="Texture2D" uid="uid://ciue1sl1qo77s" path="res://microjogos/2022S1/race/recursos/ships.png" id="7"]
 [ext_resource type="Texture2D" uid="uid://p562amfpcv0j" path="res://microjogos/2022S1/race/recursos/goal.png" id="8"]
-[ext_resource type="AudioStream" uid="uid://closd1wsm7kbi" path="res://microjogos/2022S1/race/recursos/Orbital Colossus_0.mp3" id="9"]
 [ext_resource type="AudioStream" uid="uid://bulvpol8sgnaq" path="res://microjogos/2022S1/race/recursos/171671__leszek-szary__success-1.wav" id="10"]
 [ext_resource type="Texture2D" uid="uid://by6pyexbrfbac" path="res://microjogos/2022S1/race/recursos/bg_bg.png" id="11"]
 [ext_resource type="Texture2D" uid="uid://c77faow2opnw3" path="res://microjogos/2022S1/race/recursos/bg_mg.png" id="12"]
 [ext_resource type="AudioStream" uid="uid://bjqfpbrl30qr4" path="res://microjogos/2022S1/race/recursos/171673__leszek-szary__failure-1.wav" id="13"]
-[ext_resource type="AudioStream" uid="uid://cb6dghske0okp" path="res://microjogos/2022S1/race/recursos/430632__inspectorj__vacuum-cleaner-on-idle-off-close-a.wav" id="14"]
 [ext_resource type="Texture2D" uid="uid://byq5t5bn5oquj" path="res://microjogos/2022S1/race/recursos/bg_fg.png" id="15"]
-[ext_resource type="AudioStream" uid="uid://bshhfp2u8p02" path="res://microjogos/2022S1/race/recursos/403664__inspectorj__air-extractor-fan-public-toilets-a.wav" id="16"]
+[ext_resource type="AudioStream" uid="uid://ejgt3x23qsjh" path="res://microjogos/2022S1/race/recursos/Orbital Colossus_0.ogg" id="16_1ot1v"]
 [ext_resource type="AudioStream" uid="uid://d173o0xy1mgrb" path="res://microjogos/2022S1/race/recursos/explosion.wav" id="17"]
 
 [sub_resource type="Curve" id="14"]
@@ -69,16 +67,6 @@ texture = ExtResource("7")
 region_enabled = true
 region_rect = Rect2(96, 0, 96, 48)
 
-[node name="BoostSFX" type="AudioStreamPlayer2D" parent="Enemy"]
-stream = ExtResource("14")
-volume_db = -8.0
-autoplay = true
-
-[node name="HumSFX" type="AudioStreamPlayer2D" parent="Enemy"]
-stream = ExtResource("16")
-volume_db = -2.5
-autoplay = true
-
 [node name="Hitbox" type="CollisionShape2D" parent="Enemy"]
 position = Vector2(4.5, 0.999999)
 shape = SubResource("1")
@@ -127,19 +115,8 @@ scale_amount_min = 4.0
 scale_amount_max = 4.0
 color_ramp = SubResource("18")
 
-[node name="BoostSFX" type="AudioStreamPlayer2D" parent="Player"]
-stream = ExtResource("14")
-volume_db = -5.0
-autoplay = true
-
-[node name="HumSFX" type="AudioStreamPlayer2D" parent="Player"]
-stream = ExtResource("16")
-volume_db = -2.0
-autoplay = true
-
-[node name="ExplosionSFX" type="AudioStreamPlayer2D" parent="Player"]
+[node name="ExplosionSFX" type="AudioStreamPlayer" parent="Player"]
 stream = ExtResource("17")
-volume_db = 7.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(400, 0)
@@ -205,7 +182,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("15")
 
 [node name="bgm" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("9")
+stream = ExtResource("16_1ot1v")
 autoplay = true
 
 [node name="VictorySFX" type="AudioStreamPlayer" parent="."]

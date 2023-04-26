@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
 @onready var parent = get_parent()
-@onready var boostSound = get_node("BoostSFX")
 @onready var caverna = get_node("../Caverna")
 
 var alive = true
@@ -32,8 +31,6 @@ func _physics_process(delta):
 		velocity = target_vel+(velocity-target_vel)*exp(-ACCEL*delta)
 		
 		var boost_factor = velocity.x/BG_VEL-1
-		boostSound.set_pitch_scale(1+0.2*boost_factor)
-		boostSound.set_volume_db(6*pow(boost_factor, 2)-7.5)
 		rotation = atan2(velocity.y, velocity.x)
 		var collided = move_and_collide(velocity*delta)
 		if(collided):
@@ -43,8 +40,6 @@ func _physics_process(delta):
 			get_node("Trail").emitting = false
 			get_node("Explosion").emitting = true
 			get_node("ExplosionSFX").play()
-			get_node("HumSFX").stop()
-			boostSound.stop()
 			
 func get_input_dir():
 	var dir = Vector2(BG_VEL, 0)

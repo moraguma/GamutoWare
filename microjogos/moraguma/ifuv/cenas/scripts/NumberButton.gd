@@ -1,7 +1,7 @@
 extends "res://microjogos/moraguma/ifuv/cenas/scripts/Button.gd"
 
 
-@export (int) var number
+@export var number : int
 
 
 @onready var display = $Display
@@ -9,6 +9,7 @@ extends "res://microjogos/moraguma/ifuv/cenas/scripts/Button.gd"
 
 func _ready():
 	display.text = "[center]" + str(number)
+	super._ready()
 
 
 func press():

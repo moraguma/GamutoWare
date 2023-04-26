@@ -1,0 +1,79 @@
+[gd_scene load_steps=11 format=3 uid="uid://c8551ljtbmbm3"]
+
+[ext_resource type="TileSet" uid="uid://b47o3eh6wmwgj" path="res://microjogos/2023S1/projeto-enzo-bertoloti/cenas/tileset.tres" id="1_5gk7g"]
+[ext_resource type="Texture2D" uid="uid://cjxhnaatfs63g" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/MIOJO_DO_MAL_pb.png" id="2_opunc"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-enzo-bertoloti/cenas/scripts/CharacterBody2D.gd" id="4_as2yo"]
+[ext_resource type="Texture2D" uid="uid://c80aeiwc24s6a" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/player.png" id="4_iq8xg"]
+[ext_resource type="AudioStream" uid="uid://cybxjnaru36rm" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/Sons/pulo.wav" id="6_bf23x"]
+[ext_resource type="AudioStream" uid="uid://dy2dhshmjh5pp" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/Sons/SFX_Explosion_01.wav" id="6_rfbh1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fdhyd"]
+size = Vector2(64, 54)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oiymb"]
+size = Vector2(288, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u1wqq"]
+size = Vector2(480, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h85sy"]
+size = Vector2(480, 48)
+
+[node name="TileMap" type="TileMap"]
+position = Vector2(1256, 480)
+tile_set = ExtResource("1_5gk7g")
+format = 2
+layer_0/tile_data = PackedInt32Array(262138, 1048578, 16, 262139, 1048578, 16, 262140, 1048578, 16, 262141, 1048578, 12, 262142, 1048578, 12, 262143, 1048578, 16, 196608, 1048578, 12, 196622, 1048578, 16, 196623, 1048578, 16, 196624, 1048578, 16, 196625, 1048578, 16, 196626, 1048578, 16, 196627, 1048578, 16, 262137, 1048578, 12, 262135, 1048578, 16, 262136, 1048578, 12, 262134, 1048578, 12, 262133, 1179650, 16, 327677, 1245185, 16, 327676, 1245185, 13, 196628, 1048578, 12, 196629, 1048578, 16, 196630, 1048578, 12, 196631, 1048578, 16, 196632, 1048578, 16, 196633, 1048578, 16, 196634, 1048578, 12, 196635, 1048578, 12, 196637, 1048578, 16, 196638, 1048578, 12, 196639, 1048578, 16, 196640, 1048578, 16, 196641, 1048578, 16, 196642, 1048578, 16, 196643, 1048578, 16, 196644, 1048578, 16, 196645, 1048578, 12, 196646, 1048578, 12, 196647, 1048577, 16, 196648, 1048577, 16, 196649, 1048577, 16, 196650, 1048577, 16, 196651, 1048577, 16, 196652, 1048577, 16, 196653, 1048577, 16, 196654, 1114113, 16, 131064, 458754, 9, 196600, 458754, 10, 131065, 524290, 9, 196601, 524290, 10, 131066, 589826, 9, 196602, 589826, 10, -65544, 458754, 4, -8, 458754, 5, 65528, 458754, 6, -65543, 524290, 4, -7, 524290, 5, 65529, 524290, 6, -65542, 589826, 4, -6, 589826, 5, 65530, 589826, 6, 196597, 1179650, 14, 131061, 1179650, 14, 65525, 1179650, 14, -11, 1179650, 14, -65547, 1179650, 14, -131083, 1179650, 14, -196619, 1179650, 14, -262155, 1179650, 14, -327691, 1179650, 14, -393227, 1179650, 14, -458763, 1179650, 14, -524299, 1179650, 14, -589835, 1179650, 14, 196621, 1048578, 16, 196620, 1048578, 12, 196619, 1048578, 12, 196618, 1048578, 16, 196636, 1048578, 12, 131087, 1179650, 0, 131092, 196610, 9, 131089, 983042, 1, 131088, 1179650, 1, 131090, 196610, 9, 131091, 196610, 9, 196609, 1048578, 12, 196610, 1048578, 12, 196611, 1048578, 16, 196612, 1048578, 16, 196613, 1048578, 16, 196614, 1048578, 12, 196615, 1048578, 16, 196616, 1048578, 12, 196617, 1048578, 16, -131065, 655362, 16, -131064, 720898, 16, -131063, 786434, 16, -262133, 655362, 16, -262132, 786434, 16, -393205, 262146, 7, -393204, 393218, 7, 131074, 196610, 9, 131075, 196610, 9, 131076, 196610, 9, 131077, 1179650, 0, 131078, 1179650, 0, 131079, 917506, 2, 131080, 851970, 2, 131081, 917506, 1, 131082, 196610, 9, 131083, 196610, 9, 131084, 196610, 9, 131085, 196610, 9, 131086, 196610, 9, 131093, 196610, 9, 131094, 196610, 9, -65528, 393218, 8, -65529, 393218, 8, -65527, 393218, 8, -196597, 393218, 8, -196596, 393218, 8, 65545, 917506, 0, 65553, 983042, 0, 65536, 655362, 16, 65537, 720898, 16, 65538, 786434, 16, -65532, 655362, 16, -65531, 786434, 16)
+
+[node name="Win" type="Area2D" parent="."]
+position = Vector2(1184, -872)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Win"]
+scale = Vector2(2.13681, 1)
+texture = ExtResource("2_opunc")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Win"]
+polygon = PackedVector2Array(-304, 88, -152, -128, 320, -128, 120, 144, -312, 104)
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(-304, 248)
+floor_constant_speed = true
+script = ExtResource("4_as2yo")
+metadata/_edit_group_ = true
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(8, -104)
+position_smoothing_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_fdhyd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("4_iq8xg")
+
+[node name="Pulo" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource("6_bf23x")
+volume_db = -5.0
+
+[node name="Morte" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource("6_rfbh1")
+
+[node name="Espinhos" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Espinhos"]
+position = Vector2(336, 264)
+shape = SubResource("RectangleShape2D_oiymb")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Espinhos"]
+position = Vector2(1968, 264)
+shape = SubResource("RectangleShape2D_u1wqq")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Espinhos"]
+position = Vector2(1200, 264)
+shape = SubResource("RectangleShape2D_h85sy")
+
+[connection signal="body_entered" from="Win" to="Player" method="_on_win_body_entered" flags=18]
+[connection signal="body_entered" from="Espinhos" to="Player" method="_on_espinhos_body_entered" flags=18]
