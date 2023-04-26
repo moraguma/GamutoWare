@@ -2,13 +2,12 @@ extends CharacterBody2D
 
 
 const GRAVITY = 0.08
-const TERMINAL_SPEED = 300
+const TERMINAL_SPEED = 200
 const MIN_RUN_SPEED = 20
-const MIN_SPIN_SPEED = 220
+const MIN_SPIN_SPEED = 160
 
 
 var gravity_dir = Vector2(0, 1)
-var velocity = Vector2(0, 0)
 var was_on_floor = true
 var active = true
 
@@ -16,7 +15,7 @@ var active = true
 @onready var sprite = $Sprite2D
 @onready var animation_player = $AnimationPlayer
 @onready var land_sound = $LandSound
-@onready var camera = get_parent().get_node("Camera3D")
+@onready var camera = get_parent().get_node("Camera")
 
 
 func _physics_process(delta):
@@ -25,17 +24,16 @@ func _physics_process(delta):
 
 
 func movement_process():
-	velocity = velocity.lerp(gravity_dir * TERMINAL_SPEED, GRAVITY)
-	set_velocity(velocity)
+	velocity = lerp(velocity, gravity_dir * TERMINAL_SPEED, GRAVITY)
+	var t = velocity
 	set_up_direction(-gravity_dir)
 	move_and_slide()
-	velocity = velocity
 
 
 func animation_process():
 	orientation_process()
 	
-	var is_on_floor = is_on_floor()
+	var is_on_floor = is_on_floor() or is_on_wall()
 	
 	if is_on_floor:
 		if not was_on_floor:
