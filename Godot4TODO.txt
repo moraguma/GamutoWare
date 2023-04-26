@@ -2,8 +2,8 @@
 	- Candle Prick OK
 	- Deerskull OK
 	- Hora da Necromancia OK
+	- IFUV
 	
 	 TEMPORARILY DISABLED
 	- Whale Eater
-	- IFUV
 	- Soulchain
