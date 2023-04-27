@@ -1,9 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://dwlyvqew40syg"]
+[gd_scene load_steps=15 format=3 uid="uid://dwlyvqew40syg"]
 
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto-jose-victor/cenas/scripts/main.gd" id="1_nwctk"]
 [ext_resource type="PackedScene" uid="uid://dsqlfkk0wh851" path="res://microjogos/2023S1/projeto-jose-victor/cenas/player.tscn" id="2_7ilmr"]
 [ext_resource type="Texture2D" uid="uid://cpu3k4x1wftxy" path="res://microjogos/2023S1/projeto-jose-victor/recursos/Snake.png" id="2_tu0jd"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto-jose-victor/cenas/scripts/Miojin.gd" id="3_3v2m1"]
+[ext_resource type="AudioStream" uid="uid://co3xqt6xf76ul" path="res://microjogos/2023S1/projeto-jose-victor/recursos/218064__meaxx__apple-2.wav" id="5_760bc"]
+[ext_resource type="AudioStream" uid="uid://b36begoryac2l" path="res://principal/recursos/sounds/SFX/Win.wav" id="6_pha7n"]
+[ext_resource type="AudioStream" uid="uid://bnslh24sb4kd5" path="res://principal/recursos/sounds/SFX/Damage.wav" id="7_0umq8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qtgeu"]
 texture = ExtResource("2_tu0jd")
@@ -441,6 +444,16 @@ shape = SubResource("RectangleShape2D_itg8m")
 
 [node name="player" parent="." instance=ExtResource("2_7ilmr")]
 position = Vector2(152, 544)
+
+[node name="mordida" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1760, 544)
+stream = ExtResource("5_760bc")
+
+[node name="win" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_pha7n")
+
+[node name="lose" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_0umq8")
 
 [connection signal="body_entered" from="Miojin1" to="." method="ganhar_ponto"]
 [connection signal="body_entered" from="Miojin1" to="Miojin1" method="_on_body_entered"]
