@@ -7,17 +7,35 @@ extends Resource
 
 
 # Título do seu jogo
-var title_pt = "Titulo em Portugues"
-var title_en = "Title in English"
+var title_pt = "Fruit Dojo"
+var title_en = "Fruit Dojo"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
-Criado por: [Seu nome!]
+Criado por: wakieu
 
-Você pode preencher o resto deste campo com creditos de assets utilizados, links para sua redes sociais ou qualquer outro detalhe que ache relevante
+Arte por:
+	instagram.com/meiamanga
+	twitter.com/meiamanga
+
+SFX & Musica:
+	https://opengameart.org/content/weapon-slash-effect
+	https://opengameart.org/content/samurai
+	https://opengameart.org/content/swish-bamboo-stick-weapon-swhoshes
+	https://opengameart.org/content/swishes-sound-pack
+	https://opengameart.org/content/error
 """
 var credits_en = """
-Made by: [Your name!]
+Made by: wakieu
 
-Fill this space with credits to used assets, links to your social medias and whatever other details you think are important
+Art by:
+	instagram.com/meiamanga
+	twitter.com/meiamanga
+
+SFX & Music:
+	https://opengameart.org/content/weapon-slash-effect
+	https://opengameart.org/content/samurai
+	https://opengameart.org/content/swish-bamboo-stick-weapon-swhoshes
+	https://opengameart.org/content/swishes-sound-pack
+	https://opengameart.org/content/error
 """
