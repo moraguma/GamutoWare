@@ -166,9 +166,13 @@ func start_game(path):
 	current_microgame.connect("win",Callable(self,"win_microgame"))
 	current_microgame.connect("lose",Callable(self,"lose_microgame"))
 	
-	display.stretch = false
-	game.size = Vector2(current_microgame.WIDTH, current_microgame.HEIGHT)
-	display.stretch = true
+#	display.stretch = false
+#	game.size = Vector2(current_microgame.WIDTH, current_microgame.HEIGHT)
+#	display.stretch = true
+	var convert_ratio=max(BASE_WIDTH/current_microgame.WIDTH,BASE_HEIGHT/current_microgame.HEIGHT)
+	
+	display.size = Vector2(current_microgame.WIDTH, current_microgame.HEIGHT)
+	display.scale=Vector2(convert_ratio,convert_ratio)
 	display.texture_filter = current_microgame.texture_filter
 	
 	game.add_child(current_microgame)
