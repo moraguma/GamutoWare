@@ -9,8 +9,8 @@ const MENU_PATH = "res://principal/cenas/Menu.tscn"
 const WIN_PATH = "res://principal/cenas/Vitoria.tscn"
 const LOSE_PATH = "res://principal/cenas/GameOver.tscn"
 
-const BASE_WIDTH = 1920
-const BASE_HEIGHT = 1080
+const BASE_WIDTH = 1920.0
+const BASE_HEIGHT = 1080.0
 
 const MICROGAME_TIME = 6
 # ------------------------------------------------------------------------------
@@ -169,7 +169,7 @@ func start_game(path):
 #	display.stretch = false
 #	game.size = Vector2(current_microgame.WIDTH, current_microgame.HEIGHT)
 #	display.stretch = true
-	var convert_ratio=max(BASE_WIDTH/current_microgame.WIDTH,BASE_HEIGHT/current_microgame.HEIGHT)
+	var convert_ratio=max(BASE_WIDTH/float(current_microgame.WIDTH),BASE_HEIGHT/float(current_microgame.HEIGHT))
 	
 	display.size = Vector2(current_microgame.WIDTH, current_microgame.HEIGHT)
 	display.scale=Vector2(convert_ratio,convert_ratio)
