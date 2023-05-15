@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://cdorjq3sp7pia"]
+
+[ext_resource type="Texture2D" uid="uid://ckev3dklrac2" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Background/Pale/rock1.png" id="1_jb3fd"]
+[ext_resource type="Texture2D" uid="uid://cmgaj8obp6km0" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Background/Pale/bg.png" id="1_khb7c"]
+[ext_resource type="Texture2D" uid="uid://dektyi5gfljvs" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Background/Pale/rock3.png" id="2_1ai1m"]
+[ext_resource type="Texture2D" uid="uid://dpqkoe46r24uu" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Background/Pale/rock2.png" id="2_y4i5b"]
+[ext_resource type="Texture2D" uid="uid://dahxsvsbkwr6c" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Background/Pale/myst.png" id="3_lo770"]
+
+[node name="Background" type="Node2D"]
+position = Vector2(-480, 72)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="fundo" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(1, 0.5)
+
+[node name="Fundo" type="Sprite2D" parent="ParallaxBackground/fundo"]
+position = Vector2(960, 540)
+scale = Vector2(2, 2)
+texture = ExtResource("1_khb7c")
+
+[node name="rocha_fundo" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(1, 0.6)
+
+[node name="rochas_fundo" type="Sprite2D" parent="ParallaxBackground/rocha_fundo"]
+position = Vector2(964, 541)
+scale = Vector2(2.00833, 1.9963)
+texture = ExtResource("2_1ai1m")
+
+[node name="rocha_si" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-8, 8)
+
+[node name="rocha_inf" type="Sprite2D" parent="ParallaxBackground/rocha_si"]
+position = Vector2(968, 533)
+scale = Vector2(2, 1.9963)
+texture = ExtResource("1_jb3fd")
+
+[node name="rocha_sup" type="Sprite2D" parent="ParallaxBackground/rocha_si"]
+position = Vector2(976, 533)
+scale = Vector2(2, 1.9963)
+texture = ExtResource("2_y4i5b")
+
+[node name="fog" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-8, 0)
+motion_scale = Vector2(0.8, 1)
+
+[node name="Fumaça" type="Sprite2D" parent="ParallaxBackground/fog"]
+position = Vector2(968, 540)
+scale = Vector2(2, 2)
+texture = ExtResource("3_lo770")
