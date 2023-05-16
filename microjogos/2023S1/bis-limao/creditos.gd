@@ -7,35 +7,27 @@ extends Resource
 
 
 # Título do seu jogo
-var title_pt = "Bis Limao"
-var title_en = "Lemon Bis"
+var title_pt = "Bus Limao"
+var title_en = "Lemon Bus"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
-Criado por: Rafael Hoyos
+Criado por: Rafa Hoyos
 
 GitHub - TochaFh
 Instagram - @rafachoyos
 
 ---
-
-Sprite do Gamuto por Gustavo Gamux (moraguma)
-
-Imagem de fundo - disponível em http://megagraphic.com.br/personalizacao-de-embalagens/material-de-pdv-grande/
-Sprite Bis Limao - disponível em https://aclassealta.com/wp-content/uploads/2012/03/bislimao.png
-Sprite Bis padrão - disponível em http://www.cestasbauru.com.br/index.php?route=product/product&path=141&product_id=890
+Sprite do Gamuto por Gustavo (moraguma)
+Música e demais sprites por Rafa Hoyos
 """
 var credits_en = """
-Made by: Rafael Hoyos
+Made by: Rafa Hoyos
 
 GitHub - TochaFh
 Instagram - @rafachoyos
 
 ---
-
-Gamuto sprite by Gustavo Gamux (moraguma)
-
-Background image - available on http://megagraphic.com.br/personalizacao-de-embalagens/material-de-pdv-grande/
-Sprite Bis Limao - available on https://aclassealta.com/wp-content/uploads/2012/03/bislimao.png
-Sprite Bis padrão - available on http://www.cestasbauru.com.br/index.php?route=product/product&path=141&product_id=890
+Gamuto sprite by Gustavo (moraguma)
+Music and other sprites by Rafa Hoyos
 """

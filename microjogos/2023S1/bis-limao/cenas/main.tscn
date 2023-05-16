@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://c6mi7vi6r5nd6"]
+[gd_scene load_steps=14 format=3 uid="uid://md5kotfjs6lq"]
 
 [ext_resource type="Script" path="res://microjogos/2023S1/bis-limao/cenas/scripts/main.gd" id="1_ow836"]
-[ext_resource type="Texture2D" uid="uid://csgyvio782t8q" path="res://microjogos/2023S1/bis-limao/recursos/background.jpg" id="2_e637n"]
+[ext_resource type="Texture2D" uid="uid://csgyvio782t8q" path="res://microjogos/2023S1/bis-limao/recursos/background antigo.jpg" id="2_27dk0"]
 [ext_resource type="Texture2D" uid="uid://ci0eq5fj5mmlx" path="res://microjogos/2023S1/bis-limao/recursos/gamuto.png" id="2_yqach"]
+[ext_resource type="Texture2D" uid="uid://dcmtjn4tkgm8u" path="res://microjogos/2023S1/bis-limao/recursos/background novo.png" id="3_3rc8f"]
 [ext_resource type="Script" path="res://microjogos/2023S1/bis-limao/cenas/scripts/gamuto.gd" id="4_stjrp"]
 [ext_resource type="Texture2D" uid="uid://d0e21ar0vx5kb" path="res://microjogos/2023S1/bis-limao/recursos/seta.png" id="5_1ywgu"]
 [ext_resource type="Animation" uid="uid://ce7mea400wrua" path="res://microjogos/2023S1/bis-limao/recursos/bye_lemon_anim.res" id="5_2w07m"]
@@ -61,10 +62,17 @@ _data = {
 script = ExtResource("1_ow836")
 
 [node name="Background" type="Sprite2D" parent="."]
+visible = false
 modulate = Color(1, 1, 1, 0.643137)
 position = Vector2(972, 578.875)
 scale = Vector2(1.75, 1.6675)
-texture = ExtResource("2_e637n")
+texture = ExtResource("2_27dk0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(976, 616)
+scale = Vector2(20.625, 20.625)
+texture = ExtResource("3_3rc8f")
 
 [node name="Camera3D" type="Camera2D" parent="."]
 anchor_mode = 0

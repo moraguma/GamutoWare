@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bg1h401prxntp"
-path="res://.godot/imported/capa.png-351e255927b4dd383cf939f1f0a4680f.ctex"
+uid="uid://m4s2k6ysumvj"
+path="res://.godot/imported/bus azul.png-9d3fd5a6388d9f869cdd97bc3c7f471e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2023S1/bis-limao/capa.png"
-dest_files=["res://.godot/imported/capa.png-351e255927b4dd383cf939f1f0a4680f.ctex"]
+source_file="res://microjogos/2023S1/bis-limao/recursos/bus azul.png"
+dest_files=["res://.godot/imported/bus azul.png-9d3fd5a6388d9f869cdd97bc3c7f471e.ctex"]
 
 [params]
 

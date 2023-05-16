@@ -23,9 +23,9 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("BIS LIMAO SUPREMACY")
+			NotificationCenter.notify("BUS LIMAO SUPREMACY")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("LEMON BIS SUPREMACY")
+			NotificationCenter.notify("LEMON BUS SUPREMACY")
 	
 	register_win()
 	
