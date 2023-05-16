@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkkgh4psvnhwo"]
+
+[ext_resource type="Texture2D" uid="uid://3353irglgaou" path="res://microjogos/2023S1/bis-limao/recursos/bus limão.png" id="1_bjpss"]
+[ext_resource type="Script" path="res://microjogos/2023S1/bis-limao/cenas/scripts/bis move.gd" id="2_xx51h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y35f7"]
+size = Vector2(23.3202, 11.8922)
+
+[node name="Bis Limao" type="Sprite2D"]
+texture_filter = 1
+position = Vector2(2128, 350)
+rotation = 0.322886
+scale = Vector2(8.339, 8.339)
+texture = ExtResource("1_bjpss")
+script = ExtResource("2_xx51h")
+is_lemon = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.51123, -0.986397)
+shape = SubResource("RectangleShape2D_y35f7")
