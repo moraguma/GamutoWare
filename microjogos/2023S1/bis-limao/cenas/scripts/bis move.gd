@@ -19,7 +19,7 @@ func push():
 	movement = push_movement
 
 func normal_movement():
-	position += Vector2(-15, 0)
+	position += Vector2(-20, 0)
 
 func push_movement():
 	position += Vector2(0, 22)

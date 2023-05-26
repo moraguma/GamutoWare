@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const speed = 180
+const speed = 210
 const size = 160
 const floor = 860
 const velY = 2500
