@@ -3,6 +3,9 @@ extends Node2D
 const WIDTH = 1920
 const HEIGHT = 1080
 
+signal win
+signal lose
+
 var timer
 var timer_win
 var som
@@ -16,8 +19,9 @@ func _ready():
 	som.play()
 	timer = $Timer
 	timer.start(0.5)
-	timer_win = $TimersWin
-	timer_win.start(5)
+	
+	register_win()
+	
 	match Global.language:
 		Global.LANGUAGE.EN:
 			NotificationCenter.notify("Survive!")
@@ -44,19 +48,6 @@ func instanciar_obj():
 func _on_timer_timeout():
 	timer.start(2)
 	instanciar_obj()
-
-
-func _on_timers_win_timeout():
-	if $CharacterBody2D.vivo:
-		match Global.language:
-			Global.LANGUAGE.EN:
-				NotificationCenter.notify("YOU WIN!")
-			Global.LANGUAGE.PT:
-				NotificationCenter.notify("VOCE GANHOU!")
-		register_win()
-		queue_free()
-	else:
-		pass
 
 
 func register_win():

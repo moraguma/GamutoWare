@@ -175,9 +175,10 @@ func start_game(path):
 	display.scale=Vector2(convert_ratio,convert_ratio)
 	display.texture_filter = current_microgame.texture_filter
 	
+	won = false
+	
 	game.add_child(current_microgame)
 	
-	won = false
 	timer.start(MICROGAME_TIME)
 
 
