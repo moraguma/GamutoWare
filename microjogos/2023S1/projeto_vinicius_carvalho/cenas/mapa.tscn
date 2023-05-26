@@ -43,19 +43,13 @@ shape = SubResource("RectangleShape2D_sk5nb")
 position = Vector2(949.5, 1058.5)
 shape = SubResource("RectangleShape2D_18q0r")
 
-[node name="som_cavern" type="AudioStreamPlayer2D" parent="."]
+[node name="som_cavern" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_v1qqu")
 
 [node name="no_superior" type="Node2D" parent="."]
-
-[node name="TimersWin" type="Timer" parent="."]
 
 [node name="NewTilemap" parent="." instance=ExtResource("4_172yr")]
 
 [node name="Background" parent="." instance=ExtResource("5_g5ik7")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="timeout" from="TimersWin" to="." method="_on_timer_titles_timeout"]
-[connection signal="timeout" from="TimersWin" to="." method="_on_timerwins_timeout"]
-[connection signal="timeout" from="TimersWin" to="." method="_on_timers_win_timeout"]
-[connection signal="timeout" from="TimersWin" to="." method="_on_timer_win_timeout"]

@@ -27,7 +27,7 @@ func _ready():
 			NotificationCenter.notify("FREE THEM!")
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("LIBERTE ELES!")
-	death_god = get_child(8)	
+	death_god = get_child(8)
 	$GodDeathAnimation.play("Arms")
 	
 	
@@ -79,21 +79,3 @@ func register_win():
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
 	emit_signal("lose")
-
-
-func _on_timer_timeout():
-	if death_god.deathCounter == 5:
-		match Global.language:
-			Global.LANGUAGE.EN:
-				NotificationCenter.notify("Death God")
-			Global.LANGUAGE.PT:
-				NotificationCenter.notify("Deus da Morte")
-		register_win()
-		
-	else:
-		match Global.language:
-			Global.LANGUAGE.EN:
-				NotificationCenter.notify("Pathetic")
-			Global.LANGUAGE.PT:
-				NotificationCenter.notify("Patetico")
-		register_lose()

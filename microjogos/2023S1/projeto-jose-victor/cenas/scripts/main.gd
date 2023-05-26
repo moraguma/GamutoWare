@@ -37,11 +37,6 @@ func ganhar_ponto(body):
 	if(pontuacao >= 3):
 		register_win()
 		$win.play()
-		match Global.language:
-			Global.LANGUAGE.EN:
-				NotificationCenter.notify("Full Tummy!")
-			Global.LANGUAGE.PT:
-				NotificationCenter.notify("Buchinho Cheio!")
 		$player.acabou = true
 	else:
 		$mordida.play()

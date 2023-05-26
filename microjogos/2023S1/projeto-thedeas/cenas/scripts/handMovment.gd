@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const speed = 180
+const speed = 210
 const size = 160
 const floor = 860
 const velY = 2500
@@ -62,6 +62,10 @@ func _on_area_2d_area_entered(area):
 	Hand.texture = preload("res://microjogos/2023S1/projeto-thedeas/recursos/MaoSangue.png")
 	
 	deathCounter += 1
+	
+	if deathCounter == 5: 
+		get_parent().register_win()
+	
 	area.queue_free()
 	
 

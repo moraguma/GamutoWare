@@ -49,7 +49,7 @@ func _ready():
 			NotificationCenter.notify("MEMORIZE AS FRUTAS!")
 		
 	
-	var fruit_list = [0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 0, 4]
+	var fruit_list = [0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3]
 	var fruit_random = get_randomized_list(fruit_list)
 	
 	print(fruit_random)
@@ -207,7 +207,7 @@ func _on_timer_timeout():
 		
 		var timer = get_node("Timer")
 		timer.one_shot = true
-		timer.start(2)
+		timer.start(2.9)
 		tempo += 1
 		song.stop()
 	else:
