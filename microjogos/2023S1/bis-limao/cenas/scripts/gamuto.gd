@@ -29,7 +29,7 @@ func bis_entering(body: Area2D):
 		push_bis()
 
 func bis_leaving(body: Area2D):
-	passing_bis = null
+	pass
 
 func push_bis():
 	if passing_bis == null:
