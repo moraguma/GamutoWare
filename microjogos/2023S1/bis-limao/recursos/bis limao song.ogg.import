@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://vt7w2jqinv10"
+path="res://.godot/imported/bis limao song.ogg-8b163a58245804394229db22dc83b88b.oggvorbisstr"
+
+[deps]
+
+source_file="res://microjogos/2023S1/bis-limao/recursos/bis limao song.ogg"
+dest_files=["res://.godot/imported/bis limao song.ogg-8b163a58245804394229db22dc83b88b.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
