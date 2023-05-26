@@ -146,7 +146,7 @@ shape = SubResource("CapsuleShape2D_masu5")
 [node name="SomDeath" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_td4oj")
 
-[node name="Som_asa" type="AudioStreamPlayer2D" parent="."]
+[node name="Som_asa" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_vmcn3")
 
 [node name="Timer2" type="Timer" parent="."]
