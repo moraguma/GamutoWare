@@ -445,14 +445,14 @@ shape = SubResource("RectangleShape2D_itg8m")
 [node name="player" parent="." instance=ExtResource("2_7ilmr")]
 position = Vector2(152, 544)
 
-[node name="mordida" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(1760, 544)
+[node name="mordida" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_760bc")
+volume_db = 10.0
 
-[node name="win" type="AudioStreamPlayer2D" parent="."]
+[node name="win" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_pha7n")
 
-[node name="lose" type="AudioStreamPlayer2D" parent="."]
+[node name="lose" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_0umq8")
 
 [connection signal="body_entered" from="Miojin1" to="." method="ganhar_ponto"]
