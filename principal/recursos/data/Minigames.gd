@@ -2,7 +2,6 @@ extends Resource
 
 
 const minigame_packs = {
-	"Teste": ["res://microjogos/2023S1/projeto-RafaelCarro/cenas/main.tscn"],
 	"Class of 2023": ["res://microjogos/2023S1/projeto-enzo-bertoloti/cenas/main.tscn", "res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/mapa.tscn", "res://microjogos/2023S1/projeto-tiagoperrupato/cenas/main.tscn", "res://microjogos/2023S1/projeto-guglielmo-223300/cenas/main.tscn", "res://microjogos/2023S1/bis-limao/cenas/main.tscn", "res://microjogos/2023S1/GamutoVeiga/cenas/main.tscn", "res://microjogos/2023S1/projeto-brabesf/cenas/main.tscn", "res://microjogos/2023S1/projeto-jose-victor/cenas/main.tscn", "res://microjogos/2023S1/projeto-thedeas/cenas/main.tscn", "res://microjogos/2023S1/projeto-yan-oliveira/cenas/main.tscn", "res://microjogos/2023S1/projeto_leonardo_valente/cenas/main.tscn", "res://microjogos/2023S1/projeto-pochete/cenas/main.tscn", "res://microjogos/2023S1/projeto-RafaelCarro/cenas/main.tscn"],
 	"Class of 2022": ["res://microjogos/2022S1/baleia/cenas/baleiaGame.tscn", "res://microjogos/2022S1/gamuturai/cenas/main.tscn", "res://microjogos/2022S1/race/cenas/main.tscn"],
 	"Demo": ["res://microjogos/demo/tiro_ao_alvo/cenas/main.tscn", "res://microjogos/demo/frogger/cenas/main.tscn"],
