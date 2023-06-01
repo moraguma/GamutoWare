@@ -12,7 +12,13 @@ const HEIGHT = 1080
 # VARIÁVEIS LOCAIS
 #---------------------------------------------------------------------------------------------------
 
+
+const mail_quantity: int = 6
+const space_between_mail: int = 10
 const mail = preload("res://microjogos/2023S1/mail_cleaner/cenas/mail.tscn")
+
+var mail_list: Array = []
+var mail_spawn: Node2D
 
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES PADRÃO
@@ -27,6 +33,8 @@ func _ready():
 			NotificationCenter.notify("DELETE THE SUSPICIOUS EMAILS!")
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("DELETE OS EMAILS SUSPEITOS!")
+	
+	custom_ready()
 
 func _physics_process(delta):
 	pass
@@ -39,6 +47,16 @@ func _process(delta):
 # FUNÇÕES LOCAIS
 # --------------------------------------------------------------------------------------------------
 
+func custom_ready():
+	mail_spawn = $Phone/MailSpawn
+	for i in range(mail_quantity):
+		var new_mail = mail.instantiate()
+		mail_spawn.add_child(new_mail)
+		var size: Vector2 = new_mail.get_viewport().get_visible_rect().size
+		var mail_relative_position: Vector2 = Vector2(0, -(i * (space_between_mail)))
+		new_mail.position = mail_relative_position
+		print(new_mail.position)
+		mail_list.append(new_mail)
 
 # --------------------------------------------------------------------------------------------------
 # CONDIÇÕES DE VITÓRIA
