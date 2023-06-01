@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://bd1wbmwy3cg7q"]
+
+[ext_resource type="Texture2D" uid="uid://wqua2vtw2lok" path="res://microjogos/2023S1/mail_cleaner/recursos/sprites/arrow_green.png" id="1_uo5on"]
+[ext_resource type="Script" path="res://microjogos/2023S1/mail_cleaner/cenas/scripts/mail.gd" id="2_7nufu"]
+[ext_resource type="Texture2D" uid="uid://hij4xrvl8k1x" path="res://microjogos/2023S1/mail_cleaner/recursos/sprites/arrow_red.png" id="3_8bcqu"]
+
+[node name="Mail" type="Sprite2D"]
+texture_filter = 1
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_uo5on")
+script = ExtResource("2_7nufu")
+green_sprites = Array[Texture2D]([ExtResource("1_uo5on")])
+red_sprites = Array[Texture2D]([ExtResource("3_8bcqu")])
