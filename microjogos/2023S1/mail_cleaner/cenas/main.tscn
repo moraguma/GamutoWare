@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwf53xp28gd35"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/seu_projeto/cenas/scripts/main.gd" id="1_m1oi0"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_m1oi0")
