@@ -12,6 +12,9 @@ texture_filter = 1
 position = Vector2(16, 32)
 texture = ExtResource("1_e86lr")
 
+[node name="MailSpawn" type="Node2D" parent="."]
+position = Vector2(16, 44)
+
 [node name="ArrowGreen" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(8, 54)

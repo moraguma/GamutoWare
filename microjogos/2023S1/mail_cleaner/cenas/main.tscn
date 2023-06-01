@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://bwf53xp28gd35"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/seu_projeto/cenas/scripts/main.gd" id="1_m1oi0"]
+[ext_resource type="Script" path="res://microjogos/2023S1/mail_cleaner/cenas/scripts/main.gd" id="1_kyp7x"]
 [ext_resource type="PackedScene" uid="uid://dsxm54jv86dym" path="res://microjogos/2023S1/mail_cleaner/cenas/phone.tscn" id="2_mtjul"]
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_m1oi0")
+script = ExtResource("1_kyp7x")
 
 [node name="Phone" parent="." instance=ExtResource("2_mtjul")]
 position = Vector2(800, 388)
