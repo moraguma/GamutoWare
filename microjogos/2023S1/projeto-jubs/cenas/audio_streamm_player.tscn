@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://3ife6hmxbpad"]
+
+[ext_resource type="AudioStream" uid="uid://ssf1b7llp7in" path="res://microjogos/2023S1/projeto-jubs/recursos/bomb1 som.wav" id="1_txa0l"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_txa0l")

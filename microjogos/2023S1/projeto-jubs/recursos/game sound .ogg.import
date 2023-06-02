@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bt0gxbha748n2"
+path="res://.godot/imported/game sound .ogg-6798dc8554bcf92f844feedba4c04769.oggvorbisstr"
+
+[deps]
+
+source_file="res://microjogos/2023S1/projeto-jubs/recursos/game sound .ogg"
+dest_files=["res://.godot/imported/game sound .ogg-6798dc8554bcf92f844feedba4c04769.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

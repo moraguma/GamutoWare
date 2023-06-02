@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://ixvhpn7yq4k8"]
+
+[ext_resource type="Texture2D" uid="uid://c1xpyx24xqquk" path="res://microjogos/2023S1/projeto-jubs/recursos/ezgif-1-52d17608b7-removebg-preview.png" id="1_e2qir"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0uy6"]
+atlas = ExtResource("1_e2qir")
+region = Rect2(0, 0, 158, 316)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0bik2"]
+atlas = ExtResource("1_e2qir")
+region = Rect2(158, 0, 158, 316)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v51ej"]
+atlas = ExtResource("1_e2qir")
+region = Rect2(316, 0, 158, 316)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0jvdf"]
+atlas = ExtResource("1_e2qir")
+region = Rect2(474, 0, 158, 316)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_owj6s"]
+atlas = ExtResource("1_e2qir")
+region = Rect2(632, 0, 158, 316)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6270f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0uy6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0bik2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v51ej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0jvdf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_owj6s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
+position = Vector2(0, -11)
+scale = Vector2(1, 0.93038)
+sprite_frames = SubResource("SpriteFrames_6270f")

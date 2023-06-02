@@ -1,0 +1,105 @@
+[gd_scene load_steps=7 format=3 uid="uid://bgx0cbe5tpi6x"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/seu_projeto/cenas/scripts/main.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dvhhqhgx67nf4" path="res://microjogos/2023S1/projeto-jubs/recursos/d9f75a8b3f4e270cb5c8ac40a783a07e.jpg" id="2_p5wbf"]
+[ext_resource type="PackedScene" uid="uid://lru8gq7lgy3c" path="res://microjogos/2023S1/projeto-jubs/cenas/appa.tscn" id="2_rr80f"]
+[ext_resource type="PackedScene" uid="uid://d1blwr788dekb" path="res://microjogos/2023S1/projeto-jubs/cenas/bomb1.tscn" id="3_6rpo4"]
+[ext_resource type="AudioStream" uid="uid://bt0gxbha748n2" path="res://microjogos/2023S1/projeto-jubs/recursos/game sound .ogg" id="5_sp3wc"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-jubs/cenas/AudioStreamPlayer2D.gd" id="6_nbsck"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1")
+
+[node name="Camera3D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(966.794, 542.5)
+scale = Vector2(3.41015, 3.18684)
+texture = ExtResource("2_p5wbf")
+
+[node name="Area2D" parent="." instance=ExtResource("2_rr80f")]
+position = Vector2(179, 392)
+rotation = 0.0761663
+
+[node name="Node2D" parent="." instance=ExtResource("3_6rpo4")]
+position = Vector2(1000, 704)
+
+[node name="Node2D3" parent="." instance=ExtResource("3_6rpo4")]
+position = Vector2(1400, 624)
+
+[node name="Node2D19" parent="." instance=ExtResource("3_6rpo4")]
+position = Vector2(656, 832)
+
+[node name="Node2D30" parent="." instance=ExtResource("3_6rpo4")]
+position = Vector2(2096, 840)
+
+[node name="Node2D12" parent="." instance=ExtResource("3_6rpo4")]
+position = Vector2(1616, 792)
+
+[node name="Node2D20" parent="." instance=ExtResource("3_6rpo4")]
+position = Vector2(1824, 1016)
+
+[node name="Node2D23" parent="." instance=ExtResource("3_6rpo4")]
+position = Vector2(1056, 104)
+
+[node name="Node2D31" parent="." instance=ExtResource("3_6rpo4")]
+position = Vector2(2416, 320)
+
+[node name="Node2D21" parent="." instance=ExtResource("3_6rpo4")]
+position = Vector2(2584, 152)
+
+[node name="Node2D26" parent="." instance=ExtResource("3_6rpo4")]
+position = Vector2(2808, 904)
+
+[node name="Node2D27" parent="." instance=ExtResource("3_6rpo4")]
+position = Vector2(2328, 616)
+
+[node name="Node2D28" parent="." instance=ExtResource("3_6rpo4")]
+position = Vector2(3080, 104)
+
+[node name="Node2D24" parent="." instance=ExtResource("3_6rpo4")]
+position = Vector2(2336, 64)
+
+[node name="Node2D25" parent="." instance=ExtResource("3_6rpo4")]
+position = Vector2(2936, 640)
+
+[node name="Node2D22" parent="." instance=ExtResource("3_6rpo4")]
+position = Vector2(1920, 304)
+
+[node name="Node2D13" parent="." instance=ExtResource("3_6rpo4")]
+position = Vector2(2000, 48)
+
+[node name="Node2D14" parent="." instance=ExtResource("3_6rpo4")]
+position = Vector2(1912, 608)
+
+[node name="Node2D17" parent="." instance=ExtResource("3_6rpo4")]
+position = Vector2(2072, 1104)
+
+[node name="Node2D16" parent="." instance=ExtResource("3_6rpo4")]
+position = Vector2(3288, 336)
+
+[node name="Node2D4" parent="." instance=ExtResource("3_6rpo4")]
+position = Vector2(2480, 920)
+
+[node name="Node2D5" parent="." instance=ExtResource("3_6rpo4")]
+position = Vector2(904, 344)
+
+[node name="Node2D6" parent="." instance=ExtResource("3_6rpo4")]
+position = Vector2(768, 1064)
+
+[node name="Node2D7" parent="." instance=ExtResource("3_6rpo4")]
+position = Vector2(1552, 960)
+
+[node name="Node2D8" parent="." instance=ExtResource("3_6rpo4")]
+position = Vector2(1424, 136)
+
+[node name="Node2D11" parent="." instance=ExtResource("3_6rpo4")]
+position = Vector2(2696, 232)
+
+[node name="Node2D10" parent="." instance=ExtResource("3_6rpo4")]
+position = Vector2(3064, 416)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_sp3wc")
+script = ExtResource("6_nbsck")
