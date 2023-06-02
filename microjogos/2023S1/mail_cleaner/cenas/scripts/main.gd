@@ -48,7 +48,7 @@ func _process(delta):
 # --------------------------------------------------------------------------------------------------
 
 func custom_ready():
-	mail_spawn = $Phone/MailSpawn
+	mail_spawn = $Phone/Mask/MailSpawn
 	for i in range(mail_quantity):
 		var new_mail = mail.instantiate()
 		mail_spawn.add_child(new_mail)
