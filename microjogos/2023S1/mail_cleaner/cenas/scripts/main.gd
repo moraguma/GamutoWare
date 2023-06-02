@@ -13,12 +13,14 @@ const HEIGHT = 1080
 #---------------------------------------------------------------------------------------------------
 
 
-const mail_quantity: int = 6
+const mail_quantity: int = 20
 const space_between_mail: int = 10
+const mail_fall_speed: float = 50.0
 const mail = preload("res://microjogos/2023S1/mail_cleaner/cenas/mail.tscn")
 
 var mail_list: Array = []
 var mail_spawn: Node2D
+var lost: bool = false
 
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES PADRÃO
@@ -40,8 +42,25 @@ func _physics_process(delta):
 	pass
 
 func _process(delta):
-	pass
-
+	mail_fall(delta)
+	if lost: return
+	var right = Input.is_action_just_released("direita")
+	var left = Input.is_action_just_released("esquerda")
+	if right:
+		if not mail_list[0].is_red: # wrong
+			lost = true
+			register_lose()
+	elif left:
+		if mail_list[0].is_red: # wrong
+			lost = true
+			register_lose()
+	
+	if left or right:
+		mail_list[0].start_deletion(right)
+		mail_list.pop_at(0)
+	
+	if len(mail_list) == 0 and not lost:
+		register_win()
 
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES LOCAIS
@@ -52,11 +71,21 @@ func custom_ready():
 	for i in range(mail_quantity):
 		var new_mail = mail.instantiate()
 		mail_spawn.add_child(new_mail)
-		var size: Vector2 = new_mail.get_viewport().get_visible_rect().size
-		var mail_relative_position: Vector2 = Vector2(0, -(i * (space_between_mail)))
-		new_mail.position = mail_relative_position
-		print(new_mail.position)
 		mail_list.append(new_mail)
+	
+	set_mail_position()
+		
+func set_mail_position():
+	for i in range(len(mail_list)):
+		mail_list[i].position.y = -(i * space_between_mail)
+		
+func mail_fall(delta: float):
+	for i in range(len(mail_list)):
+		var desired_y: float = -(i * space_between_mail)
+		if mail_list[i].position.y < desired_y:
+			mail_list[i].position.y += mail_fall_speed * delta
+			if mail_list[i].position.y > desired_y:
+				mail_list[i].position.y = desired_y
 
 # --------------------------------------------------------------------------------------------------
 # CONDIÇÕES DE VITÓRIA
@@ -69,4 +98,5 @@ func register_win():
 
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
+	# GlobalCamera.add_trauma(20)
 	emit_signal("lose")
