@@ -42,6 +42,7 @@ func _physics_process(delta):
 	pass
 
 func _process(delta):
+	if len(mail_list) == 0: return
 	mail_fall(delta)
 	if lost: return
 	var right = Input.is_action_just_released("direita")
@@ -98,5 +99,5 @@ func register_win():
 
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
-	# GlobalCamera.add_trauma(20)
+	GlobalCamera.add_trauma(0.75)
 	emit_signal("lose")
