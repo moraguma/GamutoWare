@@ -1,16 +1,29 @@
 extends Sprite2D
 
+const green_text: Array[String] = [
+	"Técnicas avançadas de gamutificação",
+	"Gamuto: Herói ou chacota?",
+	"Guambe: Um novo nome não esconde a verdade",
+	"Gamux anuncia: Gamuto no Gamutoverso"
+]
+
+const red_text: Array[String] = [
+	"Gamutas gamutaveis na sua área",
+	"Já ouviu a palavra de Linux hoje?",
+	"Rei Gamuto da Nigéria quer falar com você...",
+	"CLIQUE AQUI PARA RECEBER [[2000]] GAMUTÓIDES!!!!!"
+]
 
 @export var green_sprites: Array[Texture2D]
 @export var red_sprites: Array[Texture2D]
 
-var is_red = false
-var rng = RandomNumberGenerator.new()
+var is_red: bool = false
+var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 
 # deletion
-var deleting = false
-var horizontal_speed: float  = 30.0
-var alpha_speed: float = 3.0
+var deleting: bool = false
+var horizontal_speed: float  = 150.0
+var alpha_speed: float = 1.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,9 +32,13 @@ func _ready():
 	if is_red:
 		var index: int = rng.randi_range(0, len(red_sprites) - 1)
 		texture = red_sprites[index]
+		var text_index: int = rng.randi_range(0, len(red_text) - 1)
+		$Control/RichTextLabel.text = red_text[text_index]
 	else:
 		var index: int = rng.randi_range(0, len(green_sprites) - 1)
 		texture = green_sprites[index]
+		var text_index: int = rng.randi_range(0, len(green_text) - 1)
+		$Control/RichTextLabel.text = green_text[text_index]
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

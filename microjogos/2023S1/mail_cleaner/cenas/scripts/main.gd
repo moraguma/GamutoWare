@@ -14,8 +14,8 @@ const HEIGHT = 1080
 
 
 const mail_quantity: int = 10
-const space_between_mail: int = 10
-const mail_fall_speed: float = 50.0
+const space_between_mail: int = 50
+const mail_fall_speed: float = 50.0 * 15
 const mail = preload("res://microjogos/2023S1/mail_cleaner/cenas/mail.tscn")
 
 var mail_list: Array = []
@@ -72,6 +72,7 @@ func custom_ready():
 	for i in range(mail_quantity):
 		var new_mail = mail.instantiate()
 		mail_spawn.add_child(new_mail)
+		new_mail.scale = mail_spawn.scale
 		mail_list.append(new_mail)
 	
 	set_mail_position()

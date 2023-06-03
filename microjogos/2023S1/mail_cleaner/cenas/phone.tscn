@@ -9,34 +9,37 @@
 
 [node name="Phone" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(16, 32)
+position = Vector2(240, 480)
+scale = Vector2(15, 15)
 texture = ExtResource("1_e86lr")
 
 [node name="Mask" type="Control" parent="."]
 clip_contents = true
 layout_mode = 3
 anchors_preset = 0
-offset_left = 3.0
-offset_top = 4.0
-offset_right = 29.0
-offset_bottom = 50.0
+offset_left = 45.0
+offset_top = 60.0
+offset_right = 435.0
+offset_bottom = 750.0
 
 [node name="MailSpawn" type="Node2D" parent="Mask"]
-position = Vector2(13, 38)
+position = Vector2(195, 570)
+scale = Vector2(1.25, 1.25)
 
 [node name="ArrowGreen" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(8, 54)
-scale = Vector2(0.5, 0.5)
+position = Vector2(120, 810)
+scale = Vector2(7.5, 7.5)
 texture = ExtResource("2_7wa5v")
 
 [node name="ArrowRed" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(24, 54)
-scale = Vector2(0.5, 0.5)
+position = Vector2(360, 810)
+scale = Vector2(7.5, 7.5)
 texture = ExtResource("3_4iqys")
 
 [node name="Finger" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(32, 57)
+position = Vector2(480, 855)
+scale = Vector2(15, 15)
 texture = ExtResource("2_7f284")
