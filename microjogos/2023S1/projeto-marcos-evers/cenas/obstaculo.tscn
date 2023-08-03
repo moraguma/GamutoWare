@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://do2ner0jnwv10"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-marcos-evers/cenas/scripts/obstaculo.gd" id="1_frp3b"]
+[ext_resource type="Texture2D" uid="uid://rb2b55ptbmrb" path="res://microjogos/2023S1/projeto-marcos-evers/recursos/spaceMeteors_001.png" id="2_vnjru"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p85tk"]
+radius = 56.5685
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_frp3b")
+SPEED = 900
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.530806, 0.530806)
+texture = ExtResource("2_vnjru")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_p85tk")
