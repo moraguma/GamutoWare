@@ -31,7 +31,7 @@ var mode = MODE.ENDLESS
 
 var won = false
 
-@onready var minigame_data = preload("res://principal/recursos/data/Minigames.gd").new()
+@onready var minigame_data = preload("res://principal/recursos/data/Minigames.gd").new().minigame_data
 # ------------------------------------------------------------------------------
 # NÓS
 # ------------------------------------------------------------------------------
@@ -60,7 +60,7 @@ func isolate_folder(path, tolerance):
 func load_icons():
 	for i in range(len(microgame_paths)):
 		if not icon_dict.has(microgame_paths[i]):
-			var path = minigame_data.cover_paths[microgame_paths[i]]
+			var path = minigame_data[microgame_paths[i]]["cover"]
 			icon_dict[microgame_paths[i]] = load(path)
 			#icon_dict[microgame_paths[i]].set_flags(Texture2D.FLAG_FILTER)
 
