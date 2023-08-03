@@ -13,6 +13,8 @@ const BASE_WIDTH = 1920.0
 const BASE_HEIGHT = 1080.0
 
 const MICROGAME_TIME = 6
+
+const MIN_MINIGAME_POOL = 2
 # ------------------------------------------------------------------------------
 # VARIÁVEIS
 # ------------------------------------------------------------------------------
@@ -27,11 +29,14 @@ var microgame_dict = {}
 var total_lives = 3
 var score = 0
 
+var difficulty_level = 0
+var difficulty_slot = 0
+
 var mode = MODE.ENDLESS
 
 var won = false
 
-@onready var minigame_data = preload("res://principal/recursos/data/Minigames.gd").new()
+@onready var minigame_data = preload("res://principal/recursos/data/Minigames.gd").new().minigame_data
 # ------------------------------------------------------------------------------
 # NÓS
 # ------------------------------------------------------------------------------
@@ -60,7 +65,7 @@ func isolate_folder(path, tolerance):
 func load_icons():
 	for i in range(len(microgame_paths)):
 		if not icon_dict.has(microgame_paths[i]):
-			var path = minigame_data.cover_paths[microgame_paths[i]]
+			var path = minigame_data[microgame_paths[i]]["cover"]
 			icon_dict[microgame_paths[i]] = load(path)
 			#icon_dict[microgame_paths[i]].set_flags(Texture2D.FLAG_FILTER)
 
@@ -87,12 +92,43 @@ func fisher_yates_shuffle(l):
 		var aux = l[j]
 		l[j] = l[i]
 		l[i] = aux
-	
-	return l
+
+
+func sort_by_difficulty(l):
+	# Insertion sort
+	for i in range(1, len(l)):
+		var key = l[i]
+		
+		var j = i - 1
+		while j >= 0 and minigame_data[key]["difficulty"] < minigame_data[l[j]]["difficulty"]:
+			l[j + 1] = l[j]
+			j -= 1
+		l[j + 1] = key
 
 
 func add_to_queue():
-	microgame_queue.append(microgame_paths[randi() % len(microgame_paths)])
+	if difficulty_slot < total_microgames - 1:
+		# Adds all valid minigames to pool. If not enough minigames are in the pool, can add more
+		while true:
+			difficulty_level += 1
+			while minigame_data[microgame_paths[difficulty_slot]]["difficulty"] < difficulty_level and difficulty_slot < total_microgames - 1:
+				difficulty_slot += 1
+			
+			if difficulty_slot >= MIN_MINIGAME_POOL + 1 or difficulty_slot == total_microgames - 1:
+				break
+	
+	if difficulty_slot > 0:
+		# Selects a random minigame from pool. Moves the selected minigame to the end of the pool so it
+		# can't be selected twice in a row
+		var selection = randi() % difficulty_slot
+		microgame_queue.append(microgame_paths[selection])
+		
+		var aux = microgame_paths[difficulty_slot]
+		microgame_paths[difficulty_slot] = microgame_paths[selection]
+		microgame_paths[selection] = aux
+	else:
+		# Selects the only minigame
+		microgame_queue.append(microgame_paths[0])
 
 
 func update_microgames():
@@ -126,6 +162,8 @@ func _ready():
 	
 	match mode:
 		MODE.ENDLESS:
+			sort_by_difficulty(microgame_paths)
+			
 			total_microgames = 4
 			for i in range(4):
 				add_to_queue()
@@ -133,6 +171,13 @@ func _ready():
 			total_microgames = len(microgame_paths)
 			microgame_queue = microgame_paths.duplicate()
 			fisher_yates_shuffle(microgame_queue)
+			
+			# Pushes minigames to their minimum difficulty level as best as it can
+			for i in range(total_microgames - 1, -1, -1):
+				if minigame_data[microgame_queue[i]]["difficulty"] < i:
+					microgame_queue = microgame_queue.slice(0, i) + \
+						microgame_queue.slice(i + 1, minigame_data[microgame_queue[i]]["difficulty"]) + \
+						[microgame_queue[i]] + microgame_queue.slice(minigame_data[microgame_queue[i]]["difficulty"])
 	
 	display_icons()
 	life.set_lives(total_lives)
