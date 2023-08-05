@@ -107,14 +107,14 @@ func sort_by_difficulty(l):
 
 
 func add_to_queue():
-	if difficulty_slot < total_microgames - 1:
+	if difficulty_slot < len(microgame_paths) - 1:
 		# Adds all valid minigames to pool. If not enough minigames are in the pool, can add more
 		while true:
 			difficulty_level += 1
-			while minigame_data[microgame_paths[difficulty_slot]]["difficulty"] < difficulty_level and difficulty_slot < total_microgames - 1:
+			while minigame_data[microgame_paths[difficulty_slot]]["difficulty"] < difficulty_level and difficulty_slot < len(microgame_paths) - 1:
 				difficulty_slot += 1
 			
-			if difficulty_slot >= MIN_MINIGAME_POOL + 1 or difficulty_slot == total_microgames - 1:
+			if difficulty_slot >= MIN_MINIGAME_POOL + 1 or difficulty_slot == len(microgame_paths) - 1:
 				break
 	
 	if difficulty_slot > 0:
