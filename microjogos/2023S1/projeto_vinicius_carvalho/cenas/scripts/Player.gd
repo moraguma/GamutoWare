@@ -38,7 +38,7 @@ func _on_hitbox_body_entered(body):
 	death_s = $SomDeath
 	death_s.play()
 	timer = $Timer
-	NotificationCenter.notify("VOCE PERDEU!")
+	get_parent().register_lose()
 	timer.start(1)
 
 
