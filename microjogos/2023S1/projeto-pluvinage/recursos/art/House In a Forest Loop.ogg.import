@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cl6qec8r33u0k"
+path="res://.godot/imported/House In a Forest Loop.ogg-7940e698b20006fb2c6c97a472195efe.oggvorbisstr"
+
+[deps]
+
+source_file="res://microjogos/2023S1/projeto-pluvinage/recursos/art/House In a Forest Loop.ogg"
+dest_files=["res://.godot/imported/House In a Forest Loop.ogg-7940e698b20006fb2c6c97a472195efe.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
