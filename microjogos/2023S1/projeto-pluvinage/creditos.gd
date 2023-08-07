@@ -20,6 +20,10 @@ Arte das plataformas por  Killy Vera (www.opengameart.org)
 Arte da estrela por Rafaelchm (www.opengameart.org)
 Arte do powerup por KonitaTutorials (www.opengameart.org)
 Arte do morcego vermelho por Segel (www.opengameart.org)
+
+Som de pulo de https://creatorassets.com/a/8-bit-jump-sound-effects
+Sons de vitoria, derrota, powerup de https://pixabay.com/sound-effects/search/8-bit/
+Musica de fundo de https://pixabay.com/sound-effects/search/8-bit/
 """
 var credits_en = """
 Made by: [Jean Frederic Pluvinage]
@@ -30,4 +34,8 @@ Platform art by Killy Vera (www.opengameart.org)
 Star art by Rafaelchm (www.opengameart.org)
 Powerup art by KonitaTutorials (www.opengameart.org)
 Red bat art by Segel (www.opengameart.org)
+
+Jump sound from https://creatorassets.com/a/8-bit-jump-sound-effects
+Victory, game over and powerup sound from https://pixabay.com/sound-effects/search/8-bit/
+Background music from https://pixabay.com/sound-effects/search/8-bit/
 """

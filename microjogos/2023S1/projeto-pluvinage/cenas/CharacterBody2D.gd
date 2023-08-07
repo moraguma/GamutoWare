@@ -2,20 +2,20 @@ extends CharacterBody2D
 
 var Bonus = 1
 const SPEED = 500.0
-const JUMP_VELOCITY = -500.0
+const JUMP_VELOCITY = -800.0
 var PEGOUPOWERUP = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
-		velocity.y += gravity * delta
+		velocity.y += 2 * gravity * delta
 
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		get_parent().get_node("jump_sound").play()
 		velocity.y = JUMP_VELOCITY*Bonus
 
 	# Get the input direction and handle the movement/deceleration.
@@ -28,13 +28,14 @@ func _physics_process(delta):
 
 	move_and_slide()
 
-
 func _on_goal_body_entered(body):
+	get_parent().get_node("win_sound").play()
 	body.queue_free()
 	var win = $"../"
 	win.register_win()
 
 func _on_go_body_entered(body):
+	get_parent().get_node("lose_sound").play()
 	body.queue_free()
 	var win = $"../"
 	win.register_lose()
@@ -43,7 +44,8 @@ func _on_go_body_entered(body):
 func _on_powerup_body_entered(body):
 	if PEGOUPOWERUP == false:
 		PEGOUPOWERUP = true
-		Bonus = 1.5 # Replace with function body.
+		Bonus = 2 # Replace with function body.
+		get_parent().get_node("powerup_sound").play()
 		var powerjump = get_node("../Powerup")
 		powerjump.queue_free()
 	else:
@@ -51,21 +53,25 @@ func _on_powerup_body_entered(body):
 
 
 func _on_bat_body_entered(body):
+	get_parent().get_node("lose_sound").play()
 	body.queue_free()
 	var win = $"../"
 	win.register_lose()
 	
 func _on_bat2_body_entered(body):
+	get_parent().get_node("lose_sound").play()
 	body.queue_free()
 	var win = $"../"
 	win.register_lose()
 	
 func _on_bat3_body_entered(body):
+	get_parent().get_node("lose_sound").play()
 	body.queue_free()
 	var win = $"../"
 	win.register_lose()
 	
 func _on_bat4_body_entered(body):
+	get_parent().get_node("lose_sound").play()
 	body.queue_free()
 	var win = $"../"
 	win.register_lose()
