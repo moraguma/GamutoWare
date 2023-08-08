@@ -1,14 +1,14 @@
-[gd_scene load_steps=14 format=3 uid="uid://ekjctg7mjfuj"]
+[gd_scene load_steps=14 format=3 uid="uid://oe5ivv5m376p"]
 
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/scripts/main.gd" id="1_luxrx"]
 [ext_resource type="Texture2D" uid="uid://boenun8pc8oc1" path="res://microjogos/2023S1/projeto-gabriel-morais/recursos/fundo.png" id="2_di1wt"]
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/CharacterBody2D.gd" id="2_uik7r"]
 [ext_resource type="Texture2D" uid="uid://bk77807kefqvp" path="res://microjogos/2023S1/projeto-gabriel-morais/recursos/pedra-1.png.png" id="3_f6xe8"]
 [ext_resource type="Texture2D" uid="uid://cq4jyk01gmhi7" path="res://microjogos/2023S1/projeto-gabriel-morais/recursos/newton-removebg-preview.png" id="3_va3ko"]
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/newton.gd" id="4_51ubd"]
 [ext_resource type="Texture2D" uid="uid://cpostatogy0n8" path="res://microjogos/2023S1/projeto-gabriel-morais/recursos/estil.png" id="4_hy8fn"]
-[ext_resource type="PackedScene" uid="uid://d24u0dcd26iaq" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/maca_1.tscn" id="5_ccmg4"]
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/Line2D.gd" id="7_713yj"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/scripts/newton.gd" id="4_ym1hm"]
+[ext_resource type="PackedScene" uid="uid://mqowq5d2yjbd" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/maca_1.tscn" id="5_ccmg4"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/scripts/Line2D.gd" id="6_jkosv"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/scripts/CharacterBody2D.gd" id="7_xs1qc"]
 [ext_resource type="AudioStream" uid="uid://clbvnd7xo50wx" path="res://microjogos/2023S1/projeto-gabriel-morais/recursos/353033__renne100__slingshot.mp3" id="8_gvspe"]
 [ext_resource type="AudioStream" uid="uid://8ul3jrtvm66" path="res://microjogos/2023S1/projeto-gabriel-morais/recursos/newtonsveng.wav" id="11_0y8lc"]
 
@@ -33,7 +33,7 @@ expand_mode = 1
 position = Vector2(233, 830)
 scale = Vector2(1.94192, 2.17355)
 texture = ExtResource("3_va3ko")
-script = ExtResource("4_51ubd")
+script = ExtResource("4_ym1hm")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -52,17 +52,17 @@ texture = ExtResource("4_hy8fn")
 points = PackedVector2Array(487, 855, 1920, 1080)
 width = 30.0
 default_color = Color(0.639216, 0, 0.00784314, 1)
-script = ExtResource("7_713yj")
+script = ExtResource("6_jkosv")
 
 [node name="Line2D2" type="Line2D" parent="Camera2D"]
 points = PackedVector2Array(623, 859, 1920, 1080)
 width = 30.0
 default_color = Color(0.623529, 0, 0.00784314, 1)
-script = ExtResource("7_713yj")
+script = ExtResource("6_jkosv")
 
 [node name="pedra" type="CharacterBody2D" parent="Camera2D"]
 position = Vector2(256, 544)
-script = ExtResource("2_uik7r")
+script = ExtResource("7_xs1qc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/pedra"]
 shape = SubResource("CapsuleShape2D_tgoiv")
