@@ -15,3 +15,8 @@ func _process(delta):
 		var cena = cena_projetil.instantiate()
 		cena.position = position
 		get_parent().add_child(cena)
+
+
+func colidir():
+	get_parent().morrer()
+	queue_free()

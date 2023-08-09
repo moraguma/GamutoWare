@@ -10,9 +10,12 @@ func _physics_process(delta):
 
 
 func _on_body_entered(body):
-	body.free()
-	queue_free()
+	body.colidir()
 
 
 func _on_area_entered(area):
-	queue_free()
+	vida -= 1
+	if vida == 0:
+		get_parent().delete_enemy()
+		queue_free()
+		area.queue_free()

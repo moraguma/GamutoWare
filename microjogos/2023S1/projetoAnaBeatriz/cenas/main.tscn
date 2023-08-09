@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bs1ddi1rxp50d" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/starfield_alpha.png" id="4_jsmwk"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/Area2D.gd" id="5_fecm5"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/StarfieldAlpha.gd" id="5_rkd2r"]
-[ext_resource type="PackedScene" uid="uid://cp1qj6bl2c0bs" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/Inimigo.tscn" id="8_bmwdm"]
+[ext_resource type="PackedScene" uid="uid://cp1qj6bl2c0bs" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/inimigo.tscn" id="8_bmwdm"]
 [ext_resource type="Texture2D" uid="uid://das77euveeme1" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/Ufo2.png" id="8_j23x7"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/CollisionShape2D2.gd" id="9_vcp18"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/CollisionShape2D.gd" id="10_yjiwo"]
@@ -40,11 +40,10 @@ scale = Vector2(2.43289, 1.77)
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("5_fecm5")
-vida = 5
+vida = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Nave maior"]
 position = Vector2(-3.28833, 9.74576)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_xsdfa")
 
 [node name="Ufo2" type="Sprite2D" parent="Nave maior"]
@@ -66,8 +65,6 @@ position = Vector2(1920, 544)
 shape = SubResource("RectangleShape2D_acfsk")
 script = ExtResource("10_yjiwo")
 
-[node name="Timer" type="Timer" parent="."]
-
 [node name="Inimigo" parent="." instance=ExtResource("8_bmwdm")]
 
 [node name="Inimigo2" parent="." instance=ExtResource("8_bmwdm")]
@@ -79,4 +76,3 @@ position = Vector2(325, 501)
 [connection signal="area_entered" from="Nave maior" to="Nave maior" method="_on_area_entered"]
 [connection signal="body_entered" from="Nave maior" to="." method="_on_nave_maior_body_entered"]
 [connection signal="body_entered" from="Nave maior" to="Nave maior" method="_on_body_entered"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
