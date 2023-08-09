@@ -1,6 +1,7 @@
 extends Area2D
 
-var vida = 2
+
+var vida = 5
 
 func _physics_process(delta):
 	position.y += 1

@@ -1,7 +1,12 @@
 extends Area2D
 
+
+const SPEED = 200
+@export var vida = 1
+
+
 func _physics_process(delta):
-	position.y += 1
+	position.y += SPEED * delta
 
 
 func _on_body_entered(body):
