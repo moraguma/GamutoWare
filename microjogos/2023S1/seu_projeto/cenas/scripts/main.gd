@@ -1,3 +1,5 @@
+extends Node2D
+
 # Declaração dos sinais win e lose
 signal win
 signal lose
