@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://be84klthp7f5i"]
+[gd_scene load_steps=17 format=3 uid="uid://be84klthp7f5i"]
 
 [ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/main.gd" id="1_fa412"]
 [ext_resource type="Texture2D" uid="uid://bs1ddi1rxp50d" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/starfield_alpha.png" id="4_jsmwk"]
@@ -8,7 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://das77euveeme1" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/Ufo2.png" id="8_j23x7"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/CollisionShape2D2.gd" id="9_vcp18"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/CollisionShape2D.gd" id="10_yjiwo"]
+[ext_resource type="AudioStream" uid="uid://cxhpmprv7msst" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/Enterin The Skies.ogg" id="11_rw53c"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/StaticBody2D.gd" id="12_in7ui"]
+[ext_resource type="AudioStream" uid="uid://0nudlojxdxj3" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/explosion.wav" id="12_ostmr"]
+[ext_resource type="AudioStream" uid="uid://cb1263x21v5df" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/laser1.wav" id="13_ffplg"]
 [ext_resource type="PackedScene" uid="uid://dqwdde2v241xr" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/player.tscn" id="13_p23la"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xsdfa"]
@@ -72,6 +75,17 @@ position = Vector2(1480, 488)
 
 [node name="Inimigo3" parent="." instance=ExtResource("8_bmwdm")]
 position = Vector2(325, 501)
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_rw53c")
+
+[node name="Explosion" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_ostmr")
+volume_db = 10.0
+
+[node name="Shot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_ffplg")
+volume_db = -5.0
 
 [connection signal="area_entered" from="Nave maior" to="Nave maior" method="_on_area_entered"]
 [connection signal="body_entered" from="Nave maior" to="." method="_on_nave_maior_body_entered"]

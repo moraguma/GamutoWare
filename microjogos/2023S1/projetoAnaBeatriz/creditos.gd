@@ -19,5 +19,5 @@ Você pode preencher o resto deste campo com creditos de assets utilizados, link
 var credits_en = """
 Made by: [Your name!]
 
-Fill this space with credits to used assets, links to your social medias and whatever other details you think are important
-"""
+Enterin the skies (score name) written and produced by Ove Melaa (Omsofware@hotmail.com)
+Laser sfx by dklon"""

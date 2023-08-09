@@ -13,7 +13,7 @@ const HEIGHT = 1080
 
 const MIN_X = 300.0
 const MAX_X = 1620.0
-const START_Y = 200
+const START_Y = 250
 const SEPARACAO = 300
 
 
@@ -21,6 +21,7 @@ var timer
 var total_enemies = 4
 var morreu = false
 
+@onready var explosion = $Explosion
 @onready var inimigos = [$Inimigo, $Inimigo2, $Inimigo3, $"Nave maior"]
 
 
@@ -42,6 +43,8 @@ func _ready():
 	for inimigo in inimigos:
 		inimigo.position = Vector2(randf_range(MIN_X, MAX_X), y)
 		y -= SEPARACAO
+	
+	$Music.play()
 
 
 # --------------------------------------------------------------------------------------------------
@@ -55,6 +58,8 @@ func morrer():
 
 # Um método genérico. Crie quantos métodos você precisar!
 func delete_enemy():
+	explosion.play()
+	
 	total_enemies -= 1
 	
 	if total_enemies == 0 and not morreu:
