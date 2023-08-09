@@ -30,9 +30,8 @@ script = ExtResource("1_fa412")
 anchor_mode = 0
 
 [node name="StarfieldAlpha" type="Sprite2D" parent="."]
-position = Vector2(952, 538.25)
-scale = Vector2(0.491667, 0.50162)
 texture = ExtResource("4_jsmwk")
+centered = false
 script = ExtResource("5_rkd2r")
 
 [node name="Player" parent="." instance=ExtResource("13_p23la")]

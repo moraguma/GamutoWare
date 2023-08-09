@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://c8dd2hph341t7"]
+[gd_scene load_steps=3 format=3 uid="uid://c8dd2hph341t7"]
 
-[ext_resource type="Texture2D" uid="uid://cf1f7omrsgvpf" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/inimigos2.png" id="1_3es0p"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/inimigos_2.gd" id="2_wg8w2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c5bxu"]
@@ -9,7 +8,6 @@ size = Vector2(920, 299.286)
 [node name="Inimigos2" type="Sprite2D"]
 position = Vector2(424, 474.375)
 scale = Vector2(0.4, 0.374224)
-texture = ExtResource("1_3es0p")
 script = ExtResource("2_wg8w2")
 
 [node name="Area2D" type="Area2D" parent="."]

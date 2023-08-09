@@ -10,7 +10,6 @@ size = Vector2(256, 80)
 light_mask = 3
 visibility_layer = 3
 position = Vector2(880, 624)
-scale = Vector2(1, 1)
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_tcbpx")

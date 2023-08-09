@@ -17,7 +17,7 @@ Criado por: [Seu nome!]
 Você pode preencher o resto deste campo com creditos de assets utilizados, links para sua redes sociais ou qualquer outro detalhe que ache relevante
 """
 var credits_en = """
-Made by: [Your name!]
+Made by: Ana Beatriz 
 
-Enterin the skies (score name) written and produced by Ove Melaa (Omsofware@hotmail.com)
+Enterin the skies written and produced by Ove Melaa (Omsofware@hotmail.com)
 Laser sfx by dklon"""
