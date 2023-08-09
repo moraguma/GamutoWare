@@ -1,0 +1,90 @@
+[gd_scene load_steps=14 format=3 uid="uid://be84klthp7f5i"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/main.gd" id="1_fa412"]
+[ext_resource type="Texture2D" uid="uid://bs1ddi1rxp50d" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/starfield_alpha.png" id="4_jsmwk"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/StarfieldAlpha.gd" id="5_rkd2r"]
+[ext_resource type="PackedScene" uid="uid://bvkynhf6vrjir" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/Inimigo.tscn" id="8_bmwdm"]
+[ext_resource type="Texture2D" uid="uid://das77euveeme1" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/Ufo2.png" id="8_j23x7"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/Area2D3.gd" id="9_ldx0x"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/CollisionShape2D2.gd" id="9_vcp18"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/CollisionShape2D.gd" id="10_yjiwo"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/StaticBody2D.gd" id="12_in7ui"]
+[ext_resource type="PackedScene" uid="uid://dqwdde2v241xr" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/player.tscn" id="13_p23la"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xsdfa"]
+size = Vector2(111.801, 180.791)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2pnn4"]
+size = Vector2(43.8441, 1072)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_acfsk"]
+size = Vector2(32, 1072)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_fa412")
+
+[node name="Camera3D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="StarfieldAlpha" type="Sprite2D" parent="."]
+position = Vector2(952, 538.25)
+scale = Vector2(0.491667, 0.50162)
+texture = ExtResource("4_jsmwk")
+script = ExtResource("5_rkd2r")
+
+[node name="Player" parent="." instance=ExtResource("13_p23la")]
+
+[node name="Nave maior" type="Area2D" parent="."]
+position = Vector2(880, 226.75)
+scale = Vector2(2.43289, 1.77)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("9_ldx0x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nave maior"]
+position = Vector2(-3.2883, -24.1525)
+shape = SubResource("RectangleShape2D_xsdfa")
+
+[node name="Ufo2" type="Sprite2D" parent="Nave maior"]
+modulate = Color(0.517647, 0.976471, 0.482353, 1)
+texture = ExtResource("8_j23x7")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+script = ExtResource("12_in7ui")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.92207, 544)
+shape = SubResource("RectangleShape2D_2pnn4")
+script = ExtResource("9_vcp18")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(1920, 544)
+shape = SubResource("RectangleShape2D_acfsk")
+script = ExtResource("10_yjiwo")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Inimigo" parent="." instance=ExtResource("8_bmwdm")]
+position = Vector2(880, 624)
+scale = Vector2(1, 1)
+collision_layer = 3
+collision_mask = 3
+
+[node name="Inimigo2" parent="." instance=ExtResource("8_bmwdm")]
+position = Vector2(1480, 488)
+collision_layer = 3
+collision_mask = 3
+
+[node name="Inimigo3" parent="." instance=ExtResource("8_bmwdm")]
+collision_layer = 3
+collision_mask = 3
+
+[connection signal="area_entered" from="Nave maior" to="Nave maior" method="_on_area_entered"]
+[connection signal="body_entered" from="Nave maior" to="." method="_on_nave_maior_body_entered"]
+[connection signal="body_entered" from="Nave maior" to="Nave maior" method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="Inimigo" to="Inimigo" method="_on_area_entered"]
+[connection signal="area_entered" from="Inimigo2" to="Inimigo2" method="_on_area_entered"]
+[connection signal="area_entered" from="Inimigo3" to="Inimigo3" method="_on_area_entered"]
