@@ -8,18 +8,16 @@ extends Resource
 
 # Título do seu jogo
 var title_pt = "Esconde Esconde"
-var title_en = "hide and seek"
+var title_en = "Hide and seek"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
 Criado por: Luís Felipe Colosimo
 
 GitHub: https://github.com/luisfelipecolosimo
-Zap: (19) 99961-0009
 """
 var credits_en = """
 Made by: Luís Felipe Colosimo
 
 GitHub: https://github.com/luisfelipecolosimo
-Zap: (19) 99961-0009
 """
