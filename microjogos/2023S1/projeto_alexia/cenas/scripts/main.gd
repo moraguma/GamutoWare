@@ -8,13 +8,15 @@ signal lose
 const WIDTH = 1920
 const HEIGHT = 1080
 
+const TOTAL_LIVROS = 6
+
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES PADRÃO
 # --------------------------------------------------------------------------------------------------
 var pos = 0
 const y = 960
 var lugares = [405, 615, 825, 1035, 1245, 1455]
-var select =0
+var select =1
 var flechapos = 1024
 var livros = ["Livro1", "Livro2", "Livro3", "Livro4", "Livro5", "Livro6"] 
 var base = ["Livro1", "Livro2", "Livro3", "Livro4", "Livro5", "Livro6"]
@@ -24,18 +26,23 @@ var venceu = false
 func _ready():
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
+			NotificationCenter.notify("ARRANGE")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FACA ALGO!")
+			NotificationCenter.notify("ORGANIZE")
 	
 	randomize()
-	livros.shuffle()
-
-func escrever(nome):
-		match Global.language:
-					Global.LANGUAGE.PT:
-						NotificationCenter.notify(nome)
 	
+	var a = randi() % TOTAL_LIVROS
+	var b = a
+	while b == a:
+		b = randi() % TOTAL_LIVROS
+	trocar(livros, a, b)
+
+func trocar(l, a, b):
+	var aux = l[a]
+	l[a] = l[b]
+	l[b] = aux
+
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
 # a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
 # a última chamada desta função. O comando pass não faz nada
@@ -44,9 +51,8 @@ func _physics_process(delta):
 		var aux
 		if livros == base:
 			register_win()
-			escrever("Fim")
 			venceu = true
-			
+		
 		if select == 0:
 			if Input.is_action_just_pressed("esquerda"):
 				if pos>0:

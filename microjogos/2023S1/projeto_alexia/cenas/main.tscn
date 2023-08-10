@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://dqcxt8bqxi2kk"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/seu_projeto/cenas/scripts/main.gd" id="1_fx6v7"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto_alexia/cenas/scripts/main.gd" id="1_burau"]
 [ext_resource type="Texture2D" uid="uid://ssv0d2w1iqai" path="res://microjogos/2023S1/projeto_alexia/recursos/fundocomtexto.png" id="2_xhhxm"]
 [ext_resource type="PackedScene" uid="uid://ce3ee5mdg7u1e" path="res://microjogos/2023S1/projeto_alexia/cenas/Livro1.tscn" id="3_h6603"]
 [ext_resource type="PackedScene" uid="uid://clhma2nyl4uev" path="res://microjogos/2023S1/projeto_alexia/cenas/Livro2.tscn" id="4_8go4c"]
@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://c75se5fd6q13t" path="res://microjogos/2023S1/projeto_alexia/cenas/Livro6.tscn" id="8_w1yej"]
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_fx6v7")
+script = ExtResource("1_burau")
 
 [node name="Camera3D" type="Camera2D" parent="."]
 anchor_mode = 0
@@ -34,6 +34,7 @@ position = Vector2(936, 968)
 position = Vector2(405, 1024)
 
 [node name="flecha amarela" parent="." instance=ExtResource("7_qxbf7")]
+visible = false
 position = Vector2(405, 1024)
 
 [node name="Livro4" parent="." instance=ExtResource("6_jwx2p")]
