@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dsxm54jv86dym"]
 
 [ext_resource type="Texture2D" uid="uid://o8d1tbp23kxa" path="res://microjogos/2023S1/mail_cleaner/recursos/sprites/phone.png" id="1_e86lr"]
-[ext_resource type="Texture2D" path="res://microjogos/2023S1/mail_cleaner/recursos/sprites/arrow_green.png" id="2_7wa5v"]
-[ext_resource type="Texture2D" path="res://microjogos/2023S1/mail_cleaner/recursos/sprites/arrow_red.png" id="3_4iqys"]
+[ext_resource type="Texture2D" uid="uid://wqua2vtw2lok" path="res://microjogos/2023S1/mail_cleaner/recursos/sprites/placeholder/arrow_green.png" id="2_wpb2j"]
+[ext_resource type="Texture2D" uid="uid://hij4xrvl8k1x" path="res://microjogos/2023S1/mail_cleaner/recursos/sprites/placeholder/arrow_red.png" id="3_p5ffe"]
 
 [node name="Phone" type="Node2D"]
 
@@ -29,10 +29,10 @@ scale = Vector2(1.25, 1.25)
 texture_filter = 1
 position = Vector2(120, 810)
 scale = Vector2(7.5, 7.5)
-texture = ExtResource("2_7wa5v")
+texture = ExtResource("2_wpb2j")
 
 [node name="ArrowRed" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(360, 810)
 scale = Vector2(7.5, 7.5)
-texture = ExtResource("3_4iqys")
+texture = ExtResource("3_p5ffe")

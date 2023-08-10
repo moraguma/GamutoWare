@@ -7,4 +7,4 @@
 script = ExtResource("1_kyp7x")
 
 [node name="Phone" parent="." instance=ExtResource("2_mtjul")]
-position = Vector2(750, 120)
+position = Vector2(750, 125)
