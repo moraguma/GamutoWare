@@ -1,0 +1,65 @@
+[gd_scene load_steps=15 format=3 uid="uid://dqcxt8bqxi2kk"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto_alexia/cenas/scripts/main.gd" id="1_burau"]
+[ext_resource type="Texture2D" uid="uid://ssv0d2w1iqai" path="res://microjogos/2023S1/projeto_alexia/recursos/fundocomtexto.png" id="2_xhhxm"]
+[ext_resource type="PackedScene" uid="uid://ce3ee5mdg7u1e" path="res://microjogos/2023S1/projeto_alexia/cenas/Livro1.tscn" id="3_h6603"]
+[ext_resource type="PackedScene" uid="uid://clhma2nyl4uev" path="res://microjogos/2023S1/projeto_alexia/cenas/Livro2.tscn" id="4_8go4c"]
+[ext_resource type="PackedScene" uid="uid://bwbvys7tbwpdu" path="res://microjogos/2023S1/projeto_alexia/cenas/Livro3.tscn" id="5_24v26"]
+[ext_resource type="PackedScene" uid="uid://fn3c1tew3psr" path="res://microjogos/2023S1/projeto_alexia/cenas/Livro4.tscn" id="6_jwx2p"]
+[ext_resource type="PackedScene" uid="uid://bbcj6dkwj6057" path="res://microjogos/2023S1/projeto_alexia/cenas/flecha.tscn" id="6_uu5bb"]
+[ext_resource type="PackedScene" uid="uid://ck82hqw403y3x" path="res://microjogos/2023S1/projeto_alexia/cenas/Livro5.tscn" id="7_b6ncm"]
+[ext_resource type="PackedScene" uid="uid://b228rbt5aixc4" path="res://microjogos/2023S1/projeto_alexia/cenas/flecha2.tscn" id="7_qxbf7"]
+[ext_resource type="PackedScene" uid="uid://c75se5fd6q13t" path="res://microjogos/2023S1/projeto_alexia/cenas/Livro6.tscn" id="8_w1yej"]
+[ext_resource type="AudioStream" uid="uid://dbukctpo1pleg" path="res://microjogos/2023S1/projeto_alexia/recursos/murmur.ogg" id="11_fcsm7"]
+[ext_resource type="AudioStream" uid="uid://btlpb2bpj5j8h" path="res://microjogos/2023S1/projeto_alexia/recursos/move.wav" id="12_lj7en"]
+[ext_resource type="AudioStream" uid="uid://brw0lu1mp8jy7" path="res://microjogos/2023S1/projeto_alexia/recursos/click.wav" id="13_fxgh6"]
+[ext_resource type="AudioStream" uid="uid://b4k0yiafuqvyy" path="res://microjogos/2023S1/projeto_alexia/recursos/win.wav" id="14_tkefj"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_burau")
+
+[node name="Camera3D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(961, 542)
+texture = ExtResource("2_xhhxm")
+
+[node name="Livro1" parent="." instance=ExtResource("3_h6603")]
+position = Vector2(496, 952)
+
+[node name="Livro2" parent="." instance=ExtResource("4_8go4c")]
+position = Vector2(728, 960)
+
+[node name="Livro3" parent="." instance=ExtResource("5_24v26")]
+position = Vector2(936, 968)
+
+[node name="flecha branca" parent="." instance=ExtResource("6_uu5bb")]
+position = Vector2(405, 1024)
+
+[node name="flecha amarela" parent="." instance=ExtResource("7_qxbf7")]
+visible = false
+position = Vector2(405, 1024)
+
+[node name="Livro4" parent="." instance=ExtResource("6_jwx2p")]
+position = Vector2(1104, 960)
+
+[node name="Livro5" parent="." instance=ExtResource("7_b6ncm")]
+position = Vector2(1248, 960)
+
+[node name="Livro6" parent="." instance=ExtResource("8_w1yej")]
+position = Vector2(1400, 968)
+
+[node name="Ambient" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_fcsm7")
+volume_db = -5.0
+
+[node name="Move" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_lj7en")
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_fxgh6")
+volume_db = 20.0
+
+[node name="Win" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_tkefj")

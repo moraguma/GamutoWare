@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bs1ddi1rxp50d" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/starfield_alpha.png" id="4_jsmwk"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/Area2D.gd" id="5_fecm5"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/StarfieldAlpha.gd" id="5_rkd2r"]
-[ext_resource type="PackedScene" uid="uid://cp1qj6bl2c0bs" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/inimigo.tscn" id="8_bmwdm"]
+[ext_resource type="PackedScene" uid="uid://cp1qj6bl2c0bs" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/Inimigo.tscn" id="8_bmwdm"]
 [ext_resource type="Texture2D" uid="uid://das77euveeme1" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/Ufo2.png" id="8_j23x7"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/CollisionShape2D2.gd" id="9_vcp18"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/CollisionShape2D.gd" id="10_yjiwo"]

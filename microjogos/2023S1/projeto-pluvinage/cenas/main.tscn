@@ -1,0 +1,217 @@
+[gd_scene load_steps=19 format=3 uid="uid://ti82fb7ed1ir"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-pluvinage/cenas/scripts/main.gd" id="1_vdjjx"]
+[ext_resource type="Texture2D" uid="uid://bjbaijxjheufl" path="res://microjogos/2023S1/projeto-pluvinage/recursos/icon.png" id="2_2vvsw"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-pluvinage/cenas/CharacterBody2D.gd" id="2_wmwpe"]
+[ext_resource type="Texture2D" uid="uid://bdejlfihec1k" path="res://microjogos/2023S1/projeto-pluvinage/recursos/star1.png" id="5_cxjg0"]
+[ext_resource type="Texture2D" uid="uid://dswfre4d3u8yp" path="res://microjogos/2023S1/projeto-pluvinage/recursos/parallax_mountain_pack/layers/parallax-mountain-bg.png" id="5_m6kid"]
+[ext_resource type="AudioStream" uid="uid://crpu3dyotmt1y" path="res://microjogos/2023S1/projeto-pluvinage/recursos/sounds/powerup.mp3" id="5_r87wk"]
+[ext_resource type="Texture2D" uid="uid://bea7ftqwdg5kq" path="res://microjogos/2023S1/projeto-pluvinage/recursos/perte.png" id="6_lh1vt"]
+[ext_resource type="AudioStream" uid="uid://cyl2disxurjyf" path="res://microjogos/2023S1/projeto-pluvinage/recursos/sounds/win.mp3" id="6_qna4x"]
+[ext_resource type="Texture2D" uid="uid://bbi1kl065ysx5" path="res://microjogos/2023S1/projeto-pluvinage/recursos/firerate increaser.png" id="7_104r3"]
+[ext_resource type="AudioStream" uid="uid://br8qp2ntgpi1l" path="res://microjogos/2023S1/projeto-pluvinage/recursos/sounds/lose.mp3" id="7_sbcrm"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-pluvinage/Bat.gd" id="8_k2nto"]
+[ext_resource type="Texture2D" uid="uid://djcv041nxf0ip" path="res://microjogos/2023S1/projeto-pluvinage/recursos/bat/01-Idle/__Bat02_Idle_000.png" id="9_0rchk"]
+[ext_resource type="AudioStream" uid="uid://dipyn8ja1keus" path="res://microjogos/2023S1/projeto-pluvinage/recursos/sounds/jump.mp3" id="10_01xnc"]
+[ext_resource type="AudioStream" uid="uid://68gikvdgglt6" path="res://microjogos/2023S1/projeto-pluvinage/recursos/sounds/music.mp3" id="14_s4okj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vobhw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s5pr7"]
+size = Vector2(380.302, 13.4049)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5drih"]
+size = Vector2(20, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yq0do"]
+size = Vector2(16.5, 14.9375)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_vdjjx")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(300, 256)
+scale = Vector2(6, 6)
+collision_layer = 3
+script = ExtResource("2_wmwpe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("CircleShape2D_vobhw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture_filter = 1
+position = Vector2(0, -0.723473)
+scale = Vector2(0.375, 0.375)
+texture = ExtResource("2_2vvsw")
+
+[node name="GO" type="Area2D" parent="."]
+position = Vector2(968, 1064)
+scale = Vector2(20, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GO"]
+shape = SubResource("RectangleShape2D_s5pr7")
+
+[node name="PlataformasDraw" type="Sprite2D" parent="."]
+position = Vector2(968, 600)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_lh1vt")
+
+[node name="Platform1" type="RigidBody2D" parent="."]
+position = Vector2(266, 529)
+rotation = 0.200817
+scale = Vector2(2.52962, 3.459)
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1"]
+rotation = -1.57079
+shape = SubResource("RectangleShape2D_5drih")
+
+[node name="Platform2" type="RigidBody2D" parent="."]
+position = Vector2(536, 704)
+scale = Vector2(1.76799, 2.09204)
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
+rotation = -1.57079
+shape = SubResource("RectangleShape2D_5drih")
+
+[node name="Platform3" type="RigidBody2D" parent="."]
+position = Vector2(996, 610)
+rotation = 0.0648052
+scale = Vector2(1.15527, 1.45169)
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3"]
+rotation = -1.57079
+shape = SubResource("RectangleShape2D_5drih")
+
+[node name="Platform4" type="RigidBody2D" parent="."]
+position = Vector2(1268, 724)
+rotation = -0.0132251
+scale = Vector2(2.76615, 1.65065)
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4"]
+rotation = -1.57079
+shape = SubResource("RectangleShape2D_5drih")
+
+[node name="Goal" type="Area2D" parent="."]
+position = Vector2(1024, 112)
+scale = Vector2(5.529, 5.529)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]
+shape = SubResource("CircleShape2D_vobhw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Goal"]
+position = Vector2(0, -0.723473)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_cxjg0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+texture_filter = 1
+scale = Vector2(7.5, 7.5)
+texture = ExtResource("5_m6kid")
+centered = false
+
+[node name="Platform5" type="RigidBody2D" parent="."]
+position = Vector2(1608, 475)
+rotation = 0.022853
+scale = Vector2(1.75445, -1.30476)
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform5"]
+rotation = -1.57079
+shape = SubResource("RectangleShape2D_5drih")
+
+[node name="Platform6" type="RigidBody2D" parent="."]
+position = Vector2(1772, 564)
+rotation = 0.0813683
+scale = Vector2(1.13205, 0.900606)
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform6"]
+rotation = -1.57079
+shape = SubResource("RectangleShape2D_5drih")
+
+[node name="Platform7" type="RigidBody2D" parent="."]
+position = Vector2(1238, 267)
+rotation = 0.0166277
+scale = Vector2(1.75445, -1.30476)
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform7"]
+position = Vector2(2.33716, -1.68127)
+rotation = -1.57079
+shape = SubResource("RectangleShape2D_5drih")
+
+[node name="Powerup" type="Area2D" parent="."]
+position = Vector2(1408, 664)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Powerup"]
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_yq0do")
+
+[node name="Sprite2D" type="Sprite2D" parent="Powerup"]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("7_104r3")
+
+[node name="Bat" type="Area2D" parent="."]
+position = Vector2(1853, 330)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("8_k2nto")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bat"]
+position = Vector2(4, -5.5)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_yq0do")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bat"]
+rotation = 3.14159
+scale = Vector2(0.5, -0.5)
+texture = ExtResource("9_0rchk")
+
+[node name="Bat2" type="Area2D" parent="."]
+position = Vector2(2116, 722)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("8_k2nto")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bat2"]
+position = Vector2(3, -2.75)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_yq0do")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bat2"]
+rotation = 3.14159
+scale = Vector2(0.5, -0.5)
+texture = ExtResource("9_0rchk")
+
+[node name="powerup_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_r87wk")
+
+[node name="win_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_qna4x")
+
+[node name="lose_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_sbcrm")
+
+[node name="jump_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_01xnc")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_s4okj")
+volume_db = -11.277
+autoplay = true
+
+[connection signal="body_entered" from="GO" to="Player" method="_on_go_body_entered"]
+[connection signal="body_entered" from="Goal" to="Player" method="_on_goal_body_entered"]
+[connection signal="body_entered" from="Powerup" to="Player" method="_on_powerup_body_entered"]
+[connection signal="body_entered" from="Bat" to="Player" method="_on_bat_body_entered"]
+[connection signal="body_entered" from="Bat2" to="Player" method="_on_bat_body_entered"]
