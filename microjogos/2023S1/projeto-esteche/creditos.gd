@@ -14,10 +14,12 @@ var title_en = "Title in English"
 var credits_pt = """
 Criado por: [Gustavo Esteche!]
 
-Você pode preencher o resto deste campo com creditos de assets utilizados, links para sua redes sociais ou qualquer outro detalhe que ache relevante
+Plataforma de pouso: https://opengameart.org/content/landing-platform
+Plano de fundo estrelado: https://enjl.itch.io/background-starry-space
 """
 var credits_en = """
 Made by: [Gustavo Esteche!]
 
-Fill this space with credits to used assets, links to your social medias and whatever other details you think are important
+Landing platform: https://opengameart.org/content/landing-platform
+Starry background: https://enjl.itch.io/background-starry-space
 """

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://n7g7kj0h3vxt"]
 
-[ext_resource type="Texture2D" uid="uid://vg0gy1ekkbu2" path="res://microjogos/2023S1/projeto-esteche/cenas/meteoro-PhotoRoom.png-PhotoRoom.png" id="1_556he"]
+[ext_resource type="Texture2D" uid="uid://vg0gy1ekkbu2" path="res://microjogos/2023S1/projeto-esteche/recursos/meteoro-PhotoRoom.png-PhotoRoom.png" id="1_556he"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto-esteche/cenas/Asteroide.gd" id="1_i0vci"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fw0la"]

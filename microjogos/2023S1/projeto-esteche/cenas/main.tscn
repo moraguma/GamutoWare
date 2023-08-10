@@ -1,15 +1,15 @@
 [gd_scene load_steps=17 format=3 uid="uid://csiisnal8j2bo"]
 
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto-esteche/cenas/scripts/main.gd" id="1_mw6wy"]
-[ext_resource type="Texture2D" uid="uid://0lmefolnfly5" path="res://microjogos/2023S1/projeto-esteche/cenas/imkv74m4q5g41.png" id="2_fbts5"]
-[ext_resource type="Texture2D" uid="uid://1432e4pf8x24" path="res://microjogos/2023S1/projeto-esteche/cenas/Plataforma1.png" id="3_gnan2"]
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-esteche/PlataformaDireita.gd" id="3_xrdns"]
-[ext_resource type="Texture2D" uid="uid://b6xw1gt12jghc" path="res://microjogos/2023S1/projeto-esteche/cenas/plataforma.png" id="4_3wmt8"]
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-esteche/Astronauta.gd" id="5_aybri"]
-[ext_resource type="Texture2D" uid="uid://befk2dswrptd8" path="res://microjogos/2023S1/projeto-esteche/cenas/olaaa.png" id="5_dk40o"]
-[ext_resource type="Texture2D" uid="uid://dkoxknssj14kl" path="res://microjogos/2023S1/projeto-esteche/cenas/picwish.png" id="6_kyp0c"]
+[ext_resource type="Texture2D" uid="uid://cbxgt72a3t7el" path="res://microjogos/2023S1/projeto-esteche/recursos/bg.png" id="2_skh0r"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-esteche/cenas/PlataformaDireita.gd" id="3_xrdns"]
+[ext_resource type="Texture2D" uid="uid://1432e4pf8x24" path="res://microjogos/2023S1/projeto-esteche/recursos/Plataforma1.png" id="4_2rakl"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-esteche/cenas/Astronauta.gd" id="5_aybri"]
+[ext_resource type="Texture2D" uid="uid://b6xw1gt12jghc" path="res://microjogos/2023S1/projeto-esteche/recursos/plataforma.png" id="5_tatcv"]
+[ext_resource type="Texture2D" uid="uid://befk2dswrptd8" path="res://microjogos/2023S1/projeto-esteche/recursos/olaaa.png" id="7_bvqyw"]
+[ext_resource type="Texture2D" uid="uid://dkoxknssj14kl" path="res://microjogos/2023S1/projeto-esteche/recursos/picwish.png" id="8_aajsd"]
 [ext_resource type="PackedScene" uid="uid://n7g7kj0h3vxt" path="res://microjogos/2023S1/projeto-esteche/cenas/area_2d.tscn" id="8_yy8e7"]
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-esteche/areadepouso.gd" id="10_hryy6"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-esteche/cenas/areadepouso.gd" id="10_hryy6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wf0wd"]
 size = Vector2(136, 10)
@@ -24,10 +24,10 @@ size = Vector2(32, 109.25)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_dk40o")
+"texture": ExtResource("7_bvqyw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_kyp0c")
+"texture": ExtResource("8_aajsd")
 }],
 "loop": true,
 "name": &"default",
@@ -46,10 +46,11 @@ script = ExtResource("1_mw6wy")
 [node name="Camera3D" type="Camera2D" parent="."]
 anchor_mode = 0
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 1960.0
-offset_bottom = 1184.0
-texture = ExtResource("2_fbts5")
+[node name="Bg" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(10, 10)
+texture = ExtResource("2_skh0r")
+centered = false
 
 [node name="PlataformaDireita" type="StaticBody2D" parent="."]
 script = ExtResource("3_xrdns")
@@ -57,7 +58,7 @@ script = ExtResource("3_xrdns")
 [node name="Sprite2D" type="Sprite2D" parent="PlataformaDireita"]
 position = Vector2(106.625, 832.125)
 scale = Vector2(0.43146, 0.4019)
-texture = ExtResource("3_gnan2")
+texture = ExtResource("4_2rakl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlataformaDireita"]
 position = Vector2(148, 832)
@@ -72,7 +73,7 @@ shape = SubResource("RectangleShape2D_r2qju")
 [node name="Sprite2D" type="Sprite2D" parent="PlataformaEsquerda"]
 position = Vector2(1816, 712)
 scale = Vector2(0.405079, 0.352847)
-texture = ExtResource("4_3wmt8")
+texture = ExtResource("5_tatcv")
 
 [node name="Astronauta" type="CharacterBody2D" parent="."]
 script = ExtResource("5_aybri")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://y3weoo3vpcc3"
-path="res://.godot/imported/icon.svg-517cee4d09baa5736d4c8065767311c8.ctex"
+uid="uid://vg0gy1ekkbu2"
+path="res://.godot/imported/meteoro-PhotoRoom.png-PhotoRoom.png-094789605a675fdb5906d02d94bed3bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2023S1/projeto-esteche/cenas/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-517cee4d09baa5736d4c8065767311c8.ctex"]
+source_file="res://microjogos/2023S1/projeto-esteche/recursos/meteoro-PhotoRoom.png-PhotoRoom.png"
+dest_files=["res://.godot/imported/meteoro-PhotoRoom.png-PhotoRoom.png-094789605a675fdb5906d02d94bed3bb.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

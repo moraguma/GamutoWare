@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vg0gy1ekkbu2"
-path="res://.godot/imported/meteoro-PhotoRoom.png-PhotoRoom.png-c2fab96a8d246d05de42c9eb02a3b332.ctex"
+uid="uid://b6xw1gt12jghc"
+path="res://.godot/imported/plataforma.png-214fc784960324915913519bf8405efe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2023S1/projeto-esteche/cenas/meteoro-PhotoRoom.png-PhotoRoom.png"
-dest_files=["res://.godot/imported/meteoro-PhotoRoom.png-PhotoRoom.png-c2fab96a8d246d05de42c9eb02a3b332.ctex"]
+source_file="res://microjogos/2023S1/projeto-esteche/recursos/plataforma.png"
+dest_files=["res://.godot/imported/plataforma.png-214fc784960324915913519bf8405efe.ctex"]
 
 [params]
 
