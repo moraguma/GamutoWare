@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://mqowq5d2yjbd"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/scripts/maca_1.gd" id="1_6v8b2"]
+[ext_resource type="Texture2D" uid="uid://du67ks0qtxx8s" path="res://microjogos/2023S1/projeto-gabriel-morais/recursos/maca.png" id="2_qfwst"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/scripts/Sprite2D.gd" id="3_yu5ds"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1m63x"]
+radius = 78.0577
+
+[sub_resource type="GDScript" id="GDScript_gc3q5"]
+script/source = "extends CollisionShape2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+"
+
+[node name="maca1" type="Area2D"]
+position = Vector2(1333, 330)
+script = ExtResource("1_6v8b2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-9.49999, -22)
+scale = Vector2(0.57, 0.58)
+texture = ExtResource("2_qfwst")
+script = ExtResource("3_yu5ds")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -11)
+shape = SubResource("CircleShape2D_1m63x")
+script = SubResource("GDScript_gc3q5")
+
+[connection signal="body_entered" from="." to="Sprite2D" method="_on_maca_1_body_entered"]
