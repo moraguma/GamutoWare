@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwbvys7tbwpdu"]
+
+[ext_resource type="Texture2D" uid="uid://cd8vdmhju5ujy" path="res://microjogos/2023S1/projeto_alexia/recursos/Livro3.png" id="1_u7m68"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dddes"]
+size = Vector2(94, 632)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -320)
+scale = Vector2(1.21212, 1.14701)
+texture = ExtResource("1_u7m68")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -320)
+shape = SubResource("RectangleShape2D_dddes")
