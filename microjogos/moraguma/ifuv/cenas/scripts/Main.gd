@@ -47,6 +47,7 @@ func _ready():
 	password.text = str(correct_password)
 	
 	monster_animation_player.play("approaching")
+	cursor.play("default")
 
 
 func _process(delta):
@@ -85,7 +86,7 @@ func input_number(number):
 
 func erase():
 	if len(input) > 0:
-		input.erase(len(input) - 1, 1)
+		input = input.substr(0, len(input) - 1)
 	else:
 		error_sound.play()
 

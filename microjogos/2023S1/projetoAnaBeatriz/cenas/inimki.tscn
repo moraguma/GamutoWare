@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://rah5xwlqenh5"]
+
+[ext_resource type="Texture2D" uid="uid://btjenqth5qu8" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/inimki.png" id="1_6xgjn"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/inimki.gd" id="2_ohsya"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ahuq"]
+size = Vector2(632.353, 171.25)
+
+[node name="Inimki" type="Sprite2D"]
+position = Vector2(424, 624)
+scale = Vector2(0.190698, 0.176744)
+texture = ExtResource("1_6xgjn")
+script = ExtResource("2_ohsya")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(25.2944, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-12.647, 75.625)
+shape = SubResource("RectangleShape2D_5ahuq")

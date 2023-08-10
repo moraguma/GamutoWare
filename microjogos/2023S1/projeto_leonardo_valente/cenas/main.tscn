@@ -1,0 +1,106 @@
+[gd_scene load_steps=17 format=3 uid="uid://btr34bopgnxs3"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto_leonardo_valente/cenas/main.gd" id="1_m3egb"]
+[ext_resource type="Texture2D" uid="uid://bmdqosyr64d3c" path="res://microjogos/2023S1/projeto_leonardo_valente/recursos/fundotentativa2.png" id="2_e7kly"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto_leonardo_valente/cenas/vinicinho.gd" id="2_uyjpj"]
+[ext_resource type="Texture2D" uid="uid://cfgbqnlef1y3c" path="res://microjogos/2023S1/projeto_leonardo_valente/recursos/vinicinho.png" id="3_slgyu"]
+[ext_resource type="AudioStream" uid="uid://im7msfyrsens" path="res://microjogos/2023S1/projeto_leonardo_valente/recursos/bad-explosion-6855.mp3" id="5_0tfti"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto_leonardo_valente/cenas/Delay.gd" id="5_ccmjg"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto_leonardo_valente/cenas/TimerIgnite.gd" id="5_gttv2"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto_leonardo_valente/cenas/CreeperSpawner.gd" id="5_ttrfa"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto_leonardo_valente/cenas/Timer.gd" id="6_eykoc"]
+[ext_resource type="Texture2D" uid="uid://w2g3c01p2oiu" path="res://microjogos/2023S1/projeto_leonardo_valente/recursos/CovaVinicin.png" id="7_fu4h7"]
+[ext_resource type="AudioStream" uid="uid://b2tyvfxocshpj" path="res://microjogos/2023S1/projeto_leonardo_valente/recursos/correvinicinho.wav" id="7_te30o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rgntd"]
+size = Vector2(101, 110)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rwvjg"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_55ni7"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xe0ga"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_apv5h"]
+normal = Vector2(-1, 0)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_m3egb")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_e7kly")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Camera3D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="CreeperSpawner" type="Node2D" parent="."]
+script = ExtResource("5_ttrfa")
+
+[node name="TimerExplosão" type="Timer" parent="CreeperSpawner"]
+one_shot = true
+script = ExtResource("6_eykoc")
+
+[node name="Delay" type="Timer" parent="CreeperSpawner/TimerExplosão"]
+wait_time = 0.07
+one_shot = true
+script = ExtResource("5_ccmjg")
+
+[node name="BarulhoExplosão" type="AudioStreamPlayer" parent="CreeperSpawner/TimerExplosão/Delay"]
+stream = ExtResource("5_0tfti")
+volume_db = -10.0
+
+[node name="TimerIgnite" type="Timer" parent="CreeperSpawner"]
+one_shot = true
+script = ExtResource("5_gttv2")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(873, 365)
+collision_layer = 3
+script = ExtResource("2_uyjpj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_rgntd")
+
+[node name="Vinicin" type="Sprite2D" parent="Player"]
+texture_filter = 1
+position = Vector2(3.8147e-06, 3.8147e-06)
+scale = Vector2(10, 10)
+texture = ExtResource("3_slgyu")
+
+[node name="Cova" type="Sprite2D" parent="Player"]
+visible = false
+texture_filter = 1
+scale = Vector2(5, 5)
+texture = ExtResource("7_fu4h7")
+
+[node name="BOUND" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BOUND"]
+shape = SubResource("WorldBoundaryShape2D_rwvjg")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="BOUND"]
+shape = SubResource("WorldBoundaryShape2D_55ni7")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="BOUND"]
+position = Vector2(1920, 1080)
+shape = SubResource("WorldBoundaryShape2D_xe0ga")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="BOUND"]
+position = Vector2(1920, 1080)
+shape = SubResource("WorldBoundaryShape2D_apv5h")
+
+[node name="CorreVinicinho" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_te30o")
+autoplay = true
+
+[connection signal="timeout" from="CreeperSpawner/TimerExplosão" to="CreeperSpawner" method="_timeout_explosao"]
+[connection signal="timeout" from="CreeperSpawner/TimerExplosão/Delay" to="CreeperSpawner/TimerExplosão/Delay" method="_on_timeout"]
+[connection signal="timeout" from="CreeperSpawner/TimerIgnite" to="CreeperSpawner" method="dar_ignite"]

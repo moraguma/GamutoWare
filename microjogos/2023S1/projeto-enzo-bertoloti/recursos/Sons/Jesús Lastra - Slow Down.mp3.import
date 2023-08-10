@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bd72kxib5swmd"
+path="res://.godot/imported/Jesús Lastra - Slow Down.mp3-e23bc83b1be3b3431e95b30805dc45fc.mp3str"
+
+[deps]
+
+source_file="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/Sons/Jesús Lastra - Slow Down.mp3"
+dest_files=["res://.godot/imported/Jesús Lastra - Slow Down.mp3-e23bc83b1be3b3431e95b30805dc45fc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

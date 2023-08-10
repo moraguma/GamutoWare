@@ -1,7 +1,7 @@
 extends "res://principal/cenas/scripts/PressableButton.gd"
 
 
-@export (int) var translation_code
+@export var translation_code: int
 
 
 func _pressed():

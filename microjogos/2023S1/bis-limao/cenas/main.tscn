@@ -1,0 +1,111 @@
+[gd_scene load_steps=14 format=3 uid="uid://md5kotfjs6lq"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/bis-limao/cenas/scripts/main.gd" id="1_ow836"]
+[ext_resource type="Texture2D" uid="uid://csgyvio782t8q" path="res://microjogos/2023S1/bis-limao/recursos/background antigo.jpg" id="2_27dk0"]
+[ext_resource type="Texture2D" uid="uid://ci0eq5fj5mmlx" path="res://microjogos/2023S1/bis-limao/recursos/gamuto.png" id="2_yqach"]
+[ext_resource type="Texture2D" uid="uid://dcmtjn4tkgm8u" path="res://microjogos/2023S1/bis-limao/recursos/background novo.png" id="3_3rc8f"]
+[ext_resource type="Script" path="res://microjogos/2023S1/bis-limao/cenas/scripts/gamuto.gd" id="4_stjrp"]
+[ext_resource type="Texture2D" uid="uid://d0e21ar0vx5kb" path="res://microjogos/2023S1/bis-limao/recursos/seta.png" id="5_1ywgu"]
+[ext_resource type="Animation" uid="uid://ce7mea400wrua" path="res://microjogos/2023S1/bis-limao/recursos/bye_lemon_anim.res" id="5_2w07m"]
+[ext_resource type="Texture2D" uid="uid://hrdus5lya23d" path="res://microjogos/2023S1/bis-limao/recursos/spacebar.png" id="6_2kbr5"]
+[ext_resource type="Animation" uid="uid://caevc0qoga1sm" path="res://microjogos/2023S1/bis-limao/recursos/blue_eaten_anim.res" id="6_tjyqm"]
+[ext_resource type="AudioStream" uid="uid://vt7w2jqinv10" path="res://microjogos/2023S1/bis-limao/recursos/bis limao song.ogg" id="9_qag4m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f76t1"]
+size = Vector2(88, 528)
+
+[sub_resource type="Animation" id="Animation_u3vr4"]
+resource_name = "bye_lemon"
+length = 10.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(928, -0.25, 0, 0.25, 0, 808, -0.25, 0, 0.25, 0, 704, -0.25, 0, 0.25, 0, 656, -0.25, 0, 0.25, 0, 504, -0.25, 0, 0.25, 0, 384, -0.25, 0, 0.25, 0, 256, -0.25, 0, 0.25, 0, 304, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.4)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(832, -0.25, 0, 0.25, 0, 848, -0.25, 0, 0.25, 0, 840, -0.25, 0, 0.25, 0, 856, -0.25, 0, 0.25, 0, 832, -0.25, 0, 0.25, 0, 864, -0.25, 0, 0.25, 0, 848, -0.25, 0, 0.25, 0, 1080, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.4)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1.00007, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(1.9, 2.4)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bwsx4"]
+_data = {
+"RESET": ExtResource("5_2w07m"),
+"blue_eaten": ExtResource("6_tjyqm"),
+"bye_lemon": SubResource("Animation_u3vr4")
+}
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_ow836")
+
+[node name="Background" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.643137)
+position = Vector2(972, 578.875)
+scale = Vector2(1.75, 1.6675)
+texture = ExtResource("2_27dk0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(976, 616)
+scale = Vector2(20.625, 20.625)
+texture = ExtResource("3_3rc8f")
+
+[node name="Camera3D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Gamuto" type="Sprite2D" parent="."]
+position = Vector2(928, 832)
+texture = ExtResource("2_yqach")
+script = ExtResource("4_stjrp")
+
+[node name="Area que engole" type="Area2D" parent="Gamuto"]
+position = Vector2(-992, -832)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamuto/Area que engole"]
+position = Vector2(996, 416)
+shape = SubResource("RectangleShape2D_f76t1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Gamuto"]
+reset_on_save = false
+libraries = {
+"": SubResource("AnimationLibrary_bwsx4")
+}
+
+[node name="Seta" type="Sprite2D" parent="."]
+position = Vector2(936, 112)
+rotation = 4.71239
+scale = Vector2(0.146, 0.146)
+texture = ExtResource("5_1ywgu")
+
+[node name="Spacebar" type="Sprite2D" parent="."]
+position = Vector2(806.14, 118.706)
+scale = Vector2(0.143143, 0.132784)
+texture = ExtResource("6_2kbr5")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_qag4m")
+autoplay = true

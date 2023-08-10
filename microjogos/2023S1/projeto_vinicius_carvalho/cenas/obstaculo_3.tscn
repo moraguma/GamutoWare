@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=3 uid="uid://b2ao8lfo1ker2"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/scripts/Obstaculo3.gd" id="1_2hutf"]
+[ext_resource type="Texture2D" uid="uid://cip7dcnbvq27b" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Tiles_rock/tile36.png" id="1_up32c"]
+[ext_resource type="Texture2D" uid="uid://cq7d0dfvt2m8r" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Tiles_rock/tile35.png" id="2_vvaxv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8hdhs"]
+size = Vector2(19.5, 85.7501)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nyk3f"]
+size = Vector2(19.25, 14.5625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bfhv1"]
+size = Vector2(22, 86.125)
+
+[node name="Obstaculo3" type="Node2D"]
+texture_filter = 1
+scale = Vector2(4, 4)
+
+[node name="Obstaculo3" type="StaticBody2D" parent="."]
+collision_layer = 2
+script = ExtResource("1_2hutf")
+
+[node name="Tile37" type="Sprite2D" parent="Obstaculo3"]
+position = Vector2(456, 176)
+rotation = -3.14159
+texture = ExtResource("1_up32c")
+
+[node name="Tile39" type="Sprite2D" parent="Obstaculo3"]
+position = Vector2(428.5, 33.25)
+texture = ExtResource("1_up32c")
+
+[node name="Tile38" type="Sprite2D" parent="Obstaculo3"]
+position = Vector2(456.5, 239.629)
+rotation = -3.14159
+scale = Vector2(1, 1.0353)
+texture = ExtResource("2_vvaxv")
+
+[node name="Tile36" type="Sprite2D" parent="Obstaculo3"]
+position = Vector2(455, 96.25)
+texture = ExtResource("1_up32c")
+
+[node name="Tile35" type="Sprite2D" parent="Obstaculo3"]
+position = Vector2(454.5, 32.75)
+texture = ExtResource("2_vvaxv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstaculo3"]
+position = Vector2(455.5, 226.375)
+shape = SubResource("RectangleShape2D_8hdhs")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Obstaculo3"]
+position = Vector2(441.125, 7.71875)
+shape = SubResource("RectangleShape2D_nyk3f")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Obstaculo3"]
+position = Vector2(455, 43.4375)
+shape = SubResource("RectangleShape2D_bfhv1")

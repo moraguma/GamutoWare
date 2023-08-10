@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bykv68tu5abeg"]
+
+[ext_resource type="Texture2D" uid="uid://b2ewevkcwrjm8" path="res://microjogos/2023S1/projeto-pochete/recursos/textures_240.png" id="1_owphd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f5y64"]
+size = Vector2(120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6nw4y"]
+atlas = ExtResource("1_owphd")
+region = Rect2(120, 0, 120, 120)
+
+[node name="Tail" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(60, -60)
+shape = SubResource("RectangleShape2D_f5y64")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(60, -60)
+texture = SubResource("AtlasTexture_6nw4y")

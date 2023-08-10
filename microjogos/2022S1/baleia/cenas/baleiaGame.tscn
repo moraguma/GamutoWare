@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cvldogolyh14f"]
+[gd_scene load_steps=31 format=3 uid="uid://cvldogolyh14f"]
 
 [ext_resource type="Script" path="res://microjogos/2022S1/baleia/cenas/baleia.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://b3ddkpemxekph" path="res://microjogos/2022S1/baleia/recursos/blue-whale-FINAL.png" id="2"]
@@ -6,10 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://cemuvnlendoct" path="res://microjogos/2022S1/baleia/recursos/tiles_spritesheet.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://ydhh7dtqupqw" path="res://microjogos/2022S1/baleia/recursos/liquidWater.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://cbingfi5rwqgx" path="res://microjogos/2022S1/baleia/recursos/blue-whale-morta.png" id="6"]
+[ext_resource type="AudioStream" uid="uid://caf0cvwwv4oad" path="res://microjogos/2022S1/baleia/recursos/674536__nicholasjudy567__water-splash-big-splash-dive-into-water-person-or-animal.wav" id="6_17xm6"]
 [ext_resource type="Texture2D" uid="uid://dknehm2ucrw66" path="res://microjogos/2022S1/baleia/recursos/Ocean.png" id="7"]
-[ext_resource type="AudioStream" uid="uid://y0qgyt2xcye0" path="res://microjogos/2022S1/baleia/recursos/398701__inspectorj__water-swirl-small-10.wav" id="8"]
 [ext_resource type="AudioStream" uid="uid://77bxwie5m2j3" path="res://microjogos/2022S1/baleia/recursos/540076__magnuswaker__meat-slap-2.wav" id="9"]
-[ext_resource type="AudioStream" uid="uid://pw3v1b4kydm" path="res://microjogos/2022S1/baleia/recursos/530704__szegvari__water-wave-beach-peoples-ships-field-recording-200815-0038.wav" id="10"]
 [ext_resource type="Script" path="res://microjogos/2022S1/baleia/cenas/baleiaGame.gd" id="11"]
 
 [sub_resource type="RectangleShape2D" id="9"]
@@ -357,9 +356,6 @@ frame = 7
 frame_progress = 0.859305
 speed_scale = 1.5
 
-[node name="AguaSound" type="AudioStreamPlayer" parent="baleia"]
-stream = ExtResource("8")
-
 [node name="baleia_morta" type="Sprite2D" parent="baleia"]
 visible = false
 position = Vector2(-1, -117)
@@ -369,9 +365,8 @@ texture = ExtResource("6")
 [node name="baleiaHit" type="AudioStreamPlayer" parent="baleia"]
 stream = ExtResource("9")
 
-[node name="background" type="AudioStreamPlayer" parent="baleia"]
-stream = ExtResource("10")
-volume_db = -36.218
+[node name="AguaSound" type="AudioStreamPlayer" parent="baleia"]
+stream = ExtResource("6_17xm6")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -300)
