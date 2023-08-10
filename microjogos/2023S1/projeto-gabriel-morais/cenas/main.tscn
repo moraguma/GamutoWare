@@ -36,6 +36,7 @@ texture = ExtResource("3_va3ko")
 script = ExtResource("4_ym1hm")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
 
 [node name="pivo" type="Area2D" parent="Camera2D"]
 position = Vector2(561, 846)
