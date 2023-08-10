@@ -22,6 +22,11 @@ var livros = ["Livro1", "Livro2", "Livro3", "Livro4", "Livro5", "Livro6"]
 var base = ["Livro1", "Livro2", "Livro3", "Livro4", "Livro5", "Livro6"]
 var venceu = false
 
+@onready var ambient = $Ambient
+@onready var move = $Move
+@onready var click = $Click
+@onready var win_sound = $Win
+
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
 	match Global.language:
@@ -29,6 +34,8 @@ func _ready():
 			NotificationCenter.notify("ARRANGE")
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("ORGANIZE")
+	
+	ambient.play()
 	
 	randomize()
 	
@@ -50,6 +57,7 @@ func _physics_process(delta):
 	if not venceu:
 		var aux
 		if livros == base:
+			win_sound.play()
 			register_win()
 			venceu = true
 		
@@ -64,6 +72,8 @@ func _physics_process(delta):
 					pos-=1
 					$"flecha amarela".position = Vector2(lugares[pos],1024)
 					$"flecha branca".position = Vector2(lugares[pos],1024)
+					
+					move.play()
 			if Input.is_action_just_pressed("direita"):
 				if pos<5:
 					aux = livros[pos] 
@@ -75,6 +85,8 @@ func _physics_process(delta):
 					pos+=1
 					$"flecha amarela".position = Vector2(lugares[pos],1024)
 					$"flecha branca".position = Vector2(lugares[pos],1024)
+					
+					move.play()
 					
 		if select == 1:
 			if Input.is_action_just_pressed("esquerda"):
@@ -88,6 +100,8 @@ func _physics_process(delta):
 					$"flecha amarela".position = Vector2(lugares[pos],1024)
 					$"flecha branca".position = Vector2(lugares[pos],1024)
 		if Input.is_action_just_pressed("acao"):
+			click.play()
+			
 			if select == 1 :
 				select = 0
 				$"flecha amarela".show()

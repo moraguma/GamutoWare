@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dqcxt8bqxi2kk"]
+[gd_scene load_steps=15 format=3 uid="uid://dqcxt8bqxi2kk"]
 
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto_alexia/cenas/scripts/main.gd" id="1_burau"]
 [ext_resource type="Texture2D" uid="uid://ssv0d2w1iqai" path="res://microjogos/2023S1/projeto_alexia/recursos/fundocomtexto.png" id="2_xhhxm"]
@@ -10,6 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://ck82hqw403y3x" path="res://microjogos/2023S1/projeto_alexia/cenas/Livro5.tscn" id="7_b6ncm"]
 [ext_resource type="PackedScene" uid="uid://b228rbt5aixc4" path="res://microjogos/2023S1/projeto_alexia/cenas/flecha2.tscn" id="7_qxbf7"]
 [ext_resource type="PackedScene" uid="uid://c75se5fd6q13t" path="res://microjogos/2023S1/projeto_alexia/cenas/Livro6.tscn" id="8_w1yej"]
+[ext_resource type="AudioStream" uid="uid://dbukctpo1pleg" path="res://microjogos/2023S1/projeto_alexia/recursos/murmur.ogg" id="11_fcsm7"]
+[ext_resource type="AudioStream" uid="uid://btlpb2bpj5j8h" path="res://microjogos/2023S1/projeto_alexia/recursos/move.wav" id="12_lj7en"]
+[ext_resource type="AudioStream" uid="uid://brw0lu1mp8jy7" path="res://microjogos/2023S1/projeto_alexia/recursos/click.wav" id="13_fxgh6"]
+[ext_resource type="AudioStream" uid="uid://b4k0yiafuqvyy" path="res://microjogos/2023S1/projeto_alexia/recursos/win.wav" id="14_tkefj"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_burau")
@@ -45,3 +49,17 @@ position = Vector2(1248, 960)
 
 [node name="Livro6" parent="." instance=ExtResource("8_w1yej")]
 position = Vector2(1400, 968)
+
+[node name="Ambient" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_fcsm7")
+volume_db = -5.0
+
+[node name="Move" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_lj7en")
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_fxgh6")
+volume_db = 20.0
+
+[node name="Win" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_tkefj")
