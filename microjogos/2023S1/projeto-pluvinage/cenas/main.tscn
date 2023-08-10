@@ -160,7 +160,7 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("7_104r3")
 
 [node name="Bat" type="Area2D" parent="."]
-position = Vector2(1853, 410)
+position = Vector2(1853, 330)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("8_k2nto")
@@ -177,7 +177,7 @@ scale = Vector2(0.5, -0.5)
 texture = ExtResource("9_0rchk")
 
 [node name="Bat2" type="Area2D" parent="."]
-position = Vector2(2116, 610)
+position = Vector2(2116, 722)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("8_k2nto")
