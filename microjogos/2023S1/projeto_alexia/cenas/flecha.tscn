@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbcj6dkwj6057"]
+
+[ext_resource type="Texture2D" uid="uid://dcf3qj8po2yji" path="res://microjogos/2023S1/projeto_alexia/recursos/Flecha.png" id="1_y38bh"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3.8147e-06, -3.8147e-06)
+scale = Vector2(0.16769, 0.168285)
+texture = ExtResource("1_y38bh")
