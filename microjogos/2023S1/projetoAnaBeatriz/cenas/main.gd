@@ -11,8 +11,8 @@ signal lose
 const WIDTH = 1920
 const HEIGHT = 1080
 
-const MIN_X = 300.0
-const MAX_X = 1620.0
+const MIN_X = 600.0
+const MAX_X = 1320.0
 const START_Y = 250
 const SEPARACAO = 300
 
