@@ -14,7 +14,7 @@ const HEIGHT = 1080
 
 
 const mail_quantity: int = 10
-const space_between_mail: int = 50
+const space_between_mail: int = 100
 const mail_fall_speed: float = 50.0 * 15
 const mail = preload("res://microjogos/2023S1/mail_cleaner/cenas/mail.tscn")
 

@@ -1,4 +1,4 @@
-extends Sprite2D
+extends Node2D
 
 const green_text: Array[String] = [
 	"Técnicas avançadas de gamutificação",
@@ -14,15 +14,12 @@ const red_text: Array[String] = [
 	"CLIQUE AQUI PARA RECEBER [[2000]] GAMUTÓIDES!!!!!"
 ]
 
-@export var green_sprites: Array[Texture2D]
-@export var red_sprites: Array[Texture2D]
-
 var is_red: bool = false
 var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 
 # deletion
 var deleting: bool = false
-var horizontal_speed: float  = 150.0
+var horizontal_speed: float  = 300.0
 var alpha_speed: float = 1.0
 
 # Called when the node enters the scene tree for the first time.
@@ -30,13 +27,10 @@ func _ready():
 	is_red = false if rng.randi_range(0, 6) % 3 == 0 else true
 	
 	if is_red:
-		var index: int = rng.randi_range(0, len(red_sprites) - 1)
-		texture = red_sprites[index]
 		var text_index: int = rng.randi_range(0, len(red_text) - 1)
 		$Control/RichTextLabel.text = red_text[text_index]
 	else:
-		var index: int = rng.randi_range(0, len(green_sprites) - 1)
-		texture = green_sprites[index]
+		$Icon.region_rect.position.x = 32
 		var text_index: int = rng.randi_range(0, len(green_text) - 1)
 		$Control/RichTextLabel.text = green_text[text_index]
 
