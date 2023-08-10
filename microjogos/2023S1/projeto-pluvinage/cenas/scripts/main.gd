@@ -25,13 +25,9 @@ func _ready():
 	
 	$Bat.position.x   += rng.randf_range(-x_range, x_range)
 	$Bat2.position.x  += rng.randf_range(-x_range, x_range)
-	$Bat3.position.x  += rng.randf_range(-x_range, x_range)
-	$Bat4.position.x  += rng.randf_range(-x_range, x_range)
 	
 	$Bat.position.y  += rng.randf_range(-y_range, y_range)
 	$Bat2.position.y  += rng.randf_range(-y_range, y_range)
-	$Bat3.position.y  += rng.randf_range(-y_range, y_range)
-	$Bat4.position.y  += rng.randf_range(-y_range, y_range)
 
 	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´

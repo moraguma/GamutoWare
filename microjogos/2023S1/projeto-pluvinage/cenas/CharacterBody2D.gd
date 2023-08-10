@@ -14,13 +14,13 @@ func _physics_process(delta):
 		velocity.y += 2 * gravity * delta
 
 	# Handle Jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("acao") and is_on_floor():
 		get_parent().get_node("jump_sound").play()
 		velocity.y = JUMP_VELOCITY*Bonus
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("ui_left", "ui_right")
+	var direction = Input.get_axis("esquerda", "direita")
 	if direction:
 		velocity.x = direction * SPEED
 	else:

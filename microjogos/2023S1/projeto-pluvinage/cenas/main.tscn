@@ -193,39 +193,6 @@ rotation = 3.14159
 scale = Vector2(0.5, -0.5)
 texture = ExtResource("9_0rchk")
 
-[node name="Bat3" type="Area2D" parent="."]
-position = Vector2(2980, 247)
-collision_layer = 2
-collision_mask = 2
-script = ExtResource("8_k2nto")
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bat3"]
-scale = Vector2(4, 4)
-shape = SubResource("RectangleShape2D_yq0do")
-
-[node name="Sprite2D" type="Sprite2D" parent="Bat3"]
-rotation = 3.14159
-scale = Vector2(0.5, -0.5)
-texture = ExtResource("9_0rchk")
-
-[node name="Bat4" type="Area2D" parent="."]
-position = Vector2(2421, 815)
-collision_layer = 2
-collision_mask = 2
-script = ExtResource("8_k2nto")
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bat4"]
-position = Vector2(3, -1.875)
-scale = Vector2(4, 4)
-shape = SubResource("RectangleShape2D_yq0do")
-
-[node name="Sprite2D" type="Sprite2D" parent="Bat4"]
-rotation = 3.14159
-scale = Vector2(0.5, -0.5)
-texture = ExtResource("9_0rchk")
-
 [node name="powerup_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_r87wk")
 
@@ -248,5 +215,3 @@ autoplay = true
 [connection signal="body_entered" from="Powerup" to="Player" method="_on_powerup_body_entered"]
 [connection signal="body_entered" from="Bat" to="Player" method="_on_bat_body_entered"]
 [connection signal="body_entered" from="Bat2" to="Player" method="_on_bat_body_entered"]
-[connection signal="body_entered" from="Bat3" to="Player" method="_on_bat_body_entered"]
-[connection signal="body_entered" from="Bat4" to="Player" method="_on_bat_body_entered"]
