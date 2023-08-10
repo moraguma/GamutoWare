@@ -174,7 +174,7 @@ func _ready():
 			
 			# Pushes minigames to their minimum difficulty level as best as it can
 			for i in range(total_microgames - 1, -1, -1):
-				if minigame_data[microgame_queue[i]]["difficulty"] < i:
+				if minigame_data[microgame_queue[i]]["difficulty"] > i:
 					microgame_queue = microgame_queue.slice(0, i) + \
 						microgame_queue.slice(i + 1, minigame_data[microgame_queue[i]]["difficulty"]) + \
 						[microgame_queue[i]] + microgame_queue.slice(minigame_data[microgame_queue[i]]["difficulty"])
