@@ -7,6 +7,7 @@ func _ready():
 
 func t(body):
 	body.queue_free()
+	$Collision.play()
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

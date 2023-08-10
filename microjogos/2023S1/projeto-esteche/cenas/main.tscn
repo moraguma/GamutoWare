@@ -1,15 +1,17 @@
-[gd_scene load_steps=17 format=3 uid="uid://csiisnal8j2bo"]
+[gd_scene load_steps=19 format=3 uid="uid://csiisnal8j2bo"]
 
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto-esteche/cenas/scripts/main.gd" id="1_mw6wy"]
-[ext_resource type="Texture2D" uid="uid://cbxgt72a3t7el" path="res://microjogos/2023S1/projeto-esteche/recursos/bg.png" id="2_skh0r"]
+[ext_resource type="Texture2D" uid="uid://cbxgt72a3t7el" path="res://microjogos/2023S1/projeto-esteche/recursos/sprites/bg.png" id="2_yawj0"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto-esteche/cenas/PlataformaDireita.gd" id="3_xrdns"]
-[ext_resource type="Texture2D" uid="uid://1432e4pf8x24" path="res://microjogos/2023S1/projeto-esteche/recursos/Plataforma1.png" id="4_2rakl"]
+[ext_resource type="Texture2D" uid="uid://1432e4pf8x24" path="res://microjogos/2023S1/projeto-esteche/recursos/sprites/Plataforma1.png" id="4_72muy"]
+[ext_resource type="Texture2D" uid="uid://b6xw1gt12jghc" path="res://microjogos/2023S1/projeto-esteche/recursos/sprites/plataforma.png" id="5_507vn"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto-esteche/cenas/Astronauta.gd" id="5_aybri"]
-[ext_resource type="Texture2D" uid="uid://b6xw1gt12jghc" path="res://microjogos/2023S1/projeto-esteche/recursos/plataforma.png" id="5_tatcv"]
-[ext_resource type="Texture2D" uid="uid://befk2dswrptd8" path="res://microjogos/2023S1/projeto-esteche/recursos/olaaa.png" id="7_bvqyw"]
-[ext_resource type="Texture2D" uid="uid://dkoxknssj14kl" path="res://microjogos/2023S1/projeto-esteche/recursos/picwish.png" id="8_aajsd"]
+[ext_resource type="Texture2D" uid="uid://c0582846o6alo" path="res://microjogos/2023S1/projeto-esteche/recursos/sprites/cr_neutral.png" id="7_fi0xd"]
+[ext_resource type="Texture2D" uid="uid://dh0b21uswf2bk" path="res://microjogos/2023S1/projeto-esteche/recursos/sprites/cr_flying.png" id="8_7j341"]
 [ext_resource type="PackedScene" uid="uid://n7g7kj0h3vxt" path="res://microjogos/2023S1/projeto-esteche/cenas/area_2d.tscn" id="8_yy8e7"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto-esteche/cenas/areadepouso.gd" id="10_hryy6"]
+[ext_resource type="AudioStream" uid="uid://fj62ktbggndp" path="res://microjogos/2023S1/projeto-esteche/recursos/sounds/VictorySmall.ogg" id="11_kamy2"]
+[ext_resource type="AudioStream" uid="uid://d1pu6we71omgs" path="res://microjogos/2023S1/projeto-esteche/recursos/sounds/bg_music.wav" id="11_twrwx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wf0wd"]
 size = Vector2(136, 10)
@@ -24,10 +26,10 @@ size = Vector2(32, 109.25)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("7_bvqyw")
+"texture": ExtResource("7_fi0xd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_aajsd")
+"texture": ExtResource("8_7j341")
 }],
 "loop": true,
 "name": &"default",
@@ -49,7 +51,7 @@ anchor_mode = 0
 [node name="Bg" type="Sprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(10, 10)
-texture = ExtResource("2_skh0r")
+texture = ExtResource("2_yawj0")
 centered = false
 
 [node name="PlataformaDireita" type="StaticBody2D" parent="."]
@@ -58,7 +60,7 @@ script = ExtResource("3_xrdns")
 [node name="Sprite2D" type="Sprite2D" parent="PlataformaDireita"]
 position = Vector2(106.625, 832.125)
 scale = Vector2(0.43146, 0.4019)
-texture = ExtResource("4_2rakl")
+texture = ExtResource("4_72muy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlataformaDireita"]
 position = Vector2(148, 832)
@@ -73,7 +75,7 @@ shape = SubResource("RectangleShape2D_r2qju")
 [node name="Sprite2D" type="Sprite2D" parent="PlataformaEsquerda"]
 position = Vector2(1816, 712)
 scale = Vector2(0.405079, 0.352847)
-texture = ExtResource("5_tatcv")
+texture = ExtResource("5_507vn")
 
 [node name="Astronauta" type="CharacterBody2D" parent="."]
 script = ExtResource("5_aybri")
@@ -83,8 +85,9 @@ position = Vector2(152, 750.625)
 shape = SubResource("RectangleShape2D_oj1ji")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Astronauta"]
-position = Vector2(154.063, 744)
-scale = Vector2(0.176044, 0.178144)
+texture_filter = 1
+position = Vector2(150, 751)
+scale = Vector2(5.40086, 5.46529)
 sprite_frames = SubResource("SpriteFrames_r6qcd")
 
 [node name="Asteroide" parent="." instance=ExtResource("8_yy8e7")]
@@ -109,6 +112,9 @@ script = ExtResource("10_hryy6")
 position = Vector2(1776, 696)
 shape = SubResource("RectangleShape2D_51rqe")
 
+[node name="VictoryFanfare" type="AudioStreamPlayer" parent="areadevictoria"]
+stream = ExtResource("11_kamy2")
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
@@ -117,3 +123,7 @@ shape = SubResource("RectangleShape2D_amtwy")
 
 [node name="Asteroide6" parent="." instance=ExtResource("8_yy8e7")]
 position = Vector2(280, 304)
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_twrwx")
+autoplay = true

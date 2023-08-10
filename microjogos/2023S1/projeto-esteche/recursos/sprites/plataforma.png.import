@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbxgt72a3t7el"
-path="res://.godot/imported/bg.png-e9db62871b9ecbf78f2e390d3fa4c28d.ctex"
+uid="uid://b6xw1gt12jghc"
+path="res://.godot/imported/plataforma.png-7402f8ea12e8c163a465531d8ebc4fa6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2023S1/projeto-esteche/recursos/bg.png"
-dest_files=["res://.godot/imported/bg.png-e9db62871b9ecbf78f2e390d3fa4c28d.ctex"]
+source_file="res://microjogos/2023S1/projeto-esteche/recursos/sprites/plataforma.png"
+dest_files=["res://.godot/imported/plataforma.png-7402f8ea12e8c163a465531d8ebc4fa6.ctex"]
 
 [params]
 

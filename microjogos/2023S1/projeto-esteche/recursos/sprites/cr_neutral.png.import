@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkoxknssj14kl"
-path="res://.godot/imported/picwish.png-6d9bc591e3a606f41699377ae977588d.ctex"
+uid="uid://c0582846o6alo"
+path="res://.godot/imported/cr_neutral.png-fea50ce1a9c8370efb7ddffe9f2bf032.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2023S1/projeto-esteche/recursos/picwish.png"
-dest_files=["res://.godot/imported/picwish.png-6d9bc591e3a606f41699377ae977588d.ctex"]
+source_file="res://microjogos/2023S1/projeto-esteche/recursos/sprites/cr_neutral.png"
+dest_files=["res://.godot/imported/cr_neutral.png-fea50ce1a9c8370efb7ddffe9f2bf032.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6xw1gt12jghc"
-path="res://.godot/imported/plataforma.png-214fc784960324915913519bf8405efe.ctex"
+uid="uid://dh0b21uswf2bk"
+path="res://.godot/imported/cr_flying.png-8bbf3c9df8dd4087e3b9e601d57c631a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2023S1/projeto-esteche/recursos/plataforma.png"
-dest_files=["res://.godot/imported/plataforma.png-214fc784960324915913519bf8405efe.ctex"]
+source_file="res://microjogos/2023S1/projeto-esteche/recursos/sprites/cr_flying.png"
+dest_files=["res://.godot/imported/cr_flying.png-8bbf3c9df8dd4087e3b9e601d57c631a.ctex"]
 
 [params]
 

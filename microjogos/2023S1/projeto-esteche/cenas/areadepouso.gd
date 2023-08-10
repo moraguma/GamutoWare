@@ -7,6 +7,7 @@ func _ready():
 	
 func win(body):
 	get_parent().register_win()
+	$VictoryFanfare.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
