@@ -21,4 +21,4 @@ func _on_maca_1_body_entered(body):
 	if get_node("../../pedra").foi_jogado == 1 and caiu != 1:
 		caiu = 1
 		get_node("../../../").num_mac += 1
-	get_node("../../../").ganhou()	
+		get_node("../../../").ganhou()
