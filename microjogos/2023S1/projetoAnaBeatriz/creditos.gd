@@ -7,17 +7,18 @@ extends Resource
 
 
 # Título do seu jogo
-var title_pt = "Titulo em Portugues"
-var title_en = "Title in English"
+var title_pt = "Batalha Espacial"
+var title_en = "Space Fight"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
-Criado por: [Seu nome!]
+Criado por: Ana Beatriz Hildago
 
-Você pode preencher o resto deste campo com creditos de assets utilizados, links para sua redes sociais ou qualquer outro detalhe que ache relevante
+Enterin the skies escrito e produzido por Ove Melaa (Omsofware@hotmail.com)
+Laser sfx por dklon
 """
 var credits_en = """
-Made by: Ana Beatriz 
+Made by: Ana Beatriz Hildago
 
 Enterin the skies written and produced by Ove Melaa (Omsofware@hotmail.com)
 Laser sfx by dklon"""
