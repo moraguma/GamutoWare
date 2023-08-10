@@ -5,94 +5,33 @@ signal win
 signal lose
 
 # Estas constantes são usadas para determinar o tamanho da tela do seu jogo. Por padrão, definem uma
+# tela 1920x1080, que é padrão para monitores full HD. Caso você queira uma resolução menor para 
+# atingir uma estética mais pixelada, você pode mudar estes números para qualquer outra resolução 
+# 16:9
 const WIDTH = 1920
 const HEIGHT = 1080
+
 
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES PADRÃO
 # --------------------------------------------------------------------------------------------------
-var pos = 0
-const y = 960
-var lugares = [405, 615, 825, 1035, 1245, 1455]
-var select =0
-var flechapos = 1024
-var livros = ["Livro1", "Livro2", "Livro3", "Livro4", "Livro5", "Livro6"] 
-var base = ["Livro1", "Livro2", "Livro3", "Livro4", "Livro5", "Livro6"]
-var venceu = false
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
+	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
+	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
 			NotificationCenter.notify("DO SOMETHING!")
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("FACA ALGO!")
-	
-	randomize()
-	livros.shuffle()
 
-func escrever(nome):
-		match Global.language:
-					Global.LANGUAGE.PT:
-						NotificationCenter.notify(nome)
-	
+
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
 # a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
 # a última chamada desta função. O comando pass não faz nada
 func _physics_process(delta):
-	if not venceu:
-		var aux
-		if livros == base:
-			register_win()
-			escrever("Fim")
-			venceu = true
-			
-		if select == 0:
-			if Input.is_action_just_pressed("esquerda"):
-				if pos>0:
-					aux = livros[pos] 
-					livros[pos] = livros[pos-1]
-					livros[pos-1] = aux
-					get_node(livros[pos]).position = Vector2(lugares[pos-1],960)
-					get_node(livros[pos-1]).position = Vector2(lugares[pos],960)
-					pos-=1
-					$"flecha amarela".position = Vector2(lugares[pos],1024)
-					$"flecha branca".position = Vector2(lugares[pos],1024)
-			if Input.is_action_just_pressed("direita"):
-				if pos<5:
-					aux = livros[pos] 
-					livros[pos] = livros[pos+1]
-					livros[pos+1] = aux
-
-					get_node(livros[pos]).position = Vector2(lugares[pos+1],960)
-					get_node(livros[pos+1]).position = Vector2(lugares[pos],960)
-					pos+=1
-					$"flecha amarela".position = Vector2(lugares[pos],1024)
-					$"flecha branca".position = Vector2(lugares[pos],1024)
-					
-		if select == 1:
-			if Input.is_action_just_pressed("esquerda"):
-				if pos>0:
-					pos-=1
-					$"flecha amarela".position = Vector2(lugares[pos],1024)
-					$"flecha branca".position = Vector2(lugares[pos],1024)
-			if Input.is_action_just_pressed("direita"):
-				if pos<5:
-					pos+=1
-					$"flecha amarela".position = Vector2(lugares[pos],1024)
-					$"flecha branca".position = Vector2(lugares[pos],1024)
-		if Input.is_action_just_pressed("acao"):
-			if select == 1 :
-				select = 0
-				$"flecha amarela".show()
-				$"flecha branca".hide()
-			elif select == 0 :
-				select = 1
-				$"flecha branca".show()
-				$"flecha amarela".hide()
-		for a in range(6):
-			get_node(livros[a]).position = Vector2(lugares[a],960)
-		pass
+	pass
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a renderização, 
@@ -101,11 +40,15 @@ func _physics_process(delta):
 func _process(delta):
 	pass
 
+
 # --------------------------------------------------------------------------------------------------
 # SUAS FUNÇÕES
 # --------------------------------------------------------------------------------------------------
 
+
 # Um método genérico. Crie quantos métodos você precisar!
+func my_method():
+	pass
 
 
 # --------------------------------------------------------------------------------------------------
