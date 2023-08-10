@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wqua2vtw2lok"
-path="res://.godot/imported/arrow_green.png-de136212f5e90d514d8671e8bbf5a08b.ctex"
+uid="uid://hij4xrvl8k1x"
+path="res://.godot/imported/arrow_red.png-ccf6f9d5c7cf62e79d590a23ab10765c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2023S1/mail_cleaner/recursos/sprites/arrow_green.png"
-dest_files=["res://.godot/imported/arrow_green.png-de136212f5e90d514d8671e8bbf5a08b.ctex"]
+source_file="res://microjogos/2023S1/mail_cleaner/recursos/sprites/placeholder/arrow_red.png"
+dest_files=["res://.godot/imported/arrow_red.png-ccf6f9d5c7cf62e79d590a23ab10765c.ctex"]
 
 [params]
 

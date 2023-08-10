@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://o8d1tbp23kxa"
-path="res://.godot/imported/phone.png-9d00a47c096047969942d4673c1e9fcf.ctex"
+uid="uid://bynuim6u7l8rd"
+path="res://.godot/imported/finger.png-28efc016e985cbfe3ded35f2dd5416aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2023S1/mail_cleaner/recursos/sprites/phone.png"
-dest_files=["res://.godot/imported/phone.png-9d00a47c096047969942d4673c1e9fcf.ctex"]
+source_file="res://microjogos/2023S1/mail_cleaner/recursos/sprites/placeholder/finger.png"
+dest_files=["res://.godot/imported/finger.png-28efc016e985cbfe3ded35f2dd5416aa.ctex"]
 
 [params]
 

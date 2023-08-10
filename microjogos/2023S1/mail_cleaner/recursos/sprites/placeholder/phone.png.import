@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hij4xrvl8k1x"
-path="res://.godot/imported/arrow_red.png-0ff0b3dfdb5c3e46297359f13b861f46.ctex"
+uid="uid://dtvr80tbvvot5"
+path="res://.godot/imported/phone.png-96171ec6ea612b46dc6f3ab1251e9e53.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2023S1/mail_cleaner/recursos/sprites/arrow_red.png"
-dest_files=["res://.godot/imported/arrow_red.png-0ff0b3dfdb5c3e46297359f13b861f46.ctex"]
+source_file="res://microjogos/2023S1/mail_cleaner/recursos/sprites/placeholder/phone.png"
+dest_files=["res://.godot/imported/phone.png-96171ec6ea612b46dc6f3ab1251e9e53.ctex"]
 
 [params]
 
