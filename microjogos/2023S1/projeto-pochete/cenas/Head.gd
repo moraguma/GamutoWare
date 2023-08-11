@@ -6,7 +6,7 @@ var tail_nodes = []
 @onready var ray = $RayCast2D
 @onready var area_ray = get_node("AreaRayCast2D")
 @onready var snake = get_node("../../Snake")
-@onready var main = get_node("../../../Main")
+@onready var main = get_node("../../")
 @export var tail_scene: PackedScene
 
 var inputs = {
