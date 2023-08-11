@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://n7g7kj0h3vxt" path="res://microjogos/2023S1/projeto-esteche/cenas/area_2d.tscn" id="8_yy8e7"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto-esteche/cenas/areadepouso.gd" id="10_hryy6"]
 [ext_resource type="AudioStream" uid="uid://fj62ktbggndp" path="res://microjogos/2023S1/projeto-esteche/recursos/sounds/VictorySmall.ogg" id="11_kamy2"]
-[ext_resource type="AudioStream" uid="uid://d1pu6we71omgs" path="res://microjogos/2023S1/projeto-esteche/recursos/sounds/bg_music.wav" id="11_twrwx"]
+[ext_resource type="AudioStream" uid="uid://bs7jutvo07yuh" path="res://microjogos/2023S1/projeto-esteche/recursos/sounds/bg_music.ogg" id="12_rid1j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wf0wd"]
 size = Vector2(136, 10)
@@ -119,5 +119,5 @@ position = Vector2(975, 0)
 shape = SubResource("RectangleShape2D_amtwy")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("11_twrwx")
+stream = ExtResource("12_rid1j")
 autoplay = true
