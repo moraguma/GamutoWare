@@ -13,7 +13,14 @@ signal StartInput(Input)
 const WIDTH = 1920
 const HEIGHT = 1080
 
+const MIN_TIME = 2.0
+const MAX_TIME = 5.0
+
+
 var Acertos = 0
+
+
+@onready var keys = [$LeftArrow, $RightArrow, $UpArrow, $DownArrow, $SpaceKey]
 
 
 # --------------------------------------------------------------------------------------------------
@@ -29,6 +36,13 @@ func _ready():
 			NotificationCenter.notify("PLAY THE DRUMS!")
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("TOQUE A BATERIA!")
+	
+	
+	randomize()
+	keys.shuffle()
+	
+	for i in range(len(keys)):
+		keys[i].set_time_to_hit(MIN_TIME + i * (MAX_TIME - MIN_TIME) / len(keys))
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
