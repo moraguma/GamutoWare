@@ -1,0 +1,137 @@
+[gd_scene load_steps=17 format=3 uid="uid://dhsdkm5unb16"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-thedeas/cenas/main.gd" id="1_reqd2"]
+[ext_resource type="Texture2D" uid="uid://dmfv2vlqeqb7c" path="res://microjogos/2023S1/projeto-thedeas/recursos/BackGround.png" id="2_b25e2"]
+[ext_resource type="Texture2D" uid="uid://bovvkgqwgjopg" path="res://microjogos/2023S1/projeto-thedeas/recursos/Folha.png" id="4_yaape"]
+[ext_resource type="Texture2D" uid="uid://c1vbf2ibi2x5y" path="res://microjogos/2023S1/projeto-thedeas/recursos/GodAnimation/DeathGod00.png" id="5_5boq4"]
+[ext_resource type="PackedScene" uid="uid://btwlfspfgk05y" path="res://microjogos/2023S1/projeto-thedeas/recursos/PreFabs/monge.tscn" id="5_8fl8s"]
+[ext_resource type="Texture2D" uid="uid://dafss1vjfnw0p" path="res://microjogos/2023S1/projeto-thedeas/recursos/Mao.png" id="5_xchyn"]
+[ext_resource type="Texture2D" uid="uid://b7qr2cwti4ynq" path="res://microjogos/2023S1/projeto-thedeas/recursos/GodAnimation/DeathGod01.png" id="6_xrdb6"]
+[ext_resource type="Texture2D" uid="uid://crun8leypb42d" path="res://microjogos/2023S1/projeto-thedeas/recursos/GodAnimation/DeathGod02.png" id="7_l0a8a"]
+[ext_resource type="Texture2D" uid="uid://to6yw0cytuq5" path="res://microjogos/2023S1/projeto-thedeas/recursos/GodAnimation/DeathGod03.png" id="8_nskvu"]
+[ext_resource type="AudioStream" uid="uid://calwwfonn1ynl" path="res://microjogos/2023S1/projeto-thedeas/recursos/SmashSound.wav" id="9_1tq5x"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-thedeas/cenas/scripts/handMovment.gd" id="9_cvxqj"]
+[ext_resource type="AudioStream" uid="uid://d1r5mxstd48y6" path="res://microjogos/2023S1/projeto-thedeas/recursos/TerrorSound.wav" id="10_p7615"]
+
+[sub_resource type="Curve" id="5"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.990196, 360), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nhdfs"]
+animations = [{
+"frames": [{
+"duration": 0.01,
+"texture": ExtResource("5_5boq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xrdb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_l0a8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nskvu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_l0a8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xrdb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5boq4")
+}],
+"loop": true,
+"name": &"Arms",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ysb81"]
+size = Vector2(137.079, 31.3033)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i5e3k"]
+size = Vector2(145.337, 40.6944)
+
+[node name="Main" type="Node2D"]
+position = Vector2(0, -8)
+script = ExtResource("1_reqd2")
+
+[node name="BackGround" type="Sprite2D" parent="."]
+position = Vector2(960.889, 547.5)
+scale = Vector2(2.40222, 2.40222)
+texture = ExtResource("2_b25e2")
+
+[node name="LeafsParticles" type="CPUParticles2D" parent="."]
+position = Vector2(-200, -656)
+amount = 70
+lifetime = 5.0
+preprocess = 3.0
+speed_scale = 0.6
+texture = ExtResource("4_yaape")
+emission_shape = 3
+emission_rect_extents = Vector2(1080, 540)
+direction = Vector2(1, 1)
+gravity = Vector2(500, 500)
+angle_max = 1.0
+angle_curve = SubResource("5")
+
+[node name="GodDeathAnimation" type="AnimatedSprite2D" parent="."]
+position = Vector2(955.667, 551)
+scale = Vector2(2.38667, 2.38667)
+sprite_frames = SubResource("SpriteFrames_nhdfs")
+animation = &"Arms"
+frame_progress = 0.897983
+
+[node name="Monge" parent="." instance=ExtResource("5_8fl8s")]
+position = Vector2(1344, 808)
+
+[node name="Monge2" parent="." instance=ExtResource("5_8fl8s")]
+position = Vector2(960, 816)
+
+[node name="Monge3" parent="." instance=ExtResource("5_8fl8s")]
+position = Vector2(1712, 808)
+
+[node name="Monge4" parent="." instance=ExtResource("5_8fl8s")]
+position = Vector2(576, 800)
+
+[node name="Monge5" parent="." instance=ExtResource("5_8fl8s")]
+position = Vector2(216, 808)
+
+[node name="DeathGod" type="CharacterBody2D" parent="."]
+position = Vector2(1920, 480)
+scale = Vector2(1.21098, 1.27782)
+script = ExtResource("9_cvxqj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathGod"]
+position = Vector2(26.4248, -12.5213)
+shape = SubResource("RectangleShape2D_ysb81")
+
+[node name="Sprite2D" type="Sprite2D" parent="DeathGod/CollisionShape2D"]
+position = Vector2(0.000183105, 6.26068)
+scale = Vector2(2.02315, 2.13214)
+texture = ExtResource("5_xchyn")
+
+[node name="Area2D" type="Area2D" parent="DeathGod"]
+position = Vector2(6.10352e-05, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathGod/Area2D"]
+position = Vector2(26.4248, -43.8246)
+shape = SubResource("RectangleShape2D_i5e3k")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 6.0
+one_shot = true
+autostart = true
+
+[node name="SmashSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_1tq5x")
+volume_db = -8.0
+
+[node name="BackSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_p7615")
+autoplay = true
+
+[connection signal="area_entered" from="DeathGod/Area2D" to="DeathGod" method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

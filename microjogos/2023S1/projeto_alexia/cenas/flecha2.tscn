@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b228rbt5aixc4"]
+
+[ext_resource type="Texture2D" uid="uid://dy8vreahbkytp" path="res://microjogos/2023S1/projeto_alexia/recursos/Flechaamarela.png" id="1_hd3mg"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(1.90735e-06, -2.71051e-20)
+scale = Vector2(0.16769, 0.168285)
+texture = ExtResource("1_hd3mg")

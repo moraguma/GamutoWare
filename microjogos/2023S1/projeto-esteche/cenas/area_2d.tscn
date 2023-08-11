@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://n7g7kj0h3vxt"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-esteche/cenas/Asteroide.gd" id="1_i0vci"]
+[ext_resource type="Texture2D" uid="uid://dq08qdq0vcaoa" path="res://microjogos/2023S1/projeto-esteche/recursos/sprites/Asteroid Brown.png" id="2_t2alo"]
+[ext_resource type="AudioStream" uid="uid://c48a4gj3u6f1x" path="res://microjogos/2023S1/projeto-esteche/recursos/sounds/explosion1.ogg" id="3_rku12"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fw0la"]
+radius = 48.0
+
+[node name="Asteroide" type="Area2D"]
+script = ExtResource("1_i0vci")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0.999995, -3.5)
+scale = Vector2(0.7, 0.86875)
+texture = ExtResource("2_t2alo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_fw0la")
+
+[node name="Collision" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_rku12")
+pitch_scale = 4.0

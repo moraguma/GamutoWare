@@ -1,0 +1,324 @@
+[gd_scene load_steps=14 format=3 uid="uid://da2h160pqjtfs"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-yan-oliveira/cenas/scripts/main.gd" id="1_yj0jh"]
+[ext_resource type="Texture2D" uid="uid://b6qvtckr27qbo" path="res://microjogos/2023S1/projeto-yan-oliveira/recursos/Lagoa Oficial.png" id="2_rn75l"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-yan-oliveira/cenas/scripts/Player.gd" id="3_f4637"]
+[ext_resource type="Texture2D" uid="uid://blqg4s6mksxvu" path="res://microjogos/2023S1/projeto-yan-oliveira/recursos/Sapo.png" id="4_bq1bp"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-yan-oliveira/cenas/scripts/Linguada.gd" id="5_3am60"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-yan-oliveira/cenas/scripts/Mosca.gd" id="6_krcl4"]
+[ext_resource type="Texture2D" uid="uid://da1d3p7dabrki" path="res://microjogos/2023S1/projeto-yan-oliveira/recursos/Mosca Bombada.png" id="7_gulw7"]
+[ext_resource type="AudioStream" uid="uid://v2yjvhogdkdn" path="res://microjogos/2023S1/projeto-yan-oliveira/recursos/BeepBox-Song.ogg" id="8_s0ay3"]
+
+[sub_resource type="Animation" id="Animation_266p6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mosca/SpriteMosca:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(496.727, 312.727)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mosca/HitboxMosca:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(496, 312)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mosca:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mosca2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Mosca2/SpriteMosca:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1424, 392)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Mosca2/HitboxMosca:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1424, 392)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Mosca3:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Mosca3/SpriteMosca:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(960.5, 959.954)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Mosca3/HitboxMosca:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(960, 960)]
+}
+
+[sub_resource type="Animation" id="Animation_twass"]
+resource_name = "anim mosca"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mosca/SpriteMosca:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(496.727, 312.727), Vector2(496.727, 312.727), Vector2(496.727, 312.727)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mosca/HitboxMosca:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(496, 312), Vector2(496, 312), Vector2(496, 312)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mosca:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2, 7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-32, 32), Vector2(24, -24)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mosca2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-56, -80), Vector2(-24, 56)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Mosca2/SpriteMosca:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1424, 392), Vector2(1424, 392), Vector2(1424, 392)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Mosca2/HitboxMosca:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(3, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1424, 392), Vector2(1424, 392)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Mosca3:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 3, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(160, -24), Vector2(-8, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Mosca3/SpriteMosca:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 3, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(960.5, 959.954), Vector2(960.5, 959.954), Vector2(960.5, 959.954)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Mosca3/HitboxMosca:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 3, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(960, 960), Vector2(960, 960), Vector2(960, 960)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dcd25"]
+_data = {
+"RESET": SubResource("Animation_266p6"),
+"anim mosca": SubResource("Animation_twass")
+}
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_1w8n0"]
+a = Vector2(0, -570.325)
+b = Vector2(0, 0)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2hjdc"]
+radius = 48.6621
+
+[node name="Frog Mayhem" type="Node2D"]
+script = ExtResource("1_yj0jh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_dcd25")
+}
+
+[node name="Lagoa" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_rn75l")
+
+[node name="Camera3D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(960, 536)
+script = ExtResource("3_f4637")
+
+[node name="Sapo" type="Sprite2D" parent="Player"]
+scale = Vector2(0.738, 0.738)
+texture = ExtResource("4_bq1bp")
+
+[node name="Linguada" type="Area2D" parent="Player/Sapo"]
+position = Vector2(0, 50)
+script = ExtResource("5_3am60")
+
+[node name="Timer" type="Timer" parent="Player/Sapo/Linguada"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Sapo/Linguada"]
+shape = SubResource("SegmentShape2D_1w8n0")
+
+[node name="LinguaSprite" type="Line2D" parent="Player/Sapo/Linguada"]
+position = Vector2(0, -120)
+points = PackedVector2Array(0, -450.325, 0, 120)
+width = 16.0
+default_color = Color(0.956863, 0.415686, 0.529412, 1)
+
+[node name="Mosca" type="Area2D" parent="."]
+script = ExtResource("6_krcl4")
+
+[node name="SpriteMosca" type="Sprite2D" parent="Mosca"]
+position = Vector2(496.727, 312.727)
+scale = Vector2(0.409091, 0.409091)
+texture = ExtResource("7_gulw7")
+
+[node name="HitboxMosca" type="CollisionShape2D" parent="Mosca"]
+position = Vector2(496, 312)
+shape = SubResource("CircleShape2D_2hjdc")
+
+[node name="Mosca2" type="Area2D" parent="."]
+script = ExtResource("6_krcl4")
+
+[node name="SpriteMosca" type="Sprite2D" parent="Mosca2"]
+position = Vector2(1424, 392)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("7_gulw7")
+
+[node name="HitboxMosca" type="CollisionShape2D" parent="Mosca2"]
+position = Vector2(1424, 392)
+shape = SubResource("CircleShape2D_2hjdc")
+
+[node name="Mosca3" type="Area2D" parent="."]
+script = ExtResource("6_krcl4")
+
+[node name="SpriteMosca" type="Sprite2D" parent="Mosca3"]
+position = Vector2(960.5, 959.954)
+scale = Vector2(0.406, 0.406)
+texture = ExtResource("7_gulw7")
+
+[node name="HitboxMosca" type="CollisionShape2D" parent="Mosca3"]
+position = Vector2(960, 960)
+shape = SubResource("CircleShape2D_2hjdc")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_s0ay3")
+autoplay = true

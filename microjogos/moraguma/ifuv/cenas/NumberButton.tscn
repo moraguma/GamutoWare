@@ -1,116 +1,139 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=3 uid="uid://bjm26yvl38ria"]
 
-[ext_resource path="res://microjogos/moraguma/ifuv/recursos/fonts/Pixel Millennium.ttf" type="FontFile" id=1]
-[ext_resource path="res://microjogos/moraguma/ifuv/cenas/scripts/NumberButton.gd" type="Script" id=2]
-[ext_resource path="res://microjogos/moraguma/ifuv/recursos/sprites/button.png" type="Texture2D" id=3]
+[ext_resource type="FontFile" uid="uid://censsrpbpgb4h" path="res://microjogos/moraguma/ifuv/recursos/fonts/Pixel Millennium.ttf" id="1"]
+[ext_resource type="Script" path="res://microjogos/moraguma/ifuv/cenas/scripts/NumberButton.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://uh5wj3xsynuw" path="res://microjogos/moraguma/ifuv/recursos/sprites/button.png" id="3"]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id="1"]
 length = 0.001
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ 1 ]
+"values": [1]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("Display:offset_top")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ -4.0 ]
+"values": [-4.0]
 }
 tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/path = NodePath("Display:offset_bottom")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
 tracks/2/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ 7.0 ]
+"values": [7.0]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id="2"]
 resource_name = "press"
 length = 0.2
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.1, 0.2 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [ 0, 1, 0 ]
+"values": [0, 1, 0]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("Display:offset_top")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PackedFloat32Array( 0, 0.1, 0.2 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [ -4.0, -3.0, -4.0 ]
+"values": [-4.0, -3.0, -4.0]
 }
 tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/path = NodePath("Display:offset_bottom")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
 tracks/2/keys = {
-"times": PackedFloat32Array( 0, 0.1, 0.2 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [ 7.0, 8.0, 7.0 ]
+"values": [7.0, 8.0, 7.0]
 }
 
-[sub_resource type="FontFile" id=14]
-size = 8
-outline_color = Color( 0.121569, 0.0745098, 0.101961, 1 )
-font_data = ExtResource( 1 )
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kx8rk"]
+_data = {
+"RESET": SubResource("1"),
+"press": SubResource("2")
+}
 
-[sub_resource type="Theme" id=13]
-default_font = SubResource( 14 )
-RichTextLabel/colors/default_color = Color( 0.121569, 0.0745098, 0.101961, 1 )
+[sub_resource type="FontFile" id="14"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+fallbacks = Array[Font]([ExtResource("1"), ExtResource("1")])
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/8/0 = Vector2(0, 0)
+cache/0/8/0/ascent = 0.0
+cache/0/8/0/descent = 0.0
+cache/0/8/0/underline_position = 0.0
+cache/0/8/0/underline_thickness = 0.0
+cache/0/8/0/scale = 1.0
+cache/0/8/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/8/0/kerning_overrides/8/0 = Vector2(0, 0)
+
+[sub_resource type="Theme" id="13"]
+default_font = SubResource("14")
+RichTextLabel/colors/default_color = Color(0.121569, 0.0745098, 0.101961, 1)
+RichTextLabel/font_sizes/normal_font_size = 8
 
 [node name="NumberButton" type="Sprite2D"]
-texture = ExtResource( 3 )
+texture_filter = 1
+texture = ExtResource("3")
 hframes = 2
 frame = 1
-script = ExtResource( 2 )
+script = ExtResource("2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/RESET = SubResource( 1 )
-anims/press = SubResource( 2 )
+libraries = {
+"": SubResource("AnimationLibrary_kx8rk")
+}
 
 [node name="Display" type="RichTextLabel" parent="."]
 offset_left = -7.0
 offset_top = -4.0
 offset_right = 9.0
 offset_bottom = 7.0
-theme = SubResource( 13 )
+theme = SubResource("13")
 bbcode_enabled = true
 text = "[center]1"
-text = "1"
-__meta__ = {
-"_edit_use_anchors_": false
-}

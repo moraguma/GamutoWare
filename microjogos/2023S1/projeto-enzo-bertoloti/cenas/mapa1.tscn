@@ -1,0 +1,78 @@
+[gd_scene load_steps=11 format=3 uid="uid://6ve8e3b6mfxv"]
+
+[ext_resource type="TileSet" uid="uid://b47o3eh6wmwgj" path="res://microjogos/2023S1/projeto-enzo-bertoloti/cenas/tileset.tres" id="1_or4ra"]
+[ext_resource type="Texture2D" uid="uid://cjxhnaatfs63g" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/MIOJO_DO_MAL_pb.png" id="2_re5qr"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-enzo-bertoloti/cenas/scripts/CharacterBody2D.gd" id="4_0obhx"]
+[ext_resource type="Texture2D" uid="uid://c80aeiwc24s6a" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/player.png" id="4_qs8ph"]
+[ext_resource type="AudioStream" uid="uid://dy2dhshmjh5pp" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/Sons/SFX_Explosion_01.wav" id="6_bbvp8"]
+[ext_resource type="AudioStream" uid="uid://cybxjnaru36rm" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/Sons/pulo.wav" id="6_ogaxv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fdhyd"]
+size = Vector2(64, 54)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oiymb"]
+size = Vector2(288, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u1wqq"]
+size = Vector2(288, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h85sy"]
+size = Vector2(480, 48)
+
+[node name="TileMap" type="TileMap"]
+position = Vector2(1256, 480)
+tile_set = ExtResource("1_or4ra")
+format = 2
+layer_0/tile_data = PackedInt32Array(262138, 1048578, 12, 262139, 1048578, 16, 262140, 1048578, 16, 262141, 1048578, 12, 262142, 1048578, 12, 262143, 1048578, 16, 196608, 1048578, 12, 196622, 1048578, 12, 196623, 1048578, 12, 196624, 1048578, 12, 196625, 1048578, 16, 196626, 1048578, 16, 196627, 1048578, 12, 262137, 1048578, 12, 262135, 1048578, 16, 262136, 1048578, 12, 262134, 1048578, 16, 262133, 1179650, 16, 327677, 1245185, 16, 327676, 1245185, 13, 196628, 1048578, 12, 196629, 1048578, 12, 196630, 1048578, 12, 196631, 1048578, 12, 196632, 1048578, 12, 196633, 1048578, 12, 196634, 1048578, 12, 196635, 1048578, 16, 196637, 1048578, 16, 196638, 1048578, 16, 196639, 1048578, 16, 196640, 1048578, 16, 196641, 1048578, 16, 196642, 1048577, 16, 196643, 1048577, 16, 196644, 1048577, 16, 196645, 1048577, 16, 196646, 1048577, 16, 196647, 1048577, 16, 196648, 1048577, 16, 196649, 1048577, 16, 196650, 1048577, 16, 196651, 1048577, 16, 196652, 1048577, 16, 196653, 1048577, 16, 196654, 1114113, 16, 131064, 458754, 9, 196600, 458754, 10, 131065, 524290, 9, 196601, 524290, 10, 131066, 589826, 9, 196602, 589826, 10, -65544, 458754, 4, -8, 458754, 5, 65528, 458754, 6, -65543, 524290, 4, -7, 524290, 5, 65529, 524290, 6, -65542, 589826, 4, -6, 589826, 5, 65530, 589826, 6, 196597, 1179650, 14, 131061, 1179650, 14, 65525, 1179650, 14, -11, 1179650, 14, -65547, 1179650, 14, -131083, 1179650, 14, -196619, 1179650, 14, -262155, 1179650, 14, -327691, 1179650, 14, -393227, 1179650, 14, -458763, 1179650, 14, -524299, 1179650, 14, -589835, 1179650, 14, 196609, 1114114, 13, 262145, 1179650, 10, 327681, 983042, 15, 327682, 1048578, 16, 327683, 1048578, 12, 327685, 1114114, 13, 196621, 1048578, 16, 196620, 1048578, 16, 196619, 1048578, 16, 196618, 983042, 12, 393221, 1179650, 14, 458757, 1179650, 10, 524293, 1179650, 14, 589829, 983042, 15, 589830, 1048578, 12, 589831, 1048578, 12, 589832, 1048578, 12, 589833, 1048578, 16, 589834, 1048578, 12, 589835, 1048578, 16, 589836, 1048578, 12, 589837, 1048578, 16, 589838, 1048578, 12, 589839, 1048578, 12, 589840, 1048578, 16, 589841, 1048578, 16, 589842, 1048578, 16, 589843, 1048578, 16, 589844, 1048578, 16, 589845, 1048578, 12, 589846, 1048578, 16, 589847, 1048578, 12, 589848, 1048578, 16, 589849, 1048578, 12, 589850, 1048578, 16, 589851, 1048578, 12, 589852, 1114114, 15, 524316, 1179650, 14, 458780, 1179650, 14, 393244, 1179650, 14, 327708, 1179650, 14, 262172, 1179650, 14, 196636, 1048578, 13, 262146, 196610, 9, 262147, 196610, 9, 262148, 196610, 9, 327684, 1048578, 12, 131082, 196610, 9, 131083, 196610, 9, 131084, 196610, 9, 131085, 196610, 9, 131086, 196610, 9, 65551, 917506, 0, 131087, 917506, 1, 65556, 917506, 0, 131092, 917506, 1, 65553, 983042, 0, 131089, 983042, 1, 131088, 1179650, 1, 131090, 1179650, 1, 131091, 1179650, 0, 524294, 196610, 9, 524295, 196610, 9, 524296, 196610, 9, 393225, 262146, 4, 393226, 327682, 4, 393227, 393218, 4)
+
+[node name="Win" type="Area2D" parent="."]
+position = Vector2(1952, 624)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Win"]
+scale = Vector2(2.13681, 1)
+texture = ExtResource("2_re5qr")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Win"]
+polygon = PackedVector2Array(-304, 88, -152, -128, 320, -128, 120, 144, -312, 104)
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(-304, 248)
+floor_constant_speed = true
+script = ExtResource("4_0obhx")
+metadata/_edit_group_ = true
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(8, -104)
+position_smoothing_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_fdhyd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("4_qs8ph")
+
+[node name="Pulo" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource("6_ogaxv")
+
+[node name="Morte" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource("6_bbvp8")
+
+[node name="Espinhos" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Espinhos"]
+position = Vector2(336, 456)
+shape = SubResource("RectangleShape2D_oiymb")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Espinhos"]
+position = Vector2(720, 840)
+shape = SubResource("RectangleShape2D_u1wqq")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Espinhos"]
+position = Vector2(1200, 264)
+shape = SubResource("RectangleShape2D_h85sy")
+
+[connection signal="body_entered" from="Win" to="Player" method="_on_win_body_entered"]
+[connection signal="body_entered" from="Espinhos" to="Player" method="_on_espinhos_body_entered"]

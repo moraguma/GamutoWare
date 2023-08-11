@@ -12,19 +12,19 @@ signal lose
 var Player = preload("res://microjogos/moraguma/whale_eater/cenas/Player.tscn")
 
 
-const POSSIBLE_SPAWN_POSITIONS = [Vector2(248, 104), Vector2(248, 184), Vector2(168, 224)]
+const POSSIBLE_SPAWN_POSITIONS = [Vector2(256, 112), Vector2(192, 176), Vector2(240, 72)]
 const MAX_ROT_SPEED = 2.4
 const ROT_ACCELERATION = 0.05
 
 
 var player = null
 var down_dir = Vector2(0, -1)
-var rotation_speed = 0
+var rotation_speed = 0.0
 var active = true
 
 
-@onready var camera = $Camera3D
-@onready var heart_animation_player = $Camera3D/AnimationPlayer
+@onready var camera = $Camera
+@onready var heart_animation_player = $Camera/AnimationPlayer
 
 
 func _ready():
@@ -76,7 +76,7 @@ func get_input_dir():
 	return 0
 
 
-func win(body):
+func register_win(body):
 	active = false
 	emit_signal("win")
 	
