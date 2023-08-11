@@ -25,6 +25,8 @@ signal lose
 const WIDTH = 1920
 const HEIGHT = 1080
 
+const TOLERANCE = 20
+
 
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES PADRÃO
@@ -76,18 +78,18 @@ func _process(delta):
 		resultado(1250)
 					
 func subir_escolhido(x):
-	if round(copo_1.position.x) == x:
+	if abs(copo_1.position.x - x) < TOLERANCE:
 		copo_1.subir()
-	elif round(copo_2.position.x) == x:
+	elif abs(copo_2.position.x - x) < TOLERANCE:
 		copo_2.subir()
-	elif round(copo_3.position.x) == x:
+	elif abs(copo_3.position.x - x) < TOLERANCE:
 		copo_3.subir()
 
 func resultado(x):
-	if round(copo_2.position.x) == x:
+	if abs(copo_2.position.x - x) < TOLERANCE:
 		print("VENCEU")
 		efeito_ganhou.play()
-		emit_signal("win")
+		register_win()
 	else:
 		print("PERDEU")
 		timer.disconnect("timeout", mostrar)
@@ -96,7 +98,7 @@ func resultado(x):
 		timer.one_shot = true
 		timer.start()
 		efeito_perdeu.play()
-		emit_signal("lose")	
+		register_lose()
 
 func subir_copo_certo():
 	copo_2.subir()
