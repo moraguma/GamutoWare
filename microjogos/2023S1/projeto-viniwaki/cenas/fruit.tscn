@@ -1,0 +1,91 @@
+[gd_scene load_steps=14 format=3 uid="uid://c8nyydvpcpkff"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-viniwaki/cenas/fruit.gd" id="1_oy4q4"]
+[ext_resource type="Texture2D" uid="uid://cqmymveo2q7cg" path="res://microjogos/2023S1/projeto-viniwaki/recursos/maca0.png" id="2_namhp"]
+[ext_resource type="Texture2D" uid="uid://583dlj8q6m3i" path="res://microjogos/2023S1/projeto-viniwaki/recursos/maca1.png" id="3_yjht8"]
+[ext_resource type="Texture2D" uid="uid://b7k1yuf8yjjky" path="res://microjogos/2023S1/projeto-viniwaki/recursos/banana0.png" id="4_ljwuf"]
+[ext_resource type="Texture2D" uid="uid://blvaobbnpw63n" path="res://microjogos/2023S1/projeto-viniwaki/recursos/banana1.png" id="5_4j4xn"]
+[ext_resource type="Texture2D" uid="uid://vc3ktpsdkndw" path="res://microjogos/2023S1/projeto-viniwaki/recursos/abacaxi0.png" id="6_xej1g"]
+[ext_resource type="Texture2D" uid="uid://b6wl0kja2ep81" path="res://microjogos/2023S1/projeto-viniwaki/recursos/abacaxi1.png" id="7_xfo7u"]
+[ext_resource type="Texture2D" uid="uid://dj6eh8y2firss" path="res://microjogos/2023S1/projeto-viniwaki/recursos/melancia0.png" id="8_8wpek"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-viniwaki/cenas/arrow.gd" id="8_kde45"]
+[ext_resource type="Texture2D" uid="uid://dx6s0l443b2tm" path="res://microjogos/2023S1/projeto-viniwaki/recursos/melancia1.png" id="9_vr5a1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0ensf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4jsog"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_namhp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_yjht8")
+}],
+"loop": true,
+"name": &"apple",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ljwuf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4j4xn")
+}],
+"loop": true,
+"name": &"banana",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_xej1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xfo7u")
+}],
+"loop": true,
+"name": &"pineapple",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_8wpek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vr5a1")
+}],
+"loop": true,
+"name": &"watermelon",
+"speed": 5.0
+}]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h3t2u"]
+load_path = "res://.godot/imported/kb-arrow.png-17172e2d73ec81053a6b7d9d98f42a23.ctex"
+
+[node name="fruit" type="RigidBody2D"]
+gravity_scale = 2.0
+script = ExtResource("1_oy4q4")
+
+[node name="collision_shape" type="CollisionShape2D" parent="."]
+scale = Vector2(5, 5)
+shape = SubResource("CircleShape2D_0ensf")
+
+[node name="whole_sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
+scale = Vector2(0.355, 0.355)
+sprite_frames = SubResource("SpriteFrames_4jsog")
+animation = &"watermelon"
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-4, -4)
+scale = Vector2(6.8, 6.8)
+
+[node name="arrow" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(200, 0)
+scale = Vector2(1.70312, 1.70312)
+texture = SubResource("CompressedTexture2D_h3t2u")
+script = ExtResource("8_kde45")
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
