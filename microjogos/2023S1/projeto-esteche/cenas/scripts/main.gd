@@ -11,6 +11,11 @@ signal lose
 const WIDTH = 1920
 const HEIGHT = 1080
 
+const MIN_ASTEROID_Y = 50
+const MAX_ASTEROID_Y = 900
+
+@onready var asteroids = [$Asteroide, $Asteroide2, $Asteroide3, $Asteroide4]
+
 
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES PADRÃO
@@ -22,9 +27,12 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("REACH THE PLATAFORM AND DON'T DIE!")
+			NotificationCenter.notify("CROSS")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("CHEGUE NA PLATAFORMA E NÃO MORRA!")
+			NotificationCenter.notify("ATRAVESSE")
+	
+	for asteroid in asteroids: 
+		asteroid.position[1] = randf_range(MIN_ASTEROID_Y, MAX_ASTEROID_Y)
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como

@@ -7,6 +7,7 @@ func _ready():
 	
 func win(body):
 	get_parent().register_win()
+	body.done = true
 	$VictoryFanfare.play()
 
 
