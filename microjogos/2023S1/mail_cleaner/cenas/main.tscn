@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bwf53xp28gd35"]
+[gd_scene load_steps=10 format=3 uid="uid://bwf53xp28gd35"]
 
 [ext_resource type="Script" path="res://microjogos/2023S1/mail_cleaner/cenas/scripts/main.gd" id="1_kyp7x"]
 [ext_resource type="PackedScene" uid="uid://dsxm54jv86dym" path="res://microjogos/2023S1/mail_cleaner/cenas/phone.tscn" id="2_mtjul"]
 [ext_resource type="Texture2D" uid="uid://dmjekwn4tcfj8" path="res://microjogos/2023S1/mail_cleaner/recursos/sprites/back.png" id="2_ti7tx"]
 [ext_resource type="Texture2D" uid="uid://cl8qlp3u2kext" path="res://microjogos/2023S1/mail_cleaner/recursos/sprites/right.png" id="4_vmscg"]
 [ext_resource type="Texture2D" uid="uid://bkoi55ua02wkd" path="res://microjogos/2023S1/mail_cleaner/recursos/sprites/wrong.png" id="5_6vicc"]
+[ext_resource type="AudioStream" uid="uid://6tadw1qaxl65" path="res://microjogos/2023S1/mail_cleaner/recursos/sounds/bossa-lounge-159715.ogg" id="6_cxdmi"]
 
 [sub_resource type="Animation" id="Animation_gt1yq"]
 resource_name = "background_movement"
@@ -146,3 +147,8 @@ texture_filter = 1
 position = Vector2(1580, 540)
 scale = Vector2(10, 10)
 texture = ExtResource("5_6vicc")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_cxdmi")
+autoplay = true
+stream_paused = true
