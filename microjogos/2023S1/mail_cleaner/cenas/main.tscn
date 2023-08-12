@@ -1,10 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://bwf53xp28gd35"]
+[gd_scene load_steps=4 format=3 uid="uid://bwf53xp28gd35"]
 
 [ext_resource type="Script" path="res://microjogos/2023S1/mail_cleaner/cenas/scripts/main.gd" id="1_kyp7x"]
 [ext_resource type="PackedScene" uid="uid://dsxm54jv86dym" path="res://microjogos/2023S1/mail_cleaner/cenas/phone.tscn" id="2_mtjul"]
+[ext_resource type="Texture2D" uid="uid://dmjekwn4tcfj8" path="res://microjogos/2023S1/mail_cleaner/recursos/sprites/back.png" id="2_ti7tx"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_kyp7x")
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.580392, 0.580392, 0.580392, 1)
+texture_filter = 2
+position = Vector2(980, 570)
+rotation = -0.0566683
+scale = Vector2(18, 18)
+texture = ExtResource("2_ti7tx")
 
 [node name="Phone" parent="." instance=ExtResource("2_mtjul")]
 position = Vector2(700, 15)
