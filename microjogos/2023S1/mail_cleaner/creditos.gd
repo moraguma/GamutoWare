@@ -15,9 +15,15 @@ var credits_pt = """
 Criado por: IsaelGabriel
 
 Música: Bossa Lounge - Abydosmusic
+SFX: 
+	- "record_scratch" - Pixabay
+	- "Small hit in a game" - mixkit.co
 """
 var credits_en = """
 Made by: IsaelGabriel
 
 Song: Bossa Lounge - Abydosmusic
+SFX: 
+	- "record_scratch" - Pixabay
+	- "Small hit in a game" - mixkit.co
 """

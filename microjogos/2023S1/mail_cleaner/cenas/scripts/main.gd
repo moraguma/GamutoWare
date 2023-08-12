@@ -57,6 +57,7 @@ func _process(delta):
 			register_lose()
 	
 	if left or right:
+		$Hit.play()
 		mail_list[0].start_deletion(right)
 		mail_list.pop_at(0)
 	
@@ -103,5 +104,7 @@ func register_win():
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
 	$Phone/BlueScreen.visible = true
+	$Music.playing = false
+	$Scratch.playing = true
 	GlobalCamera.add_trauma(0.75)
 	emit_signal("lose")
