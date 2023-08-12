@@ -68,6 +68,7 @@ func _process(delta):
 # --------------------------------------------------------------------------------------------------
 
 func custom_ready():
+	$Phone/BlueScreen.visible = false
 	mail_spawn = $Phone/Mask/MailSpawn
 	for i in range(mail_quantity):
 		var new_mail = mail.instantiate()
@@ -100,5 +101,6 @@ func register_win():
 
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
+	$Phone/BlueScreen.visible = true
 	GlobalCamera.add_trauma(0.75)
 	emit_signal("lose")
