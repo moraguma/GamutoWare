@@ -69,6 +69,7 @@ func _process(delta):
 
 func custom_ready():
 	$Phone/BlueScreen.visible = false
+	$Background/AnimationPlayer.current_animation = "background_movement"
 	mail_spawn = $Phone/Mask/MailSpawn
 	for i in range(mail_quantity):
 		var new_mail = mail.instantiate()

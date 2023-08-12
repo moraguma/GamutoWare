@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://dsxm54jv86dym"]
 
 [ext_resource type="Texture2D" uid="uid://o8d1tbp23kxa" path="res://microjogos/2023S1/mail_cleaner/recursos/sprites/phone.png" id="1_e86lr"]
-[ext_resource type="Texture2D" uid="uid://wqua2vtw2lok" path="res://microjogos/2023S1/mail_cleaner/recursos/sprites/placeholder/arrow_green.png" id="2_wpb2j"]
-[ext_resource type="Texture2D" uid="uid://hij4xrvl8k1x" path="res://microjogos/2023S1/mail_cleaner/recursos/sprites/placeholder/arrow_red.png" id="3_p5ffe"]
+[ext_resource type="Texture2D" uid="uid://cgls0fr8p4f3r" path="res://microjogos/2023S1/mail_cleaner/recursos/sprites/arrow_green.png" id="2_3lc3v"]
+[ext_resource type="Texture2D" uid="uid://do8g63ubhne67" path="res://microjogos/2023S1/mail_cleaner/recursos/sprites/arrow_red.png" id="3_d6u0y"]
 [ext_resource type="Texture2D" uid="uid://dogaus8fp0we0" path="res://microjogos/2023S1/mail_cleaner/recursos/sprites/fingers.png" id="4_21rbh"]
 [ext_resource type="Texture2D" uid="uid://dyrysps2jgkwk" path="res://microjogos/2023S1/mail_cleaner/recursos/sprites/blue_screen.png" id="4_sl5mv"]
 
@@ -27,16 +27,18 @@ offset_bottom = 750.0
 position = Vector2(0, 567)
 
 [node name="ArrowGreen" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.588235)
 texture_filter = 1
 position = Vector2(120, 810)
 scale = Vector2(7.5, 7.5)
-texture = ExtResource("2_wpb2j")
+texture = ExtResource("2_3lc3v")
 
 [node name="ArrowRed" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.588235)
 texture_filter = 1
 position = Vector2(360, 810)
 scale = Vector2(7.5, 7.5)
-texture = ExtResource("3_p5ffe")
+texture = ExtResource("3_d6u0y")
 
 [node name="BlueScreen" type="Sprite2D" parent="."]
 visible = false
