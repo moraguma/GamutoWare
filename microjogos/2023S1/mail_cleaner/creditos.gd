@@ -12,7 +12,9 @@ var title_en = "Mail cleaner"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
-Criado por: IsaelGabriel
+Criado por: isagabr
+
+itch: isagabr.itch.io
 
 Música: Bossa Lounge - Abydosmusic
 SFX: 
@@ -20,7 +22,9 @@ SFX:
 	- "Small hit in a game" - mixkit.co
 """
 var credits_en = """
-Made by: IsaelGabriel
+Made by: isagabr
+
+itch: isagabr.itch.io
 
 Song: Bossa Lounge - Abydosmusic
 SFX: 
