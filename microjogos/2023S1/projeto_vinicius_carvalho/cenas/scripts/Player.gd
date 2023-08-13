@@ -22,11 +22,12 @@ func _physics_process(delta):
 		$AnimatedSprite2D.play("Fly")
 		if ativar:
 			velocity.y += gravity;
-			if Input.is_action_just_pressed("ui_select"):
-				fly_s = $Som_asa
-				fly_s.play()
-				velocity.y = JUMP_VELOCITY*2
-			move_and_slide()
+		if Input.is_action_just_pressed("acao"):
+			ativar = true
+			fly_s = $Som_asa
+			fly_s.play()
+			velocity.y = JUMP_VELOCITY*2
+		move_and_slide()
 	else:
 		velocity.x = 0
 		velocity.y = 0
