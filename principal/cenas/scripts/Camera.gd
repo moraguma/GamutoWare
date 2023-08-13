@@ -62,5 +62,5 @@ func shake():
 
 
 func animate_transition():
+	animation_player.stop()
 	animation_player.play("transition")
-	
