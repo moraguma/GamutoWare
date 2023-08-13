@@ -16,8 +16,8 @@
 size = Vector2(163.5, 74)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tgoiv"]
-radius = 43.0
-height = 104.0
+radius = 73.0
+height = 150.0
 
 [node name="Newton\'s vengeance" type="Node2D"]
 position = Vector2(1, 0)
