@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const speed = 210
+const speed = 250
 const size = 160
 const floor = 860
 const velY = 2500
@@ -16,7 +16,7 @@ func _ready():
 	screensize = get_viewport_rect().size
 	isPunching = false
 	position.y = normalY
-	position.x = 1500
+	position.x = 1700
 
 func _physics_process(delta):
 	
