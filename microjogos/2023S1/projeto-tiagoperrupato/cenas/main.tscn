@@ -18,7 +18,7 @@
 [ext_resource type="AudioStream" uid="uid://8piyj5nc81fv" path="res://microjogos/2023S1/projeto-tiagoperrupato/recursos/explosion.wav" id="15_trkbh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hune0"]
-size = Vector2(328, 144)
+size = Vector2(270, 105)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7k7nf"]
 size = Vector2(1920, 101)
@@ -63,6 +63,7 @@ position = Vector2(-784, -8)
 script = ExtResource("3_exa5e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Jogador"]
+position = Vector2(3, 0.5)
 shape = SubResource("RectangleShape2D_hune0")
 metadata/_edit_lock_ = true
 
