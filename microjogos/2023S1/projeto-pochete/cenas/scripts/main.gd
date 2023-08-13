@@ -112,7 +112,9 @@ func _on_head_area_exited(area):
 		for tail in head.tail_nodes:
 			if area.overlaps_area(tail):
 				in_tail = true
-				gotten_apples.append(area)
+				if area not in gotten_apples:
+					gotten_apples.append(area)
+				break
 		if not in_tail:
 			var i = gotten_apples.find(area)
 			if i > -1:
