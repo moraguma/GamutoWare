@@ -22,6 +22,7 @@ shader_parameter/outer = Vector4(0.623529, 0.886274, 0.282352, 1)
 shader_parameter/OCTAVES = 4
 
 [node name="Main" type="Node2D"]
+texture_filter = 1
 script = ExtResource("6")
 
 [node name="Camera3D" type="Camera2D" parent="."]
