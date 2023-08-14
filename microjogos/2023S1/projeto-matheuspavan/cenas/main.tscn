@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://dmaq46tk3gda3"]
+[gd_scene load_steps=44 format=3 uid="uid://dmaq46tk3gda3"]
 
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto-matheuspavan/cenas/main.gd" id="1_bsl4o"]
 [ext_resource type="Texture2D" uid="uid://to2vkigeu2yo" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/personagem/Wizard Pack/Idle.png" id="2_b67wv"]
@@ -33,7 +33,8 @@
 [ext_resource type="Texture2D" uid="uid://d3u5byrmrynxp" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5b11.png" id="20_sde3j"]
 [ext_resource type="Texture2D" uid="uid://capxikl4drxw1" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5b12.png" id="21_f10mk"]
 [ext_resource type="Texture2D" uid="uid://c1v4tdestsfsp" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5a12.png" id="21_wol2l"]
-[ext_resource type="AudioStream" uid="uid://qj3uc1y71s4l" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/musica/501040__matrixxx__fable-tribute_cuted.wav" id="34_r3260"]
+[ext_resource type="AudioStream" uid="uid://drsjcfy1bowv" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/musica/501040__matrixxx__fable-tribute_cuted.ogg" id="34_i8g5l"]
+[ext_resource type="Texture2D" uid="uid://b6es8006u8qt" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/keys-arrow-wsad-mouse.png" id="35_fvlot"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lj6fq"]
 size = Vector2(58, 90)
@@ -209,12 +210,12 @@ position = Vector2(-1090, -840)
 scale = Vector2(1.25, 1.25)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Book/StaticBody2D2"]
-polygon = PackedVector2Array(1105, 503, 1171, 639, 1020, 639, 978, 818, 1011, 817, 1034, 703, 1123, 704, 1111, 817, 1215, 817, 1215, 964, 1185, 964, 1188, 849, 1075.76, 848.091, 1089, 734, 1060, 734, 1037, 847, 941, 847, 996, 609, 1113, 609, 1073, 519, 1064, 501, 1069, 492, 1081, 468, 1119, 454, 1125, 454, 1272, 469, 1327, 563, 1299, 581, 1252, 507, 1127, 493, 1107, 500, 1105, 503, 1312, 656, 1400, 520, 1224, 392, 992, 464, 840, 824, 1040, 920, 1168, 1008, 1296, 976, 1256, 752, 1216, 600)
+polygon = PackedVector2Array(1105, 503, 1171, 639, 1020, 639, 978, 818, 1215, 817, 1215, 964, 1185, 964, 1188, 849, 941, 847, 996, 609, 1113, 609, 1073, 519, 1064, 501, 1069, 492, 1081, 468, 1119, 454, 1125, 454, 1272, 469, 1327, 563, 1299, 581, 1252, 507, 1127, 493, 1107, 500, 1105, 503, 1312, 656, 1400, 520, 1224, 392, 992, 464, 840, 824, 1040, 920, 1168, 1008, 1296, 976, 1256, 752, 1216, 600)
 
 [node name="Line2D" type="Line2D" parent="Book"]
 position = Vector2(-190, -340)
 scale = Vector2(0.625, 0.625)
-points = PackedVector2Array(1184, 344, 1080, 184, 808, 156, 752, 176, 736, 204, 854, 448, 576, 448, 480, 864, 608, 864, 654, 638, 772, 638, 744, 866, 968, 868, 960, 1128)
+points = PackedVector2Array(1184, 344, 1080, 184, 808, 156, 752, 176, 736, 204, 854, 448, 576, 448, 480, 864, 968, 868, 960, 1128)
 width = 60.0
 default_color = Color(1, 1, 0.372549, 1)
 
@@ -227,7 +228,8 @@ theme = SubResource("Theme_y8mxr")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 160
 theme_override_font_sizes/bold_font_size = 0
-text = "Relâmpago"
+bbcode_enabled = true
+text = "[color=#8f4e46]Relâmpago"
 metadata/_edit_use_anchors_ = true
 
 [node name="Line2D2" type="Line2D" parent="Book"]
@@ -238,13 +240,15 @@ default_color = Color(1, 1, 0.372549, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Book"]
 offset_left = -616.0
-offset_top = -362.0
+offset_top = -442.0
 offset_right = -25.0
-offset_bottom = 398.0
+offset_bottom = 393.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 0
 theme_override_font_sizes/normal_font_size = 37
-text = "Anotações
+bbcode_enabled = true
+text = "[color=#8f4e46][center]
+Anotações[/center]
 
 Passo 1 - Acredite na magia
 Passo 3 - Mentalize a magia
@@ -316,9 +320,14 @@ sprite_frames = SubResource("SpriteFrames_rnlde")
 autoplay = "default"
 frame_progress = 0.00113724
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("34_r3260")
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("34_i8g5l")
 autoplay = true
+
+[node name="Keys-arrow-wsad-mouse" type="Sprite2D" parent="."]
+position = Vector2(1809, 976)
+scale = Vector2(2, 2)
+texture = ExtResource("35_fvlot")
 
 [connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D/final_magia" method="_on_area_2d_body_entered"]
