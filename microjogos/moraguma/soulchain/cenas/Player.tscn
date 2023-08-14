@@ -12,7 +12,7 @@
 
 [sub_resource type="CapsuleShape2D" id="13"]
 radius = 4.0
-height = 8.0
+height = 15.0
 
 [sub_resource type="Animation" id="1"]
 length = 0.001
@@ -363,16 +363,18 @@ particles_anim_loop = false
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 1
+texture_filter = 1
 script = ExtResource("7")
-
-[node name="Hitbox" type="CollisionShape2D" parent="."]
-shape = SubResource("13")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("8")
 hframes = 8
 vframes = 16
 frame = 17
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("13")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
