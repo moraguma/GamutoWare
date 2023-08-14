@@ -180,6 +180,7 @@ position = Vector2(168, 840)
 scale = Vector2(5, 5)
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture_filter = 1
 texture = ExtResource("2_b67wv")
 hframes = 6
 frame = 1
