@@ -19,14 +19,8 @@ var hanger = null
 var alive = true
 var was_on_floor = false
 
-
-var velocity = Vector2(0, 0)
-
-
 @onready var animation_player = $AnimationPlayer
 @onready var jump_sound = $JumpSound
-
-
 
 func _physics_process(delta):
 	if is_hanging:

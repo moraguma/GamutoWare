@@ -6,7 +6,8 @@ const minigame_packs = {
 	"Class of 2022": ["res://microjogos/2022S1/baleia/cenas/baleiaGame.tscn", "res://microjogos/2022S1/gamuturai/cenas/main.tscn", "res://microjogos/2022S1/race/cenas/main.tscn"],
 	"Demo": ["res://microjogos/demo/tiro_ao_alvo/cenas/main.tscn", "res://microjogos/demo/frogger/cenas/main.tscn"],
 	"Godotware": ["res://microjogos/godotware/Bang/Main.tscn", "res://microjogos/godotware/Simon/Main.tscn"],
-	"Moraguma": ["res://microjogos/moraguma/candle prick/cenas/Main.tscn", "res://microjogos/moraguma/deerskull/cenas/Main.tscn", "res://microjogos/moraguma/hora_da_necromancia/cenas/Main.tscn", "res://microjogos/moraguma/ifuv/cenas/Main.tscn"]
+	"Moraguma": ["res://microjogos/moraguma/candle prick/cenas/Main.tscn", "res://microjogos/moraguma/deerskull/cenas/Main.tscn", "res://microjogos/moraguma/hora_da_necromancia/cenas/Main.tscn", "res://microjogos/moraguma/ifuv/cenas/Main.tscn"],
+	"test": ["res://microjogos/moraguma/soulchain/cenas/Main.tscn"]
 }
 
 # Removed from Moraguma
@@ -51,4 +52,5 @@ const minigame_data = {
 	"res://microjogos/moraguma/ifuv/cenas/Main.tscn": {"credits": "res://microjogos/moraguma/ifuv/creditos.gd", "cover": "res://microjogos/moraguma/ifuv/capa.png", "difficulty": 0},
 	"res://microjogos/moraguma/soulchain/cenas/Main.tscn": {"credits": "res://microjogos/moraguma/soulchain/creditos.gd", "cover": "res://microjogos/moraguma/soulchain/capa.png", "difficulty": 0},
 	"res://microjogos/moraguma/whale_eater/cenas/Main.tscn": {"credits": "res://microjogos/moraguma/whale_eater/creditos.gd", "cover": "res://microjogos/moraguma/whale_eater/capa.png", "difficulty": 0}
+	
 }

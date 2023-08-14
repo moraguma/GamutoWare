@@ -41,5 +41,5 @@ func _ready():
 	player.set_hanger(hook)
 
 
-func win(body):
+func register_win(body):
 	emit_signal("win")
