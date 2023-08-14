@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://con3bdyv0ce17"]
+[gd_scene load_steps=14 format=3 uid="uid://con3bdyv0ce17"]
 
 [ext_resource type="Texture2D" uid="uid://ckvfrm4qdyxre" path="res://microjogos/moraguma/soulchain/recursos/sprites/BG.png" id="3"]
 [ext_resource type="PackedScene" path="res://microjogos/moraguma/soulchain/cenas/Player.tscn" id="4"]
 [ext_resource type="PackedScene" path="res://microjogos/moraguma/soulchain/cenas/Hook.tscn" id="5"]
+[ext_resource type="Texture2D" uid="uid://bgp8raipl0q08" path="res://microjogos/moraguma/soulchain/recursos/sprites/Light.png" id="5_aaydh"]
 [ext_resource type="Script" path="res://microjogos/moraguma/soulchain/cenas/scripts/Main.gd" id="6"]
 [ext_resource type="Shader" path="res://microjogos/moraguma/soulchain/recursos/shaders/soulfire.gdshader" id="7"]
 [ext_resource type="Texture2D" uid="uid://d30njvkkvwitx" path="res://microjogos/moraguma/soulchain/recursos/sprites/lightpole.png" id="9"]
@@ -59,6 +60,7 @@ color = Color(0.784314, 0.921569, 0.262745, 1)
 [node name="Fire" type="Sprite2D" parent="Goal/LightPole"]
 material = SubResource("2")
 position = Vector2(0, -19)
+texture = ExtResource("5_aaydh")
 
 [node name="Player" parent="." instance=ExtResource("4")]
 position = Vector2(32, 67)
