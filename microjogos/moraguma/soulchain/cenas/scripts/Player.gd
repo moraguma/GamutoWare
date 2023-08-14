@@ -57,8 +57,8 @@ func _physics_process(delta):
 		for i in get_slide_collision_count():
 			var col = get_slide_collision(i)
 			if col.get_collider() is TileMap:
-				if col.get_collider().tile_set.get_physics_layer_collision_layer(1):
-					velocity = col.normal * DEATH_IMPULSE
+				if col.get_collider().tile_set.get_physics_layer_collision_layer(0) == 2:
+					velocity = col.get_normal() * DEATH_IMPULSE
 					alive = false
 					animation_player.play("death")
 		
