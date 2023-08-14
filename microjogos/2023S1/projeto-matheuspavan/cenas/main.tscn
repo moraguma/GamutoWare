@@ -1,8 +1,8 @@
 [gd_scene load_steps=43 format=3 uid="uid://dmaq46tk3gda3"]
 
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto-matheuspavan/cenas/main.gd" id="1_bsl4o"]
-[ext_resource type="Texture2D" uid="uid://bd80osqsfp0sx" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/background.png" id="2_b48cl"]
 [ext_resource type="Texture2D" uid="uid://to2vkigeu2yo" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/personagem/Wizard Pack/Idle.png" id="2_b67wv"]
+[ext_resource type="Texture2D" uid="uid://cursuegf8vrlm" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/parallax-mountain-animX1.png" id="2_mc224"]
 [ext_resource type="Texture2D" uid="uid://hih2qv537bnt" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/lightning-blue-1.png" id="3_h88my"]
 [ext_resource type="Texture2D" uid="uid://bygp6wqeyc7yv" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/livro/book.png" id="4_oorb8"]
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto-matheuspavan/cenas/magia.gd" id="5_p4caa"]
@@ -166,9 +166,10 @@ animations = [{
 script = ExtResource("1_bsl4o")
 
 [node name="background" type="Sprite2D" parent="."]
-position = Vector2(973.343, 540.25)
-scale = Vector2(1.29281, 1.29281)
-texture = ExtResource("2_b48cl")
+texture_filter = 1
+position = Vector2(965, 537)
+scale = Vector2(7.16176, 6.7875)
+texture = ExtResource("2_mc224")
 
 [node name="Camera3D" type="Camera2D" parent="."]
 anchor_mode = 0
@@ -289,6 +290,7 @@ texture = ExtResource("8_fw285")
 script = ExtResource("9_0y78u")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(565, 256)
 rotation = -0.359538
 scale = Vector2(9.17857, 10.5089)
@@ -297,6 +299,7 @@ autoplay = "default"
 frame_progress = 0.88474
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(894, 421)
 rotation = 0.120428
 scale = Vector2(9.17857, 10.5089)
@@ -305,6 +308,7 @@ autoplay = "default"
 frame_progress = 0.88474
 
 [node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(1027, 434)
 rotation = 0.120428
 scale = Vector2(9.17857, 10.5089)
