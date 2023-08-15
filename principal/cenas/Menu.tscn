@@ -114,9 +114,6 @@ theme = ExtResource("8_sosii")
 text = "PT"
 flat = true
 script = ExtResource("8")
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="EN" type="Button" parent="Buttons"]
 offset_left = 1780.0
@@ -129,7 +126,4 @@ theme = ExtResource("8_sosii")
 text = "EN"
 flat = true
 script = ExtResource("8")
-__meta__ = {
-"_edit_use_anchors_": false
-}
 translation_code = 1
