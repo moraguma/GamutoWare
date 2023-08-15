@@ -6,8 +6,7 @@ const minigame_packs = {
 	"Class of 2022": ["res://microjogos/2022S1/baleia/cenas/baleiaGame.tscn", "res://microjogos/2022S1/gamuturai/cenas/main.tscn", "res://microjogos/2022S1/race/cenas/main.tscn"],
 	"Demo": ["res://microjogos/demo/tiro_ao_alvo/cenas/main.tscn", "res://microjogos/demo/frogger/cenas/main.tscn"],
 	"Godotware": ["res://microjogos/godotware/Bang/Main.tscn", "res://microjogos/godotware/Simon/Main.tscn"],
-	"Moraguma": ["res://microjogos/moraguma/candle prick/cenas/Main.tscn", "res://microjogos/moraguma/deerskull/cenas/Main.tscn", "res://microjogos/moraguma/hora_da_necromancia/cenas/Main.tscn", "res://microjogos/moraguma/ifuv/cenas/Main.tscn"],
-	"test": ["res://microjogos/moraguma/soulchain/cenas/Main.tscn"]
+	"Moraguma": ["res://microjogos/moraguma/candle prick/cenas/Main.tscn", "res://microjogos/moraguma/deerskull/cenas/Main.tscn", "res://microjogos/moraguma/hora_da_necromancia/cenas/Main.tscn", "res://microjogos/moraguma/ifuv/cenas/Main.tscn"]
 }
 
 # Removed from Moraguma
