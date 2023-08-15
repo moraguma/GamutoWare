@@ -51,5 +51,4 @@ const minigame_data = {
 	"res://microjogos/moraguma/ifuv/cenas/Main.tscn": {"credits": "res://microjogos/moraguma/ifuv/creditos.gd", "cover": "res://microjogos/moraguma/ifuv/capa.png", "difficulty": 0},
 	"res://microjogos/moraguma/soulchain/cenas/Main.tscn": {"credits": "res://microjogos/moraguma/soulchain/creditos.gd", "cover": "res://microjogos/moraguma/soulchain/capa.png", "difficulty": 0},
 	"res://microjogos/moraguma/whale_eater/cenas/Main.tscn": {"credits": "res://microjogos/moraguma/whale_eater/creditos.gd", "cover": "res://microjogos/moraguma/whale_eater/capa.png", "difficulty": 0}
-	
 }
