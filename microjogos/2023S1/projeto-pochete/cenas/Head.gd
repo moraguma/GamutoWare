@@ -3,6 +3,9 @@ extends Area2D
 var tile_size = 120
 var recently_touched = 0
 var tail_nodes = []
+var first_move = true
+var last_pos = Vector2(720, -960)
+var locked_movement = null
 @onready var ray = $RayCast2D
 @onready var area_ray = get_node("AreaRayCast2D")
 @onready var snake = get_node("../../Snake")
@@ -40,7 +43,11 @@ func check_move(pos, dir, delta):
 	area_ray.target_position = target_pos
 	ray.force_raycast_update()
 	area_ray.force_raycast_update()
+	var over_tail = (area_ray.is_colliding()
+					and area_ray.get_collider() in tail_nodes
+					and area_ray.get_collider() != tail_nodes[-1])
 	return (!ray.is_colliding()
+			and !over_tail
 			and player_pos.x >= 0 and player_pos.y <= 0
 			and player_pos.x <= 120*6 and player_pos.y >= -120*8)
 
@@ -60,35 +67,53 @@ func get_head_rotation(position):
 		return rotations[d]
 	return get_node('Sprite2D').rotation
 
+func move_to(d):
+	if d not in ['direita', 'baixo', 'esquerda', 'cima']: return
+	if check_move(position, inputs[d], tile_size):
+		var new_tail = true
+		var rotate = true
+		var tail = null
+		if tail_nodes:
+			var pos = tail_nodes.find(area_ray.get_collider())
+			if pos == len(tail_nodes) - 1:
+				var aux = tail_nodes.pop_back()
+				aux.queue_free()
+				get_node('Sprite2D').rotation = get_head_rotation(position + inputs[d] * tile_size)
+				new_tail = false
+				rotate = false
+			elif pos > -1:
+				return
+		if new_tail:
+			tail = tail_scene.instantiate()
+			tail.position = position
+		if rotate:
+			get_node('Sprite2D').rotation = rotations[d]
+		position += inputs[d] * tile_size
+		if tail:
+			tail_nodes.append(tail)
+			snake.add_child(tail)
+
 func move():
 	if main.won:
 		return
+	if first_move:
+		first_move = false
+		move_to('cima')
+	if locked_movement:
+		if (check_move(position, inputs[locked_movement], tile_size)
+						and (int(position.x) % 360 != 0
+							or int(position.y) % 360 != -120)):
+			move_to(locked_movement)
+			return
+		else:
+			locked_movement = null
+		
 	var directions = ['direita', 'baixo', 'esquerda', 'cima']
-	var tail = null
 	for d in directions:
 		if Input.is_action_just_pressed(d):
-			if check_move(position, inputs[d], tile_size):
-				var new_tail = true
-				var rotate = true
-				if tail_nodes:
-					var pos = tail_nodes.find(area_ray.get_collider())
-					if pos == len(tail_nodes) - 1:
-						var aux = tail_nodes.pop_back()
-						aux.queue_free()
-						get_node('Sprite2D').rotation = get_head_rotation(position + inputs[d] * tile_size)
-						new_tail = false
-						rotate = false
-					elif pos > -1:
-						break
-				if new_tail:
-					tail = tail_scene.instantiate()
-					tail.position = position
-				if rotate:
-					get_node('Sprite2D').rotation = rotations[d]
-				position += inputs[d] * tile_size
-				if tail:
-					tail_nodes.append(tail)
-					snake.add_child(tail)
+			move_to(d)
+			if position != last_pos:
+				locked_movement = d
 			break
 	
 
