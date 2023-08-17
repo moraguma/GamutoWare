@@ -38,7 +38,7 @@ func _ready():
 	lis_sel = [sel_tec1,sel_tec2,sel_tec3,sel_tec4]
 	while(a==b or a==c or a==d or b==c or b==d or c==d):
 		randomize()
-		a = randi_range(0,25)
+		a = randi_range(0,len(r))
 		A = r[a]
 		b = randi_range(0,r.size()-1)
 		B = r[b]
