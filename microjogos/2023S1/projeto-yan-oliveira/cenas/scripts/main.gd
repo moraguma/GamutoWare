@@ -26,7 +26,6 @@ func _ready():
 			NotificationCenter.notify("EAT THE FLIES!")
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("COMA AS MOSCAS!")
-	get_node("AnimationPlayer").play("anim mosca")
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
