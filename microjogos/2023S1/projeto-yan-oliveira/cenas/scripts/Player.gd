@@ -12,7 +12,7 @@ var mosca
 func _ready():
 	linguada = $Sapo/Linguada
 	lingua = $Sapo/Linguada/LinguaSprite
-	mosca = $Mosca
+	mosca = $"../Mosca"
 
 func _physics_process(delta):
 	rotate(giro)
@@ -21,13 +21,3 @@ func _physics_process(delta):
 		giro = direction * velocidade
 	else:
 		giro = 0
-
-		
-			
-			
-			
-			
-
-
-
-		
