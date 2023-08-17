@@ -294,7 +294,7 @@ collide_with_bodies = false
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_6liii")
-volume_db = 10.0
+volume_db = 24.0
 autoplay = true
 
 [node name="AppleBite" type="AudioStreamPlayer" parent="."]

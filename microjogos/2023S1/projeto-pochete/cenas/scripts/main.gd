@@ -12,7 +12,6 @@ const WIDTH = 1920
 const HEIGHT = 1080
 
 var chosen_apples = []
-var gotten_apples = []
 var won = false
 @onready var snake = get_node("Snake")
 @onready var head = get_node("Snake/Head")
@@ -60,7 +59,6 @@ func _process(delta):
 				head.visible = false
 				for j in range(len(head.tail_nodes)):
 					head.tail_nodes[j].visible = false
-				$Music.stop()
 
 
 # --------------------------------------------------------------------------------------------------
@@ -106,30 +104,26 @@ func register_lose():
 	emit_signal("lose")
 
 
-func _on_head_area_exited(area):
-	if area in chosen_apples:
-		var in_tail = false
-		for tail in head.tail_nodes:
-			if area.overlaps_area(tail):
-				in_tail = true
-				if area not in gotten_apples:
-					gotten_apples.append(area)
-				break
-		if not in_tail:
-			var i = gotten_apples.find(area)
-			if i > -1:
-				gotten_apples.remove_at(i)
-
-
 func _on_head_area_entered(area):
-	if area in chosen_apples + [final_apple] and area not in gotten_apples:
+	if area in chosen_apples + [final_apple]:
 		$AppleBite.play()
-	if area == final_apple and len(gotten_apples) == 2:
-		register_win()
-		won = true
-		won_i = len(head.tail_nodes)
-		#head.tail_nodes[-1].position = head.position
-		for j in range(won_i - 1):
-			head.tail_nodes[j].position = head.tail_nodes[j+1].position
-		for apple in chosen_apples + [final_apple]:
-			apple.visible = false
+	if area == final_apple:
+		var apple_count = [false, false]
+		var win = false
+		for tail in head.tail_nodes:
+			for i in [0, 1]:
+				if chosen_apples[i].overlaps_area(tail):
+					apple_count[i] = true
+					break
+			if apple_count == [true, true]:
+				win = true
+				break
+		if win:
+			register_win()
+			won = true
+			won_i = len(head.tail_nodes)
+			#head.tail_nodes[-1].position = head.position
+			for j in range(won_i - 1):
+				head.tail_nodes[j].position = head.tail_nodes[j+1].position
+			for apple in chosen_apples + [final_apple]:
+				apple.visible = false
