@@ -24,7 +24,7 @@ func _ready():
 		Global.LANGUAGE.EN:
 			NotificationCenter.notify("DO SOMETHING!")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FACA ALGO!")
+			NotificationCenter.notify("Ache a criança")
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
