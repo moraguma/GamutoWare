@@ -150,7 +150,6 @@ func pode_mover(movimento):
 
 # Chame esta função para registrar que o jogador venceu o jogo
 func register_win():
-	NotificationCenter.notify("Você ganhou!")
 	mostrar_frutas()
 	emit_signal("win")
 
@@ -174,7 +173,6 @@ func mostrar_frutas():
 	
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
-	NotificationCenter.notify("Você perdeu!")
 	mostrar_frutas()
 	emit_signal("lose")
 
