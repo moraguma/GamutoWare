@@ -10,28 +10,7 @@ signal lose
 # 16:9
 const WIDTH = 1920
 const HEIGHT = 1080
-@onready var canos = [
-	$Node2D/Cano1,
-	$Node2D/Cano2,
-	$Node2D/Cano3,
-	$Node2D/Cano4,
-	$Node2D/Cano5,
-	$Node2D/Cano6,
-	$Node2D/Cano7,
-	$Node2D/Cano8,
-	$Node2D/Cano9,
-	$Node2D/Cano10,
-	$Node2D/Cano11,
-	$Node2D/Cano12,
-	$Node2D/Cano13,
-	$Node2D/Cano14,
-	$Node2D/Cano15,
-	$Node2D/Cano16,
-	$Node2D/Cano17,
-	$Node2D/Cano18,
-	$Node2D/Cano19,
-]
-var rot_canos_vitoria = [0, 0, 0, 0, 180, 90, 90, 90, 0, 0, 0, 270, 90, 0, 0, 0, 180, 90, 0]
+
 
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES PADRÃO
@@ -43,14 +22,11 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("COOL THE POWER PLANT!")
+			NotificationCenter.notify("DO SOMETHING!")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("RESFRIE O GERADOR!")
-	var escolha_canos1 = (randi() % 9) + 1
-	var escolha_canos2 = (randi() % 10) + 10
-	canos[escolha_canos1].rotation_degrees =+ 90
-	canos[escolha_canos2].rotation_degrees =+ 90
-	
+			NotificationCenter.notify("FACA ALGO!")
+
+
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
 # a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
 # a última chamada desta função. O comando pass não faz nada
@@ -87,21 +63,9 @@ func my_method():
 
 # Chame esta função para registrar que o jogador venceu o jogo
 func register_win():
-	var rot_canos_final = []
-	for cano in canos:
-		rot_canos_final.append(int(round(cano.rotation_degrees)))
-		print(rot_canos_final)
-	print(rot_canos_vitoria)
-	if rot_canos_vitoria == rot_canos_final:
-		emit_signal("win")
-		print("ganhou")
+	emit_signal("win")
 
 
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
 	emit_signal("lose")
-
-
-func _on_timer_timeout(): 
-	register_win()
-	pass # Replace with function body.
