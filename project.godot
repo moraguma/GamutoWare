@@ -12,7 +12,7 @@ config_version=5
 
 config/name="GamutoWare"
 run/main_scene="res://principal/cenas/Opening.tscn"
-config/features=PackedStringArray("4.1")
+config/features=PackedStringArray("4.2")
 config/icon="res://icon.png"
 
 [autoload]
@@ -26,6 +26,7 @@ SoundController="*res://principal/cenas/autoloads/SoundController.tscn"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=3
 window/size/window_width_override=960
 window/size/window_height_override=540
 window/stretch/mode="viewport"

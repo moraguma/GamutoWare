@@ -1,10 +1,10 @@
 extends Node
 
 
-@export (PackedScene) var LightScene
+@export var LightScene: PackedScene
 
 
-@export (Vector2) var extra = Vector2(0, 0)
+@export var extra = Vector2(0, 0)
 
 
 func _ready():

@@ -1,15 +1,16 @@
 extends Sprite2D
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
+var velocity = Vector2(0, 0)
+
+
 func _physics_process(delta):
-	var velocity = Vector2.UP.rotated(rotation) * speed
-	position += velocity * delta
-	if Input.action_press("direita"):
+	if Input.is_action_just_pressed("direita"):
 		velocity.x = 200
-	if Input.action_press("esquerda"):
+	if Input.is_action_just_pressed("esquerda"):
 		velocity.x = -200
 	else :
 		velocity.x = 0
+	
+	position += velocity * delta
 	
