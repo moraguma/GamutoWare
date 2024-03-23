@@ -45,12 +45,26 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	position = current_cell.position
-	if counter % 4 == 0:
-		move_right()
-	if counter % 4 == 1:
-		move_down()
-	if counter % 4 == 2:
-		move_left()
-	if counter % 4 == 3:
-		move_up()
-	counter += 1
+	#if counter % 4 == 0:
+		#move_right()
+	#if counter % 4 == 1:
+		#move_down()
+	#if counter % 4 == 2:
+		#move_left()
+	#if counter % 4 == 3:
+		#move_up()
+	#counter += 1
+
+func _on_control_xxxx():
+	pass # Replace with function body.
+
+func _on_control_right_pressed():
+	move_right()
+func _on_control_left_pressed():
+	move_left()
+func _on_control_up_pressed():
+	move_up()
+func _on_control_down_pressed():
+	move_down()
+func _on_control_space_pressed():
+	print("acao handled in cursor with no effect")

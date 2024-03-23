@@ -161,10 +161,17 @@ texture = ExtResource("1_t7i6h")
 position = Vector2(1359, 421)
 scale = Vector2(5, 5)
 script = ExtResource("3_lmjue")
-current_cell = NodePath("../area_cell_0")
+current_cell = NodePath("../area_cell_4")
 
 [node name="Cursor" type="CollisionShape2D" parent="cursor_area"]
 scale = Vector2(1, 1)
 
 [node name="CursorSprite" type="Sprite2D" parent="cursor_area/Cursor"]
 texture = ExtResource("2_rqx57")
+
+[connection signal="down_pressed" from="Control" to="cursor_area" method="_on_control_down_pressed"]
+[connection signal="left_pressed" from="Control" to="cursor_area" method="_on_control_left_pressed"]
+[connection signal="right_pressed" from="Control" to="cursor_area" method="_on_control_right_pressed"]
+[connection signal="space_pressed" from="Control" to="cursor_area" method="_on_control_space_pressed"]
+[connection signal="up_pressed" from="Control" to="cursor_area" method="_on_control_up_pressed"]
+[connection signal="xxxx" from="Control" to="cursor_area" method="_on_control_xxxx"]
