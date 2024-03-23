@@ -1,3 +1,51 @@
-[gd_scene format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=5 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="Texture2D" uid="uid://dl04o0thuwsom" path="res://teatro.png" id="1_yor8m"]
+[ext_resource type="Texture2D" uid="uid://kcf87b0m2css" path="res://guitarra.png" id="2_5rr6o"]
+[ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="2_b1u3k"]
+[ext_resource type="Texture2D" uid="uid://b5a330dib1riv" path="res://seta.png" id="4_joihy"]
 
 [node name="Main" type="Node2D"]
+
+[node name="Backgound2D" type="Sprite2D" parent="."]
+position = Vector2(1450, 1040.75)
+scale = Vector2(7.9, 7.73889)
+texture = ExtResource("1_yor8m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound2D"]
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(1878.1, 1409.9)
+rotation = 1.5708
+scale = Vector2(0.328847, 0.290765)
+texture = ExtResource("2_5rr6o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1475, 919.75)
+scale = Vector2(9.07812, 7.84375)
+texture = ExtResource("2_b1u3k")
+
+[node name="Direita" type="Sprite2D" parent="."]
+position = Vector2(2506, 680.75)
+rotation = 3.14159
+scale = Vector2(0.525, 0.55873)
+texture = ExtResource("4_joihy")
+
+[node name="Esquerda" type="Sprite2D" parent="."]
+position = Vector2(2111, 673.75)
+scale = Vector2(0.511667, 0.55873)
+texture = ExtResource("4_joihy")
+
+[node name="Cima" type="Sprite2D" parent="."]
+position = Vector2(2311.91, 383.132)
+rotation = 1.5708
+scale = Vector2(0.603971, 0.534806)
+texture = ExtResource("4_joihy")
+
+[node name="Baixo" type="Sprite2D" parent="."]
+position = Vector2(2321.02, 968.259)
+rotation = 4.71239
+scale = Vector2(0.568495, 0.635345)
+texture = ExtResource("4_joihy")
+
+[node name="Setas" type="Sprite2D" parent="."]

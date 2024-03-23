@@ -1,1 +1,4 @@
-Coloque seus scripts aqui!
+
+var velocity := Vector2()
+
+velocity.x = input.get_action_strength("Direita")
