@@ -1,3 +1,34 @@
-[gd_scene format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=6 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="Texture2D" uid="uid://djbi3hspbid5l" path="res://boxring.jpg" id="1_iwpm8"]
+[ext_resource type="Texture2D" uid="uid://1g4vvc58a5bx" path="res://sport-3414790_1280.png" id="2_e8cxm"]
+[ext_resource type="Texture2D" uid="uid://dg1oqcgubi0nn" path="res://pitching-1383111_1280.png" id="3_8kf0i"]
+[ext_resource type="Texture2D" uid="uid://do6e2v8s8oi35" path="res://580b585b2edbce24c47b2ae8.png" id="4_006eu"]
+[ext_resource type="Texture2D" uid="uid://doawh4lhqb3rc" path="res://reverse glove-1.png.png" id="5_ec5yx"]
 
 [node name="Main" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(959, 539)
+scale = Vector2(1.28067, 1.007)
+texture = ExtResource("1_iwpm8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(-5.46597, 417.079)
+scale = Vector2(1.36917, 1.43302)
+texture = ExtResource("2_e8cxm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(952.291, 190.844)
+scale = Vector2(0.333232, 0.270557)
+texture = ExtResource("3_8kf0i")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(1435, 586)
+scale = Vector2(1.16188, 1.12762)
+texture = ExtResource("4_006eu")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(483, 572)
+scale = Vector2(1.23438, 1.14071)
+texture = ExtResource("5_ec5yx")
