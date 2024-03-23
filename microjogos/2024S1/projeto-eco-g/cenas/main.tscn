@@ -1,3 +1,38 @@
-[gd_scene format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=2 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="PackedScene" uid="uid://c101tbn8wn1uo" path="res://microjogos/2024S1/projeto-eco-g/cenas/character_body_2d.tscn" id="1_ssn2e"]
 
 [node name="Main" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="CharacterBody2D" parent="Node2D" instance=ExtResource("1_ssn2e")]
+position = Vector2(144, 518)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="Node2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/RigidBody2D"]
+polygon = PackedVector2Array(0, 0, 89, 69, 133, 157, 162, 271, 212, 313, 286, 271, 343, 155, 419, 57, 530, 0)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Node2D/RigidBody2D"]
+position = Vector2(530, 1080)
+rotation = -3.14159
+polygon = PackedVector2Array(0, 0, 89, 69, 133, 157, 162, 271, 212, 313, 286, 271, 343, 155, 419, 57, 530, 0)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Node2D/RigidBody2D"]
+position = Vector2(1000, 1080)
+rotation = -3.14159
+polygon = PackedVector2Array(0, 0, 89, 69, 91.0001, 182, 162, 271, 225, 436, 312, 328, 343, 155, 421, 75.9999, 530, 0)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Node2D/RigidBody2D"]
+position = Vector2(1407, 1080)
+rotation = -3.14159
+polygon = PackedVector2Array(0, 0, 101, 44, 96, 171, 167, 233, 212, 313, 286, 271, 343, 155, 419, 57, 530, 0)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Node2D/RigidBody2D"]
+position = Vector2(729, 0)
+polygon = PackedVector2Array(-63, 0, 55, 103, 99, 210, 166, 346, 269, 390, 290, 249, 370, 157, 419, 57, 530, 0)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Node2D/RigidBody2D"]
+position = Vector2(330, 0)
+polygon = PackedVector2Array(0, 0, 89, 69, 133, 157, 198, 251, 241, 344, 338, 264, 371, 151, 419, 57, 530, 0)

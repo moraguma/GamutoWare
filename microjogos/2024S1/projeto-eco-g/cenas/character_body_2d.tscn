@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c101tbn8wn1uo"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-eco-g/cenas/character_body_2d.gd" id="1_wfdvr"]
+[ext_resource type="Texture2D" uid="uid://coshisyc4u0ra" path="res://microjogos/2024S1/projeto-eco-g/recursos/sprites/gamux.png" id="2_lmxwt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lqx7q"]
+radius = 47.0
+
+[node name="Gamuto" type="CharacterBody2D"]
+position = Vector2(381, 568)
+motion_mode = 1
+script = ExtResource("1_wfdvr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.19209e-07, 7.10543e-15)
+scale = Vector2(1.95312, 1.95312)
+texture = ExtResource("2_lmxwt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(17, 30)
+shape = SubResource("CircleShape2D_lqx7q")
+one_way_collision_margin = 108.0
