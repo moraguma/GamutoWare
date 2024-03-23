@@ -1,10 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=6 format=3 uid="uid://bi0ahd7cv37i6"]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/Control.gd" id="1_8ao43"]
 [ext_resource type="Texture2D" uid="uid://bncdfg5hsd7l" path="res://microjogos/2024S1/projeto_felipe_onorio/recursos/placeholder_B_32x32.png" id="1_t7i6h"]
 [ext_resource type="Texture2D" uid="uid://b5ed1n5o5u3hm" path="res://microjogos/2024S1/projeto_felipe_onorio/recursos/placeholder_cursor_32x32.png" id="2_rqx57"]
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/cursor_area.gd" id="3_lmjue"]
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/area_cell_0.gd" id="5_n4jon"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hoh22"]
 
@@ -34,11 +32,9 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_8ao43")
 
-[node name="area_cell_0" type="Area2D" parent="." node_paths=PackedStringArray("right_neighbor", "down_neighbor")]
+[node name="area_cell_0" type="Area2D" parent="."]
 position = Vector2(703, 291)
 script = SubResource("GDScript_3hmj7")
-right_neighbor = NodePath("../area_cell_1")
-down_neighbor = NodePath("../area_cell_3")
 
 [node name="Cell_0_hitbox" type="CollisionShape2D" parent="area_cell_0"]
 
@@ -47,12 +43,8 @@ position = Vector2(1, 3.99999)
 scale = Vector2(5, 5)
 texture = ExtResource("1_t7i6h")
 
-[node name="area_cell_1" type="Area2D" parent="." node_paths=PackedStringArray("right_neighbor", "left_neighbor", "down_neighbor")]
+[node name="area_cell_1" type="Area2D" parent="."]
 position = Vector2(894, 288)
-script = ExtResource("5_n4jon")
-right_neighbor = NodePath("../area_cell_2")
-left_neighbor = NodePath("../area_cell_0")
-down_neighbor = NodePath("../area_cell_4")
 
 [node name="Cell_0_hitbox" type="CollisionShape2D" parent="area_cell_1"]
 
@@ -61,11 +53,18 @@ position = Vector2(1, 3.99999)
 scale = Vector2(5, 5)
 texture = ExtResource("1_t7i6h")
 
-[node name="area_cell_2" type="Area2D" parent="." node_paths=PackedStringArray("left_neighbor", "down_neighbor")]
+[node name="cursor_area" type="Area2D" parent="."]
+position = Vector2(1359, 421)
+scale = Vector2(5, 5)
+
+[node name="Cursor" type="CollisionShape2D" parent="cursor_area"]
+scale = Vector2(1, 1)
+
+[node name="CursorSprite" type="Sprite2D" parent="cursor_area/Cursor"]
+texture = ExtResource("2_rqx57")
+
+[node name="area_cell_2" type="Area2D" parent="."]
 position = Vector2(1076, 288)
-script = ExtResource("5_n4jon")
-left_neighbor = NodePath("../area_cell_1")
-down_neighbor = NodePath("../area_cell_5")
 
 [node name="Cell_0_hitbox" type="CollisionShape2D" parent="area_cell_2"]
 
@@ -74,12 +73,8 @@ position = Vector2(1, 3.99999)
 scale = Vector2(5, 5)
 texture = ExtResource("1_t7i6h")
 
-[node name="area_cell_3" type="Area2D" parent="." node_paths=PackedStringArray("right_neighbor", "up_neighbor", "down_neighbor")]
+[node name="area_cell_3" type="Area2D" parent="."]
 position = Vector2(705, 480)
-script = ExtResource("5_n4jon")
-right_neighbor = NodePath("../area_cell_4")
-up_neighbor = NodePath("../area_cell_0")
-down_neighbor = NodePath("../area_cell_6")
 
 [node name="Cell_0_hitbox" type="CollisionShape2D" parent="area_cell_3"]
 
@@ -88,13 +83,8 @@ position = Vector2(1, 3.99999)
 scale = Vector2(5, 5)
 texture = ExtResource("1_t7i6h")
 
-[node name="area_cell_4" type="Area2D" parent="." node_paths=PackedStringArray("right_neighbor", "left_neighbor", "up_neighbor", "down_neighbor")]
+[node name="area_cell_4" type="Area2D" parent="."]
 position = Vector2(896, 477)
-script = ExtResource("5_n4jon")
-right_neighbor = NodePath("../area_cell_5")
-left_neighbor = NodePath("../area_cell_3")
-up_neighbor = NodePath("../area_cell_1")
-down_neighbor = NodePath("../area_cell_7")
 
 [node name="Cell_0_hitbox" type="CollisionShape2D" parent="area_cell_4"]
 
@@ -103,12 +93,8 @@ position = Vector2(1, 3.99999)
 scale = Vector2(5, 5)
 texture = ExtResource("1_t7i6h")
 
-[node name="area_cell_5" type="Area2D" parent="." node_paths=PackedStringArray("left_neighbor", "up_neighbor", "down_neighbor")]
+[node name="area_cell_5" type="Area2D" parent="."]
 position = Vector2(1078, 477)
-script = ExtResource("5_n4jon")
-left_neighbor = NodePath("../area_cell_4")
-up_neighbor = NodePath("../area_cell_2")
-down_neighbor = NodePath("../area_cell_8")
 
 [node name="Cell_0_hitbox" type="CollisionShape2D" parent="area_cell_5"]
 
@@ -117,11 +103,8 @@ position = Vector2(1, 3.99999)
 scale = Vector2(5, 5)
 texture = ExtResource("1_t7i6h")
 
-[node name="area_cell_6" type="Area2D" parent="." node_paths=PackedStringArray("right_neighbor", "up_neighbor")]
+[node name="area_cell_6" type="Area2D" parent="."]
 position = Vector2(707, 669)
-script = ExtResource("5_n4jon")
-right_neighbor = NodePath("../area_cell_7")
-up_neighbor = NodePath("../area_cell_3")
 
 [node name="Cell_0_hitbox" type="CollisionShape2D" parent="area_cell_6"]
 
@@ -130,12 +113,8 @@ position = Vector2(1, 3.99999)
 scale = Vector2(5, 5)
 texture = ExtResource("1_t7i6h")
 
-[node name="area_cell_7" type="Area2D" parent="." node_paths=PackedStringArray("right_neighbor", "left_neighbor", "up_neighbor")]
+[node name="area_cell_7" type="Area2D" parent="."]
 position = Vector2(898, 666)
-script = ExtResource("5_n4jon")
-right_neighbor = NodePath("../area_cell_8")
-left_neighbor = NodePath("../area_cell_6")
-up_neighbor = NodePath("../area_cell_4")
 
 [node name="Cell_0_hitbox" type="CollisionShape2D" parent="area_cell_7"]
 
@@ -144,11 +123,8 @@ position = Vector2(1, 3.99999)
 scale = Vector2(5, 5)
 texture = ExtResource("1_t7i6h")
 
-[node name="area_cell_8" type="Area2D" parent="." node_paths=PackedStringArray("left_neighbor", "up_neighbor")]
+[node name="area_cell_8" type="Area2D" parent="."]
 position = Vector2(1080, 666)
-script = ExtResource("5_n4jon")
-left_neighbor = NodePath("../area_cell_7")
-up_neighbor = NodePath("../area_cell_5")
 
 [node name="Cell_0_hitbox" type="CollisionShape2D" parent="area_cell_8"]
 
@@ -156,15 +132,3 @@ up_neighbor = NodePath("../area_cell_5")
 position = Vector2(1, 3.99999)
 scale = Vector2(5, 5)
 texture = ExtResource("1_t7i6h")
-
-[node name="cursor_area" type="Area2D" parent="." node_paths=PackedStringArray("current_cell")]
-position = Vector2(1359, 421)
-scale = Vector2(5, 5)
-script = ExtResource("3_lmjue")
-current_cell = NodePath("../area_cell_0")
-
-[node name="Cursor" type="CollisionShape2D" parent="cursor_area"]
-scale = Vector2(1, 1)
-
-[node name="CursorSprite" type="Sprite2D" parent="cursor_area/Cursor"]
-texture = ExtResource("2_rqx57")

@@ -31,6 +31,7 @@ func _ready():
 # a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
 # a última chamada desta função. O comando pass não faz nada
 func _physics_process(delta):
+
 	pass
 
 
@@ -38,6 +39,10 @@ func _physics_process(delta):
 # como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
 # desde a última chamada desta função. O comando pass não faz nada
 func _process(delta):
+	#var direction = 0
+	#if Input.is_action_pressed("ui_left"):
+		#direction = -1
+	#$Cell_0.
 	pass
 
 
