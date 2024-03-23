@@ -19,14 +19,8 @@ var hanger = null
 var alive = true
 var was_on_floor = false
 
-
-var velocity = Vector2(0, 0)
-
-
 @onready var animation_player = $AnimationPlayer
 @onready var jump_sound = $JumpSound
-
-
 
 func _physics_process(delta):
 	if is_hanging:
@@ -52,7 +46,7 @@ func _physics_process(delta):
 		else:
 			velocity += FREE_GRAVITY * delta
 			if is_on_floor():
-				velocity = Vector2(lerp(velocity[0], MOVE_SPEED, ACCELERATION), velocity[1])
+				velocity.x = lerpf(velocity[0], MOVE_SPEED, ACCELERATION)
 		set_velocity(velocity)
 		set_up_direction(Vector2(0, -1))
 		move_and_slide()
@@ -62,10 +56,11 @@ func _physics_process(delta):
 		
 		for i in get_slide_collision_count():
 			var col = get_slide_collision(i)
-			if col.collider.get_collision_layer_value(1):
-				velocity = col.normal * DEATH_IMPULSE
-				alive = false
-				animation_player.play("death")
+			if col.get_collider() is TileMap:
+				if col.get_collider().tile_set.get_physics_layer_collision_layer(0) == 2:
+					velocity = col.get_normal() * DEATH_IMPULSE
+					alive = false
+					animation_player.play("death")
 		
 	else:
 		velocity = velocity.lerp(Vector2(0, 0), DAMPENING)

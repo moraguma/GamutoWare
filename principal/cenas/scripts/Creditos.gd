@@ -16,7 +16,7 @@ var last_focus
 var aim_pos = MINIGAMES_POS
 
 
-@onready var minigame_data = preload("res://principal/recursos/data/Minigames.gd").new()
+@onready var minigame_data = preload("res://principal/recursos/data/Minigames.gd").new().minigame_data
 @onready var credits = $Credits
 @onready var minigames_container = $Credits/Minigames/MinigameControl/Minigames/GridContainer
 @onready var menu_button = $Credits/Minigames/Menu
@@ -28,13 +28,13 @@ var aim_pos = MINIGAMES_POS
 
 
 func _ready():
-	for minigame in minigame_data.credit_paths:
+	for minigame in minigame_data:
 		var new_cover_button = CoverButton.instantiate()
 		var active = Global.check_minigame(minigame)
 		new_cover_button.load_button(active, minigame, self)
 		
 		if active:
-			new_cover_button.load_cover(load(minigame_data.cover_paths[minigame]))
+			new_cover_button.load_cover(load(minigame_data[minigame]["cover"]))
 		else: 
 			new_cover_button.load_cover(LOCKED_COVER)
 		
@@ -82,9 +82,9 @@ func detail(path, button):
 	
 	SoundController.play_sfx("click")
 	
-	cover.texture = load(minigame_data.cover_paths[path])
+	cover.texture = load(minigame_data[path]["cover"])
 	
-	var credits_data = load(minigame_data.credit_paths[path]).new()
+	var credits_data = load(minigame_data[path]["credits"]).new()
 	
 	match Global.language:
 		Global.LANGUAGE.PT:

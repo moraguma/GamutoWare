@@ -1,10 +1,11 @@
-[gd_resource type="Theme" load_steps=11 format=3 uid="uid://dt5djib7huxvm"]
+[gd_resource type="Theme" load_steps=12 format=3 uid="uid://dt5djib7huxvm"]
 
 [ext_resource type="FontFile" uid="uid://blcw2hkcbcxid" path="res://principal/recursos/fonts/Stop Bullying.otf" id="1"]
+[ext_resource type="StyleBox" uid="uid://b6essgcuagn6o" path="res://principal/recursos/themes/ButtonStyleBox.tres" id="1_d4rdk"]
 [ext_resource type="Texture2D" uid="uid://cip186bal41rd" path="res://principal/recursos/sprites/toggle_checked.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://v1y6bapablah" path="res://principal/recursos/sprites/toggle_unchecked.png" id="3"]
 
-[sub_resource type="StyleBoxEmpty" id="6"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7ltdf"]
 
 [sub_resource type="StyleBoxFlat" id="8"]
 bg_color = Color(0.952941, 0.913725, 0.976471, 1)
@@ -47,9 +48,6 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="FontFile" id="7"]
 fallbacks = Array[Font]([ExtResource("1")])
-face_index = null
-embolden = null
-transform = null
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -144,10 +142,10 @@ Button/colors/font_color_hover = Color(0.615686, 0, 1, 1)
 Button/colors/font_focus_color = Color(0.615686, 0, 1, 1)
 Button/colors/font_hover_color = Color(0.615686, 0, 1, 1)
 Button/colors/font_hover_pressed_color = Color(0.615686, 0, 1, 1)
-Button/colors/font_outline_color = Color(0.172549, 0.141176, 0.207843, 1)
+Button/colors/font_outline_color = Color(0.171875, 0.140625, 0.207031, 1)
 Button/constants/outline_size = 48
 Button/font_sizes/font_size = 64
-Button/styles/focus = SubResource("6")
+Button/styles/focus = SubResource("StyleBoxEmpty_7ltdf")
 CheckBox/colors/font_color_focus = Color(0.615686, 0, 1, 1)
 CheckBox/colors/font_color_focus_pressed = Color(0.615686, 0, 1, 1)
 CheckBox/colors/font_color_hover = Color(0.615686, 0, 1, 1)
@@ -157,11 +155,12 @@ CheckBox/colors/font_focus_color = Color(0.615686, 0, 1, 1)
 CheckBox/colors/font_hover_color = Color(0.615686, 0, 1, 1)
 CheckBox/colors/font_hover_pressed_color = Color(0.615686, 0, 1, 1)
 CheckBox/colors/font_outline_color = Color(0.172549, 0.141176, 0.207843, 1)
-CheckBox/colors/font_pressed_color = Color(0.615686, 0, 1, 1)
+CheckBox/colors/font_pressed_color = Color(0.952941, 0.545098, 0.976471, 0.588235)
 CheckBox/constants/hseparation = 24
 CheckBox/constants/outline_size = 32
 CheckBox/icons/checked = ExtResource("2")
 CheckBox/icons/unchecked = ExtResource("3")
+CheckBox/styles/focus = ExtResource("1_d4rdk")
 HBoxContainer/constants/separation = 64
 RichTextLabel/colors/font_outline_color = Color(0.172549, 0.141176, 0.207843, 1)
 RichTextLabel/constants/outline_size = 32

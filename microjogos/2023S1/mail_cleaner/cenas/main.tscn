@@ -1,0 +1,162 @@
+[gd_scene load_steps=12 format=3 uid="uid://bwf53xp28gd35"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/mail_cleaner/cenas/scripts/main.gd" id="1_kyp7x"]
+[ext_resource type="PackedScene" uid="uid://dsxm54jv86dym" path="res://microjogos/2023S1/mail_cleaner/cenas/phone.tscn" id="2_mtjul"]
+[ext_resource type="Texture2D" uid="uid://dmjekwn4tcfj8" path="res://microjogos/2023S1/mail_cleaner/recursos/sprites/back.png" id="2_ti7tx"]
+[ext_resource type="Texture2D" uid="uid://cl8qlp3u2kext" path="res://microjogos/2023S1/mail_cleaner/recursos/sprites/right.png" id="4_vmscg"]
+[ext_resource type="Texture2D" uid="uid://bkoi55ua02wkd" path="res://microjogos/2023S1/mail_cleaner/recursos/sprites/wrong.png" id="5_6vicc"]
+[ext_resource type="AudioStream" uid="uid://6tadw1qaxl65" path="res://microjogos/2023S1/mail_cleaner/recursos/sounds/bossa-lounge-159715.ogg" id="6_cxdmi"]
+[ext_resource type="AudioStream" uid="uid://d1gkgjwwjtdy0" path="res://microjogos/2023S1/mail_cleaner/recursos/sounds/record_scratch-108233.mp3" id="7_7gcfo"]
+[ext_resource type="AudioStream" uid="uid://dijcg3et2c13t" path="res://microjogos/2023S1/mail_cleaner/recursos/sounds/mixkit-small-hit-in-a-game-2072.wav" id="8_thm37"]
+
+[sub_resource type="Animation" id="Animation_gt1yq"]
+resource_name = "background_movement"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.0566683, 0.0608523, -0.0103884]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(18, 18), Vector2(25.119, 25.119)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Right:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(350, 540), Vector2(350, 580)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Wrong:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1580, 540), Vector2(1580, 580)]
+}
+
+[sub_resource type="Animation" id="Animation_gr1bg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.0566683]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(18, 18)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Right:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(350, 540)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Wrong:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1580, 540)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vn30i"]
+_data = {
+"RESET": SubResource("Animation_gr1bg"),
+"background_movement": SubResource("Animation_gt1yq")
+}
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_kyp7x")
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.580392, 0.580392, 0.580392, 1)
+texture_filter = 2
+position = Vector2(980, 570)
+rotation = -0.0566683
+scale = Vector2(18, 18)
+texture = ExtResource("2_ti7tx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Background"]
+speed_scale = 0.25
+libraries = {
+"": SubResource("AnimationLibrary_vn30i")
+}
+
+[node name="Phone" parent="." instance=ExtResource("2_mtjul")]
+position = Vector2(726, 121)
+
+[node name="Right" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(350, 540)
+scale = Vector2(10, 10)
+texture = ExtResource("4_vmscg")
+
+[node name="Wrong" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1580, 540)
+scale = Vector2(10, 10)
+texture = ExtResource("5_6vicc")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_cxdmi")
+autoplay = true
+
+[node name="Scratch" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_7gcfo")
+
+[node name="Hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_thm37")
+volume_db = -2.0

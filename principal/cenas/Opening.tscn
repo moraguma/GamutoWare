@@ -7,9 +7,6 @@
 
 [sub_resource type="FontFile" id="1"]
 fallbacks = Array[Font]([ExtResource("1")])
-face_index = null
-embolden = null
-transform = null
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -192,11 +189,9 @@ bbcode_enabled = true
 text = "[center][wave]@moraguma"
 
 [node name="Logo" type="Sprite2D" parent="."]
-position = Vector2(960, 404)
 texture = ExtResource("2")
 
 [node name="Gamux" type="Sprite2D" parent="."]
-position = Vector2(960, 704)
 texture = ExtResource("3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

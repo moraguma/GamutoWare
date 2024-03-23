@@ -1,0 +1,209 @@
+[gd_scene load_steps=27 format=3 uid="uid://po8vn66jxlsb"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-tiagoperrupato/cenas/scripts/main.gd" id="1_hgnl4"]
+[ext_resource type="Texture2D" uid="uid://d0l14csrhiv4l" path="res://microjogos/2023S1/projeto-tiagoperrupato/recursos/rua.png" id="2_1u4oe"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-tiagoperrupato/cenas/scripts/Jogador.gd" id="3_exa5e"]
+[ext_resource type="Texture2D" uid="uid://cq027ahf7xtnu" path="res://microjogos/2023S1/projeto-tiagoperrupato/recursos/Porsche 911 Carrera 1998.png" id="4_orguo"]
+[ext_resource type="Texture2D" uid="uid://cf3q5aphdde13" path="res://microjogos/2023S1/projeto-tiagoperrupato/recursos/carro3.png" id="4_v7l48"]
+[ext_resource type="Texture2D" uid="uid://ctnryy54g23po" path="res://microjogos/2023S1/projeto-tiagoperrupato/recursos/moto1.png" id="5_al4rc"]
+[ext_resource type="Texture2D" uid="uid://gmmy7hfehgws" path="res://microjogos/2023S1/projeto-tiagoperrupato/recursos/explosion.png" id="5_ficf5"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-tiagoperrupato/cenas/scripts/Veiculos.gd" id="5_kapmk"]
+[ext_resource type="Texture2D" uid="uid://blf4kqy73b51a" path="res://microjogos/2023S1/projeto-tiagoperrupato/recursos/car-truck2.png" id="9_ipvil"]
+[ext_resource type="Texture2D" uid="uid://bawmt3m2qc68k" path="res://microjogos/2023S1/projeto-tiagoperrupato/recursos/carro2.png" id="10_td3ja"]
+[ext_resource type="Texture2D" uid="uid://jkmmah54l2s7" path="res://microjogos/2023S1/projeto-tiagoperrupato/recursos/car-truck4.png" id="11_iie22"]
+[ext_resource type="Texture2D" uid="uid://b4ld3kfytxogw" path="res://microjogos/2023S1/projeto-tiagoperrupato/recursos/car-truck3.png" id="12_d0bag"]
+[ext_resource type="AudioStream" uid="uid://qacbbpw4thjv" path="res://microjogos/2023S1/projeto-tiagoperrupato/recursos/gatve Varniu.ogg" id="13_3d6um"]
+[ext_resource type="Texture2D" uid="uid://4u1gbmtid0d8" path="res://microjogos/2023S1/projeto-tiagoperrupato/recursos/car-truck5.png" id="13_ljev4"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-tiagoperrupato/cenas/scripts/musica-trafico.gd" id="14_7qofw"]
+[ext_resource type="AudioStream" uid="uid://8piyj5nc81fv" path="res://microjogos/2023S1/projeto-tiagoperrupato/recursos/explosion.wav" id="15_trkbh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hune0"]
+size = Vector2(270, 105)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7k7nf"]
+size = Vector2(1920, 101)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r2wdw"]
+size = Vector2(1920, 104)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0mymo"]
+size = Vector2(168, 384)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ntidd"]
+size = Vector2(240, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vdcth"]
+size = Vector2(400, 184)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mj80g"]
+size = Vector2(336, 144)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vl0cq"]
+size = Vector2(640, 224)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2jgb"]
+size = Vector2(360, 152)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrxgi"]
+size = Vector2(776, 192)
+
+[node name="Main" type="Node2D"]
+position = Vector2(960, 544)
+script = ExtResource("1_hgnl4")
+
+[node name="Camera" type="Camera2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="Rua" type="Sprite2D" parent="."]
+texture = ExtResource("2_1u4oe")
+metadata/_edit_lock_ = true
+
+[node name="Jogador" type="CharacterBody2D" parent="."]
+position = Vector2(-784, -8)
+script = ExtResource("3_exa5e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jogador"]
+position = Vector2(3, 0.5)
+shape = SubResource("RectangleShape2D_hune0")
+metadata/_edit_lock_ = true
+
+[node name="FotoCarro" type="Sprite2D" parent="Jogador"]
+position = Vector2(6.10352e-05, 0)
+rotation = 3.14159
+scale = Vector2(0.703676, 0.763366)
+texture = ExtResource("4_orguo")
+metadata/_edit_lock_ = true
+
+[node name="Explosao" type="Sprite2D" parent="Jogador"]
+visible = false
+scale = Vector2(7.5, 6.75)
+texture = ExtResource("5_ficf5")
+hframes = 6
+frame = 2
+metadata/_edit_lock_ = true
+
+[node name="BordaSuperior" type="StaticBody2D" parent="."]
+position = Vector2(0, -488)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BordaSuperior"]
+shape = SubResource("RectangleShape2D_7k7nf")
+metadata/_edit_lock_ = true
+
+[node name="Borda Inferior" type="StaticBody2D" parent="."]
+position = Vector2(8, 488)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borda Inferior"]
+shape = SubResource("RectangleShape2D_r2wdw")
+metadata/_edit_lock_ = true
+
+[node name="Carro1" type="CharacterBody2D" parent="." groups=["Veiculos"]]
+position = Vector2(1208, -8)
+rotation = 1.5708
+script = ExtResource("5_kapmk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carro1"]
+position = Vector2(4, -8)
+shape = SubResource("RectangleShape2D_0mymo")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Carro1"]
+rotation = 4.71239
+scale = Vector2(0.910152, 0.910152)
+texture = ExtResource("4_v7l48")
+metadata/_edit_lock_ = true
+
+[node name="Carro3" type="CharacterBody2D" parent="." groups=["Veiculos"]]
+position = Vector2(4472, -248)
+script = ExtResource("5_kapmk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carro3"]
+shape = SubResource("RectangleShape2D_ntidd")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Carro3"]
+rotation = 4.71239
+scale = Vector2(4.69045, 4.87373)
+texture = ExtResource("5_al4rc")
+metadata/_edit_lock_ = true
+
+[node name="Carro4" type="CharacterBody2D" parent="." groups=["Veiculos"]]
+position = Vector2(2208, 256)
+script = ExtResource("5_kapmk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carro4"]
+shape = SubResource("RectangleShape2D_vdcth")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Carro4"]
+rotation = 4.71239
+scale = Vector2(6.70164, 5.978)
+texture = ExtResource("9_ipvil")
+metadata/_edit_lock_ = true
+
+[node name="Carro2" type="CharacterBody2D" parent="." groups=["Veiculos"]]
+position = Vector2(2176, -248)
+script = ExtResource("5_kapmk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carro2"]
+shape = SubResource("RectangleShape2D_mj80g")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Carro2"]
+rotation = -3.14159
+scale = Vector2(1.26998, 1.26998)
+texture = ExtResource("10_td3ja")
+metadata/_edit_lock_ = true
+
+[node name="Carro5" type="CharacterBody2D" parent="." groups=["Veiculos"]]
+position = Vector2(3448, -16)
+script = ExtResource("5_kapmk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carro5"]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_vl0cq")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Carro5"]
+position = Vector2(0, 5.72205e-06)
+rotation = -1.5708
+scale = Vector2(-7.6784, 9.11891)
+texture = ExtResource("11_iie22")
+metadata/_edit_lock_ = true
+
+[node name="Carro6" type="CharacterBody2D" parent="." groups=["Veiculos"]]
+position = Vector2(2888, -264)
+script = ExtResource("5_kapmk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carro6"]
+shape = SubResource("RectangleShape2D_h2jgb")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Carro6"]
+rotation = -1.5708
+scale = Vector2(6.13383, 5.57862)
+texture = ExtResource("12_d0bag")
+metadata/_edit_lock_ = true
+
+[node name="Carro7" type="CharacterBody2D" parent="." groups=["Veiculos"]]
+position = Vector2(4800, 256)
+script = ExtResource("5_kapmk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carro7"]
+position = Vector2(4, 0)
+shape = SubResource("RectangleShape2D_xrxgi")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Carro7"]
+rotation = -1.5708
+scale = Vector2(6.11851, 7.34376)
+texture = ExtResource("13_ljev4")
+metadata/_edit_lock_ = true
+
+[node name="Musica-Trafico" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_3d6um")
+script = ExtResource("14_7qofw")
+
+[node name="Musica-Explosao" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_trkbh")

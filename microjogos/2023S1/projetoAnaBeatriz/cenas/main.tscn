@@ -1,0 +1,91 @@
+[gd_scene load_steps=17 format=3 uid="uid://be84klthp7f5i"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/main.gd" id="1_fa412"]
+[ext_resource type="Texture2D" uid="uid://bs1ddi1rxp50d" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/starfield_alpha.png" id="4_jsmwk"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/Area2D.gd" id="5_fecm5"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/StarfieldAlpha.gd" id="5_rkd2r"]
+[ext_resource type="PackedScene" uid="uid://cp1qj6bl2c0bs" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/Inimigo.tscn" id="8_bmwdm"]
+[ext_resource type="Texture2D" uid="uid://das77euveeme1" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/Ufo2.png" id="8_j23x7"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/CollisionShape2D2.gd" id="9_vcp18"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/CollisionShape2D.gd" id="10_yjiwo"]
+[ext_resource type="AudioStream" uid="uid://cxhpmprv7msst" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/Enterin The Skies.ogg" id="11_rw53c"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/StaticBody2D.gd" id="12_in7ui"]
+[ext_resource type="AudioStream" uid="uid://0nudlojxdxj3" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/explosion.wav" id="12_ostmr"]
+[ext_resource type="AudioStream" uid="uid://cb1263x21v5df" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/laser1.wav" id="13_ffplg"]
+[ext_resource type="PackedScene" uid="uid://dqwdde2v241xr" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/player.tscn" id="13_p23la"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xsdfa"]
+size = Vector2(111.801, 81.3559)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2pnn4"]
+size = Vector2(43.8441, 1072)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_acfsk"]
+size = Vector2(32, 1072)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_fa412")
+
+[node name="Camera3D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="StarfieldAlpha" type="Sprite2D" parent="."]
+texture = ExtResource("4_jsmwk")
+centered = false
+script = ExtResource("5_rkd2r")
+
+[node name="Player" parent="." instance=ExtResource("13_p23la")]
+
+[node name="Nave maior" type="Area2D" parent="."]
+position = Vector2(1232, 786.75)
+scale = Vector2(2.43289, 1.77)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("5_fecm5")
+vida = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nave maior"]
+position = Vector2(-3.28833, 9.74576)
+shape = SubResource("RectangleShape2D_xsdfa")
+
+[node name="Ufo2" type="Sprite2D" parent="Nave maior"]
+modulate = Color(0.517647, 0.976471, 0.482353, 1)
+texture = ExtResource("8_j23x7")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+script = ExtResource("12_in7ui")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.92207, 544)
+shape = SubResource("RectangleShape2D_2pnn4")
+script = ExtResource("9_vcp18")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(1920, 544)
+shape = SubResource("RectangleShape2D_acfsk")
+script = ExtResource("10_yjiwo")
+
+[node name="Inimigo" parent="." instance=ExtResource("8_bmwdm")]
+
+[node name="Inimigo2" parent="." instance=ExtResource("8_bmwdm")]
+position = Vector2(1480, 488)
+
+[node name="Inimigo3" parent="." instance=ExtResource("8_bmwdm")]
+position = Vector2(325, 501)
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_rw53c")
+
+[node name="Explosion" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_ostmr")
+volume_db = 10.0
+
+[node name="Shot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_ffplg")
+volume_db = -5.0
+
+[connection signal="area_entered" from="Nave maior" to="Nave maior" method="_on_area_entered"]
+[connection signal="body_entered" from="Nave maior" to="." method="_on_nave_maior_body_entered"]
+[connection signal="body_entered" from="Nave maior" to="Nave maior" method="_on_body_entered"]

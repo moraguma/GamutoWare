@@ -1,0 +1,335 @@
+[gd_scene load_steps=13 format=3 uid="uid://dqgxc73w0nr63"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-guglielmo-223300/cenas/scripts/main.gd" id="1_1neoh"]
+[ext_resource type="Texture2D" uid="uid://bce3wwnq3ewwx" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/Tecladoyomik70-removebg-preview.png" id="2_x0qvo"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-guglielmo-223300/cenas/scripts/Teclado.gd" id="2_yfdn2"]
+[ext_resource type="Texture2D" uid="uid://cms8qw0clpfow" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/tecla.png" id="3_e1le8"]
+[ext_resource type="Texture2D" uid="uid://bhf2ikw0qgj4j" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/fundo.jpg" id="3_os28u"]
+[ext_resource type="Texture2D" uid="uid://x16mdibspdi0" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/selector.png" id="4_y0ywg"]
+[ext_resource type="Texture2D" uid="uid://c2vm7dx80mb12" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/TeclaRemovida.png" id="6_kjf1i"]
+[ext_resource type="AudioStream" uid="uid://dsftntsxt8ye" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/musica.ogg" id="8_0qffv"]
+[ext_resource type="AudioStream" uid="uid://cy73rnjfl0tdq" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/key_1.wav" id="9_h1vjl"]
+[ext_resource type="AudioStream" uid="uid://b1t8615mpc5g3" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/key_2.wav" id="10_mym4i"]
+[ext_resource type="AudioStream" uid="uid://b71wlywxrypcx" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/win.wav" id="11_cyat6"]
+[ext_resource type="AudioStream" uid="uid://5pj1v4nxoapb" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/lose.wav" id="12_1n5ej"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_1neoh")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(968, 552)
+
+[node name="Teclado" type="Node2D" parent="."]
+script = ExtResource("2_yfdn2")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Teclado"]
+position = Vector2(968, 549.25)
+scale = Vector2(1.875, 1.60102)
+texture = ExtResource("3_os28u")
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado"]
+position = Vector2(912, 792)
+scale = Vector2(1.8, 1.776)
+texture = ExtResource("2_x0qvo")
+
+[node name="Teclas" type="Node2D" parent="Teclado"]
+
+[node name="A" type="Node2D" parent="Teclado/Teclas"]
+position = Vector2(504, 392)
+scale = Vector2(3, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/Teclas/A"]
+texture = ExtResource("3_e1le8")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Teclado/Teclas/A"]
+offset_left = -5.33333
+offset_top = -13.3334
+offset_right = 34.6667
+offset_bottom = 26.6666
+text = "A"
+
+[node name="Sprite2D2" type="Sprite2D" parent="Teclado/Teclas/A"]
+texture = ExtResource("4_y0ywg")
+
+[node name="A2" type="Node2D" parent="Teclado/Teclas"]
+position = Vector2(752, 392)
+scale = Vector2(3, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/Teclas/A2"]
+texture = ExtResource("3_e1le8")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Teclado/Teclas/A2"]
+offset_left = -5.33333
+offset_top = -13.3334
+offset_right = 34.6667
+offset_bottom = 26.6666
+text = "A"
+
+[node name="Sprite2D2" type="Sprite2D" parent="Teclado/Teclas/A2"]
+modulate = Color(1, 0, 0.0666667, 1)
+texture = ExtResource("4_y0ywg")
+
+[node name="A3" type="Node2D" parent="Teclado/Teclas"]
+position = Vector2(976, 392)
+scale = Vector2(3, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/Teclas/A3"]
+texture = ExtResource("3_e1le8")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Teclado/Teclas/A3"]
+offset_left = -5.33333
+offset_top = -13.3334
+offset_right = 34.6667
+offset_bottom = 26.6666
+text = "A"
+
+[node name="Sprite2D2" type="Sprite2D" parent="Teclado/Teclas/A3"]
+modulate = Color(0, 0.0313726, 1, 1)
+texture = ExtResource("4_y0ywg")
+
+[node name="A4" type="Node2D" parent="Teclado/Teclas"]
+position = Vector2(1200, 392)
+scale = Vector2(3, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/Teclas/A4"]
+texture = ExtResource("3_e1le8")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Teclado/Teclas/A4"]
+offset_left = -5.33333
+offset_top = -13.3334
+offset_right = 34.6667
+offset_bottom = 26.6666
+text = "A"
+
+[node name="Sprite2D2" type="Sprite2D" parent="Teclado/Teclas/A4"]
+modulate = Color(0, 1, 0.00784314, 1)
+texture = ExtResource("4_y0ywg")
+
+[node name="A" type="Node2D" parent="Teclado"]
+visible = false
+position = Vector2(352, 848)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/A"]
+texture = ExtResource("6_kjf1i")
+
+[node name="B" type="Node2D" parent="Teclado"]
+visible = false
+position = Vector2(624, 912)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/B"]
+texture = ExtResource("6_kjf1i")
+
+[node name="C" type="Node2D" parent="Teclado"]
+visible = false
+position = Vector2(504, 912)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/C"]
+texture = ExtResource("6_kjf1i")
+
+[node name="D" type="Node2D" parent="Teclado"]
+visible = false
+position = Vector2(472, 848)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/D"]
+texture = ExtResource("6_kjf1i")
+
+[node name="E" type="Node2D" parent="Teclado"]
+visible = false
+position = Vector2(464, 792)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/E"]
+texture = ExtResource("6_kjf1i")
+
+[node name="F" type="Node2D" parent="Teclado"]
+visible = false
+position = Vector2(536, 848)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/F"]
+texture = ExtResource("6_kjf1i")
+
+[node name="G" type="Node2D" parent="Teclado"]
+visible = false
+position = Vector2(600, 848)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/G"]
+texture = ExtResource("6_kjf1i")
+
+[node name="H" type="Node2D" parent="Teclado"]
+visible = false
+position = Vector2(656, 848)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/H"]
+texture = ExtResource("6_kjf1i")
+
+[node name="I" type="Node2D" parent="Teclado"]
+visible = false
+position = Vector2(760, 792)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/I"]
+texture = ExtResource("6_kjf1i")
+
+[node name="J" type="Node2D" parent="Teclado"]
+visible = false
+position = Vector2(720, 848)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/J"]
+texture = ExtResource("6_kjf1i")
+
+[node name="K" type="Node2D" parent="Teclado"]
+visible = false
+position = Vector2(776, 848)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/K"]
+texture = ExtResource("6_kjf1i")
+
+[node name="L" type="Node2D" parent="Teclado"]
+visible = false
+position = Vector2(832, 848)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/L"]
+texture = ExtResource("6_kjf1i")
+
+[node name="M" type="Node2D" parent="Teclado"]
+visible = false
+position = Vector2(744, 912)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/M"]
+texture = ExtResource("6_kjf1i")
+
+[node name="N" type="Node2D" parent="Teclado"]
+visible = false
+position = Vector2(680, 912)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/N"]
+texture = ExtResource("6_kjf1i")
+
+[node name="O" type="Node2D" parent="Teclado"]
+visible = false
+position = Vector2(824, 792)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/O"]
+texture = ExtResource("6_kjf1i")
+
+[node name="P" type="Node2D" parent="Teclado"]
+visible = false
+position = Vector2(880, 792)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/P"]
+texture = ExtResource("6_kjf1i")
+
+[node name="Q" type="Node2D" parent="Teclado"]
+visible = false
+position = Vector2(344, 792)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/Q"]
+texture = ExtResource("6_kjf1i")
+
+[node name="R" type="Node2D" parent="Teclado"]
+visible = false
+position = Vector2(520, 792)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/R"]
+texture = ExtResource("6_kjf1i")
+
+[node name="S" type="Node2D" parent="Teclado"]
+visible = false
+position = Vector2(408, 848)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/S"]
+texture = ExtResource("6_kjf1i")
+
+[node name="T" type="Node2D" parent="Teclado"]
+visible = false
+position = Vector2(584, 792)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/T"]
+texture = ExtResource("6_kjf1i")
+
+[node name="U" type="Node2D" parent="Teclado"]
+visible = false
+position = Vector2(696, 792)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/U"]
+texture = ExtResource("6_kjf1i")
+
+[node name="V" type="Node2D" parent="Teclado"]
+visible = false
+position = Vector2(560, 912)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/V"]
+texture = ExtResource("6_kjf1i")
+
+[node name="W" type="Node2D" parent="Teclado"]
+visible = false
+position = Vector2(408, 792)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/W"]
+texture = ExtResource("6_kjf1i")
+
+[node name="X" type="Node2D" parent="Teclado"]
+visible = false
+position = Vector2(440, 912)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/X"]
+texture = ExtResource("6_kjf1i")
+
+[node name="Y" type="Node2D" parent="Teclado"]
+visible = false
+position = Vector2(640, 792)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/Y"]
+texture = ExtResource("6_kjf1i")
+
+[node name="Z" type="Node2D" parent="Teclado"]
+visible = false
+position = Vector2(384, 912)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/Z"]
+texture = ExtResource("6_kjf1i")
+
+[node name="Seletor teclado1" type="Node2D" parent="Teclado"]
+position = Vector2(344, 784)
+scale = Vector2(1.8, 1.8)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/Seletor teclado1"]
+texture = ExtResource("4_y0ywg")
+
+[node name="Seletor teclado2" type="Node2D" parent="Teclado"]
+visible = false
+scale = Vector2(1.8, 1.8)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/Seletor teclado2"]
+modulate = Color(1, 0, 0.0666667, 1)
+texture = ExtResource("4_y0ywg")
+
+[node name="Seletor teclado3" type="Node2D" parent="Teclado"]
+visible = false
+scale = Vector2(1.8, 1.8)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/Seletor teclado3"]
+modulate = Color(0, 0.0313726, 1, 1)
+texture = ExtResource("4_y0ywg")
+
+[node name="Seletor teclado4" type="Node2D" parent="Teclado"]
+visible = false
+scale = Vector2(1.8, 1.8)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teclado/Seletor teclado4"]
+modulate = Color(0, 1, 0.00784314, 1)
+texture = ExtResource("4_y0ywg")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_0qffv")
+autoplay = true
+
+[node name="Key1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_h1vjl")
+
+[node name="Key2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_mym4i")
+
+[node name="Win" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_cyat6")
+
+[node name="Lose" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_1n5ej")

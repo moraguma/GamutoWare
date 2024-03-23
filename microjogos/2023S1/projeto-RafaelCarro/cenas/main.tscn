@@ -1,0 +1,279 @@
+[gd_scene load_steps=30 format=3 uid="uid://c3yc65ma3hbqt"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-RafaelCarro/cenas/scripts/main.gd" id="1_ajivd"]
+[ext_resource type="Texture2D" uid="uid://dou2slt085m1t" path="res://microjogos/2023S1/projeto-RafaelCarro/recursos/Background.jpg" id="2_fhmsf"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-RafaelCarro/cenas/scripts/Drums.gd" id="3_7u1li"]
+[ext_resource type="Texture2D" uid="uid://bs3rdw0e2ob0t" path="res://microjogos/2023S1/projeto-RafaelCarro/recursos/Pixel Art DrumKit.png" id="3_lwjvg"]
+[ext_resource type="Texture2D" uid="uid://dxwvdu4uwfdja" path="res://microjogos/2023S1/projeto-RafaelCarro/recursos/LeftArrow.png" id="4_sssw0"]
+[ext_resource type="Texture2D" uid="uid://bckmdna5i5gv7" path="res://microjogos/2023S1/projeto-RafaelCarro/recursos/RightArrow.png" id="5_bt8d4"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-RafaelCarro/cenas/scripts/Key.gd" id="5_ud78g"]
+[ext_resource type="Texture2D" uid="uid://cg6o6rmctkknx" path="res://microjogos/2023S1/projeto-RafaelCarro/recursos/UpArrow.png" id="6_7h21w"]
+[ext_resource type="Texture2D" uid="uid://cc54uv0oc426c" path="res://microjogos/2023S1/projeto-RafaelCarro/recursos/DownArrow.png" id="7_ju0oj"]
+[ext_resource type="Texture2D" uid="uid://dathx64f3d0cf" path="res://microjogos/2023S1/projeto-RafaelCarro/recursos/LeftArrowHit.png" id="7_yc4sg"]
+[ext_resource type="Texture2D" uid="uid://cng1karhtrsdd" path="res://microjogos/2023S1/projeto-RafaelCarro/recursos/SpaceKey.png" id="8_06dg3"]
+[ext_resource type="AudioStream" uid="uid://dluacslxk3won" path="res://microjogos/2023S1/projeto-RafaelCarro/recursos/Error.wav" id="8_fwa2t"]
+[ext_resource type="Texture2D" uid="uid://bv40jj8djmovy" path="res://microjogos/2023S1/projeto-RafaelCarro/recursos/RightArrowHit.png" id="9_x6aug"]
+[ext_resource type="Texture2D" uid="uid://edsj4gj2ie5d" path="res://microjogos/2023S1/projeto-RafaelCarro/recursos/UpArrowHit.png" id="15_caxco"]
+[ext_resource type="Texture2D" uid="uid://b0qilfp7exs48" path="res://microjogos/2023S1/projeto-RafaelCarro/recursos/DownArrowHit.png" id="18_im0c6"]
+[ext_resource type="AudioStream" uid="uid://bm7q3xd0n7csy" path="res://microjogos/2023S1/projeto-RafaelCarro/recursos/BeepBox-Song.wav" id="20_6qcod"]
+[ext_resource type="Texture2D" uid="uid://bm7qm8mfqxfvr" path="res://microjogos/2023S1/projeto-RafaelCarro/recursos/SpaceKeyHit.png" id="21_ihotq"]
+[ext_resource type="AudioStream" uid="uid://bfbiaeqsi63y0" path="res://microjogos/2023S1/projeto-RafaelCarro/recursos/Hit1.wav" id="22_4dela"]
+[ext_resource type="AudioStream" uid="uid://d1e3rwmneu6lg" path="res://microjogos/2023S1/projeto-RafaelCarro/recursos/Hit2.wav" id="23_82kqy"]
+[ext_resource type="AudioStream" uid="uid://krfojk60tvng" path="res://microjogos/2023S1/projeto-RafaelCarro/recursos/Hit5.wav" id="23_hu1k1"]
+[ext_resource type="AudioStream" uid="uid://rabb7dk483po" path="res://microjogos/2023S1/projeto-RafaelCarro/recursos/Hit3.wav" id="24_ytmu6"]
+[ext_resource type="AudioStream" uid="uid://3tf5sn4ate3c" path="res://microjogos/2023S1/projeto-RafaelCarro/recursos/Hit4.wav" id="25_80nfv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gfpvk"]
+radius = 1.90066
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vahqq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_sssw0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_yc4sg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d7jb2"]
+size = Vector2(88, 104)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v3tr7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_bt8d4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_x6aug")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p0gb5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_7h21w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_caxco")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2osqb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_ju0oj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_im0c6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ewgb8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_06dg3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ihotq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_ajivd")
+
+[node name="Camera3D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960, 544)
+scale = Vector2(0.639746, 0.541642)
+texture = ExtResource("2_fhmsf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(864, 464)
+rotation = 3.14159
+scale = Vector2(50.5089, 44.5743)
+shape = SubResource("CircleShape2D_gfpvk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(776, 688)
+rotation = 3.14159
+scale = Vector2(50.5089, 44.5743)
+shape = SubResource("CircleShape2D_gfpvk")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(1080, 448)
+rotation = 3.14159
+scale = Vector2(50.5089, 44.5743)
+shape = SubResource("CircleShape2D_gfpvk")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(1128, 672)
+rotation = 3.14159
+scale = Vector2(50.5089, 44.5743)
+shape = SubResource("CircleShape2D_gfpvk")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(960, 984)
+scale = Vector2(90.7814, -29.2578)
+shape = SubResource("CircleShape2D_gfpvk")
+
+[node name="Drums" type="StaticBody2D" parent="."]
+position = Vector2(960, 704)
+script = ExtResource("3_7u1li")
+
+[node name="Sprite2D" type="Sprite2D" parent="Drums"]
+position = Vector2(6.10352e-05, 6.10352e-05)
+scale = Vector2(2.73055, 2.73055)
+texture = ExtResource("3_lwjvg")
+
+[node name="LeftArrow" type="Area2D" parent="."]
+position = Vector2(864, 448)
+script = ExtResource("5_ud78g")
+aim_pos = Vector2(864, 448)
+incoming_dir = Vector2(1, 0)
+action = "esquerda"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="LeftArrow"]
+sprite_frames = SubResource("SpriteFrames_vahqq")
+
+[node name="Area2D" type="Area2D" parent="LeftArrow"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftArrow/Area2D"]
+position = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_d7jb2")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="LeftArrow"]
+stream = ExtResource("8_fwa2t")
+volume_db = 8.0
+pitch_scale = 2.0
+
+[node name="RightArrow" type="Area2D" parent="."]
+position = Vector2(1086, 448)
+script = ExtResource("5_ud78g")
+aim_pos = Vector2(1086, 448)
+incoming_dir = Vector2(-1, 0)
+action = "direita"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RightArrow"]
+sprite_frames = SubResource("SpriteFrames_v3tr7")
+
+[node name="Area2D" type="Area2D" parent="RightArrow"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightArrow/Area2D"]
+position = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_d7jb2")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="RightArrow"]
+stream = ExtResource("8_fwa2t")
+volume_db = 8.0
+pitch_scale = 2.0
+
+[node name="UpArrow" type="Area2D" parent="."]
+position = Vector2(1136, 663)
+script = ExtResource("5_ud78g")
+aim_pos = Vector2(1136, 663)
+incoming_dir = Vector2(0, -1)
+action = "cima"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="UpArrow"]
+sprite_frames = SubResource("SpriteFrames_p0gb5")
+
+[node name="Area2D" type="Area2D" parent="UpArrow"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpArrow/Area2D"]
+position = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_d7jb2")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UpArrow"]
+stream = ExtResource("8_fwa2t")
+volume_db = 8.0
+pitch_scale = 2.0
+
+[node name="DownArrow" type="Area2D" parent="."]
+position = Vector2(774, 675)
+script = ExtResource("5_ud78g")
+aim_pos = Vector2(774, 675)
+incoming_dir = Vector2(0, 1)
+action = "baixo"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="DownArrow"]
+sprite_frames = SubResource("SpriteFrames_2osqb")
+
+[node name="Area2D" type="Area2D" parent="DownArrow"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DownArrow/Area2D"]
+position = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_d7jb2")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DownArrow"]
+stream = ExtResource("8_fwa2t")
+volume_db = 8.0
+pitch_scale = 2.0
+
+[node name="SpaceKey" type="Area2D" parent="."]
+position = Vector2(960, 992)
+scale = Vector2(0.775271, 0.775271)
+script = ExtResource("5_ud78g")
+aim_pos = Vector2(960, 992)
+incoming_dir = Vector2(0, 1)
+action = "acao"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SpaceKey"]
+sprite_frames = SubResource("SpriteFrames_ewgb8")
+
+[node name="Area2D" type="Area2D" parent="SpaceKey"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceKey/Area2D"]
+position = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_d7jb2")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SpaceKey"]
+stream = ExtResource("8_fwa2t")
+volume_db = 8.0
+pitch_scale = 2.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_6qcod")
+autoplay = true
+
+[node name="Hit1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("22_4dela")
+volume_db = 8.0
+
+[node name="Hit2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("23_82kqy")
+volume_db = 8.0
+
+[node name="Hit3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("24_ytmu6")
+volume_db = 8.0
+
+[node name="Hit4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("25_80nfv")
+volume_db = 8.0
+
+[node name="Hit5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("23_hu1k1")
+volume_db = 8.0

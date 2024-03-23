@@ -1,0 +1,128 @@
+[gd_scene load_steps=8 format=3 uid="uid://rvadjogfn0mw"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto_leonardo_valente/cenas/Creeper.gd" id="1_ohosw"]
+[ext_resource type="Texture2D" uid="uid://dcssfmuy5n8mt" path="res://microjogos/2023S1/projeto_leonardo_valente/recursos/Spritesheet Creeper.png" id="2_apqto"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hpjfv"]
+radius = 375.0
+
+[sub_resource type="Animation" id="Animation_yc7vo"]
+resource_name = "Explosion"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteCreeper:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.15, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [2, 3, 4, 5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteCreeper:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 0.329878),
+"update": 0,
+"values": [Vector2(7, 7), Vector2(13.13, 13.13)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SpriteCreeper:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_2v7f8"]
+resource_name = "Idle"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteCreeper:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteCreeper:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(7, 7)]
+}
+
+[sub_resource type="Animation" id="Animation_2vhoe"]
+resource_name = "Ignited"
+length = 0.75
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteCreeper:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.35, 0.45, 0.65),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 2, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yprj4"]
+_data = {
+"Explosion": SubResource("Animation_yc7vo"),
+"Idle": SubResource("Animation_2v7f8"),
+"Ignited": SubResource("Animation_2vhoe")
+}
+
+[node name="Creeper" type="CharacterBody2D"]
+script = ExtResource("1_ohosw")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_hpjfv")
+
+[node name="SpriteCreeper" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1.52588e-05, 3.05176e-05)
+scale = Vector2(13.13, 13.13)
+texture = ExtResource("2_apqto")
+hframes = 3
+vframes = 2
+frame = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Explosion"
+libraries = {
+"": SubResource("AnimationLibrary_yprj4")
+}
+
+[connection signal="body_entered" from="Area2D" to="." method="entrou"]
+[connection signal="body_exited" from="Area2D" to="." method="saiu"]

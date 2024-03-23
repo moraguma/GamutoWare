@@ -1,0 +1,90 @@
+[gd_scene load_steps=11 format=3 uid="uid://da2h160pqjtfs"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-yan-oliveira/cenas/scripts/main.gd" id="1_yj0jh"]
+[ext_resource type="Texture2D" uid="uid://b6qvtckr27qbo" path="res://microjogos/2023S1/projeto-yan-oliveira/recursos/Lagoa Oficial.png" id="2_rn75l"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-yan-oliveira/cenas/scripts/Player.gd" id="3_f4637"]
+[ext_resource type="Texture2D" uid="uid://blqg4s6mksxvu" path="res://microjogos/2023S1/projeto-yan-oliveira/recursos/Sapo.png" id="4_bq1bp"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-yan-oliveira/cenas/scripts/linguada.gd" id="5_2yebe"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-yan-oliveira/cenas/scripts/Mosca.gd" id="6_krcl4"]
+[ext_resource type="Texture2D" uid="uid://da1d3p7dabrki" path="res://microjogos/2023S1/projeto-yan-oliveira/recursos/Mosca Bombada.png" id="7_gulw7"]
+[ext_resource type="AudioStream" uid="uid://v2yjvhogdkdn" path="res://microjogos/2023S1/projeto-yan-oliveira/recursos/BeepBox-Song.ogg" id="8_s0ay3"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_1w8n0"]
+a = Vector2(0, -570.325)
+b = Vector2(0, 0)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2hjdc"]
+radius = 48.6621
+
+[node name="Frog Mayhem" type="Node2D"]
+script = ExtResource("1_yj0jh")
+
+[node name="Lagoa" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_rn75l")
+
+[node name="Camera3D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(960, 536)
+script = ExtResource("3_f4637")
+
+[node name="Sapo" type="Sprite2D" parent="Player"]
+scale = Vector2(0.738, 0.738)
+texture = ExtResource("4_bq1bp")
+
+[node name="Linguada" type="Area2D" parent="Player/Sapo"]
+position = Vector2(0, 50)
+script = ExtResource("5_2yebe")
+
+[node name="Timer" type="Timer" parent="Player/Sapo/Linguada"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Sapo/Linguada"]
+shape = SubResource("SegmentShape2D_1w8n0")
+
+[node name="LinguaSprite" type="Line2D" parent="Player/Sapo/Linguada"]
+position = Vector2(0, -120)
+points = PackedVector2Array(0, -450.325, 0, 120)
+width = 16.0
+default_color = Color(0.956863, 0.415686, 0.529412, 1)
+
+[node name="Mosca" type="Area2D" parent="."]
+script = ExtResource("6_krcl4")
+
+[node name="SpriteMosca" type="Sprite2D" parent="Mosca"]
+position = Vector2(496.727, 312.727)
+scale = Vector2(0.409091, 0.409091)
+texture = ExtResource("7_gulw7")
+
+[node name="HitboxMosca" type="CollisionShape2D" parent="Mosca"]
+position = Vector2(496, 312)
+shape = SubResource("CircleShape2D_2hjdc")
+
+[node name="Mosca2" type="Area2D" parent="."]
+script = ExtResource("6_krcl4")
+
+[node name="SpriteMosca" type="Sprite2D" parent="Mosca2"]
+position = Vector2(1424, 392)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("7_gulw7")
+
+[node name="HitboxMosca" type="CollisionShape2D" parent="Mosca2"]
+position = Vector2(1424, 392)
+shape = SubResource("CircleShape2D_2hjdc")
+
+[node name="Mosca3" type="Area2D" parent="."]
+script = ExtResource("6_krcl4")
+
+[node name="SpriteMosca" type="Sprite2D" parent="Mosca3"]
+position = Vector2(960.5, 959.954)
+scale = Vector2(0.406, 0.406)
+texture = ExtResource("7_gulw7")
+
+[node name="HitboxMosca" type="CollisionShape2D" parent="Mosca3"]
+position = Vector2(960, 960)
+shape = SubResource("CircleShape2D_2hjdc")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_s0ay3")
+autoplay = true

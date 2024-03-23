@@ -16,7 +16,6 @@ func _ready():
 			NotificationCenter.notify("MATE A BALEIA")
 		Global.LANGUAGE.EN:
 			NotificationCenter.notify("KILL THE WHALE")
-	background.play()
 	
 	baleia_animacao.play("baleia")
 	

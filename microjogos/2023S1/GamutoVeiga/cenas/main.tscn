@@ -1,0 +1,86 @@
+[gd_scene load_steps=13 format=3 uid="uid://drosyf6u1slha"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/GamutoVeiga/cenas/scripts/main.gd" id="1_c6idw"]
+[ext_resource type="Texture2D" uid="uid://1u0g71ylh48m" path="res://microjogos/2023S1/GamutoVeiga/recursos/Fundo.png" id="1_lvxrl"]
+[ext_resource type="Texture2D" uid="uid://cec6re48kw561" path="res://microjogos/2023S1/GamutoVeiga/recursos/Copo.png" id="2_gmdpa"]
+[ext_resource type="Texture2D" uid="uid://cxmqc64y4cxs8" path="res://microjogos/2023S1/GamutoVeiga/recursos/gamuto.png" id="3_snixi"]
+[ext_resource type="Script" path="res://microjogos/2023S1/GamutoVeiga/cenas/scripts/Copo 1.gd" id="5_2t00f"]
+[ext_resource type="Script" path="res://microjogos/2023S1/GamutoVeiga/cenas/Copo 2.gd" id="6_v887y"]
+[ext_resource type="Script" path="res://microjogos/2023S1/GamutoVeiga/cenas/scripts/Copo 3.gd" id="7_aruu5"]
+[ext_resource type="Texture2D" uid="uid://yvq13i5yjmd1" path="res://microjogos/2023S1/GamutoVeiga/recursos/seta.png" id="8_2xkjg"]
+[ext_resource type="AudioStream" uid="uid://cjqe1v1yvet71" path="res://microjogos/2023S1/GamutoVeiga/recursos/Glassmuto_song_loop.ogg" id="9_fem2v"]
+[ext_resource type="AudioStream" uid="uid://bpc4d4oytmtmb" path="res://microjogos/2023S1/GamutoVeiga/recursos/Efeito_1.ogg" id="10_c6rnk"]
+[ext_resource type="AudioStream" uid="uid://dt0372jgoo8qp" path="res://microjogos/2023S1/GamutoVeiga/recursos/Efeito_Perdeu.ogg" id="11_37n6v"]
+[ext_resource type="AudioStream" uid="uid://dbqh6vthsawo6" path="res://microjogos/2023S1/GamutoVeiga/recursos/Efeito_Ganhou.ogg" id="12_hyslu"]
+
+[node name="Glassmuto" type="Node2D"]
+script = ExtResource("1_c6idw")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(960, 544)
+
+[node name="Fundo" type="Sprite2D" parent="."]
+position = Vector2(957, 541)
+scale = Vector2(2.70886, 1.93286)
+texture = ExtResource("1_lvxrl")
+
+[node name="Personagem" type="Sprite2D" parent="."]
+position = Vector2(1000, 592)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_snixi")
+
+[node name="Copo1" type="Sprite2D" parent="."]
+position = Vector2(750, 554.932)
+rotation = -3.14159
+scale = Vector2(0.7002, 0.652805)
+texture = ExtResource("2_gmdpa")
+script = ExtResource("5_2t00f")
+
+[node name="Copo2" type="Sprite2D" parent="."]
+position = Vector2(1000, 554.932)
+rotation = 3.14159
+scale = Vector2(0.7, 0.653)
+texture = ExtResource("2_gmdpa")
+script = ExtResource("6_v887y")
+
+[node name="Copo3" type="Sprite2D" parent="."]
+position = Vector2(1250, 554.932)
+rotation = 3.14159
+scale = Vector2(0.7, 0.653)
+texture = ExtResource("2_gmdpa")
+script = ExtResource("7_aruu5")
+
+[node name="Left" type="Sprite2D" parent="."]
+position = Vector2(750, 678)
+rotation = -1.5708
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("8_2xkjg")
+
+[node name="Up" type="Sprite2D" parent="."]
+position = Vector2(1000, 680)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("8_2xkjg")
+
+[node name="Right" type="Sprite2D" parent="."]
+position = Vector2(1250, 678)
+rotation = 1.5708
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("8_2xkjg")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Glassmuto_Song" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_fem2v")
+volume_db = 3.0
+autoplay = true
+
+[node name="Efeito_Swap" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_c6rnk")
+
+[node name="Efeito_Perdeu" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_37n6v")
+volume_db = 9.75
+
+[node name="Efeito_Ganhou" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_hyslu")
+volume_db = 9.75

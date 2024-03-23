@@ -106,7 +106,7 @@ func load_game():
 	if not FileAccess.file_exists(SAVE_PATH + SAVE_NAME):
 		save = SaveFile.new()
 		save_game()
-		
+	
 	save = load(SAVE_PATH + SAVE_NAME)
 	
 	if not validate_save(save):

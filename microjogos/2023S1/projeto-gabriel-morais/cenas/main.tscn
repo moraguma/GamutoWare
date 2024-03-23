@@ -1,0 +1,88 @@
+[gd_scene load_steps=14 format=3 uid="uid://oe5ivv5m376p"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/scripts/main.gd" id="1_luxrx"]
+[ext_resource type="Texture2D" uid="uid://boenun8pc8oc1" path="res://microjogos/2023S1/projeto-gabriel-morais/recursos/fundo.png" id="2_di1wt"]
+[ext_resource type="Texture2D" uid="uid://bk77807kefqvp" path="res://microjogos/2023S1/projeto-gabriel-morais/recursos/pedra-1.png.png" id="3_f6xe8"]
+[ext_resource type="Texture2D" uid="uid://cq4jyk01gmhi7" path="res://microjogos/2023S1/projeto-gabriel-morais/recursos/newton-removebg-preview.png" id="3_va3ko"]
+[ext_resource type="Texture2D" uid="uid://cpostatogy0n8" path="res://microjogos/2023S1/projeto-gabriel-morais/recursos/estil.png" id="4_hy8fn"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/scripts/newton.gd" id="4_ym1hm"]
+[ext_resource type="PackedScene" uid="uid://mqowq5d2yjbd" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/maca_1.tscn" id="5_ccmg4"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/scripts/Line2D.gd" id="6_jkosv"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/scripts/CharacterBody2D.gd" id="7_xs1qc"]
+[ext_resource type="AudioStream" uid="uid://clbvnd7xo50wx" path="res://microjogos/2023S1/projeto-gabriel-morais/recursos/353033__renne100__slingshot.mp3" id="8_gvspe"]
+[ext_resource type="AudioStream" uid="uid://8ul3jrtvm66" path="res://microjogos/2023S1/projeto-gabriel-morais/recursos/newtonsveng.wav" id="11_0y8lc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tsw6s"]
+size = Vector2(163.5, 74)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tgoiv"]
+radius = 73.0
+height = 150.0
+
+[node name="Newton\'s vengeance" type="Node2D"]
+position = Vector2(1, 0)
+script = ExtResource("1_luxrx")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1079.0
+texture = ExtResource("2_di1wt")
+expand_mode = 1
+
+[node name="newton" type="Sprite2D" parent="."]
+position = Vector2(233, 830)
+scale = Vector2(1.94192, 2.17355)
+texture = ExtResource("3_va3ko")
+script = ExtResource("4_ym1hm")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="pivo" type="Area2D" parent="Camera2D"]
+position = Vector2(561, 846)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/pivo"]
+shape = SubResource("RectangleShape2D_tsw6s")
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D/pivo"]
+position = Vector2(0, 147)
+scale = Vector2(1.42101, 2.10536)
+texture = ExtResource("4_hy8fn")
+
+[node name="Line2D" type="Line2D" parent="Camera2D"]
+points = PackedVector2Array(487, 855, 1920, 1080)
+width = 30.0
+default_color = Color(0.639216, 0, 0.00784314, 1)
+script = ExtResource("6_jkosv")
+
+[node name="Line2D2" type="Line2D" parent="Camera2D"]
+points = PackedVector2Array(623, 859, 1920, 1080)
+width = 30.0
+default_color = Color(0.623529, 0, 0.00784314, 1)
+script = ExtResource("6_jkosv")
+
+[node name="pedra" type="CharacterBody2D" parent="Camera2D"]
+position = Vector2(256, 544)
+script = ExtResource("7_xs1qc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/pedra"]
+shape = SubResource("CapsuleShape2D_tgoiv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D/pedra"]
+texture_filter = 1
+position = Vector2(5.49999, 0)
+scale = Vector2(4.34375, 6.92969)
+texture = ExtResource("3_f6xe8")
+
+[node name="tiro" type="AudioStreamPlayer" parent="Camera2D/pedra"]
+stream = ExtResource("8_gvspe")
+
+[node name="maca1" parent="Camera2D" instance=ExtResource("5_ccmg4")]
+position = Vector2(1219, 256)
+
+[node name="maca2" parent="Camera2D" instance=ExtResource("5_ccmg4")]
+position = Vector2(1646, 343)
+
+[node name="backgroundmusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_0y8lc")
+autoplay = true

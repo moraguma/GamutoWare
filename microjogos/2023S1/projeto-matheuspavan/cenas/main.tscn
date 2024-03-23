@@ -1,0 +1,334 @@
+[gd_scene load_steps=44 format=3 uid="uid://dmaq46tk3gda3"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-matheuspavan/cenas/main.gd" id="1_bsl4o"]
+[ext_resource type="Texture2D" uid="uid://to2vkigeu2yo" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/personagem/Wizard Pack/Idle.png" id="2_b67wv"]
+[ext_resource type="Texture2D" uid="uid://cursuegf8vrlm" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/parallax-mountain-animX1.png" id="2_mc224"]
+[ext_resource type="Texture2D" uid="uid://hih2qv537bnt" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/lightning-blue-1.png" id="3_h88my"]
+[ext_resource type="Texture2D" uid="uid://bygp6wqeyc7yv" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/livro/book.png" id="4_oorb8"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-matheuspavan/cenas/magia.gd" id="5_p4caa"]
+[ext_resource type="Texture2D" uid="uid://bgucgvtvgmrdh" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/lightning-blue-2.png" id="5_vinjh"]
+[ext_resource type="Texture2D" uid="uid://b5ot4tylp8v0s" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito/haste-sky-3.png" id="8_fw285"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-matheuspavan/cenas/final_magia2.gd" id="9_0y78u"]
+[ext_resource type="Texture2D" uid="uid://dl1of2j6uj2x2" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5a1.png" id="10_pvqn2"]
+[ext_resource type="Texture2D" uid="uid://byow4xb57vpqc" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5b1.png" id="10_titra"]
+[ext_resource type="Texture2D" uid="uid://hx7635nsgc5l" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5a2.png" id="11_4qqjc"]
+[ext_resource type="Texture2D" uid="uid://thhs6hn4sbpf" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5b2.png" id="11_qwey2"]
+[ext_resource type="Texture2D" uid="uid://04edalapgu34" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5a3.png" id="12_3co6x"]
+[ext_resource type="Texture2D" uid="uid://c0qmeqeoqdm0y" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5b3.png" id="12_7wwe8"]
+[ext_resource type="Texture2D" uid="uid://f5q7teq5g7ec" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5a4.png" id="13_8vv33"]
+[ext_resource type="Texture2D" uid="uid://dax2dq1ryfjks" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5b4.png" id="13_f7nlq"]
+[ext_resource type="Texture2D" uid="uid://dwtcornfq4jin" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5a5.png" id="14_4np26"]
+[ext_resource type="Texture2D" uid="uid://n67lrkp68bwp" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5b5.png" id="14_wxjko"]
+[ext_resource type="Texture2D" uid="uid://chbpdpp7o7f15" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5a6.png" id="15_bjxvo"]
+[ext_resource type="Texture2D" uid="uid://dh7ls6u8by68f" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5b6.png" id="15_svs53"]
+[ext_resource type="Texture2D" uid="uid://bbyjiafonsmox" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5b7.png" id="16_5j837"]
+[ext_resource type="Texture2D" uid="uid://bjay5fhtykin3" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5a7.png" id="16_7k80o"]
+[ext_resource type="Texture2D" uid="uid://m5m8abk2bo4c" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5b8.png" id="17_la1da"]
+[ext_resource type="Texture2D" uid="uid://ck5jliicl2tx1" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5a8.png" id="17_ujxmi"]
+[ext_resource type="Texture2D" uid="uid://bbtx3bsj6xgy7" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5a9.png" id="18_7tkye"]
+[ext_resource type="Texture2D" uid="uid://bfp3y4ol1d8gd" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5b9.png" id="18_pnwat"]
+[ext_resource type="Texture2D" uid="uid://co57y6nn4yfvk" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5a10.png" id="19_6sydf"]
+[ext_resource type="Texture2D" uid="uid://c02vgj7nvt8wj" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5b10.png" id="19_ttem7"]
+[ext_resource type="Texture2D" uid="uid://lo2tf7fn3ugx" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5a11.png" id="20_onw3d"]
+[ext_resource type="Texture2D" uid="uid://d3u5byrmrynxp" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5b11.png" id="20_sde3j"]
+[ext_resource type="Texture2D" uid="uid://capxikl4drxw1" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5b12.png" id="21_f10mk"]
+[ext_resource type="Texture2D" uid="uid://c1v4tdestsfsp" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5a12.png" id="21_wol2l"]
+[ext_resource type="AudioStream" uid="uid://drsjcfy1bowv" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/musica/501040__matrixxx__fable-tribute_cuted.ogg" id="34_i8g5l"]
+[ext_resource type="Texture2D" uid="uid://b6es8006u8qt" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/keys-arrow-wsad-mouse.png" id="35_fvlot"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lj6fq"]
+size = Vector2(58, 90)
+
+[sub_resource type="Animation" id="Animation_cydcp"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_6md4s"]
+resource_name = "idle_player"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_30d73"]
+_data = {
+"RESET": SubResource("Animation_cydcp"),
+"idle_player": SubResource("Animation_6md4s")
+}
+
+[sub_resource type="Theme" id="Theme_y8mxr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oyven"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4gbhb"]
+radius = 14.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rnlde"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_pvqn2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_4qqjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_3co6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_8vv33")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4np26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_bjxvo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_7k80o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ujxmi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_7tkye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_6sydf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_onw3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_wol2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_titra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qwey2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7wwe8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_f7nlq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_wxjko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_svs53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_5j837")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_la1da")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_pnwat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ttem7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_sde3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_f10mk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_bsl4o")
+
+[node name="background" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(965, 537)
+scale = Vector2(7.16176, 6.7875)
+texture = ExtResource("2_mc224")
+
+[node name="Camera3D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(168, 840)
+scale = Vector2(5, 5)
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture_filter = 1
+texture = ExtResource("2_b67wv")
+hframes = 6
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-5, 3)
+shape = SubResource("RectangleShape2D_lj6fq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
+autoplay = "idle_player"
+libraries = {
+"": SubResource("AnimationLibrary_30d73")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1408, 504)
+scale = Vector2(4, 4)
+texture = ExtResource("3_h88my")
+
+[node name="Book" type="Sprite2D" parent="."]
+position = Vector2(1317.2, 689.4)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_oorb8")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Book"]
+position = Vector2(-1090, -840)
+scale = Vector2(1.25, 1.25)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Book/StaticBody2D2"]
+polygon = PackedVector2Array(1105, 503, 1171, 639, 1020, 639, 978, 818, 1215, 817, 1215, 964, 1185, 964, 1188, 849, 941, 847, 996, 609, 1113, 609, 1073, 519, 1064, 501, 1069, 492, 1081, 468, 1119, 454, 1125, 454, 1272, 469, 1327, 563, 1299, 581, 1252, 507, 1127, 493, 1107, 500, 1105, 503, 1312, 656, 1400, 520, 1224, 392, 992, 464, 840, 824, 1040, 920, 1168, 1008, 1296, 976, 1256, 752, 1216, 600)
+
+[node name="Line2D" type="Line2D" parent="Book"]
+position = Vector2(-190, -340)
+scale = Vector2(0.625, 0.625)
+points = PackedVector2Array(1184, 344, 1080, 184, 808, 156, 752, 176, 736, 204, 854, 448, 576, 448, 480, 864, 968, 868, 960, 1128)
+width = 60.0
+default_color = Color(1, 1, 0.372549, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Book/Line2D"]
+offset_left = 464.0
+offset_top = -112.0
+offset_right = 1360.0
+offset_bottom = 128.0
+theme = SubResource("Theme_y8mxr")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 160
+theme_override_font_sizes/bold_font_size = 0
+bbcode_enabled = true
+text = "[color=#8f4e46]Relâmpago"
+metadata/_edit_use_anchors_ = true
+
+[node name="Line2D2" type="Line2D" parent="Book"]
+position = Vector2(-1090, -840)
+scale = Vector2(1.25, 1.25)
+points = PackedVector2Array(1120, 613, 1070, 501, 1080, 482, 1085, 472, 1095, 468, 1106, 464, 1120, 459, 1124, 459, 1269, 474, 1323, 565)
+default_color = Color(1, 1, 0.372549, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Book"]
+offset_left = -616.0
+offset_top = -442.0
+offset_right = -25.0
+offset_bottom = 393.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_font_sizes/normal_font_size = 37
+bbcode_enabled = true
+text = "[color=#8f4e46][center]
+Anotações[/center]
+
+Passo 1 - Acredite na magia
+Passo 3 - Mentalize a magia
+Passo 4 - Não leia qualquer coisa
+Passo 4 - Foque na magia
+Passo 5 - Não demore para
+fazer a runa mágica !!!
+
+     Resposta  42
+         1/9801 =  0.0001020304    
+
+                z=f(1,2)+∂f∂x(1,2)(x−1)+∂f∂y(1,2 (y−2)
+				=5+2(x−1)+4(y−2)"
+
+[node name="magia" type="CharacterBody2D" parent="."]
+position = Vector2(1645.2, 961.4)
+script = ExtResource("5_p4caa")
+
+[node name="Sprite2D" type="Sprite2D" parent="magia"]
+visibility_layer = 17
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_vinjh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="magia"]
+position = Vector2(0, -6.10352e-05)
+scale = Vector2(1.3, 1.3)
+shape = SubResource("RectangleShape2D_oyven")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="magia"]
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1755, 578)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visibility_layer = 16
+position = Vector2(-7, -6)
+shape = SubResource("CircleShape2D_4gbhb")
+
+[node name="final_magia" type="Sprite2D" parent="Area2D"]
+position = Vector2(-5, -4)
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("8_fw285")
+script = ExtResource("9_0y78u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(565, 256)
+rotation = -0.359538
+scale = Vector2(9.17857, 10.5089)
+sprite_frames = SubResource("SpriteFrames_rnlde")
+autoplay = "default"
+frame_progress = 0.88474
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(894, 421)
+rotation = 0.120428
+scale = Vector2(9.17857, 10.5089)
+sprite_frames = SubResource("SpriteFrames_rnlde")
+autoplay = "default"
+frame_progress = 0.88474
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1027, 434)
+rotation = 0.120428
+scale = Vector2(9.17857, 10.5089)
+sprite_frames = SubResource("SpriteFrames_rnlde")
+autoplay = "default"
+frame_progress = 0.00113724
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("34_i8g5l")
+autoplay = true
+
+[node name="Keys-arrow-wsad-mouse" type="Sprite2D" parent="."]
+position = Vector2(1809, 976)
+scale = Vector2(2, 2)
+texture = ExtResource("35_fvlot")
+
+[connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D/final_magia" method="_on_area_2d_body_entered"]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://btwlfspfgk05y"]
+
+[ext_resource type="Texture2D" uid="uid://de0sewuerm257" path="res://microjogos/2023S1/projeto-thedeas/recursos/Monge.png" id="1_j7aeo"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_581j4"]
+radius = 88.0
+height = 304.0
+
+[node name="Monge" type="Area2D"]
+position = Vector2(1936, 1632)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2.00074, 1.97035)
+texture = ExtResource("1_j7aeo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.05176e-05, 0)
+shape = SubResource("CapsuleShape2D_581j4")
