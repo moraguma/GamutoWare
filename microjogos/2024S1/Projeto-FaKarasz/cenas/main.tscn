@@ -1,3 +1,67 @@
-[gd_scene format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=7 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="Texture2D" uid="uid://ggbnyrtc4c4o" path="res://microjogos/2024S1/Projeto-FaKarasz/recursos/gol-removebg-preview.png" id="1_nvar0"]
+[ext_resource type="Texture2D" uid="uid://dsluoulrnqwau" path="res://microjogos/2024S1/Projeto-FaKarasz/recursos/bola-removebg-preview.png" id="2_1e2op"]
+[ext_resource type="Texture2D" uid="uid://dqbyraxta0fon" path="res://microjogos/2024S1/Projeto-FaKarasz/recursos/png-transparent-angle-area-pattern-red-arrow-angle-white-text-removebg-preview.png" id="3_kaemg"]
+[ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="4_3x7q6"]
+
+[sub_resource type="Gradient" id="Gradient_ispyj"]
+offsets = PackedFloat32Array(0.510989)
+colors = PackedColorArray(0.261762, 0.544894, 0.150256, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_abbfw"]
+gradient = SubResource("Gradient_ispyj")
 
 [node name="Main" type="Node2D"]
+position = Vector2(827, 451)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(117, 70)
+scale = Vector2(33.168, 18.3867)
+texture = SubResource("GradientTexture2D_abbfw")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(139.5, -277)
+scale = Vector2(1.43281, 1.11644)
+texture = ExtResource("1_nvar0")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(1430.81, 50.7295)
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(-1771.89, 795.749)
+scale = Vector2(1.23357, 1.20368)
+points = PackedVector2Array(840.566, -1137.96, 845.052, -191.794, 2247.05, -191.794, 2243.82, -1132.98)
+width = 30.0
+
+[node name="Line2D" type="Line2D" parent="Line2D"]
+position = Vector2(611.345, -330.116)
+scale = Vector2(0.606202, 0.731164)
+points = PackedVector2Array(836.052, -1093.79, 845.052, -191.794, 2247.05, -191.794, 2247.05, -852.722, 2247.05, -1087.79)
+width = 30.0
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(135.813, 483.625)
+scale = Vector2(0.233939, 0.239763)
+texture = ExtResource("2_1e2op")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(121, 306)
+rotation = 1.5708
+scale = Vector2(0.594875, 1.07562)
+texture = ExtResource("3_kaemg")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(-225, 4)
+scale = Vector2(3, 3)
+texture = ExtResource("4_3x7q6")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(-56, 9)
+scale = Vector2(3, 3)
+texture = ExtResource("4_3x7q6")
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(120, 12)
+scale = Vector2(3, 3)
+texture = ExtResource("4_3x7q6")
