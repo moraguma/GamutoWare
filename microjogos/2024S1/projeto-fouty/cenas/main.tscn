@@ -1,3 +1,37 @@
-[gd_scene format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=6 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="Texture2D" uid="uid://b101ihkxsid8u" path="res://microjogos/2024S1/projeto-fouty/recursos/Scenario/superMarketBackground.png" id="1_t2yrh"]
+[ext_resource type="Texture2D" uid="uid://ipst71unqjcu" path="res://microjogos/2024S1/projeto-fouty/recursos/Scenario/registrador.png" id="2_nc6s1"]
+[ext_resource type="Texture2D" uid="uid://i0muimte8jvu" path="res://microjogos/2024S1/projeto-fouty/recursos/Scenario/mesaCaixa.png" id="3_8yaej"]
+[ext_resource type="Texture2D" uid="uid://c5l6ts2ak6fn3" path="res://microjogos/2024S1/projeto-fouty/recursos/Scenario/SUPER.png" id="4_1awo2"]
+[ext_resource type="Texture2D" uid="uid://dn6axpm18ub7v" path="res://microjogos/2024S1/projeto-fouty/recursos/Scenario/market.png" id="5_m147q"]
 
 [node name="Main" type="Node2D"]
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="SuperMarketBackground" type="Sprite2D" parent="Environment"]
+position = Vector2(-24.4999, 14.3751)
+scale = Vector2(11.642, 12.855)
+texture = ExtResource("1_t2yrh")
+
+[node name="Registrador" type="Sprite2D" parent="Environment"]
+position = Vector2(495, -388)
+scale = Vector2(7.03974, 7.03974)
+texture = ExtResource("2_nc6s1")
+
+[node name="MesaCaixa" type="Sprite2D" parent="Environment"]
+position = Vector2(-10, 1036)
+scale = Vector2(8.25883, 5.96104)
+texture = ExtResource("3_8yaej")
+
+[node name="Super" type="Sprite2D" parent="Environment"]
+position = Vector2(-1363, 1306)
+rotation = -0.359538
+scale = Vector2(6.00986, 6.00986)
+texture = ExtResource("4_1awo2")
+
+[node name="Market" type="Sprite2D" parent="Environment"]
+position = Vector2(744, 1543)
+scale = Vector2(6.21667, 6.21667)
+texture = ExtResource("5_m147q")
