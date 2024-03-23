@@ -32,6 +32,10 @@ window/size/window_height_override=540
 window/stretch/mode="viewport"
 window/size/fullscreen=true
 
+[dotnet]
+
+project/assembly_name="GamutoWare"
+
 [input]
 
 ui_accept={
