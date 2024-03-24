@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://byuft7r8ys605"]
+
+[ext_resource type="Texture2D" uid="uid://bwaj0sggka6jm" path="res://microjogos/2024S1/projeto-estrela/lilypad.png" id="1_pdvnp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b8mm2"]
+radius = 68.0074
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_b8mm2")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+scale = Vector2(0.293, 0.291)
+texture = ExtResource("1_pdvnp")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjh2lhwsbqihl"]
+
+[ext_resource type="Texture2D" uid="uid://calygur23846f" path="res://microjogos/2024S1/projeto-estrela/barquinho.png" id="1_7u6ro"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+scale = Vector2(0.25, 0.261993)
+texture = ExtResource("1_7u6ro")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-964, -268)
+polygon = PackedVector2Array(958, 240, 971, 254, 1074, 228, 1024, 307, 1015, 312, 959, 311, 899, 300, 854, 217, 946, 249)

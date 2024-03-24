@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://xd0ylioakf58"]
+
+[ext_resource type="Texture2D" uid="uid://cxp2r3vsjulf6" path="res://microjogos/2024S1/projeto-estrela/lotad.png" id="1_pf535"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jubf7"]
+radius = 78.6384
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_jubf7")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+scale = Vector2(0.405789, 0.441579)
+texture = ExtResource("1_pf535")

@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmhh2veb4ba3s"]
+
+[ext_resource type="Texture2D" uid="uid://b6kao8w12gpkk" path="res://microjogos/2024S1/projeto-estrela/lago.png" id="1_ew258"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kvibd"]
+size = Vector2(654.21, 12.1843)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e6nsh"]
+size = Vector2(45.5, 1118)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3rr8r"]
+size = Vector2(46, 1117)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_urruh"]
+size = Vector2(2106, 53)
+
+[node name="Lago" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(955.188, 534.906)
+scale = Vector2(3.11122, 2.95009)
+texture = ExtResource("1_ew258")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(-12.5955, 192.229)
+shape = SubResource("RectangleShape2D_kvibd")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1945, 545)
+shape = SubResource("RectangleShape2D_e6nsh")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-29, 544)
+shape = SubResource("RectangleShape2D_3rr8r")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(960, -29)
+shape = SubResource("RectangleShape2D_urruh")

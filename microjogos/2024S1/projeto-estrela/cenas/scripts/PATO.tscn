@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://botov3x1oaokx"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-estrela/cenas/scripts/CharacterBody2D.gd" id="1_06xe5"]
+[ext_resource type="Texture2D" uid="uid://dis5trsw81fje" path="res://microjogos/2024S1/projeto-estrela/pngegg.png" id="1_pmtf7"]
+[ext_resource type="AudioStream" uid="uid://dsuaafsm815av" path="res://microjogos/2024S1/projeto-estrela/quack.mp3" id="3_ircyp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h1wop"]
+radius = 131.137
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_06xe5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.42, 0.39625)
+texture = ExtResource("1_pmtf7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_h1wop")
+one_way_collision_margin = 0.0
+
+[node name="quack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ircyp")
