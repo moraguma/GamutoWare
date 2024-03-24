@@ -1,30 +1,42 @@
 extends Node2D
 
-@export var current_pos = 0
+var current_pos = 0
 var pode_checkar = true
 var perdeu = false
 var ganhou = false
+var current_pressed = ""
 
-var tag
+var particulas
+var crowd_anim
+var oh_no
+var gota
+
+var crowd_anim_played = false
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	current_pos = 0
-	tag = $"tag"
-	print(tag)
+	particulas = $"particulas"
+	crowd_anim = $"crowd/AnimationPlayer"
+	oh_no = $"oh no"
+	gota = $"gota"
+	
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if current_pos == 1:
-		tag.region_rect.size.x = 180
-	elif current_pos == 2:
-		tag.region_rect.size.x = 340
-	elif current_pos == 3:
-		tag.region_rect.size.x = 460
-	elif current_pos == 4:
-		tag.region_rect.size.x = 570
+	if ganhou:
+		particulas.emitting = true
+		if not crowd_anim_played:
+			crowd_anim.play("crowd_shake")
+			crowd_anim_played = true
+			emit_signal("win")
+	if perdeu:
+		oh_no.play()
+		oh_no.visible = true
+		gota.visible = true
 	pass
 
 

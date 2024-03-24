@@ -1,25 +1,33 @@
 extends Sprite2D
 
-var possibilidades = ["esquerda", "direita", "cima", "baixo", "acao"] 
+var possibilidades = ["esquerda", "direita", "baixo"] 
+var cima = "cima"
+var inputs
 var poss_escolhida = "" 
 
 var tipo
 
-@export var act_texture : Texture2D
 @export var posicao = 0
 
 var main_scene
 var temporiz
+var anim
 
 func _ready():
+	inputs = possibilidades.duplicate()
+	inputs.append(cima)
+	
 	randomize()
-	var rand_num = randi()%5
+	var rand_num = randi()%len(possibilidades)
 	poss_escolhida = possibilidades[rand_num]
 	tipo = poss_escolhida
 	
+	if posicao == 3:
+		tipo = cima
+	
 	main_scene = get_parent()
 	temporiz = main_scene.get_node("Timer")
-	print(main_scene)
+	anim = main_scene.get_node("character").get_node("animador")
 	
 	if tipo == "esquerda":
 		rotation_degrees = -90
@@ -29,8 +37,6 @@ func _ready():
 		rotation_degrees = 180
 	elif tipo == "cima":
 		rotation_degrees = 0
-	elif tipo == "acao":
-		texture = act_texture
 	
 	pass # Replace with function body.
 
@@ -38,21 +44,24 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var apertou_oq = ""
-	for poss in possibilidades:
-		if Input.is_action_just_pressed(poss):
-			apertou_oq = poss
+	for inp in inputs:
+		if Input.is_action_just_pressed(inp):
+			apertou_oq = inp
 		
+		#apertou certo
 	if apertou_oq == tipo and main_scene.current_pos == posicao and main_scene.pode_checkar and not main_scene.perdeu:
+		anim.stop()
+		anim.play("bounce")
 		main_scene.current_pos += 1
 		main_scene.pode_checkar = false
 		temporiz.start(0.1)
+		main_scene.current_pressed = tipo
 		
+		#apertou errado
 	elif apertou_oq != tipo and apertou_oq != "" and main_scene.current_pos == posicao and main_scene.pode_checkar:
+		if not main_scene.perdeu:
+			anim.stop()
+			anim.play("bounce")
 		main_scene.perdeu = true
-		
 	
-	if main_scene.perdeu:
-		scale = Vector2(1.3, 1.3)
-	if main_scene.ganhou:
-		scale = Vector2(0.2, 0.2)
 	pass
