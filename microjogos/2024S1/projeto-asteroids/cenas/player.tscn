@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://8p120t3sf7wl" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/explosion_sprites.png" id="5_05mas"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xov8t"]
-size = Vector2(53, 48)
+size = Vector2(42, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bykic"]
 atlas = ExtResource("5_05mas")
