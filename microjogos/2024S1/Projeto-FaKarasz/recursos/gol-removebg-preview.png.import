@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkvcg7ivmjl0d"
-path="res://.godot/imported/capa.png-8a1b289eccd6e7f3202cf5a91f689be2.ctex"
+uid="uid://ggbnyrtc4c4o"
+path="res://.godot/imported/gol-removebg-preview.png-19aa269689e691e3d6ba61456b3927cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/seu_projeto/capa.png"
-dest_files=["res://.godot/imported/capa.png-8a1b289eccd6e7f3202cf5a91f689be2.ctex"]
+source_file="res://microjogos/2024S1/Projeto-FaKarasz/recursos/gol-removebg-preview.png"
+dest_files=["res://.godot/imported/gol-removebg-preview.png-19aa269689e691e3d6ba61456b3927cf.ctex"]
 
 [params]
 
