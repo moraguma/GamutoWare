@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2h1omei7qn0b"]
+
+[ext_resource type="Texture2D" uid="uid://b1lpv6tih6lcc" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/player.png" id="1_5mntg"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-asteroids/cenas/scripts/player.gd" id="1_mgqdo"]
+[ext_resource type="PackedScene" uid="uid://dealv2l1gdr0h" path="res://microjogos/2024S1/projeto-asteroids/cenas/bullet.tscn" id="2_iw268"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xov8t"]
+size = Vector2(28, 28)
+
+[node name="Base" type="Node2D"]
+
+[node name="player" type="Area2D" parent="."]
+script = ExtResource("1_mgqdo")
+Bullet = ExtResource("2_iw268")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+shape = SubResource("RectangleShape2D_xov8t")
+
+[node name="Sprite2D" type="Sprite2D" parent="player"]
+position = Vector2(2, 0)
+texture = ExtResource("1_5mntg")
+
+[node name="Muzzle" type="Marker2D" parent="player"]
