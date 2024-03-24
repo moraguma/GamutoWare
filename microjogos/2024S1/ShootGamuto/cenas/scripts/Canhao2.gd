@@ -53,6 +53,7 @@ func _ready():
 func _input(ev):
 	if Input.is_action_just_pressed("acao"):
 		_attack()
+		$"../x".play()
 
 func _attack():
 	if $RayCast2D.is_colliding():

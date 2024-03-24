@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://jcn11fua5sck"]
+[gd_scene load_steps=7 format=3 uid="uid://jcn11fua5sck"]
 
 [ext_resource type="Texture2D" uid="uid://cue4y6xtqt3eb" path="res://microjogos/2024S1/ShootGamuto/recursos/bg.png" id="1_33amm"]
 [ext_resource type="Script" path="res://microjogos/2024S1/ShootGamuto/cenas/scripts/main.gd" id="1_ibml2"]
 [ext_resource type="Texture2D" uid="uid://copg86ej15ck1" path="res://microjogos/2024S1/ShootGamuto/recursos/ilha.png" id="2_32ndn"]
 [ext_resource type="PackedScene" uid="uid://3p3ftk6311dc" path="res://microjogos/2024S1/ShootGamuto/cenas/Canhao2.tscn" id="3_cx6fm"]
+[ext_resource type="AudioStream" uid="uid://6hqebqywd30w" path="res://microjogos/2024S1/ShootGamuto/recursos/3fki8-02cz8.ogg" id="5_qcvfl"]
+[ext_resource type="AudioStream" uid="uid://c84v8q7xe82d" path="res://microjogos/2024S1/ShootGamuto/recursos/laser.wav" id="6_g7c8n"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_ibml2")
@@ -15,6 +17,8 @@ offset_top = -325.0
 offset_right = 576.0
 offset_bottom = 323.0
 texture = ExtResource("1_33amm")
+expand_mode = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 visible = false
@@ -165,3 +169,12 @@ texture = ExtResource("2_32ndn")
 
 [node name="CharacterBody2D" parent="." node_paths=PackedStringArray("spawnPositions") instance=ExtResource("3_cx6fm")]
 spawnPositions = [NodePath("../Spawns/Center13/0"), NodePath("../Spawns/Center2/1"), NodePath("../Spawns/Center3/2"), NodePath("../Spawns/Center4/3"), NodePath("../Spawns/Center5/4"), NodePath("../Spawns/Center6/5"), NodePath("../Spawns/Center7/6"), NodePath("../Spawns/Center8/7"), NodePath("../Spawns/Center9/8"), NodePath("../Spawns/Center10/9"), NodePath("../Spawns/Center11/10"), NodePath("../Spawns/Center12/11")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_qcvfl")
+autoplay = true
+
+[node name="x" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_g7c8n")
+volume_db = -22.486
+autoplay = true
