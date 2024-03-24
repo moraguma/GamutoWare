@@ -1,13 +1,13 @@
 [gd_scene load_steps=12 format=3 uid="uid://bi0ahd7cv37i6"]
 
-[ext_resource type="Texture2D" uid="uid://lqrfq1kksyvt" path="res://microjogos/2024S1/gamufit/recursos/gym.jpg" id="1_f4sar"]
+[ext_resource type="Texture2D" uid="uid://cg4byqfvvvlq2" path="res://microjogos/2024S1/gamufit/recursos/00026.jpg" id="1_rdm68"]
 [ext_resource type="Texture2D" uid="uid://c3co7w5ifodnl" path="res://microjogos/2024S1/gamufit/recursos/SmallBar.png" id="2_wwrcp"]
 [ext_resource type="Texture2D" uid="uid://cnxarg8u653q8" path="res://microjogos/2024S1/gamufit/recursos/VerticalBar.png" id="3_18jmg"]
 [ext_resource type="Script" path="res://microjogos/2024S1/gamufit/cenas/SmallBar.gd" id="3_r1ism"]
 [ext_resource type="Script" path="res://microjogos/2024S1/gamufit/cenas/Gamuto(icon).gd" id="4_cwnfb"]
 [ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="4_h08av"]
-[ext_resource type="Texture2D" uid="uid://c204cchdkxite" path="res://microjogos/2024S1/gamufit/recursos/suffering.png" id="5_yqa78"]
-[ext_resource type="Texture2D" uid="uid://17318ap8rl5k" path="res://microjogos/2024S1/gamufit/recursos/exercising.png" id="6_d3650"]
+[ext_resource type="Texture2D" uid="uid://c0jqyfraa6m8j" path="res://microjogos/2024S1/gamufit/recursos/suffering.jpg" id="7_kuu1c"]
+[ext_resource type="Texture2D" uid="uid://vuv8new72dup" path="res://microjogos/2024S1/gamufit/recursos/exercising.jpg" id="8_dofex"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ak12t"]
 
@@ -19,9 +19,9 @@
 position = Vector2(0, 4)
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(961.5, 539.25)
-scale = Vector2(3.13562, 2.43424)
-texture = ExtResource("1_f4sar")
+position = Vector2(963.5, 535)
+scale = Vector2(0.530144, 0.52832)
+texture = ExtResource("1_rdm68")
 
 [node name="VerticalBar" type="Node2D" parent="."]
 position = Vector2(1744, 512)
@@ -69,12 +69,13 @@ metadata/_edit_group_ = true
 shape = SubResource("RectangleShape2D_65jwk")
 
 [node name="Gahulk" type="Node2D" parent="."]
-position = Vector2(978, 658)
+position = Vector2(983, 546)
+scale = Vector2(0.265, 0.265)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D-suffering" type="Sprite2D" parent="Gahulk"]
-texture = ExtResource("5_yqa78")
+texture = ExtResource("7_kuu1c")
 
 [node name="Sprite2D-exercising" type="Sprite2D" parent="Gahulk"]
 visible = false
-texture = ExtResource("6_d3650")
+texture = ExtResource("8_dofex")
