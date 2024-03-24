@@ -24,15 +24,17 @@ func _ready():
 		Global.LANGUAGE.EN:
 			NotificationCenter.notify("DO SOMETHING!")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FACA ALGO!")
+			NotificationCenter.notify("PENALTY")
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
 # a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
 # a última chamada desta função. O comando pass não faz nada
 func _physics_process(delta):
-	pass
-
+	if Input.is_action_just_pressed("acao"):
+		var direction=Vector2(1,0).rotated(get_node("Seta").rotation)
+		get_node("Bola").linear_velocity = -direction * 1000
+		get_node("Seta").visible=false
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a renderização, 
 # como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
@@ -69,3 +71,16 @@ func register_win():
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
 	emit_signal("lose")
+
+func _on_Gamutos_area_entered(area):
+	area.queue_free()
+	register_lose()
+	NotificationCenter.notify("PERDEU")
+
+	
+func _on_Gol_area_entered(area):
+	area.queue_free()
+	register_win()
+	NotificationCenter.notify("GOOOOLLL")
+
+
