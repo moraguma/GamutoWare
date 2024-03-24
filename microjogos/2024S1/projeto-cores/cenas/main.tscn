@@ -1,3 +1,43 @@
-[gd_scene format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=3 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="PackedScene" uid="uid://dkill5kno8yaa" path="res://microjogos/2024S1/projeto-cores/cenas/node_2d.tscn" id="1_78o1k"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-cores/cenas/main.gd" id="1_mwfc7"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_mwfc7")
+
+[node name="CorUp" parent="." instance=ExtResource("1_78o1k")]
+position = Vector2(927, 523)
+
+[node name="CorLeft" parent="." instance=ExtResource("1_78o1k")]
+position = Vector2(752, 695)
+
+[node name="CorSpace" parent="." instance=ExtResource("1_78o1k")]
+position = Vector2(927, 693)
+
+[node name="CorRight" parent="." instance=ExtResource("1_78o1k")]
+position = Vector2(1102, 696)
+
+[node name="CorDown" parent="." instance=ExtResource("1_78o1k")]
+position = Vector2(927, 865)
+
+[node name="CorInicial" parent="." instance=ExtResource("1_78o1k")]
+position = Vector2(306, 229)
+
+[node name="Cor1" parent="." instance=ExtResource("1_78o1k")]
+position = Vector2(508, 228)
+
+[node name="Cor2" parent="." instance=ExtResource("1_78o1k")]
+position = Vector2(714, 222)
+
+[node name="Cor3" parent="." instance=ExtResource("1_78o1k")]
+position = Vector2(923, 222)
+
+[node name="Cor4" parent="." instance=ExtResource("1_78o1k")]
+position = Vector2(1128, 218)
+
+[node name="Cor5" parent="." instance=ExtResource("1_78o1k")]
+position = Vector2(1336, 215)
+
+[node name="CorFinal" parent="." instance=ExtResource("1_78o1k")]
+position = Vector2(1546, 216)
