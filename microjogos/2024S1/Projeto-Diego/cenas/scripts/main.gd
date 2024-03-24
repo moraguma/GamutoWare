@@ -1,5 +1,6 @@
 extends Node2D
 
+
 # Declaração dos sinais win e lose
 signal win
 signal lose
@@ -11,61 +12,68 @@ signal lose
 const WIDTH = 1920
 const HEIGHT = 1080
 
-
-# --------------------------------------------------------------------------------------------------
-# FUNÇÕES PADRÃO
-# --------------------------------------------------------------------------------------------------
-
-# Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
-func _ready():
-	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
-	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FACA ALGO!")
+var vidas = 2
 
 
-# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
-# a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
-# a última chamada desta função. O comando pass não faz nada
-func _physics_process(delta):
-	pass
+@export var car_scene: PackedScene
 
 
-# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a renderização, 
-# como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
-# desde a última chamada desta função. O comando pass não faz nada
-func _process(delta):
-	pass
+
+func _on_car_timer_timeout():
+	var carro = car_scene.instantiate()
+	
+	var carro_spawn_location = get_node("Path2D/Carspawn")
+	carro_spawn_location.progress_ratio = randf()
+	
+	carro.position = carro_spawn_location.position
+	var velocidade = Vector2(0, -300)
+
+	carro.linear_velocity = velocidade
+	
+
+	
+	add_child(carro)
+	#$Carro_som.play()
+	print("Som tocado")
 
 
-# --------------------------------------------------------------------------------------------------
-# SUAS FUNÇÕES
-# --------------------------------------------------------------------------------------------------
+func _on_warningtimer_timeout():
+	$StartMessage.visible = false
+	$Warning_msg.visible = false
+	await get_tree().create_timer(0.2).timeout
+	$StartMessage.visible = true
+	$Warning_msg.visible = true
+	await get_tree().create_timer(0.4).timeout
+	$StartMessage.visible = false
+	$Warning_msg.visible = false
+	await get_tree().create_timer(0.2).timeout
+	$Warning_msg.visible = true
+	await get_tree().create_timer(0.4).timeout
+	$Warning_msg.visible = false
 
-
-# Um método genérico. Crie quantos métodos você precisar!
-func my_method():
-	pass
-
-
-# --------------------------------------------------------------------------------------------------
-# CONDIÇÕES DE VITÓRIA
-# --------------------------------------------------------------------------------------------------
-# Quando o jogo começa, ela assume que o jogador não conseguiu vencer o jogo ainda, ou seja, se não
-# acontecer nada, o jogador vai perder o jogo. A verificação se o jogador venceu o minigame é feita
-# com base na emissão dos sinais "win" e "lose". Se "win" foi o último sinal emitido, o jogador
-# vencerá o jogo, e se "lose" foi o último sinal emitido ou nenhum sinal foi emitido, o jogador
-# perderá o jogo
 
 
 # Chame esta função para registrar que o jogador venceu o jogo
 func register_win():
-	emit_signal("win")
+	if vidas == 2:
+		print("win")
+		emit_signal("win")
+	else:
+		pass
 
 
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
-	emit_signal("lose")
+	if vidas != 2:
+		print("lose")
+		emit_signal("lose")
+	else:
+		pass
+
+
+
+
+
+func _on_game_time_timeout():
+	register_lose()
+	register_win()

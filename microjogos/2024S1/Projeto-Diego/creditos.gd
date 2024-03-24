@@ -7,17 +7,40 @@ extends Resource
 
 
 # Título do seu jogo
-var title_pt = "Titulo em Portugues"
-var title_en = "Title in English"
+var title_pt = "Pare os carros!"
+var title_en = "Stop the cars!"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
-Criado por: [Seu nome!]
-
-Você pode preencher o resto deste campo com creditos de assets utilizados, links para sua redes sociais ou qualquer outro detalhe que ache relevante
+Criado por Diego
+assets utilizados incluem PNGs de:
+	www.pngegg.com (cone: https://www.pngegg.com/pt/png-bpoae) (Domínio público)
+	
+	www.pngwing.com (cano de metal: https://www.pngwing.com/en/free-png-vvofv) (Domínio público)
+	
+	www.pngwing.com (placa de parar: https://www.pngwing.com/en/free-png-bvgtw) (Domínio público)
+	
+	OpenArtOrg: placa de travessia de patos feito por weirdybeardyman e publicado em https://opengameart.org/content/ducks-crossing-sign (Domínio público)
+	
+	OpenArtOrg: carro publicado por qubodup em https://opengameart.org/content/red-car-top-down (Domínio público)
+	
+além disso tile_set da rua retirado de OpenArtOrg:
+	feito por AdebGameSoft e publicado em https://opengameart.org/content/top-down-road-tileset (Domíno público)
 """
 var credits_en = """
-Made by: [Your name!]
+Made by: Diego
+utilized PNG assets from:
+	www.pngegg.com (cone: https://www.pngegg.com/pt/png-bpoae) (public domain)
+	
+	www.pngwing.com (metal pipe: https://www.pngwing.com/en/free-png-vvofv) (public domain)
+	
+	www.pngwing.com (stop sign: https://www.pngwing.com/en/free-png-bvgtw) (public domain)
+	
 
-Fill this space with credits to used assets, links to your social medias and whatever other details you think are important
+	OpenArtOrg: duck crossing sign made by weirdybeardyman and published on https://opengameart.org/content/ducks-crossing-sign (public domain)
+	
+	OpenArtOrg: car published by qubodup on https://opengameart.org/content/red-car-top-down (public domain)
+	
+road tile_set used is from OpenArtOrg:
+	made by AdebGameSoft and published on https://opengameart.org/content/top-down-road-tileset (Domíno público)
 """

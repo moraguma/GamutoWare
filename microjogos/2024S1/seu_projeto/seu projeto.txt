@@ -1,5 +1,0 @@
-Boas vindas à sua área de trabalho! Sinta-se livre para renomear essa pasta com o seu nome ou o nome do seu jogo. O que tiver aqui vai ser sua entrega final quando o seu jogo estiver pronto.
-
-As pastas aqui dentro tem arquivos de texto explicando seu propósito, e a cena principal está localizada em cenas. O arquivo capa é uma imagem 450x450 que aparece quando seu jogo carrega. Troque ela por alguma coisa interessante mais pra frente!
-
-Lembre de preencher o arquivo creditos.gd antes de entregar o seu jogo!
