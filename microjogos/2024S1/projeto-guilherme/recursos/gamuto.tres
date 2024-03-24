@@ -1,0 +1,43 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://gpr0lki7mf0o"]
+
+[ext_resource type="Texture2D" uid="uid://dip3yiadth6c7" path="res://microjogos/2024S1/projeto-guilherme/recursos/gamuto.png" id="1_xbji1"]
+[ext_resource type="Texture2D" uid="uid://065x6nka203e" path="res://microjogos/2024S1/projeto-guilherme/recursos/gamuto_derrota.png" id="2_vuyk1"]
+[ext_resource type="Texture2D" uid="uid://bjwvohc5kwlu2" path="res://microjogos/2024S1/projeto-guilherme/recursos/gamuto_vitoria.png" id="3_8u5s5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hg6sy"]
+atlas = ExtResource("1_xbji1")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tv7q6"]
+atlas = ExtResource("1_xbji1")
+region = Rect2(64, 0, 64, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hg6sy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tv7q6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vuyk1")
+}],
+"loop": true,
+"name": &"derrota",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8u5s5")
+}],
+"loop": true,
+"name": &"vitoria",
+"speed": 5.0
+}]
