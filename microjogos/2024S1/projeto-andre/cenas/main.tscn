@@ -1,3 +1,92 @@
-[gd_scene format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=9 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="Texture2D" uid="uid://hu61k640fetl" path="res://microjogos/2024S1/projeto-andre/recursos/wallpaper.png" id="1_10oaf"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-andre/cenas/scripts/main.gd" id="1_b63cv"]
+[ext_resource type="Texture2D" uid="uid://bcyjafwyds3xc" path="res://microjogos/2024S1/projeto-andre/recursos/deck/CAPA.jpg" id="2_l3bq1"]
+[ext_resource type="Shader" path="res://microjogos/2024S1/projeto-andre/cenas/main.gdshader" id="3_vfwhk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kvkvv"]
+shader = ExtResource("3_vfwhk")
+shader_parameter/shine_color = Color(1, 0, 1, 0.784314)
+shader_parameter/alpha_limit = 0.6
+shader_parameter/cycle_speed = 3.0
+shader_parameter/full_pulse_cycle = true
+shader_parameter/mode = 0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h4dn6"]
+shader = ExtResource("3_vfwhk")
+shader_parameter/shine_color = Color(1, 0, 1, 0.784314)
+shader_parameter/alpha_limit = 0.6
+shader_parameter/cycle_speed = 3.0
+shader_parameter/full_pulse_cycle = true
+shader_parameter/mode = 0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p828l"]
+shader = ExtResource("3_vfwhk")
+shader_parameter/shine_color = Color(1, 0, 1, 0.784314)
+shader_parameter/alpha_limit = 0.6
+shader_parameter/cycle_speed = 3.0
+shader_parameter/full_pulse_cycle = true
+shader_parameter/mode = 0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2byhy"]
+shader = ExtResource("3_vfwhk")
+shader_parameter/shine_color = Color(1, 0, 1, 0.784314)
+shader_parameter/alpha_limit = 0.6
+shader_parameter/cycle_speed = 3.0
+shader_parameter/full_pulse_cycle = true
+shader_parameter/mode = 0
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_b63cv")
+
+[node name="WPP" type="TextureRect" parent="."]
+offset_left = -48.0
+offset_top = -45.0
+offset_right = 2003.0
+offset_bottom = 1138.0
+texture = ExtResource("1_10oaf")
+
+[node name="B1" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_kvkvv")
+position = Vector2(480, 540)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_l3bq1")
+
+[node name="B2" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_h4dn6")
+position = Vector2(960, 270)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_l3bq1")
+
+[node name="B3" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_p828l")
+position = Vector2(1440, 540)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_l3bq1")
+
+[node name="P" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_2byhy")
+position = Vector2(960, 810)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_l3bq1")
+
+[node name="VIRA" type="Sprite2D" parent="."]
+position = Vector2(1556, 157)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_l3bq1")
+
+[node name="CIMA" type="Sprite2D" parent="."]
+position = Vector2(1454, 166)
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_l3bq1")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 57.0
+offset_top = 27.0
+offset_right = 150.0
+offset_bottom = 74.0
+scale = Vector2(6, 6)
+text = "FAÇO! = <-
+PASSO! = ->"
