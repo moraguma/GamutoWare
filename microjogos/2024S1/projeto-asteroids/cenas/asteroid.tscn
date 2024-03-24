@@ -4,14 +4,17 @@
 [ext_resource type="Texture2D" uid="uid://cl74uc0kq68v2" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/asteroid.png" id="2_4rixu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u2c7u"]
-radius = 30.0666
+radius = 23.3238
 
 [node name="Asteroid" type="RigidBody2D"]
 gravity_scale = 0.0
 script = ExtResource("1_pfnyl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 3)
+scale = Vector2(3, 3)
 texture = ExtResource("2_4rixu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(3, 3)
 shape = SubResource("CircleShape2D_u2c7u")

@@ -1,12 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=6 format=3 uid="uid://bi0ahd7cv37i6"]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-asteroids/cenas/scripts/main.gd" id="1_5i45u"]
 [ext_resource type="PackedScene" uid="uid://2qg84u0dmxnj" path="res://microjogos/2024S1/projeto-asteroids/cenas/asteroid.tscn" id="2_o7coc"]
 [ext_resource type="PackedScene" uid="uid://c2h1omei7qn0b" path="res://microjogos/2024S1/projeto-asteroids/cenas/player.tscn" id="3_fd8yu"]
+[ext_resource type="Texture2D" uid="uid://f7ibu6d8tw05" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/background.png" id="4_vxe38"]
 
 [sub_resource type="Curve2D" id="Curve2D_mry0k"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 1918, 4, 0, 0, 0, 0, 1918, 1075, 0, 0, 0, 0, 0, 1070, 0, 0, 0, 0, 0, 4)
+"points": PackedVector2Array(0, 0, 0, 0, -169, -155, 0, 0, 0, 0, 2057, -157, 0, 0, 0, 0, 2060, 1207, 0, 0, 0, 0, -171, 1194, 0, 0, 0, 0, -170, -156)
 }
 point_count = 5
 
@@ -16,10 +17,9 @@ asteroid_scene = ExtResource("2_o7coc")
 player_scene = ExtResource("3_fd8yu")
 
 [node name="AsteroidTimer" type="Timer" parent="."]
-wait_time = 0.3
+wait_time = 0.2
 
 [node name="StartTimer" type="Timer" parent="."]
-wait_time = 2.0
 one_shot = true
 autostart = true
 
@@ -27,13 +27,19 @@ autostart = true
 curve = SubResource("Curve2D_mry0k")
 
 [node name="AsteroidSpawn" type="PathFollow2D" parent="AsteroidPath"]
-position = Vector2(0, 4)
+position = Vector2(-169, -155)
+rotation = -0.000898472
 
 [node name="StartPosition" type="Marker2D" parent="."]
 position = Vector2(960, 540)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(960, 540)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_vxe38")
 
 [connection signal="timeout" from="AsteroidTimer" to="." method="_on_asteroid_timer_timeout"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
