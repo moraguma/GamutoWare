@@ -1,3 +1,62 @@
-[gd_scene format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=11 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="1_xw2jv"]
+[ext_resource type="Texture2D" uid="uid://di5ld3jg3u3xm" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/oculos.png" id="2_l54ih"]
+[ext_resource type="Texture2D" uid="uid://b0p0h5i2i6tsp" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/sorveterosa.png" id="3_lq4sp"]
+[ext_resource type="Texture2D" uid="uid://cps6k1t0jvvqn" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/sorvetemarrom.png" id="4_830mq"]
+[ext_resource type="Texture2D" uid="uid://bvx8nry0oq46j" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/sorveteverde.png" id="5_jaw7s"]
+[ext_resource type="Texture2D" uid="uid://x80dvpolikrw" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/sorveteamarelo.png" id="6_c62d8"]
+[ext_resource type="Texture2D" uid="uid://by53bitd5rbg8" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/sorvetevermelho.png" id="7_8578p"]
+[ext_resource type="Texture2D" uid="uid://dk5if3cv3rl7u" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/sorveteazul.png" id="8_qtuke"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-do-FelipeG/cenas/casquinha.gd" id="9_80hcg"]
+[ext_resource type="Texture2D" uid="uid://b8e08erddibol" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/casquinha2.png" id="10_6qsf7"]
 
 [node name="Main" type="Node2D"]
+
+[node name="gamuto" type="Sprite2D" parent="."]
+position = Vector2(2146, -288)
+scale = Vector2(3.0752, 2.87891)
+texture = ExtResource("1_xw2jv")
+
+[node name="oculos" type="Sprite2D" parent="gamuto"]
+position = Vector2(0.650369, 9.37856)
+scale = Vector2(0.029272, 0.0327578)
+texture = ExtResource("2_l54ih")
+
+[node name="sorveterosa" type="Sprite2D" parent="."]
+position = Vector2(153, -47)
+scale = Vector2(6.06125, 6.10875)
+texture = ExtResource("3_lq4sp")
+
+[node name="sorvetemarrom" type="Sprite2D" parent="."]
+position = Vector2(459, -46)
+scale = Vector2(6.225, 6.15)
+texture = ExtResource("4_830mq")
+
+[node name="sorveteverde" type="Sprite2D" parent="."]
+position = Vector2(817, -50)
+scale = Vector2(5.94, 5.75)
+texture = ExtResource("5_jaw7s")
+
+[node name="sorveteamarelo" type="Sprite2D" parent="."]
+position = Vector2(1126, -57)
+scale = Vector2(6.105, 5.885)
+texture = ExtResource("6_c62d8")
+
+[node name="sorvetevermelho" type="Sprite2D" parent="."]
+position = Vector2(1445, -59.9999)
+scale = Vector2(6.34, 6.07)
+texture = ExtResource("7_8578p")
+
+[node name="sorveteazul" type="Sprite2D" parent="."]
+position = Vector2(1754, -48)
+scale = Vector2(6.85, 6.31)
+texture = ExtResource("8_qtuke")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("9_80hcg")
+
+[node name="casquinha" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(923, 965)
+scale = Vector2(4.605, 4.5425)
+texture = ExtResource("10_6qsf7")
