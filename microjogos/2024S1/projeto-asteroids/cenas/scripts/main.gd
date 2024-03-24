@@ -36,11 +36,13 @@ func _ready():
 	
 	
 	
+	
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
 # a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
 # a última chamada desta função. O comando pass não faz nada
+@warning_ignore("unused_parameter")
 func _physics_process(delta):
 	pass
 
@@ -48,6 +50,7 @@ func _physics_process(delta):
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a renderização, 
 # como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
 # desde a última chamada desta função. O comando pass não faz nada
+@warning_ignore("unused_parameter")
 func _process(delta):
 	pass
 
@@ -110,4 +113,13 @@ func _on_asteroid_timer_timeout():
 	
 	add_child(asteroid)
 	
+	pass # Replace with function body.
+ 
+
+func _on_win_timer_timeout():
+	var a = get_node("/root/Main/Base/Player")
+	if a.is_alive:
+		register_win()
+	else:
+		register_lose()
 	pass # Replace with function body.
