@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+signal win
+signal lose
 @export var rotation_speed =  1.0472 * 2
 @export var spawnPositions : Array[Marker2D] = []
 var counterBalaoBom = 0
@@ -49,7 +51,7 @@ func _ready():
 	##This may or may not be required for inputs to work.
 
 func _input(ev):
-	if Input.is_action_just_pressed("attack"):
+	if Input.is_action_just_pressed("acao"):
 		_attack()
 
 func _attack():
@@ -60,9 +62,19 @@ func _attack():
 		#$"../RichTextLabel".text = "ôi"
 		if $RayCast2D.get_collider().get_collision_layer() == 4:
 			counterBonsAtirados += 1
-		#else:
+		else:
+			register_lose()
 			#$"../RichTextLabel".text = "you lost"
 			
-		#if counterBonsAtirados >= counterBalaoBom:
+		if counterBonsAtirados >= counterBalaoBom:
 			#$"../RichTextLabel".text = "you won"
-			
+			register_win()
+
+# Chame esta função para registrar que o jogador venceu o jogo
+func register_win():
+	emit_signal("win")
+
+
+# Chame esta função para registrar que o jogador perdeu o jogo
+func register_lose():
+	emit_signal("lose")
