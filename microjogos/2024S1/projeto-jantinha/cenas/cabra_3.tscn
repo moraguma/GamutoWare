@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvo0qxu8xskqv"]
+
+[ext_resource type="Texture2D" uid="uid://cuv3pukvwj5vb" path="res://microjogos/2024S1/projeto-jantinha/recursos/ovelha.jpg" id="1_iknlf"]
+
+[sub_resource type="GDScript" id="GDScript_mv5hc"]
+script/source = "extends CharacterBody2D
+const velocidade = 200
+var dirfuga = Vector2(0,0)
+func _morrer():
+	$slaaaa.set_disabled(true)
+	hide()
+
+func _on_hitboxovelha_area_entered(area):
+	if area.name == \"hitboxlobo\":
+		print(\"lobo\")
+		_morrer()
+	pass # Replace with function body.
+
+func _on_sensacao_area_entered(area):
+	if area.name == \"hitboxlobo\":
+		dirfuga = Vector2((-get_node(\"../../Lobo/CorpoLobo\").global_position + $\"../../Cabra3/ovelha\".global_position).normalized())
+		
+func _physics_process(delta):
+	$\"../../Cabra3/ovelha\".velocity = dirfuga * Vector2(100, 100)
+	move_and_slide()
+	pass # Replace with function body.
+	
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_477qq"]
+radius = 110.027
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rrlwn"]
+radius = 705.071
+
+[node name="Cabra3" type="Node2D"]
+position = Vector2(139, 69)
+scale = Vector2(0.114981, 0.117298)
+
+[node name="ovelha" type="CharacterBody2D" parent="."]
+motion_mode = 1
+script = SubResource("GDScript_mv5hc")
+
+[node name="spriteovelha" type="Sprite2D" parent="ovelha"]
+texture = ExtResource("1_iknlf")
+
+[node name="hitboxovelha" type="Area2D" parent="ovelha"]
+monitorable = false
+
+[node name="limitehitboxovelha" type="CollisionShape2D" parent="ovelha/hitboxovelha"]
+position = Vector2(-30, -14)
+shape = SubResource("CircleShape2D_477qq")
+
+[node name="sensacao" type="Area2D" parent="ovelha"]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ovelha/sensacao"]
+shape = SubResource("CircleShape2D_rrlwn")
+
+[node name="slaaaa" type="CollisionShape2D" parent="ovelha"]
+position = Vector2(-30, -14)
+scale = Vector2(0.0377875, -0.00886006)
+shape = SubResource("CircleShape2D_477qq")
+
+[connection signal="area_entered" from="ovelha/hitboxovelha" to="ovelha" method="_on_hitboxovelha_area_entered"]
+[connection signal="area_entered" from="ovelha/sensacao" to="ovelha" method="_on_sensacao_area_entered"]
