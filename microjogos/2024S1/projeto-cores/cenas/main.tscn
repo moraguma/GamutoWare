@@ -7,37 +7,37 @@
 script = ExtResource("1_mwfc7")
 
 [node name="CorUp" parent="." instance=ExtResource("1_78o1k")]
-position = Vector2(927, 523)
+position = Vector2(977, 544)
 
 [node name="CorLeft" parent="." instance=ExtResource("1_78o1k")]
-position = Vector2(752, 695)
+position = Vector2(802, 716)
 
 [node name="CorSpace" parent="." instance=ExtResource("1_78o1k")]
-position = Vector2(927, 693)
+position = Vector2(977, 714)
 
 [node name="CorRight" parent="." instance=ExtResource("1_78o1k")]
-position = Vector2(1102, 696)
+position = Vector2(1152, 717)
 
 [node name="CorDown" parent="." instance=ExtResource("1_78o1k")]
-position = Vector2(927, 865)
+position = Vector2(977, 886)
 
 [node name="CorInicial" parent="." instance=ExtResource("1_78o1k")]
-position = Vector2(306, 229)
+position = Vector2(356, 250)
 
 [node name="Cor1" parent="." instance=ExtResource("1_78o1k")]
-position = Vector2(508, 228)
+position = Vector2(558, 249)
 
 [node name="Cor2" parent="." instance=ExtResource("1_78o1k")]
-position = Vector2(714, 222)
+position = Vector2(764, 243)
 
 [node name="Cor3" parent="." instance=ExtResource("1_78o1k")]
-position = Vector2(923, 222)
+position = Vector2(973, 243)
 
 [node name="Cor4" parent="." instance=ExtResource("1_78o1k")]
-position = Vector2(1128, 218)
+position = Vector2(1178, 239)
 
 [node name="Cor5" parent="." instance=ExtResource("1_78o1k")]
-position = Vector2(1336, 215)
+position = Vector2(1386, 236)
 
 [node name="CorFinal" parent="." instance=ExtResource("1_78o1k")]
-position = Vector2(1546, 216)
+position = Vector2(1596, 237)
