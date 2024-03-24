@@ -1,43 +1,74 @@
-[gd_scene load_steps=3 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=5 format=3 uid="uid://bi0ahd7cv37i6"]
 
 [ext_resource type="PackedScene" uid="uid://dkill5kno8yaa" path="res://microjogos/2024S1/projeto-cores/cenas/node_2d.tscn" id="1_78o1k"]
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-cores/cenas/main.gd" id="1_mwfc7"]
+[ext_resource type="Texture2D" uid="uid://bb26eloj2v01k" path="res://microjogos/2024S1/projeto-cores/recursos/img-1-seamless_rainbow.png" id="3_621l5"]
+[ext_resource type="AudioStream" uid="uid://bmvjepnr0ybd8" path="res://microjogos/2024S1/projeto-cores/recursos/Victory.mp3" id="4_5qolh"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_mwfc7")
 
 [node name="CorUp" parent="." instance=ExtResource("1_78o1k")]
-position = Vector2(977, 544)
+position = Vector2(160, 90)
 
 [node name="CorLeft" parent="." instance=ExtResource("1_78o1k")]
-position = Vector2(802, 716)
+position = Vector2(130, 120)
 
 [node name="CorSpace" parent="." instance=ExtResource("1_78o1k")]
-position = Vector2(977, 714)
+position = Vector2(160, 120)
 
 [node name="CorRight" parent="." instance=ExtResource("1_78o1k")]
-position = Vector2(1152, 717)
+position = Vector2(190, 120)
 
 [node name="CorDown" parent="." instance=ExtResource("1_78o1k")]
-position = Vector2(977, 886)
+position = Vector2(160, 150)
 
 [node name="CorInicial" parent="." instance=ExtResource("1_78o1k")]
-position = Vector2(356, 250)
+position = Vector2(40, 30)
 
 [node name="Cor1" parent="." instance=ExtResource("1_78o1k")]
-position = Vector2(558, 249)
+position = Vector2(80, 30)
 
 [node name="Cor2" parent="." instance=ExtResource("1_78o1k")]
-position = Vector2(764, 243)
+position = Vector2(120, 30)
 
 [node name="Cor3" parent="." instance=ExtResource("1_78o1k")]
-position = Vector2(973, 243)
+position = Vector2(160, 30)
 
 [node name="Cor4" parent="." instance=ExtResource("1_78o1k")]
-position = Vector2(1178, 239)
+position = Vector2(200, 30)
 
 [node name="Cor5" parent="." instance=ExtResource("1_78o1k")]
-position = Vector2(1386, 236)
+position = Vector2(240, 30)
 
 [node name="CorFinal" parent="." instance=ExtResource("1_78o1k")]
-position = Vector2(1596, 237)
+position = Vector2(280, 30)
+
+[node name="Polygon15" type="Polygon2D" parent="."]
+z_index = -3
+color = Color(0, 0, 0, 1)
+offset = Vector2(80, 30)
+polygon = PackedVector2Array(-15, -15, 15, -15, 15, 15, -15, 15)
+
+[node name="Polygon14" type="Polygon2D" parent="."]
+z_index = -2
+offset = Vector2(80, 30)
+polygon = PackedVector2Array(-14, -14, 14, -14, 14, 14, -14, 14)
+
+[node name="Polygon13" type="Polygon2D" parent="."]
+modulate = Color(0, 0, 1, 1)
+z_index = -1
+color = Color(0, 0, 0, 1)
+offset = Vector2(80, 30)
+polygon = PackedVector2Array(-13, -13, 13, -13, 13, 13, -13, 13)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = -7
+position = Vector2(160, 90)
+scale = Vector2(1.28, 0.72)
+texture = ExtResource("3_621l5")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_5qolh")
+volume_db = 24.0

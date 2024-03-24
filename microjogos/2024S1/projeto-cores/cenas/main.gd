@@ -18,6 +18,27 @@ var down=0
 var tentativa=[]
 var resp=[]
 
+func positionpolygon(arr, i, x):
+	arr.append(Vector2((1+used)*x-i,-i))
+	arr.append(Vector2((1+used)*x+i, -i))
+	arr.append(Vector2((1+used)*x+i,+i))
+	arr.append(Vector2((1+used)*x-i, +i))
+
+func movepolygon():
+	var arr = PackedVector2Array()
+	positionpolygon(arr, 15, 40)
+	for i in range(4):
+		$Polygon15.polygon[i] = arr[i]
+	arr=PackedVector2Array()
+	positionpolygon(arr, 14, 40)
+	for i in range(4):
+		$Polygon14.polygon[i] = arr[i]
+	arr=PackedVector2Array()
+	positionpolygon(arr, 13, 40)
+	for i in range(4):
+		$Polygon13.polygon[i] = arr[i]
+	arr=PackedVector2Array()
+
 
 func reset():
 	$Cor1/Polygon2D.modulate = Color(1, 1, 1)
@@ -61,9 +82,14 @@ func put_color(i):
 		$Cor5/Polygon2D.modulate = Color(c[i][0], c[i][1], c[i][2])
 		if tentativa==resp:
 			emit_signal("win")
-			$CorInicial/Polygon2D.modulate = Color(0, 0, 0)
+			$Sprite2D.modulate = Color(1, 1, 1, 1)
+			$Polygon13.modulate = Color(0,0,0,0)
+			$Polygon14.modulate = Color(0,0,0,0)
+			$Polygon15.modulate = Color(0,0,0,0)
+			$AudioStreamPlayer2D.play()
 		else:
 			reset()
+	movepolygon()
 	used=used+1
 
 
@@ -114,12 +140,13 @@ func _unhandled_input(event):
 			put_color(4)
 		elif event.pressed and event.keycode == KEY_R:
 			reset()
+			used=used+1
 		elif event.pressed and event.keycode == KEY_D:
 			developer()
-
 
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
