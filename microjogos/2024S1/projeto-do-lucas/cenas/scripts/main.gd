@@ -11,7 +11,6 @@ signal lose
 const WIDTH = 1920
 const HEIGHT = 1080
 
-
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES PADRÃO
 # --------------------------------------------------------------------------------------------------
@@ -22,10 +21,11 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
+			NotificationCenter.notify("SNAP!")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FACA ALGO!")
-
+			NotificationCenter.notify("FOTO!")
+			
+	$Sound_Cave.play()
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
 # a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
@@ -39,13 +39,12 @@ func _physics_process(delta):
 # desde a última chamada desta função. O comando pass não faz nada
 func _process(delta):
 	pass
-
+		
 
 # --------------------------------------------------------------------------------------------------
 # SUAS FUNÇÕES
 # --------------------------------------------------------------------------------------------------
-
-
+	
 # Um método genérico. Crie quantos métodos você precisar!
 func my_method():
 	pass
@@ -64,7 +63,6 @@ func my_method():
 # Chame esta função para registrar que o jogador venceu o jogo
 func register_win():
 	emit_signal("win")
-
 
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
