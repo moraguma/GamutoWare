@@ -38,7 +38,7 @@ position = Vector2(1006, 750)
 scale = Vector2(2.122, 1.95)
 sprite_frames = SubResource("SpriteFrames_nnave")
 autoplay = "default"
-frame_progress = 0.985254
+frame_progress = 0.956306
 
 [node name="Area2D" type="Area2D" parent="." groups=["player"]]
 
