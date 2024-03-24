@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://mvh3iu3vk5i2"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-felipe-silva/cenas/scripts/bike.gd" id="1_clyaq"]
+[ext_resource type="Texture2D" uid="uid://dta6v1fux30su" path="res://microjogos/2024S1/projeto-felipe-silva/recursos/bike.png" id="1_p8xaw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4q78q"]
+size = Vector2(298.385, 176)
+
+[node name="Bike" type="CharacterBody2D"]
+script = ExtResource("1_clyaq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4q78q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(11, 11)
+texture = ExtResource("1_p8xaw")

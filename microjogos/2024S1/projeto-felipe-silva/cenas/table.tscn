@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://dskcw2kj7rh76"]
+
+[ext_resource type="Texture2D" uid="uid://crttkynvvjyk" path="res://microjogos/2024S1/projeto-felipe-silva/recursos/table.png" id="1_g13vg"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-felipe-silva/cenas/scripts/table.gd" id="1_jpqed"]
+[ext_resource type="PackedScene" uid="uid://dkn31ikfk2e14" path="res://microjogos/2024S1/projeto-felipe-silva/cenas/anon.tscn" id="2_gbce8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mhmx4"]
+size = Vector2(90, 272)
+
+[node name="Table" type="StaticBody2D"]
+script = ExtResource("1_jpqed")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(35, 0)
+shape = SubResource("RectangleShape2D_mhmx4")
+
+[node name="Table" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(32, -8)
+scale = Vector2(6, 6)
+texture = ExtResource("1_g13vg")
+
+[node name="Person" parent="." instance=ExtResource("2_gbce8")]
+position = Vector2(-64, 0)
