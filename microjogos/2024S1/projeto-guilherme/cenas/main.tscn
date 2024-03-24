@@ -1,6 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=18 format=3 uid="uid://bi0ahd7cv37i6"]
 
 [ext_resource type="Texture2D" uid="uid://dlfc7v7isy02u" path="res://microjogos/2024S1/projeto-guilherme/recursos/background.png" id="1_8njma"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-guilherme/cenas/scripts/main.gd" id="1_afk5b"]
 [ext_resource type="SpriteFrames" uid="uid://gpr0lki7mf0o" path="res://microjogos/2024S1/projeto-guilherme/recursos/gamuto.tres" id="2_xl0q0"]
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-guilherme/cenas/scripts/AnimatedSprite2D.gd" id="3_hqpoy"]
 [ext_resource type="Texture2D" uid="uid://c4wnnxsavqy70" path="res://microjogos/2024S1/projeto-guilherme/recursos/seta_carne.png" id="6_qg4d2"]
@@ -18,6 +19,7 @@
 [ext_resource type="FontFile" uid="uid://cip4gk3kva486" path="res://microjogos/2024S1/projeto-guilherme/recursos/dogica.otf" id="17_ygp7h"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_afk5b")
 
 [node name="background" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -30,7 +32,7 @@ texture_filter = 1
 position = Vector2(1622, 482)
 scale = Vector2(13, 13)
 sprite_frames = ExtResource("2_xl0q0")
-frame_progress = 0.477553
+frame_progress = 0.8048
 speed_scale = 0.3
 script = ExtResource("3_hqpoy")
 
@@ -96,18 +98,6 @@ TOMATE
 QUEIJO"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
-
-[node name="resultado" type="Label" parent="lista"]
-z_index = 3
-offset_left = 315.0
-offset_top = 11.0
-offset_right = 1504.0
-offset_bottom = 504.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 50
-theme_override_font_sizes/font_size = 250
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="camada1" type="Sprite2D" parent="lista"]
 texture_filter = 1

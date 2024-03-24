@@ -6,7 +6,7 @@ var tentativas = 0
 
 var bot_atual = ""
 
-var vel_queda = 0.7
+@export var jogo = "a"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -101,10 +101,14 @@ func _process(delta):
 		$pao_cima.caindo = true
 		$pao_cima.tent = 6
 		
+		
+		
 		if resp == jogador:
-			resultado.set_text ("VITÓRIA")
+			jogo = "win"
+			emit_signal("win")
 		else:
-			resultado.set_text ("DERROTA")
+			jogo ="lose"
+			emit_signal("lose")
 		
 	
 	
