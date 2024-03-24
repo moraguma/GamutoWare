@@ -1,6 +1,5 @@
 extends Sprite2D
 
-
 var setas = []
 var main_scene
 

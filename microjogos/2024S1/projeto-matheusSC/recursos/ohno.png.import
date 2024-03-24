@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://eww1awq1hywj"
-path="res://.godot/imported/capa.png-e2a979e4cff402deb51f608155fee63b.ctex"
+uid="uid://cub13y5w6t70d"
+path="res://.godot/imported/ohno.png-d715cb41918d5a7fe101c001cbe3c8c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-matheusSC/cenas/capa.png"
-dest_files=["res://.godot/imported/capa.png-e2a979e4cff402deb51f608155fee63b.ctex"]
+source_file="res://microjogos/2024S1/projeto-matheusSC/recursos/ohno.png"
+dest_files=["res://.godot/imported/ohno.png-d715cb41918d5a7fe101c001cbe3c8c7.ctex"]
 
 [params]
 
