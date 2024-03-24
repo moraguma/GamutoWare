@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://beigrfcuyof3b"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/jucamm/cenas/character_body_2d.gd" id="1_hwboj"]
+[ext_resource type="Texture2D" uid="uid://b07h0tt10mvet" path="res://microjogos/2024S1/jucamm/recursos/gelo.png" id="2_e20tx"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ptbgt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_30730"]
+size = Vector2(500, 20)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+motion_mode = 1
+safe_margin = 34.616
+script = ExtResource("1_hwboj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+material = SubResource("CanvasItemMaterial_ptbgt")
+position = Vector2(-2, 214)
+shape = SubResource("RectangleShape2D_30730")
+one_way_collision_margin = 0.0
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-1.88257, 213.987)
+rotation = 1.5708
+scale = Vector2(0.228141, 1.41284)
+texture = ExtResource("2_e20tx")
