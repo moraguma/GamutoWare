@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnxarg8u653q8"
-path="res://.godot/imported/VerticalBar.png-e807bb4e9612041aa82bd55ac3f620b0.ctex"
+uid="uid://cg4byqfvvvlq2"
+path="res://.godot/imported/00026.jpg-2d925c7742d858475ea818123122a6f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/gamufit/recursos/VerticalBar.png"
-dest_files=["res://.godot/imported/VerticalBar.png-e807bb4e9612041aa82bd55ac3f620b0.ctex"]
+source_file="res://microjogos/2024S1/gamufit/recursos/00026.jpg"
+dest_files=["res://.godot/imported/00026.jpg-2d925c7742d858475ea818123122a6f5.ctex"]
 
 [params]
 
