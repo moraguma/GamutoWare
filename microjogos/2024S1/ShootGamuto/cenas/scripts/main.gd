@@ -7,8 +7,8 @@ extends Node2D
 # tela 1920x1080, que é padrão para monitores full HD. Caso você queira uma resolução menor para 
 # atingir uma estética mais pixelada, você pode mudar estes números para qualquer outra resolução 
 # 16:9
-const WIDTH = 1920
-const HEIGHT = 1080
+const WIDTH = 960
+const HEIGHT = 540
 
 
 # --------------------------------------------------------------------------------------------------
