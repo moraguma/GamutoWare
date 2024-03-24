@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkvcg7ivmjl0d"
-path="res://.godot/imported/capa.png-fe3ab1710c7bc4ea25c5b4a664331970.ctex"
+uid="uid://bqmx7len00auv"
+path="res://.godot/imported/cowboy-1153172110642v2dvpyyx.png-3aa5619f0e58e4479a3a094827cc7a60.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-faroeste/capa.png"
-dest_files=["res://.godot/imported/capa.png-fe3ab1710c7bc4ea25c5b4a664331970.ctex"]
+source_file="res://microjogos/2024S1/projeto-faroeste/recursos/cowboy-1153172110642v2dvpyyx.png"
+dest_files=["res://.godot/imported/cowboy-1153172110642v2dvpyyx.png-3aa5619f0e58e4479a3a094827cc7a60.ctex"]
 
 [params]
 
