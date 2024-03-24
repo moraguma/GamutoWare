@@ -24,7 +24,8 @@ func _ready():
 			NotificationCenter.notify("MATCH THE COMBOS!")
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("ACERTE OS COMBOS!")
-	
+	$"hero".play("default")
+	$"boss".play("default")
 	randomize()
 	combo_list.shuffle()
 	

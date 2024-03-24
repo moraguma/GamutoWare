@@ -1,10 +1,8 @@
-[gd_scene load_steps=76 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=73 format=3 uid="uid://bi0ahd7cv37i6"]
 
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto-de-gsscala/cenas/main.gd" id="1_igbml"]
-[ext_resource type="Texture2D" uid="uid://crcjo0j2ktcuc" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/background.png" id="1_upvfy"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-de-gsscala/cenas/scripts/main.gd" id="1_j3v7d"]
 [ext_resource type="Texture2D" uid="uid://dd0iob5821vxf" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/keys/up.png" id="2_ckvnl"]
 [ext_resource type="Texture2D" uid="uid://b65q4dxkj03vq" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/keys/up/up.png" id="3_hv026"]
-[ext_resource type="Texture2D" uid="uid://c3rx8nubxrugl" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/images.jpg" id="3_s00fj"]
 [ext_resource type="Texture2D" uid="uid://cp1fhesqmneq2" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/keys/down.png" id="3_uhrk5"]
 [ext_resource type="Texture2D" uid="uid://bl650wmg77ky4" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/keys/right.png" id="4_f7jc5"]
 [ext_resource type="Texture2D" uid="uid://bk0ru21hfhwue" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/keys/left.png" id="5_606g3"]
@@ -13,11 +11,22 @@
 [ext_resource type="Texture2D" uid="uid://c33myogx31k86" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/keys/right/right.png" id="7_goaid"]
 [ext_resource type="Texture2D" uid="uid://n8c260r14pay" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/Flying eye/Flight.png" id="9_2gsjd"]
 [ext_resource type="Texture2D" uid="uid://dgv0wycgh21rx" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/keys/left/left.png" id="9_clx2d"]
-[ext_resource type="Texture2D" uid="uid://c6c482hblqfxa" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/Flying eye/Attack.png" id="9_roone"]
-[ext_resource type="Texture2D" uid="uid://b7fjmuy08uajq" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/Flying eye/Attack3.png" id="10_o3oqo"]
 [ext_resource type="Texture2D" uid="uid://cqopngq5w0ome" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/keys/spacebar/spacebar.png" id="11_mjluq"]
 [ext_resource type="Texture2D" uid="uid://cc6mnux5yapow" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/Flying eye/Death.png" id="11_uee43"]
 [ext_resource type="Texture2D" uid="uid://dpx608oi2g6hd" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/Flying eye/Take Hit.png" id="13_62ki4"]
+[ext_resource type="Texture2D" uid="uid://b8jm3tynck16o" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/hero/pixil-frame-0.png" id="13_r4y7k"]
+[ext_resource type="Texture2D" uid="uid://dyw5f5856btl8" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/hero/pixil-frame-1.png" id="14_caque"]
+[ext_resource type="Texture2D" uid="uid://cgggrn50p7t16" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/hero/pixil-frame-2.png" id="14_htiqu"]
+[ext_resource type="Texture2D" uid="uid://d13umqd4kbnwg" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/bg/sky_lightened.png" id="19_thm7k"]
+[ext_resource type="Texture2D" uid="uid://50xr083jf656" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/bg/clouds_bg.png" id="20_c3pod"]
+[ext_resource type="Texture2D" uid="uid://b0uctlkoww8yh" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/bg/cloud_lonely.png" id="21_ef2lv"]
+[ext_resource type="Texture2D" uid="uid://c5f6s3kexc4t1" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/bg/glacial_mountains_lightened.png" id="22_8tp8a"]
+[ext_resource type="Texture2D" uid="uid://cli6cmmrhxcck" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/bg/clouds_mg_3.png" id="23_k8bka"]
+[ext_resource type="Texture2D" uid="uid://dv40v4kje4r7o" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/bg/clouds_mg_2.png" id="24_syvtr"]
+[ext_resource type="Texture2D" uid="uid://bwyqkkh6bk6qi" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/bg/clouds_mg_1.png" id="25_3ibpu"]
+[ext_resource type="AudioStream" uid="uid://c7ntpudfu2a6o" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/end.ogg" id="27_3n1lo"]
+[ext_resource type="AudioStream" uid="uid://cqdxo3ycj61le" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/BeepBox-Song-1.wav" id="27_mytxu"]
+[ext_resource type="AudioStream" uid="uid://ujkmnphybqto" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/hit.ogg" id="28_m0skg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d8yuf"]
 atlas = ExtResource("3_hv026")
@@ -241,61 +250,25 @@ animations = [{
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cc8qd"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_08lxq"]
-atlas = ExtResource("9_roone")
-region = Rect2(0, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_c45fb"]
-atlas = ExtResource("9_roone")
-region = Rect2(150, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_87fhd"]
-atlas = ExtResource("9_roone")
-region = Rect2(300, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_oendo"]
-atlas = ExtResource("9_roone")
-region = Rect2(450, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ooemv"]
-atlas = ExtResource("9_roone")
-region = Rect2(600, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_q4fnf"]
-atlas = ExtResource("9_roone")
-region = Rect2(750, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b8dt5"]
-atlas = ExtResource("9_roone")
-region = Rect2(900, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_m6xl1"]
-atlas = ExtResource("9_roone")
-region = Rect2(1050, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bt3nh"]
-atlas = ExtResource("10_o3oqo")
-region = Rect2(0, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1se1t"]
-atlas = ExtResource("10_o3oqo")
-region = Rect2(150, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gk7xe"]
-atlas = ExtResource("10_o3oqo")
-region = Rect2(300, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qb1ha"]
-atlas = ExtResource("10_o3oqo")
-region = Rect2(450, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_q3y1l"]
-atlas = ExtResource("10_o3oqo")
-region = Rect2(600, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_563f8"]
-atlas = ExtResource("10_o3oqo")
-region = Rect2(750, 0, 150, 150)
+[sub_resource type="SpriteFrames" id="SpriteFrames_ownsv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_r4y7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_caque")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_htiqu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_caque")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s8pdx"]
 atlas = ExtResource("11_uee43")
@@ -365,58 +338,6 @@ region = Rect2(450, 0, 150, 150)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_08lxq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_c45fb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_87fhd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_oendo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ooemv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_q4fnf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_b8dt5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_m6xl1")
-}],
-"loop": true,
-"name": &"attack",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bt3nh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1se1t")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gk7xe")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qb1ha")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_q3y1l")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_563f8")
-}],
-"loop": true,
-"name": &"attack_",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_s8pdx")
 }, {
 "duration": 1.0,
@@ -428,7 +349,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2c868")
 }],
-"loop": true,
+"loop": false,
 "name": &"death",
 "speed": 5.0
 }, {
@@ -474,13 +395,27 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nm3fp")
 }],
-"loop": true,
+"loop": false,
 "name": &"hit",
 "speed": 5.0
 }]
 
+[sub_resource type="GDScript" id="GDScript_bci5x"]
+script/source = "extends ParallaxBackground
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	scroll_base_offset -= Vector2(100,0) * delta
+"
+
 [node name="Main" type="Node2D"]
-script = ExtResource("1_igbml")
+script = ExtResource("1_j3v7d")
 
 [node name="arrow_up" type="AnimatedSprite2D" parent="."]
 top_level = true
@@ -489,7 +424,7 @@ position = Vector2(986, 224)
 scale = Vector2(5.096, 5.009)
 sprite_frames = SubResource("SpriteFrames_6h02a")
 animation = &"true"
-frame_progress = 0.148364
+frame_progress = 0.66239
 
 [node name="arrow_down" type="AnimatedSprite2D" parent="."]
 top_level = true
@@ -498,7 +433,7 @@ position = Vector2(985.824, 384.288)
 scale = Vector2(5.096, 5.009)
 sprite_frames = SubResource("SpriteFrames_nr5i6")
 animation = &"true"
-frame_progress = 0.316127
+frame_progress = 0.830153
 
 [node name="arrow_right" type="AnimatedSprite2D" parent="."]
 top_level = true
@@ -507,7 +442,7 @@ position = Vector2(1148, 384)
 scale = Vector2(5.096, 5.009)
 sprite_frames = SubResource("SpriteFrames_bprxa")
 animation = &"true"
-frame_progress = 0.151499
+frame_progress = 0.665525
 
 [node name="arrow_left" type="AnimatedSprite2D" parent="."]
 top_level = true
@@ -516,35 +451,129 @@ position = Vector2(823, 384)
 scale = Vector2(5.096, 5.009)
 sprite_frames = SubResource("SpriteFrames_nojf0")
 animation = &"true"
-frame_progress = 0.26421
+frame_progress = 0.778236
 
 [node name="action" type="AnimatedSprite2D" parent="."]
 top_level = true
 texture_filter = 1
-position = Vector2(999, 575)
+position = Vector2(986, 573)
 scale = Vector2(5.096, 5.009)
 sprite_frames = SubResource("SpriteFrames_hwitg")
 animation = &"true"
-frame_progress = 0.324632
+frame = 1
+frame_progress = 0.758318
 
 [node name="bird_1" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.995941, 1.00529)
 sprite_frames = SubResource("SpriteFrames_cc8qd")
 
-[node name="background" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(959, 541)
-scale = Vector2(3.0617, 3.73031)
-texture = ExtResource("1_upvfy")
-
-[node name="boss" type="Sprite2D" parent="."]
-position = Vector2(1695, 483)
-texture = ExtResource("3_s00fj")
-
 [node name="hero" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(197, 512)
-scale = Vector2(6.97, 6.97)
+position = Vector2(167, 547)
+scale = Vector2(2.655, 2.655)
+sprite_frames = SubResource("SpriteFrames_ownsv")
+frame_progress = 0.357093
+
+[node name="boss" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1661, 552)
+scale = Vector2(-6.62, 6.62)
 sprite_frames = SubResource("SpriteFrames_dgd6l")
-animation = &"attack"
-frame_progress = 0.511694
+animation = &"death"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = SubResource("GDScript_bci5x")
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(961, 542)
+motion_mirroring = Vector2(960, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer7"]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("19_thm7k")
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(961, 542)
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(960, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("20_c3pod")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+position = Vector2(961, 542)
+motion_scale = Vector2(0.2, 0)
+motion_mirroring = Vector2(960, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("21_ef2lv")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(961, 542)
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(960, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("22_8tp8a")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(961, 542)
+motion_scale = Vector2(2, 2)
+motion_mirroring = Vector2(960, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("23_k8bka")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(961, 542)
+motion_scale = Vector2(2.27, 2.27)
+motion_mirroring = Vector2(960, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("24_syvtr")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(961, 542)
+motion_scale = Vector2(2.395, 2.395)
+motion_mirroring = Vector2(960, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_filter = 2
+texture_repeat = 2
+texture = ExtResource("25_3ibpu")
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("27_3n1lo")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("28_m0skg")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("27_mytxu")
+autoplay = true
+
+[connection signal="animation_finished" from="boss" to="." method="_on_boss_animation_finished"]

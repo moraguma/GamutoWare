@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cg2nwgsp3l65h"
-path="res://.godot/imported/projectile_sprite.png-e540c3df46396bda1853bcafaf85fa40.ctex"
+uid="uid://dpwe4x0oy1go4"
+path="res://.godot/imported/glacial_mountains.png-876a31d78df845177ea652e79e815bd8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/Flying eye/projectile_sprite.png"
-dest_files=["res://.godot/imported/projectile_sprite.png-e540c3df46396bda1853bcafaf85fa40.ctex"]
+source_file="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/bg/glacial_mountains.png"
+dest_files=["res://.godot/imported/glacial_mountains.png-876a31d78df845177ea652e79e815bd8.ctex"]
 
 [params]
 

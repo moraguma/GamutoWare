@@ -1,71 +1,107 @@
 extends Node2D
 
-# Declaração dos sinais win e lose
 signal win
 signal lose
 
-# Estas constantes são usadas para determinar o tamanho da tela do seu jogo. Por padrão, definem uma
-# tela 1920x1080, que é padrão para monitores full HD. Caso você queira uma resolução menor para 
-# atingir uma estética mais pixelada, você pode mudar estes números para qualquer outra resolução 
-# 16:9
 const WIDTH = 1920
 const HEIGHT = 1080
 
+var index = 0
+var combo_list = ["UD","UL","UR","UA","DL","DR","DA","LR","LA","RA"]
 
-# --------------------------------------------------------------------------------------------------
-# FUNÇÕES PADRÃO
-# --------------------------------------------------------------------------------------------------
+var translated_combos = []
 
-# Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
+var dicionario = {
+	"U" : "cima",
+	"D" : "baixo",
+	"A" : "acao",
+	"L" : "esquerda",
+	"R" : "direita"
+}
+
+# Called when the node enters the scene tree for the first time.
 func _ready():
-	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
-	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
+	
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
+			NotificationCenter.notify("MATCH THE COMBOS!")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FACA ALGO!")
+			NotificationCenter.notify("ACERTE OS COMBOS!")
+	$"hero".play("default")
+	$"boss".play("fly")
+	randomize()
+	combo_list.shuffle()
+	
+	combo_list = combo_list.slice(0, 8)
+	
+	
+	for combo in combo_list:
+		var temp = []
+		for l in combo:
+			temp.append(dicionario.get(l))
+		translated_combos.append(temp)
+	update_animations()
 
-
-# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
-# a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
-# a última chamada desta função. O comando pass não faz nada
-func _physics_process(delta):
-	pass
-
-
-# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a renderização, 
-# como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
-# desde a última chamada desta função. O comando pass não faz nada
+# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if index > 7:
+		return
+		
+	if not false in translated_combos[index].map(func(x): return Input.is_action_pressed(x)):
+		index += 1
+		$"boss".play("hit")
+		$AudioStreamPlayer2.play()
+		#increase panning speed
+		if index > 7:
+			register_win()
+			NotificationCenter.notify("VC VENCEU!")
+			$AudioStreamPlayer3.play()
+			$"boss".play("death")
+			$"arrow_left".play("false")
+			$"arrow_right".play("false")
+			$"arrow_up".play("false")
+			$"arrow_down".play("false")
+			$"action".play("false")
+			#TODO Remove Before PR merge
+			#get_parent().get_tree().quit()
+			#return
+		else:
+			update_animations()
 
 
-# --------------------------------------------------------------------------------------------------
-# SUAS FUNÇÕES
-# --------------------------------------------------------------------------------------------------
 
-
-# Um método genérico. Crie quantos métodos você precisar!
-func my_method():
-	pass
-
-
-# --------------------------------------------------------------------------------------------------
-# CONDIÇÕES DE VITÓRIA
-# --------------------------------------------------------------------------------------------------
-# Quando o jogo começa, ela assume que o jogador não conseguiu vencer o jogo ainda, ou seja, se não
-# acontecer nada, o jogador vai perder o jogo. A verificação se o jogador venceu o minigame é feita
-# com base na emissão dos sinais "win" e "lose". Se "win" foi o último sinal emitido, o jogador
-# vencerá o jogo, e se "lose" foi o último sinal emitido ou nenhum sinal foi emitido, o jogador
-# perderá o jogo
-
-
-# Chame esta função para registrar que o jogador venceu o jogo
 func register_win():
 	emit_signal("win")
 
 
-# Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
 	emit_signal("lose")
+	
+func update_animations():
+	if "esquerda" in translated_combos[index]:
+		$"arrow_left".play("true")
+	else:
+		$"arrow_left".play("false")
+	if "direita" in translated_combos[index]:
+		$"arrow_right".play("true")
+	else:
+		$"arrow_right".play("false")
+	if "cima" in translated_combos[index]:
+		$"arrow_up".play("true")
+	else:
+		$"arrow_up".play("false")
+	if "baixo" in translated_combos[index]:
+		$"arrow_down".play("true")
+	else:
+		$"arrow_down".play("false")
+	if "acao" in translated_combos[index]:
+		$"action".play("true")
+	else:
+		$"action".play("false")
+
+
+func _on_boss_animation_finished():
+	if index < 8 :
+			$"boss".play("fly")
+	else:
+			$"boss".queue_free()

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7fjmuy08uajq"
-path="res://.godot/imported/Attack3.png-1c15a743152e8dc58525a6f3123235c0.ctex"
+uid="uid://dtswtgnydoqt4"
+path="res://.godot/imported/star.png-546e0d6f0616e5e7acf52600c073c155.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/Flying eye/Attack3.png"
-dest_files=["res://.godot/imported/Attack3.png-1c15a743152e8dc58525a6f3123235c0.ctex"]
+source_file="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/star.png"
+dest_files=["res://.godot/imported/star.png-546e0d6f0616e5e7acf52600c073c155.ctex"]
 
 [params]
 
