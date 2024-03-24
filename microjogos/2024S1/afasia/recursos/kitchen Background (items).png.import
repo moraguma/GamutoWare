@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkvcg7ivmjl0d"
-path="res://.godot/imported/capa.png-8a1b289eccd6e7f3202cf5a91f689be2.ctex"
+uid="uid://w5t8fiw4x45m"
+path="res://.godot/imported/kitchen Background (items).png-4d494d2f098c6d6523d2bb15bc2c5e8d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/seu_projeto/capa.png"
-dest_files=["res://.godot/imported/capa.png-8a1b289eccd6e7f3202cf5a91f689be2.ctex"]
+source_file="res://microjogos/2024S1/afasia/recursos/kitchen Background (items).png"
+dest_files=["res://.godot/imported/kitchen Background (items).png-4d494d2f098c6d6523d2bb15bc2c5e8d.ctex"]
 
 [params]
 

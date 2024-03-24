@@ -18,6 +18,9 @@ const HEIGHT = 1080
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
+	$ovo.grab_focus()
+	$RichTextLabel/AudioStreamPlayer.play()
+	
 	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
@@ -44,11 +47,14 @@ func _process(delta):
 # --------------------------------------------------------------------------------------------------
 # SUAS FUNÇÕES
 # --------------------------------------------------------------------------------------------------
-
+var itens_corretos=0
 
 # Um método genérico. Crie quantos métodos você precisar!
-func my_method():
-	pass
+func acertou():
+	itens_corretos+=1
+	if itens_corretos==3:
+		emit_signal("win")
+		
 
 
 # --------------------------------------------------------------------------------------------------
@@ -69,3 +75,27 @@ func register_win():
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
 	emit_signal("lose")
+
+
+func _on_margarina_focus_entered():
+	pass # Replace with function body.
+
+
+func _on_oleo_focus_entered():
+	pass # Replace with function body.
+
+
+func _on_pedra_focus_entered():
+	pass # Replace with function body.
+
+
+func _on_sal_focus_entered():
+	pass # Replace with function body.
+
+
+func _on_casa_focus_entered():
+	pass # Replace with function body.
+
+
+func _on_leite_pressed():
+	pass # Replace with function body.
