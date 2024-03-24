@@ -1,4 +1,5 @@
 Guarde os recursos - como imagens, sons e fontes - que seu jogo vai usar aqui. É recomendado criar subpastas pra organizar melhor seus arquivos dependendo do tipo ou propósito
 
-https://pt.wikipedia.org/wiki/Resist%C3%AAncia_Verde#/media/Ficheiro:Flag_of_Libya_(1977%E2%80%932011).svg
-https://godotshaders.com/shader/pulse-effect-godot-4/
+https://opengameart.org/content/fabric-velvet-red-seamless-texture-with-normalmap-velvetsjpg
+https://godotshaders.com/shader/pulse-effect-godot-4/https://opengameart.org/content/playing-cards-0 -> BACK.png
+https://opengameart.org/content/playing-cards-vector-png -> CARDS
