@@ -27,9 +27,9 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
+			NotificationCenter.notify("SURVIVE!")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FACA ALGO!")
+			NotificationCenter.notify("SOBREVIVA!")
 			
 	game_start()
 	
@@ -75,7 +75,7 @@ func game_start():
 # Quando o jogo começa, ela assume que o jogador não conseguiu vencer o jogo ainda, ou seja, se não
 # acontecer nada, o jogador vai perder o jogo. A verificação se o jogador venceu o minigame é feita
 # com base na emissão dos sinais "win" e "lose". Se "win" foi o último sinal emitido, o jogador
-# vencerá o jogo, e se "lose" foi o último sinal emitido ou nenhum sinal foi emitido, o jogador
+# vencerá o jogo, e se "lose" foi o último sinal emitido ou nenhu m sinal foi emitido, o jogador
 # perderá o jogo
 
 
@@ -108,7 +108,7 @@ func _on_asteroid_timer_timeout():
 	direction += randf_range(-PI / 4, PI / 4)
 	asteroid.rotation = direction
 	
-	var velocity = Vector2(randf_range(450.0, 530.0), 0.0)
+	var velocity = Vector2(randf_range(350.0, 450.0), 0.0)
 	asteroid.linear_velocity = velocity.rotated(direction)
 	
 	add_child(asteroid)

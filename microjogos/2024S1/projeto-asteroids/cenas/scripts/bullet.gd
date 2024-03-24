@@ -27,6 +27,8 @@ func _duration_end():
 
 func _bullet_hit(body):
 	if body.is_in_group("asteroids"):
-		body.queue_free()
+		body.linear_velocity = Vector2(0,0)
+		body.set_deferred("freeze", true)
+		body.asteroid_destroy()
 	queue_free()
 	pass # Replace with function body.
