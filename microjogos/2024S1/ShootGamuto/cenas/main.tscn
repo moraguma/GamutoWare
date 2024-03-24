@@ -1,3 +1,164 @@
-[gd_scene format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=4 format=3 uid="uid://jcn11fua5sck"]
 
-[node name="Main" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://cue4y6xtqt3eb" path="res://microjogos/2024S1/ShootGamuto/recursos/bg.png" id="1_33amm"]
+[ext_resource type="Texture2D" uid="uid://copg86ej15ck1" path="res://microjogos/2024S1/ShootGamuto/recursos/ilha.png" id="2_32ndn"]
+[ext_resource type="PackedScene" uid="uid://3p3ftk6311dc" path="res://microjogos/2024S1/ShootGamuto/cenas/Canhao2.tscn" id="3_cx6fm"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = -576.0
+offset_top = -325.0
+offset_right = 576.0
+offset_bottom = 323.0
+texture = ExtResource("1_33amm")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Spawns" type="Node" parent="."]
+
+[node name="Center13" type="Marker2D" parent="Spawns"]
+
+[node name="0" type="Marker2D" parent="Spawns/Center13"]
+position = Vector2(230, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Spawns/Center13/0"]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("2_32ndn")
+
+[node name="Center2" type="Marker2D" parent="Spawns"]
+rotation = 0.523599
+
+[node name="1" type="Marker2D" parent="Spawns/Center2"]
+position = Vector2(230, 0)
+rotation = 5.75959
+
+[node name="Sprite2D2" type="Sprite2D" parent="Spawns/Center2/1"]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("2_32ndn")
+
+[node name="Center3" type="Marker2D" parent="Spawns"]
+rotation = 1.0472
+
+[node name="2" type="Marker2D" parent="Spawns/Center3"]
+position = Vector2(230, 0)
+rotation = 5.23599
+
+[node name="Sprite2D3" type="Sprite2D" parent="Spawns/Center3/2"]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("2_32ndn")
+
+[node name="Center4" type="Marker2D" parent="Spawns"]
+rotation = 1.5708
+
+[node name="3" type="Marker2D" parent="Spawns/Center4"]
+position = Vector2(230, 0)
+rotation = 4.71239
+
+[node name="Sprite2D4" type="Sprite2D" parent="Spawns/Center4/3"]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("2_32ndn")
+
+[node name="Center5" type="Marker2D" parent="Spawns"]
+rotation = 2.0944
+
+[node name="4" type="Marker2D" parent="Spawns/Center5"]
+position = Vector2(230, 0)
+rotation = 4.18879
+
+[node name="Sprite2D5" type="Sprite2D" parent="Spawns/Center5/4"]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("2_32ndn")
+
+[node name="Center6" type="Marker2D" parent="Spawns"]
+rotation = 2.61799
+
+[node name="5" type="Marker2D" parent="Spawns/Center6"]
+position = Vector2(230, 0)
+rotation = 3.66519
+
+[node name="Sprite2D6" type="Sprite2D" parent="Spawns/Center6/5"]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("2_32ndn")
+
+[node name="Center7" type="Marker2D" parent="Spawns"]
+rotation = 3.14159
+
+[node name="6" type="Marker2D" parent="Spawns/Center7"]
+position = Vector2(230, 0)
+rotation = 3.14159
+
+[node name="Sprite2D7" type="Sprite2D" parent="Spawns/Center7/6"]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("2_32ndn")
+
+[node name="Center8" type="Marker2D" parent="Spawns"]
+rotation = 3.66519
+
+[node name="7" type="Marker2D" parent="Spawns/Center8"]
+position = Vector2(230, 0)
+rotation = 2.61799
+
+[node name="Sprite2D8" type="Sprite2D" parent="Spawns/Center8/7"]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("2_32ndn")
+
+[node name="Center9" type="Marker2D" parent="Spawns"]
+rotation = 4.18879
+
+[node name="8" type="Marker2D" parent="Spawns/Center9"]
+position = Vector2(230, 0)
+rotation = 2.0944
+
+[node name="Sprite2D9" type="Sprite2D" parent="Spawns/Center9/8"]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("2_32ndn")
+
+[node name="Center10" type="Marker2D" parent="Spawns"]
+rotation = 4.71239
+
+[node name="9" type="Marker2D" parent="Spawns/Center10"]
+position = Vector2(230, 0)
+rotation = 1.5708
+
+[node name="Sprite2D10" type="Sprite2D" parent="Spawns/Center10/9"]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("2_32ndn")
+
+[node name="Center11" type="Marker2D" parent="Spawns"]
+rotation = 5.23599
+
+[node name="10" type="Marker2D" parent="Spawns/Center11"]
+position = Vector2(230, 0)
+rotation = 1.0472
+
+[node name="Sprite2D11" type="Sprite2D" parent="Spawns/Center11/10"]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("2_32ndn")
+
+[node name="Center12" type="Marker2D" parent="Spawns"]
+rotation = 5.75959
+
+[node name="11" type="Marker2D" parent="Spawns/Center12"]
+position = Vector2(230, 0)
+rotation = 0.523599
+
+[node name="Sprite2D12" type="Sprite2D" parent="Spawns/Center12/11"]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("2_32ndn")
+
+[node name="CharacterBody2D" parent="." node_paths=PackedStringArray("spawnPositions") instance=ExtResource("3_cx6fm")]
+spawnPositions = [NodePath("../Spawns/Center13/0"), NodePath("../Spawns/Center2/1"), NodePath("../Spawns/Center3/2"), NodePath("../Spawns/Center4/3"), NodePath("../Spawns/Center5/4"), NodePath("../Spawns/Center6/5"), NodePath("../Spawns/Center7/6"), NodePath("../Spawns/Center8/7"), NodePath("../Spawns/Center9/8"), NodePath("../Spawns/Center10/9"), NodePath("../Spawns/Center11/10"), NodePath("../Spawns/Center12/11")]
