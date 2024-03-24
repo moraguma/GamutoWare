@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://ojmr1cm4mafn"
+path="res://.godot/imported/Hurt_(64 x 32).png-e0402c7d0caf7d4843e0f3307cc7c6b1.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://microjogos/2024S1/quimica-quiz/recursos/assents/Sprite Pack 5/8 - Orc/Hurt_(64 x 32).png"
+dest_files=["res://.godot/imported/Hurt_(64 x 32).png-e0402c7d0caf7d4843e0f3307cc7c6b1.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
