@@ -183,9 +183,6 @@ position = Vector2(-769.35, 423.879)
 stream = ExtResource("12_vgbtf")
 volume_db = 24.0
 
-[connection signal="G1" from="Gamuto" to="." method="_on_gamuto_g_1"]
 [connection signal="body_entered" from="Gamuto/Area2D" to="Gamuto" method="_on_area_2d_body_entered"]
-[connection signal="G2" from="Gamuto2" to="." method="_on_gamuto_2_g_2"]
 [connection signal="body_entered" from="Gamuto2/Area2D" to="Gamuto2" method="_on_area_2d_body_entered"]
-[connection signal="G3" from="Gamuto3" to="." method="_on_gamuto_3_g_3"]
 [connection signal="body_entered" from="Gamuto3/Area2D" to="Gamuto3" method="_on_area_2d_body_entered"]

@@ -1,1 +1,4 @@
 Coloque seus scripts aqui!
+register_win()
+
+print("3")
