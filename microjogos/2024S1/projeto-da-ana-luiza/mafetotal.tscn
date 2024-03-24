@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://bxp45krk5k6wt"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-da-ana-luiza/mafetotal.gd" id="1_ml0ih"]
+[ext_resource type="Texture2D" uid="uid://crfged8ec65r8" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/Mafe1.png" id="2_725j0"]
+[ext_resource type="Texture2D" uid="uid://jrgo2dn0yqt1" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/Mafe2.png" id="3_vrv34"]
+[ext_resource type="Texture2D" uid="uid://cqnamyodphmd7" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/Mafe3.png" id="4_hb3tl"]
+[ext_resource type="Texture2D" uid="uid://ky7pgfown1js" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/Mafe4.png" id="5_8r8hg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nnave"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_725j0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vrv34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hb3tl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8r8hg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3wopd"]
+radius = 152.0
+height = 380.0
+
+[node name="CharacterBody2D7" type="CharacterBody2D"]
+script = ExtResource("1_ml0ih")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1006, 750)
+scale = Vector2(2.122, 1.95)
+sprite_frames = SubResource("SpriteFrames_nnave")
+autoplay = "default"
+frame_progress = 0.985254
+
+[node name="Area2D" type="Area2D" parent="." groups=["player"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(945, 678)
+shape = SubResource("CapsuleShape2D_3wopd")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

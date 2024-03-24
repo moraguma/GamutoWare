@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dscq1spuoqur0"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-da-ana-luiza/estrela_amarela.gd" id="1_0ervk"]
+[ext_resource type="Texture2D" uid="uid://befan316pn2nm" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/estrela_amarela.png" id="2_x17kp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e6irc"]
+radius = 66.0
+height = 166.0
+
+[node name="EstrelaAmarela" type="CharacterBody2D"]
+script = ExtResource("1_0ervk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(34, 120)
+texture = ExtResource("2_x17kp")
+
+[node name="Area2D" type="Area2D" parent="." groups=["star"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2, -27)
+shape = SubResource("CapsuleShape2D_e6irc")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

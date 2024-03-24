@@ -12,6 +12,9 @@ const WIDTH = 1920
 const HEIGHT = 1080
 
 
+var cena_estrela = preload("res://microjogos/2024S1/projeto-da-ana-luiza/estrela_amarela.tscn")
+
+
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES PADRÃO
 # --------------------------------------------------------------------------------------------------
@@ -22,9 +25,10 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
+			NotificationCenter.notify("CATCH!")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FACA ALGO!")
+			NotificationCenter.notify("PEGUE!")
+	register_win()
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
@@ -69,3 +73,33 @@ func register_win():
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
 	emit_signal("lose")
+
+
+func spawn_estrela():
+	var estrela_nova = cena_estrela.instantiate()
+	estrela_nova.position.x = randf_range(300, 1700)
+	add_child(estrela_nova)
+
+
+func _on_timer_2_timeout():
+	var estrela_nova = cena_estrela.instantiate()
+	estrela_nova.position.x = randf_range(300, 1700)
+	add_child(estrela_nova)
+
+
+func _on_timer_3_timeout():
+	var estrela_nova = cena_estrela.instantiate()
+	estrela_nova.position.x = randf_range(300, 1700)
+	add_child(estrela_nova)
+
+
+func _on_timer_4_timeout():
+	var estrela_nova = cena_estrela.instantiate()
+	estrela_nova.position.x = randf_range(300, 1700)
+	add_child(estrela_nova)
+
+
+func _on_timer_5_timeout():
+	var estrela_nova = cena_estrela.instantiate()
+	estrela_nova.position.x = randf_range(100, 1800)
+	add_child(estrela_nova)
