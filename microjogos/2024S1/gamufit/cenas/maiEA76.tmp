@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=13 format=3 uid="uid://bi0ahd7cv37i6"]
 
 [ext_resource type="Texture2D" uid="uid://cg4byqfvvvlq2" path="res://microjogos/2024S1/gamufit/recursos/00026.jpg" id="1_rdm68"]
 [ext_resource type="Texture2D" uid="uid://c3co7w5ifodnl" path="res://microjogos/2024S1/gamufit/recursos/SmallBar.png" id="2_wwrcp"]
@@ -6,8 +6,9 @@
 [ext_resource type="Script" path="res://microjogos/2024S1/gamufit/cenas/SmallBar.gd" id="3_r1ism"]
 [ext_resource type="Script" path="res://microjogos/2024S1/gamufit/cenas/Gamuto(icon).gd" id="4_cwnfb"]
 [ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="4_h08av"]
-[ext_resource type="Texture2D" uid="uid://ca4u0mm0vnyux" path="res://microjogos/2024S1/gamufit/recursos/suffering.png" id="7_22wwl"]
-[ext_resource type="Texture2D" uid="uid://3heurohbdmkw" path="res://microjogos/2024S1/gamufit/recursos/exercising.png" id="8_2ehty"]
+[ext_resource type="Script" path="res://microjogos/2024S1/gamufit/cenas/Gahulk.gd" id="7_6a5kp"]
+[ext_resource type="Texture2D" uid="uid://c0jqyfraa6m8j" path="res://microjogos/2024S1/gamufit/recursos/suffering.jpg" id="7_kuu1c"]
+[ext_resource type="Texture2D" uid="uid://vuv8new72dup" path="res://microjogos/2024S1/gamufit/recursos/exercising.jpg" id="8_dofex"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ak12t"]
 
@@ -71,11 +72,12 @@ shape = SubResource("RectangleShape2D_65jwk")
 [node name="Gahulk" type="Node2D" parent="."]
 position = Vector2(983, 546)
 scale = Vector2(0.265, 0.265)
+script = ExtResource("7_6a5kp")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D-suffering" type="Sprite2D" parent="Gahulk"]
-visible = false
-texture = ExtResource("7_22wwl")
+texture = ExtResource("7_kuu1c")
 
 [node name="Sprite2D-exercising" type="Sprite2D" parent="Gahulk"]
-texture = ExtResource("8_2ehty")
+visible = false
+texture = ExtResource("8_dofex")

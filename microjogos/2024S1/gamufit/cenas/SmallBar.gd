@@ -53,4 +53,10 @@ func randomize_parameters():
 func randomize_target_parameters():
 	# Atualiza os alvos para a próxima mudança gradativa
 	randomize_parameters()
-	# Se desejar, você pode adicionar variação ao valor alvo aqui
+
+	####AQUI ESTÁ O CÓDIGO DE COLISÃO DO "Gamuto(icon)" e a "SmallBar"####
+	
+func _on_gamuto_collided(body):
+	if body.name == "Gamuto(icon)":
+		print("Gamuto collided with SmallBar")
+		emit_signal("gamuto_collided")
