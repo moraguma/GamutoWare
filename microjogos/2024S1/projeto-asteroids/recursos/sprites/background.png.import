@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhv3xgs4v30ay"
-path="res://.godot/imported/player.png-2a5abb7e07935cbb64dfcd9a61a57443.ctex"
+uid="uid://f7ibu6d8tw05"
+path="res://.godot/imported/background.png-ca789fb22e0e7edd9ab8dc5d7c595387.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/player.png"
-dest_files=["res://.godot/imported/player.png-2a5abb7e07935cbb64dfcd9a61a57443.ctex"]
+source_file="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/background.png"
+dest_files=["res://.godot/imported/background.png-ca789fb22e0e7edd9ab8dc5d7c595387.ctex"]
 
 [params]
 

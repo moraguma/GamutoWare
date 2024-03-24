@@ -3,7 +3,7 @@ extends Area2D
 @export var Bullet : PackedScene
 #preload("res://microjogos/2024S1/projeto-asteroids/cenas/bullet.tscn")
 @export var speed = 400
-@export var rotation_speed = 1.8
+@export var rotation_speed = 4
 var rotation_dir = 0.0
 # Called when the node enters the scene tree for the first time.
 func _ready():
