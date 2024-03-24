@@ -1,3 +1,33 @@
-[gd_scene format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=4 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="Texture2D" uid="uid://ywqyqd6ctpe0" path="res://microjogos/2024S1/projeto-plagio-dino/fundo-de-jogo-de-pixel-art-com-ceu-de-grama-moida-de-arvores-e-vetor-de-nuvens-eps-10_148553-749.jpg" id="1_s8bvo"]
+[ext_resource type="Texture2D" uid="uid://bu1q62lkxex5m" path="res://microjogos/2024S1/projeto-plagio-dino/pngtree-start-button-in-pixel-art-style-png-image_4764304-removebg-preview.png" id="2_gpyn5"]
+[ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="3_r60ng"]
 
 [node name="Main" type="Node2D"]
+position = Vector2(7, 4)
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+position = Vector2(955, 538)
+rotation = -0.00408598
+scale = Vector2(3.068, 3.04005)
+skew = -0.00174533
+texture = ExtResource("1_s8bvo")
+
+[node name="Node2D" type="Node2D" parent="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Node2D"]
+modulate = Color(0.972549, 0.972549, 0.972549, 1)
+show_behind_parent = true
+position = Vector2(1012, 332)
+scale = Vector2(0.941861, 1)
+texture = ExtResource("2_gpyn5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/Node2D/Sprite2D"]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D/Node2D"]
+position = Vector2(970, 768)
+scale = Vector2(1.74609, 1.55859)
+texture = ExtResource("3_r60ng")
