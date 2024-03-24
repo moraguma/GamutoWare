@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bibdl3gwn24vo"
-path="res://.godot/imported/Cloud_Poof (16 x 16).png-c716d15d6992b9b710d803ecf672c58a.ctex"
+uid="uid://uwgdn8gmclat"
+path="res://.godot/imported/Screenshot_20240324_163937-1.png-1.png.png-3a6a5ab298f73dede47b05bbb904294e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/lari-sem-cafe/assets/Mini FX, Items & UI/Mini FX, Items & UI/Effects/Cloud_Poof (16 x 16).png"
-dest_files=["res://.godot/imported/Cloud_Poof (16 x 16).png-c716d15d6992b9b710d803ecf672c58a.ctex"]
+source_file="res://microjogos/2024S1/lari-sem-cafe/assets/Mini FX, Items & UI/Mini FX, Items & UI/Effects/Screenshot_20240324_163937-1.png-1.png.png"
+dest_files=["res://.godot/imported/Screenshot_20240324_163937-1.png-1.png.png-3a6a5ab298f73dede47b05bbb904294e.ctex"]
 
 [params]
 
