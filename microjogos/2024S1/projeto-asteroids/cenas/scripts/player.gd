@@ -30,6 +30,7 @@ func _process(delta):
 		
 		if Input.is_action_just_pressed("acao"):
 			shoot()
+			$AudioStreamPlayer2D.play()
 			
 		rotation += rotation_dir*rotation_speed*delta
 	pass
@@ -46,6 +47,7 @@ func _on_player_died():
 	if is_alive == true:
 		is_alive = false
 		$AnimatedSprite2D.visible = true
+		$AudioStreamPlayer2D2.play()
 	pass # Replace with function body.
 	
 #func transfer_data():

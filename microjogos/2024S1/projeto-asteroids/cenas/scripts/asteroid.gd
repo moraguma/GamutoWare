@@ -14,6 +14,7 @@ func _ready():
 func asteroid_destroy():
 	$Sprite2D.visible = false
 	$AnimatedSprite2D.visible = true
+	$AudioStreamPlayer2D.play()
 	sleeping = true
 	var a = $AnimatedSprite2D
 	a.play("new_animation")
