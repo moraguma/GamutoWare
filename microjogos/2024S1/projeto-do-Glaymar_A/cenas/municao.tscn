@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dorh5dd53pwq7"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-do-Glaymar_A/cenas/municao.gd" id="1_2y78e"]
+[ext_resource type="Texture2D" uid="uid://db0cbwirc3omh" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/bala.png" id="1_lec53"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dqr2f"]
+size = Vector2(23, 19)
+
+[node name="Municao" type="Area2D"]
+top_level = true
+rotation = 0.798031
+collision_layer = 0
+collision_mask = 3
+script = ExtResource("1_2y78e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(21.5, -0.5)
+shape = SubResource("RectangleShape2D_dqr2f")
+
+[node name="Bala" type="Sprite2D" parent="."]
+position = Vector2(-2.50526, -30.3764)
+scale = Vector2(0.584381, 0.756241)
+texture = ExtResource("1_lec53")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

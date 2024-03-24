@@ -1,3 +1,96 @@
-[gd_scene format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=4 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="PackedScene" uid="uid://d2oahab3ot5ql" path="res://microjogos/2024S1/projeto-do-Glaymar_A/cenas/coluna.tscn" id="2_osv8d"]
+[ext_resource type="PackedScene" uid="uid://dt7ewgrxnk86g" path="res://microjogos/2024S1/projeto-do-Glaymar_A/cenas/Player.tscn" id="2_w0t5o"]
+[ext_resource type="PackedScene" uid="uid://deg0v3upu07xf" path="res://microjogos/2024S1/projeto-do-Glaymar_A/cenas/inimigo.tscn" id="3_ipfv1"]
 
 [node name="Main" type="Node2D"]
+position = Vector2(516, 330)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -30
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 0.356771
+anchor_bottom = 0.172222
+offset_left = 3.0
+offset_right = 1241.0
+offset_bottom = 897.0
+color = Color(0.444343, 0.360522, 0.622573, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Player" parent="." instance=ExtResource("2_w0t5o")]
+position = Vector2(150, 499)
+
+[node name="Inimigo" parent="." instance=ExtResource("3_ipfv1")]
+position = Vector2(-399, 225)
+
+[node name="Inimigo4" parent="." instance=ExtResource("3_ipfv1")]
+position = Vector2(-439, -232)
+
+[node name="Inimigo2" parent="." instance=ExtResource("3_ipfv1")]
+position = Vector2(623, 226)
+
+[node name="Inimigo3" parent="." instance=ExtResource("3_ipfv1")]
+position = Vector2(406, -58)
+
+[node name="coluna" parent="." instance=ExtResource("2_osv8d")]
+position = Vector2(-3, 2)
+
+[node name="coluna2" parent="." instance=ExtResource("2_osv8d")]
+position = Vector2(-439, 1)
+
+[node name="coluna3" parent="." instance=ExtResource("2_osv8d")]
+position = Vector2(-370, -122)
+
+[node name="coluna4" parent="." instance=ExtResource("2_osv8d")]
+position = Vector2(-275, 90)
+
+[node name="coluna5" parent="." instance=ExtResource("2_osv8d")]
+position = Vector2(-124, -175)
+
+[node name="coluna6" parent="." instance=ExtResource("2_osv8d")]
+position = Vector2(469, -189)
+
+[node name="coluna7" parent="." instance=ExtResource("2_osv8d")]
+position = Vector2(203, -111)
+
+[node name="coluna8" parent="." instance=ExtResource("2_osv8d")]
+position = Vector2(-69, 363)
+
+[node name="coluna9" parent="." instance=ExtResource("2_osv8d")]
+position = Vector2(445, 134)
+
+[node name="coluna13" parent="." instance=ExtResource("2_osv8d")]
+position = Vector2(716, 458)
+
+[node name="coluna15" parent="." instance=ExtResource("2_osv8d")]
+position = Vector2(897, 330)
+
+[node name="coluna16" parent="." instance=ExtResource("2_osv8d")]
+position = Vector2(1173, 337)
+
+[node name="coluna17" parent="." instance=ExtResource("2_osv8d")]
+position = Vector2(866, 556)
+
+[node name="coluna18" parent="." instance=ExtResource("2_osv8d")]
+position = Vector2(455, 487)
+
+[node name="coluna19" parent="." instance=ExtResource("2_osv8d")]
+position = Vector2(1100, -81)
+
+[node name="coluna14" parent="." instance=ExtResource("2_osv8d")]
+position = Vector2(496, 54)
+
+[node name="coluna14" parent="coluna14" instance=ExtResource("2_osv8d")]
+position = Vector2(716, 458)
+
+[node name="coluna11" parent="." instance=ExtResource("2_osv8d")]
+position = Vector2(712, -1)
+
+[node name="coluna12" parent="." instance=ExtResource("2_osv8d")]
+position = Vector2(954, 87)
+
+[node name="coluna10" parent="." instance=ExtResource("2_osv8d")]
+position = Vector2(126, 163)

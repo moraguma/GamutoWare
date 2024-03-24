@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkvcg7ivmjl0d"
-path="res://.godot/imported/capa.png-b6402ecb58885a91c4091c31967c3fb8.ctex"
+path="res://.godot/imported/obstaculo.png-b1f35c0f3c20dbf26f69fd181bf3235f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-do-Glaymar_A/capa.png"
-dest_files=["res://.godot/imported/capa.png-b6402ecb58885a91c4091c31967c3fb8.ctex"]
+source_file="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/obstaculo.png"
+dest_files=["res://.godot/imported/obstaculo.png-b1f35c0f3c20dbf26f69fd181bf3235f.ctex"]
 
 [params]
 
