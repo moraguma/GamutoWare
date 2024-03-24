@@ -232,7 +232,7 @@ position = Vector2(251, 318)
 rotation = -0.205064
 scale = Vector2(2.6, 2.6)
 sprite_frames = SubResource("SpriteFrames_n4pn7")
-frame_progress = 0.971481
+frame_progress = 0.574082
 
 [node name="gota" type="Sprite2D" parent="."]
 visible = false
