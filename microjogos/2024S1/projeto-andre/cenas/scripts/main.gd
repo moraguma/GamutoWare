@@ -17,7 +17,7 @@ const HEIGHT = 1080
 @onready var PLAYER = $P
 @onready var VIRA = $VIRA
 
-var path = "res://microjogos/2024S1/projeto-andre/recursos/deck/@$.jpg"
+var path = "res://microjogos/2024S1/projeto-andre/recursos/deck/@$.png"
 
 var venceu = false
 var chose = false
