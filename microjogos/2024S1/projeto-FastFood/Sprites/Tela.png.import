@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbqglig5shgwh"
-path="res://.godot/imported/refi.png-e7e0c560c028bbbeb4566035bf76ade0.ctex"
+uid="uid://dv0taox4ow2tl"
+path="res://.godot/imported/Tela.png-20a57a09c76dedcb106cd23aee80b372.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-FastFood/Sprites/Lanches/refi.png"
-dest_files=["res://.godot/imported/refi.png-e7e0c560c028bbbeb4566035bf76ade0.ctex"]
+source_file="res://microjogos/2024S1/projeto-FastFood/Sprites/Tela.png"
+dest_files=["res://.godot/imported/Tela.png-20a57a09c76dedcb106cd23aee80b372.ctex"]
 
 [params]
 

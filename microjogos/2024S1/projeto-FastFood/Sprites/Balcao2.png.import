@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://p10s4dru43t2"
-path="res://.godot/imported/batata_frita.png-35fa4e0272e17ef8e3e430a4cbb57058.ctex"
+uid="uid://61xb7dftmvlp"
+path="res://.godot/imported/Balcao2.png-1dbf20bccea4109991e622621aa59f69.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-FastFood/Sprites/Lanches/batata_frita.png"
-dest_files=["res://.godot/imported/batata_frita.png-35fa4e0272e17ef8e3e430a4cbb57058.ctex"]
+source_file="res://microjogos/2024S1/projeto-FastFood/Sprites/Balcao2.png"
+dest_files=["res://.godot/imported/Balcao2.png-1dbf20bccea4109991e622621aa59f69.ctex"]
 
 [params]
 

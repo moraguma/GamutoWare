@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nwxipqpv7d37"
-path="res://.godot/imported/Balcao_Frente.png-f509c8e7a5f8ca815ab037b2748dd71e.ctex"
+uid="uid://c5ql2bdm8utth"
+path="res://.godot/imported/Balcao.png-2dc159e58f23c9bd793560989f797b6c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-FastFood/Sprites/Balcoes/Balcao_Frente.png"
-dest_files=["res://.godot/imported/Balcao_Frente.png-f509c8e7a5f8ca815ab037b2748dd71e.ctex"]
+source_file="res://microjogos/2024S1/projeto-FastFood/Sprites/Balcao.png"
+dest_files=["res://.godot/imported/Balcao.png-2dc159e58f23c9bd793560989f797b6c.ctex"]
 
 [params]
 

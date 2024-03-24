@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btkuhsvbajylv"
-path="res://.godot/imported/refri.webp-42cf4768d05c0b22c36aba8d341a6338.ctex"
+uid="uid://cxspiyfqm1umb"
+path="res://.godot/imported/Acerto.png-5ffcfc95a79c64e7cdc46a80b8c54a9b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-FastFood/Sprites/Lanches/refri.webp"
-dest_files=["res://.godot/imported/refri.webp-42cf4768d05c0b22c36aba8d341a6338.ctex"]
+source_file="res://microjogos/2024S1/projeto-FastFood/Sprites/Resultado/Acerto.png"
+dest_files=["res://.godot/imported/Acerto.png-5ffcfc95a79c64e7cdc46a80b8c54a9b.ctex"]
 
 [params]
 

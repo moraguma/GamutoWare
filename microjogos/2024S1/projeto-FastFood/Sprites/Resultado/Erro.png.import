@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2b0ursikluv0"
-path="res://.godot/imported/restaurant_background.webp-91e9d052a4689a4b552a5036f487ff5e.ctex"
+uid="uid://cewpqt5x4t1ov"
+path="res://.godot/imported/Erro.png-795454561692c4f33086e4c383178d08.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-FastFood/Sprites/restaurant_background.webp"
-dest_files=["res://.godot/imported/restaurant_background.webp-91e9d052a4689a4b552a5036f487ff5e.ctex"]
+source_file="res://microjogos/2024S1/projeto-FastFood/Sprites/Resultado/Erro.png"
+dest_files=["res://.godot/imported/Erro.png-795454561692c4f33086e4c383178d08.ctex"]
 
 [params]
 
