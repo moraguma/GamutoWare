@@ -1,3 +1,74 @@
-[gd_scene format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=9 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-matheusSC/cenas/scripts/controle_cena.gd" id="1_3pkml"]
+[ext_resource type="Texture2D" uid="uid://dbk1piem4u7gh" path="res://microjogos/2024S1/projeto-matheusSC/recursos/seta.png" id="2_ng375"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-matheusSC/cenas/scripts/seta.gd" id="3_wbr03"]
+[ext_resource type="Texture2D" uid="uid://dap2vs6ridsai" path="res://microjogos/2024S1/projeto-matheusSC/recursos/act.png" id="4_37g5g"]
+[ext_resource type="Texture2D" uid="uid://ksc205rjpv75" path="res://microjogos/2024S1/projeto-matheusSC/recursos/select.png" id="5_iue81"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-matheusSC/cenas/scripts/selecao.gd" id="6_30gpg"]
+[ext_resource type="Texture2D" uid="uid://d2tjakip1m1nq" path="res://microjogos/2024S1/projeto-matheusSC/recursos/background.png" id="7_hik5p"]
+[ext_resource type="Texture2D" uid="uid://c45vb5sj4uj6" path="res://microjogos/2024S1/projeto-matheusSC/recursos/idle.png" id="8_aiy4c"]
 
 [node name="Main" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_3pkml")
+
+[node name="seta0" type="Sprite2D" parent="."]
+modulate = Color(0.431373, 0.572549, 0.129412, 1)
+position = Vector2(314, 857.603)
+scale = Vector2(0.368, 0.372)
+texture = ExtResource("2_ng375")
+script = ExtResource("3_wbr03")
+act_texture = ExtResource("4_37g5g")
+
+[node name="seta1" type="Sprite2D" parent="."]
+modulate = Color(0.431373, 0.572549, 0.129412, 1)
+position = Vector2(764, 857.603)
+scale = Vector2(0.368, 0.372)
+texture = ExtResource("2_ng375")
+script = ExtResource("3_wbr03")
+act_texture = ExtResource("4_37g5g")
+posicao = 1
+
+[node name="seta2" type="Sprite2D" parent="."]
+modulate = Color(0.431373, 0.572549, 0.129412, 1)
+position = Vector2(1194, 857.603)
+scale = Vector2(0.368, 0.372)
+texture = ExtResource("2_ng375")
+script = ExtResource("3_wbr03")
+act_texture = ExtResource("4_37g5g")
+posicao = 2
+
+[node name="seta3" type="Sprite2D" parent="."]
+modulate = Color(0.431373, 0.572549, 0.129412, 1)
+position = Vector2(1622, 857.603)
+scale = Vector2(0.368, 0.372)
+texture = ExtResource("2_ng375")
+script = ExtResource("3_wbr03")
+act_texture = ExtResource("4_37g5g")
+posicao = 3
+
+[node name="selecao" type="Sprite2D" parent="."]
+position = Vector2(314, 863)
+scale = Vector2(1.18173, 1.18173)
+texture = ExtResource("5_iue81")
+script = ExtResource("6_30gpg")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="background" type="Sprite2D" parent="."]
+modulate = Color(0.980392, 0.980392, 0.980392, 1)
+z_index = -1
+texture_filter = 1
+position = Vector2(960, 540)
+scale = Vector2(2.00741, 2.00741)
+texture = ExtResource("7_hik5p")
+
+[node name="tag" type="Sprite2D" parent="."]
+position = Vector2(983, 557)
+scale = Vector2(1.65, 1.65)
+texture = ExtResource("8_aiy4c")
+region_rect = Rect2(0, 0, 0, 360)
+region_filter_clip_enabled = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
