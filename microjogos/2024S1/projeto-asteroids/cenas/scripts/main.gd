@@ -1,5 +1,10 @@
 extends Node2D
 
+@export var asteroid_scene: PackedScene
+@export var player_scene: PackedScene 
+
+#= preload("res://microjogos/2024S1/projeto-asteroids/cenas/asteroid.tscn")
+
 # Declaração dos sinais win e lose
 signal win
 signal lose
@@ -25,6 +30,12 @@ func _ready():
 			NotificationCenter.notify("DO SOMETHING!")
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("FACA ALGO!")
+			
+	game_start()
+	
+	
+	
+	
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
@@ -47,7 +58,11 @@ func _process(delta):
 
 
 # Um método genérico. Crie quantos métodos você precisar!
-func my_method():
+func game_start():
+	var player = player_scene.instantiate()
+	var a = get_node("StartPosition")
+	player.position = a.position
+	add_child(player)
 	pass
 
 
@@ -69,3 +84,30 @@ func register_win():
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
 	emit_signal("lose")
+
+
+func _on_start_timer_timeout():
+	$AsteroidTimer.start()
+	pass # Replace with function body.
+
+
+func _on_asteroid_timer_timeout():
+	
+	var asteroid = asteroid_scene.instantiate()
+	
+	var asteroid_spawn = get_node("AsteroidPath/AsteroidSpawn")	
+	asteroid_spawn.progress_ratio = randf()
+	
+	var direction = asteroid_spawn.rotation + PI / 2
+	
+	asteroid.position = asteroid_spawn.position
+	
+	direction += randf_range(-PI / 4, PI / 4)
+	asteroid.rotation = direction
+	
+	var velocity = Vector2(randf_range(450.0, 550.0), 0.0)
+	asteroid.linear_velocity = velocity.rotated(direction)
+	
+	add_child(asteroid)
+	
+	pass # Replace with function body.
