@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkvcg7ivmjl0d"
-path="res://.godot/imported/capa.png-8a1b289eccd6e7f3202cf5a91f689be2.ctex"
+uid="uid://bwxercpks3ne1"
+path="res://.godot/imported/New Piskel-1.png(2).png-12561ea95656f4a56e34b07975a3af75.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/seu_projeto/capa.png"
-dest_files=["res://.godot/imported/capa.png-8a1b289eccd6e7f3202cf5a91f689be2.ctex"]
+source_file="res://microjogos/2024S1/projeto-guilherme/recursos/New Piskel-1.png(2).png"
+dest_files=["res://.godot/imported/New Piskel-1.png(2).png-12561ea95656f4a56e34b07975a3af75.ctex"]
 
 [params]
 
