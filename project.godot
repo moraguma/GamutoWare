@@ -25,8 +25,8 @@ TranslationManager="*res://principal/cenas/autoloads/TranslationManager.tscn"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
+window/size/viewport_width=640
+window/size/viewport_height=320
 window/size/mode=3
 window/size/window_width_override=960
 window/size/window_height_override=540
@@ -157,6 +157,7 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
 environment/defaults/default_environment="res://default_env.tres"

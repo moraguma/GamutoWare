@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b3q3an4syknyy"]
+[gd_scene load_steps=24 format=3 uid="uid://b3q3an4syknyy"]
 
 [ext_resource type="FontFile" uid="uid://blcw2hkcbcxid" path="res://principal/recursos/fonts/stop_bullying/Stop Bullying.otf" id="1"]
 [ext_resource type="Texture2D" uid="uid://c2sgtas737d1o" path="res://principal/recursos/sprites/gamuxlogo.png" id="2"]
@@ -175,26 +175,34 @@ _data = {
 [node name="Opening" type="Node2D"]
 script = ExtResource("4")
 
-[node name="MoragumaContainer" type="Node2D" parent="."]
-position = Vector2(960, 614)
+[node name="World" type="Node2D"]
+position = Vector2(42, 36)
 
-[node name="Moraguma" type="RichTextLabel" parent="MoragumaContainer"]
-offset_left = -960.0
-offset_top = -46.2065
-offset_right = 960.0
-offset_bottom = 253.793
-theme = SubResource("2")
-theme_override_font_sizes/normal_font_size = 64
-bbcode_enabled = true
-text = "[center][wave]@moraguma"
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_7uosf")
+format = 2
+layer_0/name = "ground"
+layer_0/tile_data = PackedInt32Array(1048573, 196608, 1, 983077, 196608, 1, 983076, 196608, 1, 983075, 196608, 1, 983074, 196608, 1, 983073, 196608, 1, 983072, 196608, 1, 983071, 196608, 1, 983070, 196608, 1, 983069, 196608, 1, 983068, 196608, 1, 983067, 196608, 1, 983066, 196608, 1, 983065, 196608, 1, 983064, 196608, 1, 983063, 196608, 1, 983062, 196608, 1, 983061, 196608, 1, 983060, 196608, 1, 983059, 196608, 1, 983058, 196608, 1, 983057, 196608, 1, 983056, 196608, 1, 983055, 196608, 1, 983054, 196608, 1, 983053, 196608, 1, 983052, 196608, 1, 983051, 196608, 1, 983050, 196608, 1, 983049, 196608, 1, 983048, 196608, 1, 983047, 196608, 1, 983046, 196608, 1, 983044, 196608, 1, 983043, 196608, 1, 983042, 196608, 1, 983041, 196608, 1, 983040, 196608, 1, 1048575, 196608, 1, 1048574, 196608, 1, 1114109, 262144, 2, 1114110, 262144, 2, 1114111, 262144, 2, 1048576, 262144, 2, 1048577, 262144, 2, 1048578, 262144, 2, 1048579, 262144, 2, 1048580, 262144, 2, 1048581, 262144, 2, 1048583, 262144, 2, 1048584, 262144, 2, 1048585, 262144, 2, 1048586, 262144, 2, 1048587, 262144, 2, 1048588, 262144, 2, 1048589, 262144, 2, 1048590, 262144, 2, 1048591, 262144, 2, 1048592, 262144, 2, 1048593, 262144, 2, 1048594, 262144, 2, 1048595, 262144, 2, 1048596, 262144, 2, 1048597, 262144, 2, 1048598, 262144, 2, 1048599, 262144, 2, 1048600, 262144, 2, 1048601, 262144, 2, 1048602, 262144, 2, 1048603, 262144, 2, 1048604, 262144, 2, 1048605, 262144, 2, 1048606, 262144, 2, 1048607, 262144, 2, 1048608, 262144, 2, 1048609, 262144, 2, 1048610, 262144, 2, 1048611, 262144, 2, 1048612, 262144, 2, 1048613, 262144, 2, 983045, 196608, 1, 1048582, 262144, 2, 851973, 65537, 1, 851976, 327681, 1, 917516, 589825, 1, 917520, 589825, 3, 917524, 983041, 1, 917529, 917505, 3, 917533, 65537, 5, 917535, 196609, 5)
+layer_1/name = "decorations"
+layer_1/tile_data = PackedInt32Array()
 
-[node name="Logo" type="Sprite2D" parent="."]
-texture = ExtResource("2")
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(443, 79)
+script = ExtResource("1_eiv4f")
 
-[node name="Gamux" type="Sprite2D" parent="."]
-texture = ExtResource("3")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_gugre")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_s2r1r")
-}
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+sprite_frames = SubResource("SpriteFrames_l6apg")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.567483
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(277, 271)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(3, 2)
+shape = SubResource("RectangleShape2D_6bba7")
