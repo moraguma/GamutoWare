@@ -1,22 +1,51 @@
-[gd_scene load_steps=4 format=3 uid="uid://c101tbn8wn1uo"]
+[gd_scene load_steps=8 format=3 uid="uid://c101tbn8wn1uo"]
 
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto-eco-g/cenas/character_body_2d.gd" id="1_wfdvr"]
-[ext_resource type="Texture2D" uid="uid://coshisyc4u0ra" path="res://microjogos/2024S1/projeto-eco-g/recursos/sprites/gamux.png" id="2_lmxwt"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-eco-g/cenas/scripts/character_body_2d.gd" id="1_wfdvr"]
+[ext_resource type="Texture2D" uid="uid://cs6adeqqv5pnc" path="res://microjogos/2024S1/projeto-eco-g/recursos/sprites/gamuto-frames/gamuto_0.png" id="2_fw3a7"]
+[ext_resource type="Texture2D" uid="uid://crf71h67wk4ki" path="res://microjogos/2024S1/projeto-eco-g/recursos/sprites/gamuto-frames/gamuto_1.png" id="3_fiivp"]
+[ext_resource type="Texture2D" uid="uid://ds8vr5bw605sa" path="res://microjogos/2024S1/projeto-eco-g/recursos/sprites/gamuto-frames/gamuto_2.png" id="4_7ddth"]
+[ext_resource type="PackedScene" uid="uid://0src2rul5tqr" path="res://microjogos/2024S1/projeto-eco-g/cenas/sonar.tscn" id="5_if3ph"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lqx7q"]
-radius = 47.0
+[sub_resource type="SpriteFrames" id="SpriteFrames_qmf3g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fw3a7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fiivp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7ddth")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fiivp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
-[node name="Gamuto" type="CharacterBody2D"]
-position = Vector2(381, 568)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7k6ys"]
+radius = 20.2392
+height = 74.7878
+
+[node name="Gamuto" type="CharacterBody2D" groups=["Player"]]
+position = Vector2(385, 567)
 motion_mode = 1
 script = ExtResource("1_wfdvr")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1.19209e-07, 7.10543e-15)
-scale = Vector2(1.95312, 1.95312)
-texture = ExtResource("2_lmxwt")
+[node name="animated_gamuto" type="AnimatedSprite2D" parent="."]
+position = Vector2(12, 18)
+scale = Vector2(1.68, 1.68)
+sprite_frames = SubResource("SpriteFrames_qmf3g")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(17, 30)
-shape = SubResource("CircleShape2D_lqx7q")
+[node name="Sonar" parent="." instance=ExtResource("5_if3ph")]
+
+[node name="Hitbox" type="Area2D" parent="." groups=["Player"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(18, 33)
+rotation = 0.699799
+shape = SubResource("CapsuleShape2D_7k6ys")
 one_way_collision_margin = 108.0
