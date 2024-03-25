@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ba8qlexjua3t5"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-da-ana-luiza/cenas/area_2d.gd" id="1_bhs24"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-da-ana-luiza/cenas/CollisionShape2D.gd" id="2_g4g7w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nqih7"]
+size = Vector2(1975, 285)
+
+[node name="Area2D" type="Area2D" groups=["morte"]]
+script = ExtResource("1_bhs24")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(960, 991)
+shape = SubResource("RectangleShape2D_nqih7")
+script = ExtResource("2_g4g7w")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="child_entered_tree" from="CollisionShape2D" to="CollisionShape2D" method="_on_child_entered_tree"]
