@@ -20,3 +20,7 @@ func _process(delta):
 
 func _on_timer_timeout():
 	sonar_is_ready = true
+
+
+func _on_area_entered(area):
+	area.detected()

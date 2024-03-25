@@ -7,23 +7,15 @@ var rotation_direction = 0
 var vision = 0
 
 func get_input():
-	if (Input.is_action_just_pressed("esquerda")):
-		if vision == 1:
-			vision = 0
-		else:
-			vision = -1
-	elif (Input.is_action_just_pressed("direita")):
-		if vision == -1:
-			vision = 0
-		else:
-			vision = 1
-			
 	if (Input.is_action_pressed("cima")):
 		velocity = transform.y * -1 * speed
+		vision = -1
 	elif (Input.is_action_pressed("baixo")):
 		velocity = transform.y * 1 * speed
+		vision = 1
 	else:
 		velocity = transform.y
+		vision = 0
 
 func _physics_process(delta):
 	get_input()
@@ -34,3 +26,6 @@ func _physics_process(delta):
 func _ready():
 	$"animated_gamuto".play("default")
 	
+func player_hit():
+	$"animated_gamuto".play("hit")
+	emit_signal("lose")

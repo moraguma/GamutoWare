@@ -42,9 +42,7 @@ sprite_frames = SubResource("SpriteFrames_qmf3g")
 
 [node name="Sonar" parent="." instance=ExtResource("5_if3ph")]
 
-[node name="Hitbox" type="Area2D" parent="." groups=["Player"]]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(18, 33)
 rotation = 0.699799
 shape = SubResource("CapsuleShape2D_7k6ys")

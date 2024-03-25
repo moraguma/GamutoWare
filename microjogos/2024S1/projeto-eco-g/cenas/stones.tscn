@@ -11,28 +11,26 @@
 [ext_resource type="PackedScene" uid="uid://c1tlnmwosk7at" path="res://microjogos/2024S1/projeto-eco-g/cenas/stone_7.tscn" id="9_j0j83"]
 
 [node name="Stones" type="Node2D"]
+position = Vector2(1316, 3)
 script = ExtResource("1_t86em")
 
 [node name="Stone8" parent="." instance=ExtResource("2_ftro1")]
-position = Vector2(1104, 0)
+position = Vector2(1123, -3)
 
 [node name="Stone2" parent="." instance=ExtResource("4_1vy6m")]
-position = Vector2(0, 1080)
+position = Vector2(0, 1077)
 
 [node name="Stone3" parent="." instance=ExtResource("5_f25ge")]
-position = Vector2(312, 1080)
+position = Vector2(312, 1077)
 
 [node name="Stone4" parent="." instance=ExtResource("6_naxrv")]
 position = Vector2(912, 1077)
 
-[node name="Stone5" parent="." instance=ExtResource("7_au80i")]
-position = Vector2(714, 0)
-
 [node name="Stone6" parent="." instance=ExtResource("8_upexq")]
-position = Vector2(362, 0)
+position = Vector2(363, -3)
 
 [node name="Stone7" parent="." instance=ExtResource("9_j0j83")]
-position = Vector2(1334, 1080)
+position = Vector2(1332, 1077)
 
 [node name="Stone9" parent="." instance=ExtResource("6_naxrv")]
 position = Vector2(2973, 1077)
@@ -42,23 +40,23 @@ position = Vector2(1808, 1077)
 rotation = -6.28319
 
 [node name="Stone11" parent="." instance=ExtResource("8_upexq")]
-position = Vector2(1852, 0)
+position = Vector2(1857, -3)
 
 [node name="Stone12" parent="." instance=ExtResource("2_ftro1")]
-position = Vector2(2208, 0)
+position = Vector2(-1670, 0)
 
 [node name="Stone13" parent="." instance=ExtResource("9_j0j83")]
 position = Vector2(2387, 1077)
 
 [node name="Stone14" parent="." instance=ExtResource("8_upexq")]
-position = Vector2(3896, 0)
+position = Vector2(3838, -3)
 
 [node name="Stone15" parent="." instance=ExtResource("9_j0j83")]
-position = Vector2(4023, 0)
+position = Vector2(35, -3)
 rotation = 3.14159
 
 [node name="Stone16" parent="." instance=ExtResource("5_f25ge")]
-position = Vector2(3549, 0)
+position = Vector2(3549, -3)
 rotation = 3.14159
 
 [node name="Stone17" parent="." instance=ExtResource("2_ftro1")]
@@ -66,93 +64,89 @@ position = Vector2(4238, 1077)
 rotation = 3.14159
 
 [node name="Stone18" parent="." instance=ExtResource("2_ftro1")]
-position = Vector2(7320, 1080)
-rotation = 3.14159
-
-[node name="Stone19" parent="." instance=ExtResource("3_0r01d")]
-position = Vector2(8424, 1080)
+position = Vector2(7318, 1077)
 rotation = 3.14159
 
 [node name="Stone20" parent="." instance=ExtResource("4_1vy6m")]
-position = Vector2(8424, 0)
+position = Vector2(8426, -3)
 rotation = 3.14159
 
 [node name="Stone21" parent="." instance=ExtResource("5_f25ge")]
-position = Vector2(8112, 0)
+position = Vector2(8104, -3)
 rotation = 3.14159
 
 [node name="Stone22" parent="." instance=ExtResource("6_naxrv")]
-position = Vector2(7512, 3.00012)
+position = Vector2(7515, -3)
 rotation = 3.14159
 
 [node name="Stone23" parent="." instance=ExtResource("7_au80i")]
-position = Vector2(7710, 1080)
+position = Vector2(7713, 1077)
 rotation = 3.14159
 
 [node name="Stone24" parent="." instance=ExtResource("8_upexq")]
-position = Vector2(8062, 1080)
+position = Vector2(8063, 1077)
 rotation = 3.14159
 
 [node name="Stone25" parent="." instance=ExtResource("9_j0j83")]
-position = Vector2(7090, 0.00012207)
+position = Vector2(7090, -3)
 rotation = 3.14159
 
 [node name="Stone26" parent="." instance=ExtResource("6_naxrv")]
-position = Vector2(5451, 3.00024)
+position = Vector2(5452, -3)
 rotation = 3.14159
 
 [node name="Stone27" parent="." instance=ExtResource("5_f25ge")]
-position = Vector2(6616, 3.00012)
+position = Vector2(6615, -3)
 rotation = 3.14159
 
 [node name="Stone28" parent="." instance=ExtResource("8_upexq")]
-position = Vector2(6572, 1080)
+position = Vector2(6572, 1077)
 rotation = 3.14159
 
 [node name="Stone29" parent="." instance=ExtResource("2_ftro1")]
-position = Vector2(6216, 1080)
+position = Vector2(6217, 1077)
 rotation = 3.14159
 
 [node name="Stone30" parent="." instance=ExtResource("9_j0j83")]
-position = Vector2(6037, 3.00024)
+position = Vector2(6038, -3)
 rotation = 3.14159
 
 [node name="Stone31" parent="." instance=ExtResource("8_upexq")]
-position = Vector2(4528, 1080)
+position = Vector2(4529, 1077)
 rotation = 3.14159
 
 [node name="Stone32" parent="." instance=ExtResource("9_j0j83")]
-position = Vector2(4401, 1080)
+position = Vector2(4405, 1077)
 
 [node name="Stone33" parent="." instance=ExtResource("5_f25ge")]
-position = Vector2(4875, 1080)
+position = Vector2(4877, 1077)
 
 [node name="Stone34" parent="." instance=ExtResource("2_ftro1")]
-position = Vector2(4186, 3.00037)
+position = Vector2(4201, -3)
 
 [node name="Stone35" parent="." instance=ExtResource("2_ftro1")]
-position = Vector2(9367, 0.00069499)
+position = Vector2(9368, -3)
 
 [node name="Stone36" parent="." instance=ExtResource("3_0r01d")]
-position = Vector2(8263, 0.000958204)
+position = Vector2(8263, -3)
 
 [node name="Stone37" parent="." instance=ExtResource("4_1vy6m")]
-position = Vector2(8263, 1080)
+position = Vector2(8263, 1077)
 
 [node name="Stone38" parent="." instance=ExtResource("5_f25ge")]
-position = Vector2(8575, 1080)
+position = Vector2(8583, 1077)
 
 [node name="Stone39" parent="." instance=ExtResource("6_naxrv")]
 position = Vector2(9175, 1077)
 
 [node name="Stone40" parent="." instance=ExtResource("7_au80i")]
-position = Vector2(8977, 0.000787973)
+position = Vector2(8977, -3)
 
 [node name="Stone41" parent="." instance=ExtResource("8_upexq")]
-position = Vector2(8625, 0.000871897)
+position = Vector2(8626, -3)
 
 [node name="Stone42" parent="." instance=ExtResource("9_j0j83")]
-position = Vector2(9597, 1080)
+position = Vector2(9599, 1077)
 
 [node name="Stone43" parent="." instance=ExtResource("6_naxrv")]
 position = Vector2(11236, 1077)
@@ -161,23 +155,23 @@ position = Vector2(11236, 1077)
 position = Vector2(10071, 1077)
 
 [node name="Stone45" parent="." instance=ExtResource("8_upexq")]
-position = Vector2(10115, 0.000516653)
+position = Vector2(10114, -3)
 
 [node name="Stone46" parent="." instance=ExtResource("2_ftro1")]
-position = Vector2(10471, 0.000431776)
+position = Vector2(10470, -3)
 
 [node name="Stone47" parent="." instance=ExtResource("9_j0j83")]
 position = Vector2(10650, 1077)
 
 [node name="Stone48" parent="." instance=ExtResource("8_upexq")]
-position = Vector2(12159, 2.93255e-05)
+position = Vector2(12167, -3)
 
 [node name="Stone49" parent="." instance=ExtResource("9_j0j83")]
-position = Vector2(12286, -9.53674e-07)
+position = Vector2(12286, -3)
 rotation = 3.14159
 
 [node name="Stone50" parent="." instance=ExtResource("5_f25ge")]
-position = Vector2(11812, 0.000112057)
+position = Vector2(11810, -3)
 rotation = 3.14159
 
 [node name="Stone51" parent="." instance=ExtResource("2_ftro1")]
@@ -185,5 +179,32 @@ position = Vector2(12501, 1077)
 rotation = 3.14159
 
 [node name="Stone1" parent="." instance=ExtResource("3_0r01d")]
+position = Vector2(-70, -3)
+
+[node name="Stone52" parent="." instance=ExtResource("6_naxrv")]
+position = Vector2(-510, 1077)
+
+[node name="Stone19" parent="." instance=ExtResource("3_0r01d")]
+position = Vector2(8421, 1077)
+rotation = 3.14159
+
+[node name="Stone53" parent="." instance=ExtResource("9_j0j83")]
+position = Vector2(-1470, 1077)
+
+[node name="Stone54" parent="." instance=ExtResource("8_upexq")]
+position = Vector2(-508, 1077)
+rotation = -3.14159
+
+[node name="Stone55" parent="." instance=ExtResource("8_upexq")]
+position = Vector2(3462, -3)
+
+[node name="Stone56" parent="." instance=ExtResource("2_ftro1")]
+position = Vector2(2246, -6)
+
+[node name="Stone57" parent="." instance=ExtResource("8_upexq")]
+position = Vector2(-923, -3.00012)
+
+[node name="Stone5" parent="." instance=ExtResource("7_au80i")]
+position = Vector2(718, -3)
 
 [connection signal="area_entered" from="Stone37" to="Stone37" method="_on_area_entered"]

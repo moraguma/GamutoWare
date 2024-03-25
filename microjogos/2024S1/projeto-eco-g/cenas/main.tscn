@@ -1,9 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=9 format=3 uid="uid://bi0ahd7cv37i6"]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-eco-g/cenas/scripts/main.gd" id="1_271qq"]
 [ext_resource type="PackedScene" uid="uid://c101tbn8wn1uo" path="res://microjogos/2024S1/projeto-eco-g/cenas/character_body_2d.tscn" id="1_ssn2e"]
 [ext_resource type="PackedScene" uid="uid://cv36diyrxii8c" path="res://microjogos/2024S1/projeto-eco-g/cenas/parallax_background.tscn" id="2_bkp2i"]
 [ext_resource type="PackedScene" uid="uid://bhuj8qm6aduut" path="res://microjogos/2024S1/projeto-eco-g/cenas/stones.tscn" id="3_kcuk1"]
+[ext_resource type="Texture2D" uid="uid://bw751n66l2a4n" path="res://microjogos/2024S1/projeto-eco-g/recursos/sprites/space_bar.png" id="5_irwje"]
+[ext_resource type="FontFile" uid="uid://xy0c8mxssai0" path="res://microjogos/2024S1/projeto-eco-g/recursos/CaveatBrush-Regular.ttf" id="6_t7myu"]
+[ext_resource type="AudioStream" uid="uid://kjuguo5r70sk" path="res://microjogos/2024S1/projeto-eco-g/recursos/eco-G.wav" id="7_mledt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fwoks"]
+font = ExtResource("6_t7myu")
+font_size = 80
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_271qq")
@@ -18,5 +25,23 @@ position = Vector2(237, 518)
 [node name="Timer" type="Timer" parent="."]
 wait_time = 6.0
 autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(102, 1013)
+scale = Vector2(0.601562, 0.601562)
+texture = ExtResource("5_irwje")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 181.0
+offset_top = 959.0
+offset_right = 348.0
+offset_bottom = 1060.0
+text = "Sonar"
+label_settings = SubResource("LabelSettings_fwoks")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_mledt")
+volume_db = 5.012
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
