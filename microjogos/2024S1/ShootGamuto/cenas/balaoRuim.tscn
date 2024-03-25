@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbn6cwj4iliug"]
+
+[ext_resource type="Texture2D" uid="uid://ix3ilaidkysh" path="res://microjogos/2024S1/ShootGamuto/recursos/amigo.png" id="1_2nyd7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xcp88"]
+radius = 53.0094
+
+[node name="Area2D" type="Area2D"]
+collision_layer = 2
+collision_mask = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("1_2nyd7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xcp88")
