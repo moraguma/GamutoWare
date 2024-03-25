@@ -1,18 +1,103 @@
-[gd_scene load_steps=5 format=3 uid="uid://botov3x1oaokx"]
+[gd_scene load_steps=18 format=3 uid="uid://botov3x1oaokx"]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-estrela/cenas/scripts/CharacterBody2D.gd" id="1_06xe5"]
-[ext_resource type="Texture2D" uid="uid://dis5trsw81fje" path="res://microjogos/2024S1/projeto-estrela/pngegg.png" id="1_pmtf7"]
+[ext_resource type="Texture2D" uid="uid://bc1tqp11hjmeo" path="res://microjogos/2024S1/projeto-estrela/PATO.png" id="3_5a008"]
 [ext_resource type="AudioStream" uid="uid://dsuaafsm815av" path="res://microjogos/2024S1/projeto-estrela/quack.mp3" id="3_ircyp"]
+[ext_resource type="Texture2D" uid="uid://dbhlxs2rducox" path="res://microjogos/2024S1/projeto-estrela/papapap.png" id="4_o2kfc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h1wop"]
 radius = 131.137
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xtd2"]
+atlas = ExtResource("3_5a008")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ah5h"]
+atlas = ExtResource("3_5a008")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p24vb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xtd2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ah5h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hma0i"]
+atlas = ExtResource("3_5a008")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3f7wo"]
+atlas = ExtResource("3_5a008")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wfcp8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hma0i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3f7wo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yn0cw"]
+atlas = ExtResource("3_5a008")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ylfa"]
+atlas = ExtResource("3_5a008")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4jkr2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yn0cw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ylfa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t6yk6"]
+atlas = ExtResource("4_o2kfc")
+region = Rect2(0, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdpso"]
+atlas = ExtResource("4_o2kfc")
+region = Rect2(64, 0, 64, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f775v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t6yk6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdpso")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_06xe5")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.42, 0.39625)
-texture = ExtResource("1_pmtf7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_h1wop")
@@ -20,3 +105,30 @@ one_way_collision_margin = 0.0
 
 [node name="quack" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_ircyp")
+
+[node name="cimaP" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(52, 27)
+scale = Vector2(6.6, 6.261)
+sprite_frames = SubResource("SpriteFrames_p24vb")
+
+[node name="baixoP" type="AnimatedSprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(59, 52)
+scale = Vector2(7.336, 6.6)
+sprite_frames = SubResource("SpriteFrames_wfcp8")
+
+[node name="esquerdP" type="AnimatedSprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(45, 23)
+scale = Vector2(6.6, 5.896)
+sprite_frames = SubResource("SpriteFrames_4jkr2")
+
+[node name="direitaP" type="AnimatedSprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(-30, -22)
+scale = Vector2(6.6, 5.757)
+sprite_frames = SubResource("SpriteFrames_f775v")

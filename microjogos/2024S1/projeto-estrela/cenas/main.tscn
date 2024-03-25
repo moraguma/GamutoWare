@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://byuft7r8ys605" path="res://microjogos/2024S1/projeto-estrela/cenas/scripts/obs1.tscn" id="4_kjds8"]
 [ext_resource type="PackedScene" uid="uid://xd0ylioakf58" path="res://microjogos/2024S1/projeto-estrela/cenas/scripts/lotad.tscn" id="5_fmmh7"]
 [ext_resource type="PackedScene" uid="uid://bjh2lhwsbqihl" path="res://microjogos/2024S1/projeto-estrela/cenas/scripts/obs3.tscn" id="6_y4lcq"]
-[ext_resource type="PackedScene" uid="uid://dhx8403wxd3g3" path="res://boia.tscn" id="7_ayd5e"]
+[ext_resource type="PackedScene" uid="uid://dhx8403wxd3g3" path="res://microjogos/2024S1/projeto-estrela/cenas/scripts/boia.tscn" id="7_ayd5e"]
 
 [node name="Main" type="Node2D"]
 

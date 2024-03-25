@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhx8403wxd3g3"]
+
+[ext_resource type="Texture2D" uid="uid://bshud8dfal7gj" path="res://microjogos/2024S1/projeto-estrela/boia.png" id="1_rwdqa"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dym7c"]
+radius = 106.231
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_dym7c")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(16, 4)
+scale = Vector2(0.366536, 0.365278)
+texture = ExtResource("1_rwdqa")
