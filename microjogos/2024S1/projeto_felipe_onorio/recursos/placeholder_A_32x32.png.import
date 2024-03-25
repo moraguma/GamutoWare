@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dv5d0e3qqnxue"
-path="res://.godot/imported/placeholder_32x32.png-11ba3fee7215959b5239f7409e771078.ctex"
+uid="uid://bfmq77qnkf8ie"
+path="res://.godot/imported/placeholder_A_32x32.png-455e0e1d23f16827502d89fed5b28c05.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto_felipe_onorio/recursos/placeholder_32x32.png"
-dest_files=["res://.godot/imported/placeholder_32x32.png-11ba3fee7215959b5239f7409e771078.ctex"]
+source_file="res://microjogos/2024S1/projeto_felipe_onorio/recursos/placeholder_A_32x32.png"
+dest_files=["res://.godot/imported/placeholder_A_32x32.png-455e0e1d23f16827502d89fed5b28c05.ctex"]
 
 [params]
 
