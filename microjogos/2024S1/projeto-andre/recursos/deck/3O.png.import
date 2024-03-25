@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkvcg7ivmjl0d"
-path="res://.godot/imported/capa.png-8a1b289eccd6e7f3202cf5a91f689be2.ctex"
+uid="uid://d3r6oqpf2mv88"
+path="res://.godot/imported/3O.png-d57a8ff1fcf6b124a1ad16a1b549ddc1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/seu_projeto/capa.png"
-dest_files=["res://.godot/imported/capa.png-8a1b289eccd6e7f3202cf5a91f689be2.ctex"]
+source_file="res://microjogos/2024S1/projeto-andre/recursos/deck/3O.png"
+dest_files=["res://.godot/imported/3O.png-d57a8ff1fcf6b124a1ad16a1b549ddc1.ctex"]
 
 [params]
 
