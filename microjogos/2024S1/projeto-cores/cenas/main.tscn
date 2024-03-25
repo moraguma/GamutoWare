@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=7 format=3 uid="uid://bi0ahd7cv37i6"]
 
 [ext_resource type="PackedScene" uid="uid://dkill5kno8yaa" path="res://microjogos/2024S1/projeto-cores/cenas/node_2d.tscn" id="1_78o1k"]
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-cores/cenas/main.gd" id="1_mwfc7"]
 [ext_resource type="Texture2D" uid="uid://bb26eloj2v01k" path="res://microjogos/2024S1/projeto-cores/recursos/img-1-seamless_rainbow.png" id="3_621l5"]
+[ext_resource type="Texture2D" uid="uid://dqy505lq355k" path="res://microjogos/2024S1/projeto-cores/recursos/New Piskel.png" id="4_5g52k"]
 [ext_resource type="AudioStream" uid="uid://bmvjepnr0ybd8" path="res://microjogos/2024S1/projeto-cores/recursos/Victory.mp3" id="4_5qolh"]
+[ext_resource type="Texture2D" uid="uid://cy0rwjnw07pp7" path="res://microjogos/2024S1/projeto-cores/recursos/New Piskelspace.png" id="5_vmirk"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_mwfc7")
@@ -62,13 +64,36 @@ color = Color(0, 0, 0, 1)
 offset = Vector2(80, 30)
 polygon = PackedVector2Array(-13, -13, 13, -13, 13, 13, -13, 13)
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_5qolh")
+volume_db = 24.0
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(280, 120)
+rotation = -1.5708
+texture = ExtResource("4_5g52k")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(260, 140)
+rotation = 3.14159
+texture = ExtResource("4_5g52k")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(280, 140)
+texture = ExtResource("5_vmirk")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(300, 140)
+texture = ExtResource("4_5g52k")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(280, 160)
+rotation = 1.5708
+texture = ExtResource("4_5g52k")
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 z_index = -7
 position = Vector2(160, 90)
 scale = Vector2(1.28, 0.72)
 texture = ExtResource("3_621l5")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_5qolh")
-volume_db = 24.0
