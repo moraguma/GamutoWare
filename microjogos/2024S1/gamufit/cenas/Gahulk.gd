@@ -1,18 +1,36 @@
 extends Node2D
 
-var gahulk_suffering_sprite
-var gahulk_exercising_sprite
+# Declare variáveis para os sprites
+var suffering_sprite
+var exercising_sprite
 
 func _ready():
-	# Obtém as referências aos sprites de sofrimento e exercício
-	gahulk_suffering_sprite = $Sprite2D_Suffering
-	gahulk_exercising_sprite = $Sprite2D_Exercising
+	# Carregue os sprites
+	suffering_sprite = get_node("Sprite2D-suffering")
+	exercising_sprite = get_node("Sprite2D-exercising")
 
-	# Conecta o sinal emitido pelo SmallBar para detectar colisões com Gamuto(icon)
-	$SmallBar.connect("gamuto_collided", self, "_on_small_bar_gamuto_collided")
+	# Conecte o sinal 'gamuto_collided' emitido pelo Gamuto(icon)
+	var gamuto = get_parent().get_node("SmallBar")
+	gamuto.connect("gamuto_collided", _on_gamuto_collided)
+	gamuto.connect("gamuto_not_collided", _on_gamuto_not_collided)
+	
 
-# Método para lidar com o sinal emitido pelo SmallBar quando Gamuto(icon) colide
-func _on_small_bar_gamuto_collided(body):
-	# Mostra o sprite de exercício e oculta o sprite de sofrimento
-	gahulk_exercising_sprite.visible = true
-	gahulk_suffering_sprite.visible = false
+func _on_gamuto_collided():
+	# Mude o sprite do Gahulk
+	change_sprite()
+
+func _on_gamuto_not_collided():
+	# Volte ao sprite de suffering
+	if exercising_sprite.visible:
+		change_sprite2()
+
+func change_sprite():
+	# Verifique qual sprite está visível atualmente e alterne
+		suffering_sprite.visible = false
+		exercising_sprite.visible = true
+		
+func change_sprite2():
+	# Verifique qual sprite está visível atualmente e alterne
+		suffering_sprite.visible = true
+		exercising_sprite.visible = false
+

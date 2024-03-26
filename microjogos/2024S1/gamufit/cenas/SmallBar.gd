@@ -1,4 +1,6 @@
 extends Area2D
+signal gamuto_collided
+signal gamuto_not_collided
 
 # Variáveis para controlar a velocidade e a amplitude do movimento
 var min_speed = 0.5
@@ -56,7 +58,16 @@ func randomize_target_parameters():
 
 	####AQUI ESTÁ O CÓDIGO DE COLISÃO DO "Gamuto(icon)" e a "SmallBar"####
 	
-func _on_gamuto_collided(body):
+# Função chamada quando um corpo entra na área de colisão
+func _on_body_entered(body):
+	# Verifica se o corpo é o Gamuto(icon)
 	if body.name == "Gamuto(icon)":
 		print("Gamuto collided with SmallBar")
 		emit_signal("gamuto_collided")
+
+# Função chamada quando um corpo sai da área de colisão
+func _on_body_exited(body):
+	# Verifica se o corpo é o Gamuto(icon)
+	if body.name == "Gamuto(icon)":
+		print("Gamuto exited from SmallBar")
+		emit_signal("gamuto_not_collided")

@@ -4,8 +4,6 @@ extends Node2D
 signal win
 signal lose
 
-# Importar a biblioteca de áudio
-var background_music: AudioStream
 # Estas constantes são usadas para determinar o tamanho da tela do seu jogo. Por padrão, definem uma
 # tela 1920x1080, que é padrão para monitores full HD. Caso você queira uma resolução menor para 
 # atingir uma estética mais pixelada, você pode mudar estes números para qualquer outra resolução 
@@ -24,16 +22,9 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
+			NotificationCenter.notify("PRESS SPACEBAR!")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FACA ALGO!")
-# Carregar a música de fundo
-	background_music = preload("res://microjogos/2024S1/gamufit/recursos/Gamuto the powerlifter.mp3")
-
-	# Reproduzir a música de fundo
-	var music_player = $AudioStreamPlayer
-	music_player.stream = background_music
-	music_player.play()
+			NotificationCenter.notify("APERTE ESPAÇO!")
 
 	# Conecte o sinal 'gamuto_collided' emitido pelo Gamuto(icon)
 	var gamuto = get_parent().get_node("SmallBar")
