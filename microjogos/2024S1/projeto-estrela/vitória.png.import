@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bshud8dfal7gj"
-path="res://.godot/imported/boia.png-2e5f714452a1c458dcedc21d0765828a.ctex"
+uid="uid://0qx1hb0ygcgl"
+path="res://.godot/imported/vitória.png-1a73e859f2863a6db50d09badffd774d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-estrela/boia.png"
-dest_files=["res://.godot/imported/boia.png-2e5f714452a1c458dcedc21d0765828a.ctex"]
+source_file="res://microjogos/2024S1/projeto-estrela/vitória.png"
+dest_files=["res://.godot/imported/vitória.png-1a73e859f2863a6db50d09badffd774d.ctex"]
 
 [params]
 

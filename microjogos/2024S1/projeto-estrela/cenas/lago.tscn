@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bmhh2veb4ba3s"]
 
-[ext_resource type="Texture2D" uid="uid://b6kao8w12gpkk" path="res://microjogos/2024S1/projeto-estrela/lago.png" id="1_ew258"]
+[ext_resource type="Texture2D" uid="uid://d0iep0odat6tf" path="res://microjogos/2024S1/projeto-estrela/laginho.png" id="1_443kk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvibd"]
 size = Vector2(654.21, 12.1843)
@@ -19,7 +19,7 @@ size = Vector2(2106, 53)
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(955.188, 534.906)
 scale = Vector2(3.11122, 2.95009)
-texture = ExtResource("1_ew258")
+texture = ExtResource("1_443kk")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
 

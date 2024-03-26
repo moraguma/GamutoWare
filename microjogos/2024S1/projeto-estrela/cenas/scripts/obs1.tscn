@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://byuft7r8ys605"]
 
-[ext_resource type="Texture2D" uid="uid://bwaj0sggka6jm" path="res://microjogos/2024S1/projeto-estrela/lilypad.png" id="1_pdvnp"]
+[ext_resource type="Texture2D" uid="uid://dyjd8km0w8u2p" path="res://microjogos/2024S1/projeto-estrela/vitória(1).png" id="1_iywuv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b8mm2"]
 radius = 68.0074
@@ -13,5 +13,6 @@ radius = 68.0074
 shape = SubResource("CircleShape2D_b8mm2")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-scale = Vector2(0.293, 0.291)
-texture = ExtResource("1_pdvnp")
+texture_filter = 1
+scale = Vector2(2.4, 2.445)
+texture = ExtResource("1_iywuv")

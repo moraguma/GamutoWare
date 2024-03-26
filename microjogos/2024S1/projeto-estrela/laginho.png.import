@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwaj0sggka6jm"
-path="res://.godot/imported/lilypad.png-59a173573ae89f5331e953ce988b5f85.ctex"
+uid="uid://d0iep0odat6tf"
+path="res://.godot/imported/laginho.png-ebc4ba296b9a143b2afcab57dba82742.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-estrela/lilypad.png"
-dest_files=["res://.godot/imported/lilypad.png-59a173573ae89f5331e953ce988b5f85.ctex"]
+source_file="res://microjogos/2024S1/projeto-estrela/laginho.png"
+dest_files=["res://.godot/imported/laginho.png-ebc4ba296b9a143b2afcab57dba82742.ctex"]
 
 [params]
 
