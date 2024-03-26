@@ -1,0 +1,170 @@
+[gd_scene load_steps=19 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="Texture2D" uid="uid://dvcwvhvdsduox" path="res://microjogos/2024S1/projeto-naomi/recursos/13104.jpg" id="1_3w0dd"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-naomi/cenas/CharacterBody2D.gd" id="2_5a1qq"]
+[ext_resource type="Texture2D" uid="uid://bs50fbbusbamr" path="res://microjogos/2024S1/projeto-naomi/recursos/chao.png" id="2_nkses"]
+[ext_resource type="Texture2D" uid="uid://b2chs50a18x2n" path="res://microjogos/2024S1/projeto-naomi/recursos/entry_door_open_icon_208681.png" id="3_agoy5"]
+[ext_resource type="Texture2D" uid="uid://oj54mwbpe6vq" path="res://microjogos/2024S1/projeto-naomi/recursos/ru_da_unicamp-removebg-preview.png" id="4_atme4"]
+[ext_resource type="Texture2D" uid="uid://bvks0p03n65t" path="res://microjogos/2024S1/projeto-naomi/recursos/enemies.png" id="4_vuhei"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-naomi/cenas/enemy.gd" id="4_xpy5y"]
+[ext_resource type="Texture2D" uid="uid://b1de16pu3ekyu" path="res://microjogos/2024S1/projeto-naomi/recursos/mesa.png" id="5_unfos"]
+[ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="6_tdlos"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-naomi/cenas/hitbox.gd" id="6_wla8d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_whvas"]
+radius = 37.054
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_frq8c"]
+size = Vector2(87.5, 71.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5au76"]
+atlas = ExtResource("4_vuhei")
+region = Rect2(69, 0, 722, 1096)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ii5ce"]
+atlas = ExtResource("4_vuhei")
+region = Rect2(729, 0, 722, 1096)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wu2u5"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5au76")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ii5ce")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7iwmt"]
+size = Vector2(22, 5.5)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_pq6ja"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_88g8n"]
+size = Vector2(1920, 141)
+
+[node name="Main" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(957, 538)
+scale = Vector2(0.367814, 0.274801)
+texture = ExtResource("1_3w0dd")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+collision_mask = 14
+script = ExtResource("2_5a1qq")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(211, 643)
+scale = Vector2(1.5625, 1.5625)
+texture = ExtResource("6_tdlos")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(211, 649)
+shape = SubResource("CircleShape2D_whvas")
+
+[node name="hurtbox" type="Area2D" parent="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/hurtbox"]
+position = Vector2(210.25, 634.25)
+shape = SubResource("RectangleShape2D_frq8c")
+
+[node name="enemy" type="CharacterBody2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("4_xpy5y")
+
+[node name="texture" type="AnimatedSprite2D" parent="enemy"]
+position = Vector2(791, 849)
+scale = Vector2(0.154091, 0.158636)
+sprite_frames = SubResource("SpriteFrames_wu2u5")
+animation = &"run"
+autoplay = "idle"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="enemy"]
+polygon = PackedVector2Array(803, 933, 785, 933, 785, 931, 778, 931, 780, 926, 771, 928, 760, 919, 757, 915, 750, 908, 750, 898, 761, 898, 772, 896, 786, 888, 786, 877, 790, 864, 794, 857, 817, 857, 827, 860, 835, 866, 834, 880, 825, 891, 815, 894, 795, 895, 795, 902, 805, 904, 808, 912, 814, 914, 822, 914, 823, 922, 821, 925)
+
+[node name="wall_detector" type="RayCast2D" parent="enemy"]
+position = Vector2(807, 882)
+target_position = Vector2(47, 0)
+collision_mask = 2
+
+[node name="hitbox" type="Area2D" parent="enemy"]
+position = Vector2(807, 843)
+collision_layer = 8
+script = ExtResource("6_wla8d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy/hitbox"]
+position = Vector2(-1, 12.75)
+shape = SubResource("RectangleShape2D_7iwmt")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(3, 14)
+collision_layer = 2
+physics_material_override = SubResource("PhysicsMaterial_pq6ja")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(954, 992)
+shape = SubResource("RectangleShape2D_88g8n")
+
+[node name="chao" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(957, 992)
+scale = Vector2(11.9875, 0.9)
+texture = ExtResource("2_nkses")
+
+[node name="mesa1" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(557, 904)
+scale = Vector2(0.204545, 0.173182)
+texture = ExtResource("5_unfos")
+
+[node name="mesa2" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(1226, 906.25)
+scale = Vector2(0.202273, 0.173864)
+texture = ExtResource("5_unfos")
+
+[node name="Collisionbanco1" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-1, 0)
+polygon = PackedVector2Array(354, 865, 354, 877, 393, 878, 395, 902, 380, 899, 381, 912, 369, 911, 370, 922, 433, 923, 436, 911, 421, 912, 422, 899, 408, 899, 409, 876, 448, 876, 451, 866)
+
+[node name="Collisionmesa1" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(396, 790, 396, 800, 409, 801, 409, 812, 502, 811, 503, 824, 531, 823, 531, 901, 516, 900, 517, 911, 503, 911, 503, 924, 571, 924, 570, 911, 556, 911, 556, 900, 544, 900, 544, 822, 571, 823, 569, 812, 665, 812, 666, 801, 679, 801, 680, 789, 652, 789, 652, 777, 585, 778, 585, 791, 488, 791, 489, 778, 422, 777, 423, 791)
+
+[node name="Collisionbanco2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(638, 866, 638, 878, 678, 877, 678, 900, 665, 900, 665, 912, 651, 912, 651, 923, 719, 923, 719, 912, 705, 912, 705, 900, 692, 900, 692, 877, 732, 877, 733, 866)
+
+[node name="Collisionbanco3" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(1026, 868, 1026, 879, 1066, 879, 1066, 903, 1053, 903, 1053, 914, 1039, 914, 1039, 925, 1106, 925, 1105, 914, 1093, 914, 1093, 903, 1079, 903, 1079, 879, 1120, 879, 1119, 868)
+
+[node name="Collisionmesa2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(1093, 780, 1093, 792, 1065, 792, 1065, 803, 1080, 803, 1080, 814, 1173, 814, 1173, 826, 1200, 825, 1200, 902, 1186, 902, 1186, 913, 1172, 914, 1172, 925, 1239, 925, 1239, 914, 1226, 914, 1226, 902, 1213, 902, 1213, 826, 1239, 826, 1239, 815, 1333, 815, 1333, 802, 1346, 802, 1346, 791, 1319, 791, 1319, 780, 1252, 780, 1252, 792, 1158, 791, 1159, 779)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(1306, 867, 1306, 879, 1346, 880, 1346, 903, 1332, 903, 1332, 914, 1319, 914, 1319, 926, 1387, 926, 1386, 914, 1373, 914, 1373, 902, 1359, 902, 1359, 880, 1399, 879, 1399, 868)
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(1780, 835)
+scale = Vector2(0.646484, 0.664063)
+texture = ExtResource("3_agoy5")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(937, 188)
+scale = Vector2(3.06907, 2.90117)
+texture = ExtResource("4_atme4")
+
+[connection signal="body_entered" from="enemy/hitbox" to="enemy/hitbox" method="_on_body_entered"]
