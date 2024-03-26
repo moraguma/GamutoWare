@@ -1,24 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=5 format=3 uid="uid://bi0ahd7cv37i6"]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/Control.gd" id="1_8ao43"]
-[ext_resource type="SpriteFrames" uid="uid://bu21pspwtdomt" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/watery.tres" id="2_bqwqx"]
 [ext_resource type="Texture2D" uid="uid://b5ed1n5o5u3hm" path="res://microjogos/2024S1/projeto_felipe_onorio/recursos/placeholder_cursor_32x32.png" id="2_rqx57"]
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/cursor_area.gd" id="3_lmjue"]
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/area_cell_0.gd" id="5_n4jon"]
-
-[sub_resource type="GDScript" id="GDScript_3hmj7"]
-script/source = "extends \"res://microjogos/2024S1/projeto_felipe_onorio/cenas/area_cell_0.gd\"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-"
 
 [node name="Main" type="Node2D"]
 
@@ -31,7 +16,7 @@ script = ExtResource("1_8ao43")
 
 [node name="area_cell_0" type="Area2D" parent="." node_paths=PackedStringArray("right_neighbor", "down_neighbor")]
 position = Vector2(703, 291)
-script = SubResource("GDScript_3hmj7")
+script = ExtResource("5_n4jon")
 right_neighbor = NodePath("../area_cell_1")
 down_neighbor = NodePath("../area_cell_3")
 
@@ -40,8 +25,7 @@ down_neighbor = NodePath("../area_cell_3")
 [node name="animations" type="AnimatedSprite2D" parent="area_cell_0/Cell_0_hitbox"]
 position = Vector2(-2, -5)
 scale = Vector2(5, 5)
-sprite_frames = ExtResource("2_bqwqx")
-frame_progress = 0.701909
+speed_scale = 4.0
 
 [node name="area_cell_1" type="Area2D" parent="." node_paths=PackedStringArray("right_neighbor", "left_neighbor", "down_neighbor")]
 position = Vector2(894, 288)
@@ -53,10 +37,9 @@ down_neighbor = NodePath("../area_cell_4")
 [node name="Cell_0_hitbox" type="CollisionShape2D" parent="area_cell_1"]
 
 [node name="animations" type="AnimatedSprite2D" parent="area_cell_1/Cell_0_hitbox"]
-position = Vector2(-203, -27)
-scale = Vector2(25, 25)
-sprite_frames = ExtResource("2_bqwqx")
-frame_progress = 0.5567
+position = Vector2(1.99999, -2.00001)
+scale = Vector2(5, 5)
+speed_scale = 4.0
 
 [node name="area_cell_2" type="Area2D" parent="." node_paths=PackedStringArray("left_neighbor", "down_neighbor")]
 position = Vector2(1076, 288)
@@ -67,10 +50,9 @@ down_neighbor = NodePath("../area_cell_5")
 [node name="Cell_0_hitbox" type="CollisionShape2D" parent="area_cell_2"]
 
 [node name="animations" type="AnimatedSprite2D" parent="area_cell_2/Cell_0_hitbox"]
-position = Vector2(-203, -27)
-scale = Vector2(25, 25)
-sprite_frames = ExtResource("2_bqwqx")
-frame_progress = 0.5567
+position = Vector2(-1.52588e-05, -1.90735e-06)
+scale = Vector2(5, 5)
+speed_scale = 4.0
 
 [node name="area_cell_3" type="Area2D" parent="." node_paths=PackedStringArray("right_neighbor", "up_neighbor", "down_neighbor")]
 position = Vector2(705, 480)
@@ -82,10 +64,9 @@ down_neighbor = NodePath("../area_cell_6")
 [node name="Cell_0_hitbox" type="CollisionShape2D" parent="area_cell_3"]
 
 [node name="animations" type="AnimatedSprite2D" parent="area_cell_3/Cell_0_hitbox"]
-position = Vector2(-203, -27)
-scale = Vector2(25, 25)
-sprite_frames = ExtResource("2_bqwqx")
-frame_progress = 0.5567
+position = Vector2(-5.00002, -5)
+scale = Vector2(5, 5)
+speed_scale = 4.0
 
 [node name="area_cell_4" type="Area2D" parent="." node_paths=PackedStringArray("right_neighbor", "left_neighbor", "up_neighbor", "down_neighbor")]
 position = Vector2(896, 477)
@@ -98,10 +79,9 @@ down_neighbor = NodePath("../area_cell_7")
 [node name="Cell_0_hitbox" type="CollisionShape2D" parent="area_cell_4"]
 
 [node name="animations" type="AnimatedSprite2D" parent="area_cell_4/Cell_0_hitbox"]
-position = Vector2(-203, -27)
-scale = Vector2(25, 25)
-sprite_frames = ExtResource("2_bqwqx")
-frame_progress = 0.5567
+position = Vector2(-6.00002, -5)
+scale = Vector2(5, 5)
+speed_scale = 4.0
 
 [node name="area_cell_5" type="Area2D" parent="." node_paths=PackedStringArray("left_neighbor", "up_neighbor", "down_neighbor")]
 position = Vector2(1078, 477)
@@ -113,10 +93,9 @@ down_neighbor = NodePath("../area_cell_8")
 [node name="Cell_0_hitbox" type="CollisionShape2D" parent="area_cell_5"]
 
 [node name="animations" type="AnimatedSprite2D" parent="area_cell_5/Cell_0_hitbox"]
-position = Vector2(-203, -27)
-scale = Vector2(25, 25)
-sprite_frames = ExtResource("2_bqwqx")
-frame_progress = 0.5567
+position = Vector2(-1.52588e-05, 2)
+scale = Vector2(5, 5)
+speed_scale = 4.0
 
 [node name="area_cell_6" type="Area2D" parent="." node_paths=PackedStringArray("right_neighbor", "up_neighbor")]
 position = Vector2(707, 669)
@@ -127,10 +106,9 @@ up_neighbor = NodePath("../area_cell_3")
 [node name="Cell_0_hitbox" type="CollisionShape2D" parent="area_cell_6"]
 
 [node name="animations" type="AnimatedSprite2D" parent="area_cell_6/Cell_0_hitbox"]
-position = Vector2(-203, -27)
-scale = Vector2(25, 25)
-sprite_frames = ExtResource("2_bqwqx")
-frame_progress = 0.5567
+position = Vector2(-1.00002, -3)
+scale = Vector2(5, 5)
+speed_scale = 4.0
 
 [node name="area_cell_7" type="Area2D" parent="." node_paths=PackedStringArray("right_neighbor", "left_neighbor", "up_neighbor")]
 position = Vector2(898, 666)
@@ -142,10 +120,9 @@ up_neighbor = NodePath("../area_cell_4")
 [node name="Cell_0_hitbox" type="CollisionShape2D" parent="area_cell_7"]
 
 [node name="animations" type="AnimatedSprite2D" parent="area_cell_7/Cell_0_hitbox"]
-position = Vector2(-203, -27)
-scale = Vector2(25, 25)
-sprite_frames = ExtResource("2_bqwqx")
-frame_progress = 0.5567
+position = Vector2(1.99998, -1.90735e-06)
+scale = Vector2(5, 5)
+speed_scale = 4.0
 
 [node name="area_cell_8" type="Area2D" parent="." node_paths=PackedStringArray("left_neighbor", "up_neighbor")]
 position = Vector2(1080, 666)
@@ -156,10 +133,9 @@ up_neighbor = NodePath("../area_cell_5")
 [node name="Cell_0_hitbox" type="CollisionShape2D" parent="area_cell_8"]
 
 [node name="animations" type="AnimatedSprite2D" parent="area_cell_8/Cell_0_hitbox"]
-position = Vector2(-203, -27)
-scale = Vector2(25, 25)
-sprite_frames = ExtResource("2_bqwqx")
-frame_progress = 0.5567
+position = Vector2(-6.00002, -5)
+scale = Vector2(5, 5)
+speed_scale = 4.0
 
 [node name="cursor_area" type="Area2D" parent="." node_paths=PackedStringArray("current_cell")]
 position = Vector2(1359, 421)
@@ -178,3 +154,4 @@ texture = ExtResource("2_rqx57")
 [connection signal="space_pressed" from="Control" to="cursor_area" method="_on_control_space_pressed"]
 [connection signal="up_pressed" from="Control" to="cursor_area" method="_on_control_up_pressed"]
 [connection signal="xxxx" from="Control" to="cursor_area" method="_on_control_xxxx"]
+[connection signal="activate_cell" from="cursor_area" to="area_cell_0" method="_on_cursor_area_activate_cell"]
