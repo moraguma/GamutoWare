@@ -1,0 +1,105 @@
+[gd_scene load_steps=5 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="Texture2D" uid="uid://bncdfg5hsd7l" path="res://microjogos/2024S1/projeto_felipe_onorio/recursos/placeholder_B_32x32.png" id="1_t7i6h"]
+[ext_resource type="Texture2D" uid="uid://b5ed1n5o5u3hm" path="res://microjogos/2024S1/projeto_felipe_onorio/recursos/placeholder_cursor_32x32.png" id="2_rqx57"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hoh22"]
+
+[sub_resource type="GDScript" id="GDScript_305yx"]
+script/source = "extends CharacterBody2D
+
+
+const SPEED = 300.0
+const JUMP_VELOCITY = -400.0
+
+# Get the gravity from the project settings to be synced with RigidBody nodes.
+var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
+
+#current_cell = 0
+
+#func _ready():	#position = get_node(\"/root/Main/Cursor\").get_global_position()
+
+func _physics_process(delta):
+	# Add the gravity.
+	#if not is_on_floor():
+		#velocity.y +=  delta
+
+	# Handle jump.
+	#if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
+		#velocity.y = JUMP_VELOCITY
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	#var direction = Input.get_axis(\"ui_left\", \"ui_right\")
+	#if direction:
+		#position = get_node(\"/root/Main/Cursor\").get_global_position()
+	#else:
+		#velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	#move_and_slide()
+"
+
+[node name="Main" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_hoh22")
+
+[node name="Cell_0" type="Sprite2D" parent="."]
+position = Vector2(713, 292)
+scale = Vector2(5, 5)
+texture = ExtResource("1_t7i6h")
+
+[node name="Cell_1" type="Sprite2D" parent="."]
+position = Vector2(883, 295)
+scale = Vector2(5, 5)
+texture = ExtResource("1_t7i6h")
+
+[node name="Cell_2" type="Sprite2D" parent="."]
+position = Vector2(1052, 295)
+scale = Vector2(5, 5)
+texture = ExtResource("1_t7i6h")
+
+[node name="Cell_3" type="Sprite2D" parent="."]
+position = Vector2(706, 468)
+scale = Vector2(5, 5)
+texture = ExtResource("1_t7i6h")
+
+[node name="Cell_4" type="Sprite2D" parent="."]
+position = Vector2(876, 468)
+scale = Vector2(5, 5)
+texture = ExtResource("1_t7i6h")
+
+[node name="Cell_5" type="Sprite2D" parent="."]
+position = Vector2(1052, 466)
+scale = Vector2(5, 5)
+texture = ExtResource("1_t7i6h")
+
+[node name="Cell_6" type="Sprite2D" parent="."]
+position = Vector2(705, 641)
+scale = Vector2(5, 5)
+texture = ExtResource("1_t7i6h")
+
+[node name="Cell_7" type="Sprite2D" parent="."]
+position = Vector2(878, 643)
+scale = Vector2(5, 5)
+texture = ExtResource("1_t7i6h")
+
+[node name="Cell_8" type="Sprite2D" parent="."]
+position = Vector2(1046, 639)
+scale = Vector2(5, 5)
+texture = ExtResource("1_t7i6h")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="zzzzzz" type="CharacterBody2D" parent="."]
+script = SubResource("GDScript_305yx")
+
+[node name="Cursor" type="CollisionShape2D" parent="."]
+scale = Vector2(5, 5)
+
+[node name="CursorSprite" type="Sprite2D" parent="Cursor"]
+texture = ExtResource("2_rqx57")
