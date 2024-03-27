@@ -6,6 +6,8 @@ var to_call
 
 var button
 
+@onready var cursor = $GMTCursor
+
 
 func load_button_ref():
 	if button == null:
@@ -38,3 +40,11 @@ func load_button(active, path, to_call):
 		button.connect("pressed",Callable(to_call,"detail").bind(path, button))
 	else:
 		button.connect("pressed",Callable(to_call,"fail_detail"))
+
+
+func _on_focus_entered() -> void:
+	cursor.show()
+
+
+func _on_focus_exited() -> void:
+	cursor.hide()

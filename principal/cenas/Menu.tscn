@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dov2m2kbxje2j"]
+[gd_scene load_steps=13 format=3 uid="uid://dov2m2kbxje2j"]
 
 [ext_resource type="Texture2D" uid="uid://ja6urlsch5m7" path="res://principal/recursos/sprites/MenuBase.png" id="1"]
 [ext_resource type="Script" path="res://principal/cenas/scripts/Logo.gd" id="2"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://principal/cenas/scripts/Menu.gd" id="7"]
 [ext_resource type="Theme" uid="uid://cb4tlwb81nq48" path="res://principal/recursos/themes/TitleTheme.tres" id="7_6ckci"]
 [ext_resource type="Script" path="res://principal/cenas/scripts/TranslationSetButton.gd" id="8"]
+[ext_resource type="FontFile" uid="uid://dv05ux65ppls5" path="res://principal/recursos/fonts/stop_bullying/Stop Bullying.ttf" id="8_ldr7y"]
 [ext_resource type="Theme" uid="uid://dt5djib7huxvm" path="res://principal/recursos/themes/ButtonTheme.tres" id="8_sosii"]
 [ext_resource type="Material" uid="uid://bfefepnpbds1x" path="res://principal/recursos/shaders/Diamond.tres" id="9"]
 
@@ -52,6 +53,7 @@ offset_right = 697.25
 offset_bottom = 401.0
 theme = ExtResource("7_6ckci")
 theme_override_constants/outline_size = 96
+theme_override_fonts/normal_font = ExtResource("8_ldr7y")
 theme_override_font_sizes/normal_font_size = 128
 bbcode_enabled = true
 text = "[center][shake level=30]GAMUTOWARE"
