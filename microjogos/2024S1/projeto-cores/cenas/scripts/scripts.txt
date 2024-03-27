@@ -1,0 +1,14 @@
+
+var R1 = float randf ( )
+var G1 = float randf ( )
+var B1 = float randf ( )
+var R2 = float randf ( )
+var G2 = float randf ( )
+var B2 = float randf ( )
+
+	print(R1)
+	print(G1)
+	print(B1)
+	print(R2)
+	print(G2)
+	print(B2)

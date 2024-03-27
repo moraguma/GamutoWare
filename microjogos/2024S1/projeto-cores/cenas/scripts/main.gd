@@ -8,8 +8,8 @@ signal lose
 # tela 1920x1080, que é padrão para monitores full HD. Caso você queira uma resolução menor para 
 # atingir uma estética mais pixelada, você pode mudar estes números para qualquer outra resolução 
 # 16:9
-const WIDTH = 1920
-const HEIGHT = 1080
+const WIDTH = 320
+const HEIGHT = 180
 
 
 # --------------------------------------------------------------------------------------------------
@@ -22,9 +22,9 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
+			NotificationCenter.notify("ORDER THE COLORS!")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FACA ALGO!")
+			NotificationCenter.notify("ORDENE AS CORES!")
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
