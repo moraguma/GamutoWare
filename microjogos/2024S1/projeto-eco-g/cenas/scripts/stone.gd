@@ -10,5 +10,4 @@ func detected():
 	$Line2D.width = 10.0
 	$Timer.start()
 
-func _on_body_entered(body):
-	body.player_hit()
+
