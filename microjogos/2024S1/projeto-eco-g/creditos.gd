@@ -7,17 +7,17 @@ extends Resource
 
 
 # Título do seu jogo
-var title_pt = "Titulo em Portugues"
-var title_en = "Title in English"
+var title_pt = "Eco-G"
+var title_en = "Eco-G"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
-Criado por: [Seu nome!]
-
-Você pode preencher o resto deste campo com creditos de assets utilizados, links para sua redes sociais ou qualquer outro detalhe que ache relevante
+Criado por: [Andre Yuhji Terada]
+Instagram: @teyuhji
+Background: https://slashdashgamesstudio.itch.io/cave-background-assets
 """
 var credits_en = """
-Made by: [Your name!]
-
-Fill this space with credits to used assets, links to your social medias and whatever other details you think are important
+Made by: [Andre Yuhji Terada]
+Instagram: @teyuhji
+Background: https://slashdashgamesstudio.itch.io/cave-background-assets
 """

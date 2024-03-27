@@ -44,4 +44,5 @@ stream = ExtResource("7_mledt")
 volume_db = 5.012
 autoplay = true
 
+[connection signal="dead" from="Gamuto" to="." method="_on_gamuto_dead"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

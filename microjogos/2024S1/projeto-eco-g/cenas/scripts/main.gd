@@ -63,13 +63,19 @@ func my_method():
 
 # Chame esta função para registrar que o jogador venceu o jogo
 func register_win():
+	#get_tree().paused = true
 	emit_signal("win")
 
 
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
+	#get_tree().paused = true
 	emit_signal("lose")
 
 
 func _on_timer_timeout():
 	register_win()
+
+
+func _on_gamuto_dead():
+	register_lose()
