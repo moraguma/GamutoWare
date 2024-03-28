@@ -34,6 +34,7 @@ func _ready():
 			new_cover_button.load_cover(load(minigame_data[minigame]["cover"]))
 		else: 
 			new_cover_button.load_cover(LOCKED_COVER)
+			new_cover_button.get_node("Shadow").hide()
 		
 		minigames_container.add_child(new_cover_button)
 	
@@ -60,7 +61,7 @@ func _ready():
 	menu_button.focus_neighbor_top = menu_button.get_path_to(cover_buttons[len(cover_buttons) - 1].button)
 	menu_button.focus_neighbor_bottom = menu_button.get_path_to(cover_buttons[0].button)
 	
-	menu_button.grab_focus()
+	cover_buttons[0].button.grab_focus()
 
 
 func _input(event):
@@ -91,16 +92,3 @@ func detail(path, button):
 
 func fail_detail():
 	SoundController.play_sfx("damage")
-
-
-func back_to_covers():
-	block_menu = false
-	
-	SoundController.play_sfx("click")
-	
-	if last_focus != null:
-		last_focus.grab_focus()
-	else:
-		menu_button.grab_focus()
-	
-	aim_pos = MINIGAMES_POS
