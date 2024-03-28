@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dv05ux65ppls5"
-path="res://.godot/imported/Stop Bullying.ttf-192d71e09272a686044030a45dc2d05f.fontdata"
+uid="uid://b6lr2v1sw0uhu"
+path="res://.godot/imported/DeliusUnicase-Regular.ttf-cb3b19419f1f17fdb32f055564e43ea2.fontdata"
 
 [deps]
 
-source_file="res://principal/recursos/fonts/Stop Bullying.ttf"
-dest_files=["res://.godot/imported/Stop Bullying.ttf-192d71e09272a686044030a45dc2d05f.fontdata"]
+source_file="res://principal/recursos/fonts/Delius_Unicase/DeliusUnicase-Regular.ttf"
+dest_files=["res://.godot/imported/DeliusUnicase-Regular.ttf-cb3b19419f1f17fdb32f055564e43ea2.fontdata"]
 
 [params]
 

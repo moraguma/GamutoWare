@@ -1,12 +1,13 @@
 [gd_scene load_steps=10 format=3 uid="uid://b3q3an4syknyy"]
 
-[ext_resource type="FontFile" uid="uid://blcw2hkcbcxid" path="res://principal/recursos/fonts/Stop Bullying.otf" id="1"]
+[ext_resource type="FontFile" uid="uid://blcw2hkcbcxid" path="res://principal/recursos/fonts/stop_bullying/Stop Bullying.otf" id="1"]
 [ext_resource type="Texture2D" uid="uid://c2sgtas737d1o" path="res://principal/recursos/sprites/gamuxlogo.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://c2mwty1vwy3f4" path="res://principal/recursos/sprites/gamux.png" id="3"]
 [ext_resource type="Script" path="res://principal/cenas/scripts/Opening.gd" id="4"]
 
 [sub_resource type="FontFile" id="1"]
 fallbacks = Array[Font]([ExtResource("1")])
+multichannel_signed_distance_field = false
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0

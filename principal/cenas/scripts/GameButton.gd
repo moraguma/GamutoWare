@@ -8,8 +8,8 @@ const MinigameButton = preload("res://principal/cenas/MinigameButton.tscn")
 
 @onready var minigame_data = load("res://principal/recursos/data/Minigames.gd").new()
 
-@onready var minigame_button_container = $"../Checkboxes/MinigameButtons/VBoxContainer"
-@onready var filter_button_container = $"../Checkboxes/FilterButtons/VBoxContainer"
+@onready var minigame_button_container = $"../Clipper/Checkboxes/MinigameButtons/VBoxContainer"
+@onready var filter_button_container = $"../Clipper/Checkboxes/FilterButtons/VBoxContainer"
 @onready var menu_button = $"../Menu"
 
 var minigame_buttons

@@ -1,78 +1,9 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cb4tlwb81nq48"]
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cb4tlwb81nq48"]
 
-[ext_resource type="FontFile" uid="uid://dv05ux65ppls5" path="res://principal/recursos/fonts/Stop Bullying.ttf" id="1"]
-
-[sub_resource type="FontFile" id="1"]
-fallbacks = Array[Font]([ExtResource("1")])
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/48/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/64/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/72/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/96/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/128/0 = Vector2(0, 0)
-cache/0/48/0/ascent = 0.0
-cache/0/48/0/descent = 0.0
-cache/0/48/0/underline_position = 0.0
-cache/0/48/0/underline_thickness = 0.0
-cache/0/48/0/scale = 1.0
-cache/0/48/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/48/0/kerning_overrides/48/0 = Vector2(0, 0)
-cache/0/48/0/kerning_overrides/64/0 = Vector2(0, 0)
-cache/0/48/0/kerning_overrides/72/0 = Vector2(0, 0)
-cache/0/48/0/kerning_overrides/96/0 = Vector2(0, 0)
-cache/0/48/0/kerning_overrides/128/0 = Vector2(0, 0)
-cache/0/64/0/ascent = 0.0
-cache/0/64/0/descent = 0.0
-cache/0/64/0/underline_position = 0.0
-cache/0/64/0/underline_thickness = 0.0
-cache/0/64/0/scale = 1.0
-cache/0/64/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/64/0/kerning_overrides/48/0 = Vector2(0, 0)
-cache/0/64/0/kerning_overrides/64/0 = Vector2(0, 0)
-cache/0/64/0/kerning_overrides/72/0 = Vector2(0, 0)
-cache/0/64/0/kerning_overrides/96/0 = Vector2(0, 0)
-cache/0/64/0/kerning_overrides/128/0 = Vector2(0, 0)
-cache/0/72/0/ascent = 0.0
-cache/0/72/0/descent = 0.0
-cache/0/72/0/underline_position = 0.0
-cache/0/72/0/underline_thickness = 0.0
-cache/0/72/0/scale = 1.0
-cache/0/72/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/72/0/kerning_overrides/48/0 = Vector2(0, 0)
-cache/0/72/0/kerning_overrides/64/0 = Vector2(0, 0)
-cache/0/72/0/kerning_overrides/72/0 = Vector2(0, 0)
-cache/0/72/0/kerning_overrides/96/0 = Vector2(0, 0)
-cache/0/72/0/kerning_overrides/128/0 = Vector2(0, 0)
-cache/0/96/0/ascent = 0.0
-cache/0/96/0/descent = 0.0
-cache/0/96/0/underline_position = 0.0
-cache/0/96/0/underline_thickness = 0.0
-cache/0/96/0/scale = 1.0
-cache/0/96/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/96/0/kerning_overrides/48/0 = Vector2(0, 0)
-cache/0/96/0/kerning_overrides/64/0 = Vector2(0, 0)
-cache/0/96/0/kerning_overrides/72/0 = Vector2(0, 0)
-cache/0/96/0/kerning_overrides/96/0 = Vector2(0, 0)
-cache/0/96/0/kerning_overrides/128/0 = Vector2(0, 0)
-cache/0/128/0/ascent = 0.0
-cache/0/128/0/descent = 0.0
-cache/0/128/0/underline_position = 0.0
-cache/0/128/0/underline_thickness = 0.0
-cache/0/128/0/scale = 1.0
-cache/0/128/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/128/0/kerning_overrides/48/0 = Vector2(0, 0)
-cache/0/128/0/kerning_overrides/64/0 = Vector2(0, 0)
-cache/0/128/0/kerning_overrides/72/0 = Vector2(0, 0)
-cache/0/128/0/kerning_overrides/96/0 = Vector2(0, 0)
-cache/0/128/0/kerning_overrides/128/0 = Vector2(0, 0)
+[ext_resource type="FontFile" uid="uid://cvvv4ta4o2y3l" path="res://principal/recursos/fonts/Delius_Unicase/DeliusUnicase-Bold.ttf" id="1_ywgrd"]
 
 [resource]
-default_font = SubResource("1")
+default_font = ExtResource("1_ywgrd")
 default_font_size = 96
 RichTextLabel/colors/default_color = Color(0.952941, 0.913725, 0.976471, 1)
 RichTextLabel/colors/font_outline_color = Color(0.172549, 0.141176, 0.207843, 1)

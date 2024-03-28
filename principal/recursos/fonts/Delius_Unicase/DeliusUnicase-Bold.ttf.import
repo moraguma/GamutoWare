@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://c3fh6ttjgmf3k"
-path="res://.godot/imported/coolvetica compressed hv.otf-38b381a1ea56d65aa85a2eb08e29a2bd.fontdata"
+uid="uid://cvvv4ta4o2y3l"
+path="res://.godot/imported/DeliusUnicase-Bold.ttf-948d2e38b89ef722fabd0bd55ec689db.fontdata"
 
 [deps]
 
-source_file="res://principal/recursos/fonts/coolvetica compressed hv.otf"
-dest_files=["res://.godot/imported/coolvetica compressed hv.otf-38b381a1ea56d65aa85a2eb08e29a2bd.fontdata"]
+source_file="res://principal/recursos/fonts/Delius_Unicase/DeliusUnicase-Bold.ttf"
+dest_files=["res://.godot/imported/DeliusUnicase-Bold.ttf-948d2e38b89ef722fabd0bd55ec689db.fontdata"]
 
 [params]
 

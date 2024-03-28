@@ -1,140 +1,17 @@
-[gd_resource type="Theme" load_steps=12 format=3 uid="uid://dt5djib7huxvm"]
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://dt5djib7huxvm"]
 
-[ext_resource type="FontFile" uid="uid://blcw2hkcbcxid" path="res://principal/recursos/fonts/Stop Bullying.otf" id="1"]
 [ext_resource type="StyleBox" uid="uid://b6essgcuagn6o" path="res://principal/recursos/themes/ButtonStyleBox.tres" id="1_d4rdk"]
 [ext_resource type="Texture2D" uid="uid://cip186bal41rd" path="res://principal/recursos/sprites/toggle_checked.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://v1y6bapablah" path="res://principal/recursos/sprites/toggle_unchecked.png" id="3"]
+[ext_resource type="StyleBox" uid="uid://dkwl25lk173se" path="res://principal/recursos/themes/styleboxes/GrabberStyleBox.tres" id="4_exyc2"]
+[ext_resource type="StyleBox" uid="uid://c2o7dc56kybq0" path="res://principal/recursos/themes/styleboxes/GrabberHeldStyleBox.tres" id="5_u3vkt"]
+[ext_resource type="StyleBox" uid="uid://b2j4aj667r7sy" path="res://principal/recursos/themes/styleboxes/TransparentScrollStyleBox.tres" id="6_giv3g"]
+[ext_resource type="FontFile" uid="uid://cvvv4ta4o2y3l" path="res://principal/recursos/fonts/Delius_Unicase/DeliusUnicase-Bold.ttf" id="7_565ej"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7ltdf"]
 
-[sub_resource type="StyleBoxFlat" id="8"]
-bg_color = Color(0.952941, 0.913725, 0.976471, 1)
-border_color = Color(0.952941, 0.913725, 0.976471, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="10"]
-bg_color = Color(0.615686, 0, 1, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="11"]
-bg_color = Color(0.615686, 0, 1, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="9"]
-bg_color = Color(0.172549, 0.141176, 0.207843, 1)
-border_width_left = 10
-border_width_right = 10
-border_color = Color(0.172549, 0.141176, 0.207843, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
-[sub_resource type="StyleBoxFlat" id="12"]
-bg_color = Color(0.172549, 0.141176, 0.207843, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="FontFile" id="7"]
-fallbacks = Array[Font]([ExtResource("1")])
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/48/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/32/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/40/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/6/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/96/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/64/0 = Vector2(0, 0)
-cache/0/48/0/ascent = 0.0
-cache/0/48/0/descent = 0.0
-cache/0/48/0/underline_position = 0.0
-cache/0/48/0/underline_thickness = 0.0
-cache/0/48/0/scale = 1.0
-cache/0/48/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/48/0/kerning_overrides/48/0 = Vector2(0, 0)
-cache/0/48/0/kerning_overrides/32/0 = Vector2(0, 0)
-cache/0/48/0/kerning_overrides/40/0 = Vector2(0, 0)
-cache/0/48/0/kerning_overrides/6/0 = Vector2(0, 0)
-cache/0/48/0/kerning_overrides/96/0 = Vector2(0, 0)
-cache/0/48/0/kerning_overrides/64/0 = Vector2(0, 0)
-cache/0/32/0/ascent = 0.0
-cache/0/32/0/descent = 0.0
-cache/0/32/0/underline_position = 0.0
-cache/0/32/0/underline_thickness = 0.0
-cache/0/32/0/scale = 1.0
-cache/0/32/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/32/0/kerning_overrides/48/0 = Vector2(0, 0)
-cache/0/32/0/kerning_overrides/32/0 = Vector2(0, 0)
-cache/0/32/0/kerning_overrides/40/0 = Vector2(0, 0)
-cache/0/32/0/kerning_overrides/6/0 = Vector2(0, 0)
-cache/0/32/0/kerning_overrides/96/0 = Vector2(0, 0)
-cache/0/32/0/kerning_overrides/64/0 = Vector2(0, 0)
-cache/0/40/0/ascent = 0.0
-cache/0/40/0/descent = 0.0
-cache/0/40/0/underline_position = 0.0
-cache/0/40/0/underline_thickness = 0.0
-cache/0/40/0/scale = 1.0
-cache/0/40/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/40/0/kerning_overrides/48/0 = Vector2(0, 0)
-cache/0/40/0/kerning_overrides/32/0 = Vector2(0, 0)
-cache/0/40/0/kerning_overrides/40/0 = Vector2(0, 0)
-cache/0/40/0/kerning_overrides/6/0 = Vector2(0, 0)
-cache/0/40/0/kerning_overrides/96/0 = Vector2(0, 0)
-cache/0/40/0/kerning_overrides/64/0 = Vector2(0, 0)
-cache/0/6/0/ascent = 0.0
-cache/0/6/0/descent = 0.0
-cache/0/6/0/underline_position = 0.0
-cache/0/6/0/underline_thickness = 0.0
-cache/0/6/0/scale = 1.0
-cache/0/6/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/6/0/kerning_overrides/48/0 = Vector2(0, 0)
-cache/0/6/0/kerning_overrides/32/0 = Vector2(0, 0)
-cache/0/6/0/kerning_overrides/40/0 = Vector2(0, 0)
-cache/0/6/0/kerning_overrides/6/0 = Vector2(0, 0)
-cache/0/6/0/kerning_overrides/96/0 = Vector2(0, 0)
-cache/0/6/0/kerning_overrides/64/0 = Vector2(0, 0)
-cache/0/96/0/ascent = 0.0
-cache/0/96/0/descent = 0.0
-cache/0/96/0/underline_position = 0.0
-cache/0/96/0/underline_thickness = 0.0
-cache/0/96/0/scale = 1.0
-cache/0/96/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/96/0/kerning_overrides/48/0 = Vector2(0, 0)
-cache/0/96/0/kerning_overrides/32/0 = Vector2(0, 0)
-cache/0/96/0/kerning_overrides/40/0 = Vector2(0, 0)
-cache/0/96/0/kerning_overrides/6/0 = Vector2(0, 0)
-cache/0/96/0/kerning_overrides/96/0 = Vector2(0, 0)
-cache/0/96/0/kerning_overrides/64/0 = Vector2(0, 0)
-cache/0/64/0/ascent = 0.0
-cache/0/64/0/descent = 0.0
-cache/0/64/0/underline_position = 0.0
-cache/0/64/0/underline_thickness = 0.0
-cache/0/64/0/scale = 1.0
-cache/0/64/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/64/0/kerning_overrides/48/0 = Vector2(0, 0)
-cache/0/64/0/kerning_overrides/32/0 = Vector2(0, 0)
-cache/0/64/0/kerning_overrides/40/0 = Vector2(0, 0)
-cache/0/64/0/kerning_overrides/6/0 = Vector2(0, 0)
-cache/0/64/0/kerning_overrides/96/0 = Vector2(0, 0)
-cache/0/64/0/kerning_overrides/64/0 = Vector2(0, 0)
-
 [resource]
-default_font = SubResource("7")
+default_font = ExtResource("7_565ej")
 default_font_size = 48
 Button/colors/font_color = Color(0.952941, 0.913725, 0.976471, 1)
 Button/colors/font_color_focus = Color(0.615686, 0, 1, 1)
@@ -166,8 +43,8 @@ RichTextLabel/colors/font_outline_color = Color(0.172549, 0.141176, 0.207843, 1)
 RichTextLabel/constants/outline_size = 32
 RichTextLabel/font_sizes/normal_font_size = 40
 VBoxContainer/constants/separation = 55
-VScrollBar/styles/grabber = SubResource("8")
-VScrollBar/styles/grabber_highlight = SubResource("10")
-VScrollBar/styles/grabber_pressed = SubResource("11")
-VScrollBar/styles/scroll = SubResource("9")
-VScrollBar/styles/scroll_focus = SubResource("12")
+VScrollBar/styles/grabber = ExtResource("4_exyc2")
+VScrollBar/styles/grabber_highlight = ExtResource("5_u3vkt")
+VScrollBar/styles/grabber_pressed = ExtResource("4_exyc2")
+VScrollBar/styles/scroll = ExtResource("6_giv3g")
+VScrollBar/styles/scroll_focus = ExtResource("6_giv3g")

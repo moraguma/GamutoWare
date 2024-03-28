@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://p7pf30lbecuo"]
+
+[ext_resource type="Theme" uid="uid://dt5djib7huxvm" path="res://principal/recursos/themes/ButtonTheme.tres" id="1_3cs5r"]
+[ext_resource type="Theme" uid="uid://v3d547aawndh" path="res://principal/recursos/themes/BodyTheme.tres" id="2_8n24v"]
+
+[node name="Clipper" type="Control"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 8.0
+offset_top = 424.0
+offset_right = 1744.0
+offset_bottom = 928.0
+
+[node name="Checkboxes" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 24.0
+offset_right = 1336.0
+offset_bottom = 472.0
+theme = ExtResource("1_3cs5r")
+alignment = 1
+
+[node name="MinigameButtons" type="ScrollContainer" parent="Checkboxes"]
+clip_contents = false
+layout_mode = 2
+theme = ExtResource("2_8n24v")
+follow_focus = true
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Checkboxes/MinigameButtons"]
+layout_mode = 2
+theme = ExtResource("1_3cs5r")
+
+[node name="FilterButtons" type="ScrollContainer" parent="Checkboxes"]
+clip_contents = false
+layout_mode = 2
+theme = ExtResource("2_8n24v")
+follow_focus = true
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Checkboxes/FilterButtons"]
+layout_mode = 2
+theme = ExtResource("1_3cs5r")
