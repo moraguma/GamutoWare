@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxrknw7sgvapl"
-path="res://.godot/imported/Screenshot_20240324_163937-1.png-2.png.png-ad23cbfb33e87e219f5b555172b2bb09.ctex"
+uid="uid://dcpd20dqbx16n"
+path="res://.godot/imported/background_0 - Copia.png-0ace5caa46e93c9edb44d390cfa1f915.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/lari-sem-cafe/assets/lari/Screenshot_20240324_163937-1.png-2.png.png"
-dest_files=["res://.godot/imported/Screenshot_20240324_163937-1.png-2.png.png-ad23cbfb33e87e219f5b555172b2bb09.ctex"]
+source_file="res://microjogos/2024S1/lari-sem-cafe/assets/stringstar fields/background_0 - Copia.png"
+dest_files=["res://.godot/imported/background_0 - Copia.png-0ace5caa46e93c9edb44d390cfa1f915.ctex"]
 
 [params]
 

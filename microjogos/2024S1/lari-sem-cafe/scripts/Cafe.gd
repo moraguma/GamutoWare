@@ -12,14 +12,19 @@ func _process(delta):
 
 
 func _on_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	anim.play("gone")
+	if anim:
+		if anim.get_animation() != "gone":
+			anim.play("gone")
+			$"AudioStreamPlayer".play()
+			$"../Label".text = "WIN!"
+			$"../".register_win()
 	
 func _on_animated_sprite_2d_animation_finished():
 	queue_free()
+	$"../Player/AnimatedSprite2D".play("victory")
 
-func _on_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
-	queue_free()
-	$"../".register_win()
-
-func _on_area_entered(area):
-	queue_free()
+#func _on_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
+	#queue_free()
+#
+#func _on_area_entered(area):
+	#queue_free()
