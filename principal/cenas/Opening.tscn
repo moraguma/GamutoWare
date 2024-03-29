@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=3 uid="uid://b3q3an4syknyy"]
+[gd_scene load_steps=113 format=3 uid="uid://b3q3an4syknyy"]
 
 [ext_resource type="FontFile" uid="uid://blcw2hkcbcxid" path="res://principal/recursos/fonts/stop_bullying/Stop Bullying.otf" id="1"]
 [ext_resource type="Texture2D" uid="uid://c2sgtas737d1o" path="res://principal/recursos/sprites/gamuxlogo.png" id="2"]
@@ -183,19 +183,27 @@ script = ExtResource("1_a3vdj")
 tile_set = SubResource("TileSet_7uosf")
 format = 2
 layer_0/name = "ground"
-layer_0/tile_data = PackedInt32Array(1114109, 262144, 1, 1114110, 262144, 1, 1048578, 262144, 1, 1048579, 262144, 1, 1048580, 262144, 1, 1048581, 262144, 1, 1048582, 262144, 1, 1048583, 262144, 1, 1048584, 262144, 1, 1048585, 262144, 1, 1048586, 262144, 1, 1048587, 262144, 1, 1048588, 262144, 1, 1048589, 262144, 1, 1048590, 262144, 1, 1048591, 262144, 1, 1048592, 262144, 1, 1048593, 262144, 1, 1048594, 262144, 1, 1048595, 262144, 1, 1048596, 262144, 1, 1048597, 262144, 1, 1048598, 262144, 1, 1048599, 262144, 1, 1048600, 262144, 1, 1048601, 262144, 1, 1048602, 262144, 1, 1048603, 262144, 1, 1048604, 262144, 1, 1048605, 262144, 1, 1048606, 262144, 1, 1048607, 262144, 1, 1048608, 262144, 1, 1048612, 262144, 1, 1048613, 262144, 1, 1179645, 262144, 2, 1179646, 262144, 2, 1179647, 262144, 2, 1114112, 262144, 2, 1114113, 262144, 2, 1114114, 262144, 2, 1114115, 262144, 2, 1114116, 262144, 2, 1114117, 262144, 2, 1114118, 262144, 2, 1114119, 262144, 2, 1114120, 262144, 2, 1114121, 262144, 2, 1114122, 262144, 2, 1114123, 262144, 2, 1114124, 262144, 2, 1114125, 262144, 2, 1114126, 262144, 2, 1114127, 262144, 2, 1114128, 262144, 2, 1114129, 262144, 2, 1114130, 262144, 2, 1114131, 262144, 2, 1114132, 262144, 2, 1114133, 262144, 2, 1114134, 262144, 2, 1114135, 262144, 2, 1114136, 262144, 2, 1114137, 262144, 2, 1114138, 262144, 2, 1114139, 262144, 2, 1114140, 262144, 2, 1114141, 262144, 2, 1114142, 262144, 2, 1114143, 262144, 2, 1114144, 262144, 2, 1114145, 262144, 2, 1114146, 262144, 2, 1114147, 262144, 2, 1114148, 262144, 2, 1114149, 262144, 2, 1114111, 262144, 2, 1048576, 262144, 2, 1048577, 262144, 2, 1048611, 262144, 2, 1048610, 262144, 2, 1048609, 262144, 2, 1048575, 65536, 3, 983040, 262144, 1, 983041, 458752, 3, 983073, 65536, 3, 983074, 262144, 1, 983075, 458752, 3, 983043, 196609, 5, 917511, 327681, 1, 917541, 327681, 1, 983037, 327681, 1, 917534, 327681, 1, 917531, 327681, 1, 917508, 327681, 1, 917514, 65537, 1, 917528, 65537, 1, 983066, 196609, 5, 983048, 65537, 5, 983071, 65537, 5, 1048574, 196609, 5, 917539, 196609, 5, 983057, 917505, 3, 917510, 327681, 1, 917532, 327681, 1, 917515, 65537, 1, 917527, 65537, 1, 983062, 589825, 3, 983052, 65537, 5, 983053, 196609, 5, 720925, 655360, 3, 720924, 655360, 3, 720923, 655360, 3, 720922, 655360, 3, 720904, 786432, 3, 720903, 786432, 3, 720893, 786432, 3, 720892, 786432, 3, 655397, 786432, 3, 655398, 786432, 3, 720894, 851968, 3, 655396, 589824, 3, 720900, 786432, 3, 720901, 786432, 3, 720902, 786432, 3, 655375, 655360, 3, 655376, 655360, 3, 655377, 655360, 3, 655378, 655360, 3, 655379, 655360, 3, 655380, 851968, 3, 655374, 589824, 3, -1, 655360, 3, -65536, 655360, 3, -65535, 655360, 3, -65501, 655360, 3, -65502, 655360, 3, -65503, 655360, 3, -65504, 655360, 3, 393215, 655360, 3, 327680, 655360, 3, 327681, 655360, 3, 327682, 655360, 3, 327712, 655360, 3, 327713, 655360, 3, 327714, 655360, 3, 327715, 655360, 3, 327716, 851968, 3, 131078, 655360, 3, 131079, 655360, 3, 131080, 655360, 3, 131081, 655360, 3, -2, 589824, 3, 131077, 589824, 3, 393214, 589824, 3, 720899, 589824, 3, 720921, 589824, 3, 327711, 589824, 3, -65505, 589824, 3, -65534, 851968, 3, -65500, 851968, 3, 131082, 196608, 3, 327683, 851968, 3, 720905, 851968, 3, 720926, 851968, 3, 327694, 983040, 3, -196604, 983040, 3, -196579, 983040, 3, 524289, 983040, 3, 524321, 983040, 3, 65570, 983040, 3, 589829, 327681, 1, 524306, 327681, 1, 6, 327681, 1, -196574, 327681, 1, 655389, 983041, 1, 262179, 589825, 3, -131052, 4, 0, 65546, 196608, 1, 65547, 262144, 1, 65548, 262144, 1, 65549, 262144, 1, 65550, 262144, 1, 65551, 262144, 1, 65552, 262144, 1, 65553, 262144, 1, 65554, 262144, 1, 65555, 262144, 1, 65556, 262144, 1, 65557, 262144, 1, 65558, 262144, 1, 65559, 262144, 1, -65523, 65541, 0, 65560, 262144, 1, 65561, 327680, 1, 131083, 262144, 3, 131097, 327680, 3, 131096, 262144, 3, 131095, 262144, 3, 131094, 262144, 3, 131093, 262144, 3, 131092, 262144, 3, 131091, 262144, 3, 131090, 262144, 3, 131089, 262144, 3, 131088, 262144, 3, 131087, 262144, 3, 131086, 262144, 3, 131085, 262144, 3, 131084, 262144, 3, 196619, 393216, 4, 196620, 393216, 4, 196621, 393216, 4, 196622, 393216, 4, 196623, 393216, 4, 196624, 393216, 4, 196625, 393216, 4, 196626, 393216, 4, 196627, 393216, 4, 196628, 393216, 4, 196629, 393216, 4, 196630, 393216, 4, 196631, 393216, 4, 196632, 393216, 4, 196633, 458752, 4, 196618, 65536, 4, 196607, 983040, 3, 655366, 65542, 5, 327679, 65542, 5, -131071, 65542, 5, 262177, 65542, 5, 655386, 65542, 5, 983060, 65542, 5, 983054, 65542, 5, 917505, 196614, 5, 917537, 196614, 5, -131040, 65542, 5, 17, 65542, 5, 524296, 655360, 3, 524297, 655360, 3, 524298, 655360, 3, 524299, 655360, 3, 524311, 655360, 3, 524312, 655360, 3, 524313, 655360, 3, 524314, 655360, 3, 524295, 589824, 3, 524310, 589824, 3, 524300, 851968, 3, 524315, 851968, 3, 458761, 327682, 3, 458777, 327682, 3, 131098, 786432, 3, 131099, 851968, 3, -131072, 196609, 5, 262176, 196609, 5, -65537, 589825, 1, 196609, 65537, 1, 524325, 65537, 1, 65543, 196609, 5, -131037, 196609, 5)
+layer_0/tile_data = PackedInt32Array(1114109, 262144, 1, 1114110, 262144, 1, 1048578, 262144, 1, 1048579, 262144, 1, 1048580, 262144, 1, 1048581, 262144, 1, 1048582, 262144, 1, 1048583, 262144, 1, 1048584, 262144, 1, 1048585, 262144, 1, 1048586, 262144, 1, 1048587, 262144, 1, 1048588, 262144, 1, 1048589, 262144, 1, 1048590, 262144, 1, 1048591, 262144, 1, 1048592, 262144, 1, 1048593, 262144, 1, 1048594, 262144, 1, 1048595, 262144, 1, 1048596, 262144, 1, 1048597, 262144, 1, 1048598, 262144, 1, 1048599, 262144, 1, 1048600, 262144, 1, 1048601, 262144, 1, 1048602, 262144, 1, 1048603, 262144, 1, 1048604, 262144, 1, 1048605, 262144, 1, 1048606, 262144, 1, 1048607, 262144, 1, 1048608, 262144, 1, 1048612, 262144, 1, 1048613, 262144, 1, 1179645, 262144, 2, 1179646, 262144, 2, 1179647, 262144, 2, 1114112, 262144, 2, 1114113, 262144, 2, 1114114, 262144, 2, 1114115, 262144, 2, 1114116, 262144, 2, 1114117, 262144, 2, 1114118, 262144, 2, 1114119, 262144, 2, 1114120, 262144, 2, 1114121, 262144, 2, 1114122, 262144, 2, 1114123, 262144, 2, 1114124, 262144, 2, 1114125, 262144, 2, 1114126, 262144, 2, 1114127, 262144, 2, 1114128, 262144, 2, 1114129, 262144, 2, 1114130, 262144, 2, 1114131, 262144, 2, 1114132, 262144, 2, 1114133, 262144, 2, 1114134, 262144, 2, 1114135, 262144, 2, 1114136, 262144, 2, 1114137, 262144, 2, 1114138, 262144, 2, 1114139, 262144, 2, 1114140, 262144, 2, 1114141, 262144, 2, 1114142, 262144, 2, 1114143, 262144, 2, 1114144, 262144, 2, 1114145, 262144, 2, 1114146, 262144, 2, 1114147, 262144, 2, 1114148, 262144, 2, 1114149, 262144, 2, 1114111, 262144, 2, 1048576, 262144, 2, 1048577, 262144, 2, 1048611, 262144, 2, 1048610, 262144, 2, 1048609, 262144, 2, 1048575, 65536, 3, 983040, 262144, 1, 983041, 458752, 3, 983073, 65536, 3, 983074, 262144, 1, 983075, 458752, 3, 983043, 196609, 5, 917511, 327681, 1, 917541, 327681, 1, 983037, 327681, 1, 917531, 327681, 1, 983066, 196609, 5, 1048574, 196609, 5, 917539, 196609, 5, 983057, 917505, 3, 917515, 65537, 1, 917527, 65537, 1, 983062, 589825, 3, 983052, 65537, 5, 983053, 196609, 5, 720925, 655360, 3, 720924, 655360, 3, 720923, 655360, 3, 720922, 655360, 3, 720904, 786432, 3, 720903, 786432, 3, 720893, 786432, 3, 720892, 786432, 3, 655397, 786432, 3, 655398, 786432, 3, 720894, 851968, 3, 655396, 589824, 3, 720900, 786432, 3, 720901, 786432, 3, 720902, 786432, 3, 655375, 655360, 3, 655376, 655360, 3, 655377, 655360, 3, 655378, 655360, 3, 655379, 655360, 3, 655380, 851968, 3, 655374, 589824, 3, -1, 655360, 3, -65536, 655360, 3, -65535, 655360, 3, -65501, 655360, 3, -65502, 655360, 3, -65503, 655360, 3, -65504, 655360, 3, 393215, 655360, 3, 327680, 655360, 3, 327681, 655360, 3, 327682, 655360, 3, 327712, 655360, 3, 327713, 655360, 3, 327714, 655360, 3, 327715, 655360, 3, 327716, 851968, 3, 131078, 655360, 3, 131079, 655360, 3, 131080, 655360, 3, 131081, 655360, 3, -2, 589824, 3, 131077, 589824, 3, 393214, 589824, 3, 720899, 589824, 3, 720921, 589824, 3, 327711, 589824, 3, -65505, 589824, 3, -65534, 851968, 3, -65500, 851968, 3, 131082, 196608, 3, 327683, 851968, 3, 720905, 851968, 3, 720926, 851968, 3, 327694, 983040, 3, -196604, 983040, 3, -196579, 983040, 3, 524289, 983040, 3, 524321, 983040, 3, 65570, 983040, 3, 589829, 327681, 1, 6, 327681, 1, -196574, 327681, 1, 655389, 983041, 1, 262179, 589825, 3, -131052, 4, 0, 65546, 196608, 1, 65547, 262144, 1, 65548, 262144, 1, 65549, 262144, 1, 65550, 262144, 1, 65551, 262144, 1, 65552, 262144, 1, 65553, 262144, 1, 65554, 262144, 1, 65555, 262144, 1, 65556, 262144, 1, 65557, 262144, 1, 65558, 262144, 1, 65559, 262144, 1, -65523, 65541, 0, 65560, 262144, 1, 65561, 327680, 1, 131083, 262144, 3, 131097, 327680, 3, 131096, 262144, 3, 131095, 262144, 3, 131094, 262144, 3, 131093, 262144, 3, 131092, 262144, 3, 131091, 262144, 3, 131090, 262144, 3, 131089, 262144, 3, 131088, 262144, 3, 131087, 262144, 3, 131086, 262144, 3, 131085, 262144, 3, 131084, 262144, 3, 196619, 393216, 4, 196620, 393216, 4, 196621, 393216, 4, 196622, 393216, 4, 196623, 393216, 4, 196624, 393216, 4, 196625, 393216, 4, 196626, 393216, 4, 196627, 393216, 4, 196628, 393216, 4, 196629, 393216, 4, 196630, 393216, 4, 196631, 393216, 4, 196632, 393216, 4, 196633, 458752, 4, 196618, 65536, 4, 196607, 983040, 3, 655366, 65542, 5, 327679, 65542, 5, -131071, 65542, 5, 262177, 65542, 5, 655386, 65542, 5, 983060, 65542, 5, 983054, 65542, 5, 917505, 196614, 5, 917537, 196614, 5, -131040, 65542, 5, 17, 65542, 5, 524296, 655360, 3, 524297, 655360, 3, 524298, 655360, 3, 524299, 655360, 3, 524311, 655360, 3, 524312, 655360, 3, 524313, 655360, 3, 524314, 655360, 3, 524295, 589824, 3, 524310, 589824, 3, 524300, 851968, 3, 524315, 851968, 3, 458761, 327682, 3, 458777, 327682, 3, 131098, 786432, 3, 131099, 851968, 3, -131072, 196609, 5, 262176, 196609, 5, -65537, 589825, 1, 196609, 65537, 1, 524325, 65537, 1, 65543, 196609, 5, -131037, 196609, 5, 917504, 10, 0, 917538, 10, 0, 524304, 327681, 1)
 layer_1/name = "decorations"
 layer_1/tile_data = PackedInt32Array()
 
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_m1rrw")
+offset_left = 190.0
+offset_top = -86.0
+offset_right = 230.0
+offset_bottom = -46.0
+scale = Vector2(2.5, 2.5)
+
 [node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(443, 79)
+position = Vector2(440, 20)
 script = ExtResource("1_eiv4f")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 position = Vector2(113, 133)
 sprite_frames = SubResource("SpriteFrames_l6apg")
-animation = &"idle"
+animation = &"jump"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
@@ -205,26 +213,44 @@ shape = SubResource("CapsuleShape2D_gugre")
 [node name="animator" type="AnimationPlayer" parent="Player"]
 
 [node name="cafe" type="Area2D" parent="."]
-position = Vector2(225, -35)
+position = Vector2(232, -30)
 collision_layer = 2
 script = ExtResource("29_iycmo")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="cafe"]
-texture_filter = 1
-position = Vector2(0, -3.8147e-06)
-scale = Vector2(0.554297, 0.529297)
-sprite_frames = SubResource("SpriteFrames_ejhqu")
-animation = &"idle"
-autoplay = "idle"
-frame_progress = 0.201644
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cafe"]
 position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_65jkh")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="cafe"]
+texture_filter = 3
+sprite_frames = SubResource("SpriteFrames_a68bw")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="cafe"]
+stream = ExtResource("26_ndst3")
+
+[node name="sheep" type="Area2D" parent="."]
+position = Vector2(308, 152)
+script = ExtResource("38_af4xm")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sheep"]
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_hh0tf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="sheep"]
+position = Vector2(5, 0)
+sprite_frames = SubResource("SpriteFrames_b5qkm")
+autoplay = "default"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="sheep"]
+stream = ExtResource("36_o4vuh")
+
 [node name="Lari2" type="Node2D" parent="."]
+position = Vector2(2, 0)
 script = ExtResource("17_8a2xr")
-speed = 140
+speed = 135
 metadata/_edit_group_ = true
 
 [node name="Path2D" type="Path2D" parent="Lari2"]
@@ -239,20 +265,21 @@ loop = false
 [node name="AnimatedSprite2DLari" type="AnimatedSprite2D" parent="Lari2/Path2D/PathFollow2D"]
 position = Vector2(-1.83563, 1.27682)
 rotation = 1.42664
-scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_dkko8")
 animation = &"run"
+autoplay = "run"
 
 [node name="Area2D" type="Area2D" parent="Lari2/Path2D/PathFollow2D/AnimatedSprite2DLari"]
 position = Vector2(-0.999882, -2.00003)
 rotation = -1.42664
-scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lari2/Path2D/PathFollow2D/AnimatedSprite2DLari/Area2D"]
 position = Vector2(226.625, -32.8971)
 rotation = 1.42664
-scale = Vector2(1, 1)
 shape = SubResource("CircleShape2D_11hu4")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Lari2"]
+stream = ExtResource("43_km08h")
 
 [node name="Walls" type="StaticBody2D" parent="."]
 position = Vector2(277, 271)
@@ -285,26 +312,36 @@ position = Vector2(214, 192)
 motion_mirroring = Vector2(432, 100)
 
 [node name="Sprite2D" type="Sprite2D" parent="BG/5"]
-position = Vector2(0, -36)
+visible = false
+position = Vector2(-1, -60)
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("12_eod7a")
+texture = ExtResource("41_60yur")
+
+[node name="bg" type="AnimatedSprite2D" parent="BG/5"]
+position = Vector2(105, -61.5)
+scale = Vector2(2.24306, 1.45)
+sprite_frames = SubResource("SpriteFrames_a2rlo")
+animation = &"disco"
+autoplay = "default"
 
 [node name="4" type="ParallaxLayer" parent="BG"]
 position = Vector2(214, 192)
 motion_mirroring = Vector2(432, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="BG/4"]
+material = SubResource("ShaderMaterial_cqpuo")
+position = Vector2(-9, 13)
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("13_4gkl2")
+texture = ExtResource("43_4p1g7")
 
 [node name="3" type="ParallaxLayer" parent="BG"]
 position = Vector2(214, 192)
-motion_mirroring = Vector2(432, 100)
+motion_mirroring = Vector2(432, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="BG/3"]
 material = SubResource("ShaderMaterial_6e4ct")
-position = Vector2(-8, -63)
-scale = Vector2(1.5, 1.5)
+position = Vector2(217, -63)
+scale = Vector2(3.00694, 1.5)
 texture = ExtResource("14_0kuas")
 
 [node name="2" type="ParallaxLayer" parent="BG"]
@@ -312,6 +349,7 @@ position = Vector2(214, 192)
 motion_mirroring = Vector2(432, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="BG/2"]
+position = Vector2(-33, 41)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("15_xsg7x")
 
@@ -320,8 +358,10 @@ position = Vector2(214, 192)
 motion_mirroring = Vector2(432, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="BG/1"]
-scale = Vector2(1.5, 1.5)
+position = Vector2(-28, 33)
+scale = Vector2(1.7, 1.7)
 texture = ExtResource("16_3012k")
+flip_h = true
 
 [node name="PlacaIc" type="Sprite2D" parent="."]
 position = Vector2(400.625, -3.1875)
@@ -329,23 +369,21 @@ scale = Vector2(0.0628787, 0.062604)
 texture = ExtResource("7_vxtk6")
 
 [node name="Label" type="Label" parent="."]
-texture_filter = 3
-material = SubResource("CanvasItemMaterial_kcjm8")
-offset_left = 254.0
-offset_top = 69.0
-offset_right = 394.0
-offset_bottom = 112.0
+texture_filter = 1
+offset_left = 274.0
+offset_top = 78.0
+offset_right = 541.0
+offset_bottom = 162.0
+scale = Vector2(0.4, 0.4)
 text = "Pegue o Café do IC 
 antes da Lari!"
 label_settings = SubResource("LabelSettings_pb40f")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(3, -27)
-scale = Vector2(0.734375, 0.6875)
-sprite_frames = SubResource("SpriteFrames_puwbt")
-autoplay = "default"
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("47_dqlrs")
+autoplay = true
 
 [connection signal="area_entered" from="cafe" to="cafe" method="_on_area_entered"]
 [connection signal="area_shape_entered" from="cafe" to="cafe" method="_on_area_shape_entered"]
@@ -353,3 +391,4 @@ autoplay = "default"
 [connection signal="body_shape_entered" from="cafe" to="cafe" method="_on_body_shape_entered"]
 [connection signal="child_entered_tree" from="cafe" to="cafe" method="_on_child_entered_tree"]
 [connection signal="animation_finished" from="cafe/AnimatedSprite2D" to="cafe" method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_shape_entered" from="sheep" to="sheep" method="_on_body_shape_entered"]

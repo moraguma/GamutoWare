@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2nn5nmyudn2r"
-path="res://.godot/imported/Screenshot_20240324_163937-1.png-1.png.png-4e95e7105356ff62bf1fe3f1b179f32f.ctex"
+uid="uid://il0dj787inw8"
+path="res://.godot/imported/sheep2.png-effec05ee0ec6903c78257045f95d13d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/lari-sem-cafe/assets/lari/Screenshot_20240324_163937-1.png-1.png.png"
-dest_files=["res://.godot/imported/Screenshot_20240324_163937-1.png-1.png.png-4e95e7105356ff62bf1fe3f1b179f32f.ctex"]
+source_file="res://microjogos/2024S1/lari-sem-cafe/assets/lari/sheep2.png"
+dest_files=["res://.godot/imported/sheep2.png-effec05ee0ec6903c78257045f95d13d.ctex"]
 
 [params]
 

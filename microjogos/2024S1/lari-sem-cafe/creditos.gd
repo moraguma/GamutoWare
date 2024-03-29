@@ -7,17 +7,18 @@ extends Resource
 
 
 # Título do seu jogo
-var title_pt = "Lista de Compras"
-var title_en = "Shopping list"
+var title_pt = "Lari Sem Café"
+var title_en = "Lari Without Coffee"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
-Criado por: [Yago Eizo Yonemura]
+Criado por: Milena Furuta Shishito
+Algumas pixel arts foram feitas por: Gabriela Andrade Taniguchi
 
-Você pode preencher o resto deste campo com creditos de assets utilizados, links para sua redes sociais ou qualquer outro detalhe que ache relevante
-"""
-var credits_en = """https://www.postermywall.com/index.php/art/template/d7dfa26f8c8c759652e2521f0ecd24eb/yellow-notebook-paper-background-design-template
-Made by: [Yago Eizo Yonemura]
-
-Fill this space with credits to used assets, links to your social medias and whatever other details you think are important
+Assets:
+	https://grafxkid.itch.io/
+	https://trixelized.itch.io/starstring-fields?download
+	https://sfxr.me/#34T6PkmX5RjGt3Z17u5uDvRK3cJ1Vh1eaQsFAXBjvxHr8EY9S6zvNLhPgoLQn1GbYZ1B5W1swXU6Q9U9HTg1CGFYR7kUt7TYquL1gjx4uzS2UqL6z1UiKhPYb
+	https://mixkit.co/free-stock-music/tag/chill/
+	
 """
