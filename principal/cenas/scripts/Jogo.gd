@@ -72,7 +72,7 @@ func load_icons():
 
 func load_microgames():
 	for i in range(len(microgame_paths)):
-		microgame_dict[microgame_paths[i]] = load(microgame_paths[i])
+		pass
 
 
 func display_icons():
@@ -129,10 +129,15 @@ func add_to_queue():
 	else:
 		# Selects the only minigame
 		microgame_queue.append(microgame_paths[0])
+		
 
 
 func update_microgames():
+	
 	microgame_queue.pop_front()
+	
+	if len(microgame_queue) >= 1:
+		ResourceLoader.load_threaded_request(microgame_queue[1])
 	match mode:
 		MODE.ENDLESS:
 			add_to_queue()
@@ -156,7 +161,7 @@ func _ready():
 	timer.connect("timeout",Callable(self,"finish_game"))
 	
 	load_icons()
-	load_microgames()
+	#load_microgames()
 	
 	randomize()
 	
@@ -178,7 +183,9 @@ func _ready():
 					microgame_queue = microgame_queue.slice(0, i) + \
 						microgame_queue.slice(i + 1, minigame_data[microgame_queue[i]]["difficulty"]) + \
 						[microgame_queue[i]] + microgame_queue.slice(minigame_data[microgame_queue[i]]["difficulty"])
-	
+	for i in range(2):
+		ResourceLoader.load_threaded_request(microgame_queue[i])
+		
 	display_icons()
 	life.set_lives(total_lives)
 	
@@ -206,8 +213,10 @@ func start_game(path):
 	Global.register_minigame(path)
 	
 	SoundController.mute_game()
-	
-	current_microgame = microgame_dict[path].instantiate()
+	if ResourceLoader.load_threaded_get_status(path) == ResourceLoader.ThreadLoadStatus.THREAD_LOAD_INVALID_RESOURCE:
+		print("Loading without previous request: "+path)
+		ResourceLoader.load_threaded_request(path)
+	current_microgame = ResourceLoader.load_threaded_get(path).instantiate()
 	current_microgame.connect("win",Callable(self,"win_microgame"))
 	current_microgame.connect("lose",Callable(self,"lose_microgame"))
 	
