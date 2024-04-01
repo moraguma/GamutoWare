@@ -57,8 +57,6 @@ func my_method():
 # com base na emissão dos sinais "win" e "lose". Se "win" foi o último sinal emitido, o jogador
 # vencerá o jogo, e se "lose" foi o último sinal emitido ou nenhum sinal foi emitido, o jogador
 # perderá o jogo
-
-
 # Chame esta função para registrar que o jogador venceu o jogo
 func register_win():
 	emit_signal("win")

@@ -16,7 +16,7 @@ func _on_body_shape_entered(body_rid, body, body_shape_index, local_shape_index)
 		if anim.get_animation() != "gone":
 			anim.play("gone")
 			$"AudioStreamPlayer".play()
-			$"../Label".text = "WIN!"
+			$"../Label".text = "SUCESSO!"
 			$"../".register_win()
 	
 func _on_animated_sprite_2d_animation_finished():
