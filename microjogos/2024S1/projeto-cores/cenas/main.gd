@@ -100,6 +100,12 @@ func put_color(i):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#print(R0*256)
+	#print(G0*256)
+	#print(B0*256)
+	#print(R1*256)
+	#print(G1*256)
+	#print(B1*256)
 	for i in range(n+1):
 		c.append([((n-i)*R0+i*R1)/n, ((n-i)*G0+i*G1)/n, ((n-i)*B0+i*B1)/n, i])
 	$CorInicial/Polygon2D.modulate = Color(c[0][0], c[0][1], c[0][2])
