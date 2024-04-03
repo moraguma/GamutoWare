@@ -2,6 +2,8 @@ extends Node2D
 
 # Declaração dos sinais win e lose
 
+signal win
+signal lose
 
 # Estas constantes são usadas para determinar o tamanho da tela do seu jogo. Por padrão, definem uma
 # tela 1920x1080, que é padrão para monitores full HD. Caso você queira uma resolução menor para 
