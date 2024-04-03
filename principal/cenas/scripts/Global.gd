@@ -1,8 +1,6 @@
 extends Node
 
-
 enum LANGUAGE {PT, EN}
-
 
 const SaveFile = preload("res://principal/cenas/scripts/SaveFile.gd")
 const SAVE_PATH = "res://principal/saves/"
@@ -13,9 +11,6 @@ const SAVE_VARS = ["played_minigames", "minigame_settings", "filter_settings", "
 var save
 
 
-var language = LANGUAGE.PT
-
-
 var current_scene = null
 var current_path = ""
 var transitioning = false
@@ -24,6 +19,7 @@ var call_queued = false
 var queued_method
 var queued_parameters
 
+var language
 
 func _ready():
 	var root = get_tree().get_root()
@@ -33,7 +29,6 @@ func _ready():
 	
 	
 	load_game()
-
 
 func goto_scene_and_call(path, method_name, parameters):
 	call_queued = true
@@ -72,10 +67,6 @@ func deferred_goto_scene():
 
 func restart():
 	goto_scene(current_path)
-
-
-func update_translation(code):
-	language = code
 
 
 # --------------------------------------------------------------------------------------------------

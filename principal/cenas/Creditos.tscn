@@ -45,8 +45,8 @@ bbcode_enabled = true
 text = "[center][shake rate=20 level=30]CRÉDITOS"
 fit_content = true
 script = ExtResource("5")
-pt_text = "[center][shake rate=20 level=30]CRÉDITOS"
-en_text = "[center][shake rate=20 level=30]CREDITS"
+translation_code = "credits"
+center_text = true
 
 [node name="Minigames" type="ScrollContainer" parent="Credits/Minigames/VBoxContainer"]
 custom_minimum_size = Vector2(0, 813)
@@ -70,6 +70,7 @@ text = "MENU"
 flat = true
 script = ExtResource("2")
 path = "res://principal/cenas/Menu.tscn"
+translation_code = "back"
 
 [node name="CreditosInfo" parent="Credits" instance=ExtResource("7_t6oxa")]
 position = Vector2(1472, 540)

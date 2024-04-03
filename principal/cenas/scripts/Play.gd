@@ -25,7 +25,7 @@ func _ready():
 		settings[0] = [false]
 	
 	infinite_button = MinigameButton.instantiate()
-	infinite_button.load_minigames("Infinite", [])
+	infinite_button.load_minigames(TranslationManager.get_translation("infinite"), [])
 	infinite_button.button_pressed = settings[0][0]
 	modifier_button_container.add_child(infinite_button)
 	
@@ -42,7 +42,7 @@ func _ready():
 		var pos = 0
 		for title in data_dicts[i]: # Create buttons and set intralist neighborhoods
 			var new_button = MinigameButton.instantiate()
-			new_button.load_minigames(title, data_dicts[i][title])
+			new_button.load_minigames(TranslationManager.get_translation(title), data_dicts[i][title])
 			new_button.button_pressed = settings[i][pos]
 			parents[i].add_child(new_button)
 			

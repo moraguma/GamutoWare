@@ -85,8 +85,7 @@ flat = true
 script = ExtResource("6")
 path = "res://principal/cenas/Play.tscn"
 start_focused = true
-pt_text = "JOGAR"
-en_text = "PLAY"
+translation_code = "play"
 
 [node name="Creditos" type="Button" parent="Buttons/Buttons"]
 layout_mode = 2
@@ -98,8 +97,7 @@ text = "CREDITOS"
 flat = true
 script = ExtResource("6")
 path = "res://principal/cenas/Creditos.tscn"
-pt_text = "CREDITOS"
-en_text = "CREDITS"
+translation_code = "credits"
 
 [node name="PT" type="Button" parent="Buttons"]
 offset_left = 1611.0
@@ -125,7 +123,7 @@ theme = ExtResource("8_sosii")
 text = "EN"
 flat = true
 script = ExtResource("8")
-translation_code = 1
+aim_language = 1
 
 [node name="Mute" type="TextureButton" parent="Buttons"]
 offset_left = 6.0
