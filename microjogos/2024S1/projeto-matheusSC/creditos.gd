@@ -14,8 +14,12 @@ var title_en = "Robot Dance"
 var credits_pt = """
 Criado por: Matheus Signori Caetano
 
+Música de Snabisch
+SFX de stoltingmediagroup 
 """
 var credits_en = """
 Made by: Matheus Signori Caetano
 
+Music from Snabisch
+SFX from stoltingmediagroup 
 """

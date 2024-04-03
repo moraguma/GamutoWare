@@ -31,6 +31,8 @@ const HEIGHT = 1080
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
+	$Music.play()
+	
 	current_pos = 0
 	particulas = $"particulas"
 	crowd_anim = $"crowd/AnimationPlayer"
@@ -58,12 +60,17 @@ func _physics_process(delta):
 # desde a última chamada desta função. O comando pass não faz nada
 func _process(delta):
 	if ganhou:
+		if not $Applause.playing:
+			$Applause.play()
 		particulas.emitting = true
 		if not crowd_anim_played:
 			crowd_anim.play("crowd_shake")
 			crowd_anim_played = true
 		register_win()
 	if perdeu:
+		if $Music.playing:
+			$Wrong.play()
+			$Music.stop()
 		oh_no.play()
 		oh_no.visible = true
 		gota.visible = true
