@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ix3ilaidkysh" path="res://microjogos/2024S1/ShootGamuto/recursos/amigo.png" id="1_2nyd7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xcp88"]
-radius = 53.0094
+radius = 51.0098
 
 [node name="Area2D" type="Area2D"]
 collision_layer = 2

@@ -1,7 +1,5 @@
 extends CharacterBody2D
 
-signal win
-signal lose
 @export var rotation_speed =  1.0472 * 2
 @export var spawnPositions : Array[Marker2D] = []
 var counterBalaoBom = 0
@@ -13,18 +11,23 @@ var chosenPoints : Array[Marker2D] = []
 var balaobom = preload("res://microjogos/2024S1/ShootGamuto/cenas/balaoBom.tscn")
 var balaoruim = preload("res://microjogos/2024S1/ShootGamuto/cenas/balaoRuim.tscn")
 
+var acertou_bom = false
+
+@onready var main = get_parent()
+
 func _physics_process(delta):
 	
-	$Line2D.rotate(rotation_speed * delta)
-	$RayCast2D.rotate(rotation_speed * delta)
-	$Superior.rotate(rotation_speed * delta)
-	#if($Line2D.rotation * (180 / PI) > 90):
-		#_reverse_rotation()
-	#
-	#if($Line2D.rotation * (180 / PI) < 0):
-		#_reverse_rotation()
-	
-	move_and_slide()
+	if not acertou_bom:
+		$Line2D.rotate(rotation_speed * delta)
+		$RayCast2D.rotate(rotation_speed * delta)
+		$Superior.rotate(rotation_speed * delta)
+		#if($Line2D.rotation * (180 / PI) > 90):
+			#_reverse_rotation()
+		#
+		#if($Line2D.rotation * (180 / PI) < 0):
+			#_reverse_rotation()
+		
+		move_and_slide()
 	
 func _reverse_rotation():
 	rotation_speed *= -1
@@ -62,20 +65,25 @@ func _attack():
 		collided_object.hide()
 		#$"../RichTextLabel".text = "ôi"
 		if $RayCast2D.get_collider().get_collision_layer() == 4:
-			counterBonsAtirados += 1
+			$"../Lose".play()
+			$"../AudioStreamPlayer".stop()
+			acertou_bom = true
+			set_process_input(false)
 		else:
-			register_lose()
+			counterBonsAtirados += 1
 			#$"../RichTextLabel".text = "you lost"
 			
-		if counterBonsAtirados >= counterBalaoBom:
+		if counterBonsAtirados >= counterBalaoRuim and not acertou_bom:
 			#$"../RichTextLabel".text = "you won"
+			acertou_bom = true
+			set_process_input(false)
 			register_win()
 
 # Chame esta função para registrar que o jogador venceu o jogo
 func register_win():
-	emit_signal("win")
+	main.register_win()
 
 
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
-	emit_signal("lose")
+	main.register_lose()

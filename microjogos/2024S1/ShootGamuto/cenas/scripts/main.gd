@@ -21,7 +21,7 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("Ataque!!")
+			NotificationCenter.notify("Attack the towers!")
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("Ataque as torres!")
 
@@ -60,4 +60,12 @@ func my_method():
 # perderá o jogo
 
 
+# Chame esta função para registrar que o jogador venceu o jogo
+func register_win():
+	emit_signal("win")
+
+
+# Chame esta função para registrar que o jogador perdeu o jogo
+func register_lose():
+	emit_signal("lose")
 
