@@ -1,5 +1,18 @@
 extends Node2D
 
+var current_pos = 0
+var pode_checkar = true
+var perdeu = false
+var ganhou = false
+var current_pressed = ""
+
+var particulas
+var crowd_anim
+var oh_no
+var gota
+
+var crowd_anim_played = false
+
 # Declaração dos sinais win e lose
 signal win
 signal lose
@@ -18,19 +31,25 @@ const HEIGHT = 1080
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
+	current_pos = 0
+	particulas = $"particulas"
+	crowd_anim = $"crowd/AnimationPlayer"
+	oh_no = $"oh no"
+	gota = $"gota"
 	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
+			NotificationCenter.notify("CLICK IN ORDER")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FACA ALGO!")
+			NotificationCenter.notify("CLIQUE NA SEQUÊNCIA")
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
 # a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
 # a última chamada desta função. O comando pass não faz nada
 func _physics_process(delta):
+	
 	pass
 
 
@@ -38,6 +57,16 @@ func _physics_process(delta):
 # como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
 # desde a última chamada desta função. O comando pass não faz nada
 func _process(delta):
+	if ganhou:
+		particulas.emitting = true
+		if not crowd_anim_played:
+			crowd_anim.play("crowd_shake")
+			crowd_anim_played = true
+		register_win()
+	if perdeu:
+		oh_no.play()
+		oh_no.visible = true
+		gota.visible = true
 	pass
 
 
@@ -50,6 +79,9 @@ func _process(delta):
 func my_method():
 	pass
 
+func _on_timer_timeout():
+	pode_checkar = true
+	pass # Replace with function body.
 
 # --------------------------------------------------------------------------------------------------
 # CONDIÇÕES DE VITÓRIA
