@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bh37fuggg4bip"
-path="res://.godot/imported/coolvetica rg.otf-0c13ff8133b83306d624b6ab2db9aa5d.fontdata"
+uid="uid://caxagc03ljgr5"
+path="res://.godot/imported/SingleDay-Regular.ttf-6666256c1707126c67878c7995eff921.fontdata"
 
 [deps]
 
-source_file="res://principal/recursos/fonts/coolvetica rg.otf"
-dest_files=["res://.godot/imported/coolvetica rg.otf-0c13ff8133b83306d624b6ab2db9aa5d.fontdata"]
+source_file="res://principal/recursos/fonts/Single_Day/SingleDay-Regular.ttf"
+dest_files=["res://.godot/imported/SingleDay-Regular.ttf-6666256c1707126c67878c7995eff921.fontdata"]
 
 [params]
 
