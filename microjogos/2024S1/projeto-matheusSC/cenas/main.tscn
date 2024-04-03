@@ -17,6 +17,21 @@
 [ext_resource type="Texture2D" uid="uid://cub13y5w6t70d" path="res://microjogos/2024S1/projeto-matheusSC/recursos/ohno.png" id="15_jflpw"]
 [ext_resource type="Texture2D" uid="uid://br4wckvaajkg0" path="res://microjogos/2024S1/projeto-matheusSC/recursos/drop.png" id="16_ae3s2"]
 
+[sub_resource type="Animation" id="Animation_qqk7n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.65, 1.58393)]
+}
+
 [sub_resource type="Animation" id="Animation_0giy2"]
 resource_name = "bounce"
 length = 0.3
@@ -33,21 +48,6 @@ tracks/0/keys = {
 "values": [Vector2(1.65, 1.58393), Vector2(1.73334, 1.66393), Vector2(1.65, 1.58393)]
 }
 
-[sub_resource type="Animation" id="Animation_qqk7n"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1.65, 1.58393)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xp8d4"]
 _data = {
 "RESET": SubResource("Animation_qqk7n"),
@@ -58,6 +58,21 @@ _data = {
 interpolation_mode = 1
 offsets = PackedFloat32Array(0, 0.133333, 0.406667, 0.68, 0.846667)
 colors = PackedColorArray(0.687823, 0, 0.13686, 1, 0, 0.425154, 0.0955925, 1, 2.79158e-06, 0.756526, 0.799237, 1, 0.823553, 0.00162335, 0.955353, 1, 0.828344, 0.688323, 0.0198037, 1)
+
+[sub_resource type="Animation" id="Animation_p54np"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(970, 531)]
+}
 
 [sub_resource type="Animation" id="Animation_mpcau"]
 resource_name = "crowd_shake"
@@ -74,21 +89,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(970, 531), Vector2(990, 531), Vector2(970, 531), Vector2(950, 531), Vector2(970, 531)]
-}
-
-[sub_resource type="Animation" id="Animation_p54np"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(970, 531)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_avvv0"]
