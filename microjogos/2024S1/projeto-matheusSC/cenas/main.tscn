@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=31 format=3 uid="uid://bi0ahd7cv37i6"]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-matheusSC/cenas/scripts/main.gd" id="1_ji44o"]
 [ext_resource type="Texture2D" uid="uid://dbk1piem4u7gh" path="res://microjogos/2024S1/projeto-matheusSC/recursos/seta.png" id="2_ng375"]
@@ -16,6 +16,10 @@
 [ext_resource type="Texture2D" uid="uid://ukww7avnwgx1" path="res://microjogos/2024S1/projeto-matheusSC/recursos/confeti.png" id="14_y6v0d"]
 [ext_resource type="Texture2D" uid="uid://cub13y5w6t70d" path="res://microjogos/2024S1/projeto-matheusSC/recursos/ohno.png" id="15_jflpw"]
 [ext_resource type="Texture2D" uid="uid://br4wckvaajkg0" path="res://microjogos/2024S1/projeto-matheusSC/recursos/drop.png" id="16_ae3s2"]
+[ext_resource type="AudioStream" uid="uid://gofqtssovmw8" path="res://microjogos/2024S1/projeto-matheusSC/recursos/sounds/In the circus PSG2.ogg" id="17_aus0f"]
+[ext_resource type="AudioStream" uid="uid://bil0hv7d41k0y" path="res://microjogos/2024S1/projeto-matheusSC/recursos/sounds/applause.wav" id="18_p2sqr"]
+[ext_resource type="AudioStream" uid="uid://cr2brf8c13xc3" path="res://microjogos/2024S1/projeto-matheusSC/recursos/sounds/right.wav" id="19_nujt6"]
+[ext_resource type="AudioStream" uid="uid://cqq67fw1q0lsa" path="res://microjogos/2024S1/projeto-matheusSC/recursos/sounds/wrong.wav" id="20_veugj"]
 
 [sub_resource type="Animation" id="Animation_qqk7n"]
 length = 0.001
@@ -240,5 +244,20 @@ modulate = Color(0, 0.686275, 0.686275, 1)
 position = Vector2(909, 372)
 scale = Vector2(0.416667, 0.416667)
 texture = ExtResource("16_ae3s2")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_aus0f")
+volume_db = -5.0
+
+[node name="Applause" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_p2sqr")
+volume_db = 12.0
+
+[node name="Right" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_nujt6")
+
+[node name="Wrong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_veugj")
+volume_db = 12.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

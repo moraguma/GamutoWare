@@ -50,6 +50,7 @@ func _process(delta):
 		
 		#apertou certo
 	if apertou_oq == tipo and main_scene.current_pos == posicao and main_scene.pode_checkar and not main_scene.perdeu:
+		$"../Right".play()
 		anim.stop()
 		anim.play("bounce")
 		main_scene.current_pos += 1
