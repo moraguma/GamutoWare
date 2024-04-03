@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-eco-g/cenas/scripts/stone.gd" id="1_r0sm8"]
 
+
 [sub_resource type="Gradient" id="Gradient_lmqkw"]
 offsets = PackedFloat32Array(0, 0.273333, 0.526667, 0.746667, 1)
 colors = PackedColorArray(0.00858518, 0.515082, 0.526057, 1, 0.245166, 0.590018, 0.64644, 1, 0.608329, 0.336543, 0.9761, 1, 0.668929, 0.492832, 0.918593, 1, 0.981856, 0.467863, 0.512671, 1)

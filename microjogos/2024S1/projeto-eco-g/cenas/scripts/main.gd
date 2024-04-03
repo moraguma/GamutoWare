@@ -25,6 +25,7 @@ func _ready():
 			NotificationCenter.notify("DODGE THE STONE!")
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("ESQUIVE DAS PEDRAS!")
+	register_win()
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
@@ -63,7 +64,6 @@ func my_method():
 
 # Chame esta função para registrar que o jogador venceu o jogo
 func register_win():
-	#get_tree().paused = true
 	emit_signal("win")
 
 
@@ -71,10 +71,6 @@ func register_win():
 func register_lose():
 	#get_tree().paused = true
 	emit_signal("lose")
-
-
-func _on_timer_timeout():
-	register_win()
 
 
 func _on_gamuto_dead():
