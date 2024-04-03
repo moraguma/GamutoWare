@@ -1,4 +1,4 @@
-extends Node2D #test
+extends Node2D
 
 var current_pos = 0
 var pode_checkar = true
