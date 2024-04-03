@@ -114,12 +114,20 @@ func load_game():
 	return true
 
 
+func get_modifier_settings():
+	return save.modifier_settings
+
+
 func get_minigame_settings():
 	return save.minigame_settings
 
 
 func get_filter_settings():
 	return save.filter_settings
+
+
+func set_modifier_settings(modifier_settings):
+	save.modifier_settings = modifier_settings
 
 
 func set_minigame_settings(minigame_settings):
