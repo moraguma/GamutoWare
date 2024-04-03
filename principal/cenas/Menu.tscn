@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dov2m2kbxje2j"]
+[gd_scene load_steps=16 format=3 uid="uid://dov2m2kbxje2j"]
 
 [ext_resource type="Texture2D" uid="uid://ja6urlsch5m7" path="res://principal/recursos/sprites/MenuBase.png" id="1"]
 [ext_resource type="Script" path="res://principal/cenas/scripts/Logo.gd" id="2"]
@@ -10,6 +10,10 @@
 [ext_resource type="Script" path="res://principal/cenas/scripts/TranslationSetButton.gd" id="8"]
 [ext_resource type="Theme" uid="uid://dt5djib7huxvm" path="res://principal/recursos/themes/ButtonTheme.tres" id="8_sosii"]
 [ext_resource type="Material" uid="uid://bfefepnpbds1x" path="res://principal/recursos/shaders/Diamond.tres" id="9"]
+[ext_resource type="Script" path="res://principal/cenas/scripts/SoundButton.gd" id="11_a36n0"]
+[ext_resource type="Texture2D" uid="uid://dppoevh5cqa2r" path="res://principal/recursos/sprites/sound_off.png" id="11_yush3"]
+[ext_resource type="Texture2D" uid="uid://b20grcuc7rfa7" path="res://principal/recursos/sprites/sound_on.png" id="12_jre51"]
+[ext_resource type="Texture2D" uid="uid://braorhthxynr" path="res://principal/recursos/sprites/sound_focused_mask.png" id="13_v5l1t"]
 
 [sub_resource type="Curve" id="Curve_svfxn"]
 min_value = -360.0
@@ -63,6 +67,7 @@ offset_left = 872.0
 offset_top = 571.0
 offset_right = 1049.0
 offset_bottom = 673.0
+focus_neighbor_left = NodePath("../Mute")
 focus_neighbor_top = NodePath("../PT")
 focus_neighbor_right = NodePath("../PT")
 focus_neighbor_bottom = NodePath("../Arcade")
@@ -107,7 +112,7 @@ offset_left = 1611.0
 offset_top = 30.0
 offset_right = 1737.0
 offset_bottom = 132.0
-focus_neighbor_left = NodePath("../Jam")
+focus_neighbor_left = NodePath("../Mute")
 focus_neighbor_right = NodePath("../EN")
 focus_neighbor_bottom = NodePath("../Jam")
 theme = ExtResource("8_sosii")
@@ -127,3 +132,16 @@ text = "EN"
 flat = true
 script = ExtResource("8")
 translation_code = 1
+
+[node name="Mute" type="TextureButton" parent="Buttons"]
+offset_left = 6.0
+offset_top = -4.0
+offset_right = 156.0
+offset_bottom = 146.0
+focus_neighbor_right = NodePath("../PT")
+focus_neighbor_bottom = NodePath("../Jam")
+toggle_mode = true
+texture_normal = ExtResource("11_yush3")
+texture_pressed = ExtResource("12_jre51")
+texture_focused = ExtResource("13_v5l1t")
+script = ExtResource("11_a36n0")
