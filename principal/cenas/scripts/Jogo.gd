@@ -15,6 +15,8 @@ const BASE_HEIGHT = 1080.0
 const MICROGAME_TIME = 6
 
 const MIN_MINIGAME_POOL = 2
+
+const MASK_CENTER = Vector2(360, 420)
 # ------------------------------------------------------------------------------
 # VARIÁVEIS
 # ------------------------------------------------------------------------------
@@ -22,7 +24,6 @@ const MIN_MINIGAME_POOL = 2
 var microgame_queue = []
 
 var total_microgames
-var current_microgame
 var icon_dict = {}
 var microgame_dict = {}
 
@@ -34,21 +35,16 @@ var difficulty_slot = 0
 
 var mode = MODE.ENDLESS
 
-var won = false
-
 @onready var minigame_data = preload("res://principal/recursos/data/Minigames.gd").new().minigame_data
 # ------------------------------------------------------------------------------
 # NÓS
 # ------------------------------------------------------------------------------
-@onready var display = $Display
-@onready var game = $Display/Game
+@onready var minigame_display = $MinigameDisplay
 @onready var animation_player = $AnimationPlayer
-@onready var timer = $Timer
 
 @onready var life = $GameUI/Life
 @onready var game_icons = [$GameUI/GameIcons/Game1, $GameUI/GameIcons/Game2, $GameUI/GameIcons/Game3, $GameUI/GameIcons/Game4]
 @onready var gamuto = $GameUI/GameIcons/Gamuto
-@onready var timer_indicator = $TimerIndicator
 
 
 func isolate_folder(path, tolerance):
@@ -156,9 +152,9 @@ func setup_arcade_mode(microgames):
 
 
 func _ready():
-	SoundController.play_game()
+	minigame_display.done.connect(finish_game)
 	
-	timer.connect("timeout",Callable(self,"finish_game"))
+	SoundController.play_game()
 	
 	load_icons()
 	#load_microgames()
@@ -204,47 +200,18 @@ func load_next_game():
 
 func next_game():
 	if total_microgames > 0:
-		start_game(microgame_queue[0])
+		minigame_display.start_game(microgame_queue[0])
 	else:
 		win_game()
-
-
-func start_game(path):
-	Global.register_minigame(path)
-	
-	SoundController.mute_game()
-	if ResourceLoader.load_threaded_get_status(path) == ResourceLoader.ThreadLoadStatus.THREAD_LOAD_INVALID_RESOURCE:
-		print("Loading without previous request: "+path)
-		ResourceLoader.load_threaded_request(path)
-	current_microgame = ResourceLoader.load_threaded_get(path).instantiate()
-	current_microgame.connect("win",Callable(self,"win_microgame"))
-	current_microgame.connect("lose",Callable(self,"lose_microgame"))
-	
-#	display.stretch = false
-#	game.size = Vector2(current_microgame.WIDTH, current_microgame.HEIGHT)
-#	display.stretch = true
-	var convert_ratio=max(BASE_WIDTH/float(current_microgame.WIDTH),BASE_HEIGHT/float(current_microgame.HEIGHT))
-	
-	display.size = Vector2(current_microgame.WIDTH, current_microgame.HEIGHT)
-	display.scale=Vector2(convert_ratio,convert_ratio)
-	display.texture_filter = current_microgame.texture_filter
-	
-	won = false
-	
-	game.add_child(current_microgame)
-	
-	timer.start(MICROGAME_TIME)
 
 
 func finish_game():
 	SoundController.unmute_game()
 	
-	timer_indicator.deactivate()
-	
-	if not (total_lives == 1 and won == false):
+	if not (total_lives == 1 and minigame_display.won == false):
 		load_next_game()
 	
-	if won == true:
+	if minigame_display.won == true:
 		score += 1
 		if total_microgames <= 0:
 			animation_player.play("win_game")
@@ -256,20 +223,12 @@ func finish_game():
 			game_icons[0].hide()
 			gamuto.position = Vector2(-600, -120)
 			
-			timer.stop()
 			animation_player.play("game_over")
 		else:
 			if total_microgames <= 0:
-				timer.stop()
 				animation_player.play("take_damage_and_win")
 			else:
 				animation_player.play("lose")
-
-
-func free_microgame():
-	if current_microgame != null:
-		current_microgame.queue_free()
-		current_microgame = null
 
 
 func lose_life():
@@ -279,14 +238,6 @@ func lose_life():
 func update_lives_counter():
 	SoundController.play_sfx("damage")
 	life.set_lives(total_lives)
-
-
-func win_microgame():
-	won = true
-
-
-func lose_microgame():
-	won = false
 
 
 func win_game():
