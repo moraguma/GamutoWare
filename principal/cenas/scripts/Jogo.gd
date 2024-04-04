@@ -132,7 +132,7 @@ func update_microgames():
 	
 	microgame_queue.pop_front()
 	
-	if len(microgame_queue) >= 1:
+	if len(microgame_queue) > 1:
 		ResourceLoader.load_threaded_request(microgame_queue[1])
 	match mode:
 		MODE.ENDLESS:
