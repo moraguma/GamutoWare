@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://sediaedhyp4h"]
+[gd_scene load_steps=27 format=3 uid="uid://sediaedhyp4h"]
 
 [ext_resource type="Texture2D" uid="uid://d1pcvjogk0whm" path="res://principal/recursos/sprites/GMTIconSpritesheet.png" id="1"]
 [ext_resource type="Script" path="res://principal/cenas/scripts/Jogo.gd" id="2"]
@@ -14,10 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://ctijuu2jh4eyo" path="res://principal/recursos/sprites/LifeSpritesheet.png" id="12"]
 [ext_resource type="Texture2D" uid="uid://bwhscrkgcredi" path="res://principal/recursos/sprites/excitedParticles.png" id="14"]
 [ext_resource type="Script" path="res://principal/cenas/scripts/Droppable.gd" id="15"]
-[ext_resource type="Shader" path="res://principal/recursos/shaders/mask.gdshader" id="15_yl0rt"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/TimerIndicator.gd" id="16"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/Twitcher.gd" id="17"]
-[ext_resource type="Texture2D" uid="uid://b83mxv1sg7wbc" path="res://principal/recursos/sprites/clock.png" id="18"]
+[ext_resource type="PackedScene" uid="uid://dnhn2yadjkru6" path="res://principal/cenas/MinigameDisplay.tscn" id="15_a3ydg"]
 
 [sub_resource type="Animation" id="6"]
 length = 0.001
@@ -117,46 +114,10 @@ tracks/4/keys = {
 tracks/5/type = "method"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("MicrogameMaskViewport/MicrogameMask")
+tracks/5/path = NodePath(".")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0.2),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"hide"
-}]
-}
-tracks/6/type = "bezier"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("MicrogameMaskViewport/MicrogameMask:scale:x")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(8, 0, 0, 0, 0.25, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.2)
-}
-tracks/7/type = "bezier"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("MicrogameMaskViewport/MicrogameMask:scale:y")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(8, 0, 0, 0, 0.25, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.2)
-}
-tracks/8/type = "method"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath(".")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
 "times": PackedFloat32Array(0.2, 1.2, 1.201, 1.202, 4, 4.001, 8),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "values": [{
@@ -182,22 +143,64 @@ tracks/8/keys = {
 "method": &"end_game"
 }]
 }
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("GameUI/GameIcons/Gamuto:frame")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("GameUI/GameIcons/Gamuto:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
 "times": PackedFloat32Array(0, 0.4, 0.5, 0.7, 0.9, 1, 1.1, 1.2, 1.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
 }
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("GameUI/GameIcons/Gamuto")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"drop"
+}]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("GameUI/GameIcons/Game2")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"drop"
+}]
+}
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("GameUI/GameIcons/Game3")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"drop"
+}]
+}
 tracks/10/type = "method"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("GameUI/GameIcons/Gamuto")
+tracks/10/path = NodePath("GameUI/GameIcons/Game4")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
@@ -207,59 +210,6 @@ tracks/10/keys = {
 "args": [],
 "method": &"drop"
 }]
-}
-tracks/11/type = "method"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("GameUI/GameIcons/Game2")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(4),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"drop"
-}]
-}
-tracks/12/type = "method"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("GameUI/GameIcons/Game3")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(4),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"drop"
-}]
-}
-tracks/13/type = "method"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("GameUI/GameIcons/Game4")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(4),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"drop"
-}]
-}
-tracks/14/type = "method"
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/path = NodePath("TimerIndicator")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"values": []
 }
 
 [sub_resource type="Animation" id="7"]
@@ -430,74 +380,35 @@ tracks/14/keys = {
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0, -318.821, -720, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 2.8, 3.2)
 }
-tracks/15/type = "method"
+tracks/15/type = "bezier"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("MicrogameMaskViewport/MicrogameMask")
+tracks/15/path = NodePath("GameUI/GameIcons/Game1:scale:x")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
-"times": PackedFloat32Array(0.2, 3.9),
-"transitions": PackedFloat32Array(1, 1),
-"values": [{
-"args": [],
-"method": &"hide"
-}, {
-"args": [],
-"method": &"show"
-}]
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, 0, -0.25, 0.25, 0),
+"times": PackedFloat32Array(3.6, 3.9)
 }
 tracks/16/type = "bezier"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("MicrogameMaskViewport/MicrogameMask:scale:x")
+tracks/16/path = NodePath("GameUI/GameIcons/Game1:scale:y")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 0),
-"points": PackedFloat32Array(8, 0, 0, 0, 0.25, 0, -0.25, 0, 0.25, 0, 1e-05, -0.25, 0, 0.25, 0, 8, 0, 0.25, 0.25, 0),
-"times": PackedFloat32Array(0, 0.2, 3.9, 4.1)
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, 0, -0.25, 0.25, 0),
+"times": PackedFloat32Array(3.6, 3.9)
 }
-tracks/17/type = "bezier"
+tracks/17/type = "method"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("MicrogameMaskViewport/MicrogameMask:scale:y")
+tracks/17/path = NodePath(".")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 0),
-"points": PackedFloat32Array(8, 0, 0, 0, 0.25, 0, -0.25, 0, 0.25, 0, 1e-05, -0.25, 0, 0.25, 0, 8, 0, 0.25, 0.25, 0),
-"times": PackedFloat32Array(0, 0.2, 3.9, 4.1)
-}
-tracks/18/type = "bezier"
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/path = NodePath("GameUI/GameIcons/Game1:scale:x")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, 0, -0.25, 0.25, 0),
-"times": PackedFloat32Array(3.6, 3.9)
-}
-tracks/19/type = "bezier"
-tracks/19/imported = false
-tracks/19/enabled = true
-tracks/19/path = NodePath("GameUI/GameIcons/Game1:scale:y")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, 0, -0.25, 0.25, 0),
-"times": PackedFloat32Array(3.6, 3.9)
-}
-tracks/20/type = "method"
-tracks/20/imported = false
-tracks/20/enabled = true
-tracks/20/path = NodePath(".")
-tracks/20/interp = 1
-tracks/20/loop_wrap = true
-tracks/20/keys = {
 "times": PackedFloat32Array(0.2, 1.2, 1.201, 2.8, 3.9),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "values": [{
@@ -517,31 +428,17 @@ tracks/20/keys = {
 "method": &"next_game"
 }]
 }
-tracks/21/type = "value"
-tracks/21/imported = false
-tracks/21/enabled = true
-tracks/21/path = NodePath("GameUI/GameIcons/Gamuto:frame")
-tracks/21/interp = 1
-tracks/21/loop_wrap = true
-tracks/21/keys = {
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("GameUI/GameIcons/Gamuto:frame")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
 "times": PackedFloat32Array(0, 0.4, 0.5, 0.7, 0.9, 1, 1.1, 1.2, 1.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
-}
-tracks/22/type = "method"
-tracks/22/imported = false
-tracks/22/enabled = true
-tracks/22/path = NodePath("TimerIndicator")
-tracks/22/interp = 1
-tracks/22/loop_wrap = true
-tracks/22/keys = {
-"times": PackedFloat32Array(3.6),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"activate"
-}]
 }
 
 [sub_resource type="Animation" id="5"]
@@ -600,49 +497,10 @@ tracks/3/keys = {
 tracks/4/type = "method"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("MicrogameMaskViewport/MicrogameMask")
+tracks/4/path = NodePath(".")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 4.5),
-"transitions": PackedFloat32Array(1, 1),
-"values": [{
-"args": [],
-"method": &"hide"
-}, {
-"args": [],
-"method": &"show"
-}]
-}
-tracks/5/type = "bezier"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("MicrogameMaskViewport/MicrogameMask:scale:x")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 8, 0, 0.25, 0.25, 0),
-"times": PackedFloat32Array(4.5, 4.7)
-}
-tracks/6/type = "bezier"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("MicrogameMaskViewport/MicrogameMask:scale:y")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 8, 0, 0.25, 0.25, 0),
-"times": PackedFloat32Array(4.5, 4.7)
-}
-tracks/7/type = "method"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath(".")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
 "times": PackedFloat32Array(0.3, 4.5),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
@@ -653,140 +511,126 @@ tracks/7/keys = {
 "method": &"next_game"
 }]
 }
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GameUI/GameIcons/Game4:position:x")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(900, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("GameUI/GameIcons/Game4:position:y")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-120, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("GameUI/GameIcons/Game1:position:x")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-600, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
 tracks/8/type = "bezier"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("GameUI/GameIcons/Game4:position:x")
+tracks/8/path = NodePath("GameUI/GameIcons/Game1:position:y")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(900, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-120, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/9/type = "bezier"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("GameUI/GameIcons/Game4:position:y")
+tracks/9/path = NodePath("GameUI/GameIcons/Game2:position:x")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-120, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-100, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/10/type = "bezier"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("GameUI/GameIcons/Game1:position:x")
+tracks/10/path = NodePath("GameUI/GameIcons/Game2:position:y")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-600, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-120, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/11/type = "bezier"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("GameUI/GameIcons/Game1:position:y")
+tracks/11/path = NodePath("GameUI/GameIcons/Game3:position:x")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-120, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(400, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/12/type = "bezier"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("GameUI/GameIcons/Game2:position:x")
+tracks/12/path = NodePath("GameUI/GameIcons/Game3:position:y")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-100, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-120, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/13/type = "bezier"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("GameUI/GameIcons/Game2:position:y")
+tracks/13/path = NodePath("GameUI/GameIcons/Game1:scale:x")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-120, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.1, 0.1, 1, -0.1, 0.1, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, 0, -0.25, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 3.8, 4.1, 4.2, 4.5, 4.7, 4.8)
 }
 tracks/14/type = "bezier"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("GameUI/GameIcons/Game3:position:x")
+tracks/14/path = NodePath("GameUI/GameIcons/Game1:scale:y")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(400, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.1, 0.1, 1, -0.1, 0.1, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, 0, -0.25, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 3.8, 4.1, 4.2, 4.5, 4.7, 4.8)
 }
 tracks/15/type = "bezier"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("GameUI/GameIcons/Game3:position:y")
+tracks/15/path = NodePath("GameUI/Cursor:position:x")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-120, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/16/type = "bezier"
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/path = NodePath("GameUI/GameIcons/Game1:scale:x")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0),
-"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.1, 0.1, 1, -0.1, 0.1, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, 0, -0.25, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 3.8, 4.1, 4.2, 4.5, 4.7, 4.8)
-}
-tracks/17/type = "bezier"
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/path = NodePath("GameUI/GameIcons/Game1:scale:y")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0),
-"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.1, 0.1, 1, -0.1, 0.1, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, 0, -0.25, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 3.8, 4.1, 4.2, 4.5, 4.7, 4.8)
-}
-tracks/18/type = "bezier"
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/path = NodePath("GameUI/Cursor:position:x")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = {
-"handle_modes": PackedInt32Array(0),
 "points": PackedFloat32Array(-600, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
-}
-tracks/19/type = "method"
-tracks/19/imported = false
-tracks/19/enabled = true
-tracks/19/path = NodePath("TimerIndicator")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/keys = {
-"times": PackedFloat32Array(4.2),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"activate"
-}]
 }
 
 [sub_resource type="Animation" id="24"]
@@ -957,71 +801,35 @@ tracks/14/keys = {
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0, -318.821, -720, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 2.8, 3.2)
 }
-tracks/15/type = "method"
+tracks/15/type = "bezier"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("MicrogameMaskViewport/MicrogameMask")
+tracks/15/path = NodePath("GameUI/GameIcons/Game1:scale:x")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
-"times": PackedFloat32Array(0.2),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"hide"
-}]
+"handle_modes": PackedInt32Array(),
+"points": PackedFloat32Array(),
+"times": PackedFloat32Array()
 }
 tracks/16/type = "bezier"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("MicrogameMaskViewport/MicrogameMask:scale:x")
+tracks/16/path = NodePath("GameUI/GameIcons/Game1:scale:y")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(8, 0, 0, 0, 0.25, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.2)
+"handle_modes": PackedInt32Array(),
+"points": PackedFloat32Array(),
+"times": PackedFloat32Array()
 }
-tracks/17/type = "bezier"
+tracks/17/type = "method"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("MicrogameMaskViewport/MicrogameMask:scale:y")
+tracks/17/path = NodePath(".")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(8, 0, 0, 0, 0.25, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.2)
-}
-tracks/18/type = "bezier"
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/path = NodePath("GameUI/GameIcons/Game1:scale:x")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = {
-"handle_modes": PackedInt32Array(),
-"points": PackedFloat32Array(),
-"times": PackedFloat32Array()
-}
-tracks/19/type = "bezier"
-tracks/19/imported = false
-tracks/19/enabled = true
-tracks/19/path = NodePath("GameUI/GameIcons/Game1:scale:y")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/keys = {
-"handle_modes": PackedInt32Array(),
-"points": PackedFloat32Array(),
-"times": PackedFloat32Array()
-}
-tracks/20/type = "method"
-tracks/20/imported = false
-tracks/20/enabled = true
-tracks/20/path = NodePath(".")
-tracks/20/interp = 1
-tracks/20/loop_wrap = true
-tracks/20/keys = {
 "times": PackedFloat32Array(0.2, 1.2, 1.201, 2.8, 4.2, 4.201, 8),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "values": [{
@@ -1047,58 +855,58 @@ tracks/20/keys = {
 "method": &"win_game"
 }]
 }
-tracks/21/type = "value"
-tracks/21/imported = false
-tracks/21/enabled = true
-tracks/21/path = NodePath("GameUI/GameIcons/Gamuto:frame")
-tracks/21/interp = 1
-tracks/21/loop_wrap = true
-tracks/21/keys = {
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("GameUI/GameIcons/Gamuto:frame")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
 "times": PackedFloat32Array(0, 0.4, 0.5, 0.7, 0.9, 1, 1.1, 1.2, 1.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 10, 11, 12, 13, 14, 6, 7, 8]
 }
-tracks/22/type = "bezier"
-tracks/22/imported = false
-tracks/22/enabled = true
-tracks/22/path = NodePath("GameUI/GameIcons/Gamuto:rotation_degrees")
-tracks/22/interp = 1
-tracks/22/loop_wrap = true
-tracks/22/keys = {
+tracks/19/type = "bezier"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("GameUI/GameIcons/Gamuto:rotation_degrees")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(0, -0.25, 0, 0, -318.821, -720, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(2.8, 3.2)
 }
-tracks/23/type = "bezier"
-tracks/23/imported = false
-tracks/23/enabled = true
-tracks/23/path = NodePath("GameUI/Cursor:position:x")
-tracks/23/interp = 1
-tracks/23/loop_wrap = true
-tracks/23/keys = {
+tracks/20/type = "bezier"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("GameUI/Cursor:position:x")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(-600, -0.25, 0, 0, -0.1, -1300, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(2.8, 3.2)
 }
-tracks/24/type = "bezier"
-tracks/24/imported = false
-tracks/24/enabled = true
-tracks/24/path = NodePath("GameUI/Cursor:position:y")
-tracks/24/interp = 1
-tracks/24/loop_wrap = true
-tracks/24/keys = {
+tracks/21/type = "bezier"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("GameUI/Cursor:position:y")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
 "handle_modes": PackedInt32Array(),
 "points": PackedFloat32Array(),
 "times": PackedFloat32Array()
 }
-tracks/25/type = "method"
-tracks/25/imported = false
-tracks/25/enabled = true
-tracks/25/path = NodePath("GameUI/Life")
-tracks/25/interp = 1
-tracks/25/loop_wrap = true
-tracks/25/keys = {
+tracks/22/type = "method"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("GameUI/Life")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
 "times": PackedFloat32Array(4.2),
 "transitions": PackedFloat32Array(1),
 "values": [{
@@ -1106,42 +914,17 @@ tracks/25/keys = {
 "method": &"set_lives"
 }]
 }
-tracks/26/type = "value"
-tracks/26/imported = false
-tracks/26/enabled = true
-tracks/26/path = NodePath("GameUI/GMTConfetti:emitting")
-tracks/26/interp = 1
-tracks/26/loop_wrap = true
-tracks/26/keys = {
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("GameUI/GMTConfetti:emitting")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
 "times": PackedFloat32Array(4.2),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
-}
-tracks/27/type = "method"
-tracks/27/imported = false
-tracks/27/enabled = true
-tracks/27/path = NodePath("TimerIndicator")
-tracks/27/interp = 1
-tracks/27/loop_wrap = true
-tracks/27/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"values": []
-}
-tracks/28/type = "method"
-tracks/28/imported = false
-tracks/28/enabled = true
-tracks/28/path = NodePath("Timer")
-tracks/28/interp = 1
-tracks/28/loop_wrap = true
-tracks/28/keys = {
-"times": PackedFloat32Array(4.2),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"stop"
-}]
 }
 
 [sub_resource type="Animation" id="8"]
@@ -1312,74 +1095,35 @@ tracks/14/keys = {
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0, -318.821, -720, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 2.8, 3.2)
 }
-tracks/15/type = "method"
+tracks/15/type = "bezier"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("MicrogameMaskViewport/MicrogameMask")
+tracks/15/path = NodePath("GameUI/GameIcons/Game1:scale:x")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
-"times": PackedFloat32Array(0.2, 3.9),
-"transitions": PackedFloat32Array(1, 1),
-"values": [{
-"args": [],
-"method": &"hide"
-}, {
-"args": [],
-"method": &"show"
-}]
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, 0, -0.25, 0.25, 0),
+"times": PackedFloat32Array(3.6, 3.9)
 }
 tracks/16/type = "bezier"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("MicrogameMaskViewport/MicrogameMask:scale:x")
+tracks/16/path = NodePath("GameUI/GameIcons/Game1:scale:y")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 0),
-"points": PackedFloat32Array(8, 0, 0, 0, 0.25, 0, -0.25, 0, 0.25, 0, 1e-05, -0.25, 0, 0.25, 0, 8, 0, 0.25, 0.25, 0),
-"times": PackedFloat32Array(0, 0.2, 3.9, 4.1)
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, 0, -0.25, 0.25, 0),
+"times": PackedFloat32Array(3.6, 3.9)
 }
-tracks/17/type = "bezier"
+tracks/17/type = "method"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("MicrogameMaskViewport/MicrogameMask:scale:y")
+tracks/17/path = NodePath(".")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 0),
-"points": PackedFloat32Array(8, 0, 0, 0, 0.25, 0, -0.25, 0, 0.25, 0, 1e-05, -0.25, 0, 0.25, 0, 8, 0, 0.25, 0.25, 0),
-"times": PackedFloat32Array(0, 0.2, 3.9, 4.1)
-}
-tracks/18/type = "bezier"
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/path = NodePath("GameUI/GameIcons/Game1:scale:x")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, 0, -0.25, 0.25, 0),
-"times": PackedFloat32Array(3.6, 3.9)
-}
-tracks/19/type = "bezier"
-tracks/19/imported = false
-tracks/19/enabled = true
-tracks/19/path = NodePath("GameUI/GameIcons/Game1:scale:y")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, 0, -0.25, 0.25, 0),
-"times": PackedFloat32Array(3.6, 3.9)
-}
-tracks/20/type = "method"
-tracks/20/imported = false
-tracks/20/enabled = true
-tracks/20/path = NodePath(".")
-tracks/20/interp = 1
-tracks/20/loop_wrap = true
-tracks/20/keys = {
 "times": PackedFloat32Array(0.2, 2.8, 3.9),
 "transitions": PackedFloat32Array(1, 1, 1),
 "values": [{
@@ -1393,31 +1137,17 @@ tracks/20/keys = {
 "method": &"next_game"
 }]
 }
-tracks/21/type = "value"
-tracks/21/imported = false
-tracks/21/enabled = true
-tracks/21/path = NodePath("GameUI/GameIcons/Gamuto:frame")
-tracks/21/interp = 1
-tracks/21/loop_wrap = true
-tracks/21/keys = {
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("GameUI/GameIcons/Gamuto:frame")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
 "times": PackedFloat32Array(0, 0.4, 0.5, 0.7, 0.9, 1, 1.1, 1.2, 1.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 10, 11, 12, 13, 14, 15, 16, 17]
-}
-tracks/22/type = "method"
-tracks/22/imported = false
-tracks/22/enabled = true
-tracks/22/path = NodePath("TimerIndicator")
-tracks/22/interp = 1
-tracks/22/loop_wrap = true
-tracks/22/keys = {
-"times": PackedFloat32Array(3.6),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"activate"
-}]
 }
 
 [sub_resource type="Animation" id="19"]
@@ -1588,71 +1318,35 @@ tracks/14/keys = {
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0, -318.821, -720, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 2.8, 3.2)
 }
-tracks/15/type = "method"
+tracks/15/type = "bezier"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("MicrogameMaskViewport/MicrogameMask")
+tracks/15/path = NodePath("GameUI/GameIcons/Game1:scale:x")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
-"times": PackedFloat32Array(0.2),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"hide"
-}]
+"handle_modes": PackedInt32Array(),
+"points": PackedFloat32Array(),
+"times": PackedFloat32Array()
 }
 tracks/16/type = "bezier"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("MicrogameMaskViewport/MicrogameMask:scale:x")
+tracks/16/path = NodePath("GameUI/GameIcons/Game1:scale:y")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(8, 0, 0, 0, 0.25, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.2)
+"handle_modes": PackedInt32Array(),
+"points": PackedFloat32Array(),
+"times": PackedFloat32Array()
 }
-tracks/17/type = "bezier"
+tracks/17/type = "method"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("MicrogameMaskViewport/MicrogameMask:scale:y")
+tracks/17/path = NodePath(".")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(8, 0, 0, 0, 0.25, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.2)
-}
-tracks/18/type = "bezier"
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/path = NodePath("GameUI/GameIcons/Game1:scale:x")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = {
-"handle_modes": PackedInt32Array(),
-"points": PackedFloat32Array(),
-"times": PackedFloat32Array()
-}
-tracks/19/type = "bezier"
-tracks/19/imported = false
-tracks/19/enabled = true
-tracks/19/path = NodePath("GameUI/GameIcons/Game1:scale:y")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/keys = {
-"handle_modes": PackedInt32Array(),
-"points": PackedFloat32Array(),
-"times": PackedFloat32Array()
-}
-tracks/20/type = "method"
-tracks/20/imported = false
-tracks/20/enabled = true
-tracks/20/path = NodePath(".")
-tracks/20/interp = 1
-tracks/20/loop_wrap = true
-tracks/20/keys = {
 "times": PackedFloat32Array(0.2, 2.8, 4.2, 4.201, 8),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "values": [{
@@ -1672,58 +1366,58 @@ tracks/20/keys = {
 "method": &"win_game"
 }]
 }
-tracks/21/type = "value"
-tracks/21/imported = false
-tracks/21/enabled = true
-tracks/21/path = NodePath("GameUI/GameIcons/Gamuto:frame")
-tracks/21/interp = 1
-tracks/21/loop_wrap = true
-tracks/21/keys = {
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("GameUI/GameIcons/Gamuto:frame")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
 "times": PackedFloat32Array(0, 0.4, 0.5, 0.7, 0.9, 1, 1.1, 1.2, 1.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 10, 11, 12, 13, 14, 15, 16, 17]
 }
-tracks/22/type = "bezier"
-tracks/22/imported = false
-tracks/22/enabled = true
-tracks/22/path = NodePath("GameUI/GameIcons/Gamuto:rotation_degrees")
-tracks/22/interp = 1
-tracks/22/loop_wrap = true
-tracks/22/keys = {
+tracks/19/type = "bezier"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("GameUI/GameIcons/Gamuto:rotation_degrees")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(0, -0.25, 0, 0, -318.821, -720, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(2.8, 3.2)
 }
-tracks/23/type = "bezier"
-tracks/23/imported = false
-tracks/23/enabled = true
-tracks/23/path = NodePath("GameUI/Cursor:position:x")
-tracks/23/interp = 1
-tracks/23/loop_wrap = true
-tracks/23/keys = {
+tracks/20/type = "bezier"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("GameUI/Cursor:position:x")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(-600, -0.25, 0, 0, -0.1, -1300, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(2.8, 3.2)
 }
-tracks/24/type = "bezier"
-tracks/24/imported = false
-tracks/24/enabled = true
-tracks/24/path = NodePath("GameUI/Cursor:position:y")
-tracks/24/interp = 1
-tracks/24/loop_wrap = true
-tracks/24/keys = {
+tracks/21/type = "bezier"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("GameUI/Cursor:position:y")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
 "handle_modes": PackedInt32Array(),
 "points": PackedFloat32Array(),
 "times": PackedFloat32Array()
 }
-tracks/25/type = "method"
-tracks/25/imported = false
-tracks/25/enabled = true
-tracks/25/path = NodePath("GameUI/Life")
-tracks/25/interp = 1
-tracks/25/loop_wrap = true
-tracks/25/keys = {
+tracks/22/type = "method"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("GameUI/Life")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
 "times": PackedFloat32Array(4.2),
 "transitions": PackedFloat32Array(1),
 "values": [{
@@ -1731,42 +1425,17 @@ tracks/25/keys = {
 "method": &"set_lives"
 }]
 }
-tracks/26/type = "value"
-tracks/26/imported = false
-tracks/26/enabled = true
-tracks/26/path = NodePath("GameUI/GMTConfetti:emitting")
-tracks/26/interp = 1
-tracks/26/loop_wrap = true
-tracks/26/keys = {
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("GameUI/GMTConfetti:emitting")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
 "times": PackedFloat32Array(4.2),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
-}
-tracks/27/type = "method"
-tracks/27/imported = false
-tracks/27/enabled = true
-tracks/27/path = NodePath("TimerIndicator")
-tracks/27/interp = 1
-tracks/27/loop_wrap = true
-tracks/27/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"values": []
-}
-tracks/28/type = "method"
-tracks/28/imported = false
-tracks/28/enabled = true
-tracks/28/path = NodePath("Timer")
-tracks/28/interp = 1
-tracks/28/loop_wrap = true
-tracks/28/keys = {
-"times": PackedFloat32Array(4.2),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"stop"
-}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6caji"]
@@ -1837,47 +1506,9 @@ _data = {
 "idle": SubResource("18")
 }
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_ilc1l"]
-viewport_path = NodePath("MicrogameMaskViewport")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_akh3q"]
-resource_local_to_scene = true
-shader = ExtResource("15_yl0rt")
-shader_parameter/mask_texture = SubResource("ViewportTexture_ilc1l")
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vmr0q"]
-
-[sub_resource type="StyleBoxEmpty" id="21"]
-
-[sub_resource type="StyleBoxFlat" id="22"]
-bg_color = Color(0.615686, 0.156863, 0.854902, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b4d5i"]
-bg_color = Color(0.615686, 0.156863, 0.854902, 1)
-border_color = Color(0.8, 0.8, 0.8, 0)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="Theme" id="23"]
-ProgressBar/styles/background = SubResource("StyleBoxEmpty_vmr0q")
-ProgressBar/styles/bg = SubResource("21")
-ProgressBar/styles/fg = SubResource("22")
-ProgressBar/styles/fill = SubResource("StyleBoxFlat_b4d5i")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_yu0bq"]
-viewport_path = NodePath("MicrogameMaskViewport")
-
 [node name="Main" type="Node2D"]
 script = ExtResource("2")
 microgame_paths = ["res://microjogos/demo/frogger/cenas/main.tscn", "res://microjogos/demo/tiro_ao_alvo/cenas/main.tscn"]
-
-[node name="Timer" type="Timer" parent="."]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -1928,7 +1559,7 @@ text = "69%"
 [node name="GameIcons" type="Node2D" parent="GameUI"]
 
 [node name="Gamuto" type="Sprite2D" parent="GameUI/GameIcons"]
-position = Vector2(-600, -120)
+position = Vector2(-1300, -120)
 rotation = -12.5664
 scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("1")
@@ -1936,27 +1567,28 @@ hframes = 18
 script = ExtResource("15")
 
 [node name="Game1" type="Sprite2D" parent="GameUI/GameIcons"]
-position = Vector2(-100, -120)
+position = Vector2(-600, -120)
 texture = ExtResource("8")
 script = ExtResource("15")
 
 [node name="Game2" type="Sprite2D" parent="GameUI/GameIcons"]
-position = Vector2(400, -120)
+position = Vector2(-100, -120)
 texture = ExtResource("8")
 script = ExtResource("15")
 
 [node name="Game3" type="Sprite2D" parent="GameUI/GameIcons"]
-position = Vector2(900, -120)
+position = Vector2(400, -120)
 texture = ExtResource("8")
 script = ExtResource("15")
 
 [node name="Game4" type="Sprite2D" parent="GameUI/GameIcons"]
-position = Vector2(1400, -120)
+position = Vector2(900, -120)
 texture = ExtResource("8")
 script = ExtResource("15")
 
 [node name="Cursor" type="Sprite2D" parent="GameUI"]
 position = Vector2(-600, -120)
+rotation = -12.5664
 texture = ExtResource("7")
 
 [node name="Amount" type="RichTextLabel" parent="GameUI"]
@@ -1998,62 +1630,4 @@ initial_velocity_max = 1800.0
 angle_min = -15.0
 angle_max = 15.0
 
-[node name="MicrogameMaskViewport" type="SubViewport" parent="."]
-size = Vector2i(1920, 1080)
-
-[node name="MicrogameMask" type="Sprite2D" parent="MicrogameMaskViewport"]
-light_mask = 2
-visibility_layer = 2
-position = Vector2(360, 420)
-scale = Vector2(1e-05, 1e-05)
-texture = ExtResource("8")
-
-[node name="Display" type="SubViewportContainer" parent="."]
-light_mask = 2
-visibility_layer = 2
-material = SubResource("ShaderMaterial_akh3q")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 1.0
-offset_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(8.5, 8.5)
-size_flags_horizontal = 6
-size_flags_vertical = 6
-stretch = true
-
-[node name="Game" type="SubViewport" parent="Display"]
-handle_input_locally = false
-msaa_2d = 2
-size = Vector2i(2, 2)
-render_target_update_mode = 4
-
-[node name="TimerIndicator" type="Node2D" parent="."]
-script = ExtResource("16")
-
-[node name="TimerProgressBar" type="ProgressBar" parent="TimerIndicator"]
-offset_left = 122.0
-offset_top = 1199.0
-offset_right = 1802.0
-offset_bottom = 1239.0
-theme = SubResource("23")
-max_value = 1.0
-step = 0.001
-value = 1.0
-show_percentage = false
-
-[node name="Clock" type="Sprite2D" parent="TimerIndicator"]
-position = Vector2(120, 1215)
-rotation = -0.174533
-texture = ExtResource("18")
-script = ExtResource("17")
-trauma = 0.3
-
-[node name="MicrogameMask2" type="Sprite2D" parent="."]
-visible = false
-light_mask = 2
-visibility_layer = 2
-texture = SubResource("ViewportTexture_yu0bq")
-centered = false
+[node name="MinigameDisplay" parent="." instance=ExtResource("15_a3ydg")]
