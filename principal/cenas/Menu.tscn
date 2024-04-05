@@ -1,5 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dov2m2kbxje2j"]
-
+[gd_scene load_steps=17 format=3 uid="uid://dov2m2kbxje2j"]
 
 [ext_resource type="Texture2D" uid="uid://ja6urlsch5m7" path="res://principal/recursos/sprites/MenuBase.png" id="1"]
 [ext_resource type="Script" path="res://principal/cenas/scripts/Logo.gd" id="2"]
@@ -51,7 +50,6 @@ script = ExtResource("2")
 [node name="Logo" type="Sprite2D" parent="Title"]
 texture_filter = 6
 position = Vector2(960, 224)
-scale = Vector2(0.4, 0.4)
 texture = ExtResource("5_qmgh3")
 
 [node name="Title" type="RichTextLabel" parent="Title"]
@@ -68,50 +66,37 @@ text = "[center][shake level=30]GAMUTOWARE"
 
 [node name="Buttons" type="Node2D" parent="."]
 
-[node name="Jam" type="Button" parent="Buttons"]
-offset_left = 872.0
-offset_top = 707.0
-offset_right = 1049.0
-offset_bottom = 809.0
-focus_neighbor_left = NodePath("../Mute")
-focus_neighbor_top = NodePath("../PT")
-focus_neighbor_right = NodePath("../PT")
-focus_neighbor_bottom = NodePath("../Arcade")
-theme = ExtResource("8_sosii")
-text = "JAM"
-flat = true
-script = ExtResource("6")
-path = "res://principal/cenas/Jam.tscn"
-start_focused = true
+[node name="Buttons" type="VBoxContainer" parent="Buttons"]
+offset_top = 712.0
+offset_right = 1920.0
+offset_bottom = 1048.0
+alignment = 1
 
-[node name="Arcade" type="Button" parent="Buttons"]
-offset_left = 810.0
-offset_top = 826.0
-offset_right = 1109.0
-offset_bottom = 928.0
-focus_neighbor_top = NodePath("../Jam")
-focus_neighbor_right = NodePath("../PT")
+[node name="Play" type="Button" parent="Buttons/Buttons"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../../Mute")
+focus_neighbor_top = NodePath("../../PT")
+focus_neighbor_right = NodePath("../../PT")
 focus_neighbor_bottom = NodePath("../Creditos")
 theme = ExtResource("8_sosii")
-text = "ARCADE"
+text = "PLAY"
 flat = true
 script = ExtResource("6")
-path = "res://principal/cenas/Arcade.tscn"
+path = "res://principal/cenas/Play.tscn"
+start_focused = true
+translation_code = "play"
 
-[node name="Creditos" type="Button" parent="Buttons"]
-offset_left = 670.0
-offset_top = 950.0
-offset_right = 1249.0
-offset_bottom = 1052.0
-focus_neighbor_top = NodePath("../Arcade")
-focus_neighbor_right = NodePath("../PT")
+[node name="Creditos" type="Button" parent="Buttons/Buttons"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../../Mute")
+focus_neighbor_top = NodePath("../Play")
+focus_neighbor_right = NodePath("../../PT")
 theme = ExtResource("8_sosii")
-text = "CREDITOS"
+text = "COLEÇÃO"
 flat = true
 script = ExtResource("6")
 path = "res://principal/cenas/Creditos.tscn"
-pt_text = "CREDITOS"
-en_text = "CREDITS"
+translation_code = "collection"
 
 [node name="PT" type="Button" parent="Buttons"]
 offset_left = 1611.0
@@ -120,7 +105,7 @@ offset_right = 1737.0
 offset_bottom = 132.0
 focus_neighbor_left = NodePath("../Mute")
 focus_neighbor_right = NodePath("../EN")
-focus_neighbor_bottom = NodePath("../Jam")
+focus_neighbor_bottom = NodePath("../Buttons/Play")
 theme = ExtResource("8_sosii")
 text = "PT"
 flat = true
@@ -132,12 +117,12 @@ offset_top = 30.0
 offset_right = 1888.0
 offset_bottom = 132.0
 focus_neighbor_left = NodePath("../PT")
-focus_neighbor_bottom = NodePath("../Jam")
+focus_neighbor_bottom = NodePath("../Buttons/Play")
 theme = ExtResource("8_sosii")
 text = "EN"
 flat = true
 script = ExtResource("8")
-translation_code = 1
+aim_language = 1
 
 [node name="Mute" type="TextureButton" parent="Buttons"]
 offset_left = 6.0
@@ -145,7 +130,7 @@ offset_top = -4.0
 offset_right = 156.0
 offset_bottom = 146.0
 focus_neighbor_right = NodePath("../PT")
-focus_neighbor_bottom = NodePath("../Jam")
+focus_neighbor_bottom = NodePath("../Buttons/Play")
 toggle_mode = true
 texture_normal = ExtResource("11_yush3")
 texture_pressed = ExtResource("12_jre51")

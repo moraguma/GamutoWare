@@ -1,17 +1,72 @@
-[gd_scene load_steps=9 format=3 uid="uid://bhkyw6qpi38e6"]
+[gd_scene load_steps=16 format=3 uid="uid://bhkyw6qpi38e6"]
 
 [ext_resource type="Script" path="res://principal/cenas/scripts/TransitionButton.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://breiq50cu5612" path="res://principal/cenas/BG.tscn" id="2_gn47d"]
 [ext_resource type="Script" path="res://principal/cenas/scripts/TranslatableText.gd" id="5"]
 [ext_resource type="Theme" uid="uid://dt5djib7huxvm" path="res://principal/recursos/themes/ButtonTheme.tres" id="6"]
 [ext_resource type="PackedScene" uid="uid://dr5dxsgtiww88" path="res://principal/cenas/CreditosInfo.tscn" id="7_t6oxa"]
+[ext_resource type="PackedScene" uid="uid://dnhn2yadjkru6" path="res://principal/cenas/MinigameDisplay.tscn" id="8_rotds"]
 [ext_resource type="Theme" uid="uid://cb4tlwb81nq48" path="res://principal/recursos/themes/TitleTheme.tres" id="9"]
+[ext_resource type="Texture2D" uid="uid://d1pcvjogk0whm" path="res://principal/recursos/sprites/GMTIconSpritesheet.png" id="9_vqk2p"]
+[ext_resource type="Script" path="res://principal/cenas/scripts/CreditsWinDisplay.gd" id="10_mlycp"]
 [ext_resource type="Script" path="res://principal/cenas/scripts/Creditos.gd" id="11"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_88gp3"]
 bg_color = Color(0.572549, 0.572549, 0.572549, 0)
 border_width_right = 30
 border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="Animation" id="Animation_l0el1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WinDisplay:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_dwgyt"]
+resource_name = "lose"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WinDisplay:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+
+[sub_resource type="Animation" id="Animation_lltom"]
+resource_name = "win"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WinDisplay:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [9, 10, 11, 12, 13, 14, 15, 16, 17]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5cvp6"]
+_data = {
+"RESET": SubResource("Animation_l0el1"),
+"lose": SubResource("Animation_dwgyt"),
+"win": SubResource("Animation_lltom")
+}
 
 [node name="Credits" type="Node2D"]
 script = ExtResource("11")
@@ -45,8 +100,8 @@ bbcode_enabled = true
 text = "[center][shake rate=20 level=30]CRÉDITOS"
 fit_content = true
 script = ExtResource("5")
-pt_text = "[center][shake rate=20 level=30]CRÉDITOS"
-en_text = "[center][shake rate=20 level=30]CREDITS"
+translation_code = "collection"
+center_text = true
 
 [node name="Minigames" type="ScrollContainer" parent="Credits/Minigames/VBoxContainer"]
 custom_minimum_size = Vector2(0, 813)
@@ -70,6 +125,28 @@ text = "MENU"
 flat = true
 script = ExtResource("2")
 path = "res://principal/cenas/Menu.tscn"
+translation_code = "back"
 
 [node name="CreditosInfo" parent="Credits" instance=ExtResource("7_t6oxa")]
 position = Vector2(1472, 540)
+
+[node name="MinigameDisplay" parent="." instance=ExtResource("8_rotds")]
+z_index = 1
+
+[node name="WinDisplay" type="Sprite2D" parent="."]
+visible = false
+z_index = 1
+position = Vector2(944, 480)
+rotation = -12.5664
+texture = ExtResource("9_vqk2p")
+hframes = 18
+script = ExtResource("10_mlycp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="WinDisplay"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_5cvp6")
+}
+
+[node name="Timer" type="Timer" parent="WinDisplay"]
+one_shot = true
