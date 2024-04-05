@@ -59,10 +59,10 @@ rotation = 0.699799
 shape = SubResource("CapsuleShape2D_7k6ys")
 one_way_collision_margin = 108.0
 
-[node name="Music" type="AudioStreamPlayer2D" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_f4f6v")
 volume_db = 7.924
 
-[node name="Death" type="AudioStreamPlayer2D" parent="."]
+[node name="Death" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_6d4mp")
 volume_db = 7.924
