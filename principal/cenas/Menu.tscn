@@ -50,7 +50,6 @@ script = ExtResource("2")
 [node name="Logo" type="Sprite2D" parent="Title"]
 texture_filter = 6
 position = Vector2(960, 224)
-scale = Vector2(0.4, 0.4)
 texture = ExtResource("5_qmgh3")
 
 [node name="Title" type="RichTextLabel" parent="Title"]
