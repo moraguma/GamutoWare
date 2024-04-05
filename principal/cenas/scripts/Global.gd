@@ -117,6 +117,16 @@ func get_filter_settings():
 	return save.filter_settings
 
 
+func get_language():
+	if save.language == -1:
+		match OS.get_locale_language():
+			"pt":
+				set_language(Global.LANGUAGE.PT)
+			"en":
+				set_language(Global.LANGUAGE.EN)
+	return save.language
+
+
 func set_modifier_settings(modifier_settings):
 	save.modifier_settings = modifier_settings
 
@@ -127,6 +137,11 @@ func set_minigame_settings(minigame_settings):
 
 func set_filter_settings(filter_settings):
 	save.filter_settings = filter_settings
+
+
+func set_language(language):
+	save.language = language
+	save_game()
 
 
 func register_minigame(path):

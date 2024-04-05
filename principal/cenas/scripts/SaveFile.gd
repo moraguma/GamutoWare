@@ -15,6 +15,7 @@ extends Resource
 
 
 @export var highscore = 0
+@export var language = -1
 
 
 @export var misc = {}

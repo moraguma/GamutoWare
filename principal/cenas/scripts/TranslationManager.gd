@@ -8,10 +8,12 @@ const TRANSLATIONS = {
 var translation
 
 func _ready() -> void:
-	load_translation(Global.LANGUAGE.PT)
+	load_translation(Global.get_language())
 
 
 func load_translation(code):
+	Global.set_language(code)
+	
 	Global.language = code
 	
 	var path = TRANSLATIONS[code]
