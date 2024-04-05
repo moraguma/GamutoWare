@@ -12,19 +12,24 @@ const LERP_WEIGHT = 0.15
 const TOTAL_COVER_COLLUMS = 2
 
 
-var last_focus
+var last_pressed
 var aim_pos = MINIGAMES_POS
+var playing = false
 
 
 @onready var minigame_data = preload("res://principal/recursos/data/Minigames.gd").new().minigame_data
 @onready var credits = $Credits
 @onready var minigames_container = $Credits/Minigames/VBoxContainer/Minigames/GridContainer
 @onready var menu_button = $Credits/Minigames/VBoxContainer/Menu
+@onready var minigame_display = $MinigameDisplay
+@onready var win_display = $WinDisplay
 
 @onready var credits_info = $Credits/CreditosInfo
 
 
 func _ready():
+	minigame_display.set_mask_center(Vector2(960, 540))
+	
 	for minigame in minigame_data:
 		var new_cover_button = CoverButton.instantiate()
 		var active = Global.check_minigame(minigame)
@@ -64,31 +69,49 @@ func _ready():
 	cover_buttons[0].button.grab_focus()
 
 
-func _input(event):
-	if Input.is_action_just_pressed("sair") and block_menu:
-		call_deferred("back_to_covers")
-
-
 func _process(delta):
 	credits.position = credits.position.lerp(aim_pos, LERP_WEIGHT)
 
 
 func detail(path, button):
-	SoundController.play_sfx("click")
-	
-	var credits_data = load(minigame_data[path]["credits"]).new()
-	
-	var title
-	var body
-	match Global.language:
-		Global.LANGUAGE.PT:
-			title = credits_data.title_pt
-			body = credits_data.credits_pt
-		Global.LANGUAGE.EN:
-			title = credits_data.title_en
-			body = credits_data.credits_en
-	
-	credits_info.display(title, body)
+	if not playing:
+		if last_pressed == button: # Play microgame
+			if path == "gamutoware":
+				fail_detail()
+			else:
+				playing = true
+				button.release_focus()
+				
+				minigame_display.start_game(path)
+				await minigame_display.done
+				if minigame_display.won:
+					win_display.win()
+				else:
+					win_display.lose()
+				
+				button.grab_focus()
+				playing = false
+		else: # Give detail
+			if last_pressed != null:
+				last_pressed.get_parent().hide_play()
+			last_pressed = button
+			button.get_parent().show_play()
+			
+			SoundController.play_sfx("click")
+			
+			var credits_data = load(minigame_data[path]["credits"]).new()
+			
+			var title
+			var body
+			match Global.language:
+				Global.LANGUAGE.PT:
+					title = credits_data.title_pt
+					body = credits_data.credits_pt
+				Global.LANGUAGE.EN:
+					title = credits_data.title_en
+					body = credits_data.credits_en
+			
+			credits_info.display(title, body)
 
 func fail_detail():
 	SoundController.play_sfx("damage")

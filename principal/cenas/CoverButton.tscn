@@ -1,10 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://ciqgtpvnnggd1"]
+[gd_scene load_steps=12 format=3 uid="uid://ciqgtpvnnggd1"]
 
 [ext_resource type="Texture2D" uid="uid://dckwaw103r1cc" path="res://principal/recursos/sprites/capagmtware.png" id="1_6jjfp"]
 [ext_resource type="Shader" path="res://principal/recursos/shaders/CornerRadius.gdshader" id="1_u4r6t"]
 [ext_resource type="Script" path="res://principal/cenas/scripts/CoverButton.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://wfjt5b1c7wu7" path="res://principal/recursos/sprites/capapreta.png" id="4_rte3u"]
 [ext_resource type="Texture2D" uid="uid://5s6aanelna3g" path="res://principal/recursos/sprites/GamutoHead.png" id="5_1nsvi"]
+[ext_resource type="Theme" uid="uid://v3d547aawndh" path="res://principal/recursos/themes/BodyTheme.tres" id="6_x1ysr"]
+[ext_resource type="StyleBox" uid="uid://dtrtql2gw634d" path="res://principal/recursos/themes/BodyStyleBox.tres" id="7_w3nfy"]
+[ext_resource type="Script" path="res://principal/cenas/scripts/TranslatableText.gd" id="8_p5tao"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vrlym"]
 shader = ExtResource("1_u4r6t")
@@ -50,6 +53,27 @@ position = Vector2(409, 20)
 rotation = 0.196535
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("5_1nsvi")
+
+[node name="Play" type="Node2D" parent="."]
+visible = false
+position = Vector2(225, 216)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Play"]
+clip_contents = false
+offset_left = -156.0
+offset_top = -40.0
+offset_right = 156.0
+offset_bottom = 43.0
+mouse_filter = 2
+theme = ExtResource("6_x1ysr")
+theme_override_font_sizes/normal_font_size = 64
+theme_override_styles/normal = ExtResource("7_w3nfy")
+bbcode_enabled = true
+text = "[center]PLAY"
+fit_content = true
+script = ExtResource("8_p5tao")
+translation_code = "play"
+center_text = true
 
 [connection signal="focus_entered" from="Button" to="." method="_on_focus_entered"]
 [connection signal="focus_exited" from="Button" to="." method="_on_focus_exited"]
