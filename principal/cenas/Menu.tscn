@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://ja6urlsch5m7" path="res://principal/recursos/sprites/MenuBase.png" id="1"]
 [ext_resource type="Script" path="res://principal/cenas/scripts/Logo.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://cs75vvw01oafl" path="res://principal/recursos/sprites/GMToutline.png" id="5"]
-[ext_resource type="Texture2D" uid="uid://daso455nemo7n" path="res://principal/recursos/sprites/GMTTitleFace.png" id="5_qmgh3"]
 [ext_resource type="Script" path="res://principal/cenas/scripts/TransitionButton.gd" id="6"]
+[ext_resource type="Texture2D" uid="uid://bk1fle4aty18" path="res://principal/recursos/sprites/GMTMenu.png" id="6_kbpfi"]
 [ext_resource type="Script" path="res://principal/cenas/scripts/Menu.gd" id="7"]
 [ext_resource type="Theme" uid="uid://cb4tlwb81nq48" path="res://principal/recursos/themes/TitleTheme.tres" id="7_6ckci"]
 [ext_resource type="Script" path="res://principal/cenas/scripts/TranslationSetButton.gd" id="8"]
@@ -50,7 +50,7 @@ script = ExtResource("2")
 [node name="Logo" type="Sprite2D" parent="Title"]
 texture_filter = 6
 position = Vector2(960, 224)
-texture = ExtResource("5_qmgh3")
+texture = ExtResource("6_kbpfi")
 
 [node name="Title" type="RichTextLabel" parent="Title"]
 clip_contents = false
