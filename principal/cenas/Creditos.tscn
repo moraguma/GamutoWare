@@ -100,7 +100,7 @@ bbcode_enabled = true
 text = "[center][shake rate=20 level=30]CRÉDITOS"
 fit_content = true
 script = ExtResource("5")
-translation_code = "credits"
+translation_code = "collection"
 center_text = true
 
 [node name="Minigames" type="ScrollContainer" parent="Credits/Minigames/VBoxContainer"]
@@ -134,6 +134,7 @@ position = Vector2(1472, 540)
 z_index = 1
 
 [node name="WinDisplay" type="Sprite2D" parent="."]
+visible = false
 z_index = 1
 position = Vector2(944, 480)
 rotation = -12.5664

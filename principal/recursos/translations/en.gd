@@ -3,7 +3,7 @@ extends Resource
 
 @export var translations = {
 	"play": "PLAY",
-	"credits": "CREDITS",
+	"collection": "COLLECTION",
 	"back": "BACK",
 
 	"play_explanation": "Choose your settings and press play!",

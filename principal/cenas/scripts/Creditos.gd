@@ -81,6 +81,7 @@ func detail(path, button):
 			else:
 				playing = true
 				button.release_focus()
+				SoundController.mute_menu()
 				
 				minigame_display.start_game(path)
 				await minigame_display.done
@@ -89,6 +90,7 @@ func detail(path, button):
 				else:
 					win_display.lose()
 				
+				SoundController.unmute_menu()
 				button.grab_focus()
 				playing = false
 		else: # Give detail

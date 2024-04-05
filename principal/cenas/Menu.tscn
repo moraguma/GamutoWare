@@ -92,11 +92,11 @@ focus_neighbor_left = NodePath("../../Mute")
 focus_neighbor_top = NodePath("../Play")
 focus_neighbor_right = NodePath("../../PT")
 theme = ExtResource("8_sosii")
-text = "CREDITOS"
+text = "COLEÇÃO"
 flat = true
 script = ExtResource("6")
 path = "res://principal/cenas/Creditos.tscn"
-translation_code = "credits"
+translation_code = "collection"
 
 [node name="PT" type="Button" parent="Buttons"]
 offset_left = 1611.0
