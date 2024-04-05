@@ -14,7 +14,7 @@ const minigame_packs = {
 # "res://microjogos/moraguma/whale_eater/cenas/Main.tscn"
 
 const filters = {
-	"13+": ["res://microjogos/2022S1/baleia/cenas/baleiaGame.tscn", "res://microjogos/2023S1/projeto-thedeas/cenas/main.tscn"]
+	"no_gore": ["res://microjogos/2022S1/baleia/cenas/baleiaGame.tscn", "res://microjogos/2023S1/projeto-thedeas/cenas/main.tscn"]
 }
 
 const minigame_data = {

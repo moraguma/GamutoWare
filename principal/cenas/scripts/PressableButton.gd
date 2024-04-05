@@ -4,8 +4,7 @@ extends Button
 @export var start_focused = false
 
 
-@export var pt_text: String
-@export var en_text: String
+@export var translation_code: String
 
 
 func _ready():
@@ -28,9 +27,5 @@ func _pressed():
 
 
 func update_translation():
-	if pt_text != "" and en_text != "":
-		match Global.language:
-			Global.LANGUAGE.PT:
-				text = pt_text
-			Global.LANGUAGE.EN:
-				text = en_text
+	if translation_code != "":
+		text = TranslationManager.get_translation(translation_code)

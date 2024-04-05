@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvdvv5pe87rb2"
-path="res://.godot/imported/Stop Bullying.jpg-1f5dc8a6db7fb0621877dda53fd05908.ctex"
+uid="uid://wfjt5b1c7wu7"
+path="res://.godot/imported/capapreta.png-dd92b0aa430a5e18c4560c5af59a9468.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://principal/recursos/fonts/Stop Bullying.jpg"
-dest_files=["res://.godot/imported/Stop Bullying.jpg-1f5dc8a6db7fb0621877dda53fd05908.ctex"]
+source_file="res://principal/recursos/sprites/capapreta.png"
+dest_files=["res://.godot/imported/capapreta.png-dd92b0aa430a5e18c4560c5af59a9468.ctex"]
 
 [params]
 

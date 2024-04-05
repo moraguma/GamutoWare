@@ -52,7 +52,13 @@ func mute_game():
 
 func unmute_game():
 	game_aim_db = ON_DB
-	
+
+func mute_menu():
+	menu_aim_db = OFF_DB
+
+func unmute_menu():
+	menu_aim_db = ON_DB
+
 func mute_all():
 	AudioServer.set_bus_mute(MASTER_IDX, true)
 
