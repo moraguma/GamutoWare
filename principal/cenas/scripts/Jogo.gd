@@ -136,7 +136,7 @@ func update_microgames():
 	
 	microgame_queue.pop_front()
 	
-	if len(microgame_queue) >= 1:
+	if len(microgame_queue) > 1:
 		ResourceLoader.load_threaded_request(microgame_queue[1])
 	match mode:
 		MODE.ENDLESS:
@@ -183,7 +183,7 @@ func _ready():
 					microgame_queue = microgame_queue.slice(0, i) + \
 						microgame_queue.slice(i + 1, minigame_data[microgame_queue[i]]["difficulty"]) + \
 						[microgame_queue[i]] + microgame_queue.slice(minigame_data[microgame_queue[i]]["difficulty"])
-	for i in range(2):
+	for i in range(min(2,len(microgame_queue))):
 		ResourceLoader.load_threaded_request(microgame_queue[i])
 		
 	display_icons()
