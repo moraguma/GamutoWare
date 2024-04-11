@@ -24,9 +24,9 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("CACE!WW")
+			NotificationCenter.notify("DINNER TIME")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("HUNT!")
+			NotificationCenter.notify("HORA DA JANTA")
 	
 	var wolf = $Lobo 
 	for i in range(2):
