@@ -11,6 +11,8 @@ signal lose
 const WIDTH = 1920
 const HEIGHT = 1080
 
+const Card = preload("res://microjogos/2024S1/projeto-andre/cenas/scripts/card.gd")
+
 @onready var b1 = $B1
 @onready var b2 = $B2
 @onready var b3 = $B3
