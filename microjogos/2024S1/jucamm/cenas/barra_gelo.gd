@@ -1,6 +1,9 @@
 extends RigidBody2D
 
 
+@onready var main = get_parent()
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	contact_monitor = true
@@ -10,9 +13,8 @@ func _ready():
 func _physics_process(delta):
 	var colisao = get_colliding_bodies()
 	for i in colisao:
-		print (colisao[0])
 		if i.is_in_group ("area"):
-			emit_signal("lose")
+			main.register_lose()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
