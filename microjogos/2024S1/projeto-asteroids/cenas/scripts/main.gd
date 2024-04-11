@@ -30,7 +30,9 @@ func _ready():
 			NotificationCenter.notify("SURVIVE!")
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("SOBREVIVA!")
-			
+	
+	$Music.play()
+	
 	game_start()
 	
 	
