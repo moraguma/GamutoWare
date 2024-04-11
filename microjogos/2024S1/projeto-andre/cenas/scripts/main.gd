@@ -42,7 +42,9 @@ func _ready():
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("<- FAÇA OU PASSA! ->")
 			$RichTextLabel.text = "FAÇO! = ←\nPASSO! = →"
-			
+	
+	$Fan.play()
+	
 	var all = all_cards()
 	
 	var c1 = pick_random_and_remove(all)
@@ -146,6 +148,8 @@ func pick_random_and_remove(array: Array):
 # perderá o jogo
 
 func choice_made(make: bool):
+	$Flip.play()
+	
 	chose = true
 	PLAYER.texture = get_texture(player_card)
 	
