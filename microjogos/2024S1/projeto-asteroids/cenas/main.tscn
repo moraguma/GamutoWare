@@ -63,3 +63,4 @@ stream = ExtResource("7_5d501")
 
 [connection signal="timeout" from="AsteroidTimer" to="." method="_on_asteroid_timer_timeout"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="timeout" from="WinTimer" to="." method="_on_win_timer_timeout"]

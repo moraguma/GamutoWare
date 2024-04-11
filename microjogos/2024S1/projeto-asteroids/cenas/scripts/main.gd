@@ -119,7 +119,7 @@ func _on_asteroid_timer_timeout():
  
 
 func _on_win_timer_timeout():
-	var a = get_node("/root/Main/Base/Player")
+	var a = get_node("Base/Player")
 	if a.is_alive:
 		register_win()
 	else:
