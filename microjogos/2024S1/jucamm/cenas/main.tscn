@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=18 format=3 uid="uid://bi0ahd7cv37i6"]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/jucamm/cenas/scripts/main.gd" id="1_y2abt"]
 [ext_resource type="Texture2D" uid="uid://c5mieq5qgp36a" path="res://microjogos/2024S1/jucamm/recursos/baetksj 3.jpg" id="3_7ccyx"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://rl6ndtum3pap" path="res://microjogos/2024S1/jucamm/cenas/barra_gelo.tscn" id="6_mosef"]
 [ext_resource type="Script" path="res://microjogos/2024S1/jucamm/cenas/barra_gelo.gd" id="7_u3jyc"]
 [ext_resource type="Texture2D" uid="uid://dgfliahx2awob" path="res://microjogos/2024S1/jucamm/recursos/espinhao.png" id="9_8wbuc"]
+[ext_resource type="AudioStream" uid="uid://btdotmh0rklui" path="res://microjogos/2024S1/jucamm/recursos/588617__urkki69__football-fans-chanting-in-brighton.ogg" id="10_cswbg"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_sxw3y"]
 rough = true
@@ -81,13 +82,13 @@ scale = Vector2(1.021, 0.965739)
 input_pickable = true
 mass = 6.11
 physics_material_override = SubResource("PhysicsMaterial_uqwpm")
-gravity_scale = 0.2
+gravity_scale = 0.55
 can_sleep = false
 angular_velocity = 17.8024
 script = ExtResource("7_u3jyc")
 
 [node name="Jogador" parent="." instance=ExtResource("5_5qhpv")]
-position = Vector2(23, 267)
+position = Vector2(-9, 267)
 mass = 1000.0
 physics_material_override = SubResource("PhysicsMaterial_2okgj")
 gravity_scale = 8.0
@@ -416,3 +417,7 @@ texture = ExtResource("9_8wbuc")
 [node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_cswbg")
+volume_db = -10.0
