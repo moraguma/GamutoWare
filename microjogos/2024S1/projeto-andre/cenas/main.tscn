@@ -85,7 +85,7 @@ texture = ExtResource("4_8fhab")
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_left = 57.0
 offset_top = 27.0
-offset_right = 150.0
+offset_right = 178.0
 offset_bottom = 74.0
 scale = Vector2(6, 6)
 text = "FAÇO! = ←
