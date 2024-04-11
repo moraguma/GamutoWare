@@ -7,17 +7,21 @@ extends Resource
 
 
 # Título do seu jogo
-var title_pt = "Titulo em Portugues"
-var title_en = "Title in English"
+var title_pt = "Faça ou passa!"
+var title_en = "Stand or pass!"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
-Criado por: [Seu nome!]
+Criado por: André Amadeu Satorres
 
-Você pode preencher o resto deste campo com creditos de assets utilizados, links para sua redes sociais ou qualquer outro detalhe que ache relevante
+Adivinhe se sua carta vence ou não o jogo!
+
+Baseado em fodinha. Você pode ler mais sobre as regras do jogo em https://ludopedia.com.br/jogo/fodinha
 """
 var credits_en = """
-Made by: [Your name!]
+Made by: André Amadeu Satorres
 
-Fill this space with credits to used assets, links to your social medias and whatever other details you think are important
+Guess whether or not your card wins the game!
+
+Based on fodinha. You can read more about the rules of the game in https://ludopedia.com.br/jogo/fodinha
 """
