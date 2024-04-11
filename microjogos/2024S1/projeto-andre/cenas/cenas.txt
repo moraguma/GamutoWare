@@ -1,3 +1,1 @@
 Coloque suas cenas aqui! A cena que vai rodar no jogo deve necessariamente ser a Main.tscn
-
-https://www.flickr.com/photos/167981955@N07/albums/72157719174927890/
