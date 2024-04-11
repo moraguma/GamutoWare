@@ -14,7 +14,7 @@ func _on_player_body_entered(body):
 	if body.is_in_group("asteroids"):
 		emit_signal("dead")
 		hide()
-		var a = get_node("/root/Main/Base/Player/AnimatedSprite2D")
+		var a = get_node("../AnimatedSprite2D")
 		a.play("new_animation")
 		
 	pass # Replace with function body.

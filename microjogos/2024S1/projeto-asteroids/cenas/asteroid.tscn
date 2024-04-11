@@ -74,7 +74,7 @@ shape = SubResource("CircleShape2D_u2c7u")
 sprite_frames = SubResource("SpriteFrames_wbfm7")
 animation = &"new_animation"
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_w1su8")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
