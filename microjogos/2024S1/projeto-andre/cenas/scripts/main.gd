@@ -44,6 +44,8 @@ func _ready():
 			$RichTextLabel.text = "FAÇO! = ←\nPASSO! = →"
 	
 	$Fan.play()
+	for item: CanvasItem in [b1, b2, b3, PLAYER]:
+		item.material.set_shader_parameter("mode", 0)
 	
 	var all = all_cards()
 	
@@ -153,6 +155,7 @@ func choice_made(make: bool):
 	chose = true
 	PLAYER.texture = get_texture(player_card)
 	
+	winner.material.set_shader_parameter("shine_color", Color("#ff00ffc8"))
 	winner.material.set_shader_parameter("mode", 1)
 	for m in draw_cards:
 		m.material.set_shader_parameter("mode", 2)
