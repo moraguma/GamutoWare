@@ -7,17 +7,19 @@ extends Resource
 
 
 # Título do seu jogo
-var title_pt = "Titulo em Portugues"
-var title_en = "Title in English"
+var title_pt = "Asteroide"
+var title_en = "Asteroid"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
-Criado por: [Seu nome!]
+Criado por: Skypillars
 
-Você pode preencher o resto deste campo com creditos de assets utilizados, links para sua redes sociais ou qualquer outro detalhe que ache relevante
+Som de tiro: https://freesound.org/people/MikeE63/sounds/466866/
+Som de explosão: https://freesound.org/people/magnuswaker/sounds/523091/
 """
 var credits_en = """
-Made by: [Your name!]
+Made by: Skypillars
 
-Fill this space with credits to used assets, links to your social medias and whatever other details you think are important
+Shot sfx: https://freesound.org/people/MikeE63/sounds/466866/
+Explosion sfx: https://freesound.org/people/magnuswaker/sounds/523091/
 """
