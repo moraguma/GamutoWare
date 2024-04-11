@@ -50,36 +50,32 @@ texture = ExtResource("2_ofn5e")
 [node name="B1" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_kvkvv")
 position = Vector2(480, 540)
-scale = Vector2(0.6, 0.6)
 texture = ExtResource("4_8fhab")
 
 [node name="B2" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_h4dn6")
 position = Vector2(960, 270)
-scale = Vector2(0.6, 0.6)
 texture = ExtResource("4_8fhab")
 
 [node name="B3" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_p828l")
 position = Vector2(1440, 540)
-scale = Vector2(0.6, 0.6)
 texture = ExtResource("4_8fhab")
 
 [node name="P" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_2byhy")
 position = Vector2(960, 810)
-scale = Vector2(0.6, 0.6)
 texture = ExtResource("4_8fhab")
 
 [node name="VIRA" type="Sprite2D" parent="."]
 position = Vector2(1556, 157)
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_8fhab")
 
 [node name="CIMA" type="Sprite2D" parent="."]
 position = Vector2(1454, 166)
 rotation = 1.5708
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_8fhab")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
