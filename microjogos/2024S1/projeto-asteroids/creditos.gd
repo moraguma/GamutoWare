@@ -16,10 +16,12 @@ Criado por: Skypillars
 
 Som de tiro: https://freesound.org/people/MikeE63/sounds/466866/
 Som de explosão: https://freesound.org/people/magnuswaker/sounds/523091/
+Música: https://opengameart.org/content/space-music
 """
 var credits_en = """
 Made by: Skypillars
 
 Shot sfx: https://freesound.org/people/MikeE63/sounds/466866/
 Explosion sfx: https://freesound.org/people/magnuswaker/sounds/523091/
+Music: https://opengameart.org/content/space-music
 """
