@@ -12,6 +12,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
 func asteroid_destroy():
+	$CollisionShape2D.queue_free()
 	$Sprite2D.visible = false
 	$AnimatedSprite2D.visible = true
 	$AudioStreamPlayer2D.play()
