@@ -15,6 +15,9 @@ func _physics_process(delta):
 	for i in colisao:
 		if i.is_in_group ("area"):
 			main.register_lose()
+	
+	if len(colisao) > 0:
+		$Bounce.play()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass

@@ -7,17 +7,17 @@ extends Resource
 
 
 # Título do seu jogo
-var title_pt = "Basquete Equilibrio"
+var title_pt = "Basquete Equilíbrio"
 var title_en = "Double Ball"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
-Criado por: [Juca]
+Criado por: Juca
 
-Você pode preencher o resto deste campo com creditos de assets utilizados, links para sua redes sociais ou qualquer outro detalhe que ache relevante
+SFX de andre.nascimento -- https://freesound.org/s/51461/ -- Licença: Attribution 4.0
 """
 var credits_en = """
-Made by: [Juca]
+Made by: Juca
 
-Fill this space with credits to used assets, links to your social medias and whatever other details you think are important
+SFX from andre.nascimento -- https://freesound.org/s/51461/ -- License: Attribution 4.0
 """

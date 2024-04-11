@@ -26,6 +26,7 @@ func _ready():
 		Global.LANGUAGE.EN:
 			NotificationCenter.notify("DON'T DROP IT!")
 	
+	$Music.play()
 	register_win()
 
 
