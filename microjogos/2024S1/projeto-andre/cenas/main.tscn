@@ -43,8 +43,8 @@ script = ExtResource("1_b63cv")
 [node name="WPP" type="TextureRect" parent="."]
 offset_left = -48.0
 offset_top = -45.0
-offset_right = 2003.0
-offset_bottom = 2775.0
+offset_right = 2000.0
+offset_bottom = 1155.0
 texture = ExtResource("2_ofn5e")
 
 [node name="B1" type="Sprite2D" parent="."]
