@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=11 format=3 uid="uid://bi0ahd7cv37i6"]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-andre/cenas/scripts/main.gd" id="1_b63cv"]
 [ext_resource type="Texture2D" uid="uid://05rbd8pekidl" path="res://microjogos/2024S1/projeto-andre/recursos/Velvet_S.jpg" id="2_ofn5e"]
 [ext_resource type="Shader" path="res://microjogos/2024S1/projeto-andre/cenas/main.gdshader" id="3_vfwhk"]
 [ext_resource type="Texture2D" uid="uid://cqndp3e4u2uru" path="res://microjogos/2024S1/projeto-andre/recursos/deck/back.png" id="4_8fhab"]
+[ext_resource type="AudioStream" uid="uid://c2n38jbreim8n" path="res://microjogos/2024S1/projeto-andre/recursos/SFX/cardFan1.ogg" id="5_dqsgj"]
+[ext_resource type="AudioStream" uid="uid://4clehx3ckn0h" path="res://microjogos/2024S1/projeto-andre/recursos/SFX/cardPlace2.ogg" id="6_ehpjm"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kvkvv"]
 shader = ExtResource("3_vfwhk")
@@ -88,3 +90,9 @@ text = "FAÇO! = ←
 PASSO! = →"
 fit_content = true
 scroll_active = false
+
+[node name="Fan" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_dqsgj")
+
+[node name="Flip" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_ehpjm")
