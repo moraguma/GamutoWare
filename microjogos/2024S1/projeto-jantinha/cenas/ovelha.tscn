@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://cfpwjhaf2dkrm" path="res://microjogos/2024S1/projeto-jantinha/recursos/New Piskel-1.png.png" id="2_4ru08"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_477qq"]
-radius = 110.027
+radius = 238.019
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rrlwn"]
-radius = 1646.42
+radius = 1501.11
 
 [node name="Node2D" type="Node2D"]
 

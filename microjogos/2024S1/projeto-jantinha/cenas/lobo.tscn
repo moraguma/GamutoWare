@@ -12,15 +12,13 @@ var botao
 func _physics_process(delta):
 	
 	var target_dir = Input.get_vector(\"esquerda\", \"direita\", \"cima\", \"baixo\")
-
 	
 		
-	if Input.is_action_pressed(\"acao\"):
+	if target_dir != Vector2(0, 0):
 			velocity += target_dir * SPEED * delta
-			
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.y = move_toward(velocity.y, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, SPEED * delta)
+		velocity.y = move_toward(velocity.y, 0, SPEED * delta)
 	move_and_slide()
 	
 "

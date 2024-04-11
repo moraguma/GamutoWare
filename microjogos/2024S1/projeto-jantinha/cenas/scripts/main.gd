@@ -11,6 +11,8 @@ signal lose
 const WIDTH = 1920
 const HEIGHT = 1080
 
+const WOLF_DISTANCE_FROM_SPAWN = Vector2(200, 100)
+
 
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES PADRÃO
@@ -22,9 +24,13 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
+			NotificationCenter.notify("CACE!WW")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FACA ALGO!")
+			NotificationCenter.notify("HUNT!")
+	
+	var wolf = $Lobo 
+	for i in range(2):
+		wolf.position[i] = (1 if randi() % 2 == 0 else -1) * WOLF_DISTANCE_FROM_SPAWN[i]
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como

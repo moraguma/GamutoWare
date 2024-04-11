@@ -21,11 +21,10 @@ scale = Vector2(7, 1.36)
 zoom = Vector2(4, 4)
 
 [node name="Cabra" parent="." instance=ExtResource("2_gsq2e")]
-position = Vector2(21, -8)
 scale = Vector2(0.114981, 0.102558)
 
 [node name="Lobo" parent="." instance=ExtResource("3_trt8y")]
-position = Vector2(-188, 73)
+position = Vector2(200, 100)
 scale = Vector2(0.187645, 0.176466)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
