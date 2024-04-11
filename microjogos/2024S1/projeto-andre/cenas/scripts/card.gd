@@ -1,5 +1,4 @@
 extends Node2D
-class_name Card
 
 var value
 var suit
@@ -11,7 +10,7 @@ func _init(v='2', s='O'):
 	value = v
 	suit = s
 	
-func cmp(other: Card, vMan):
+func cmp(other, vMan):
 	if value == other.value:
 		if value == vMan:
 			return suit_order.find(suit) - suit_order.find(other.suit)
