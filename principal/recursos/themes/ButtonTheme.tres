@@ -1,6 +1,5 @@
-[gd_resource type="Theme" load_steps=12 format=3 uid="uid://dt5djib7huxvm"]
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://dt5djib7huxvm"]
 
-[ext_resource type="FontFile" uid="uid://blcw2hkcbcxid" path="res://principal/recursos/fonts/Stop Bullying.otf" id="1"]
 [ext_resource type="StyleBox" uid="uid://b6essgcuagn6o" path="res://principal/recursos/themes/ButtonStyleBox.tres" id="1_d4rdk"]
 [ext_resource type="Texture2D" uid="uid://cip186bal41rd" path="res://principal/recursos/sprites/toggle_checked.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://v1y6bapablah" path="res://principal/recursos/sprites/toggle_unchecked.png" id="3"]
@@ -47,7 +46,7 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="FontFile" id="7"]
-fallbacks = Array[Font]([ExtResource("1")])
+fallbacks = Array[Font]([null])
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
