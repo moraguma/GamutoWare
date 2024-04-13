@@ -36,9 +36,12 @@ func _ready():
 	sel_tec3 = get_node("Seletor teclado3")
 	sel_tec4 = get_node("Seletor teclado4")
 	lis_sel = [sel_tec1,sel_tec2,sel_tec3,sel_tec4]
+	# Starts the game with a=b as a way to guarantee that random memory thrash doesn't break the game
+	a=0
+	b=0
 	while(a==b or a==c or a==d or b==c or b==d or c==d):
 		randomize()
-		a = randi_range(0,len(r))
+		a = randi_range(0,r.size()-1)
 		A = r[a]
 		b = randi_range(0,r.size()-1)
 		B = r[b]
