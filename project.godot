@@ -21,6 +21,7 @@ GlobalCamera="*res://principal/cenas/autoloads/Camera.tscn"
 NotificationCenter="*res://principal/cenas/autoloads/NotificationCenter.tscn"
 Global="*res://principal/cenas/autoloads/Global.tscn"
 SoundController="*res://principal/cenas/autoloads/SoundController.tscn"
+TranslationManager="*res://principal/cenas/autoloads/TranslationManager.tscn"
 
 [display]
 
