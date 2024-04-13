@@ -1,0 +1,18 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://v3d547aawndh"]
+
+[ext_resource type="StyleBox" uid="uid://dtrtql2gw634d" path="res://principal/recursos/themes/BodyStyleBox.tres" id="1_odslu"]
+[ext_resource type="StyleBox" uid="uid://dkwl25lk173se" path="res://principal/recursos/themes/styleboxes/GrabberStyleBox.tres" id="2_2anak"]
+[ext_resource type="FontFile" uid="uid://cs457it10cuh7" path="res://principal/recursos/fonts/Playpen_Sans/static/PlaypenSans-Medium.ttf" id="2_dputf"]
+[ext_resource type="StyleBox" uid="uid://c2o7dc56kybq0" path="res://principal/recursos/themes/styleboxes/GrabberHeldStyleBox.tres" id="3_poa7t"]
+[ext_resource type="StyleBox" uid="uid://dniq3wpc7sj8l" path="res://principal/recursos/themes/styleboxes/ScrollStyleBox.tres" id="4_lw5qo"]
+
+[resource]
+default_font = ExtResource("2_dputf")
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+RichTextLabel/font_sizes/normal_font_size = 32
+ScrollContainer/styles/panel = ExtResource("1_odslu")
+VScrollBar/styles/grabber = ExtResource("2_2anak")
+VScrollBar/styles/grabber_highlight = ExtResource("3_poa7t")
+VScrollBar/styles/grabber_pressed = ExtResource("3_poa7t")
+VScrollBar/styles/scroll = ExtResource("4_lw5qo")
+VScrollBar/styles/scroll_focus = ExtResource("4_lw5qo")

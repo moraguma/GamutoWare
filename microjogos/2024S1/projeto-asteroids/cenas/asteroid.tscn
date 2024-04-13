@@ -1,0 +1,80 @@
+[gd_scene load_steps=13 format=3 uid="uid://2qg84u0dmxnj"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-asteroids/cenas/scripts/asteroid.gd" id="1_pfnyl"]
+[ext_resource type="Texture2D" uid="uid://2jvx43tddngu" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/asteroid.png" id="2_4rixu"]
+[ext_resource type="Texture2D" uid="uid://8p120t3sf7wl" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/explosion_sprites.png" id="3_evv60"]
+[ext_resource type="AudioStream" uid="uid://duxmmq4u5i32u" path="res://microjogos/2024S1/projeto-asteroids/recursos/523091__magnuswaker__shotgun-blast-1.ogg" id="4_w1su8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u2c7u"]
+radius = 23.3238
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bykic"]
+atlas = ExtResource("3_evv60")
+region = Rect2(0, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjnib"]
+atlas = ExtResource("3_evv60")
+region = Rect2(300, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lry3h"]
+atlas = ExtResource("3_evv60")
+region = Rect2(0, 300, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2i4j"]
+atlas = ExtResource("3_evv60")
+region = Rect2(300, 300, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olvx6"]
+atlas = ExtResource("3_evv60")
+region = Rect2(0, 600, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vux44"]
+atlas = ExtResource("3_evv60")
+region = Rect2(300, 600, 300, 300)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wbfm7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bykic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjnib")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lry3h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2i4j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olvx6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vux44")
+}],
+"loop": false,
+"name": &"new_animation",
+"speed": 7.0
+}]
+
+[node name="Asteroid" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_pfnyl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 9)
+texture = ExtResource("2_4rixu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(3, 3)
+shape = SubResource("CircleShape2D_u2c7u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wbfm7")
+animation = &"new_animation"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_w1su8")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
