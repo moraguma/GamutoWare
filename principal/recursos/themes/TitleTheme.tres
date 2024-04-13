@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=3 format=3 uid="uid://cb4tlwb81nq48"]
 
-[ext_resource type="FontFile" uid="uid://dv05ux65ppls5" path="res://principal/recursos/fonts/Stop Bullying.ttf" id="1"]
+[ext_resource type="FontFile" path="res://principal/recursos/fonts/stop_bullying/Stop Bullying.ttf" id="1"]
 
 [sub_resource type="FontFile" id="1"]
 fallbacks = Array[Font]([ExtResource("1")])
