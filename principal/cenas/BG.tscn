@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://breiq50cu5612"]
+
+[ext_resource type="Material" uid="uid://bfefepnpbds1x" path="res://principal/recursos/shaders/Diamond.tres" id="1_q2lo0"]
+[ext_resource type="Texture2D" uid="uid://ja6urlsch5m7" path="res://principal/recursos/sprites/MenuBase.png" id="2_0y4lj"]
+[ext_resource type="Texture2D" uid="uid://cs75vvw01oafl" path="res://principal/recursos/sprites/GMToutline.png" id="3_rhf5u"]
+
+[sub_resource type="Curve" id="Curve_fojjj"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.990196, 360), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="BG" type="Sprite2D"]
+material = ExtResource("1_q2lo0")
+position = Vector2(960, 540)
+texture = ExtResource("2_0y4lj")
+
+[node name="GMT" type="CPUParticles2D" parent="."]
+position = Vector2(-832, -804)
+amount = 32
+lifetime = 3.0
+preprocess = 3.0
+texture = ExtResource("3_rhf5u")
+emission_shape = 3
+emission_rect_extents = Vector2(1080, 540)
+direction = Vector2(1, 1)
+gravity = Vector2(500, 500)
+angle_max = 1.0
+angle_curve = SubResource("Curve_fojjj")

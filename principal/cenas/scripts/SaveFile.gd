@@ -9,11 +9,13 @@ extends Resource
 }
 
 
+@export var modifier_settings = []
 @export var minigame_settings = []
 @export var filter_settings = []
 
 
 @export var highscore = 0
+@export var language = -1
 
 
 @export var misc = {}

@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1tlnmwosk7at"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-eco-g/cenas/scripts/stone.gd" id="1_1ih6u"]
+
+
+[sub_resource type="Gradient" id="Gradient_om8rd"]
+offsets = PackedFloat32Array(0, 0.193333, 0.486667, 0.726667, 1)
+colors = PackedColorArray(0.581504, 0.366737, 1, 1, 0, 0.572196, 0.480514, 1, 0, 0.456299, 0.786255, 1, 1, 0.391614, 0.465307, 1, 0.331638, 3.24883e-07, 0.155971, 1)
+
+[node name="Stone7" type="Area2D"]
+script = ExtResource("1_1ih6u")
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(0, 0, 156, -105, 294, -128, 406, -209, 462, -319, 530, -257, 531, -171, 586, -103, 586, 0)
+gradient = SubResource("Gradient_om8rd")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(599, 0)
+rotation = -3.14159
+polygon = PackedVector2Array(13, -0.00012207, 13.0012, 103, 69.002, 170.999, 69.0029, 256.999, 137.004, 318.998, 193.002, 208.998, 305.001, 127.997, 443.001, 104.995, 599, -0.00683594)
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

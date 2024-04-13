@@ -1,46 +1,46 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=9 format=3 uid="uid://l2wyijspia5i"]
 
-[ext_resource path="res://principal/recursos/sounds/music/Menu.ogg" type="AudioStream" id=1]
-[ext_resource path="res://principal/cenas/scripts/SoundController.gd" type="Script" id=2]
-[ext_resource path="res://principal/recursos/sounds/music/GameIntro.ogg" type="AudioStream" id=3]
-[ext_resource path="res://principal/recursos/sounds/music/GameLoop.ogg" type="AudioStream" id=4]
-[ext_resource path="res://principal/recursos/sounds/SFX/Throw.wav" type="AudioStream" id=5]
-[ext_resource path="res://principal/recursos/sounds/SFX/Click.wav" type="AudioStream" id=6]
-[ext_resource path="res://principal/recursos/sounds/SFX/Damage.wav" type="AudioStream" id=7]
-[ext_resource path="res://principal/recursos/sounds/SFX/Win.wav" type="AudioStream" id=8]
+[ext_resource type="AudioStream" uid="uid://dl115sdxxo83o" path="res://principal/recursos/sounds/music/Menu.ogg" id="1"]
+[ext_resource type="Script" path="res://principal/cenas/scripts/SoundController.gd" id="2"]
+[ext_resource type="AudioStream" uid="uid://c33urwvdqrcb2" path="res://principal/recursos/sounds/music/GameIntro.ogg" id="3"]
+[ext_resource type="AudioStream" uid="uid://d30uubn5314a5" path="res://principal/recursos/sounds/music/GameLoop.ogg" id="4"]
+[ext_resource type="AudioStream" uid="uid://cycxh1stplo2i" path="res://principal/recursos/sounds/SFX/Throw.wav" id="5"]
+[ext_resource type="AudioStream" uid="uid://cm3tqc8asxpct" path="res://principal/recursos/sounds/SFX/Click.wav" id="6"]
+[ext_resource type="AudioStream" uid="uid://bnslh24sb4kd5" path="res://principal/recursos/sounds/SFX/Damage.wav" id="7"]
+[ext_resource type="AudioStream" uid="uid://b36begoryac2l" path="res://principal/recursos/sounds/SFX/Win.wav" id="8"]
 
 [node name="SoundController" type="Node"]
-script = ExtResource( 2 )
+script = ExtResource("2")
 
 [node name="Music" type="Node" parent="."]
 
 [node name="Menu" type="AudioStreamPlayer" parent="Music"]
-stream = ExtResource( 1 )
-bus = "Menu"
+stream = ExtResource("1")
+bus = &"Menu"
 
 [node name="GameIntro" type="AudioStreamPlayer" parent="Music"]
-stream = ExtResource( 3 )
-bus = "Game"
+stream = ExtResource("3")
+bus = &"Game"
 
 [node name="GameLoop" type="AudioStreamPlayer" parent="Music"]
-stream = ExtResource( 4 )
-bus = "Game"
+stream = ExtResource("4")
+bus = &"Game"
 
 [node name="Node" type="Node" parent="."]
 
 [node name="Click" type="AudioStreamPlayer" parent="Node"]
-stream = ExtResource( 6 )
+stream = ExtResource("6")
 
 [node name="Damage" type="AudioStreamPlayer" parent="Node"]
-stream = ExtResource( 7 )
+stream = ExtResource("7")
 volume_db = 10.0
 
 [node name="Throw" type="AudioStreamPlayer" parent="Node"]
-stream = ExtResource( 5 )
+stream = ExtResource("5")
 volume_db = 5.0
 
 [node name="Win" type="AudioStreamPlayer" parent="Node"]
-stream = ExtResource( 8 )
+stream = ExtResource("8")
 volume_db = 10.0
 
 [connection signal="finished" from="Music/GameIntro" to="." method="start_loop"]

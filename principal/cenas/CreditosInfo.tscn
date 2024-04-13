@@ -1,0 +1,142 @@
+[gd_scene load_steps=7 format=3 uid="uid://dr5dxsgtiww88"]
+
+[ext_resource type="Script" path="res://principal/cenas/scripts/CreditosInfo.gd" id="1_qcvn3"]
+[ext_resource type="Theme" uid="uid://v3d547aawndh" path="res://principal/recursos/themes/BodyTheme.tres" id="2_awnhk"]
+[ext_resource type="FontFile" uid="uid://cvvv4ta4o2y3l" path="res://principal/recursos/fonts/Delius_Unicase/DeliusUnicase-Bold.ttf" id="3_ga8lw"]
+
+[sub_resource type="Animation" id="Animation_6x85g"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_176od"]
+resource_name = "appear"
+length = 0.4
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 1, -0.25, 0.5, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 1, -0.25, 0.5, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.5, -0.25, 0, 0.25, 0, 0, -0.25, -0.2, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wyana"]
+_data = {
+"RESET": SubResource("Animation_6x85g"),
+"appear": SubResource("Animation_176od")
+}
+
+[node name="CreditosInfo" type="Node2D"]
+scale = Vector2(1e-05, 1e-05)
+script = ExtResource("1_qcvn3")
+
+[node name="Control" type="Control" parent="."]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -460.0
+offset_right = 400.0
+offset_bottom = 460.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_awnhk")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control"]
+clip_contents = false
+layout_mode = 2
+offset_left = 32.0
+offset_top = 19.0
+offset_right = 765.0
+offset_bottom = 889.0
+theme = ExtResource("2_awnhk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Header" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer"]
+clip_contents = false
+layout_mode = 2
+theme = ExtResource("2_awnhk")
+theme_override_fonts/normal_font = ExtResource("3_ga8lw")
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "[center][shake level=20]TITLE"
+fit_content = true
+
+[node name="Body" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer"]
+clip_contents = false
+layout_mode = 2
+theme = ExtResource("2_awnhk")
+bbcode_enabled = true
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non diam non sapien gravida auctor. Fusce facilisis vestibulum est. Phasellus molestie facilisis quam. Nam ac nulla neque. Sed vestibulum condimentum malesuada. Donãc facilisis, neque quis lobortis lacinia, enim metus pellentesque ex, éd vestibulum diam est id risus. Morbi leo nunc, rutrum ac turpis in, gravida blandit nunc. Suspendisse euismod viverra ex vel scelerisque. Duis quis felis massa. Quisque eget quam at risus facilisis auctor. Donec sit amet fermentum sapien, in congue ante. Vivamus in ligula nunc. Ut dapibus diam vel quam convallis, nec semper felis faucibus. Sed ac mauris dui. 
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non diam non sapien gravida auctor. Fusce facilisis vestibulum est. Phasellus molestie facilisis quam. Nam ac nulla neque. Sed vestibulum condimentum malesuada. Donec facilisis, neque quis lobortis lacinia, enim metus pellentesque ex, id vestibulum diam est id risus. Morbi leo nunc, rutrum ac turpis in, gravida blandit nunc. Suspendisse euismod viverra ex vel scelerisque. Duis quis felis massa. Quisque eget quam at risus facilisis auctor. Donec sit amet fermentum sapien, in congue ante. Vivamus in ligula nunc. Ut dapibus diam vel quam convallis, nec semper felis faucibus. Sed ac mauris dui. "
+fit_content = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wyana")
+}
