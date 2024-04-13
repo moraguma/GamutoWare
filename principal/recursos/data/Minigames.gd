@@ -2,7 +2,7 @@ extends Resource
 
 
 const minigame_packs = {
-	"class_of_2024": ["res://microjogos/2024S1/projeto-eco-g/cenas/main.tscn", "res://microjogos/2024S1/jucamm/cenas/main.tscn"],
+	"class_of_2024": ["res://microjogos/2024S1/projeto-eco-g/cenas/main.tscn", "res://microjogos/2024S1/projeto-andre/cenas/main.tscn", "res://microjogos/2024S1/jucamm/cenas/main.tscn"],
 	"class_of_2023": ["res://microjogos/2023S1/projeto-enzo-bertoloti/cenas/main.tscn", "res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/mapa.tscn", "res://microjogos/2023S1/projeto-tiagoperrupato/cenas/main.tscn", "res://microjogos/2023S1/projeto-guglielmo-223300/cenas/main.tscn", "res://microjogos/2023S1/bis-limao/cenas/main.tscn", "res://microjogos/2023S1/GamutoVeiga/cenas/main.tscn", "res://microjogos/2023S1/projeto-brabesf/cenas/main.tscn", "res://microjogos/2023S1/projeto-jose-victor/cenas/main.tscn", "res://microjogos/2023S1/projeto-thedeas/cenas/main.tscn", "res://microjogos/2023S1/projeto-yan-oliveira/cenas/main.tscn", "res://microjogos/2023S1/projeto_leonardo_valente/cenas/main.tscn", "res://microjogos/2023S1/projeto-pochete/cenas/main.tscn", "res://microjogos/2023S1/projeto-RafaelCarro/cenas/main.tscn", "res://microjogos/2023S1/projetoAnaBeatriz/cenas/main.tscn", "res://microjogos/2023S1/projeto-pluvinage/cenas/main.tscn", "res://microjogos/2023S1/projeto_alexia/cenas/main.tscn", "res://microjogos/2023S1/projeto-gabriel-morais/cenas/main.tscn", "res://microjogos/2023S1/projeto-esteche/cenas/main.tscn", "res://microjogos/2023S1/projeto-viniwaki/cenas/main.tscn", "res://microjogos/2023S1/mail_cleaner/cenas/main.tscn", "res://microjogos/2023S1/projeto-matheuspavan/cenas/main.tscn"],
 	"class_of_2022": ["res://microjogos/2022S1/baleia/cenas/baleiaGame.tscn", "res://microjogos/2022S1/gamuturai/cenas/main.tscn", "res://microjogos/2022S1/race/cenas/main.tscn"],
 	"demo": ["res://microjogos/demo/tiro_ao_alvo/cenas/main.tscn", "res://microjogos/demo/frogger/cenas/main.tscn"],
@@ -14,11 +14,13 @@ const minigame_packs = {
 # "res://microjogos/moraguma/whale_eater/cenas/Main.tscn"
 
 const filters = {
-	"no_gore": ["res://microjogos/2022S1/baleia/cenas/baleiaGame.tscn", "res://microjogos/2023S1/projeto-thedeas/cenas/main.tscn"]
+	"no_gore": ["res://microjogos/2022S1/baleia/cenas/baleiaGame.tscn", "res://microjogos/2023S1/projeto-thedeas/cenas/main.tscn"],
+	"no_luck": ["res://microjogos/2024S1/projeto-andre/cenas/main.tscn"]
 }
 
 const minigame_data = {
 	"gamutoware": {"credits": "res://principal/creditos.gd", "cover": "res://principal/recursos/sprites/capagmtware.png", "difficulty": 0},
+	"res://microjogos/2024S1/projeto-andre/cenas/main.tscn": {"credits": "res://microjogos/2024S1/projeto-andre/creditos.gd", "cover": "res://microjogos/2024S1/projeto-andre/capa.png", "difficulty": 0},
 	"res://microjogos/2024S1/jucamm/cenas/main.tscn": {"credits": "res://microjogos/2024S1/jucamm/creditos.gd", "cover": "res://microjogos/2024S1/jucamm/capa.png", "difficulty": 0},
 	"res://microjogos/2024S1/projeto-eco-g/cenas/main.tscn": {"credits": "res://microjogos/2024S1/projeto-eco-g/creditos.gd", "cover": "res://microjogos/2024S1/projeto-eco-g/capa.png", "difficulty": 0},
 	"res://microjogos/2023S1/projeto-enzo-bertoloti/cenas/main.tscn": {"credits": "res://microjogos/2023S1/projeto-enzo-bertoloti/creditos.gd", "cover": "res://microjogos/2023S1/projeto-enzo-bertoloti/capa.png", "difficulty": 0},

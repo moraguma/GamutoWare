@@ -21,6 +21,7 @@ extends Resource
 	"moraguma": "Moraguma",
 
 	"no_gore": "Sem sangue",
+	"no_luck": "Sem sorte",
 
 	"game_instructions": "SETAS E ESPAÇO!",
 
