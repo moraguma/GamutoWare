@@ -21,6 +21,7 @@ extends Resource
 	"moraguma": "Moraguma",
 
 	"no_gore": "No gore",
+	"no_luck": "No luck",
 
 	"game_instructions": "SPACE AND ARROW KEYS!",
 
