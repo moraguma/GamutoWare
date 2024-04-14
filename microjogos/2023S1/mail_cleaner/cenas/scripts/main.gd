@@ -45,8 +45,8 @@ func _process(delta):
 	if len(mail_list) == 0: return
 	mail_fall(delta)
 	if lost: return
-	var right = Input.is_action_just_released("direita")
-	var left = Input.is_action_just_released("esquerda")
+	var right = Input.is_action_just_pressed("direita")
+	var left = Input.is_action_just_pressed("esquerda")
 	if right:
 		if not mail_list[0].is_red: # wrong
 			lost = true
