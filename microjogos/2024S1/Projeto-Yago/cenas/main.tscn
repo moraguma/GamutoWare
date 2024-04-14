@@ -1,453 +1,120 @@
-[gd_scene load_steps=30 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=19 format=3 uid="uid://bi0ahd7cv37i6"]
 
-[ext_resource type="Script" path="res://microjogos/2024S1/Projeto-Yago/cenas/CharacterBody2D.gd" id="1_a5n7h"]
-[ext_resource type="Script" path="res://microjogos/2024S1/Projeto-Yago/cenas/main.gd" id="1_afyw2"]
-[ext_resource type="Texture2D" uid="uid://k233nqmlmmaq" path="res://microjogos/2024S1/Projeto-Yago/Chao.jpg" id="3_v1l8y"]
-[ext_resource type="Texture2D" uid="uid://psxxa5i53r2i" path="res://microjogos/2024S1/Projeto-Yago/Carrinho.png" id="4_4ma05"]
-[ext_resource type="Script" path="res://microjogos/2024S1/Projeto-Yago/cenas/Obstaculo.gd" id="4_x1a4w"]
-[ext_resource type="Script" path="res://microjogos/2024S1/Projeto-Yago/cenas/Obstaculo2.gd" id="6_18ge7"]
-[ext_resource type="Texture2D" uid="uid://b76s6mih106c3" path="res://microjogos/2024S1/Projeto-Yago/Prateleira.png" id="6_gpny1"]
-[ext_resource type="Texture2D" uid="uid://cvos0bhxo8c3i" path="res://microjogos/2024S1/Projeto-Yago/pixil-frame-0.png" id="6_utk0n"]
-[ext_resource type="Script" path="res://microjogos/2024S1/Projeto-Yago/cenas/Obstaculo3.gd" id="7_72jf7"]
-[ext_resource type="FontFile" uid="uid://blcw2hkcbcxid" path="res://principal/recursos/fonts/Stop Bullying.otf" id="7_g4j56"]
-[ext_resource type="FontFile" uid="uid://dv05ux65ppls5" path="res://principal/recursos/fonts/Stop Bullying.ttf" id="8_7x2eo"]
-[ext_resource type="Script" path="res://microjogos/2024S1/Projeto-Yago/cenas/Obstaculo4.gd" id="8_rtewv"]
-[ext_resource type="Texture2D" uid="uid://cy1xln5crtpcn" path="res://microjogos/2024S1/Projeto-Yago/Caixa.png" id="8_w3hlm"]
-[ext_resource type="Texture2D" uid="uid://cxmqc64y4cxs8" path="res://microjogos/2023S1/GamutoVeiga/recursos/gamuto.png" id="9_n5uvt"]
-[ext_resource type="Texture2D" uid="uid://jtep3ben605e" path="res://microjogos/2024S1/Projeto-Yago/New Piskel.png" id="10_lnbyl"]
-[ext_resource type="Texture2D" uid="uid://dj1a7br3l148t" path="res://microjogos/2024S1/Projeto-Yago/Tomate.png" id="11_71xtr"]
-[ext_resource type="Texture2D" uid="uid://b0rjy4j6rwgwn" path="res://microjogos/2024S1/Projeto-Yago/Alface.png" id="12_u6acr"]
-[ext_resource type="Texture2D" uid="uid://d5bqh2t4wyrx" path="res://microjogos/2024S1/Projeto-Yago/Pães.png" id="13_xetc1"]
-[ext_resource type="Texture2D" uid="uid://rlvf1w72hemr" path="res://microjogos/2024S1/Projeto-Yago/Leite.png" id="16_wieku"]
-[ext_resource type="Texture2D" uid="uid://bn8h8qvlvvtuo" path="res://microjogos/2024S1/Projeto-Yago/Ovos.png" id="17_em7hy"]
+[ext_resource type="Script" path="res://microjogos/2024S1/Projeto-Yago/cenas/scripts/main.gd" id="1_afyw2"]
+[ext_resource type="PackedScene" uid="uid://cf1tuns0gajbc" path="res://microjogos/2024S1/Projeto-Yago/cenas/parede.tscn" id="2_kto1s"]
+[ext_resource type="PackedScene" uid="uid://btufcyuqlatk8" path="res://microjogos/2024S1/Projeto-Yago/cenas/carrinho.tscn" id="2_onwp1"]
+[ext_resource type="Script" path="res://microjogos/2024S1/Projeto-Yago/cenas/scripts/player.gd" id="6_spvru"]
+[ext_resource type="Texture2D" uid="uid://cvos0bhxo8c3i" path="res://microjogos/2024S1/Projeto-Yago/recursos/GroundTile.png" id="6_utk0n"]
+[ext_resource type="FontFile" uid="uid://blcw2hkcbcxid" path="res://principal/recursos/fonts/stop_bullying/Stop Bullying.otf" id="7_g4j56"]
+[ext_resource type="PackedScene" uid="uid://0hy6pobh44o7" path="res://microjogos/2024S1/Projeto-Yago/cenas/alface.tscn" id="7_ttvhm"]
+[ext_resource type="FontFile" uid="uid://dv05ux65ppls5" path="res://principal/recursos/fonts/stop_bullying/Stop Bullying.ttf" id="8_7x2eo"]
+[ext_resource type="PackedScene" uid="uid://bad83afs0qqtj" path="res://microjogos/2024S1/Projeto-Yago/cenas/caixa.tscn" id="8_a4ql8"]
+[ext_resource type="PackedScene" uid="uid://d4pfkrs0oex2" path="res://microjogos/2024S1/Projeto-Yago/cenas/leite.tscn" id="9_tu3kh"]
+[ext_resource type="PackedScene" uid="uid://714viw0ojmie" path="res://microjogos/2024S1/Projeto-Yago/cenas/ovos.tscn" id="11_u28la"]
+[ext_resource type="PackedScene" uid="uid://dhw8b8n51eo6f" path="res://microjogos/2024S1/Projeto-Yago/cenas/paes.tscn" id="12_hs8qi"]
+[ext_resource type="PackedScene" uid="uid://ebl75hisitpy" path="res://microjogos/2024S1/Projeto-Yago/cenas/queijo.tscn" id="13_bjgod"]
+[ext_resource type="Texture2D" uid="uid://c416c6k202bqt" path="res://microjogos/2024S1/Projeto-Yago/recursos/Papel.jpg" id="13_x1fpf"]
+[ext_resource type="PackedScene" uid="uid://cjgqoxt8pk4vf" path="res://microjogos/2024S1/Projeto-Yago/cenas/tomate.tscn" id="14_fbepc"]
+[ext_resource type="PackedScene" uid="uid://dok101r6mgt5p" path="res://microjogos/2024S1/Projeto-Yago/cenas/obstaculos.tscn" id="15_x2yd0"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1dqfo"]
-size = Vector2(200, 350)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_c3drt"]
-size = Vector2(200, 350)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vt0yv"]
-size = Vector2(391.5, 560.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_l4is5"]
-size = Vector2(4264.04, 344)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_57btk"]
-size = Vector2(421, 4856)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1h8sn"]
-bg_color = Color(0.87451, 0.811765, 0.12549, 1)
-border_color = Color(0.905882, 0.8, 0.32549, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_onl1q"]
+texture = ExtResource("13_x1fpf")
 
 [sub_resource type="Theme" id="Theme_uax2q"]
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
 RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
 RichTextLabel/fonts/mono_font = ExtResource("7_g4j56")
-RichTextLabel/styles/normal = SubResource("StyleBoxFlat_1h8sn")
-
-[sub_resource type="Curve2D" id="Curve2D_vadru"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, -304, 362, 0, 0, 0, 0, 77, 379, -182.674, 82.3896, 182.674, -82.3896, 467, 248, 5.83862, 135.237, -5.83862, -135.237, 647, -521, 0, 0, 0, 0, 654, -1635, 0, 0, 0, 0, 651, -3383, 0, 0, 0, 0, 658, -4104)
-}
-point_count = 7
-
-[sub_resource type="Curve2D" id="Curve2D_ta70h"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, -98, 3, 326.127, -72.832, -326.127, 72.832, -1109, 24, 45.2299, -39.6427, -45.2299, 39.6427, -1525, 191, 36.3568, -110.184, -36.3568, 110.184, -1705, 438, 0, 0, 0, 0, -1727, 932, 0, 0, 0, 0, -1716, 1625, 0, 0, 0, 0, -1705, 4772)
-}
-point_count = 7
+RichTextLabel/styles/normal = SubResource("StyleBoxTexture_onl1q")
 
 [node name="Main" type="Node2D"]
-position = Vector2(956, 533)
+position = Vector2(960, 540)
 script = ExtResource("1_afyw2")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-collision_layer = 3
-collision_mask = 3
-script = ExtResource("1_a5n7h")
-metadata/_edit_group_ = true
-
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-zoom = Vector2(0.5, 0.5)
-limit_left = -960
-limit_right = 2880
-position_smoothing_enabled = true
-
-[node name="Carrinho" type="Sprite2D" parent="CharacterBody2D"]
-texture_filter = 1
-position = Vector2(3.875, 16.5)
-scale = Vector2(4.29883, 5.28906)
-texture = ExtResource("4_4ma05")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("RectangleShape2D_1dqfo")
-
-[node name="Obstaculo" type="CharacterBody2D" parent="."]
-position = Vector2(-1762, 600)
-disable_mode = 1
-collision_layer = 2
-collision_mask = 2
-script = ExtResource("4_x1a4w")
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstaculo"]
-shape = SubResource("RectangleShape2D_c3drt")
-one_way_collision_margin = 0.0
-
-[node name="Carrinho2" type="Sprite2D" parent="Obstaculo"]
-texture_filter = 1
-position = Vector2(0, 18.9999)
-scale = Vector2(4.23828, 5.29688)
-texture = ExtResource("4_4ma05")
-
-[node name="Obstaculo2" type="CharacterBody2D" parent="."]
-position = Vector2(-2858, 604)
-disable_mode = 1
-collision_layer = 2
-collision_mask = 2
-script = ExtResource("6_18ge7")
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstaculo2"]
-shape = SubResource("RectangleShape2D_c3drt")
-one_way_collision_margin = 0.0
-
-[node name="Carrinho2" type="Sprite2D" parent="Obstaculo2"]
-texture_filter = 1
-position = Vector2(0, 18.9999)
-scale = Vector2(4.23828, 5.29688)
-texture = ExtResource("4_4ma05")
-
-[node name="Obstaculo3" type="CharacterBody2D" parent="."]
-position = Vector2(2324, -3311)
-disable_mode = 1
-collision_layer = 2
-collision_mask = 2
-script = ExtResource("7_72jf7")
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstaculo3"]
-shape = SubResource("RectangleShape2D_c3drt")
-one_way_collision_margin = 0.0
-
-[node name="Carrinho2" type="Sprite2D" parent="Obstaculo3"]
-texture_filter = 1
-position = Vector2(0, 18.9999)
-scale = Vector2(4.23828, 5.29688)
-texture = ExtResource("4_4ma05")
-
-[node name="Obstaculo4" type="CharacterBody2D" parent="."]
-position = Vector2(3182, -3300)
-disable_mode = 1
-collision_layer = 2
-collision_mask = 2
-script = ExtResource("8_rtewv")
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstaculo4"]
-shape = SubResource("RectangleShape2D_c3drt")
-one_way_collision_margin = 0.0
-
-[node name="Carrinho2" type="Sprite2D" parent="Obstaculo4"]
-texture_filter = 1
-position = Vector2(0, 18.9999)
-scale = Vector2(4.23828, 5.29688)
-texture = ExtResource("4_4ma05")
+[node name="Background" type="TextureRect" parent="."]
+show_behind_parent = true
+z_index = -1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1200.0
+offset_top = -2000.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture = ExtResource("6_utk0n")
+stretch_mode = 1
 
 [node name="Areas" type="Node2D" parent="."]
 
-[node name="Interação Area2D" type="Area2D" parent="Areas"]
+[node name="Leite" parent="Areas" instance=ExtResource("9_tu3kh")]
+position = Vector2(675, 0)
+rotation = 3.14159
+scale = Vector2(1, -1)
 
-[node name="Interação CollisionShape2D" type="CollisionShape2D" parent="Areas/Interação Area2D"]
-position = Vector2(744.25, -339)
-shape = SubResource("RectangleShape2D_vt0yv")
+[node name="Ovos" parent="Areas" instance=ExtResource("11_u28la")]
+position = Vector2(-675, -700)
 
-[node name="Sprite2D" type="Sprite2D" parent="Areas/Interação Area2D/Interação CollisionShape2D"]
-z_index = -1
-position = Vector2(-0.249974, 5.16176e-05)
-scale = Vector2(0.301538, 0.430769)
-texture = ExtResource("3_v1l8y")
+[node name="Paes" parent="Areas" instance=ExtResource("12_hs8qi")]
+position = Vector2(675, -700)
+rotation = 3.14159
+scale = Vector2(1, -1)
 
-[node name="Interação Area2D2" type="Area2D" parent="Areas"]
+[node name="Queijo" parent="Areas" instance=ExtResource("13_bjgod")]
+position = Vector2(725, 700)
 
-[node name="Interação CollisionShape2D" type="CollisionShape2D" parent="Areas/Interação Area2D2"]
-position = Vector2(-744, -339)
-shape = SubResource("RectangleShape2D_vt0yv")
+[node name="Alface" parent="Areas" instance=ExtResource("7_ttvhm")]
+position = Vector2(-675, 700)
 
-[node name="Sprite2D2" type="Sprite2D" parent="Areas/Interação Area2D2/Interação CollisionShape2D"]
-z_index = -1
-scale = Vector2(0.301538, 0.430769)
-texture = ExtResource("3_v1l8y")
+[node name="Tomate" parent="Areas" instance=ExtResource("14_fbepc")]
+position = Vector2(-675, 0)
 
-[node name="Interação Area2D3" type="Area2D" parent="Areas"]
+[node name="Caixa" parent="Areas" instance=ExtResource("8_a4ql8")]
+position = Vector2(275, -1400)
+scale = Vector2(4, 4)
 
-[node name="Interação CollisionShape2D" type="CollisionShape2D" parent="Areas/Interação Area2D3"]
-position = Vector2(744.25, -1339)
-shape = SubResource("RectangleShape2D_vt0yv")
-
-[node name="Sprite2D3" type="Sprite2D" parent="Areas/Interação Area2D3/Interação CollisionShape2D"]
-z_index = -1
-scale = Vector2(0.301538, 0.430769)
-texture = ExtResource("3_v1l8y")
-
-[node name="Interação Area2D4" type="Area2D" parent="Areas"]
-
-[node name="Interação CollisionShape2D" type="CollisionShape2D" parent="Areas/Interação Area2D4"]
-position = Vector2(-743, -1339)
-shape = SubResource("RectangleShape2D_vt0yv")
-
-[node name="Sprite2D4" type="Sprite2D" parent="Areas/Interação Area2D4/Interação CollisionShape2D"]
-z_index = -1
-scale = Vector2(0.301538, 0.430769)
-texture = ExtResource("3_v1l8y")
-
-[node name="Interação Area2D5" type="Area2D" parent="Areas"]
-position = Vector2(0, -1080)
-
-[node name="Interação CollisionShape2D" type="CollisionShape2D" parent="Areas/Interação Area2D5"]
-position = Vector2(744.25, -1316)
-shape = SubResource("RectangleShape2D_vt0yv")
-
-[node name="Sprite2D5" type="Sprite2D" parent="Areas/Interação Area2D5/Interação CollisionShape2D"]
-z_index = -1
-scale = Vector2(0.301538, 0.430769)
-texture = ExtResource("3_v1l8y")
-
-[node name="Interação Area2D6" type="Area2D" parent="Areas"]
-position = Vector2(0, -1080)
-
-[node name="Interação CollisionShape2D" type="CollisionShape2D" parent="Areas/Interação Area2D6"]
-position = Vector2(-744, -1316)
-shape = SubResource("RectangleShape2D_vt0yv")
-
-[node name="Sprite2D6" type="Sprite2D" parent="Areas/Interação Area2D6/Interação CollisionShape2D"]
-z_index = -1
-scale = Vector2(0.301538, 0.430769)
-texture = ExtResource("3_v1l8y")
+[node name="Caixa2" parent="Areas" instance=ExtResource("8_a4ql8")]
+position = Vector2(-275, 1400)
+rotation = -3.14159
+scale = Vector2(4, 4)
 
 [node name="Paredes" type="Node2D" parent="."]
 
-[node name="STB_Parede CimaBaixo" type="StaticBody2D" parent="Paredes"]
-position = Vector2(0, -1606)
+[node name="Parede" parent="Paredes" instance=ExtResource("2_kto1s")]
+position = Vector2(-1000, -700)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/STB_Parede CimaBaixo"]
-position = Vector2(-4.49945, 2298)
-scale = Vector2(0.445822, 1.0329)
-shape = SubResource("RectangleShape2D_l4is5")
-debug_color = Color(1, 1, 1, 0.419608)
+[node name="Parede2" parent="Paredes" instance=ExtResource("2_kto1s")]
+position = Vector2(1000, 700)
 
-[node name="Sprite2D" type="TextureRect" parent="Paredes/STB_Parede CimaBaixo/CollisionShape2D"]
-modulate = Color(0.666667, 0.172549, 0, 1)
-offset_left = -3085.0
-offset_top = -4138.0
-offset_right = -2134.0
-offset_bottom = -619.0
-texture = ExtResource("6_gpny1")
-stretch_mode = 1
-metadata/_edit_group_ = true
+[node name="Player" parent="." instance=ExtResource("2_onwp1")]
+script = ExtResource("6_spvru")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Paredes/STB_Parede CimaBaixo"]
-position = Vector2(-2, -1694)
-scale = Vector2(0.997554, -1.66838)
-shape = SubResource("RectangleShape2D_l4is5")
-debug_color = Color(1, 1, 1, 0.419608)
+[node name="Hud" type="CanvasLayer" parent="Player"]
 
-[node name="Sprite2D2" type="TextureRect" parent="Paredes/STB_Parede CimaBaixo/CollisionShape2D2"]
-offset_top = 2700.0
-offset_bottom = 2700.0
-stretch_mode = 1
-
-[node name="STB_Parede Esquerda" type="StaticBody2D" parent="Paredes"]
-position = Vector2(231, -1702)
-disable_mode = 1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/STB_Parede Esquerda"]
-position = Vector2(-1397, 383)
-shape = SubResource("RectangleShape2D_57btk")
-debug_color = Color(1, 1, 1, 0.419608)
-
-[node name="Sprite2D2" type="TextureRect" parent="Paredes/STB_Parede Esquerda/CollisionShape2D"]
-modulate = Color(0.666667, 0.172549, 0, 1)
-offset_left = 2122.0
-offset_top = -1486.0
-offset_right = 2548.0
-offset_bottom = 2186.0
-texture = ExtResource("6_gpny1")
-stretch_mode = 1
-metadata/_edit_group_ = true
-
-[node name="STB_Parede Direita" type="StaticBody2D" parent="Paredes"]
-position = Vector2(231, -1702)
-disable_mode = 1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/STB_Parede Direita"]
-position = Vector2(936, 368)
-scale = Vector2(1, 0.998772)
-shape = SubResource("RectangleShape2D_57btk")
-debug_color = Color(1, 1, 1, 0.419608)
-
-[node name="Sprite2D3" type="TextureRect" parent="Paredes/STB_Parede Direita/CollisionShape2D"]
-offset_left = -950.0
-offset_top = 282.0
-offset_right = -950.0
-offset_bottom = 282.0
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Label" type="Label" parent="CanvasLayer"]
-visible = false
-anchors_preset = -1
-anchor_left = -0.5
-anchor_top = -0.502
-anchor_right = 1.5
-anchor_bottom = 1.498
-offset_left = 2341.0
-offset_top = 670.16
-offset_right = -705.0
-offset_bottom = -676.84
-size_flags_horizontal = 10
-theme_override_font_sizes/font_size = 50
-text = "Pão;
-Leite;
-Ovos;"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+[node name="Lista" type="RichTextLabel" parent="Player/Hud"]
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -323.0
-offset_top = -164.5
-offset_bottom = 164.5
+offset_left = -230.0
+offset_top = -159.0
+offset_right = 92.9999
+offset_bottom = 170.0
 grow_horizontal = 0
 grow_vertical = 2
+scale = Vector2(0.960005, 1)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = SubResource("Theme_uax2q")
 theme_override_fonts/normal_font = ExtResource("8_7x2eo")
-theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
 
-[node name="Path2D" type="Path2D" parent="."]
-position = Vector2(-1321, 306)
-curve = SubResource("Curve2D_vadru")
+[node name="Camera2D" type="Camera2D" parent="Player"]
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(-304, 362)
-rotation = 0.0445898
+[node name="Obstaculos" parent="." instance=ExtResource("15_x2yd0")]
 
-[node name="Path2D2" type="Path2D" parent="."]
-position = Vector2(-1319, 159)
-curve = SubResource("Curve2D_vadru")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D2"]
-position = Vector2(-304, 362)
-rotation = 0.0445898
-
-[node name="Path2D3" type="Path2D" parent="."]
-position = Vector2(2241, -3256)
-curve = SubResource("Curve2D_ta70h")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D3"]
-position = Vector2(-98, 3)
-rotation = 3.12082
-
-[node name="Path2D4" type="Path2D" parent="."]
-position = Vector2(2241, -3256)
-curve = SubResource("Curve2D_ta70h")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D4"]
-position = Vector2(-98, 3)
-rotation = 3.12082
-
-[node name="TextureRect" type="TextureRect" parent="."]
-show_behind_parent = true
-z_index = -1
-offset_left = -1966.0
-offset_top = -4334.0
-offset_right = -620.0
-offset_bottom = -2341.0
-scale = Vector2(3, 3)
-texture = ExtResource("6_utk0n")
-stretch_mode = 1
-
-[node name="Caixa" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(7, -3285)
-scale = Vector2(5, 4.325)
-texture = ExtResource("8_w3hlm")
-flip_v = true
-metadata/_edit_group_ = true
-
-[node name="Gamux" type="Sprite2D" parent="Caixa"]
-position = Vector2(6.2, -7.86129)
-scale = Vector2(0.0502222, 0.0570327)
-texture = ExtResource("9_n5uvt")
-
-[node name="Caixa2" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(31, 787)
-scale = Vector2(5, 4.325)
-texture = ExtResource("8_w3hlm")
-flip_h = true
-metadata/_edit_group_ = true
-
-[node name="Gamux" type="Sprite2D" parent="Caixa2"]
-position = Vector2(-6.2, 9.01733)
-scale = Vector2(0.0502222, 0.0570327)
-texture = ExtResource("9_n5uvt")
-
-[node name="Queijo" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(904, -353)
-scale = Vector2(4.67188, 5.50781)
-texture = ExtResource("10_lnbyl")
-
-[node name="Tomate" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(844, -1311)
-scale = Vector2(5.25781, 5.80859)
-texture = ExtResource("11_71xtr")
-flip_h = true
-
-[node name="Alface" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(848, -2370)
-scale = Vector2(5.25781, 5.80859)
-texture = ExtResource("12_u6acr")
-flip_h = true
-
-[node name="Pães" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(-845, -313)
-scale = Vector2(5.25781, 5.80859)
-texture = ExtResource("13_xetc1")
-
-[node name="Leite" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(-846, -2371)
-scale = Vector2(5.25781, 5.80859)
-texture = ExtResource("16_wieku")
-
-[node name="Ovos" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(-846, -1317)
-scale = Vector2(5.25781, 5.80859)
-texture = ExtResource("17_em7hy")
-
-[connection signal="body_entered" from="Areas/Interação Area2D" to="." method="_on_area_body_entered"]
-[connection signal="body_exited" from="Areas/Interação Area2D" to="." method="_on_area_body_exited"]
-[connection signal="body_entered" from="Areas/Interação Area2D2" to="." method="_on_area2_body_entered"]
-[connection signal="body_exited" from="Areas/Interação Area2D2" to="." method="_on_area_body_exited"]
-[connection signal="body_entered" from="Areas/Interação Area2D3" to="." method="_on_area3_body_entered"]
-[connection signal="body_exited" from="Areas/Interação Area2D3" to="." method="_on_area_body_exited"]
-[connection signal="body_entered" from="Areas/Interação Area2D4" to="." method="_on_area4_body_entered"]
-[connection signal="body_exited" from="Areas/Interação Area2D4" to="." method="_on_area_body_exited"]
-[connection signal="body_entered" from="Areas/Interação Area2D5" to="." method="_on_area5_body_entered"]
-[connection signal="body_exited" from="Areas/Interação Area2D5" to="." method="_on_area_body_exited"]
-[connection signal="body_entered" from="Areas/Interação Area2D6" to="." method="_on_area6_body_entered"]
-[connection signal="body_exited" from="Areas/Interação Area2D6" to="." method="_on_area_body_exited"]
+[connection signal="lose" from="Player" to="." method="register_lose"]
+[connection signal="win" from="Player" to="." method="register_win"]

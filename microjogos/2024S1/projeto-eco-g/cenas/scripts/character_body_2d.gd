@@ -37,8 +37,9 @@ func _ready():
 	music.play()
 	
 func player_hit():
-	animated_gamuto.play("hit")
-	music.stop()
-	death.play()
-	is_dead = true
-	emit_signal("dead")
+	if not is_dead:
+		animated_gamuto.play("hit")
+		music.stop()
+		death.play()
+		is_dead = true
+		emit_signal("dead")
