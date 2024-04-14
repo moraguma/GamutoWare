@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jtep3ben605e"
-path="res://.godot/imported/New Piskel.png-dc8f8d62ff173e267b1b63ceb8f2bc15.ctex"
+uid="uid://c416c6k202bqt"
+path="res://.godot/imported/Papel.jpg-65cae5f58dcdc3f25c93e83262c976b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/Projeto-Yago/recursos/New Piskel.png"
-dest_files=["res://.godot/imported/New Piskel.png-dc8f8d62ff173e267b1b63ceb8f2bc15.ctex"]
+source_file="res://microjogos/2024S1/Projeto-Yago/recursos/Papel.jpg"
+dest_files=["res://.godot/imported/Papel.jpg-65cae5f58dcdc3f25c93e83262c976b1.ctex"]
 
 [params]
 

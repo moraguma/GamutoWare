@@ -1,10 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=19 format=3 uid="uid://bi0ahd7cv37i6"]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/Projeto-Yago/cenas/scripts/main.gd" id="1_afyw2"]
 [ext_resource type="PackedScene" uid="uid://cf1tuns0gajbc" path="res://microjogos/2024S1/Projeto-Yago/cenas/parede.tscn" id="2_kto1s"]
 [ext_resource type="PackedScene" uid="uid://btufcyuqlatk8" path="res://microjogos/2024S1/Projeto-Yago/cenas/carrinho.tscn" id="2_onwp1"]
 [ext_resource type="Script" path="res://microjogos/2024S1/Projeto-Yago/cenas/scripts/player.gd" id="6_spvru"]
-[ext_resource type="Texture2D" uid="uid://cvos0bhxo8c3i" path="res://microjogos/2024S1/Projeto-Yago/recursos/pixil-frame-0.png" id="6_utk0n"]
+[ext_resource type="Texture2D" uid="uid://cvos0bhxo8c3i" path="res://microjogos/2024S1/Projeto-Yago/recursos/GroundTile.png" id="6_utk0n"]
 [ext_resource type="FontFile" uid="uid://blcw2hkcbcxid" path="res://principal/recursos/fonts/stop_bullying/Stop Bullying.otf" id="7_g4j56"]
 [ext_resource type="PackedScene" uid="uid://0hy6pobh44o7" path="res://microjogos/2024S1/Projeto-Yago/cenas/alface.tscn" id="7_ttvhm"]
 [ext_resource type="FontFile" uid="uid://dv05ux65ppls5" path="res://principal/recursos/fonts/stop_bullying/Stop Bullying.ttf" id="8_7x2eo"]
@@ -13,18 +13,18 @@
 [ext_resource type="PackedScene" uid="uid://714viw0ojmie" path="res://microjogos/2024S1/Projeto-Yago/cenas/ovos.tscn" id="11_u28la"]
 [ext_resource type="PackedScene" uid="uid://dhw8b8n51eo6f" path="res://microjogos/2024S1/Projeto-Yago/cenas/paes.tscn" id="12_hs8qi"]
 [ext_resource type="PackedScene" uid="uid://ebl75hisitpy" path="res://microjogos/2024S1/Projeto-Yago/cenas/queijo.tscn" id="13_bjgod"]
+[ext_resource type="Texture2D" uid="uid://c416c6k202bqt" path="res://microjogos/2024S1/Projeto-Yago/recursos/Papel.jpg" id="13_x1fpf"]
 [ext_resource type="PackedScene" uid="uid://cjgqoxt8pk4vf" path="res://microjogos/2024S1/Projeto-Yago/cenas/tomate.tscn" id="14_fbepc"]
 [ext_resource type="PackedScene" uid="uid://dok101r6mgt5p" path="res://microjogos/2024S1/Projeto-Yago/cenas/obstaculos.tscn" id="15_x2yd0"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1h8sn"]
-bg_color = Color(0.87451, 0.811765, 0.12549, 1)
-border_color = Color(0.905882, 0.8, 0.32549, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_onl1q"]
+texture = ExtResource("13_x1fpf")
 
 [sub_resource type="Theme" id="Theme_uax2q"]
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
 RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
 RichTextLabel/fonts/mono_font = ExtResource("7_g4j56")
-RichTextLabel/styles/normal = SubResource("StyleBoxFlat_1h8sn")
+RichTextLabel/styles/normal = SubResource("StyleBoxTexture_onl1q")
 
 [node name="Main" type="Node2D"]
 position = Vector2(960, 540)
@@ -98,16 +98,18 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -323.0
-offset_top = -158.0
-offset_bottom = 171.0
+offset_left = -230.0
+offset_top = -159.0
+offset_right = 92.9999
+offset_bottom = 170.0
 grow_horizontal = 0
 grow_vertical = 2
+scale = Vector2(0.960005, 1)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = SubResource("Theme_uax2q")
 theme_override_fonts/normal_font = ExtResource("8_7x2eo")
-theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]

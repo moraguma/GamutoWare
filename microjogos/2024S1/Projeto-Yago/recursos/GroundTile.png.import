@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvncho6wpqsow"
-path="res://.godot/imported/grey-ceramic-floor-wall-tiles.jpg-78c2ebf2f85d7026c33a62cac97c9948.ctex"
+uid="uid://cvos0bhxo8c3i"
+path="res://.godot/imported/GroundTile.png-c182985364731c7569322f69cb9b6803.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/Projeto-Yago/recursos/grey-ceramic-floor-wall-tiles.jpg"
-dest_files=["res://.godot/imported/grey-ceramic-floor-wall-tiles.jpg-78c2ebf2f85d7026c33a62cac97c9948.ctex"]
+source_file="res://microjogos/2024S1/Projeto-Yago/recursos/GroundTile.png"
+dest_files=["res://.godot/imported/GroundTile.png-c182985364731c7569322f69cb9b6803.ctex"]
 
 [params]
 
