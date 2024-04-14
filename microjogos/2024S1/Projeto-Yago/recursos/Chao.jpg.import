@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dj1a7br3l148t"
-path="res://.godot/imported/Tomate.png-b3d1bcac72c9e4a9730fcd5d395bdf1a.ctex"
+uid="uid://k233nqmlmmaq"
+path="res://.godot/imported/Chao.jpg-ecdc10610b1e172f6362572b4a601c89.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/Projeto-Yago/Tomate.png"
-dest_files=["res://.godot/imported/Tomate.png-b3d1bcac72c9e4a9730fcd5d395bdf1a.ctex"]
+source_file="res://microjogos/2024S1/Projeto-Yago/recursos/Chao.jpg"
+dest_files=["res://.godot/imported/Chao.jpg-ecdc10610b1e172f6362572b4a601c89.ctex"]
 
 [params]
 

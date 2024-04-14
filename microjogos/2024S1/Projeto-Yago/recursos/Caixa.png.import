@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://k233nqmlmmaq"
-path="res://.godot/imported/Chao.jpg-f7b48f6b3456f468fa97903117a7294b.ctex"
+uid="uid://cy1xln5crtpcn"
+path="res://.godot/imported/Caixa.png-e707a0715cf90a8b7666de0419bbc84a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/Projeto-Yago/Chao.jpg"
-dest_files=["res://.godot/imported/Chao.jpg-f7b48f6b3456f468fa97903117a7294b.ctex"]
+source_file="res://microjogos/2024S1/Projeto-Yago/recursos/Caixa.png"
+dest_files=["res://.godot/imported/Caixa.png-e707a0715cf90a8b7666de0419bbc84a.ctex"]
 
 [params]
 

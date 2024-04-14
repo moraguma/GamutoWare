@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b76s6mih106c3"
-path="res://.godot/imported/Prateleira.png-bdabeb9a815e955fceed83ef97a38bc7.ctex"
+uid="uid://b0rjy4j6rwgwn"
+path="res://.godot/imported/Alface.png-9384c3819f3534420b9ed6ef5de5f833.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/Projeto-Yago/Prateleira.png"
-dest_files=["res://.godot/imported/Prateleira.png-bdabeb9a815e955fceed83ef97a38bc7.ctex"]
+source_file="res://microjogos/2024S1/Projeto-Yago/recursos/Alface.png"
+dest_files=["res://.godot/imported/Alface.png-9384c3819f3534420b9ed6ef5de5f833.ctex"]
 
 [params]
 

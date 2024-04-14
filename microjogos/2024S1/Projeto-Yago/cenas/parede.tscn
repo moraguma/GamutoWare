@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cf1tuns0gajbc"]
+
+[ext_resource type="Texture2D" uid="uid://b76s6mih106c3" path="res://microjogos/2024S1/Projeto-Yago/recursos/Prateleira.png" id="1_86tfa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t7qtr"]
+size = Vector2(400, 4000)
+
+[node name="Parede" type="StaticBody2D"]
+
+[node name="Sprite2D" type="TextureRect" parent="."]
+modulate = Color(0.666667, 0.172549, 0, 1)
+offset_left = -200.0
+offset_top = -2000.0
+offset_right = 200.0
+offset_bottom = 2000.0
+texture = ExtResource("1_86tfa")
+stretch_mode = 1
+metadata/_edit_group_ = true
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_t7qtr")

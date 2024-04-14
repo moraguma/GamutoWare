@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://psxxa5i53r2i"
-path="res://.godot/imported/Carrinho.png-211049d4a4ded8772e69761ec18a1f18.ctex"
+uid="uid://dj1a7br3l148t"
+path="res://.godot/imported/Tomate.png-8b6b8087b56c86f54d7a5e06949043e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/Projeto-Yago/Carrinho.png"
-dest_files=["res://.godot/imported/Carrinho.png-211049d4a4ded8772e69761ec18a1f18.ctex"]
+source_file="res://microjogos/2024S1/Projeto-Yago/recursos/Tomate.png"
+dest_files=["res://.godot/imported/Tomate.png-8b6b8087b56c86f54d7a5e06949043e0.ctex"]
 
 [params]
 

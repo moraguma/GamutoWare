@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bn8h8qvlvvtuo"
-path="res://.godot/imported/Ovos.png-b85c6549965033bf4cff9789bc7657e6.ctex"
+path="res://.godot/imported/Ovos.png-daa724c0cc82332a649c984ef4cbbb3a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/Projeto-Yago/Ovos.png"
-dest_files=["res://.godot/imported/Ovos.png-b85c6549965033bf4cff9789bc7657e6.ctex"]
+source_file="res://microjogos/2024S1/Projeto-Yago/recursos/Ovos.png"
+dest_files=["res://.godot/imported/Ovos.png-daa724c0cc82332a649c984ef4cbbb3a.ctex"]
 
 [params]
 

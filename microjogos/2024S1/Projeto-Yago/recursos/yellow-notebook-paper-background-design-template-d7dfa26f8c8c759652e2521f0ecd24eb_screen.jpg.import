@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0rjy4j6rwgwn"
-path="res://.godot/imported/Alface.png-2b0fcd3f8c991285601214093696008a.ctex"
+uid="uid://c416c6k202bqt"
+path="res://.godot/imported/yellow-notebook-paper-background-design-template-d7dfa26f8c8c759652e2521f0ecd24eb_screen.jpg-2d5985136288aed701665e629689a9a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/Projeto-Yago/Alface.png"
-dest_files=["res://.godot/imported/Alface.png-2b0fcd3f8c991285601214093696008a.ctex"]
+source_file="res://microjogos/2024S1/Projeto-Yago/recursos/yellow-notebook-paper-background-design-template-d7dfa26f8c8c759652e2521f0ecd24eb_screen.jpg"
+dest_files=["res://.godot/imported/yellow-notebook-paper-background-design-template-d7dfa26f8c8c759652e2521f0ecd24eb_screen.jpg-2d5985136288aed701665e629689a9a1.ctex"]
 
 [params]
 

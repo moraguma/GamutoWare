@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rlvf1w72hemr"
-path="res://.godot/imported/Leite.png-d81cbd9ddaf87e509902e5fbeda0ece9.ctex"
+uid="uid://d5bqh2t4wyrx"
+path="res://.godot/imported/Pães.png-61d67aab98bd650a03864a106488d291.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/Projeto-Yago/Leite.png"
-dest_files=["res://.godot/imported/Leite.png-d81cbd9ddaf87e509902e5fbeda0ece9.ctex"]
+source_file="res://microjogos/2024S1/Projeto-Yago/recursos/Pães.png"
+dest_files=["res://.godot/imported/Pães.png-61d67aab98bd650a03864a106488d291.ctex"]
 
 [params]
 

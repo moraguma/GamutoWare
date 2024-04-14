@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c416c6k202bqt"
-path="res://.godot/imported/yellow-notebook-paper-background-design-template-d7dfa26f8c8c759652e2521f0ecd24eb_screen.jpg-9c9a1c37d7e0ebc04234bcfae9c7232d.ctex"
+uid="uid://rlvf1w72hemr"
+path="res://.godot/imported/Leite.png-e3d5352febeed9f92ce72038c9fd03c8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/Projeto-Yago/yellow-notebook-paper-background-design-template-d7dfa26f8c8c759652e2521f0ecd24eb_screen.jpg"
-dest_files=["res://.godot/imported/yellow-notebook-paper-background-design-template-d7dfa26f8c8c759652e2521f0ecd24eb_screen.jpg-9c9a1c37d7e0ebc04234bcfae9c7232d.ctex"]
+source_file="res://microjogos/2024S1/Projeto-Yago/recursos/Leite.png"
+dest_files=["res://.godot/imported/Leite.png-e3d5352febeed9f92ce72038c9fd03c8.ctex"]
 
 [params]
 

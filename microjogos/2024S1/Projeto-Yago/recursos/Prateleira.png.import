@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jtep3ben605e"
-path="res://.godot/imported/New Piskel.png-d8731c4e4601fc9849bda19c5fd25d02.ctex"
+uid="uid://b76s6mih106c3"
+path="res://.godot/imported/Prateleira.png-62632b6dd1ec86841a38898e5a763a57.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/Projeto-Yago/New Piskel.png"
-dest_files=["res://.godot/imported/New Piskel.png-d8731c4e4601fc9849bda19c5fd25d02.ctex"]
+source_file="res://microjogos/2024S1/Projeto-Yago/recursos/Prateleira.png"
+dest_files=["res://.godot/imported/Prateleira.png-62632b6dd1ec86841a38898e5a763a57.ctex"]
 
 [params]
 
