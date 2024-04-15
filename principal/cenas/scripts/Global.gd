@@ -20,6 +20,7 @@ var queued_method
 var queued_parameters
 
 var language
+var difficulty: int = 0
 
 func _ready():
 	var root = get_tree().get_root()
