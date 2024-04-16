@@ -12,7 +12,7 @@ var title_en = "Mini Sudoku"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
-Criado por: Felipe Onorio
+Criado por: [Felipe Onorio]
 
 Cobblestone path background(creative commons):
 	https://storage.needpix.com/rsynced_images/cobblestone-529853_1280.jpg
@@ -31,7 +31,7 @@ Copyleft background music:
 	
 """
 var credits_en = """
-Made by: Felipe Onorio
+Made by: [Felipe Onorio]
 
 Cobblestone path background(creative commons):
 	https://storage.needpix.com/rsynced_images/cobblestone-529853_1280.jpg

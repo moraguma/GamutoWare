@@ -10,6 +10,9 @@ signal lose()
 
 #signal main_ready
 
+const WIDTH = 1920
+const HEIGHT = 1080
+
 signal right_pressed
 signal down_pressed
 signal up_pressed
@@ -63,6 +66,12 @@ var base_node_name: String = "status_checker/area_cell_"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	match Global.language:
+		Global.LANGUAGE.EN:
+			NotificationCenter.notify("COMPLETE!")
+		Global.LANGUAGE.PT:
+			NotificationCenter.notify("COMPLETE!")
+	
 	var rand1 = randi() % 8
 	var rand2 = randi() % 8
 	if rand1 == rand2:
