@@ -11,15 +11,17 @@ var cursor_red = preload("res://microjogos/2024S1/projeto_felipe_onorio/recursos
 signal win_condition()
 signal activate_cell()
 
-func update_cursor_status():
+func update_cursor_color():
 	status = status_checker.check_row_and_column(current_cell.row, current_cell.column)
 	if status == true:
-		print("changing cursor to green")
 		cursor_sprite.set_texture(cursor_green)
 	else:
-		print("changing cursor to red")
 		cursor_sprite.set_texture(cursor_red)
+
+func update_cursor_status():
+	update_cursor_color()
 	if status_checker.all_cells_ok():
+		print("WIN CONDITION EMITTED!!!!")
 		win_condition.emit()
 
 # syntax for dynamic connection: signalling_node.connect("signal_name", receiving_node, "signal_handler")
@@ -72,7 +74,7 @@ func update_cursor_position():
 
 func _ready():
 	connect_signal_handler()
-	update_cursor_status()
+	update_cursor_color()
 	update_cursor_position()
 	pass
 
