@@ -1,0 +1,263 @@
+[gd_scene load_steps=31 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-matheusSC/cenas/scripts/main.gd" id="1_ji44o"]
+[ext_resource type="Texture2D" uid="uid://dbk1piem4u7gh" path="res://microjogos/2024S1/projeto-matheusSC/recursos/seta.png" id="2_ng375"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-matheusSC/cenas/scripts/seta.gd" id="3_wbr03"]
+[ext_resource type="Texture2D" uid="uid://ksc205rjpv75" path="res://microjogos/2024S1/projeto-matheusSC/recursos/select.png" id="5_iue81"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-matheusSC/cenas/scripts/selecao.gd" id="6_30gpg"]
+[ext_resource type="Texture2D" uid="uid://d2tjakip1m1nq" path="res://microjogos/2024S1/projeto-matheusSC/recursos/background.png" id="7_hik5p"]
+[ext_resource type="Texture2D" uid="uid://c45vb5sj4uj6" path="res://microjogos/2024S1/projeto-matheusSC/recursos/idle.png" id="8_aiy4c"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-matheusSC/cenas/scripts/character.gd" id="9_m0hjl"]
+[ext_resource type="Texture2D" uid="uid://dhfylrp2o21ao" path="res://microjogos/2024S1/projeto-matheusSC/recursos/left_pose.png" id="10_rvoqw"]
+[ext_resource type="Texture2D" uid="uid://calj1f5rjnb5c" path="res://microjogos/2024S1/projeto-matheusSC/recursos/up_pose.png" id="11_wjv6q"]
+[ext_resource type="Texture2D" uid="uid://uxs2dxkh05d0" path="res://microjogos/2024S1/projeto-matheusSC/recursos/down_pose.png" id="12_eovjk"]
+[ext_resource type="Texture2D" uid="uid://dccl2jkot5xuw" path="res://microjogos/2024S1/projeto-matheusSC/recursos/lose_pose.png" id="13_52yad"]
+[ext_resource type="Texture2D" uid="uid://r0ntrmoljyg4" path="res://microjogos/2024S1/projeto-matheusSC/recursos/crowd.png" id="14_xv2ir"]
+[ext_resource type="Texture2D" uid="uid://ukww7avnwgx1" path="res://microjogos/2024S1/projeto-matheusSC/recursos/confeti.png" id="14_y6v0d"]
+[ext_resource type="Texture2D" uid="uid://cub13y5w6t70d" path="res://microjogos/2024S1/projeto-matheusSC/recursos/ohno.png" id="15_jflpw"]
+[ext_resource type="Texture2D" uid="uid://br4wckvaajkg0" path="res://microjogos/2024S1/projeto-matheusSC/recursos/drop.png" id="16_ae3s2"]
+[ext_resource type="AudioStream" uid="uid://gofqtssovmw8" path="res://microjogos/2024S1/projeto-matheusSC/recursos/sounds/In the circus PSG2.ogg" id="17_aus0f"]
+[ext_resource type="AudioStream" uid="uid://bil0hv7d41k0y" path="res://microjogos/2024S1/projeto-matheusSC/recursos/sounds/applause.wav" id="18_p2sqr"]
+[ext_resource type="AudioStream" uid="uid://cr2brf8c13xc3" path="res://microjogos/2024S1/projeto-matheusSC/recursos/sounds/right.wav" id="19_nujt6"]
+[ext_resource type="AudioStream" uid="uid://cqq67fw1q0lsa" path="res://microjogos/2024S1/projeto-matheusSC/recursos/sounds/wrong.wav" id="20_veugj"]
+
+[sub_resource type="Animation" id="Animation_qqk7n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.65, 1.58393)]
+}
+
+[sub_resource type="Animation" id="Animation_0giy2"]
+resource_name = "bounce"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.65, 1.58393), Vector2(1.73334, 1.66393), Vector2(1.65, 1.58393)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xp8d4"]
+_data = {
+"RESET": SubResource("Animation_qqk7n"),
+"bounce": SubResource("Animation_0giy2")
+}
+
+[sub_resource type="Gradient" id="Gradient_dpekt"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.133333, 0.406667, 0.68, 0.846667)
+colors = PackedColorArray(0.687823, 0, 0.13686, 1, 0, 0.425154, 0.0955925, 1, 2.79158e-06, 0.756526, 0.799237, 1, 0.823553, 0.00162335, 0.955353, 1, 0.828344, 0.688323, 0.0198037, 1)
+
+[sub_resource type="Animation" id="Animation_p54np"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(970, 531)]
+}
+
+[sub_resource type="Animation" id="Animation_mpcau"]
+resource_name = "crowd_shake"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(970, 531), Vector2(990, 531), Vector2(970, 531), Vector2(950, 531), Vector2(970, 531)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_avvv0"]
+_data = {
+"RESET": SubResource("Animation_p54np"),
+"crowd_shake": SubResource("Animation_mpcau")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aca4l"]
+atlas = ExtResource("15_jflpw")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oomg2"]
+atlas = ExtResource("15_jflpw")
+region = Rect2(0, 100, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n4pn7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aca4l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oomg2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Main" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_ji44o")
+
+[node name="seta0" type="Sprite2D" parent="."]
+modulate = Color(0.2, 0.52549, 0.156863, 1)
+position = Vector2(314, 857.603)
+scale = Vector2(1.518, 1.534)
+texture = ExtResource("2_ng375")
+region_enabled = true
+region_rect = Rect2(70.0523, 373.951, 133.233, 137.625)
+script = ExtResource("3_wbr03")
+
+[node name="seta1" type="Sprite2D" parent="."]
+modulate = Color(0.2, 0.52549, 0.156863, 1)
+position = Vector2(764, 857.603)
+scale = Vector2(1.518, 1.534)
+texture = ExtResource("2_ng375")
+region_enabled = true
+region_rect = Rect2(70.0523, 373.951, 133.233, 137.625)
+script = ExtResource("3_wbr03")
+posicao = 1
+
+[node name="seta2" type="Sprite2D" parent="."]
+modulate = Color(0.2, 0.52549, 0.156863, 1)
+position = Vector2(1194, 857.603)
+scale = Vector2(1.518, 1.534)
+texture = ExtResource("2_ng375")
+region_enabled = true
+region_rect = Rect2(70.0523, 373.951, 133.233, 137.625)
+script = ExtResource("3_wbr03")
+posicao = 2
+
+[node name="seta3" type="Sprite2D" parent="."]
+modulate = Color(0.2, 0.52549, 0.156863, 1)
+position = Vector2(1622, 857.603)
+scale = Vector2(1.518, 1.534)
+texture = ExtResource("2_ng375")
+region_enabled = true
+region_rect = Rect2(70.0523, 373.951, 133.233, 137.625)
+script = ExtResource("3_wbr03")
+posicao = 3
+
+[node name="selecao" type="Sprite2D" parent="."]
+modulate = Color(1, 0.466667, 0.345098, 1)
+position = Vector2(314, 863)
+scale = Vector2(1.717, 1.717)
+texture = ExtResource("5_iue81")
+region_enabled = true
+region_rect = Rect2(273.562, 349.061, 193.261, 190.939)
+script = ExtResource("6_30gpg")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="background" type="Sprite2D" parent="."]
+modulate = Color(0.980392, 0.980392, 0.980392, 1)
+z_index = -1
+texture_filter = 1
+position = Vector2(960, 540)
+scale = Vector2(2.00741, 2.00741)
+texture = ExtResource("7_hik5p")
+
+[node name="character" type="Sprite2D" parent="."]
+position = Vector2(984, 439)
+scale = Vector2(1.65, 1.58393)
+texture = ExtResource("8_aiy4c")
+region_enabled = true
+region_rect = Rect2(390.679, 74.1998, 183.013, 244.505)
+region_filter_clip_enabled = true
+script = ExtResource("9_m0hjl")
+left_spr = ExtResource("10_rvoqw")
+up_spr = ExtResource("11_wjv6q")
+down_spr = ExtResource("12_eovjk")
+idle_spr = ExtResource("8_aiy4c")
+perdeu_spr = ExtResource("13_52yad")
+
+[node name="animador" type="AnimationPlayer" parent="character"]
+reset_on_save = false
+callback_mode_method = 1
+libraries = {
+"": SubResource("AnimationLibrary_xp8d4")
+}
+speed_scale = 1.674
+
+[node name="particulas" type="CPUParticles2D" parent="."]
+position = Vector2(963, 144)
+emitting = false
+amount = 400
+lifetime = 3.0
+texture = ExtResource("14_y6v0d")
+emission_shape = 3
+emission_rect_extents = Vector2(1080, 1)
+color_initial_ramp = SubResource("Gradient_dpekt")
+hue_variation_min = -0.1
+hue_variation_max = 0.65
+
+[node name="crowd" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(970, 531)
+scale = Vector2(2.08, 2.08)
+texture = ExtResource("14_xv2ir")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="crowd"]
+libraries = {
+"": SubResource("AnimationLibrary_avvv0")
+}
+
+[node name="oh no" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(251, 318)
+rotation = -0.205064
+scale = Vector2(2.6, 2.6)
+sprite_frames = SubResource("SpriteFrames_n4pn7")
+frame_progress = 0.574082
+
+[node name="gota" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0, 0.686275, 0.686275, 1)
+position = Vector2(909, 372)
+scale = Vector2(0.416667, 0.416667)
+texture = ExtResource("16_ae3s2")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_aus0f")
+volume_db = -5.0
+
+[node name="Applause" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_p2sqr")
+volume_db = 12.0
+
+[node name="Right" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_nujt6")
+
+[node name="Wrong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_veugj")
+volume_db = 12.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

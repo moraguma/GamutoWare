@@ -1,15 +1,20 @@
-[gd_scene load_steps=12 format=3 uid="uid://dov2m2kbxje2j"]
+[gd_scene load_steps=17 format=3 uid="uid://dov2m2kbxje2j"]
 
 [ext_resource type="Texture2D" uid="uid://ja6urlsch5m7" path="res://principal/recursos/sprites/MenuBase.png" id="1"]
 [ext_resource type="Script" path="res://principal/cenas/scripts/Logo.gd" id="2"]
-[ext_resource type="Texture2D" uid="uid://bk1fle4aty18" path="res://principal/recursos/sprites/GMTMenu.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://cs75vvw01oafl" path="res://principal/recursos/sprites/GMToutline.png" id="5"]
 [ext_resource type="Script" path="res://principal/cenas/scripts/TransitionButton.gd" id="6"]
+[ext_resource type="Texture2D" uid="uid://bk1fle4aty18" path="res://principal/recursos/sprites/GMTMenu.png" id="6_kbpfi"]
 [ext_resource type="Script" path="res://principal/cenas/scripts/Menu.gd" id="7"]
 [ext_resource type="Theme" uid="uid://cb4tlwb81nq48" path="res://principal/recursos/themes/TitleTheme.tres" id="7_6ckci"]
 [ext_resource type="Script" path="res://principal/cenas/scripts/TranslationSetButton.gd" id="8"]
+[ext_resource type="FontFile" uid="uid://dv05ux65ppls5" path="res://principal/recursos/fonts/stop_bullying/Stop Bullying.ttf" id="8_ldr7y"]
 [ext_resource type="Theme" uid="uid://dt5djib7huxvm" path="res://principal/recursos/themes/ButtonTheme.tres" id="8_sosii"]
 [ext_resource type="Material" uid="uid://bfefepnpbds1x" path="res://principal/recursos/shaders/Diamond.tres" id="9"]
+[ext_resource type="Script" path="res://principal/cenas/scripts/SoundButton.gd" id="11_a36n0"]
+[ext_resource type="Texture2D" uid="uid://dppoevh5cqa2r" path="res://principal/recursos/sprites/sound_off.png" id="11_yush3"]
+[ext_resource type="Texture2D" uid="uid://b20grcuc7rfa7" path="res://principal/recursos/sprites/sound_on.png" id="12_jre51"]
+[ext_resource type="Texture2D" uid="uid://braorhthxynr" path="res://principal/recursos/sprites/sound_focused_mask.png" id="13_v5l1t"]
 
 [sub_resource type="Curve" id="Curve_svfxn"]
 min_value = -360.0
@@ -38,78 +43,69 @@ gravity = Vector2(500, 500)
 angle_max = 1.0
 angle_curve = SubResource("Curve_svfxn")
 
-[node name="Logo" type="Sprite2D" parent="."]
-position = Vector2(960, 248)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("3")
+[node name="Title" type="Node2D" parent="."]
+position = Vector2(0, 96)
 script = ExtResource("2")
 
-[node name="Title" type="RichTextLabel" parent="Logo"]
+[node name="Logo" type="Sprite2D" parent="Title"]
+texture_filter = 6
+position = Vector2(960, 224)
+texture = ExtResource("6_kbpfi")
+
+[node name="Title" type="RichTextLabel" parent="Title"]
 clip_contents = false
-offset_left = -693.75
-offset_top = 155.0
-offset_right = 697.25
-offset_bottom = 401.0
+offset_top = 372.0
+offset_right = 1920.0
+offset_bottom = 618.0
 theme = ExtResource("7_6ckci")
-theme_override_constants/outline_size = 96
+theme_override_constants/outline_size = 124
+theme_override_fonts/normal_font = ExtResource("8_ldr7y")
 theme_override_font_sizes/normal_font_size = 128
 bbcode_enabled = true
 text = "[center][shake level=30]GAMUTOWARE"
 
 [node name="Buttons" type="Node2D" parent="."]
 
-[node name="Jam" type="Button" parent="Buttons"]
-offset_left = 872.0
-offset_top = 571.0
-offset_right = 1049.0
-offset_bottom = 673.0
-focus_neighbor_top = NodePath("../PT")
-focus_neighbor_right = NodePath("../PT")
-focus_neighbor_bottom = NodePath("../Arcade")
-theme = ExtResource("8_sosii")
-text = "JAM"
-flat = true
-script = ExtResource("6")
-path = "res://principal/cenas/Jam.tscn"
-start_focused = true
+[node name="Buttons" type="VBoxContainer" parent="Buttons"]
+offset_top = 712.0
+offset_right = 1920.0
+offset_bottom = 1048.0
+alignment = 1
 
-[node name="Arcade" type="Button" parent="Buttons"]
-offset_left = 810.0
-offset_top = 698.0
-offset_right = 1109.0
-offset_bottom = 800.0
-focus_neighbor_top = NodePath("../Jam")
-focus_neighbor_right = NodePath("../PT")
+[node name="Play" type="Button" parent="Buttons/Buttons"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../../Mute")
+focus_neighbor_top = NodePath("../../PT")
+focus_neighbor_right = NodePath("../../PT")
 focus_neighbor_bottom = NodePath("../Creditos")
 theme = ExtResource("8_sosii")
-text = "ARCADE"
+text = "PLAY"
 flat = true
 script = ExtResource("6")
-path = "res://principal/cenas/Arcade.tscn"
+path = "res://principal/cenas/Play.tscn"
+start_focused = true
+translation_code = "play"
 
-[node name="Creditos" type="Button" parent="Buttons"]
-offset_left = 670.0
-offset_top = 830.0
-offset_right = 1249.0
-offset_bottom = 932.0
-focus_neighbor_top = NodePath("../Arcade")
-focus_neighbor_right = NodePath("../PT")
+[node name="Creditos" type="Button" parent="Buttons/Buttons"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../../Mute")
+focus_neighbor_top = NodePath("../Play")
+focus_neighbor_right = NodePath("../../PT")
 theme = ExtResource("8_sosii")
-text = "CREDITOS"
+text = "COLEÇÃO"
 flat = true
 script = ExtResource("6")
 path = "res://principal/cenas/Creditos.tscn"
-pt_text = "CREDITOS"
-en_text = "CREDITS"
+translation_code = "collection"
 
 [node name="PT" type="Button" parent="Buttons"]
 offset_left = 1611.0
 offset_top = 30.0
 offset_right = 1737.0
 offset_bottom = 132.0
-focus_neighbor_left = NodePath("../Jam")
+focus_neighbor_left = NodePath("../Mute")
 focus_neighbor_right = NodePath("../EN")
-focus_neighbor_bottom = NodePath("../Jam")
+focus_neighbor_bottom = NodePath("../Buttons/Play")
 theme = ExtResource("8_sosii")
 text = "PT"
 flat = true
@@ -121,9 +117,22 @@ offset_top = 30.0
 offset_right = 1888.0
 offset_bottom = 132.0
 focus_neighbor_left = NodePath("../PT")
-focus_neighbor_bottom = NodePath("../Jam")
+focus_neighbor_bottom = NodePath("../Buttons/Play")
 theme = ExtResource("8_sosii")
 text = "EN"
 flat = true
 script = ExtResource("8")
-translation_code = 1
+aim_language = 1
+
+[node name="Mute" type="TextureButton" parent="Buttons"]
+offset_left = 6.0
+offset_top = -4.0
+offset_right = 156.0
+offset_bottom = 146.0
+focus_neighbor_right = NodePath("../PT")
+focus_neighbor_bottom = NodePath("../Buttons/Play")
+toggle_mode = true
+texture_normal = ExtResource("11_yush3")
+texture_pressed = ExtResource("12_jre51")
+texture_focused = ExtResource("13_v5l1t")
+script = ExtResource("11_a36n0")

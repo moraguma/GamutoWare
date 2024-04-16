@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://4pd8wij6tsec"]
+
+[ext_resource type="Script" path="res://principal/cenas/scripts/TranslationManager.gd" id="1_c1unm"]
+
+[node name="TranslationManager" type="Node"]
+script = ExtResource("1_c1unm")

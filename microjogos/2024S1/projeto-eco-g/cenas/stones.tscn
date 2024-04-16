@@ -1,0 +1,283 @@
+[gd_scene load_steps=10 format=3 uid="uid://bhuj8qm6aduut"]
+
+[ext_resource type="PackedScene" uid="uid://do2urvm5xovij" path="res://microjogos/2024S1/projeto-eco-g/cenas/stone_8.tscn" id="2_ftro1"]
+[ext_resource type="PackedScene" uid="uid://cfbei5u5icyew" path="res://microjogos/2024S1/projeto-eco-g/cenas/stone_1.tscn" id="3_0r01d"]
+[ext_resource type="PackedScene" uid="uid://c37t80aqgqvh3" path="res://microjogos/2024S1/projeto-eco-g/cenas/stone_2.tscn" id="4_1vy6m"]
+[ext_resource type="PackedScene" uid="uid://c50n3sissnbcn" path="res://microjogos/2024S1/projeto-eco-g/cenas/stone_3.tscn" id="5_f25ge"]
+[ext_resource type="PackedScene" uid="uid://c6s6bacidswnq" path="res://microjogos/2024S1/projeto-eco-g/cenas/stone_4.tscn" id="6_naxrv"]
+[ext_resource type="PackedScene" uid="uid://blyaoeavka6mq" path="res://microjogos/2024S1/projeto-eco-g/cenas/stone_5.tscn" id="7_au80i"]
+[ext_resource type="PackedScene" uid="uid://3p2g2bdc0u3t" path="res://microjogos/2024S1/projeto-eco-g/cenas/stone_6.tscn" id="8_upexq"]
+[ext_resource type="PackedScene" uid="uid://c1tlnmwosk7at" path="res://microjogos/2024S1/projeto-eco-g/cenas/stone_7.tscn" id="9_j0j83"]
+
+[sub_resource type="GDScript" id="GDScript_mu1a1"]
+script/source = "extends Node2D
+var speed = 5
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	position.x -= speed
+
+
+func _on_body_entered(body):
+	body.player_hit()
+"
+
+[node name="Stones" type="Node2D"]
+position = Vector2(1316, 3)
+script = SubResource("GDScript_mu1a1")
+
+[node name="Stone1" parent="." instance=ExtResource("3_0r01d")]
+position = Vector2(-70, -3)
+
+[node name="Stone2" parent="." instance=ExtResource("4_1vy6m")]
+position = Vector2(0, 1077)
+
+[node name="Stone3" parent="." instance=ExtResource("5_f25ge")]
+position = Vector2(312, 1077)
+
+[node name="Stone4" parent="." instance=ExtResource("6_naxrv")]
+position = Vector2(912, 1077)
+
+[node name="Stone5" parent="." instance=ExtResource("7_au80i")]
+position = Vector2(718, -3)
+
+[node name="Stone6" parent="." instance=ExtResource("8_upexq")]
+position = Vector2(363, -3)
+
+[node name="Stone7" parent="." instance=ExtResource("9_j0j83")]
+position = Vector2(1332, 1077)
+
+[node name="Stone8" parent="." instance=ExtResource("2_ftro1")]
+position = Vector2(1123, -3)
+
+[node name="Stone9" parent="." instance=ExtResource("6_naxrv")]
+position = Vector2(2973, 1077)
+
+[node name="Stone10" parent="." instance=ExtResource("5_f25ge")]
+position = Vector2(1808, 1077)
+rotation = -6.28319
+
+[node name="Stone11" parent="." instance=ExtResource("8_upexq")]
+position = Vector2(1857, -3)
+
+[node name="Stone12" parent="." instance=ExtResource("2_ftro1")]
+position = Vector2(-1670, 0)
+
+[node name="Stone13" parent="." instance=ExtResource("9_j0j83")]
+position = Vector2(2387, 1077)
+
+[node name="Stone14" parent="." instance=ExtResource("8_upexq")]
+position = Vector2(3838, -3)
+
+[node name="Stone15" parent="." instance=ExtResource("9_j0j83")]
+position = Vector2(35, -3)
+rotation = 3.14159
+
+[node name="Stone16" parent="." instance=ExtResource("5_f25ge")]
+position = Vector2(3549, -3)
+rotation = 3.14159
+
+[node name="Stone17" parent="." instance=ExtResource("2_ftro1")]
+position = Vector2(4238, 1077)
+rotation = 3.14159
+
+[node name="Stone18" parent="." instance=ExtResource("2_ftro1")]
+position = Vector2(7318, 1077)
+rotation = 3.14159
+
+[node name="Stone19" parent="." instance=ExtResource("3_0r01d")]
+position = Vector2(8421, 1077)
+rotation = 3.14159
+
+[node name="Stone20" parent="." instance=ExtResource("4_1vy6m")]
+position = Vector2(8426, -3)
+rotation = 3.14159
+
+[node name="Stone21" parent="." instance=ExtResource("5_f25ge")]
+position = Vector2(8104, -3)
+rotation = 3.14159
+
+[node name="Stone22" parent="." instance=ExtResource("6_naxrv")]
+position = Vector2(7515, -3)
+rotation = 3.14159
+
+[node name="Stone23" parent="." instance=ExtResource("7_au80i")]
+position = Vector2(7713, 1077)
+rotation = 3.14159
+
+[node name="Stone24" parent="." instance=ExtResource("8_upexq")]
+position = Vector2(8063, 1077)
+rotation = 3.14159
+
+[node name="Stone25" parent="." instance=ExtResource("9_j0j83")]
+position = Vector2(7090, -3)
+rotation = 3.14159
+
+[node name="Stone26" parent="." instance=ExtResource("6_naxrv")]
+position = Vector2(5452, -3)
+rotation = 3.14159
+
+[node name="Stone27" parent="." instance=ExtResource("5_f25ge")]
+position = Vector2(6615, -3)
+rotation = 3.14159
+
+[node name="Stone28" parent="." instance=ExtResource("8_upexq")]
+position = Vector2(6572, 1077)
+rotation = 3.14159
+
+[node name="Stone29" parent="." instance=ExtResource("2_ftro1")]
+position = Vector2(6217, 1077)
+rotation = 3.14159
+
+[node name="Stone30" parent="." instance=ExtResource("9_j0j83")]
+position = Vector2(6038, -3)
+rotation = 3.14159
+
+[node name="Stone31" parent="." instance=ExtResource("8_upexq")]
+position = Vector2(4529, 1077)
+rotation = 3.14159
+
+[node name="Stone32" parent="." instance=ExtResource("9_j0j83")]
+position = Vector2(4405, 1077)
+
+[node name="Stone33" parent="." instance=ExtResource("5_f25ge")]
+position = Vector2(4877, 1077)
+
+[node name="Stone34" parent="." instance=ExtResource("2_ftro1")]
+position = Vector2(4201, -3)
+
+[node name="Stone35" parent="." instance=ExtResource("2_ftro1")]
+position = Vector2(9368, -3)
+
+[node name="Stone36" parent="." instance=ExtResource("3_0r01d")]
+position = Vector2(8263, -3)
+
+[node name="Stone37" parent="." instance=ExtResource("4_1vy6m")]
+position = Vector2(8263, 1077)
+
+[node name="Stone38" parent="." instance=ExtResource("5_f25ge")]
+position = Vector2(8583, 1077)
+
+[node name="Stone39" parent="." instance=ExtResource("6_naxrv")]
+position = Vector2(9175, 1077)
+
+[node name="Stone40" parent="." instance=ExtResource("7_au80i")]
+position = Vector2(8977, -3)
+
+[node name="Stone41" parent="." instance=ExtResource("8_upexq")]
+position = Vector2(8626, -3)
+
+[node name="Stone42" parent="." instance=ExtResource("9_j0j83")]
+position = Vector2(9599, 1077)
+
+[node name="Stone43" parent="." instance=ExtResource("6_naxrv")]
+position = Vector2(11236, 1077)
+
+[node name="Stone44" parent="." instance=ExtResource("5_f25ge")]
+position = Vector2(10071, 1077)
+
+[node name="Stone45" parent="." instance=ExtResource("8_upexq")]
+position = Vector2(10114, -3)
+
+[node name="Stone46" parent="." instance=ExtResource("2_ftro1")]
+position = Vector2(10470, -3)
+
+[node name="Stone47" parent="." instance=ExtResource("9_j0j83")]
+position = Vector2(10650, 1077)
+
+[node name="Stone48" parent="." instance=ExtResource("8_upexq")]
+position = Vector2(12167, -3)
+
+[node name="Stone49" parent="." instance=ExtResource("9_j0j83")]
+position = Vector2(12286, -3)
+rotation = 3.14159
+
+[node name="Stone50" parent="." instance=ExtResource("5_f25ge")]
+position = Vector2(11810, -3)
+rotation = 3.14159
+
+[node name="Stone51" parent="." instance=ExtResource("2_ftro1")]
+position = Vector2(12501, 1077)
+rotation = 3.14159
+
+[node name="Stone52" parent="." instance=ExtResource("6_naxrv")]
+position = Vector2(-510, 1077)
+
+[node name="Stone53" parent="." instance=ExtResource("9_j0j83")]
+position = Vector2(-1470, 1077)
+
+[node name="Stone54" parent="." instance=ExtResource("8_upexq")]
+position = Vector2(-508, 1077)
+rotation = -3.14159
+
+[node name="Stone55" parent="." instance=ExtResource("8_upexq")]
+position = Vector2(3462, -3)
+
+[node name="Stone56" parent="." instance=ExtResource("2_ftro1")]
+position = Vector2(2246, -6)
+
+[node name="Stone57" parent="." instance=ExtResource("8_upexq")]
+position = Vector2(-923, -3.00012)
+
+[connection signal="body_entered" from="Stone1" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone2" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone3" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone4" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone5" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone6" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone7" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone8" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone9" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone10" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone11" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone12" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone13" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone14" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone15" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone16" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone17" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone18" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone19" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone20" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone21" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone22" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone23" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone24" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone25" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone26" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone27" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone28" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone29" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone30" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone31" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone32" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone33" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone34" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone35" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone36" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone37" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone38" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone39" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone40" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone41" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone42" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone43" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone44" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone45" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone46" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone47" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone48" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone49" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone50" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone51" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone52" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone53" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone54" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone55" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone56" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Stone57" to="." method="_on_body_entered"]
