@@ -1,0 +1,103 @@
+[gd_scene load_steps=14 format=3 uid="uid://dnhn2yadjkru6"]
+
+[ext_resource type="Texture2D" uid="uid://d2g21riptaer" path="res://principal/recursos/sprites/GreenGameIcon.png" id="1_6hgjj"]
+[ext_resource type="Script" path="res://principal/cenas/scripts/MinigameDisplay.gd" id="1_p7qgm"]
+[ext_resource type="Shader" path="res://principal/recursos/shaders/mask.gdshader" id="2_f644r"]
+[ext_resource type="Script" path="res://principal/cenas/scripts/TimerIndicator.gd" id="4_rcas5"]
+[ext_resource type="Texture2D" uid="uid://b83mxv1sg7wbc" path="res://principal/recursos/sprites/clock.png" id="5_vteeu"]
+[ext_resource type="Script" path="res://principal/cenas/scripts/Twitcher.gd" id="6_nkvio"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ilc1l"]
+viewport_path = NodePath("MicrogameMaskViewport")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6fgld"]
+resource_local_to_scene = true
+shader = ExtResource("2_f644r")
+shader_parameter/mask_texture = SubResource("ViewportTexture_ilc1l")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vmr0q"]
+
+[sub_resource type="StyleBoxEmpty" id="21"]
+
+[sub_resource type="StyleBoxFlat" id="22"]
+bg_color = Color(0.615686, 0.156863, 0.854902, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b4d5i"]
+bg_color = Color(0.615686, 0.156863, 0.854902, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Theme" id="Theme_22q77"]
+ProgressBar/styles/background = SubResource("StyleBoxEmpty_vmr0q")
+ProgressBar/styles/bg = SubResource("21")
+ProgressBar/styles/fg = SubResource("22")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_b4d5i")
+
+[node name="MinigameDisplay" type="Node2D"]
+script = ExtResource("1_p7qgm")
+
+[node name="MicrogameMaskViewport" type="SubViewport" parent="."]
+size = Vector2i(1920, 1080)
+
+[node name="MicrogameMask" type="Sprite2D" parent="MicrogameMaskViewport"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(360, 420)
+texture = ExtResource("1_6hgjj")
+
+[node name="Display" type="SubViewportContainer" parent="."]
+light_mask = 2
+visibility_layer = 2
+material = SubResource("ShaderMaterial_6fgld")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(8.5, 8.5)
+size_flags_horizontal = 6
+size_flags_vertical = 6
+stretch = true
+
+[node name="Game" type="SubViewport" parent="Display"]
+handle_input_locally = false
+msaa_2d = 2
+size = Vector2i(2, 2)
+render_target_update_mode = 4
+
+[node name="TimerIndicator" type="Node2D" parent="."]
+script = ExtResource("4_rcas5")
+
+[node name="TimerProgressBar" type="ProgressBar" parent="TimerIndicator"]
+offset_left = 122.0
+offset_top = 1199.0
+offset_right = 1802.0
+offset_bottom = 1239.0
+theme = SubResource("Theme_22q77")
+max_value = 1.0
+step = 0.001
+value = 1.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Clock" type="Sprite2D" parent="TimerIndicator"]
+position = Vector2(120, 1215)
+rotation = -0.174533
+texture = ExtResource("5_vteeu")
+script = ExtResource("6_nkvio")
+trauma = 0.3
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="FreeTimer" type="Timer" parent="."]
+one_shot = true

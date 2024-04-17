@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-eco-g/cenas/scripts/main.gd" id="1_271qq"]
+[ext_resource type="PackedScene" uid="uid://c101tbn8wn1uo" path="res://microjogos/2024S1/projeto-eco-g/cenas/character_body_2d.tscn" id="1_ssn2e"]
+[ext_resource type="PackedScene" uid="uid://cv36diyrxii8c" path="res://microjogos/2024S1/projeto-eco-g/cenas/parallax_background.tscn" id="2_bkp2i"]
+[ext_resource type="PackedScene" uid="uid://bhuj8qm6aduut" path="res://microjogos/2024S1/projeto-eco-g/cenas/stones.tscn" id="3_kcuk1"]
+[ext_resource type="Texture2D" uid="uid://bw751n66l2a4n" path="res://microjogos/2024S1/projeto-eco-g/recursos/sprites/space_bar.png" id="5_irwje"]
+[ext_resource type="FontFile" uid="uid://xy0c8mxssai0" path="res://microjogos/2024S1/projeto-eco-g/recursos/CaveatBrush-Regular.ttf" id="6_t7myu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fwoks"]
+font = ExtResource("6_t7myu")
+font_size = 80
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_271qq")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("2_bkp2i")]
+
+[node name="Stones" parent="." instance=ExtResource("3_kcuk1")]
+position = Vector2(5, 3)
+
+[node name="Gamuto" parent="." instance=ExtResource("1_ssn2e")]
+position = Vector2(237, 518)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 177.0
+offset_top = 23.0
+offset_right = 344.0
+offset_bottom = 124.0
+text = "Sonar"
+label_settings = SubResource("LabelSettings_fwoks")
+
+[node name="Sprite2D" type="Sprite2D" parent="Label"]
+position = Vector2(-79, 54)
+scale = Vector2(0.601562, 0.601562)
+texture = ExtResource("5_irwje")
+
+[connection signal="dead" from="Gamuto" to="." method="_on_gamuto_dead"]

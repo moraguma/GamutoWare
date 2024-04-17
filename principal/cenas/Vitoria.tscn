@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://jg4fqkyuoonw"]
+[gd_scene load_steps=15 format=3 uid="uid://jg4fqkyuoonw"]
 
 [ext_resource type="Texture2D" uid="uid://dogwrk2nqqk03" path="res://principal/recursos/sprites/excited.png" id="2"]
 [ext_resource type="Script" path="res://principal/cenas/scripts/TransitionButton.gd" id="3"]
@@ -17,8 +17,9 @@ max_value = 360.0
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.990196, 360), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="Animation" id="11"]
+[sub_resource type="Animation" id="Animation_itf0j"]
 resource_name = "idle"
+loop_mode = 1
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -26,9 +27,9 @@ tracks/0/path = NodePath(".:scale:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(),
-"points": PackedFloat32Array(),
-"times": PackedFloat32Array()
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.3, -0.25, 0, 0.25, 0.05, 0.3, -0.25, 0.05, 0.25, 0),
+"times": PackedFloat32Array(0.8, 1)
 }
 tracks/1/type = "bezier"
 tracks/1/imported = false
@@ -37,14 +38,40 @@ tracks/1/path = NodePath(".:scale:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"handle_modes": PackedInt32Array(),
-"points": PackedFloat32Array(),
-"times": PackedFloat32Array()
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.3, -0.25, 0, 0.25, 0.05, 0.3, -0.25, 0.05, 0.25, 0),
+"times": PackedFloat32Array(0.8, 1)
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_cnsln"]
+[sub_resource type="Animation" id="Animation_jc2mm"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.3, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.3, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eaanj"]
 _data = {
-"idle": SubResource("11")
+"RESET": SubResource("Animation_jc2mm"),
+"idle": SubResource("Animation_itf0j")
 }
 
 [node name="Vitoria" type="Node2D"]
@@ -76,10 +103,10 @@ offset_right = 1655.0
 offset_bottom = 328.0
 theme = ExtResource("5_nb20q")
 bbcode_enabled = true
-text = "VICTORY!"
+text = "[center]VICTORY!"
 script = ExtResource("7")
-pt_text = "[center][shake rate=20 level=40]VITORIA!"
-en_text = "[center][shake rate=20 level=40]VICTORY!"
+translation_code = "victory"
+center_text = true
 
 [node name="Mensagem" type="RichTextLabel" parent="."]
 clip_contents = false
@@ -90,28 +117,27 @@ offset_bottom = 816.0
 theme = ExtResource("5_nb20q")
 theme_override_font_sizes/normal_font_size = 64
 bbcode_enabled = true
-text = "Thanks for playing!"
+text = "[center]Thanks for playing!"
 script = ExtResource("7")
-pt_text = "[center][wave amp=100 freq=5]Valeu por jogar!"
-en_text = "[center][wave amp=100 freq=5]Thanks for playing!"
+translation_code = "thanks"
+center_text = true
 
 [node name="Gamuto" type="Sprite2D" parent="."]
 position = Vector2(960, 724)
-scale = Vector2(0.237318, 0.237318)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Gamuto"]
 libraries = {
-"": SubResource("AnimationLibrary_cnsln")
+"": SubResource("AnimationLibrary_eaanj")
 }
 script = ExtResource("6")
 
 [node name="Buttons" type="Node2D" parent="."]
 
 [node name="Menu" type="Button" parent="Buttons"]
-offset_left = 849.0
 offset_top = 890.0
-offset_right = 1072.0
+offset_right = 1920.0
 offset_bottom = 992.0
 theme = ExtResource("9_ek2g8")
 text = "MENU"
@@ -119,3 +145,4 @@ flat = true
 script = ExtResource("3")
 path = "res://principal/cenas/Menu.tscn"
 start_focused = true
+translation_code = "back"

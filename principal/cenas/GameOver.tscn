@@ -46,8 +46,8 @@ theme = ExtResource("5_oy72l")
 bbcode_enabled = true
 text = "FIM   DE   JOGO"
 script = ExtResource("6")
-pt_text = "[center][shake rate=20 level=40]FIM   DE   JOGO"
-en_text = "[center][shake rate=20 level=40]GAME   OVER"
+translation_code = "game_over"
+center_text = true
 
 [node name="Score" type="RichTextLabel" parent="."]
 clip_contents = false
