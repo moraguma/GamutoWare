@@ -13,8 +13,23 @@ var title_en = "Food Food"
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
 Criado por: Glayson Oliveira
-Srite dos lanches: 
-https://marru.itch.io/
+
+Sprites:
+
+Hamburguer e Batata_frita:
+https://opengameart.org/content/icons-food
+public domain CC0
+
+Prato:
+https://opengameart.org/content/lpc-meals
+GPL 3.0
+
+Refri:
+https://opengameart.org/content/food-items-16x16
+https://red-voxel.itch.io/
+public domain CC0
+
+Wooden bar: ?
 """
 var credits_en = """
 Made by: Glayson Oliveira

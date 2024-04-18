@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://75d3c6v5jsgu"
-path="res://.godot/imported/Hamburguer.png-f947520eff78128e03abc904ecbaa8cd.ctex"
+uid="uid://ciaxoh7wb165t"
+path="res://.godot/imported/meals.png-10bec5c5834bca2c31f59d34beb4e3ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-FastFood/Sprites/Lanches/Hamburguer.png"
-dest_files=["res://.godot/imported/Hamburguer.png-f947520eff78128e03abc904ecbaa8cd.ctex"]
+source_file="res://microjogos/2024S1/projeto-FastFood/Sprites/Lanches/original_images/meals.png"
+dest_files=["res://.godot/imported/meals.png-10bec5c5834bca2c31f59d34beb4e3ed.ctex"]
 
 [params]
 
