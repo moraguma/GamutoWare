@@ -69,3 +69,7 @@ func register_win():
 func register_lose():
 	emit_signal("lose")
 	
+
+
+func _on_pedido_jogo_vencido():
+	pass # Replace with function body.

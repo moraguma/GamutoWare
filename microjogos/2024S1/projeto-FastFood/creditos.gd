@@ -16,7 +16,7 @@ Criado por: Glayson Oliveira
 
 Sprites:
 
-Hamburguer e Batata_frita:
+Hamburguer e batata frita:
 https://opengameart.org/content/icons-food
 public domain CC0
 
@@ -28,11 +28,22 @@ Refri:
 https://opengameart.org/content/food-items-16x16
 https://red-voxel.itch.io/
 public domain CC0
-
-Wooden bar: ?
 """
 var credits_en = """
 Made by: Glayson Oliveira
 
-Fill this space with credits to used assets, links to your social medias and whatever other details you think are important
+Sprites:
+
+Burger and fries:
+https://opengameart.org/content/icons-food
+public domain CC0
+ 
+Plate:
+https://opengameart.org/content/lpc-meals
+GPL 3.0
+
+Soda:
+https://opengameart.org/content/food-items-16x16
+https://red-voxel.itch.io/
+public domain CC0
 """

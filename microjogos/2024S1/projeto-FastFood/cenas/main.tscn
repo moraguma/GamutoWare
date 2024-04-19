@@ -3,11 +3,11 @@
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-FastFood/cenas/scripts/main.gd" id="1_yqjmj"]
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-FastFood/cenas/scripts/Player_seta.gd" id="2_dj13i"]
 [ext_resource type="Texture2D" uid="uid://d0h8w1p216yfn" path="res://microjogos/2024S1/projeto-FastFood/Sprites/fundo_branco.png" id="2_ktowv"]
-[ext_resource type="Texture2D" uid="uid://mggtg4bdygrt" path="res://microjogos/2024S1/projeto-FastFood/Sprites/Lanches/Prato.png" id="5_be0ax"]
+[ext_resource type="Texture2D" uid="uid://dq4x2neptbk5v" path="res://microjogos/2024S1/projeto-FastFood/Sprites/Lanches/Prato.png" id="5_be0ax"]
 [ext_resource type="Texture2D" uid="uid://bopygicqau0hl" path="res://microjogos/2024S1/projeto-FastFood/Sprites/red_arrow_right.png" id="5_ex6fd"]
-[ext_resource type="Texture2D" uid="uid://75d3c6v5jsgu" path="res://microjogos/2024S1/projeto-FastFood/Sprites/Lanches/Hamburguer.png" id="6_nl2fj"]
-[ext_resource type="Texture2D" uid="uid://ik4ek44gqdhd" path="res://microjogos/2024S1/projeto-FastFood/Sprites/Lanches/Refri.png" id="7_44b3x"]
-[ext_resource type="Texture2D" uid="uid://dlmbhsxngn8sf" path="res://microjogos/2024S1/projeto-FastFood/Sprites/Lanches/Batata_frita.png" id="8_cuctr"]
+[ext_resource type="Texture2D" uid="uid://bevltp43ekgsa" path="res://microjogos/2024S1/projeto-FastFood/Sprites/Lanches/Hamburguer.png" id="6_nl2fj"]
+[ext_resource type="Texture2D" uid="uid://corwmr5246544" path="res://microjogos/2024S1/projeto-FastFood/Sprites/Lanches/Refri.png" id="7_44b3x"]
+[ext_resource type="Texture2D" uid="uid://b1f5s8o8ukh73" path="res://microjogos/2024S1/projeto-FastFood/Sprites/Lanches/Batata_frita.png" id="8_cuctr"]
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-FastFood/cenas/scripts/Pedido.gd" id="10_45x8o"]
 [ext_resource type="Texture2D" uid="uid://c5ql2bdm8utth" path="res://microjogos/2024S1/projeto-FastFood/Sprites/Balcao.png" id="10_gxnn4"]
 [ext_resource type="Texture2D" uid="uid://dv0taox4ow2tl" path="res://microjogos/2024S1/projeto-FastFood/Sprites/Tela.png" id="11_w24uo"]
@@ -23,7 +23,6 @@ texture_filter = 1
 scale = Vector2(60.0312, 33.7188)
 texture = ExtResource("2_ktowv")
 centered = false
-metadata/_edit_lock_ = true
 
 [node name="Balcao" type="Sprite2D" parent="Cenário"]
 texture_filter = 1
@@ -71,8 +70,8 @@ texture = ExtResource("6_nl2fj")
 
 [node name="Refri" type="Sprite2D" parent="Lanches"]
 texture_filter = 1
-position = Vector2(1372, 607)
-scale = Vector2(0.501003, 0.501003)
+position = Vector2(1371, 648)
+scale = Vector2(0.303133, 0.303133)
 texture = ExtResource("7_44b3x")
 
 [node name="BatataFrita" type="Sprite2D" parent="Lanches"]
@@ -94,4 +93,5 @@ script = ExtResource("10_45x8o")
 [node name="Timer" type="Timer" parent="Display/Pedido"]
 wait_time = 0.5
 
+[connection signal="jogo_vencido" from="Display/Pedido" to="." method="register_win"]
 [connection signal="timeout" from="Display/Pedido/Timer" to="Display/Pedido" method="_on_timer_timeout"]

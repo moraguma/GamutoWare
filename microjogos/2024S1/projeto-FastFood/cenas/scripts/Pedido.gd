@@ -3,6 +3,10 @@ extends Sprite2D
 @onready var node_Player = $"../../Player_seta"
 
 signal trocar
+
+# Gambiarra pra vitória ficar registrada
+signal jogo_vencido
+
 var acertos
 
 # Valor atribuído a cada lanche
@@ -15,6 +19,9 @@ var LancheNaMao = 0
 
 # Gerar um valor aleatório de lanche para pôr na tela
 var pedido = randi() % 3 # Sortear um número de 0 a 3 (número do lanche)
+
+# Definição de término do jogo
+var jogo_terminado: bool = false
 
 func _ready():
 	acertos = 0
@@ -53,12 +60,18 @@ func _process(delta):
 	elif pedido == 2:
 		$"../../Display/Pedido".texture=ResourceLoader.load("res://microjogos/2024S1/projeto-FastFood/Sprites/Lanches/Refri.png")
 	if acertos >= 3:
-		match Global.language:
-			Global.LANGUAGE.EN:
-				NotificationCenter.notify("YOU WIN!")
-			Global.LANGUAGE.PT:
-				NotificationCenter.notify("VOCÊ GANHOU!")
-		emit_signal("win")
+		if !jogo_terminado:
+			match Global.language:
+				Global.LANGUAGE.EN:
+					NotificationCenter.notify("YOU WIN!")
+				Global.LANGUAGE.PT:
+					NotificationCenter.notify("VOCÊ GANHOU!")
+			# Não funciona por algum motivo. A popup de "win" aparece, mas uma vida é perdida.
+			# Talvez seja gerado um signal novo com o mesmo nome mas identificador interno diferente? 
+			#emit_signal("win") 
+			# Funciona... mas por quê exatamente???
+			jogo_vencido.emit()
+			jogo_terminado = true
 		
 func _on_timer_timeout(): # DLC 
 	print('[Display/Pedido] SINAL RECEBIDO')
