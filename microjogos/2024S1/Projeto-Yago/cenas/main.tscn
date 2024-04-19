@@ -1,7 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://bi0ahd7cv37i6"]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/Projeto-Yago/cenas/scripts/main.gd" id="1_afyw2"]
-[ext_resource type="PackedScene" uid="uid://cf1tuns0gajbc" path="res://microjogos/2024S1/Projeto-Yago/cenas/parede.tscn" id="2_kto1s"]
 [ext_resource type="PackedScene" uid="uid://btufcyuqlatk8" path="res://microjogos/2024S1/Projeto-Yago/cenas/carrinho.tscn" id="2_onwp1"]
 [ext_resource type="Script" path="res://microjogos/2024S1/Projeto-Yago/cenas/scripts/player.gd" id="6_spvru"]
 [ext_resource type="Texture2D" uid="uid://cvos0bhxo8c3i" path="res://microjogos/2024S1/Projeto-Yago/recursos/GroundTile.png" id="6_utk0n"]
@@ -10,6 +9,7 @@
 [ext_resource type="FontFile" uid="uid://dv05ux65ppls5" path="res://principal/recursos/fonts/stop_bullying/Stop Bullying.ttf" id="8_7x2eo"]
 [ext_resource type="PackedScene" uid="uid://bad83afs0qqtj" path="res://microjogos/2024S1/Projeto-Yago/cenas/caixa.tscn" id="8_a4ql8"]
 [ext_resource type="PackedScene" uid="uid://d4pfkrs0oex2" path="res://microjogos/2024S1/Projeto-Yago/cenas/leite.tscn" id="9_tu3kh"]
+[ext_resource type="PackedScene" uid="uid://c33e5ijkmyaud" path="res://microjogos/2024S1/Projeto-Yago/cenas/paredes.tscn" id="10_rdfhs"]
 [ext_resource type="PackedScene" uid="uid://714viw0ojmie" path="res://microjogos/2024S1/Projeto-Yago/cenas/ovos.tscn" id="11_u28la"]
 [ext_resource type="PackedScene" uid="uid://dhw8b8n51eo6f" path="res://microjogos/2024S1/Projeto-Yago/cenas/paes.tscn" id="12_hs8qi"]
 [ext_resource type="PackedScene" uid="uid://ebl75hisitpy" path="res://microjogos/2024S1/Projeto-Yago/cenas/queijo.tscn" id="13_bjgod"]
@@ -81,11 +81,17 @@ scale = Vector2(4, 4)
 
 [node name="Paredes" type="Node2D" parent="."]
 
-[node name="Parede" parent="Paredes" instance=ExtResource("2_kto1s")]
-position = Vector2(-1000, -700)
+[node name="ParedeLeft" parent="Paredes" instance=ExtResource("10_rdfhs")]
+offset_left = -1200.0
+offset_top = -2700.0
+offset_right = -800.0
+offset_bottom = 1300.0
 
-[node name="Parede2" parent="Paredes" instance=ExtResource("2_kto1s")]
-position = Vector2(1000, 700)
+[node name="ParedeRIght" parent="Paredes" instance=ExtResource("10_rdfhs")]
+offset_left = 800.0
+offset_top = -1300.0
+offset_right = 1200.0
+offset_bottom = 2700.0
 
 [node name="Player" parent="." instance=ExtResource("2_onwp1")]
 script = ExtResource("6_spvru")

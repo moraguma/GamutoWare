@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://c33e5ijkmyaud"]
+
+[ext_resource type="Texture2D" uid="uid://b76s6mih106c3" path="res://microjogos/2024S1/Projeto-Yago/recursos/Prateleira.png" id="1_yu156"]
+
+[node name="Sprite2D" type="TextureRect"]
+modulate = Color(0.666667, 0.172549, 0, 1)
+offset_left = -200.0
+offset_top = -2000.0
+offset_right = 200.0
+offset_bottom = 2000.0
+texture = ExtResource("1_yu156")
+stretch_mode = 1
