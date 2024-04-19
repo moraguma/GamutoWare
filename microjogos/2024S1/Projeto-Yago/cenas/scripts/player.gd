@@ -75,7 +75,7 @@ func _physics_process(delta):
 	else:
 		velocity += (input * accel * delta)
 		velocity = velocity.limit_length(SPEED)
-	position.x = clamp(position.x, -800, 800)
+	position.x = clamp(position.x, -600, 600)
 	position.y = clamp(position.y, -900, 900)
 	move_and_slide()
 
