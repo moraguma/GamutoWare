@@ -18,7 +18,6 @@ func playAudio():
 			cafe.play("gone")
 			$"../Player/AnimatedSprite2D".play("hurt")
 			$"../Label".text = "PERDEU!"
-			$"../".register_lose()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
