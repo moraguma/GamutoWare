@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=14 format=3 uid="uid://bi0ahd7cv37i6"]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-FastFood/cenas/scripts/main.gd" id="1_yqjmj"]
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-FastFood/cenas/scripts/Player_seta.gd" id="2_dj13i"]
@@ -11,6 +11,12 @@
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-FastFood/cenas/scripts/Pedido.gd" id="10_45x8o"]
 [ext_resource type="Texture2D" uid="uid://c5ql2bdm8utth" path="res://microjogos/2024S1/projeto-FastFood/Sprites/Balcao.png" id="10_gxnn4"]
 [ext_resource type="Texture2D" uid="uid://dv0taox4ow2tl" path="res://microjogos/2024S1/projeto-FastFood/Sprites/Tela.png" id="11_w24uo"]
+[ext_resource type="FontFile" uid="uid://hwoavt5p4j15" path="res://principal/recursos/fonts/Playpen_Sans/PlaypenSans-VariableFont_wght.ttf" id="12_ov4r4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_m5h7r"]
+font = ExtResource("12_ov4r4")
+font_size = 50
+font_color = Color(0.0980392, 0.0980392, 0.133333, 1)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_yqjmj")
@@ -92,6 +98,15 @@ script = ExtResource("10_45x8o")
 
 [node name="Timer" type="Timer" parent="Display/Pedido"]
 wait_time = 0.5
+
+[node name="Label" type="Label" parent="."]
+offset_left = 577.0
+offset_top = 400.0
+offset_right = 1334.0
+offset_bottom = 541.0
+label_settings = SubResource("LabelSettings_m5h7r")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="jogo_vencido" from="Display/Pedido" to="." method="register_win"]
 [connection signal="timeout" from="Display/Pedido/Timer" to="Display/Pedido" method="_on_timer_timeout"]

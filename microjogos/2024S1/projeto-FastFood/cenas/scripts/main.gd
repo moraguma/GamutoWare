@@ -23,8 +23,10 @@ func _ready():
 	match Global.language:
 		Global.LANGUAGE.EN:
 			NotificationCenter.notify("MAKE THE ORDER!")
+			$Label.text = "[Space] to Select!"
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("FAÇA O PEDIDO")
+			$Label.text = "[Espaço] para selecionar!"
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
