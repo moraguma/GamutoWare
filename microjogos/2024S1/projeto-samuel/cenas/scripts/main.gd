@@ -43,8 +43,8 @@ func _physics_process(delta):
 # desde a última chamada desta função. O comando pass não faz nada
 func _process(delta):
 	if vitoria >= 3:
+		vitoria = 0
 		register_win()
-
 
 # --------------------------------------------------------------------------------------------------
 # SUAS FUNÇÕES

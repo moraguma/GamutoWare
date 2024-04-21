@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://boo4siq8io3s6"
-path="res://.godot/imported/Fundo.png-a4347bb338820b9fcca44d78545df922.ctex"
+uid="uid://djxph347r8pgb"
+path="res://.godot/imported/Piaui_sprite_vitoria.png-2096f9d8cfc371ba4028cdb7f790fcf5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-samuel/recursos/Sprites/Fundo.png"
-dest_files=["res://.godot/imported/Fundo.png-a4347bb338820b9fcca44d78545df922.ctex"]
+source_file="res://microjogos/2024S1/projeto-samuel/recursos/Sprites/Piaui_sprite_vitoria.png"
+dest_files=["res://.godot/imported/Piaui_sprite_vitoria.png-2096f9d8cfc371ba4028cdb7f790fcf5.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=18 format=3 uid="uid://bi0ahd7cv37i6"]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-samuel/cenas/scripts/main.gd" id="1_pagkl"]
 [ext_resource type="Texture2D" uid="uid://dhowgnjmp48gk" path="res://microjogos/2024S1/projeto-samuel/recursos/Sprites/Fundo2.png" id="2_5ngcp"]
@@ -11,7 +11,6 @@
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-samuel/cenas/scripts/Gamutos/Gamuto3.gd" id="7_2b0kn"]
 [ext_resource type="Texture2D" uid="uid://caa4fiw0tu0pm" path="res://microjogos/2024S1/projeto-samuel/recursos/Sprites/Gamuto1.png" id="7_xeq6x"]
 [ext_resource type="AudioStream" uid="uid://18usmyx7j47o" path="res://microjogos/2024S1/projeto-samuel/recursos/Sound/Ela_e_tao_tudo.ogg" id="10_tnmcl"]
-[ext_resource type="Texture2D" uid="uid://djxph347r8pgb" path="res://microjogos/2024S1/projeto-samuel/recursos/Sprites/Piaui_sprite_vitoria.png" id="11_j0u24"]
 [ext_resource type="AudioStream" uid="uid://b1t1om8kdud7r" path="res://microjogos/2024S1/projeto-samuel/recursos/Sound/Yay.ogg" id="12_vgbtf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5nk8x"]
@@ -160,12 +159,6 @@ polygon = PackedVector2Array(31, -26, 35, -115, 36, -120, 34, -179, -74, -184, -
 [node name="Piaui_colisao" type="CollisionPolygon2D" parent="Player/Player_Piaui"]
 polygon = PackedVector2Array(31, -26, 35, -115, 36, -120, 34, -179, -74, -184, -73, -320, -168, -327, -169, -186, -226, -182, -229, -26)
 
-[node name="Piaui_sprite_vitoria" type="Sprite2D" parent="Player/Player_Piaui"]
-visible = false
-position = Vector2(-96.125, -170.875)
-scale = Vector2(0.161397, 0.161397)
-texture = ExtResource("11_j0u24")
-
 [node name="Plataforma1" type="StaticBody2D" parent="."]
 position = Vector2(1307, 824)
 
@@ -180,14 +173,16 @@ position = Vector2(2065.5, 662)
 position = Vector2(-98.9277, -29.6346)
 polygon = PackedVector2Array(-352.572, 16.6346, -304.572, 16.6346, -304.572, 8.63458, -80.5723, 8.63458, -80.5723, -15.3654, -320.572, -15.3654, -320.572, -7.36542, -352.572, -7.36542)
 
-[node name="Ela_e_tao_tudo" type="AudioStreamPlayer" parent="."]
+[node name="Ela_e_tao_tudo" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-418.208, 473.756)
 stream = ExtResource("10_tnmcl")
+volume_db = 10.044
 
-[node name="Yay" type="AudioStreamPlayer" parent="."]
+[node name="Yay" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-769.35, 423.879)
 stream = ExtResource("12_vgbtf")
-volume_db = 10.0
+volume_db = 24.0
 
-[connection signal="win" from="." to="Player/Player_Piaui" method="_on_main_win"]
 [connection signal="G1" from="Gamuto" to="." method="_on_gamuto_g_1"]
 [connection signal="body_entered" from="Gamuto/Area2D" to="Gamuto" method="_on_area_2d_body_entered"]
 [connection signal="G2" from="Gamuto2" to="." method="_on_gamuto_2_g_2"]

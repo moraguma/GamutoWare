@@ -7,17 +7,29 @@ extends Resource
 
 
 # Título do seu jogo
-var title_pt = "Titulo em Portugues"
-var title_en = "Title in English"
+var title_pt = "Piauí ajuda o Gamuto"
+var title_en = "Piauí helps Gamuto"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
-Criado por: Samuel Rodrigues
+Criado por: Samuel Rodrigues (@samuel.rf_)
 
-Você pode preencher o resto deste campo com creditos de assets utilizados, links para sua redes sociais ou qualquer outro detalhe que ache relevante
+Música original: "Madagascar" de Edy Lemond
+Cover por Samuel Rodrigues e LeonerdCdL
+
+Sprite de Rinoceronte: https://www.wannapik.com/vectors/75#!
+Ideia do Rinoceronte: Estrela
+Sprite de Óculos Escuros: https://www.needpix.com/photo/download/1631375/sun-glasses-glasses-dark-red-sunglasses-glass-fashion-sun-eyeglasses
+Sprite do Jogador: @gab_piaui
 """
 var credits_en = """
-Made by: Samuel Rodrigues
+Made by: Samuel Rodrigues (@samuel.rf_)
 
-Fill this space with credits to used assets, links to your social medias and whatever other details you think are important
+Original song: "Madagascar" by Edy Lemond
+Cover by Samuel Rodrigues and LeonerdCdL
+
+Rhino Sprite: https://www.wannapik.com/vectors/75#!
+Rhino Ideia: Star
+Sunglasses Sprite: https://www.needpix.com/photo/download/1631375/sun-glasses-glasses-dark-red-sunglasses-glass-fashion-sun-eyeglasses
+Player Sprite: @gab_piaui
 """
