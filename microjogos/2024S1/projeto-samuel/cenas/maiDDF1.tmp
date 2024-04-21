@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="PackedScene" uid="uid://bt04kcxkd1cau" path="res://piaui.fundo.tscn" id="3_8e26e"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-samuel/cenas/scripts/Player.gd" id="4_rb7vw"]
+[ext_resource type="Texture2D" uid="uid://bxw3ady5te873" path="res://microjogos/2024S1/projeto-samuel/recursos/Sprites/Piaui_sprite.png" id="4_ss1kd"]
+[ext_resource type="Texture2D" uid="uid://boo4siq8io3s6" path="res://microjogos/2024S1/projeto-samuel/recursos/Sprites/Fundo.png" id="4_wub0l"]
+[ext_resource type="Texture2D" uid="uid://dfg6835wp3jwn" path="res://microjogos/2024S1/projeto-samuel/recursos/Sprites/Gamuto0.png" id="5_6fjpu"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-samuel/cenas/scripts/Gamuto.gd" id="5_tcfmc"]
+[ext_resource type="Texture2D" uid="uid://caa4fiw0tu0pm" path="res://microjogos/2024S1/projeto-samuel/recursos/Sprites/Gamuto1.png" id="7_xeq6x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5nk8x"]
+size = Vector2(1922, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bdo8l"]
+size = Vector2(150, 150)
+
+[node name="Main" type="Node2D"]
+
+[node name="Fundo" type="Node2D" parent="."]
+position = Vector2(890.94, 642.204)
+
+[node name="Paint" type="TextureRect" parent="Fundo"]
+offset_left = -890.94
+offset_top = -642.204
+offset_right = 1029.06
+offset_bottom = 437.796
+texture = ExtResource("4_wub0l")
+
+[node name="Player" parent="." instance=ExtResource("3_8e26e")]
+position = Vector2(1011, 338)
+
+[node name="Player_Piaui" type="CharacterBody2D" parent="Player"]
+position = Vector2(-11, 706)
+script = ExtResource("4_rb7vw")
+
+[node name="Piaui_sprite" type="Sprite2D" parent="Player/Player_Piaui"]
+visibility_layer = 2
+position = Vector2(-96.3, -171.3)
+scale = Vector2(0.161899, 0.161899)
+texture = ExtResource("4_ss1kd")
+
+[node name="Piaui_colisao" type="CollisionPolygon2D" parent="Player/Player_Piaui"]
+position = Vector2(-1.29999, -7.29999)
+polygon = PackedVector2Array(-224, -30, -204, -22, -200, -19, -186, -20, -171, -26, -170, -64, -114, -59, -109, -24, -35, -19, -40, -77, 25, -92, 45, -111, 31, -172, -3, -167, -80, -175, -87, -252, -78, -313, -120, -318, -137, -271, -166, -254, -166, -176, -224, -148, -234, -77)
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(0, 1030)
+
+[node name="Floor_colision" type="CollisionShape2D" parent="Floor"]
+position = Vector2(961, 25)
+shape = SubResource("RectangleShape2D_5nk8x")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("5_tcfmc")
+
+[node name="Gamuto1" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(411, 847)
+texture = ExtResource("7_xeq6x")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(411, 847)
+texture = ExtResource("5_6fjpu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(411, 847)
+shape = SubResource("RectangleShape2D_bdo8l")
+disabled = true

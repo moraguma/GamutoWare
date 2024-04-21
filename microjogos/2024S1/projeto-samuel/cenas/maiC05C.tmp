@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="PackedScene" uid="uid://bt04kcxkd1cau" path="res://piaui.fundo.tscn" id="3_8e26e"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-samuel/cenas/scripts/Player.gd" id="4_rb7vw"]
+[ext_resource type="Texture2D" uid="uid://bxw3ady5te873" path="res://microjogos/2024S1/projeto-samuel/recursos/Sprites/Piaui_sprite.png" id="4_ss1kd"]
+[ext_resource type="Texture2D" uid="uid://boo4siq8io3s6" path="res://microjogos/2024S1/projeto-samuel/recursos/Sprites/Fundo.png" id="4_wub0l"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1y670"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Node2D2" type="Node2D" parent="."]
+position = Vector2(890.94, 642.204)
+
+[node name="TextureRect" type="TextureRect" parent="Node2D2"]
+offset_left = -890.94
+offset_top = -642.204
+offset_right = 1029.06
+offset_bottom = 437.796
+texture = ExtResource("4_wub0l")
+
+[node name="Node2D" parent="." instance=ExtResource("3_8e26e")]
+position = Vector2(1011, 338)
+
+[node name="Player" type="CharacterBody2D" parent="Node2D"]
+position = Vector2(-402, 234)
+script = ExtResource("4_rb7vw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Player"]
+shape = SubResource("CircleShape2D_1y670")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Player"]
+visibility_layer = 2
+position = Vector2(-270, -181)
+scale = Vector2(0.161899, 0.161899)
+texture = ExtResource("4_ss1kd")

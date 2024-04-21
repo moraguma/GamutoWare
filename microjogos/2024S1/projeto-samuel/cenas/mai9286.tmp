@@ -1,0 +1,187 @@
+[gd_scene load_steps=18 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-samuel/cenas/scripts/main.gd" id="1_pagkl"]
+[ext_resource type="Texture2D" uid="uid://dhowgnjmp48gk" path="res://microjogos/2024S1/projeto-samuel/recursos/Sprites/Fundo2.png" id="2_5ngcp"]
+[ext_resource type="PackedScene" uid="uid://bt04kcxkd1cau" path="res://piaui.fundo.tscn" id="3_8e26e"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-samuel/cenas/scripts/Player.gd" id="4_rb7vw"]
+[ext_resource type="Texture2D" uid="uid://bxw3ady5te873" path="res://microjogos/2024S1/projeto-samuel/recursos/Sprites/Piaui_sprite.png" id="4_ss1kd"]
+[ext_resource type="Texture2D" uid="uid://dfg6835wp3jwn" path="res://microjogos/2024S1/projeto-samuel/recursos/Sprites/Gamuto0.png" id="5_6fjpu"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-samuel/cenas/scripts/Gamutos/Gamuto.gd" id="5_tcfmc"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-samuel/cenas/scripts/Gamutos/Gamuto2.gd" id="6_qiipm"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-samuel/cenas/scripts/Gamutos/Gamuto3.gd" id="7_2b0kn"]
+[ext_resource type="Texture2D" uid="uid://caa4fiw0tu0pm" path="res://microjogos/2024S1/projeto-samuel/recursos/Sprites/Gamuto1.png" id="7_xeq6x"]
+[ext_resource type="AudioStream" uid="uid://18usmyx7j47o" path="res://microjogos/2024S1/projeto-samuel/recursos/Sound/Ela_e_tao_tudo.ogg" id="10_tnmcl"]
+[ext_resource type="AudioStream" uid="uid://b1t1om8kdud7r" path="res://microjogos/2024S1/projeto-samuel/recursos/Sound/Yay.ogg" id="12_vgbtf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5nk8x"]
+size = Vector2(1920, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5elxa"]
+size = Vector2(47, 711)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4sa7a"]
+size = Vector2(1982, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uhuug"]
+size = Vector2(30, 694)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bdo8l"]
+size = Vector2(150, 150)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_pagkl")
+
+[node name="Fundo" type="Node2D" parent="."]
+position = Vector2(890.94, 642.204)
+
+[node name="Paint" type="TextureRect" parent="Fundo"]
+offset_left = -890.94
+offset_top = -642.204
+offset_right = 1029.06
+offset_bottom = 437.796
+texture = ExtResource("2_5ngcp")
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(0, 1030)
+
+[node name="Floor_colision" type="CollisionShape2D" parent="Floor"]
+position = Vector2(960, 26)
+shape = SubResource("RectangleShape2D_5nk8x")
+
+[node name="Esquerda" type="StaticBody2D" parent="."]
+position = Vector2(-76.5338, 1033.98)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Esquerda"]
+position = Vector2(53.0338, -309.479)
+shape = SubResource("RectangleShape2D_5elxa")
+
+[node name="Teto" type="StaticBody2D" parent="."]
+position = Vector2(-51.5213, 16.0788)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teto"]
+position = Vector2(1000.52, -26.0788)
+shape = SubResource("RectangleShape2D_4sa7a")
+
+[node name="Direita" type="StaticBody2D" parent="."]
+position = Vector2(1980.15, 63.3937)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Direita"]
+position = Vector2(-45.1492, 669.606)
+shape = SubResource("RectangleShape2D_uhuug")
+
+[node name="Gamuto" type="CharacterBody2D" parent="."]
+position = Vector2(-304, -574)
+script = ExtResource("5_tcfmc")
+
+[node name="Gamuto1" type="Sprite2D" parent="Gamuto"]
+position = Vector2(411, 847)
+texture = ExtResource("7_xeq6x")
+
+[node name="Gamuto0" type="Sprite2D" parent="Gamuto"]
+position = Vector2(411, 847)
+texture = ExtResource("5_6fjpu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamuto"]
+position = Vector2(411, 847)
+shape = SubResource("RectangleShape2D_bdo8l")
+disabled = true
+
+[node name="Area2D" type="Area2D" parent="Gamuto"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamuto/Area2D"]
+position = Vector2(411, 847)
+shape = SubResource("RectangleShape2D_bdo8l")
+
+[node name="Gamuto2" type="CharacterBody2D" parent="."]
+position = Vector2(1395, 84)
+script = ExtResource("6_qiipm")
+
+[node name="Gamuto1" type="Sprite2D" parent="Gamuto2"]
+position = Vector2(411, 847)
+texture = ExtResource("7_xeq6x")
+
+[node name="Gamuto0" type="Sprite2D" parent="Gamuto2"]
+position = Vector2(411, 847)
+texture = ExtResource("5_6fjpu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamuto2"]
+position = Vector2(411, 847)
+shape = SubResource("RectangleShape2D_bdo8l")
+disabled = true
+
+[node name="Area2D" type="Area2D" parent="Gamuto2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamuto2/Area2D"]
+position = Vector2(411, 847)
+shape = SubResource("RectangleShape2D_bdo8l")
+
+[node name="Gamuto3" type="CharacterBody2D" parent="."]
+position = Vector2(1292, 37)
+script = ExtResource("7_2b0kn")
+
+[node name="Gamuto1" type="Sprite2D" parent="Gamuto3"]
+position = Vector2(411, 847)
+texture = ExtResource("7_xeq6x")
+
+[node name="Gamuto0" type="Sprite2D" parent="Gamuto3"]
+position = Vector2(411, 847)
+texture = ExtResource("5_6fjpu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamuto3"]
+position = Vector2(411, 847)
+shape = SubResource("RectangleShape2D_bdo8l")
+disabled = true
+
+[node name="Area2D" type="Area2D" parent="Gamuto3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamuto3/Area2D"]
+position = Vector2(411, 847)
+shape = SubResource("RectangleShape2D_bdo8l")
+
+[node name="Player" parent="." instance=ExtResource("3_8e26e")]
+position = Vector2(261, 339)
+
+[node name="Player_Piaui" type="CharacterBody2D" parent="Player"]
+position = Vector2(-11, 719)
+script = ExtResource("4_rb7vw")
+
+[node name="Piaui_sprite" type="Sprite2D" parent="Player/Player_Piaui"]
+visibility_layer = 2
+position = Vector2(-96.3, -171.3)
+scale = Vector2(0.161899, 0.161899)
+texture = ExtResource("4_ss1kd")
+
+[node name="Area2D" type="Area2D" parent="Player/Player_Piaui"]
+
+[node name="Piaui_colisao" type="CollisionPolygon2D" parent="Player/Player_Piaui/Area2D"]
+polygon = PackedVector2Array(35, -30, 35, -115, 36, -120, 34, -179, -74, -184, -73, -320, -168, -327, -169, -186, -226, -182, -229, -27)
+
+[node name="Piaui_colisao" type="CollisionPolygon2D" parent="Player/Player_Piaui"]
+polygon = PackedVector2Array(35, -30, 35, -115, 36, -120, 34, -179, -74, -184, -73, -320, -168, -327, -169, -186, -226, -182, -229, -27)
+
+[node name="Plataforma1" type="StaticBody2D" parent="."]
+position = Vector2(1307, 824)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Plataforma1"]
+position = Vector2(-75, 15)
+polygon = PackedVector2Array(3, 32, 59, 32, 59, 24, 99, 24, 99, 16, 139, 16, 139, 8, 171, 8, 171, -16, 123, -16, 123, -8, 83, -8, 83, 0, 43, 0, 43, 8, 3, 8)
+
+[node name="Plataforma2" type="StaticBody2D" parent="."]
+position = Vector2(2065.5, 662)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Plataforma2"]
+position = Vector2(-98.9277, -29.6346)
+polygon = PackedVector2Array(-352.572, 16.6346, -304.572, 16.6346, -304.572, 8.63458, -80.5723, 8.63458, -80.5723, -15.3654, -320.572, -15.3654, -320.572, -7.36542, -352.572, -7.36542)
+
+[node name="Ela_e_tao_tudo" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-418.208, 473.756)
+stream = ExtResource("10_tnmcl")
+volume_db = 24.0
+
+[node name="Yay" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-769.35, 423.879)
+stream = ExtResource("12_vgbtf")
+
+[connection signal="body_entered" from="Gamuto/Area2D" to="Gamuto" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Gamuto2/Area2D" to="Gamuto2" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Gamuto3/Area2D" to="Gamuto3" method="_on_area_2d_body_entered"]
