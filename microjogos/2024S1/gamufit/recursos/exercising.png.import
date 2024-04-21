@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkvcg7ivmjl0d"
-path="res://.godot/imported/capa.png-eeaca997cc9637e8a2ee91f3a20d1c5a.ctex"
+uid="uid://3heurohbdmkw"
+path="res://.godot/imported/exercising.png-e071dd88ede85d469bc02806df469447.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/jucamm/capa.png"
-dest_files=["res://.godot/imported/capa.png-eeaca997cc9637e8a2ee91f3a20d1c5a.ctex"]
+source_file="res://microjogos/2024S1/gamufit/recursos/exercising.png"
+dest_files=["res://.godot/imported/exercising.png-e071dd88ede85d469bc02806df469447.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkvcg7ivmjl0d"
-path="res://.godot/imported/capa.png-eeaca997cc9637e8a2ee91f3a20d1c5a.ctex"
+uid="uid://ca4u0mm0vnyux"
+path="res://.godot/imported/suffering.png-f0ea5931bd7c7f51e73d3f4e61a8e38e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/jucamm/capa.png"
-dest_files=["res://.godot/imported/capa.png-eeaca997cc9637e8a2ee91f3a20d1c5a.ctex"]
+source_file="res://microjogos/2024S1/gamufit/recursos/suffering.png"
+dest_files=["res://.godot/imported/suffering.png-f0ea5931bd7c7f51e73d3f4e61a8e38e.ctex"]
 
 [params]
 
