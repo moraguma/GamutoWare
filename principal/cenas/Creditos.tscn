@@ -1,42 +1,77 @@
-[gd_scene load_steps=12 format=3 uid="uid://bhkyw6qpi38e6"]
+[gd_scene load_steps=16 format=3 uid="uid://bhkyw6qpi38e6"]
 
 [ext_resource type="Script" path="res://principal/cenas/scripts/TransitionButton.gd" id="2"]
-[ext_resource type="Material" uid="uid://bfefepnpbds1x" path="res://principal/recursos/shaders/Diamond.tres" id="3"]
-[ext_resource type="Texture2D" uid="uid://b4rk8gfyi2o6m" path="res://microjogos/not_implemented/teste/moveGamutoDemo/capa.png" id="4"]
+[ext_resource type="PackedScene" uid="uid://breiq50cu5612" path="res://principal/cenas/BG.tscn" id="2_gn47d"]
 [ext_resource type="Script" path="res://principal/cenas/scripts/TranslatableText.gd" id="5"]
 [ext_resource type="Theme" uid="uid://dt5djib7huxvm" path="res://principal/recursos/themes/ButtonTheme.tres" id="6"]
-[ext_resource type="Texture2D" uid="uid://ja6urlsch5m7" path="res://principal/recursos/sprites/MenuBase.png" id="7"]
-[ext_resource type="Texture2D" uid="uid://cs75vvw01oafl" path="res://principal/recursos/sprites/GMToutline.png" id="8"]
+[ext_resource type="PackedScene" uid="uid://dr5dxsgtiww88" path="res://principal/cenas/CreditosInfo.tscn" id="7_t6oxa"]
+[ext_resource type="PackedScene" uid="uid://dnhn2yadjkru6" path="res://principal/cenas/MinigameDisplay.tscn" id="8_rotds"]
 [ext_resource type="Theme" uid="uid://cb4tlwb81nq48" path="res://principal/recursos/themes/TitleTheme.tres" id="9"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/PressableButton.gd" id="10"]
+[ext_resource type="Texture2D" uid="uid://d1pcvjogk0whm" path="res://principal/recursos/sprites/GMTIconSpritesheet.png" id="9_vqk2p"]
+[ext_resource type="Script" path="res://principal/cenas/scripts/CreditsWinDisplay.gd" id="10_mlycp"]
 [ext_resource type="Script" path="res://principal/cenas/scripts/Creditos.gd" id="11"]
 
-[sub_resource type="Curve" id="Curve_l4sie"]
-min_value = -360.0
-max_value = 360.0
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.990196, 360), 0.0, 0.0, 0, 0]
-point_count = 2
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_88gp3"]
+bg_color = Color(0.572549, 0.572549, 0.572549, 0)
+border_width_right = 30
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="Animation" id="Animation_l0el1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WinDisplay:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_dwgyt"]
+resource_name = "lose"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WinDisplay:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+
+[sub_resource type="Animation" id="Animation_lltom"]
+resource_name = "win"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WinDisplay:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [9, 10, 11, 12, 13, 14, 15, 16, 17]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5cvp6"]
+_data = {
+"RESET": SubResource("Animation_l0el1"),
+"lose": SubResource("Animation_dwgyt"),
+"win": SubResource("Animation_lltom")
+}
 
 [node name="Credits" type="Node2D"]
 script = ExtResource("11")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-material = ExtResource("3")
-position = Vector2(960, 540)
-texture = ExtResource("7")
-
-[node name="GMTParticles" type="CPUParticles2D" parent="."]
-position = Vector2(128, -264)
-amount = 32
-lifetime = 3.0
-preprocess = 3.0
-texture = ExtResource("8")
-emission_shape = 3
-emission_rect_extents = Vector2(1080, 540)
-direction = Vector2(1, 1)
-gravity = Vector2(500, 500)
-angle_max = 1.0
-angle_curve = SubResource("Curve_l4sie")
+[node name="BG" parent="." instance=ExtResource("2_gn47d")]
 
 [node name="Credits" type="Node2D" parent="."]
 
@@ -46,110 +81,72 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1088.0
+mouse_filter = 1
 
-[node name="Menu" type="Button" parent="Credits/Minigames"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Credits/Minigames"]
 layout_mode = 0
-offset_top = 8.0
-offset_right = 384.0
-offset_bottom = 112.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 1010.0
+offset_bottom = 1050.0
+theme_override_constants/separation = 10
+
+[node name="Title" type="RichTextLabel" parent="Credits/Minigames/VBoxContainer"]
+clip_contents = false
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("9")
+bbcode_enabled = true
+text = "[center][shake rate=20 level=30]CRÉDITOS"
+fit_content = true
+script = ExtResource("5")
+translation_code = "collection"
+center_text = true
+
+[node name="Minigames" type="ScrollContainer" parent="Credits/Minigames/VBoxContainer"]
+custom_minimum_size = Vector2(0, 813)
+layout_mode = 2
+theme = ExtResource("6")
+theme_override_styles/panel = SubResource("StyleBoxFlat_88gp3")
+follow_focus = true
+horizontal_scroll_mode = 0
+
+[node name="GridContainer" type="GridContainer" parent="Credits/Minigames/VBoxContainer/Minigames"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/h_separation = 40
+theme_override_constants/v_separation = 35
+columns = 2
+
+[node name="Menu" type="Button" parent="Credits/Minigames/VBoxContainer"]
+layout_mode = 2
 theme = ExtResource("6")
 text = "MENU"
 flat = true
 script = ExtResource("2")
 path = "res://principal/cenas/Menu.tscn"
+translation_code = "back"
 
-[node name="Title" type="RichTextLabel" parent="Credits/Minigames"]
-clip_contents = false
-layout_mode = 0
-offset_top = 49.0
-offset_right = 1920.0
-offset_bottom = 177.0
-theme = ExtResource("9")
-bbcode_enabled = true
-text = "[center]
-CREDITS"
-script = ExtResource("5")
-pt_text = "[center][shake rate=20 level=40]CREDITOS"
-en_text = "[center][shake rate=20 level=40]CREDITS"
+[node name="CreditosInfo" parent="Credits" instance=ExtResource("7_t6oxa")]
+position = Vector2(1472, 540)
 
-[node name="MinigameControl" type="Control" parent="Credits/Minigames"]
-clip_contents = true
-anchors_preset = 0
-offset_left = 64.0
-offset_top = 224.0
-offset_right = 1856.0
-offset_bottom = 1080.0
-theme = ExtResource("6")
+[node name="MinigameDisplay" parent="." instance=ExtResource("8_rotds")]
+z_index = 1
 
-[node name="Minigames" type="ScrollContainer" parent="Credits/Minigames/MinigameControl"]
-clip_contents = false
-layout_mode = 0
-offset_left = 64.0
-offset_top = 32.0
-offset_right = 1728.0
-offset_bottom = 832.0
-theme = ExtResource("6")
-follow_focus = true
-horizontal_scroll_mode = 0
+[node name="WinDisplay" type="Sprite2D" parent="."]
+visible = false
+z_index = 1
+position = Vector2(944, 480)
+rotation = -12.5664
+texture = ExtResource("9_vqk2p")
+hframes = 18
+script = ExtResource("10_mlycp")
 
-[node name="GridContainer" type="GridContainer" parent="Credits/Minigames/MinigameControl/Minigames"]
-layout_mode = 2
-theme_override_constants/h_separation = 147
-theme_override_constants/v_separation = 35
-columns = 3
+[node name="AnimationPlayer" type="AnimationPlayer" parent="WinDisplay"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_5cvp6")
+}
 
-[node name="Details" type="Control" parent="Credits"]
-layout_mode = 3
-anchors_preset = 0
-offset_top = 1088.0
-offset_right = 1920.0
-offset_bottom = 2176.0
-
-[node name="Back" type="Button" parent="Credits/Details"]
-layout_mode = 0
-offset_top = 8.0
-offset_right = 384.0
-offset_bottom = 112.0
-focus_neighbor_bottom = NodePath("../Details")
-theme = ExtResource("6")
-text = "BACK"
-flat = true
-script = ExtResource("10")
-pt_text = "VOLTA"
-en_text = "BACK"
-
-[node name="Cover" type="TextureRect" parent="Credits/Details"]
-layout_mode = 0
-offset_left = 144.0
-offset_top = 128.0
-offset_right = 594.0
-offset_bottom = 578.0
-grow_horizontal = 2
-texture = ExtResource("4")
-
-[node name="Title" type="RichTextLabel" parent="Credits/Details"]
-clip_contents = false
-layout_mode = 0
-offset_top = 608.0
-offset_right = 736.0
-offset_bottom = 752.0
-theme = ExtResource("9")
-theme_override_font_sizes/normal_font_size = 64
-bbcode_enabled = true
-text = "[center]CREDITS"
-scroll_active = false
-
-[node name="Details" type="RichTextLabel" parent="Credits/Details"]
-clip_contents = false
-layout_mode = 0
-offset_left = 736.0
-offset_top = 32.0
-offset_right = 1888.0
-offset_bottom = 1056.0
-focus_neighbor_top = NodePath("../Back")
-theme = ExtResource("6")
-theme_override_font_sizes/normal_font_size = 40
-bbcode_enabled = true
-text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis quis nibh sed lobortis. Quisque sed elit vel magna viverra bibendum vitae et lectus. Praesent non sagittis odio. Proin feugiat finibus ante, vel cursus felis dapibus nec. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam pharetra dolor faucibus est lobortis, congue fermentum lacus dapibus. Morbi leo ex, malesuada et sapien laoreet, semper sagittis velit. "
-
-[connection signal="pressed" from="Credits/Details/Back" to="." method="back_to_covers"]
+[node name="Timer" type="Timer" parent="WinDisplay"]
+one_shot = true
