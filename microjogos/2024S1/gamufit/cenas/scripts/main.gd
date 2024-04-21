@@ -26,21 +26,6 @@ func _ready():
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("APERTE ESPAÇO!")
 
-	# Conecte o sinal 'gamuto_collided' emitido pelo Gamuto(icon)
-	var gamuto = get_parent().get_node("SmallBar")
-	gamuto.connect("gamuto_collided", _on_gamuto_collided)
-	gamuto.connect("gamuto_not_collided", _on_gamuto_not_collided)
-
-# Esta função é chamada quando o sinal 'gamuto_collided' é emitido pelo Gamuto(icon)
-func _on_gamuto_collided():
-	# Chame a função para registrar que o jogador venceu o jogo
-	register_win()
-
-# Esta função é chamada quando o sinal 'gamuto_not_collided' é emitido pelo Gamuto(icon)
-func _on_gamuto_not_collided():
-	# Chame a função para registrar que o jogador perdeu o jogo
-	register_lose()
-
 # Chame esta função para registrar que o jogador venceu o jogo
 func register_win():
 	emit_signal("win")

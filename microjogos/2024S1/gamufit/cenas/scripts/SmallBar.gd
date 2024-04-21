@@ -64,6 +64,7 @@ func _on_body_entered(body):
 	if body.name == "Gamuto(icon)":
 		print("Gamuto collided with SmallBar")
 		emit_signal("gamuto_collided")
+	$Timer.start()
 
 # Função chamada quando um corpo sai da área de colisão
 func _on_body_exited(body):
@@ -71,3 +72,4 @@ func _on_body_exited(body):
 	if body.name == "Gamuto(icon)":
 		print("Gamuto exited from SmallBar")
 		emit_signal("gamuto_not_collided")
+	$Timer.stop()

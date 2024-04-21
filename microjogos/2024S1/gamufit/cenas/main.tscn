@@ -1,15 +1,16 @@
-[gd_scene load_steps=14 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=15 format=3 uid="uid://bi0ahd7cv37i6"]
 
+[ext_resource type="Script" path="res://microjogos/2024S1/gamufit/cenas/scripts/main.gd" id="1_nu282"]
 [ext_resource type="Texture2D" uid="uid://cg4byqfvvvlq2" path="res://microjogos/2024S1/gamufit/recursos/00026.jpg" id="1_rdm68"]
 [ext_resource type="Texture2D" uid="uid://c3co7w5ifodnl" path="res://microjogos/2024S1/gamufit/recursos/SmallBar.png" id="2_wwrcp"]
 [ext_resource type="Texture2D" uid="uid://cnxarg8u653q8" path="res://microjogos/2024S1/gamufit/recursos/VerticalBar.png" id="3_18jmg"]
-[ext_resource type="Script" path="res://microjogos/2024S1/gamufit/cenas/SmallBar.gd" id="3_r1ism"]
-[ext_resource type="Script" path="res://microjogos/2024S1/gamufit/cenas/Gamuto(icon).gd" id="4_cwnfb"]
+[ext_resource type="Script" path="res://microjogos/2024S1/gamufit/cenas/scripts/SmallBar.gd" id="3_r1ism"]
+[ext_resource type="Script" path="res://microjogos/2024S1/gamufit/cenas/scripts/Gamuto(icon).gd" id="4_cwnfb"]
 [ext_resource type="Texture2D" uid="uid://dogwrk2nqqk03" path="res://principal/recursos/sprites/excited.png" id="6_gisyg"]
 [ext_resource type="Texture2D" uid="uid://ca4u0mm0vnyux" path="res://microjogos/2024S1/gamufit/recursos/suffering.png" id="7_22wwl"]
-[ext_resource type="Script" path="res://microjogos/2024S1/gamufit/cenas/Gahulk.gd" id="7_y5gk5"]
+[ext_resource type="Script" path="res://microjogos/2024S1/gamufit/cenas/scripts/Gahulk.gd" id="7_y5gk5"]
 [ext_resource type="Texture2D" uid="uid://3heurohbdmkw" path="res://microjogos/2024S1/gamufit/recursos/exercising.png" id="8_2ehty"]
-[ext_resource type="AudioStream" uid="uid://qksnd3i88cqq" path="res://microjogos/2024S1/gamufit/recursos/Gamuto-the-powerlifter-[AudioTrimmer.com].ogg" id="10_uqrkx"]
+[ext_resource type="AudioStream" uid="uid://qksnd3i88cqq" path="res://microjogos/2024S1/gamufit/recursos/Gamuto-the-powerlifter.ogg" id="10_uqrkx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ak12t"]
 
@@ -19,6 +20,7 @@
 
 [node name="Main" type="Node2D"]
 position = Vector2(0, 4)
+script = ExtResource("1_nu282")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(963.5, 535)
@@ -36,6 +38,8 @@ texture = ExtResource("3_18jmg")
 script = ExtResource("3_r1ism")
 
 [node name="Timer" type="Timer" parent="SmallBar"]
+wait_time = 4.0
+one_shot = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SmallBar"]
 position = Vector2(1744, 377)
@@ -88,10 +92,14 @@ texture = ExtResource("7_22wwl")
 visible = false
 texture = ExtResource("8_2ehty")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_uqrkx")
 autoplay = true
 
 [connection signal="body_entered" from="SmallBar" to="SmallBar" method="_on_body_entered"]
 [connection signal="body_exited" from="SmallBar" to="SmallBar" method="_on_body_exited"]
-[connection signal="gamuto_collided" from="SmallBar" to="Gahulk" method="_on_small_bar_gamuto_collided"]
+[connection signal="gamuto_collided" from="SmallBar" to="." method="register_win"]
+[connection signal="gamuto_collided" from="SmallBar" to="Gahulk" method="_on_gamuto_collided"]
+[connection signal="gamuto_not_collided" from="SmallBar" to="." method="register_lose"]
+[connection signal="gamuto_not_collided" from="SmallBar" to="Gahulk" method="_on_gamuto_not_collided"]
+[connection signal="timeout" from="SmallBar/Timer" to="." method="register_win"]
