@@ -1,27 +1,35 @@
-[gd_scene load_steps=4 format=3 uid="uid://cq6mbm4e13a5e"]
+[gd_scene load_steps=5 format=3 uid="uid://cq6mbm4e13a5e"]
 
-[ext_resource type="Script" path="res://microjogos/2024S1/nyan-thulu/cenas/bullet.gd" id="1_gixus"]
 [ext_resource type="Texture2D" uid="uid://cmwxt6tdp5etk" path="res://microjogos/2024S1/nyan-thulu/recursos/bullet.png" id="1_ivt4k"]
+[ext_resource type="Script" path="res://microjogos/2024S1/nyan-thulu/cenas/scripts/bullet.gd" id="1_k4wxm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ww5d4"]
+size = Vector2(30, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lvi45"]
-size = Vector2(39.5, 89.5)
+size = Vector2(25, 55.75)
 
-[node name="bullet" type="Node2D"]
-script = ExtResource("1_gixus")
-
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
+[node name="bullet" type="RigidBody2D"]
 gravity_scale = 0.0
+script = ExtResource("1_k4wxm")
 
-[node name="Area2D" type="Area2D" parent="RigidBody2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D/Area2D"]
-position = Vector2(0.250001, 0.25)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(45.25, 0.2502)
 rotation = 1.5708
 scale = Vector2(0.176301, 0.176413)
 texture = ExtResource("1_ivt4k")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D/Area2D"]
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(45, 0.000200272)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(28, 7.15256e-06)
+rotation = -3.14159
+shape = SubResource("RectangleShape2D_ww5d4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(28.125, 0.500139)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_lvi45")
 
-[connection signal="body_entered" from="RigidBody2D/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

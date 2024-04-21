@@ -1,48 +1,37 @@
-[gd_scene load_steps=6 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=5 format=3 uid="uid://bi0ahd7cv37i6"]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/nyan-thulu/cenas/scripts/main.gd" id="1_31gxf"]
-[ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="1_rpgn2"]
-[ext_resource type="PackedScene" uid="uid://cidqx8ch54pos" path="res://microjogos/2024S1/nyan-thulu/cenas/enemy-nyan.tscn" id="2_eeaeg"]
+[ext_resource type="PackedScene" uid="uid://dfili7vccjfht" path="res://microjogos/2024S1/nyan-thulu/cenas/enemy.tscn" id="2_d0ga4"]
 [ext_resource type="Texture2D" uid="uid://d2vkb6jxul1pi" path="res://microjogos/2024S1/nyan-thulu/recursos/Cartoon_green_texture_grass.jpg" id="3_lmyr4"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_8cglq"]
-radius = 95.0789
+[ext_resource type="PackedScene" uid="uid://dv0x5ftif1q5g" path="res://microjogos/2024S1/nyan-thulu/cenas/player.tscn" id="4_4wsic"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_31gxf")
-cookie_scene = ExtResource("2_eeaeg")
+cookie_scene = ExtResource("2_d0ga4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(934, 560)
 scale = Vector2(0.512359, 0.301161)
 texture = ExtResource("3_lmyr4")
 
-[node name="Player" type="Area2D" parent="."]
-position = Vector2(902, 518)
-
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
-position = Vector2(-0.000121355, -9.53674e-07)
-scale = Vector2(2.5, 2.29688)
-texture = ExtResource("1_rpgn2")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-shape = SubResource("CircleShape2D_8cglq")
-
-[node name="RayCast2D" type="RayCast2D" parent="Player"]
+[node name="Player" parent="." instance=ExtResource("4_4wsic")]
+position = Vector2(960, 540)
 
 [node name="Spawner" type="Node2D" parent="."]
-position = Vector2(2, 507)
+position = Vector2(0, 540)
 
 [node name="Spawner2" type="Node2D" parent="."]
-position = Vector2(905, 4)
+position = Vector2(1920, 540)
 
 [node name="Spawner3" type="Node2D" parent="."]
-position = Vector2(1919, 511)
+position = Vector2(960, 0)
 
 [node name="Spawner4" type="Node2D" parent="."]
-position = Vector2(901, 1079)
+position = Vector2(960, 1080)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
+autostart = true
 
+[connection signal="dead" from="Player" to="." method="_on_player_dead"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

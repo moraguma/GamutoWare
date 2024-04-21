@@ -9,8 +9,7 @@ func _ready():
 func _process(delta):
 	pass 
 
-
 func _on_area_2d_body_entered(body):
-	if body != get_node("../Player"):
-		body.get_node("..").remove_child(body)
-		get_node("..").remove_child(self)
+	if body != get_node("Player"):
+		body.queue_free()
+		self.queue_free()
