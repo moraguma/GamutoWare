@@ -271,8 +271,4 @@ func stop_music():
 
 
 func give_instructions():
-	match Global.language:
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("SETAS E ESPACO!")
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("ARROWS AND SPACE!")
+	NotificationCenter.notify(TranslationManager.get_translation("game_instructions"))

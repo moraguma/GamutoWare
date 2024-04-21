@@ -3,8 +3,11 @@ extends TextureRect
 
 var to_call
 
-
+var can_play
 var button
+
+@onready var cursor = $GMTCursor
+@onready var play = $Play
 
 
 func load_button_ref():
@@ -32,9 +35,29 @@ func load_cover(cover):
 
 
 func load_button(active, path, to_call):
+	can_play = path != "gamutoware"
+	
 	load_button_ref()
 	
 	if active:
 		button.connect("pressed",Callable(to_call,"detail").bind(path, button))
 	else:
 		button.connect("pressed",Callable(to_call,"fail_detail"))
+
+
+func show_play():
+	if can_play:
+		play.show()
+
+
+func hide_play():
+	if can_play:
+		play.hide()
+
+
+func _on_focus_entered() -> void:
+	cursor.show()
+
+
+func _on_focus_exited() -> void:
+	cursor.hide()

@@ -10,7 +10,7 @@ const BASE_HEIGHT = 1080
 const MICROGAME_TIME = 6
 
 const MAX_MASK_SCALE = Vector2(8.6, 8.6)
-const TRANSITION_TIME = 0.3
+const TRANSITION_TIME = 0.25
 
 
 var current_microgame = null
@@ -64,6 +64,7 @@ func start_game(path):
 	
 	reset_tween()
 	mask.scale = Vector2(0.0, 0.0)
+	t.set_ease(Tween.EASE_IN)
 	t.tween_property(mask, "scale", MAX_MASK_SCALE, TRANSITION_TIME)
 	timer_indicator.activate()
 
@@ -74,6 +75,7 @@ func free_microgame():
 	
 	reset_tween()
 	mask.scale = MAX_MASK_SCALE
+	t.set_ease(Tween.EASE_OUT)
 	t.tween_property(mask, "scale", Vector2(0, 0), TRANSITION_TIME)
 	timer_indicator.deactivate()
 	
@@ -95,7 +97,6 @@ func reset_tween():
 	if t != null:
 		t.kill()
 	t = create_tween()
-	t.set_ease(Tween.EASE_OUT)
 	t.set_trans(Tween.TRANS_CIRC)
 
 
