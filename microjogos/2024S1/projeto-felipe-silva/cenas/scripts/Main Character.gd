@@ -1,10 +1,12 @@
 extends CharacterBody2D
 
 const SPEED = 6500
+var active = true
 
 func _physics_process(_delta):
 	# assim como em anon.gd, a velocidade aumenta no momento do jump, e zera no
 	# próximo frame, criando o efeito de um movimento em tiles, e não fluido
+	if not active: return
 	if Input.is_action_just_pressed("direita"):
 		velocity.x += SPEED
 	elif Input.is_action_just_pressed("esquerda"):
@@ -24,15 +26,8 @@ func _physics_process(_delta):
 			# if the bike hits you, you die.
 			print("lose")
 			emit_signal("lose")
+			get_node("CollisionShape2D").disabled = true
+			get_node("Bike Bell").play()
+			active = false
 
 	move_and_slide()
-
-
-func _on_world_limit_body_entered(body):
-	print("win")
-	emit_signal("win")
-
-
-func _on_porta_area_body_entered(body):
-	print("win")
-	emit_signal("win")

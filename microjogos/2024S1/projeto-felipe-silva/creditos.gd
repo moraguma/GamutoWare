@@ -15,9 +15,13 @@ var credits_pt = """
 Criado por: Felipe Silva
 
 Música (Loyal Protector) por Rrrrrose (CC0 1.0)
+
+Sino de bicicleta por mboscolo -- https://freesound.org/s/212663/ -- License: Attribution 4.0
 """
 var credits_en = """
 Made by: Felipe Silva
 
 Song (Loyal Protector) by Rrrrrose (CC0 1.0)
+
+Bike bell by mboscolo -- https://freesound.org/s/212663/ -- License: Attribution 4.0
 """

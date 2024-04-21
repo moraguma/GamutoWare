@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://c84dcths4latf"]
+[gd_scene load_steps=20 format=3 uid="uid://c84dcths4latf"]
 
 [ext_resource type="Texture2D" uid="uid://bkqwdbh78hgqd" path="res://microjogos/2024S1/projeto-felipe-silva/recursos/maincharacter.png" id="1_l5am0"]
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-felipe-silva/cenas/scripts/Main Character.gd" id="1_oqv3r"]
@@ -7,23 +7,19 @@
 [ext_resource type="Texture2D" uid="uid://itxygsq8x0se" path="res://microjogos/2024S1/projeto-felipe-silva/recursos/background1.png" id="2_lrcqt"]
 [ext_resource type="Texture2D" uid="uid://b0ciqblvy4kus" path="res://microjogos/2024S1/projeto-felipe-silva/recursos/background2.png" id="3_mhl3w"]
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-felipe-silva/cenas/scripts/Background.gd" id="4_pfrms"]
-[ext_resource type="Texture2D" uid="uid://q72tmghvvxxi" path="res://microjogos/2024S1/projeto-felipe-silva/recursos/tree1.png" id="5_iihtf"]
 [ext_resource type="PackedScene" uid="uid://dskcw2kj7rh76" path="res://microjogos/2024S1/projeto-felipe-silva/cenas/table.tscn" id="5_kwk72"]
-[ext_resource type="Texture2D" uid="uid://cbiyjea5jy36c" path="res://microjogos/2024S1/projeto-felipe-silva/recursos/tree2.png" id="6_1m2lw"]
 [ext_resource type="AudioStream" uid="uid://dy1tesiwi1f20" path="res://microjogos/2024S1/projeto-felipe-silva/recursos/Loyal Protector.ogg" id="6_6pmtm"]
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto-felipe-silva/cenas/Tree.gd" id="7_4ml7l"]
 [ext_resource type="Theme" uid="uid://cb4tlwb81nq48" path="res://principal/recursos/themes/TitleTheme.tres" id="8_w45ux"]
-[ext_resource type="AudioStream" uid="uid://csm5vrjwah7ry" path="res://microjogos/2024S1/projeto-felipe-silva/recursos/Bike Bell.ogg" id="9_2l0vh"]
 [ext_resource type="PackedScene" uid="uid://mvh3iu3vk5i2" path="res://microjogos/2024S1/projeto-felipe-silva/cenas/bike.tscn" id="11_67l7b"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bherx"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_lrcqt")
+"texture": ExtResource("3_mhl3w")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_mhl3w")
+"texture": ExtResource("2_lrcqt")
 }],
 "loop": true,
 "name": &"background",
@@ -63,20 +59,6 @@ size = Vector2(541.378, 988.381)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrtfv"]
 size = Vector2(93.3783, 274)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_vayx0"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_iihtf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_1m2lw")
-}],
-"loop": true,
-"name": &"tree",
-"speed": 2.0
-}]
-
 [node name="Node2D" type="Node2D"]
 position = Vector2(960, 592)
 script = ExtResource("1_tlsu4")
@@ -87,7 +69,7 @@ position = Vector2(-992, -296)
 scale = Vector2(30, 30)
 sprite_frames = SubResource("SpriteFrames_bherx")
 animation = &"background"
-frame_progress = 0.968738
+frame_progress = 0.0101119
 script = ExtResource("4_pfrms")
 
 [node name="RULabel" type="RichTextLabel" parent="."]
@@ -166,10 +148,6 @@ scale = Vector2(7, 7)
 texture = ExtResource("1_l5am0")
 script = SubResource("GDScript_wvxeg")
 
-[node name="Bike Bell" type="AudioStreamPlayer" parent="Main Character"]
-stream = ExtResource("9_2l0vh")
-volume_db = 15.0
-
 [node name="Table" parent="." instance=ExtResource("5_kwk72")]
 position = Vector2(-304, -700)
 
@@ -182,6 +160,7 @@ shape = SubResource("RectangleShape2D_kxg7v")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_6pmtm")
+volume_db = -10.667
 autoplay = true
 
 [node name="RA" type="StaticBody2D" parent="."]
@@ -199,14 +178,6 @@ shape = SubResource("RectangleShape2D_nrtfv")
 
 [node name="Bike" parent="." instance=ExtResource("11_67l7b")]
 position = Vector2(880, -136)
-
-[node name="Tree" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(-737, 49)
-scale = Vector2(30.664, 30)
-sprite_frames = SubResource("SpriteFrames_vayx0")
-animation = &"tree"
-script = ExtResource("7_4ml7l")
 
 [connection signal="body_entered" from="WorldLimit" to="." method="_on_world_limit_body_entered"]
 [connection signal="body_entered" from="RA/PortaArea" to="." method="_on_porta_area_body_entered"]
