@@ -17,15 +17,17 @@ func _ready():
 			NotificationCenter.notify("DO SOMETHING!")
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("FACA ALGO!")
+	$Prision.play("Prision")
+	$Gamuto.play("gamuto")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_anything_pressed():
-		$Prision.play("Prision")
-		$Gamuto.play("gamuto")
-	else:
-		$Prision.stop()
-		$Gamuto.stop()
+	#if Input.is_anything_pressed():
+		#
+	#else:
+		#$Prision.stop()
+		#$Gamuto.stop()
+	pass
 		
 func _physics_process(delta):
 	pass

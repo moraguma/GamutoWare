@@ -132,14 +132,12 @@ script = ExtResource("1_t7o4t")
 scale = Vector2(3.10968, 2.80412)
 texture = ExtResource("1_njfb5")
 centered = false
-metadata/_edit_lock_ = true
 
 [node name="Gamuto" type="AnimatedSprite2D" parent="."]
 position = Vector2(250, 540)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_3my8i")
 animation = &"gamuto"
-frame_progress = 0.814045
 
 [node name="Prision" type="AnimatedSprite2D" parent="."]
 position = Vector2(250, 540)

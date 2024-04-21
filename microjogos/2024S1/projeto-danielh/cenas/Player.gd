@@ -19,22 +19,20 @@ func _process(_delta):
 
 	
 func _physics_process(_delta):
+	velocity.x = 0
+	velocity.y = 0
 	
 	if Input.is_action_pressed("cima"):
 		velocity.y = negspeed
 		
-	elif Input.is_action_pressed("baixo"):
+	if Input.is_action_pressed("baixo"):
 		velocity.y = speed
 		
-	elif Input.is_action_pressed("direita"):
+	if Input.is_action_pressed("direita"):
 		velocity.x = speed
 		
-	elif Input.is_action_pressed("esquerda"):
+	if Input.is_action_pressed("esquerda"):
 		velocity.x= negspeed
-		
-	else:
-		velocity.x = 0
-		velocity.y = 0
 		
 	move_and_slide()
 
