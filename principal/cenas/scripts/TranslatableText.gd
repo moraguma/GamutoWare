@@ -1,8 +1,8 @@
 extends RichTextLabel
 
 
-@export var pt_text: String
-@export var en_text: String
+@export var translation_code: String
+@export var center_text: bool
 
 
 func _ready():
@@ -14,9 +14,4 @@ func _ready():
 
 
 func update_translation():
-	if pt_text != "" and en_text != "":
-		match Global.language:
-			Global.LANGUAGE.PT:
-				text = pt_text
-			Global.LANGUAGE.EN:
-				text = en_text
+	text = ("[center]" if center_text else "") + TranslationManager.get_translation(translation_code)

@@ -1,4 +1,100 @@
 [gd_scene load_steps=113 format=3 uid="uid://b3q3an4syknyy"]
+=======
+[gd_scene load_steps=10 format=3 uid="uid://b3q3an4syknyy"]
+
+[ext_resource type="FontFile" uid="uid://blcw2hkcbcxid" path="res://principal/recursos/fonts/stop_bullying/Stop Bullying.otf" id="1"]
+[ext_resource type="Texture2D" uid="uid://c2sgtas737d1o" path="res://principal/recursos/sprites/gamuxlogo.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://c2mwty1vwy3f4" path="res://principal/recursos/sprites/gamux.png" id="3"]
+[ext_resource type="Script" path="res://principal/cenas/scripts/Opening.gd" id="4"]
+
+[sub_resource type="FontFile" id="1"]
+fallbacks = Array[Font]([ExtResource("1")])
+multichannel_signed_distance_field = false
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/64/0 = Vector2(0, 0)
+cache/0/32/0/ascent = 0.0
+cache/0/32/0/descent = 0.0
+cache/0/32/0/underline_position = 0.0
+cache/0/32/0/underline_thickness = 0.0
+cache/0/32/0/scale = 1.0
+cache/0/32/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/32/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/32/0/kerning_overrides/64/0 = Vector2(0, 0)
+cache/0/64/0/ascent = 0.0
+cache/0/64/0/descent = 0.0
+cache/0/64/0/underline_position = 0.0
+cache/0/64/0/underline_thickness = 0.0
+cache/0/64/0/scale = 1.0
+cache/0/64/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/64/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/64/0/kerning_overrides/64/0 = Vector2(0, 0)
+
+[sub_resource type="Theme" id="2"]
+default_font = SubResource("1")
+
+[sub_resource type="Animation" id="3"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Gamux:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(),
+"points": PackedFloat32Array(),
+"times": PackedFloat32Array()
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Gamux:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(),
+"points": PackedFloat32Array(),
+"times": PackedFloat32Array()
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Logo:position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(),
+"points": PackedFloat32Array(),
+"times": PackedFloat32Array()
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Logo:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(),
+"points": PackedFloat32Array(),
+"times": PackedFloat32Array()
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MoragumaContainer:scale:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
 
 [ext_resource type="Texture2D" uid="uid://ca7t6a13spiin" path="res://microjogos/2024S1/lari-sem-cafe/assets/Seasonal Tilesets/Seasonal Tilesets/2 - Autumn Forest/Terrain (16 x 16).png" id="1_2vy5b"]
 [ext_resource type="Script" path="res://microjogos/2024S1/lari-sem-cafe/cenas/scripts/main.gd" id="1_a3vdj"]

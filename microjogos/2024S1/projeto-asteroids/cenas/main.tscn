@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-asteroids/cenas/scripts/main.gd" id="1_5i45u"]
+[ext_resource type="PackedScene" uid="uid://2qg84u0dmxnj" path="res://microjogos/2024S1/projeto-asteroids/cenas/asteroid.tscn" id="2_o7coc"]
+[ext_resource type="PackedScene" uid="uid://c2h1omei7qn0b" path="res://microjogos/2024S1/projeto-asteroids/cenas/player.tscn" id="3_fd8yu"]
+[ext_resource type="Texture2D" uid="uid://c7w32pb25k5pb" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/background.png" id="4_vxe38"]
+[ext_resource type="Texture2D" uid="uid://bdvw2l0uahoxl" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/planet1.png" id="5_0mmf5"]
+[ext_resource type="Texture2D" uid="uid://b0pgffxcl3awg" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/planet2.png" id="6_y82k8"]
+[ext_resource type="AudioStream" uid="uid://b6hb7g5vfux25" path="res://microjogos/2024S1/projeto-asteroids/recursos/spaceship.ogg" id="7_5d501"]
+
+[sub_resource type="Curve2D" id="Curve2D_mry0k"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -169, -155, 0, 0, 0, 0, 2057, -157, 0, 0, 0, 0, 2060, 1207, 0, 0, 0, 0, -171, 1194, 0, 0, 0, 0, -170, -156)
+}
+point_count = 5
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_5i45u")
+asteroid_scene = ExtResource("2_o7coc")
+player_scene = ExtResource("3_fd8yu")
+
+[node name="AsteroidTimer" type="Timer" parent="."]
+wait_time = 0.3
+
+[node name="StartTimer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="WinTimer" type="Timer" parent="."]
+wait_time = 5.8
+one_shot = true
+autostart = true
+
+[node name="AsteroidPath" type="Path2D" parent="."]
+curve = SubResource("Curve2D_mry0k")
+
+[node name="AsteroidSpawn" type="PathFollow2D" parent="AsteroidPath"]
+position = Vector2(-169, -155)
+rotation = -0.000898472
+
+[node name="StartPosition" type="Marker2D" parent="."]
+position = Vector2(960, 540)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(960, 540)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_vxe38")
+
+[node name="planeta" type="Sprite2D" parent="."]
+position = Vector2(261, 865)
+texture = ExtResource("5_0mmf5")
+
+[node name="buraco" type="Sprite2D" parent="."]
+position = Vector2(923, 152)
+rotation = -0.0820305
+texture = ExtResource("6_y82k8")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_5d501")
+
+[connection signal="timeout" from="AsteroidTimer" to="." method="_on_asteroid_timer_timeout"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="timeout" from="WinTimer" to="." method="_on_win_timer_timeout"]
