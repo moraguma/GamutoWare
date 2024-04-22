@@ -7,8 +7,8 @@ extends Resource
 
 
 # Título do seu jogo
-var title_pt = "RU da Unicamp"
-var title_en = "Unicamp Restaurant"
+var title_pt = "Fuja do Peixe!"
+var title_en = "Escape the Fish!"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
