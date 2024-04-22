@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://hl1djwfl7qsa"]
+
+[ext_resource type="Texture2D" uid="uid://b2chs50a18x2n" path="res://microjogos/2024S1/projeto-naomi/recursos/entry_door_open_icon_208681.png" id="1_3i27i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b63cs"]
+size = Vector2(138, 192)
+
+[node name="Door" type="Area2D"]
+
+[node name="Door" type="Sprite2D" parent="."]
+scale = Vector2(0.646484, 0.664063)
+texture = ExtResource("1_3i27i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_b63cs")
