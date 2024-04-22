@@ -14,10 +14,12 @@ var title_en = "Color Sort"
 var credits_pt = """
 Criado por: LeonerdCdL
 
-Você pode preencher o resto deste campo com creditos de assets utilizados, links para sua redes sociais ou qualquer outro detalhe que ache relevante
+https://opengameart.org/content/seamless-rainbow-colors-img-1-seamlessrainbowpng
+https://opengameart.org/content/victory
 """
 var credits_en = """
 Made by: LeonerdCdL
 
-Fill this space with credits to used assets, links to your social medias and whatever other details you think are important
+https://opengameart.org/content/seamless-rainbow-colors-img-1-seamlessrainbowpng
+https://opengameart.org/content/victory
 """
