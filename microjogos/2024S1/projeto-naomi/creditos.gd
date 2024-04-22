@@ -12,10 +12,10 @@ var title_en = "Escape the Fish!"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
-Criado por: [Naomi]
+Criado por: Naomi
 
 """
 var credits_en = """
-Made by: [Naomi]
+Made by: Naomi
 
 """
