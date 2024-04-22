@@ -7,15 +7,15 @@ extends Resource
 
 
 # Título do seu jogo
-var title_pt = "Titulo em Portugues"
-var title_en = "Title in English"
+var title_pt = "RU da Unicamp"
+var title_en = "Unicamp Restaurant"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
-Criado por: Naomi
+Criado por: [Naomi]
 
 """
 var credits_en = """
-Made by: Naomi
+Made by: [Naomi]
 
 """
