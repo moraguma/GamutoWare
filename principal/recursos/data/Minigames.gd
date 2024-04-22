@@ -22,7 +22,7 @@ const minigame_data = {
 	"gamutoware": {"credits": "res://principal/creditos.gd", "cover": "res://principal/recursos/sprites/capagmtware.png", "difficulty": 0},
 	"res://microjogos/2024S1/nyan-thulu/cenas/main.tscn": {"credits": "res://microjogos/2024S1/nyan-thulu/creditos.gd", "cover": "res://microjogos/2024S1/nyan-thulu/capa.png", "difficulty": 0},
 	"res://microjogos/2024S1/projeto-naomi/cenas/main.tscn": {"credits": "res://microjogos/2024S1/projeto-naomi/creditos.gd", "cover": "res://microjogos/2024S1/projeto-naomi/capa.png", "difficulty": 0},
-	"res://microjogos/2024S1/projeto-matheusSC/cenas/main.tscn": {"credits": "res://microjogos/2024S1/projeto-matheusSC/creditos.gd", "cover": "res://microjogos/2024S1/projeto-matheusSC/cenas/capa.png", "difficulty": 0},
+	"res://microjogos/2024S1/projeto-matheusSC/cenas/main.tscn": {"credits": "res://microjogos/2024S1/projeto-matheusSC/creditos.gd", "cover": "res://microjogos/2024S1/projeto-matheusSC/capa.png", "difficulty": 0},
 	"res://microjogos/2024S1/projeto-andre/cenas/main.tscn": {"credits": "res://microjogos/2024S1/projeto-andre/creditos.gd", "cover": "res://microjogos/2024S1/projeto-andre/capa.png", "difficulty": 0},
 	"res://microjogos/2024S1/projeto-FastFood/cenas/main.tscn": {"credits": "res://microjogos/2024S1/projeto-FastFood/creditos.gd", "cover": "res://microjogos/2024S1/projeto-FastFood/capa.png", "difficulty": 0},
 	"res://microjogos/2024S1/jucamm/cenas/main.tscn": {"credits": "res://microjogos/2024S1/jucamm/creditos.gd", "cover": "res://microjogos/2024S1/jucamm/capa.png", "difficulty": 0},
