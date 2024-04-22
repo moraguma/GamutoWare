@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/nyan-thulu/cenas/scripts/main.gd" id="1_31gxf"]
+[ext_resource type="PackedScene" uid="uid://dfili7vccjfht" path="res://microjogos/2024S1/nyan-thulu/cenas/enemy.tscn" id="2_d0ga4"]
+[ext_resource type="Texture2D" uid="uid://d2vkb6jxul1pi" path="res://microjogos/2024S1/nyan-thulu/recursos/Cartoon_green_texture_grass.jpg" id="3_lmyr4"]
+[ext_resource type="PackedScene" uid="uid://dv0x5ftif1q5g" path="res://microjogos/2024S1/nyan-thulu/cenas/player.tscn" id="4_4wsic"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_31gxf")
+cookie_scene = ExtResource("2_d0ga4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(934, 560)
+scale = Vector2(0.512359, 0.301161)
+texture = ExtResource("3_lmyr4")
+
+[node name="Player" parent="." instance=ExtResource("4_4wsic")]
+position = Vector2(960, 540)
+
+[node name="Spawner" type="Node2D" parent="."]
+position = Vector2(0, 540)
+
+[node name="Spawner2" type="Node2D" parent="."]
+position = Vector2(1920, 540)
+
+[node name="Spawner3" type="Node2D" parent="."]
+position = Vector2(960, 0)
+
+[node name="Spawner4" type="Node2D" parent="."]
+position = Vector2(960, 1080)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="dead" from="Player" to="." method="_on_player_dead"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
