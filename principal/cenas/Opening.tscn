@@ -173,6 +173,7 @@ _data = {
 }
 
 [node name="Opening" type="Node2D"]
+texture_filter = 1
 script = ExtResource("4")
 
 [node name="MoragumaContainer" type="Node2D" parent="."]
