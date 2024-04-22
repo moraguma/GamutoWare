@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cy0rwjnw07pp7" path="res://microjogos/2024S1/projeto-cores/recursos/New Piskelspace.png" id="5_vmirk"]
 
 [node name="Main" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_mwfc7")
 
 [node name="CorUp" parent="." instance=ExtResource("1_78o1k")]
