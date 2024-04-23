@@ -45,7 +45,7 @@ func update_label():
 					"tomate": prod_name = 'Tomate'
 					"alface": prod_name = 'Alface'
 					"queijo": prod_name = 'Queijo'
-		if sacola.get(prod): temp_string += '[s]' + prod_name + '[/s]\n'
+		if sacola.get(prod): temp_string += '[s][shake rate=20 level=25]' + prod_name + '[/shake][/s]\n'
 		else: temp_string += prod_name + '\n'
 	lista_txt.text = temp_string
 #[s]Queijo[/s]
