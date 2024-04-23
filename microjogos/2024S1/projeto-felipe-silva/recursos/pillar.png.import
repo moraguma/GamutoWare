@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6k7gk3qkmedw"
-path="res://.godot/imported/capa.png-01904c9ee08a5e8c52b4e1a113762f0e.ctex"
+uid="uid://buixgemwhd65p"
+path="res://.godot/imported/pillar.png-be84aadc6aa724d16fce0c1a547955eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-naomi/capa.png"
-dest_files=["res://.godot/imported/capa.png-01904c9ee08a5e8c52b4e1a113762f0e.ctex"]
+source_file="res://microjogos/2024S1/projeto-felipe-silva/recursos/pillar.png"
+dest_files=["res://.godot/imported/pillar.png-be84aadc6aa724d16fce0c1a547955eb.ctex"]
 
 [params]
 

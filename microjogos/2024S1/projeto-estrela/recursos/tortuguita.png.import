@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6k7gk3qkmedw"
-path="res://.godot/imported/capa.png-01904c9ee08a5e8c52b4e1a113762f0e.ctex"
+uid="uid://be41ftfhooacx"
+path="res://.godot/imported/tortuguita.png-189bbf6936cb0aade3589e4853dd3954.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-naomi/capa.png"
-dest_files=["res://.godot/imported/capa.png-01904c9ee08a5e8c52b4e1a113762f0e.ctex"]
+source_file="res://microjogos/2024S1/projeto-estrela/recursos/tortuguita.png"
+dest_files=["res://.godot/imported/tortuguita.png-189bbf6936cb0aade3589e4853dd3954.ctex"]
 
 [params]
 
