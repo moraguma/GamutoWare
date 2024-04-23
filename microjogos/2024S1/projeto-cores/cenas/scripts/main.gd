@@ -6,6 +6,8 @@ const HEIGHT = 180
 signal win
 signal lose
 
+const COLOR_TOLERANCE = 0.5
+
 var rng = RandomNumberGenerator.new()
 var R0 = rng.randf()
 var G0 = rng.randf()
@@ -107,19 +109,14 @@ func put_color(i):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if (abs(R0-R1)<0.1) && (abs(B0-B1)<0.1) && (abs(G0-G1)<0.1):
+	while sqrt(pow(R0 - R1, 2) + pow(B0 - B1, 2) + pow(G0 - G1, 2)) < COLOR_TOLERANCE:
 		R0 = rng.randf()
 		G0 = rng.randf()
 		B0 = rng.randf()
 		R1 = rng.randf()
 		G1 = rng.randf()
 		B1 = rng.randf()
-	'''print(R0*256)
-	print(G0*256)
-	print(B0*256)
-	print(R1*256)
-	print(G1*256)
-	print(B1*256)'''
+	
 	for i in range(n+1):
 		c.append([((n-i)*R0+i*R1)/n, ((n-i)*G0+i*G1)/n, ((n-i)*B0+i*B1)/n, i])
 	$CorInicial/Polygon2D.modulate = Color(c[0][0], c[0][1], c[0][2])
