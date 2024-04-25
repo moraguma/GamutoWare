@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://c84v8q7xe82d" path="res://microjogos/2024S1/ShootGamuto/recursos/laser.wav" id="6_g7c8n"]
 
 [node name="Main" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_ibml2")
 
 [node name="TextureRect" type="TextureRect" parent="."]
