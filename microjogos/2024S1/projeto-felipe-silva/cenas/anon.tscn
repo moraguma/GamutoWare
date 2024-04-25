@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkn31ikfk2e14"]
+
+[ext_resource type="Texture2D" uid="uid://u5jo2hs77g32" path="res://microjogos/2024S1/projeto-felipe-silva/recursos/anon.png" id="1_5y1js"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-felipe-silva/cenas/scripts/anon.gd" id="1_gpw3o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n4ap2"]
+size = Vector2(81.465, 96.875)
+
+[node name="Person" type="CharacterBody2D"]
+script = ExtResource("1_gpw3o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_n4ap2")
+debug_color = Color(1, 0, 0.0941176, 0.419608)
+
+[node name="Pessoa2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -8)
+scale = Vector2(8, 8)
+texture = ExtResource("1_5y1js")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

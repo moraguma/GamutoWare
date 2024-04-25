@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://714viw0ojmie"]
+
+[ext_resource type="Texture2D" uid="uid://bn8h8qvlvvtuo" path="res://microjogos/2024S1/Projeto-Yago/recursos/Ovos.png" id="1_2tell"]
+[ext_resource type="Script" path="res://microjogos/2024S1/Projeto-Yago/cenas/scripts/produto.gd" id="1_fo5to"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_717yi"]
+size = Vector2(246, 462)
+
+[node name="Ovos" type="Area2D"]
+script = ExtResource("1_fo5to")
+produto = "ovos"
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(6, 6)
+texture = ExtResource("1_2tell")
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+position = Vector2(3, -21)
+shape = SubResource("RectangleShape2D_717yi")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

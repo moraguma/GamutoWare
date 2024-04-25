@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhx8403wxd3g3"]
+
+[ext_resource type="Texture2D" uid="uid://b4gi5g8u0bi34" path="res://microjogos/2024S1/projeto-estrela/recursos/gamutoBoia4.png" id="1_ywi6e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dym7c"]
+radius = 106.231
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_dym7c")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture_filter = 1
+position = Vector2(0, -1)
+scale = Vector2(0.48, 0.492)
+texture = ExtResource("1_ywi6e")

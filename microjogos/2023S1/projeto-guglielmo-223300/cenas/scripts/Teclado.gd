@@ -6,14 +6,6 @@ var d1
 var d2
 var d3
 var d4
-var A
-var a
-var B
-var b
-var C
-var c
-var D
-var d
 @onready var sel_tec1
 @onready var sel_tec2
 @onready var sel_tec3
@@ -36,17 +28,13 @@ func _ready():
 	sel_tec3 = get_node("Seletor teclado3")
 	sel_tec4 = get_node("Seletor teclado4")
 	lis_sel = [sel_tec1,sel_tec2,sel_tec3,sel_tec4]
-	while(a==b or a==c or a==d or b==c or b==d or c==d):
-		randomize()
-		a = randi_range(0,len(r))
-		A = r[a]
-		b = randi_range(0,r.size()-1)
-		B = r[b]
-		c = randi_range(0,r.size()-1)
-		C = r[c]
-		d = randi_range(0,r.size()-1)
-		D = r[d]
-	var fil = [A,B,C,D]
+	
+	randomize()
+	var current_r = r.duplicate()
+	var fil = ['A','A','A','A']
+	for i in range(0, 4):
+		fil[i] = current_r[randi_range(0,current_r.size()-1)]
+		current_r.erase(fil[i])
 	fil.sort()
 	var T1 = get_node(fil[0])
 	var T2 = get_node(fil[1])

@@ -13,6 +13,7 @@ extends Resource
 
 	"infinite": "Infinito",
 
+	"test": "Test",
 	"class_of_2024": "Turma de 2024",
 	"class_of_2023": "Turma de 2023",
 	"class_of_2022": "Turma de 2022",
