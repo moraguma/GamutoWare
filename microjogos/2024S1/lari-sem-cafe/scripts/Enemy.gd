@@ -10,6 +10,9 @@ extends Node2D
 var  audioPlayed = false
 func playAudio():
 	$"Path2D/PathFollow2D/AnimatedSprite2DLari".play("idle")
+	if audioPlayed:
+		return
+		
 	var cafe = $"../cafe/AnimatedSprite2D"
 	if $"AudioStreamPlayer".is_playing() == false and !audioPlayed and cafe:
 		if cafe.get_animation() != "gone":
