@@ -28,5 +28,6 @@ func _on_sorvete_contacted(node):
 	node.velocity.y = 0
 	node.freeze = true
 	node.reparent(self)
+	node.sorvete_contacted.disconnect(_on_sorvete_contacted)
 	sorvete_capturado.emit()
 	pass # Replace with function body.

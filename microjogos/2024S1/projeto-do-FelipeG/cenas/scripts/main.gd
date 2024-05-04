@@ -8,12 +8,13 @@ signal lose
 # tela 1920x1080, que é padrão para monitores full HD. Caso você queira uma resolução menor para 
 # atingir uma estética mais pixelada, você pode mudar estes números para qualquer outra resolução 
 # 16:9
-const WIDTH = 800
-const HEIGHT = 450
+const WIDTH = 1920
+const HEIGHT = 1080
 
 @export var speed_multiplier: float = 3.0
 var sorvetes_capturados: int = 0
 @export var sorvetes_para_vitoria: int = 4
+var won: bool = false
 
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES PADRÃO
@@ -67,6 +68,7 @@ func my_method():
 # Chame esta função para registrar que o jogador venceu o jogo
 func register_win():
 	emit_signal("win")
+	NotificationCenter.notify("YOU WIN!")
 
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
@@ -74,6 +76,8 @@ func register_lose():
 
 func _on_sorvete_capturado():
 	sorvetes_capturados += 1
-	if(sorvetes_capturados >= sorvetes_para_vitoria):
-		register_win()
+	if(!won):
+		if(sorvetes_capturados >= sorvetes_para_vitoria):
+			won = true
+			register_win()
 	pass # Replace with function body.
