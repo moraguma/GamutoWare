@@ -80,7 +80,6 @@ scale = Vector2(1, 0.6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorveterosa/Area2D"]
 position = Vector2(0, -0.000244141)
-scale = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_umhry")
 
 [node name="sorvetemarrom" type="RigidBody2D" parent="."]
@@ -105,7 +104,6 @@ scale = Vector2(1, 0.6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorvetemarrom/Area2D"]
 position = Vector2(0, -0.000244141)
-scale = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_umhry")
 
 [node name="sorveteverde" type="RigidBody2D" parent="."]
@@ -129,7 +127,6 @@ scale = Vector2(1, 0.6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorveteverde/Area2D"]
 position = Vector2(-2, -6.66675)
-scale = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_umhry")
 
 [node name="sorvetevermelho" type="RigidBody2D" parent="."]
@@ -153,7 +150,6 @@ scale = Vector2(1, 0.6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorvetevermelho/Area2D"]
 position = Vector2(1, 4.99994)
-scale = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_umhry")
 
 [node name="sorveteamarelo" type="RigidBody2D" parent="."]
@@ -177,7 +173,6 @@ scale = Vector2(1, 0.6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorveteamarelo/Area2D"]
 position = Vector2(3, -28.3333)
-scale = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_umhry")
 
 [node name="sorveteazul" type="RigidBody2D" parent="."]
@@ -202,7 +197,6 @@ scale = Vector2(1, 0.6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorveteazul/Area2D"]
 position = Vector2(-4, -6.66668)
-scale = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_umhry")
 
 [node name="Gamuto" type="RigidBody2D" parent="."]
@@ -218,7 +212,6 @@ scale = Vector2(1, 0.6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gamuto/Area2D"]
 position = Vector2(-4, -6.66668)
-scale = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_umhry")
 
 [node name="gamuto" type="Sprite2D" parent="Gamuto"]
