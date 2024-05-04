@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dajv4yisow4b6"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-naomi/cenas/scripts/player.gd" id="1_7t48d"]
+[ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="2_gux0f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_whvas"]
+radius = 23.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_frq8c"]
+size = Vector2(54, 43)
+
+[node name="Player" type="CharacterBody2D"]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_7t48d")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_gux0f")
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+shape = SubResource("CircleShape2D_whvas")
+
+[node name="Hurtbox" type="Area2D" parent="."]
+position = Vector2(0, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(0, -15.5)
+shape = SubResource("RectangleShape2D_frq8c")
+
+[connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]

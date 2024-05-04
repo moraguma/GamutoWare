@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://btufcyuqlatk8"]
+
+[ext_resource type="Texture2D" uid="uid://psxxa5i53r2i" path="res://microjogos/2024S1/Projeto-Yago/recursos/Carrinho.png" id="2_7byhn"]
+
+[node name="Carrinho" type="CharacterBody2D"]
+collision_layer = 3
+collision_mask = 3
+metadata/_edit_group_ = true
+
+[node name="Carrinho" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(3.875, 16.5)
+scale = Vector2(4.29883, 5.28906)
+texture = ExtResource("2_7byhn")
+
+[node name="Hitbox" type="CollisionPolygon2D" parent="."]
+position = Vector2(1.5, 3)
+polygon = PackedVector2Array(90, 120, 70, -170, -70, -170, -90, 120)

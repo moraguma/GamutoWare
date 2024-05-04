@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://4a8sqqgp1gx6"]
+[gd_scene load_steps=9 format=3 uid="uid://4a8sqqgp1gx6"]
 
 [ext_resource type="Script" path="res://principal/cenas/scripts/NotificationCenter.gd" id="1"]
 [ext_resource type="Theme" uid="uid://cb4tlwb81nq48" path="res://principal/recursos/themes/TitleTheme.tres" id="2_18get"]
@@ -15,6 +15,53 @@ tracks/0/keys = {
 "handle_modes": PackedInt32Array(0),
 "points": PackedFloat32Array(-348.403, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NotificationContainer:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NotificationContainer:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("NotificationContainer:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("NotificationContainer")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"hide"
+}]
 }
 
 [sub_resource type="Animation" id="3"]
@@ -49,10 +96,208 @@ tracks/1/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_ed0w7"]
+resource_name = "notify_1"
+length = 1.4
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NotificationContainer:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(960, -0.25, 0, 0.25, 0, 960, -0.25, 0, 0.25, 0, 960, -0.25, 0, 0.25, 0, 960, -0.25, 0, 0.25, 0, 960, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.4, 1.1, 1.4)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NotificationContainer:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-124.403, -0.25, 0, 0.3, 378.903, 459.597, -0.107719, -86.597, 0.111962, -140.097, 459.597, -0.0880376, -139.097, 0.25, 0, 459.597, -0.25, 0, 0.25, 0, 1107.6, 0, -95.0969, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.4, 1.1, 1.4)
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NotificationContainer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"show"
+}, {
+"args": [],
+"method": &"hide"
+}]
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("NotificationContainer:scale:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("NotificationContainer:scale:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_v4s3y"]
+resource_name = "notify_2"
+length = 1.4
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NotificationContainer:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(960, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NotificationContainer:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(459.597, -0.0880376, -139.097, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NotificationContainer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"show"
+}, {
+"args": [],
+"method": &"hide"
+}]
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("NotificationContainer:scale:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 1, -0.25, 1, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4, 1.1, 1.4)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("NotificationContainer:scale:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 1, -0.25, 1, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4, 1.1, 1.4)
+}
+
+[sub_resource type="Animation" id="Animation_k62mq"]
+resource_name = "notify_3"
+length = 1.4
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NotificationContainer:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(-960, -0.25, 0, 0.25, 0, 960, -0.167609, 418.5, 0.25, 0, 960, -0.25, 0, 0.25, 0, 2880, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3, 1.1, 1.4)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NotificationContainer:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(459.597, -0.25, 0, 0.25, 0, 459.597, -0.25, 0, 0.25, 0, 459.597, -0.25, 0, 0.25, 0, 459.597, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3, 1.1, 1.4)
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NotificationContainer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"show"
+}, {
+"args": [],
+"method": &"hide"
+}]
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("NotificationContainer:scale:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("NotificationContainer:scale:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_w8uvh"]
 _data = {
 "RESET": SubResource("Animation_0hrvw"),
-"notify": SubResource("3")
+"notify": SubResource("3"),
+"notify_1": SubResource("Animation_ed0w7"),
+"notify_2": SubResource("Animation_v4s3y"),
+"notify_3": SubResource("Animation_k62mq")
 }
 
 [node name="NotificationCenter" type="Control"]
@@ -70,12 +315,14 @@ position = Vector2(0, -348.403)
 
 [node name="Notification" type="RichTextLabel" parent="NotificationContainer"]
 clip_contents = false
-offset_right = 1920.0
-offset_bottom = 663.0
+offset_left = -960.0
+offset_top = -68.0
+offset_right = 960.0
+offset_bottom = 279.0
 theme = ExtResource("2_18get")
 theme_override_font_sizes/normal_font_size = 128
 bbcode_enabled = true
-text = " Test"
+text = "[center]Test"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

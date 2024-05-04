@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dealv2l1gdr0h"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-asteroids/cenas/scripts/bullet.gd" id="1_inmsq"]
+[ext_resource type="Texture2D" uid="uid://bmb84r8e6lxj" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/bullet.png" id="2_uvqsa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3le5"]
+size = Vector2(46, 104)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="bullet" type="Area2D" parent="."]
+script = ExtResource("1_inmsq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bullet"]
+position = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_r3le5")
+
+[node name="Sprite2D" type="Sprite2D" parent="bullet"]
+position = Vector2(2, -8)
+scale = Vector2(1.1, 1)
+texture = ExtResource("2_uvqsa")
+
+[node name="Timer" type="Timer" parent="bullet"]
+
+[connection signal="body_entered" from="bullet" to="bullet" method="_bullet_hit"]
+[connection signal="timeout" from="bullet/Timer" to="bullet" method="_duration_end"]

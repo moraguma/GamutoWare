@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://maikal0ivixg"]
+
+[ext_resource type="Texture2D" uid="uid://crmyv4of0j7w3" path="res://microjogos/2024S1/jucamm/recursos/facilitado0.png" id="1_v0q8d"]
+[ext_resource type="Texture2D" uid="uid://b0s6brpnsyjwt" path="res://microjogos/2024S1/jucamm/recursos/facilitado1.png" id="2_vigul"]
+[ext_resource type="Texture2D" uid="uid://ca5ga4pm8v6bt" path="res://microjogos/2024S1/jucamm/recursos/facilitado2.png" id="3_1uc74"]
+[ext_resource type="Texture2D" uid="uid://cqerm4615yb4v" path="res://microjogos/2024S1/jucamm/recursos/facilitado3.png" id="4_p6omm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sal8r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_v0q8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vigul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1uc74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_p6omm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="RigidBody2D" type="RigidBody2D"]
+position = Vector2(0, -28)
+mass = 43.45
+gravity_scale = 5.321
+lock_rotation = true
+linear_velocity = Vector2(10, 10)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 259.312)
+scale = Vector2(14, -3.456)
+polygon = PackedVector2Array(2.07143, 0.958336, -5.875, 0.958, -6, 46.3866, -7.28571, 58.5394, -6.78571, 81.6875, -4.71429, 97.8912, -0.125, 105.696, 0.25, 134.629, 0.125, 141.863, 0.5, 143.888, 1.375, 143.888, 1.75, 141.863, 1.625, 134.629, 0.5, 93.255, 2, 75.0271, 1.875, 50.434, -0.125, 38.5714)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-32, 2.47501)
+scale = Vector2(2, 3.9)
+sprite_frames = SubResource("SpriteFrames_sal8r")
+frame_progress = 0.914824
+speed_scale = 2.0
