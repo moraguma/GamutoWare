@@ -29,6 +29,7 @@ size = Vector2(1917, 151)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_mb7ff")
+speed_multiplier = null
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
