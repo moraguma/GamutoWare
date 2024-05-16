@@ -1,10 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://b3q3an4syknyy"]
+[gd_scene load_steps=10 format=3 uid="uid://b3q3an4syknyy"]
 
 [ext_resource type="FontFile" uid="uid://blcw2hkcbcxid" path="res://principal/recursos/fonts/stop_bullying/Stop Bullying.otf" id="1"]
 [ext_resource type="Texture2D" uid="uid://c2sgtas737d1o" path="res://principal/recursos/sprites/gamuxlogo.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://c2mwty1vwy3f4" path="res://principal/recursos/sprites/gamux.png" id="3"]
 [ext_resource type="Script" path="res://principal/cenas/scripts/Opening.gd" id="4"]
-[ext_resource type="Texture2D" uid="uid://dquqx3510lp7v" path="res://microjogos/2024S1/projeto-leticia/pixel-art-game-background-night-cityscape-cars-road-city-silhouette-moon-stars-vector-illustration-pixel-273426902-transformed (1).jpg" id="5_bv7dy"]
 
 [sub_resource type="FontFile" id="1"]
 fallbacks = Array[Font]([ExtResource("1")])
@@ -199,8 +198,3 @@ texture = ExtResource("3")
 libraries = {
 "": SubResource("AnimationLibrary_s2r1r")
 }
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1135, -393)
-scale = Vector2(2.56, 1.90961)
-texture = ExtResource("5_bv7dy")
