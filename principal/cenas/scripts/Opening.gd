@@ -1,4 +1,7 @@
 extends "res://principal/cenas/scripts/ToTitle.gd"
+func _ready() 
+_process(delta)
+if
 
 
 @onready var animation_player = $AnimationPlayer
@@ -10,11 +13,4 @@ func _ready():
 	GlobalCamera.enabled = true
 
 
-func _input(event):
-	if Input.is_action_just_pressed("acao"):
-		animation_player.stop()
-		to_menu()
 
-
-func to_menu():
-	Global.goto_scene(MENU_PATH)
