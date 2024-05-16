@@ -22,16 +22,9 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-<<<<<<<< HEAD:microjogos/2024S1/projeto-estrela/cenas/scripts/main.gd
-			NotificationCenter.notify("COLLECT THE DUCKS!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("COLETE OS PATOS!")
-========
 			NotificationCenter.notify("MAKE A BURGER!")
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("FAÇA UM HAMBURGUER!")
->>>>>>>> 046474ad8afd13b6fea7ff38677c65f3e324eedd:microjogos/2024S1/projeto-guilherme/cenas/scripts/main.gd
-
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
 # a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde

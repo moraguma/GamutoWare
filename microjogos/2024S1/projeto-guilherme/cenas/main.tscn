@@ -135,3 +135,6 @@ position = Vector2(1388, -450)
 scale = Vector2(13, 13)
 texture = ExtResource("17_vxn8a")
 script = ExtResource("17_oqj4w")
+
+[connection signal="lose" from="lista" to="." method="register_lose"]
+[connection signal="win" from="lista" to="." method="register_win"]
