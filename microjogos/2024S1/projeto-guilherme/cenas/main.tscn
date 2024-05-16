@@ -1,0 +1,140 @@
+[gd_scene load_steps=18 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="Texture2D" uid="uid://dlfc7v7isy02u" path="res://microjogos/2024S1/projeto-guilherme/recursos/background.png" id="1_8njma"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-guilherme/cenas/scripts/main.gd" id="1_afk5b"]
+[ext_resource type="SpriteFrames" uid="uid://gpr0lki7mf0o" path="res://microjogos/2024S1/projeto-guilherme/recursos/gamuto.tres" id="2_xl0q0"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-guilherme/cenas/scripts/AnimatedSprite2D.gd" id="3_hqpoy"]
+[ext_resource type="Texture2D" uid="uid://c4wnnxsavqy70" path="res://microjogos/2024S1/projeto-guilherme/recursos/seta_carne.png" id="6_qg4d2"]
+[ext_resource type="Texture2D" uid="uid://durs8a8vph830" path="res://microjogos/2024S1/projeto-guilherme/recursos/seta_tomate.png" id="7_fdosm"]
+[ext_resource type="Texture2D" uid="uid://bmk2rl7rl37i2" path="res://microjogos/2024S1/projeto-guilherme/recursos/seta_queijo.png" id="8_1udov"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-guilherme/cenas/scripts/seta_cima.gd" id="8_iexhd"]
+[ext_resource type="Texture2D" uid="uid://ctj014tq2ncay" path="res://microjogos/2024S1/projeto-guilherme/recursos/seta_alface.png" id="9_1f0qr"]
+[ext_resource type="Texture2D" uid="uid://2ia5fdxdwx7c" path="res://microjogos/2024S1/projeto-guilherme/recursos/pao_baixo.png" id="10_1soaj"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-guilherme/cenas/scripts/seta_direita.gd" id="10_sew4f"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-guilherme/cenas/scripts/seta_baixo.gd" id="12_3catw"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-guilherme/cenas/scripts/seta_esquerda.gd" id="14_exuuy"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-guilherme/cenas/scripts/lista.gd" id="16_70i64"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-guilherme/cenas/scripts/ingrediente.gd" id="17_oqj4w"]
+[ext_resource type="Texture2D" uid="uid://bm8m4u1hkhv4j" path="res://microjogos/2024S1/projeto-guilherme/recursos/pao_cima.png" id="17_vxn8a"]
+[ext_resource type="FontFile" uid="uid://cip4gk3kva486" path="res://microjogos/2024S1/projeto-guilherme/recursos/dogica.otf" id="17_ygp7h"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_afk5b")
+
+[node name="background" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(962.278, 544.156)
+scale = Vector2(11.9965, 11.9965)
+texture = ExtResource("1_8njma")
+
+[node name="gamuto" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1622, 482)
+scale = Vector2(13, 13)
+sprite_frames = ExtResource("2_xl0q0")
+frame_progress = 0.8048
+speed_scale = 0.3
+script = ExtResource("3_hqpoy")
+
+[node name="pao_baixo" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1650, 875)
+scale = Vector2(13, 13)
+texture = ExtResource("10_1soaj")
+
+[node name="seta_cima" type="Node2D" parent="."]
+position = Vector2(865, 300)
+script = ExtResource("8_iexhd")
+
+[node name="cima" type="Sprite2D" parent="seta_cima"]
+texture_filter = 1
+scale = Vector2(11, 11)
+texture = ExtResource("6_qg4d2")
+
+[node name="seta_direita" type="Node2D" parent="."]
+position = Vector2(1113, 570)
+script = ExtResource("10_sew4f")
+
+[node name="direita" type="Sprite2D" parent="seta_direita"]
+texture_filter = 1
+scale = Vector2(11, 11)
+texture = ExtResource("9_1f0qr")
+
+[node name="seta_baixo" type="Node2D" parent="."]
+position = Vector2(865, 840)
+script = ExtResource("12_3catw")
+
+[node name="baixo" type="Sprite2D" parent="seta_baixo"]
+texture_filter = 1
+scale = Vector2(11, 11)
+texture = ExtResource("8_1udov")
+
+[node name="seta_esquerda" type="Node2D" parent="."]
+position = Vector2(616, 570)
+script = ExtResource("14_exuuy")
+
+[node name="esquerda" type="Sprite2D" parent="seta_esquerda"]
+texture_filter = 1
+scale = Vector2(11, 11)
+texture = ExtResource("7_fdosm")
+
+[node name="lista" type="Node2D" parent="."]
+position = Vector2(262, 300)
+script = ExtResource("16_70i64")
+
+[node name="texto_lista" type="Label" parent="lista"]
+offset_left = -229.0
+offset_top = 90.0
+offset_right = 191.0
+offset_bottom = 383.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 11
+theme_override_constants/line_spacing = 60
+theme_override_fonts/font = ExtResource("17_ygp7h")
+theme_override_font_sizes/font_size = 70
+text = "CARNE
+ALFACE
+TOMATE
+QUEIJO"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="camada1" type="Sprite2D" parent="lista"]
+texture_filter = 1
+position = Vector2(1388, -450)
+scale = Vector2(13, 13)
+script = ExtResource("17_oqj4w")
+
+[node name="camada2" type="Sprite2D" parent="lista"]
+texture_filter = 1
+position = Vector2(1388, -450)
+scale = Vector2(13, 13)
+script = ExtResource("17_oqj4w")
+
+[node name="camada3" type="Sprite2D" parent="lista"]
+texture_filter = 1
+position = Vector2(1388, -450)
+scale = Vector2(13, 13)
+script = ExtResource("17_oqj4w")
+
+[node name="camada4" type="Sprite2D" parent="lista"]
+texture_filter = 1
+position = Vector2(1388, -450)
+scale = Vector2(13, 13)
+script = ExtResource("17_oqj4w")
+
+[node name="camada5" type="Sprite2D" parent="lista"]
+texture_filter = 1
+position = Vector2(1388, -450)
+scale = Vector2(13, 13)
+script = ExtResource("17_oqj4w")
+
+[node name="pao_cima" type="Sprite2D" parent="lista"]
+texture_filter = 1
+position = Vector2(1388, -450)
+scale = Vector2(13, 13)
+texture = ExtResource("17_vxn8a")
+script = ExtResource("17_oqj4w")
+
+[connection signal="lose" from="lista" to="." method="register_lose"]
+[connection signal="win" from="lista" to="." method="register_win"]
