@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-leticia/cenas/scripts/main.gd" id="1_rw4ml"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-leticia/cenas/scripts/carro_policia.gd" id="3_86nno"]
+[ext_resource type="PackedScene" uid="uid://wqrg04pq4qjo" path="res://microjogos/2024S1/projeto-leticia/cenas/carro_policia.tscn" id="103_2jaq6"]
+[ext_resource type="PackedScene" uid="uid://crcmfnefx1oio" path="res://microjogos/2024S1/projeto-leticia/cenas/carro_principal.tscn" id="104_2yf1n"]
+[ext_resource type="VideoStream" path="res://microjogos/2024S1/projeto-leticia/recursos/fundo.ogv" id="104_lov3g"]
+[ext_resource type="AudioStream" uid="uid://chfbmnr371qg7" path="res://microjogos/2024S1/projeto-leticia/recursos/lofi.ogg" id="106_vcip7"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_rw4ml")
+metadata/_edit_horizontal_guides_ = [-53.0]
+
+[node name="Background" type="VideoStreamPlayer" parent="."]
+z_index = -2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1920.0
+offset_right = 3840.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(-1, 1)
+stream = ExtResource("104_lov3g")
+autoplay = true
+expand = true
+
+[node name="Policias" type="Node2D" parent="."]
+script = ExtResource("3_86nno")
+
+[node name="CarroPolicia" parent="Policias" instance=ExtResource("103_2jaq6")]
+position = Vector2(284, 787)
+scale = Vector2(0.98045, 1.03793)
+
+[node name="CarroPolicia3" parent="Policias" instance=ExtResource("103_2jaq6")]
+position = Vector2(-819, 989)
+scale = Vector2(0.98045, 1.03793)
+
+[node name="CarroPolicia2" parent="Policias" instance=ExtResource("103_2jaq6")]
+position = Vector2(-2171, 771)
+scale = Vector2(0.961282, 1.07729)
+
+[node name="carro_principal" parent="." instance=ExtResource("104_2yf1n")]
+position = Vector2(1525, 777)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("106_vcip7")
+autoplay = true
+
+[connection signal="lose" from="carro_principal" to="." method="_on_carro_principal_lose"]
