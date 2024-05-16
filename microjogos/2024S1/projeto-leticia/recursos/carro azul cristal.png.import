@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkvcg7ivmjl0d"
-path="res://.godot/imported/capa.png-eeaca997cc9637e8a2ee91f3a20d1c5a.ctex"
+uid="uid://cqak8t3rrw7tr"
+path="res://.godot/imported/carro azul cristal.png-8a51fe5c1e7447cc56b994ff96e06d68.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/jucamm/capa.png"
-dest_files=["res://.godot/imported/capa.png-eeaca997cc9637e8a2ee91f3a20d1c5a.ctex"]
+source_file="res://microjogos/2024S1/projeto-leticia/recursos/carro azul cristal.png"
+dest_files=["res://.godot/imported/carro azul cristal.png-8a51fe5c1e7447cc56b994ff96e06d68.ctex"]
 
 [params]
 

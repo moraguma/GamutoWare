@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkvcg7ivmjl0d"
-path="res://.godot/imported/capa.png-eeaca997cc9637e8a2ee91f3a20d1c5a.ctex"
+uid="uid://dl1nel27pomxp"
+path="res://.godot/imported/carro roxo.png-3429ee2f5af5e2eaf19b36e91e5ef8b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/jucamm/capa.png"
-dest_files=["res://.godot/imported/capa.png-eeaca997cc9637e8a2ee91f3a20d1c5a.ctex"]
+source_file="res://microjogos/2024S1/projeto-leticia/recursos/carro roxo.png"
+dest_files=["res://.godot/imported/carro roxo.png-3429ee2f5af5e2eaf19b36e91e5ef8b5.ctex"]
 
 [params]
 

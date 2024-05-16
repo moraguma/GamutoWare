@@ -2,25 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkvcg7ivmjl0d"
-<<<<<<<< HEAD:microjogos/2024S1/jucamm/capa.png.import
-path="res://.godot/imported/capa.png-eeaca997cc9637e8a2ee91f3a20d1c5a.ctex"
-========
+uid="uid://n1xi0j7uo83l"
 path="res://.godot/imported/capa.png-620de297ae05ecc927ff45da21d779d0.ctex"
->>>>>>>> 25ce4b4f691624f0d247207e53353e83c3974a65:microjogos/2024S1/projeto-leticia/capa.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:microjogos/2024S1/jucamm/capa.png.import
-source_file="res://microjogos/2024S1/jucamm/capa.png"
-dest_files=["res://.godot/imported/capa.png-eeaca997cc9637e8a2ee91f3a20d1c5a.ctex"]
-========
 source_file="res://microjogos/2024S1/projeto-leticia/capa.png"
 dest_files=["res://.godot/imported/capa.png-620de297ae05ecc927ff45da21d779d0.ctex"]
->>>>>>>> 25ce4b4f691624f0d247207e53353e83c3974a65:microjogos/2024S1/projeto-leticia/capa.png.import
 
 [params]
 

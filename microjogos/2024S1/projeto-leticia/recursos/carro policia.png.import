@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkvcg7ivmjl0d"
-path="res://.godot/imported/capa.png-eeaca997cc9637e8a2ee91f3a20d1c5a.ctex"
+uid="uid://brogtoimnit48"
+path="res://.godot/imported/carro policia.png-a6d4b81e258c33b808e615550ea1871a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/jucamm/capa.png"
-dest_files=["res://.godot/imported/capa.png-eeaca997cc9637e8a2ee91f3a20d1c5a.ctex"]
+source_file="res://microjogos/2024S1/projeto-leticia/recursos/carro policia.png"
+dest_files=["res://.godot/imported/carro policia.png-a6d4b81e258c33b808e615550ea1871a.ctex"]
 
 [params]
 

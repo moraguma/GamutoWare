@@ -22,28 +22,24 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("COLLECT THE DUCKS!")
+			NotificationCenter.notify("ESCAPE!")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("COLETE OS PATOS!")
+			NotificationCenter.notify("FUJA!")
 
+	register_win()
+# Called every frame. 'delta' is the elapsed time since the previous frame.
 
 
 var speed = 500
 func _physics_process(delta):
 	var velocity =  Vector2()
-	if Input.is_action_pressed("ui_cima"):
-		velocity.y -= 1
-	if Input.is_action_pressed("ui_baixo"):
-		velocity.y += 1
 	velocity = velocity.normalized()*speed*delta
 	position = velocity*delta
 	
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a renderização, 
 # como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
 # desde a última chamada desta função. O comando pass não faz nada
-func _process(delta):
-	
-		
+
 # --------------------------------------------------------------------------------------------------
 # SUAS FUNÇÕES
 # --------------------------------------------------------------------------------------------------
@@ -51,7 +47,7 @@ func _process(delta):
 
 # Um método genérico. Crie quantos métodos você precisar!
 func my_method():
-	pas
+	pass
 
 
 # --------------------------------------------------------------------------------------------------
@@ -72,3 +68,13 @@ func register_win():
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
 	emit_signal("lose")
+	match Global.language:
+		Global.LANGUAGE.EN:
+			NotificationCenter.notify("YOU LOSE!")
+		Global.LANGUAGE.PT:
+			NotificationCenter.notify("VOCÊ PERDEU!")
+
+func _on_carro_principal_lose():
+	register_lose()
+	$Background.paused = true
+	$Policias.is_lose = true

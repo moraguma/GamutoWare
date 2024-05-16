@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkvcg7ivmjl0d"
-path="res://.godot/imported/capa.png-eeaca997cc9637e8a2ee91f3a20d1c5a.ctex"
+uid="uid://dlvqhkyv5vpr0"
+path="res://.godot/imported/cat car.png-286e50a13b1bd61ff292f82a202c7332.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/jucamm/capa.png"
-dest_files=["res://.godot/imported/capa.png-eeaca997cc9637e8a2ee91f3a20d1c5a.ctex"]
+source_file="res://microjogos/2024S1/projeto-leticia/recursos/cat car.png"
+dest_files=["res://.godot/imported/cat car.png-286e50a13b1bd61ff292f82a202c7332.ctex"]
 
 [params]
 
