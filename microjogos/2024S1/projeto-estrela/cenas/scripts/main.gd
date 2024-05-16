@@ -27,23 +27,20 @@ func _ready():
 			NotificationCenter.notify("COLETE OS PATOS!")
 
 
-
-var speed = 500
+# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
+# a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
+# a última chamada desta função. O comando pass não faz nada
 func _physics_process(delta):
-	var velocity =  Vector2()
-	if Input.is_action_pressed("ui_cima"):
-		velocity.y -= 1
-	if Input.is_action_pressed("ui_baixo"):
-		velocity.y += 1
-	velocity = velocity.normalized()*speed*delta
-	position = velocity*delta
-	
+	pass
+
+
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a renderização, 
 # como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
 # desde a última chamada desta função. O comando pass não faz nada
 func _process(delta):
-	
-		
+	pass
+
+
 # --------------------------------------------------------------------------------------------------
 # SUAS FUNÇÕES
 # --------------------------------------------------------------------------------------------------
@@ -51,7 +48,7 @@ func _process(delta):
 
 # Um método genérico. Crie quantos métodos você precisar!
 func my_method():
-	pas
+	pass
 
 
 # --------------------------------------------------------------------------------------------------
