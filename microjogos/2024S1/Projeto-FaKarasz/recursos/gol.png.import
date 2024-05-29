@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://biy0e0utybqve"
-path="res://.godot/imported/gol.png-1e47bfd1b105c36c96aa927775da658c.ctex"
+uid="uid://di67cocvoahhu"
+path="res://.godot/imported/gol.png-f652ed8520a40bdd26d8797fff415964.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/Projeto-FaKarasz/recursos/gol.png"
-dest_files=["res://.godot/imported/gol.png-1e47bfd1b105c36c96aa927775da658c.ctex"]
+source_file="res://microjogos/2024S1/projeto-fakarasz/recursos/gol.png"
+dest_files=["res://.godot/imported/gol.png-f652ed8520a40bdd26d8797fff415964.ctex"]
 
 [params]
 

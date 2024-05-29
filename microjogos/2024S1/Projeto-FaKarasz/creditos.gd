@@ -7,17 +7,17 @@ extends Resource
 
 
 # Título do seu jogo
-var title_pt = "Titulo em Portugues"
-var title_en = "Title in English"
+var title_pt = "Penalty"
+var title_en = "Penalty"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
-Criado por: [Seu nome!]
+Criado por: [FaKarasz!]
 
 Você pode preencher o resto deste campo com creditos de assets utilizados, links para sua redes sociais ou qualquer outro detalhe que ache relevante
 """
 var credits_en = """
-Made by: [Your name!]
+Made by: [FaKarasz!]
 
 Fill this space with credits to used assets, links to your social medias and whatever other details you think are important
 """
