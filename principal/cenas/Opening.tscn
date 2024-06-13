@@ -198,3 +198,5 @@ texture = ExtResource("3")
 libraries = {
 "": SubResource("AnimationLibrary_s2r1r")
 }
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
