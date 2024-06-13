@@ -1,0 +1,205 @@
+[gd_scene load_steps=16 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="1_7qa7i"]
+[ext_resource type="Script" path="res://microjogos/2024S1/afasia/cenas/scripts/main.gd" id="1_jmo25"]
+[ext_resource type="Texture2D" uid="uid://w5t8fiw4x45m" path="res://microjogos/2024S1/afasia/recursos/kitchen Background (items).png" id="2_ayrk4"]
+[ext_resource type="Theme" uid="uid://bcy5b4l2qyfxo" path="res://microjogos/2024S1/afasia/recursos/temaafasia.tres" id="2_bupu1"]
+[ext_resource type="Script" path="res://microjogos/2024S1/afasia/cenas/scripts/botaoingrediente.gd" id="4_gkuuk"]
+[ext_resource type="AudioStream" uid="uid://dqdk42x6t1hyc" path="res://microjogos/2024S1/afasia/recursos/bolo ingrentedes.wav" id="4_vo1eq"]
+[ext_resource type="AudioStream" uid="uid://bv867mlgpnrxj" path="res://microjogos/2024S1/afasia/recursos/ovo.wav" id="5_l108d"]
+[ext_resource type="AudioStream" uid="uid://bubeb2ppfsv6n" path="res://microjogos/2024S1/afasia/recursos/leite.wav" id="6_vmrue"]
+[ext_resource type="AudioStream" uid="uid://b4vavq2148gnh" path="res://microjogos/2024S1/afasia/recursos/fermento.wav" id="7_3quom"]
+[ext_resource type="AudioStream" uid="uid://5574a15i6mfr" path="res://microjogos/2024S1/afasia/recursos/acucar.wav" id="8_yw2nr"]
+[ext_resource type="AudioStream" uid="uid://du5v8asjmyhqu" path="res://microjogos/2024S1/afasia/recursos/margarina.wav" id="9_bd10y"]
+[ext_resource type="AudioStream" uid="uid://dp3sduoletecs" path="res://microjogos/2024S1/afasia/recursos/oleo.wav" id="10_6gy6d"]
+[ext_resource type="AudioStream" uid="uid://djrxmv6xc2hkc" path="res://microjogos/2024S1/afasia/recursos/pedro.wav" id="11_l1t3u"]
+[ext_resource type="AudioStream" uid="uid://bg5qykrjp3loc" path="res://microjogos/2024S1/afasia/recursos/sal.wav" id="12_yt6yd"]
+[ext_resource type="AudioStream" uid="uid://drt0wpu6v0il" path="res://microjogos/2024S1/afasia/recursos/casa.wav" id="13_pvumk"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_jmo25")
+
+[node name="KitchenBackground(items)" type="Sprite2D" parent="."]
+position = Vector2(1027, 434)
+texture = ExtResource("2_ayrk4")
+
+[node name="leite" type="Button" parent="."]
+offset_left = 1251.0
+offset_top = 555.0
+offset_right = 1910.0
+offset_bottom = 679.0
+focus_neighbor_left = NodePath("../pedra")
+focus_neighbor_top = NodePath("../margarina")
+theme = ExtResource("2_bupu1")
+toggle_mode = true
+text = "LEITE"
+script = ExtResource("4_gkuuk")
+
+[node name="Som" type="AudioStreamPlayer" parent="leite"]
+stream = ExtResource("6_vmrue")
+
+[node name="Button" type="Button" parent="leite"]
+offset_left = -1251.0
+offset_top = -555.0
+offset_right = -1243.0
+offset_bottom = -547.0
+
+[node name="ovo" type="Button" parent="."]
+offset_left = 542.0
+offset_top = 380.0
+offset_right = 1201.0
+offset_bottom = 504.0
+focus_neighbor_top = NodePath("../casa")
+focus_neighbor_right = NodePath("../margarina")
+focus_neighbor_bottom = NodePath("../pedra")
+theme = ExtResource("2_bupu1")
+toggle_mode = true
+text = "OVO"
+script = ExtResource("4_gkuuk")
+
+[node name="Som" type="AudioStreamPlayer" parent="ovo"]
+stream = ExtResource("5_l108d")
+
+[node name="acucar" type="Button" parent="."]
+offset_left = 580.0
+offset_top = 75.0
+offset_right = 1239.0
+offset_bottom = 199.0
+focus_neighbor_right = NodePath("../oleo")
+focus_neighbor_bottom = NodePath("../casa")
+theme = ExtResource("2_bupu1")
+toggle_mode = true
+text = "ACUCAR"
+script = ExtResource("4_gkuuk")
+
+[node name="Som" type="AudioStreamPlayer" parent="acucar"]
+stream = ExtResource("8_yw2nr")
+
+[node name="margarina" type="Button" parent="."]
+offset_left = 1237.0
+offset_top = 387.0
+offset_right = 1811.0
+offset_bottom = 511.0
+focus_neighbor_left = NodePath("../ovo")
+focus_neighbor_top = NodePath("../sal")
+focus_neighbor_bottom = NodePath("../leite")
+theme = ExtResource("2_bupu1")
+toggle_mode = true
+text = "MARGARINA"
+script = ExtResource("4_gkuuk")
+
+[node name="Som" type="AudioStreamPlayer" parent="margarina"]
+stream = ExtResource("9_bd10y")
+
+[node name="oleo" type="Button" parent="."]
+offset_left = 1268.0
+offset_top = 109.0
+offset_right = 1760.0
+offset_bottom = 233.0
+focus_neighbor_left = NodePath("../acucar")
+focus_neighbor_bottom = NodePath("../sal")
+theme = ExtResource("2_bupu1")
+toggle_mode = true
+text = "OLEO"
+script = ExtResource("4_gkuuk")
+
+[node name="Som" type="AudioStreamPlayer" parent="oleo"]
+stream = ExtResource("10_6gy6d")
+
+[node name="sal" type="Button" parent="."]
+offset_left = 1265.0
+offset_top = 250.0
+offset_right = 1783.0
+offset_bottom = 366.0
+focus_neighbor_left = NodePath("../casa")
+focus_neighbor_top = NodePath("../oleo")
+focus_neighbor_bottom = NodePath("../margarina")
+theme = ExtResource("2_bupu1")
+toggle_mode = true
+text = "SAL"
+script = ExtResource("4_gkuuk")
+correto = false
+
+[node name="Som" type="AudioStreamPlayer" parent="sal"]
+stream = ExtResource("12_yt6yd")
+
+[node name="casa" type="Button" parent="."]
+offset_left = 577.0
+offset_top = 233.0
+offset_right = 1219.0
+offset_bottom = 349.0
+focus_neighbor_top = NodePath("../acucar")
+focus_neighbor_right = NodePath("../sal")
+focus_neighbor_bottom = NodePath("../ovo")
+theme = ExtResource("2_bupu1")
+toggle_mode = true
+text = "	CASA"
+script = ExtResource("4_gkuuk")
+correto = false
+
+[node name="Som" type="AudioStreamPlayer" parent="casa"]
+stream = ExtResource("13_pvumk")
+
+[node name="pedra" type="Button" parent="."]
+offset_left = 611.0
+offset_top = 534.0
+offset_right = 1129.0
+offset_bottom = 650.0
+focus_neighbor_top = NodePath("../ovo")
+focus_neighbor_right = NodePath("../leite")
+focus_neighbor_bottom = NodePath("../fermento")
+theme = ExtResource("2_bupu1")
+toggle_mode = true
+text = "PEDRA"
+script = ExtResource("4_gkuuk")
+correto = false
+
+[node name="Som" type="AudioStreamPlayer" parent="pedra"]
+stream = ExtResource("11_l1t3u")
+
+[node name="fermento" type="Button" parent="."]
+offset_left = 616.0
+offset_top = 705.0
+offset_right = 1134.0
+offset_bottom = 821.0
+focus_neighbor_top = NodePath("../pedra")
+theme = ExtResource("2_bupu1")
+toggle_mode = true
+text = "FERMENTO"
+script = ExtResource("4_gkuuk")
+
+[node name="Som" type="AudioStreamPlayer" parent="fermento"]
+stream = ExtResource("7_3quom")
+
+[node name="Gamuto" type="Sprite2D" parent="."]
+position = Vector2(212, 160)
+scale = Vector2(3.625, 3.28125)
+texture = ExtResource("1_7qa7i")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 110.0
+offset_top = 883.0
+offset_right = 1394.0
+offset_bottom = 1016.0
+theme_override_font_sizes/normal_font_size = 70
+text = "QUAIS OS  3 INGREDIENTES DO BOLO
+"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="RichTextLabel"]
+stream = ExtResource("4_vo1eq")
+autoplay = true
+
+[connection signal="focus_entered" from="leite" to="leite" method="_on_focus_entered"]
+[connection signal="pressed" from="leite" to="leite" method="_on_pressed"]
+[connection signal="focus_entered" from="ovo" to="ovo" method="_on_focus_entered"]
+[connection signal="pressed" from="ovo" to="ovo" method="_on_pressed"]
+[connection signal="focus_entered" from="acucar" to="acucar" method="_on_focus_entered"]
+[connection signal="pressed" from="acucar" to="acucar" method="_on_pressed"]
+[connection signal="focus_entered" from="margarina" to="margarina" method="_on_focus_entered"]
+[connection signal="pressed" from="margarina" to="margarina" method="_on_pressed"]
+[connection signal="focus_entered" from="oleo" to="oleo" method="_on_focus_entered"]
+[connection signal="pressed" from="oleo" to="oleo" method="_on_pressed"]
+[connection signal="focus_entered" from="sal" to="sal" method="_on_focus_entered"]
+[connection signal="focus_entered" from="casa" to="casa" method="_on_focus_entered"]
+[connection signal="focus_entered" from="pedra" to="pedra" method="_on_focus_entered"]
+[connection signal="focus_entered" from="fermento" to="fermento" method="_on_focus_entered"]
