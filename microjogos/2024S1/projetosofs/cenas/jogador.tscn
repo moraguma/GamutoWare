@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://bg18neupbbgw7"]
+
+[ext_resource type="Texture2D" uid="uid://57svk87p1n5x" path="res://microjogos/2024S1/projetosofs/cenas/imageedit_0_7981043328.png" id="1_4x6xn"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projetosofs/cenas/jogador.gd" id="1_5cjr3"]
+[ext_resource type="Texture2D" uid="uid://2ns58gex8uke" path="res://microjogos/2024S1/projetosofs/cenas/Screenshot from 2024-03-23 20-34-16.png" id="3_rmffd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pp7wd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4x6xn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_es1e3"]
+radius = 239.68
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nygxf"]
+size = Vector2(178.388, 267.435)
+
+[node name="Jogador" type="Node2D"]
+script = ExtResource("1_5cjr3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
+position = Vector2(904, 532)
+scale = Vector2(1.24517, 1.18736)
+sprite_frames = SubResource("SpriteFrames_pp7wd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D"]
+z_index = 1
+position = Vector2(-15.259, 8.42206)
+scale = Vector2(0.803105, 0.842204)
+shape = SubResource("CircleShape2D_es1e3")
+
+[node name="ScreenshotFrom2024-03-2320-34-16" type="Sprite2D" parent="."]
+position = Vector2(964, 542.5)
+scale = Vector2(1.77348, 1.7671)
+texture = ExtResource("3_rmffd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScreenshotFrom2024-03-2320-34-16"]
+position = Vector2(263.888, -13.8645)
+shape = SubResource("RectangleShape2D_nygxf")
