@@ -1,0 +1,194 @@
+[gd_scene load_steps=20 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-do-lucas/cenas/scripts/main.gd" id="1_7xlnu"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-do-lucas/cenas/Player.gd" id="1_40en8"]
+[ext_resource type="Texture2D" uid="uid://brsax1e5qansx" path="res://microjogos/2024S1/projeto-do-lucas/recursos/IMG_BACKGROUND.jpg" id="1_e3r4q"]
+[ext_resource type="Texture2D" uid="uid://6o83broaecee" path="res://microjogos/2024S1/projeto-do-lucas/recursos/IMG_001_PLAYER.png" id="2_ldxb5"]
+[ext_resource type="Texture2D" uid="uid://b5p0xe8eevy7j" path="res://microjogos/2024S1/projeto-do-lucas/recursos/IMG_002_PLAYER.png" id="3_e65vq"]
+[ext_resource type="Texture2D" uid="uid://djgwdax00j8j" path="res://microjogos/2024S1/projeto-do-lucas/recursos/IMG_003_MODEL.png" id="5_k2n1i"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-do-lucas/cenas/Model_Ceiling.gd" id="5_vr3oo"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-do-lucas/cenas/Model_Bottom.gd" id="7_jutc1"]
+[ext_resource type="AudioStream" uid="uid://cicbgmaedvytx" path="res://microjogos/2024S1/projeto-do-lucas/recursos/SFX_CAMERA.ogg" id="7_scer6"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-do-lucas/cenas/Model_Side.gd" id="8_vrlp4"]
+[ext_resource type="AudioStream" uid="uid://dyjewg2k1ktn2" path="res://microjogos/2024S1/projeto-do-lucas/recursos/SFX_CAVE.ogg" id="10_oxega"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4lb7o"]
+size = Vector2(480, 277)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hflmh"]
+radius = 66.0303
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jac1k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ldxb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_e65vq")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 2.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qcweo"]
+size = Vector2(1919.25, 26.005)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y528w"]
+size = Vector2(1080, 26.25)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8y56r"]
+radius = 35.4684
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xtnxu"]
+radius = 27.6797
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qdcmn"]
+radius = 16.8517
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_7xlnu")
+
+[node name="Sound_Cave" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-6.10352e-05, -6.10352e-05)
+scale = Vector2(1, 1)
+stream = ExtResource("10_oxega")
+volume_db = 12.0
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(960, 540)
+scale = Vector2(0.274286, 0.39373)
+texture = ExtResource("1_e3r4q")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(340, 83)
+script = ExtResource("1_40en8")
+
+[node name="Player_Collision" type="CollisionShape2D" parent="Player"]
+position = Vector2(621, 404)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_4lb7o")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="Player_Focus" type="Area2D" parent="Player"]
+
+[node name="Player_Focus_Collision" type="CollisionShape2D" parent="Player/Player_Focus"]
+z_index = 3
+position = Vector2(630, 405)
+shape = SubResource("CircleShape2D_hflmh")
+debug_color = Color(0.901961, 0.654902, 0.717647, 0.419608)
+
+[node name="Player_Camera" type="Camera2D" parent="Player"]
+position = Vector2(620.88, 404)
+zoom = Vector2(2, 1.95)
+limit_left = 0
+limit_top = 0
+limit_right = 1920
+limit_bottom = 1080
+editor_draw_limits = true
+
+[node name="Player_Sprite" type="Sprite2D" parent="Player"]
+z_index = 3
+position = Vector2(621, 404)
+
+[node name="Player_Sprite_Idle" type="AnimatedSprite2D" parent="Player"]
+z_index = 2
+texture_filter = 1
+position = Vector2(621, 404)
+scale = Vector2(1.36, 1.36)
+sprite_frames = SubResource("SpriteFrames_jac1k")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="Sound_Camera" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("7_scer6")
+volume_db = 20.0
+
+[node name="Boundaries" type="StaticBody2D" parent="."]
+position = Vector2(959.5, 8.99744)
+
+[node name="Top_Boundary" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(0.250061, -21.9974)
+shape = SubResource("RectangleShape2D_qcweo")
+
+[node name="Bottom_Boundary" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(0.875061, 1084)
+shape = SubResource("RectangleShape2D_qcweo")
+
+[node name="Left_Boundary" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(-972.5, 531.003)
+rotation = 1.57079
+shape = SubResource("RectangleShape2D_y528w")
+
+[node name="Right_Boundary" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(973.5, 531.003)
+rotation = 1.57079
+shape = SubResource("RectangleShape2D_y528w")
+
+[node name="Model_Ceiling" type="Area2D" parent="."]
+script = ExtResource("5_vr3oo")
+
+[node name="Model_Focus_Collision" type="CollisionShape2D" parent="Model_Ceiling"]
+z_index = 1
+position = Vector2(1354, 248)
+rotation = 2.09439
+shape = SubResource("CircleShape2D_8y56r")
+debug_color = Color(0.964706, 0, 0.486275, 0.419608)
+
+[node name="Model_Sprite_Ceiling" type="Sprite2D" parent="Model_Ceiling"]
+texture_filter = 1
+position = Vector2(1360, 232)
+rotation = -2.76974
+scale = Vector2(0.827872, 1.21724)
+texture = ExtResource("5_k2n1i")
+
+[node name="Model_Bottom" type="Area2D" parent="."]
+position = Vector2(1361.13, 237.568)
+rotation = -2.76974
+scale = Vector2(0.766328, 1.25126)
+script = ExtResource("7_jutc1")
+
+[node name="Model_Focus_Collision" type="CollisionShape2D" parent="Model_Bottom"]
+light_mask = 2
+z_index = 1
+position = Vector2(-326.388, -297.279)
+scale = Vector2(1.50636, 0.97728)
+shape = SubResource("CircleShape2D_xtnxu")
+debug_color = Color(0.964706, 0, 0.486275, 0.419608)
+
+[node name="Model_Sprite_Bottom" type="Sprite2D" parent="Model_Bottom"]
+texture_filter = 1
+position = Vector2(-329.753, -296.179)
+rotation = 1.27111
+scale = Vector2(0.60621, 1.44913)
+skew = 0.120428
+texture = ExtResource("5_k2n1i")
+
+[node name="Model_Side" type="Area2D" parent="."]
+position = Vector2(466, 489)
+scale = Vector2(1.57516, 2.13483)
+script = ExtResource("8_vrlp4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Model_Side"]
+z_index = 1
+position = Vector2(1.2696, 0.936843)
+scale = Vector2(1.35834, 1)
+shape = SubResource("CircleShape2D_qdcmn")
+debug_color = Color(0.964706, 0, 0.486275, 0.419608)
+
+[node name="Model_Sprite_Side" type="Sprite2D" parent="Model_Side"]
+texture_filter = 1
+position = Vector2(-5.33244, 0.39412)
+rotation = 1.83259
+scale = Vector2(0.419723, 0.694187)
+skew = -0.114022
+texture = ExtResource("5_k2n1i")
+
+[connection signal="area_entered" from="Player/Player_Focus" to="Model_Ceiling" method="_on_player_focus_area_entered"]
+[connection signal="area_entered" from="Player/Player_Focus" to="Model_Bottom" method="_on_player_focus_area_entered"]
+[connection signal="area_entered" from="Player/Player_Focus" to="Model_Side" method="_on_player_focus_area_entered"]
+[connection signal="area_exited" from="Player/Player_Focus" to="Model_Ceiling" method="_on_player_focus_area_exited"]
+[connection signal="area_exited" from="Player/Player_Focus" to="Model_Bottom" method="_on_player_focus_area_exited"]
+[connection signal="area_exited" from="Player/Player_Focus" to="Model_Side" method="_on_player_focus_area_exited"]
