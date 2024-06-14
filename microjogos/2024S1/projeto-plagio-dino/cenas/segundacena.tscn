@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://vqsfxk0iake4"]
+
+[ext_resource type="Texture2D" uid="uid://ywqyqd6ctpe0" path="res://microjogos/2024S1/projeto-plagio-dino/fundo-de-jogo-de-pixel-art-com-ceu-de-grama-moida-de-arvores-e-vetor-de-nuvens-eps-10_148553-749.jpg" id="1_t6t7r"]
+[ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="2_fe7vu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5n682"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(969, 540)
+rotation = -0.00408598
+scale = Vector2(3.068, 3.04005)
+skew = -0.00174534
+texture = ExtResource("1_t6t7r")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(692, 489)
+slide_on_ceiling = false
+floor_constant_speed = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(-21, 225)
+scale = Vector2(2.75, 2.92188)
+texture = ExtResource("2_fe7vu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(32, -57)
+shape = SubResource("CircleShape2D_5n682")
