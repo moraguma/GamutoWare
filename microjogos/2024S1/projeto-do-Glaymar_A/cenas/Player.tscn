@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://dt7ewgrxnk86g"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-do-Glaymar_A/cenas/CharacterBody2D.gd" id="1_6jrih"]
+[ext_resource type="Texture2D" uid="uid://3dyh7wv3c65q" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/persona.png" id="2_6e7nt"]
+[ext_resource type="Texture2D" uid="uid://dxy3gvgm3dijq" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/sombra.png" id="2_a54cd"]
+[ext_resource type="PackedScene" uid="uid://d1gunhxurm3j6" path="res://microjogos/2024S1/projeto-do-Glaymar_A/cenas/arma.tscn" id="3_bxmo8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eoaqu"]
+radius = 31.257
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_6jrih")
+
+[node name="Sombra" type="Sprite2D" parent="."]
+position = Vector2(-28, 67)
+scale = Vector2(0.573438, 0.65625)
+texture = ExtResource("2_a54cd")
+
+[node name="Persona" type="Sprite2D" parent="."]
+position = Vector2(-18, 72)
+scale = Vector2(0.267188, 0.283594)
+texture = ExtResource("2_6e7nt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-15, 91)
+shape = SubResource("CircleShape2D_eoaqu")
+
+[node name="Area2D" parent="." instance=ExtResource("3_bxmo8")]
+position = Vector2(-14, 93)
+rotation = 0.0120305
