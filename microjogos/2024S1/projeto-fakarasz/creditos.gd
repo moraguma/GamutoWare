@@ -14,10 +14,10 @@ var title_en = "Penalty"
 var credits_pt = """
 Criado por: [FaKarasz!]
 
-Você pode preencher o resto deste campo com creditos de assets utilizados, links para sua redes sociais ou qualquer outro detalhe que ache relevante
+Sound Effect by Gregor Quendel from Pixabay
 """
 var credits_en = """
 Made by: [FaKarasz!]
 
-Fill this space with credits to used assets, links to your social medias and whatever other details you think are important
+Sound Effect by Gregor Quendel from Pixabay
 """

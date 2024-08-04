@@ -1,8 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=18 format=3 uid="uid://bi0ahd7cv37i6"]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-fakarasz/cenas/scripts/main.gd" id="1_m2u1k"]
 [ext_resource type="Texture2D" uid="uid://di67cocvoahhu" path="res://microjogos/2024S1/projeto-fakarasz/recursos/gol.png" id="1_u0vwt"]
-[ext_resource type="AudioStream" uid="uid://cdn01iqyq8i7" path="res://microjogos/2024S1/projeto-fakarasz/recursos/nba_sound.mp3" id="2_u5274"]
+[ext_resource type="AudioStream" uid="uid://b32ir4h8rpp6m" path="res://microjogos/2024S1/projeto-fakarasz/recursos/cheering.mp3" id="2_1k1yt"]
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-fakarasz/cenas/Sprite2D4.gd" id="3_d1n5b"]
 [ext_resource type="Texture2D" uid="uid://dqbyraxta0fon" path="res://microjogos/2024S1/projeto-fakarasz/recursos/seta.png" id="3_kaemg"]
 [ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="4_3x7q6"]
@@ -36,8 +36,12 @@ tracks/0/keys = {
 "values": [0.523599, 1.5708, 2.61799, 1.5708, 0.523599, 1.5708, 2.61799]
 }
 
+[sub_resource type="Animation" id="Animation_wejta"]
+length = 0.001
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rgfuy"]
 _data = {
+"RESET": SubResource("Animation_wejta"),
 "rotation": SubResource("Animation_yg82t")
 }
 
@@ -61,7 +65,7 @@ scale = Vector2(33.168, 18.3867)
 texture = SubResource("GradientTexture2D_abbfw")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="Music"]
-stream = ExtResource("2_u5274")
+stream = ExtResource("2_1k1yt")
 autoplay = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
@@ -125,7 +129,7 @@ offset = Vector2(-550, -224)
 libraries = {
 "": SubResource("AnimationLibrary_rgfuy")
 }
-speed_scale = 2.0
+speed_scale = 1.5
 script = ExtResource("4_ftoe5")
 
 [node name="Sprite2D6" type="Sprite2D" parent="."]
