@@ -7,17 +7,19 @@ extends Resource
 
 
 # Título do seu jogo
-var title_pt = "Titulo em Portugues"
-var title_en = "Title in English"
+var title_pt = "Fuga da Prisão!"
+var title_en = "Prison Break!"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
-Criado por: [Seu nome!]
+Criado por: [Daniel H.]
 
-Você pode preencher o resto deste campo com creditos de assets utilizados, links para sua redes sociais ou qualquer outro detalhe que ache relevante
+Suraj Renuka - http://www.theappguruz.com/blog/pixel-tile-set
+Prison Bar PNG Desenhado por Aghil de https://pngtree.com/freepng/prison-bars-vector_9026256.html?sol=downref&id=bef
 """
 var credits_en = """
-Made by: [Your name!]
+Made by: [Daniel H.]
 
-Fill this space with credits to used assets, links to your social medias and whatever other details you think are important
+Suraj Renuka - http://www.theappguruz.com/blog/pixel-tile-set
+Prison Bar PNG Desenhado by Aghil from https://pngtree.com/freepng/prison-bars-vector_9026256.html?sol=downref&id=bef
 """
