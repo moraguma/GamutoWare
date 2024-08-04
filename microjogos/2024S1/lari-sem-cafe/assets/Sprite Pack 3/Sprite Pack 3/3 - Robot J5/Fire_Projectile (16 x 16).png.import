@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://eww1awq1hywj"
-path="res://.godot/imported/capa.png-e2a979e4cff402deb51f608155fee63b.ctex"
+uid="uid://bse403y52wqgr"
+path="res://.godot/imported/Fire_Projectile (16 x 16).png-dff0bb28fe19f8d36979e60b0ef1a8e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-matheusSC/cenas/capa.png"
-dest_files=["res://.godot/imported/capa.png-e2a979e4cff402deb51f608155fee63b.ctex"]
+source_file="res://microjogos/2024S1/lari-sem-cafe/assets/Sprite Pack 3/Sprite Pack 3/3 - Robot J5/Fire_Projectile (16 x 16).png"
+dest_files=["res://.godot/imported/Fire_Projectile (16 x 16).png-dff0bb28fe19f8d36979e60b0ef1a8e4.ctex"]
 
 [params]
 

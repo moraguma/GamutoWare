@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bg8s82vlimjrs"
+path="res://.godot/imported/House (112 x 96).png-d528be47e2c1402b5a8b9cc9c63b9858.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://microjogos/2024S1/lari-sem-cafe/assets/Seasonal Tilesets/Seasonal Tilesets/5 - Misc. universal tiles/House (112 x 96).png"
+dest_files=["res://.godot/imported/House (112 x 96).png-d528be47e2c1402b5a8b9cc9c63b9858.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

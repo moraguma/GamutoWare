@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://xd0ylioakf58"]
+
+[ext_resource type="Texture2D" uid="uid://dfau82dujneb3" path="res://microjogos/2024S1/projeto-estrela/recursos/sapinho.png" id="1_xdym6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mequo"]
+size = Vector2(135, 137)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-3.5, -6.5)
+shape = SubResource("RectangleShape2D_mequo")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture_filter = 1
+position = Vector2(-1.78814e-07, -16)
+scale = Vector2(2.375, 2.651)
+texture = ExtResource("1_xdym6")
