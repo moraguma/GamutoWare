@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkvcg7ivmjl0d"
-path="res://.godot/imported/capa.png-a2833a1c04ea9ad2ae79814c2aae631e.ctex"
+uid="uid://dqbyraxta0fon"
+path="res://.godot/imported/seta.png-f9436da5b6e42640373d33b2e302fa74.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-FaKarasz/capa.png"
-dest_files=["res://.godot/imported/capa.png-a2833a1c04ea9ad2ae79814c2aae631e.ctex"]
+source_file="res://microjogos/2024S1/projeto-fakarasz/recursos/seta.png"
+dest_files=["res://.godot/imported/seta.png-f9436da5b6e42640373d33b2e302fa74.ctex"]
 
 [params]
 
