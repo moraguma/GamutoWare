@@ -15,11 +15,9 @@ var credits_pt = """
 Criado por: [Daniel H.]
 
 Suraj Renuka - http://www.theappguruz.com/blog/pixel-tile-set
-Prison Bar PNG Desenhado por Aghil de https://pngtree.com/freepng/prison-bars-vector_9026256.html?sol=downref&id=bef
 """
 var credits_en = """
 Made by: [Daniel H.]
 
 Suraj Renuka - http://www.theappguruz.com/blog/pixel-tile-set
-Prison Bar PNG Desenhado by Aghil from https://pngtree.com/freepng/prison-bars-vector_9026256.html?sol=downref&id=bef
 """
