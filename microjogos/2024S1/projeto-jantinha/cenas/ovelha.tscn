@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://raj217crjm5b"]
+[gd_scene load_steps=6 format=3 uid="uid://raj217crjm5b"]
 
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto-jantinha/ovelha.gd" id="1_f13f4"]
-[ext_resource type="Texture2D" uid="uid://cfpwjhaf2dkrm" path="res://microjogos/2024S1/projeto-jantinha/recursos/New Piskel-1.png.png" id="2_4ru08"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-jantinha/cenas/scripts/ovelha.gd" id="1_f13f4"]
+[ext_resource type="Texture2D" uid="uid://cfpwjhaf2dkrm" path="res://microjogos/2024S1/projeto-jantinha/recursos/ovelha.png" id="2_4ru08"]
+[ext_resource type="AudioStream" uid="uid://2r3kr188arow" path="res://microjogos/2024S1/projeto-jantinha/recursos/wolf-growls-at-maurice-and-philippe-with-his-teeth-193235.mp3" id="3_mtfj0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_477qq"]
 radius = 238.019
@@ -34,11 +35,8 @@ monitorable = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ovelha/sensacao"]
 shape = SubResource("CircleShape2D_rrlwn")
 
-[node name="slaaaa" type="CollisionShape2D" parent="ovelha"]
-position = Vector2(-30, -14)
-scale = Vector2(0.0377875, -0.00886006)
-shape = SubResource("CircleShape2D_477qq")
-disabled = true
+[node name="WinSound" type="AudioStreamPlayer" parent="ovelha"]
+stream = ExtResource("3_mtfj0")
 
 [connection signal="area_entered" from="ovelha/hitboxovelha" to="ovelha" method="_on_hitboxovelha_area_entered"]
 [connection signal="area_entered" from="ovelha/sensacao" to="ovelha" method="_on_sensacao_area_entered"]

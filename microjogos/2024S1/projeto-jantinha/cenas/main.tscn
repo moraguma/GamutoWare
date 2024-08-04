@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=7 format=3 uid="uid://bi0ahd7cv37i6"]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-jantinha/cenas/scripts/main.gd" id="1_pk87m"]
 [ext_resource type="Texture2D" uid="uid://psb30i2ybeqc" path="res://microjogos/2024S1/projeto-jantinha/recursos/grama.png" id="1_y6vwp"]
 [ext_resource type="PackedScene" uid="uid://raj217crjm5b" path="res://microjogos/2024S1/projeto-jantinha/cenas/ovelha.tscn" id="2_gsq2e"]
 [ext_resource type="PackedScene" uid="uid://03m8fbni7yot" path="res://microjogos/2024S1/projeto-jantinha/cenas/lobo.tscn" id="3_trt8y"]
+[ext_resource type="AudioStream" uid="uid://y37yqu2l41tx" path="res://microjogos/2024S1/projeto-jantinha/recursos/wolf-howling-140235.mp3" id="5_tr3ky"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0cwrh"]
 size = Vector2(20.3532, 16.66)
@@ -51,3 +52,7 @@ position = Vector2(85.9756, -76)
 rotation = 1.5708
 scale = Vector2(28.3449, 1.33682)
 shape = SubResource("RectangleShape2D_0cwrh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_tr3ky")
+autoplay = true

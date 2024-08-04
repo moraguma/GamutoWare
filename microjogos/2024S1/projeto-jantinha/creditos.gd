@@ -13,7 +13,11 @@ var title_en = "Dinner time"
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
 Criado por: Henrique Magalhães Ribeiro
+
+Sound Effects: https://pixabay.com/sound-effects/search/wolf/
 """
 var credits_en = """
 Made by: Henrique Magalhães Ribeiro
+
+Sound Effects: https://pixabay.com/sound-effects/search/wolf/
 """

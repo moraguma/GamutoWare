@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfpwjhaf2dkrm"
-path="res://.godot/imported/New Piskel-1.png.png-15b1a7343d157d3246b988f96286be77.ctex"
+path="res://.godot/imported/ovelha.png-a0b0540ca3e386c9e8e970c359d3b34d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-jantinha/recursos/New Piskel-1.png.png"
-dest_files=["res://.godot/imported/New Piskel-1.png.png-15b1a7343d157d3246b988f96286be77.ctex"]
+source_file="res://microjogos/2024S1/projeto-jantinha/recursos/ovelha.png"
+dest_files=["res://.godot/imported/ovelha.png-a0b0540ca3e386c9e8e970c359d3b34d.ctex"]
 
 [params]
 
