@@ -20,7 +20,7 @@ const filters = {
 
 const minigame_data = {
 	"gamutoware": {"credits": "res://principal/creditos.gd", "cover": "res://principal/recursos/sprites/capagmtware.png", "difficulty": 0},
-	"res://microjogos/2024S1/gamufit/cenas/main.tscn": {"credits": "res://microjogos/2024S1/gamufit/creditos.gd", "cover": "res://microjogos/2024S1/gamufit/cenas/capa.png", "difficulty": 0},
+	"res://microjogos/2024S1/gamufit/cenas/main.tscn": {"credits": "res://microjogos/2024S1/gamufit/creditos.gd", "cover": "res://microjogos/2024S1/gamufit/capa.png", "difficulty": 0},
 	"res://microjogos/2024S1/projeto-naomi/cenas/main.tscn": {"credits": "res://microjogos/2024S1/projeto-naomi/creditos.gd", "cover": "res://microjogos/2024S1/projeto-naomi/cenas/capa.png", "difficulty": 0},
 	"res://microjogos/2024S1/projeto-matheusSC/cenas/main.tscn": {"credits": "res://microjogos/2024S1/projeto-matheusSC/creditos.gd", "cover": "res://microjogos/2024S1/projeto-matheusSC/cenas/capa.png", "difficulty": 0},
 	"res://microjogos/2024S1/projeto-andre/cenas/main.tscn": {"credits": "res://microjogos/2024S1/projeto-andre/creditos.gd", "cover": "res://microjogos/2024S1/projeto-andre/capa.png", "difficulty": 0},
