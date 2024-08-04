@@ -1,0 +1,275 @@
+[gd_scene load_steps=16 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/main.gd" id="1_1yj3m"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/Control.gd" id="1_8ao43"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/composer.gd" id="2_ch7fa"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/cursor_area.gd" id="3_lmjue"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/area_cell_0.gd" id="5_n4jon"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/status_checker.gd" id="5_vfi3m"]
+[ext_resource type="AudioStream" uid="uid://6qu51xfbu5gm" path="res://microjogos/2024S1/projeto_felipe_onorio/recursos/Track_2_(Party_Tonight)_shortened.mp3" id="6_1nsfs"]
+[ext_resource type="Texture2D" uid="uid://ssb2yyob2j30" path="res://microjogos/2024S1/projeto_felipe_onorio/recursos/cobblestone_path.jpg" id="6_oscpn"]
+[ext_resource type="Texture2D" uid="uid://csfuxrvj5bd5c" path="res://microjogos/2024S1/projeto_felipe_onorio/recursos/titulo.png" id="7_kmapp"]
+[ext_resource type="Texture2D" uid="uid://bn7wtjhmwxbby" path="res://microjogos/2024S1/projeto_felipe_onorio/recursos/instructions.png" id="8_mf117"]
+[ext_resource type="SpriteFrames" uid="uid://dekn22av8ml3j" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/flame_pixely.tres" id="9_n55ik"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/AudioStreamPlayer.gd" id="11_5i0dd"]
+[ext_resource type="Texture2D" uid="uid://l0t3wes4pt16" path="res://microjogos/2024S1/projeto_felipe_onorio/recursos/themes/touch_screen_button.png" id="11_v661f"]
+[ext_resource type="Texture2D" uid="uid://c4p0cmgm7pflk" path="res://microjogos/2024S1/projeto_felipe_onorio/recursos/placeholder_cursor_32x32 - Copy.png" id="12_ervd2"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/touch_screen_button_0.gd" id="13_ae67l"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_1yj3m")
+
+[node name="interface_static_elements" type="Node" parent="."]
+
+[node name="background" type="Sprite2D" parent="interface_static_elements"]
+z_index = -2
+position = Vector2(954.656, 629.811)
+scale = Vector2(7.00613, 7.00614)
+texture = ExtResource("6_oscpn")
+
+[node name="title" type="Sprite2D" parent="interface_static_elements"]
+position = Vector2(947, 200)
+scale = Vector2(7.3782, 7.3782)
+texture = ExtResource("7_kmapp")
+
+[node name="instructions" type="Sprite2D" parent="interface_static_elements"]
+position = Vector2(964, 287)
+scale = Vector2(4.6875, 4.6875)
+texture = ExtResource("8_mf117")
+
+[node name="win_animation" type="AnimatedSprite2D" parent="interface_static_elements"]
+z_index = -1
+position = Vector2(957, 556)
+scale = Vector2(41.0625, 41.0625)
+sprite_frames = ExtResource("9_n55ik")
+speed_scale = 4.0
+
+[node name="audio_stream_player" type="AudioStreamPlayer" parent="interface_static_elements"]
+stream = ExtResource("6_1nsfs")
+script = ExtResource("11_5i0dd")
+
+[node name="composer" type="Node" parent="."]
+script = ExtResource("2_ch7fa")
+
+[node name="status_checker" type="Node2D" parent="."]
+position = Vector2(0, -2)
+script = ExtResource("5_vfi3m")
+
+[node name="area_cell_0" type="Area2D" parent="status_checker" node_paths=PackedStringArray("right_neighbor", "down_neighbor")]
+position = Vector2(724, 424)
+script = ExtResource("5_n4jon")
+right_neighbor = NodePath("../area_cell_1")
+down_neighbor = NodePath("../area_cell_3")
+row = 0
+column = 0
+state = 1
+
+[node name="animations_0" type="AnimatedSprite2D" parent="status_checker/area_cell_0"]
+position = Vector2(-2, -5)
+scale = Vector2(5, 5)
+speed_scale = 4.0
+
+[node name="touch_screen_button_0" type="TouchScreenButton" parent="status_checker/area_cell_0"]
+position = Vector2(-83, -67)
+scale = Vector2(4.78125, 4.78125)
+texture_normal = ExtResource("11_v661f")
+texture_pressed = ExtResource("12_ervd2")
+script = ExtResource("13_ae67l")
+
+[node name="area_cell_1" type="Area2D" parent="status_checker" node_paths=PackedStringArray("right_neighbor", "left_neighbor", "down_neighbor")]
+position = Vector2(915, 421)
+script = ExtResource("5_n4jon")
+right_neighbor = NodePath("../area_cell_2")
+left_neighbor = NodePath("../area_cell_0")
+down_neighbor = NodePath("../area_cell_4")
+row = 0
+column = 1
+state = 2
+
+[node name="animations_1" type="AnimatedSprite2D" parent="status_checker/area_cell_1"]
+position = Vector2(2, -2)
+scale = Vector2(5, 5)
+speed_scale = 4.0
+
+[node name="touch_screen_button_0" type="TouchScreenButton" parent="status_checker/area_cell_1"]
+position = Vector2(-83, -67)
+scale = Vector2(4.78125, 4.78125)
+texture_normal = ExtResource("11_v661f")
+texture_pressed = ExtResource("12_ervd2")
+script = ExtResource("13_ae67l")
+
+[node name="area_cell_2" type="Area2D" parent="status_checker" node_paths=PackedStringArray("left_neighbor", "down_neighbor")]
+position = Vector2(1097, 421)
+script = ExtResource("5_n4jon")
+left_neighbor = NodePath("../area_cell_1")
+down_neighbor = NodePath("../area_cell_5")
+row = 0
+column = 2
+
+[node name="animations_2" type="AnimatedSprite2D" parent="status_checker/area_cell_2"]
+scale = Vector2(5, 5)
+speed_scale = 4.0
+
+[node name="touch_screen_button_0" type="TouchScreenButton" parent="status_checker/area_cell_2"]
+position = Vector2(-83, -67)
+scale = Vector2(4.78125, 4.78125)
+texture_normal = ExtResource("11_v661f")
+texture_pressed = ExtResource("12_ervd2")
+script = ExtResource("13_ae67l")
+
+[node name="area_cell_3" type="Area2D" parent="status_checker" node_paths=PackedStringArray("right_neighbor", "up_neighbor", "down_neighbor")]
+position = Vector2(726, 613)
+script = ExtResource("5_n4jon")
+right_neighbor = NodePath("../area_cell_4")
+up_neighbor = NodePath("../area_cell_0")
+down_neighbor = NodePath("../area_cell_6")
+row = 1
+column = 0
+
+[node name="animations_3" type="AnimatedSprite2D" parent="status_checker/area_cell_3"]
+position = Vector2(-5, -5)
+scale = Vector2(5, 5)
+speed_scale = 4.0
+
+[node name="touch_screen_button_0" type="TouchScreenButton" parent="status_checker/area_cell_3"]
+position = Vector2(-83, -67)
+scale = Vector2(4.78125, 4.78125)
+texture_normal = ExtResource("11_v661f")
+texture_pressed = ExtResource("12_ervd2")
+script = ExtResource("13_ae67l")
+
+[node name="area_cell_4" type="Area2D" parent="status_checker" node_paths=PackedStringArray("right_neighbor", "left_neighbor", "up_neighbor", "down_neighbor")]
+position = Vector2(917, 610)
+script = ExtResource("5_n4jon")
+right_neighbor = NodePath("../area_cell_5")
+left_neighbor = NodePath("../area_cell_3")
+up_neighbor = NodePath("../area_cell_1")
+down_neighbor = NodePath("../area_cell_7")
+row = 1
+column = 1
+state = 1
+
+[node name="animations_4" type="AnimatedSprite2D" parent="status_checker/area_cell_4"]
+position = Vector2(-6, -5)
+scale = Vector2(5, 5)
+speed_scale = 4.0
+
+[node name="touch_screen_button_0" type="TouchScreenButton" parent="status_checker/area_cell_4"]
+position = Vector2(-83, -67)
+scale = Vector2(4.78125, 4.78125)
+texture_normal = ExtResource("11_v661f")
+texture_pressed = ExtResource("12_ervd2")
+script = ExtResource("13_ae67l")
+
+[node name="area_cell_5" type="Area2D" parent="status_checker" node_paths=PackedStringArray("left_neighbor", "up_neighbor", "down_neighbor")]
+position = Vector2(1099, 610)
+script = ExtResource("5_n4jon")
+left_neighbor = NodePath("../area_cell_4")
+up_neighbor = NodePath("../area_cell_2")
+down_neighbor = NodePath("../area_cell_8")
+row = 1
+column = 2
+state = 2
+
+[node name="animations_5" type="AnimatedSprite2D" parent="status_checker/area_cell_5"]
+position = Vector2(0, 2)
+scale = Vector2(5, 5)
+speed_scale = 4.0
+
+[node name="touch_screen_button_0" type="TouchScreenButton" parent="status_checker/area_cell_5"]
+position = Vector2(-83, -67)
+scale = Vector2(4.78125, 4.78125)
+texture_normal = ExtResource("11_v661f")
+texture_pressed = ExtResource("12_ervd2")
+script = ExtResource("13_ae67l")
+
+[node name="area_cell_6" type="Area2D" parent="status_checker" node_paths=PackedStringArray("right_neighbor", "up_neighbor")]
+position = Vector2(728, 802)
+script = ExtResource("5_n4jon")
+right_neighbor = NodePath("../area_cell_7")
+up_neighbor = NodePath("../area_cell_3")
+row = 2
+column = 0
+state = 2
+
+[node name="animations_6" type="AnimatedSprite2D" parent="status_checker/area_cell_6"]
+position = Vector2(-1, -3)
+scale = Vector2(5, 5)
+speed_scale = 4.0
+
+[node name="touch_screen_button_0" type="TouchScreenButton" parent="status_checker/area_cell_6"]
+position = Vector2(-83, -67)
+scale = Vector2(4.78125, 4.78125)
+texture_normal = ExtResource("11_v661f")
+texture_pressed = ExtResource("12_ervd2")
+script = ExtResource("13_ae67l")
+
+[node name="area_cell_7" type="Area2D" parent="status_checker" node_paths=PackedStringArray("right_neighbor", "left_neighbor", "up_neighbor")]
+position = Vector2(919, 799)
+script = ExtResource("5_n4jon")
+right_neighbor = NodePath("../area_cell_8")
+left_neighbor = NodePath("../area_cell_6")
+up_neighbor = NodePath("../area_cell_4")
+row = 2
+column = 1
+
+[node name="animations_7" type="AnimatedSprite2D" parent="status_checker/area_cell_7"]
+position = Vector2(2, 0)
+scale = Vector2(5, 5)
+speed_scale = 4.0
+
+[node name="touch_screen_button_0" type="TouchScreenButton" parent="status_checker/area_cell_7"]
+position = Vector2(-83, -67)
+scale = Vector2(4.78125, 4.78125)
+texture_normal = ExtResource("11_v661f")
+texture_pressed = ExtResource("12_ervd2")
+script = ExtResource("13_ae67l")
+
+[node name="area_cell_8" type="Area2D" parent="status_checker" node_paths=PackedStringArray("left_neighbor", "up_neighbor")]
+position = Vector2(1101, 799)
+script = ExtResource("5_n4jon")
+left_neighbor = NodePath("../area_cell_7")
+up_neighbor = NodePath("../area_cell_5")
+row = 2
+column = 2
+state = 1
+
+[node name="animations_8" type="AnimatedSprite2D" parent="status_checker/area_cell_8"]
+position = Vector2(-6, -5)
+scale = Vector2(5, 5)
+speed_scale = 4.0
+
+[node name="touch_screen_button_0" type="TouchScreenButton" parent="status_checker/area_cell_8"]
+position = Vector2(-83, -67)
+scale = Vector2(4.78125, 4.78125)
+texture_normal = ExtResource("11_v661f")
+texture_pressed = ExtResource("12_ervd2")
+script = ExtResource("13_ae67l")
+
+[node name="cursor_area" type="Area2D" parent="."]
+position = Vector2(1380, 553)
+scale = Vector2(5, 5)
+script = ExtResource("3_lmjue")
+
+[node name="cursor_sprite" type="Sprite2D" parent="cursor_area"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 19.0013
+offset_top = 16.0002
+offset_right = 1073.0
+offset_bottom = 738.001
+grow_horizontal = 2
+script = ExtResource("1_8ao43")
+
+[connection signal="down_pressed" from="." to="cursor_area" method="_on_main_down_pressed"]
+[connection signal="finished" from="interface_static_elements/audio_stream_player" to="interface_static_elements/audio_stream_player" method="_on_finished"]
+[connection signal="win_condition" from="cursor_area" to="." method="_on_cursor_area_win_condition"]
+[connection signal="down_pressed" from="Control" to="cursor_area" method="_on_control_down_pressed"]
+[connection signal="left_pressed" from="Control" to="cursor_area" method="_on_control_left_pressed"]
+[connection signal="quit_pressed" from="Control" to="cursor_area" method="_on_control_quit_pressed"]
+[connection signal="right_pressed" from="Control" to="cursor_area" method="_on_control_right_pressed"]
+[connection signal="space_pressed" from="Control" to="cursor_area" method="_on_control_space_pressed"]
+[connection signal="up_pressed" from="Control" to="cursor_area" method="_on_control_up_pressed"]
