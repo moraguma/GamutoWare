@@ -1,0 +1,183 @@
+[gd_scene load_steps=20 format=3 uid="uid://c84dcths4latf"]
+
+[ext_resource type="Texture2D" uid="uid://bkqwdbh78hgqd" path="res://microjogos/2024S1/projeto-felipe-silva/recursos/maincharacter.png" id="1_l5am0"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-felipe-silva/cenas/scripts/Main Character.gd" id="1_oqv3r"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-felipe-silva/cenas/scripts/local-main.gd" id="1_tlsu4"]
+[ext_resource type="PackedScene" uid="uid://bfefo15ru3cgx" path="res://microjogos/2024S1/projeto-felipe-silva/cenas/pillar.tscn" id="2_1151i"]
+[ext_resource type="Texture2D" uid="uid://itxygsq8x0se" path="res://microjogos/2024S1/projeto-felipe-silva/recursos/background1.png" id="2_lrcqt"]
+[ext_resource type="Texture2D" uid="uid://b0ciqblvy4kus" path="res://microjogos/2024S1/projeto-felipe-silva/recursos/background2.png" id="3_mhl3w"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-felipe-silva/cenas/scripts/Background.gd" id="4_pfrms"]
+[ext_resource type="PackedScene" uid="uid://dskcw2kj7rh76" path="res://microjogos/2024S1/projeto-felipe-silva/cenas/table.tscn" id="5_kwk72"]
+[ext_resource type="AudioStream" uid="uid://dy1tesiwi1f20" path="res://microjogos/2024S1/projeto-felipe-silva/recursos/Loyal Protector.ogg" id="6_6pmtm"]
+[ext_resource type="Theme" uid="uid://cb4tlwb81nq48" path="res://principal/recursos/themes/TitleTheme.tres" id="8_w45ux"]
+[ext_resource type="PackedScene" uid="uid://mvh3iu3vk5i2" path="res://microjogos/2024S1/projeto-felipe-silva/cenas/bike.tscn" id="11_67l7b"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bherx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_mhl3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_lrcqt")
+}],
+"loop": true,
+"name": &"background",
+"speed": 2.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_3chp7"]
+offsets = PackedFloat32Array(0, 0.391304, 0.591304)
+colors = PackedColorArray(0, 0, 0, 0.133333, 0, 0, 0, 0.866667, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_g4l83"]
+gradient = SubResource("Gradient_3chp7")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gmed5"]
+size = Vector2(93.82, 98.61)
+
+[sub_resource type="GDScript" id="GDScript_wvxeg"]
+script/source = "extends Sprite2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kxg7v"]
+size = Vector2(896, 140)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kl3xm"]
+size = Vector2(541.378, 988.381)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nrtfv"]
+size = Vector2(93.3783, 274)
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(960, 592)
+script = ExtResource("1_tlsu4")
+
+[node name="Background" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-992, -296)
+scale = Vector2(30, 30)
+sprite_frames = SubResource("SpriteFrames_bherx")
+animation = &"background"
+frame_progress = 0.0101119
+script = ExtResource("4_pfrms")
+
+[node name="RULabel" type="RichTextLabel" parent="."]
+offset_left = -112.0
+offset_top = -368.0
+offset_right = 152.0
+offset_bottom = -200.0
+theme = ExtResource("8_w45ux")
+bbcode_enabled = true
+text = "[center]RU[/center]"
+
+[node name="RALabel" type="RichTextLabel" parent="."]
+offset_left = -3216.0
+offset_top = -312.0
+offset_right = -2952.0
+offset_bottom = -144.0
+theme = ExtResource("8_w45ux")
+bbcode_enabled = true
+text = "[center]RA[/center]"
+
+[node name="Pilastras" type="Node2D" parent="."]
+position = Vector2(0, -280)
+
+[node name="Pilastra2" parent="Pilastras" instance=ExtResource("2_1151i")]
+position = Vector2(-384, -272)
+
+[node name="Pilastra" parent="Pilastras" instance=ExtResource("2_1151i")]
+position = Vector2(-384, -16)
+
+[node name="Pilastra3" parent="Pilastras" instance=ExtResource("2_1151i")]
+position = Vector2(384, -272)
+
+[node name="Pilastra6" parent="Pilastras" instance=ExtResource("2_1151i")]
+position = Vector2(-384, -1008)
+
+[node name="Pilastra7" parent="Pilastras" instance=ExtResource("2_1151i")]
+position = Vector2(384, -1008)
+
+[node name="Pilastra4" parent="Pilastras" instance=ExtResource("2_1151i")]
+position = Vector2(384, -16)
+
+[node name="Pilastra5" parent="Pilastras" instance=ExtResource("2_1151i")]
+position = Vector2(-384, -528)
+
+[node name="Pilastra10" parent="Pilastras" instance=ExtResource("2_1151i")]
+position = Vector2(-384, -784)
+
+[node name="Pilastra11" parent="Pilastras" instance=ExtResource("2_1151i")]
+position = Vector2(384, -784)
+
+[node name="Pilastra12" parent="Pilastras" instance=ExtResource("2_1151i")]
+position = Vector2(384, -528)
+
+[node name="Sombra" type="Sprite2D" parent="Pilastras"]
+z_index = 5
+position = Vector2(-2.023, -1042.35)
+rotation = -1.5708
+scale = Vector2(7.41957, 900.493)
+texture = SubResource("GradientTexture1D_g4l83")
+
+[node name="Main Character" type="CharacterBody2D" parent="."]
+position = Vector2(0, 150)
+script = ExtResource("1_oqv3r")
+
+[node name="Camera2D" type="Camera2D" parent="Main Character"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Main Character"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_gmed5")
+debug_color = Color(0.309804, 0.619608, 0.258824, 0.419608)
+
+[node name="Character Sprite" type="Sprite2D" parent="Main Character"]
+texture_filter = 1
+position = Vector2(8, 0)
+scale = Vector2(7, 7)
+texture = ExtResource("1_l5am0")
+script = SubResource("GDScript_wvxeg")
+
+[node name="Table" parent="." instance=ExtResource("5_kwk72")]
+position = Vector2(-304, -700)
+
+[node name="WorldLimit" type="Area2D" parent="."]
+position = Vector2(0, -1302)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldLimit"]
+position = Vector2(-8, -230)
+shape = SubResource("RectangleShape2D_kxg7v")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_6pmtm")
+volume_db = -10.667
+autoplay = true
+
+[node name="RA" type="StaticBody2D" parent="."]
+position = Vector2(-3752.76, 1.23785)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RA"]
+position = Vector2(154.067, -159.428)
+shape = SubResource("RectangleShape2D_kl3xm")
+
+[node name="PortaArea" type="Area2D" parent="RA"]
+
+[node name="Porta" type="CollisionShape2D" parent="RA/PortaArea"]
+position = Vector2(466.067, -42.2379)
+shape = SubResource("RectangleShape2D_nrtfv")
+
+[node name="Bike" parent="." instance=ExtResource("11_67l7b")]
+position = Vector2(880, -136)
+
+[connection signal="body_entered" from="WorldLimit" to="." method="_on_world_limit_body_entered"]
+[connection signal="body_entered" from="RA/PortaArea" to="." method="_on_porta_area_body_entered"]

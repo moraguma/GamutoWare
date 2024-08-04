@@ -11,8 +11,9 @@ extends Resource
 	"minigames": "Minigames",
 	"filters": "Filters",
 
-	"infinite": "Infinito",
+	"infinite": "Infinite",
 
+	"test": "Test",
 	"class_of_2024": "Class of 2024",
 	"class_of_2023": "Class of 2023",
 	"class_of_2022": "Class of 2022",
@@ -21,6 +22,7 @@ extends Resource
 	"moraguma": "Moraguma",
 
 	"no_gore": "No gore",
+	"no_luck": "No luck",
 
 	"game_instructions": "SPACE AND ARROW KEYS!",
 

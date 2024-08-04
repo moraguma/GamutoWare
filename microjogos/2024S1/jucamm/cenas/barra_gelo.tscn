@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://rl6ndtum3pap"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/jucamm/cenas/RigidBody2D.gd" id="1_qqbmj"]
+[ext_resource type="Texture2D" uid="uid://bpyjbdvt81uop" path="res://microjogos/2024S1/jucamm/recursos/bola basket.png" id="2_axee8"]
+[ext_resource type="AudioStream" uid="uid://dwqjjgrubj2o4" path="res://microjogos/2024S1/jucamm/recursos/51461__andrenascimento__basket_ball_02_bounce.wav" id="3_b6cwg"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_c6s2k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6rg6k"]
+radius = 32.1
+
+[node name="Barra gelo" type="RigidBody2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_qqbmj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+material = SubResource("CanvasItemMaterial_c6s2k")
+position = Vector2(-2, 214)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("CircleShape2D_6rg6k")
+one_way_collision_margin = 0.0
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-2, 214)
+rotation = 1.5708
+scale = Vector2(3, 3)
+texture = ExtResource("2_axee8")
+
+[node name="Bounce" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_b6cwg")

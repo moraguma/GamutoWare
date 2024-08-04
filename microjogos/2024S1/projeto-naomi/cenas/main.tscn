@@ -1,0 +1,58 @@
+[gd_scene load_steps=11 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="Texture2D" uid="uid://dvcwvhvdsduox" path="res://microjogos/2024S1/projeto-naomi/recursos/13104.jpg" id="1_3w0dd"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-naomi/cenas/scripts/main.gd" id="1_o86ch"]
+[ext_resource type="Texture2D" uid="uid://bs50fbbusbamr" path="res://microjogos/2024S1/projeto-naomi/recursos/chao.png" id="2_nkses"]
+[ext_resource type="PackedScene" uid="uid://dajv4yisow4b6" path="res://microjogos/2024S1/projeto-naomi/cenas/player.tscn" id="2_wgw70"]
+[ext_resource type="PackedScene" uid="uid://smjky501ygt5" path="res://microjogos/2024S1/projeto-naomi/cenas/enemy.tscn" id="3_2b2rt"]
+[ext_resource type="Texture2D" uid="uid://oj54mwbpe6vq" path="res://microjogos/2024S1/projeto-naomi/recursos/ru_da_unicamp-removebg-preview.png" id="4_atme4"]
+[ext_resource type="PackedScene" uid="uid://blfi2kpblvtoa" path="res://microjogos/2024S1/projeto-naomi/cenas/table.tscn" id="7_68dqe"]
+[ext_resource type="PackedScene" uid="uid://hl1djwfl7qsa" path="res://microjogos/2024S1/projeto-naomi/cenas/door.tscn" id="7_j40sv"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_pq6ja"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_88g8n"]
+size = Vector2(1920, 141)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_o86ch")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(957, 538)
+scale = Vector2(0.367814, 0.274801)
+texture = ExtResource("1_3w0dd")
+
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(937, 188)
+scale = Vector2(3.06907, 2.90117)
+texture = ExtResource("4_atme4")
+
+[node name="Player" parent="." instance=ExtResource("2_wgw70")]
+position = Vector2(109, 842)
+
+[node name="Enemy" parent="." instance=ExtResource("3_2b2rt")]
+position = Vector2(911, 826)
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(3, 14)
+physics_material_override = SubResource("PhysicsMaterial_pq6ja")
+
+[node name="Hitbox" type="CollisionShape2D" parent="Ground"]
+position = Vector2(954, 992)
+shape = SubResource("RectangleShape2D_88g8n")
+
+[node name="Sprite" type="Sprite2D" parent="Ground"]
+position = Vector2(957, 992)
+scale = Vector2(11.9875, 0.9)
+texture = ExtResource("2_nkses")
+
+[node name="Table" parent="." instance=ExtResource("7_68dqe")]
+position = Vector2(532, 916)
+
+[node name="Table2" parent="." instance=ExtResource("7_68dqe")]
+position = Vector2(1315, 916)
+
+[node name="Door" parent="." instance=ExtResource("7_j40sv")]
+position = Vector2(1731, 828)
+
+[connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]

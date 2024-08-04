@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://3p3ftk6311dc"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/ShootGamuto/cenas/scripts/Canhao2.gd" id="1_plf1m"]
+[ext_resource type="Texture2D" uid="uid://3i4ih1giye05" path="res://microjogos/2024S1/ShootGamuto/recursos/tanque.png" id="2_w63ro"]
+[ext_resource type="Texture2D" uid="uid://lf534lmb0hmn" path="res://microjogos/2024S1/ShootGamuto/recursos/parteSuperiorTanque.png" id="3_avb4y"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_v0xjp"]
+
+[node name="Canhao2" type="CharacterBody2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_plf1m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2.7, 2.7)
+texture = ExtResource("2_w63ro")
+
+[node name="Superior" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2.7, 2.7)
+texture = ExtResource("3_avb4y")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, -500)
+collision_mask = 6
+collide_with_areas = true
+
+[node name="Line2D" type="Line2D" parent="."]
+z_index = 2
+scale = Vector2(0.17, 1.29257)
+points = PackedVector2Array(0, -60, 0, -14.855)
+default_color = Color(0.760784, 0.262745, 0.0745098, 1)
+texture = SubResource("ViewportTexture_v0xjp")
