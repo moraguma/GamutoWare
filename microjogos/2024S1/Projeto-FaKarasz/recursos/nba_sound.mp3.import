@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cdn01iqyq8i7"
-path="res://.godot/imported/nba_sound.mp3-c8b0f1cf7339bd781dd996923840c414.mp3str"
+path="res://.godot/imported/nba_sound.mp3-1a617296d6aefbee278a83814a608642.mp3str"
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-fakarasz/recursos/nba_sound.mp3"
-dest_files=["res://.godot/imported/nba_sound.mp3-c8b0f1cf7339bd781dd996923840c414.mp3str"]
+source_file="res://microjogos/2024S1/projeto-FaKarasz/recursos/nba_sound.mp3"
+dest_files=["res://.godot/imported/nba_sound.mp3-1a617296d6aefbee278a83814a608642.mp3str"]
 
 [params]
 

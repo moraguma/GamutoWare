@@ -1,13 +1,13 @@
 [gd_scene load_steps=17 format=3 uid="uid://bi0ahd7cv37i6"]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-fakarasz/cenas/scripts/main.gd" id="1_m2u1k"]
-[ext_resource type="Texture2D" uid="uid://di67cocvoahhu" path="res://microjogos/2024S1/projeto-fakarasz/recursos/gol.png" id="1_u0vwt"]
-[ext_resource type="AudioStream" uid="uid://cdn01iqyq8i7" path="res://microjogos/2024S1/projeto-fakarasz/recursos/nba_sound.mp3" id="2_u5274"]
+[ext_resource type="Texture2D" uid="uid://di67cocvoahhu" path="res://microjogos/2024S1/projeto-FaKarasz/recursos/gol.png" id="1_u0vwt"]
+[ext_resource type="AudioStream" uid="uid://cdn01iqyq8i7" path="res://microjogos/2024S1/projeto-FaKarasz/recursos/nba_sound.mp3" id="2_u5274"]
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-fakarasz/cenas/Sprite2D4.gd" id="3_d1n5b"]
-[ext_resource type="Texture2D" uid="uid://dqbyraxta0fon" path="res://microjogos/2024S1/projeto-fakarasz/recursos/seta.png" id="3_kaemg"]
+[ext_resource type="Texture2D" uid="uid://dqbyraxta0fon" path="res://microjogos/2024S1/projeto-FaKarasz/recursos/seta.png" id="3_kaemg"]
 [ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="4_3x7q6"]
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-fakarasz/cenas/AnimationPlayer.gd" id="4_ftoe5"]
-[ext_resource type="Texture2D" uid="uid://dsluoulrnqwau" path="res://microjogos/2024S1/projeto-fakarasz/recursos/bola.png" id="5_ppnya"]
+[ext_resource type="Texture2D" uid="uid://dsluoulrnqwau" path="res://microjogos/2024S1/projeto-FaKarasz/recursos/bola.png" id="5_ppnya"]
 
 [sub_resource type="Gradient" id="Gradient_ispyj"]
 offsets = PackedFloat32Array(0.510989)
