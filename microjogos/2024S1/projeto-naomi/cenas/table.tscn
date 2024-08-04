@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://blfi2kpblvtoa"]
+
+[ext_resource type="Texture2D" uid="uid://b1de16pu3ekyu" path="res://microjogos/2024S1/projeto-naomi/recursos/mesa.png" id="1_cmwc4"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lgec2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nfmcc"]
+size = Vector2(369, 56)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wwrqq"]
+size = Vector2(277, 82.5)
+
+[node name="Table" type="StaticBody2D"]
+position = Vector2(20, 0)
+physics_material_override = SubResource("PhysicsMaterial_lgec2")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.17)
+texture = ExtResource("1_cmwc4")
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+position = Vector2(-13.5, -9)
+shape = SubResource("RectangleShape2D_nfmcc")
+
+[node name="Hitbox2" type="CollisionShape2D" parent="."]
+position = Vector2(-19.5, -70.75)
+shape = SubResource("RectangleShape2D_wwrqq")
