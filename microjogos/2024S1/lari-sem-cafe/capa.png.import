@@ -3,24 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkvcg7ivmjl0d"
-<<<<<<<< HEAD:microjogos/2024S1/jucamm/capa.png.import
-path="res://.godot/imported/capa.png-eeaca997cc9637e8a2ee91f3a20d1c5a.ctex"
-========
 path="res://.godot/imported/capa.png-51343ff0e802e6fdf470a92e1bf154dc.ctex"
->>>>>>>> 8a71be5 (Add Lari Sem Cafe's project):microjogos/2024S1/lari-sem-cafe/capa.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:microjogos/2024S1/jucamm/capa.png.import
-source_file="res://microjogos/2024S1/jucamm/capa.png"
-dest_files=["res://.godot/imported/capa.png-eeaca997cc9637e8a2ee91f3a20d1c5a.ctex"]
-========
 source_file="res://microjogos/2024S1/lari-sem-cafe/capa.png"
 dest_files=["res://.godot/imported/capa.png-51343ff0e802e6fdf470a92e1bf154dc.ctex"]
->>>>>>>> 8a71be5 (Add Lari Sem Cafe's project):microjogos/2024S1/lari-sem-cafe/capa.png.import
 
 [params]
 

@@ -22,3 +22,13 @@ Assets:
 	https://mixkit.co/free-stock-music/tag/chill/
 	
 """
+var credits_en = """
+Made by: Milena Furuta Shishito
+Some pixel arts were made by: Gabriela Andrade Taniguchi
+
+Assets:
+	https://grafxkid.itch.io/
+	https://trixelized.itch.io/starstring-fields?download
+	https://sfxr.me/#34T6PkmX5RjGt3Z17u5uDvRK3cJ1Vh1eaQsFAXBjvxHr8EY9S6zvNLhPgoLQn1GbYZ1B5W1swXU6Q9U9HTg1CGFYR7kUt7TYquL1gjx4uzS2UqL6z1UiKhPYb
+	https://mixkit.co/free-stock-music/tag/chill/
+"""
