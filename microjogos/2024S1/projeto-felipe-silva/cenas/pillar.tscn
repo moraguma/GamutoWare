@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfefo15ru3cgx"]
+
+[ext_resource type="Texture2D" uid="uid://buixgemwhd65p" path="res://microjogos/2024S1/projeto-felipe-silva/recursos/pillar.png" id="1_r5vo1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3qj4w"]
+size = Vector2(120, 120)
+
+[node name="Pilastra" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3qj4w")
+
+[node name="Pilastra" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-1.19209e-07, -1.19209e-07)
+scale = Vector2(12.75, 12.75)
+texture = ExtResource("1_r5vo1")

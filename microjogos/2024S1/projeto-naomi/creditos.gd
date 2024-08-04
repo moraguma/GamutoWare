@@ -7,8 +7,8 @@ extends Resource
 
 
 # Título do seu jogo
-var title_pt = "Titulo em Portugues"
-var title_en = "Title in English"
+var title_pt = "Fuja do Peixe!"
+var title_en = "Escape the Fish!"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """

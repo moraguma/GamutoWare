@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjh2lhwsbqihl"]
+
+[ext_resource type="Texture2D" uid="uid://be41ftfhooacx" path="res://microjogos/2024S1/projeto-estrela/recursos/tortuguita.png" id="1_pj1ih"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture_filter = 1
+position = Vector2(0, -2.378)
+scale = Vector2(3, 3.14444)
+texture = ExtResource("1_pj1ih")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-126, 28, -126, 9, -114, 9, -114, -15, -73, -15, -72, -34, -52, -50, -23, -60, 40, -60, 85, -41, 96, -22, 108, -8, 120, -8, 121, 17, 114, 23, 103, 34, -117, 36, -126, 36)
