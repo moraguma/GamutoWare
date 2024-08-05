@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf83c6ngrbpo5"
-path="res://.godot/imported/oculosdedisfarce.png-cabbb80b43e7ce8711a83c8e6be8e7e8.ctex"
+uid="uid://dofi473trwhxa"
+path="res://.godot/imported/4.Groundt.png-f4e65f471165b24a2783a2a1f5c1bddf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-do-FelipeG/recursos/oculosdedisfarce.png"
-dest_files=["res://.godot/imported/oculosdedisfarce.png-cabbb80b43e7ce8711a83c8e6be8e7e8.ctex"]
+source_file="res://microjogos/2024S1/projeto-do-FelipeG/recursos/4.Groundt.png"
+dest_files=["res://.godot/imported/4.Groundt.png-f4e65f471165b24a2783a2a1f5c1bddf.ctex"]
 
 [params]
 

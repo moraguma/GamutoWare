@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj4p8ef7pdrld"
-path="res://.godot/imported/casquinha.png-d2cc6e0e3dc3aa28fee6fe722c41f30a.ctex"
+uid="uid://dcl2ntikgqte5"
+path="res://.godot/imported/3.Trees_back.png-214a3f48e78f57aa5d43d8427dc93689.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-do-FelipeG/recursos/casquinha.png"
-dest_files=["res://.godot/imported/casquinha.png-d2cc6e0e3dc3aa28fee6fe722c41f30a.ctex"]
+source_file="res://microjogos/2024S1/projeto-do-FelipeG/recursos/3.Trees_back.png"
+dest_files=["res://.godot/imported/3.Trees_back.png-214a3f48e78f57aa5d43d8427dc93689.ctex"]
 
 [params]
 

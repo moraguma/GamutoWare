@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chu885ufn0c4n"
-path="res://.godot/imported/bola.webp-54431b37d61186a0550dca6aab24fa15.ctex"
+uid="uid://bg8f6sij8vc3d"
+path="res://.godot/imported/2.Mountains.png-f394873de4291d3abd329a0928307e6f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-do-FelipeG/recursos/bola.webp"
-dest_files=["res://.godot/imported/bola.webp-54431b37d61186a0550dca6aab24fa15.ctex"]
+source_file="res://microjogos/2024S1/projeto-do-FelipeG/recursos/2.Mountains.png"
+dest_files=["res://.godot/imported/2.Mountains.png-f394873de4291d3abd329a0928307e6f.ctex"]
 
 [params]
 

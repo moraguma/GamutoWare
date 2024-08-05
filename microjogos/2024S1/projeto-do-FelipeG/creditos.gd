@@ -15,11 +15,11 @@ var credits_pt = """
 Criado por: [Felipe Gayotto]
 
 asset credits:
-	[TODO]
+	background: https://the-pixel-nook.itch.io/parallax-backgrounds-demo
 """
 var credits_en = """
 Made by: Felipe Gayotto]
 
 asset credits:
-	[TODO]
+	background: https://the-pixel-nook.itch.io/parallax-backgrounds-demo
 """

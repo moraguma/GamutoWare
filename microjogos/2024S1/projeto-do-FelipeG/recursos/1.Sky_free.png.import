@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://q6qvt6q72pxn"
-path="res://.godot/imported/pixil-frame-0.png-8cc6d3990e45be6c76b5dbf6546f8612.ctex"
+uid="uid://m58fyi5irgmr"
+path="res://.godot/imported/1.Sky_free.png-404c4d90ea2e8cacd676c89a11d87e0d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-do-FelipeG/recursos/pixil-frame-0.png"
-dest_files=["res://.godot/imported/pixil-frame-0.png-8cc6d3990e45be6c76b5dbf6546f8612.ctex"]
+source_file="res://microjogos/2024S1/projeto-do-FelipeG/recursos/1.Sky_free.png"
+dest_files=["res://.godot/imported/1.Sky_free.png-404c4d90ea2e8cacd676c89a11d87e0d.ctex"]
 
 [params]
 

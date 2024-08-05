@@ -1,19 +1,22 @@
-[gd_scene load_steps=19 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=22 format=3 uid="uid://bi0ahd7cv37i6"]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-do-FelipeG/cenas/scripts/main.gd" id="1_mb7ff"]
 [ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="1_xw2jv"]
 [ext_resource type="Texture2D" uid="uid://di5ld3jg3u3xm" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/oculos.png" id="2_l54ih"]
 [ext_resource type="Texture2D" uid="uid://b0p0h5i2i6tsp" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/sorveterosa.png" id="3_lq4sp"]
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto-do-FelipeG/cenas/velocidades.gd" id="4_7yohs"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-do-FelipeG/cenas/scripts/velocidades.gd" id="4_7yohs"]
 [ext_resource type="Texture2D" uid="uid://cps6k1t0jvvqn" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/sorvetemarrom.png" id="4_830mq"]
 [ext_resource type="Texture2D" uid="uid://bvx8nry0oq46j" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/sorveteverde.png" id="5_jaw7s"]
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto-do-FelipeG/cenas/Timer.gd" id="5_mqx3i"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-do-FelipeG/cenas/scripts/Timer.gd" id="5_mqx3i"]
 [ext_resource type="Texture2D" uid="uid://x80dvpolikrw" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/sorveteamarelo.png" id="6_c62d8"]
 [ext_resource type="Texture2D" uid="uid://by53bitd5rbg8" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/sorvetevermelho.png" id="7_8578p"]
 [ext_resource type="Texture2D" uid="uid://dk5if3cv3rl7u" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/sorveteazul.png" id="8_qtuke"]
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto-do-FelipeG/cenas/casquinha.gd" id="9_80hcg"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-do-FelipeG/cenas/scripts/casquinha.gd" id="9_80hcg"]
 [ext_resource type="Texture2D" uid="uid://b8e08erddibol" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/casquinha2.png" id="10_6qsf7"]
-[ext_resource type="Texture2D" uid="uid://5345krdnl8d5" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/cenario.jpg" id="13_1iqwa"]
+[ext_resource type="Texture2D" uid="uid://m58fyi5irgmr" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/1.Sky_free.png" id="15_js6qk"]
+[ext_resource type="Texture2D" uid="uid://bg8f6sij8vc3d" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/2.Mountains.png" id="16_0bc4o"]
+[ext_resource type="Texture2D" uid="uid://dcl2ntikgqte5" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/3.Trees_back.png" id="17_cvyre"]
+[ext_resource type="Texture2D" uid="uid://dofi473trwhxa" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/4.Groundt.png" id="18_mevnp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1b7y"]
 size = Vector2(18.4778, 18.9961)
@@ -42,6 +45,7 @@ script = ExtResource("9_80hcg")
 
 [node name="sprite_casquinha" type="Sprite2D" parent="casquinha"]
 z_index = 1
+texture_filter = 1
 position = Vector2(14.125, 7.56238)
 scale = Vector2(3.1625, 3.27125)
 texture = ExtResource("10_6qsf7")
@@ -69,6 +73,7 @@ linear_velocity = Vector2(0, 250)
 script = ExtResource("4_7yohs")
 
 [node name="sorveterosa" type="Sprite2D" parent="sorveterosa"]
+texture_filter = 1
 position = Vector2(10, 56)
 scale = Vector2(4, 4)
 texture = ExtResource("3_lq4sp")
@@ -93,6 +98,7 @@ linear_velocity = Vector2(0, 250)
 script = ExtResource("4_7yohs")
 
 [node name="sorvetemarrom2" type="Sprite2D" parent="sorvetemarrom"]
+texture_filter = 1
 position = Vector2(-68, 83.0002)
 rotation = 1.5708
 scale = Vector2(4, 4)
@@ -116,6 +122,7 @@ linear_velocity = Vector2(0, 250)
 script = ExtResource("4_7yohs")
 
 [node name="sorveteverde2" type="Sprite2D" parent="sorveteverde"]
+texture_filter = 1
 position = Vector2(30, 53)
 scale = Vector2(4, 4)
 texture = ExtResource("5_jaw7s")
@@ -139,6 +146,7 @@ linear_velocity = Vector2(0, 250)
 script = ExtResource("4_7yohs")
 
 [node name="sorvetevermelho" type="Sprite2D" parent="sorvetevermelho"]
+texture_filter = 1
 position = Vector2(13, 56)
 scale = Vector2(4, 4)
 texture = ExtResource("7_8578p")
@@ -162,6 +170,7 @@ linear_velocity = Vector2(0, 250)
 script = ExtResource("4_7yohs")
 
 [node name="sorveteamarelo" type="Sprite2D" parent="sorveteamarelo"]
+texture_filter = 1
 position = Vector2(26, 62)
 scale = Vector2(4, 4)
 texture = ExtResource("6_c62d8")
@@ -186,6 +195,7 @@ linear_damp_mode = 1
 script = ExtResource("4_7yohs")
 
 [node name="sorveteazul" type="Sprite2D" parent="sorveteazul"]
+texture_filter = 1
 position = Vector2(22, 57)
 scale = Vector2(4, 4)
 texture = ExtResource("8_qtuke")
@@ -219,15 +229,10 @@ position = Vector2(4.79997, -11.6)
 texture = ExtResource("1_xw2jv")
 
 [node name="oculos" type="Sprite2D" parent="Gamuto/gamuto"]
+texture_filter = 1
 position = Vector2(1.99998, 7.99999)
 scale = Vector2(0.029272, 0.0327578)
 texture = ExtResource("2_l54ih")
-
-[node name="cenario" type="Sprite2D" parent="."]
-show_behind_parent = true
-position = Vector2(961, 710)
-scale = Vector2(3.13235, 5.28096)
-texture = ExtResource("13_1iqwa")
 
 [node name="chao" type="StaticBody2D" parent="."]
 position = Vector2(946, 1022)
@@ -237,6 +242,29 @@ physics_material_override = SubResource("PhysicsMaterial_qrh3y")
 position = Vector2(15, 4)
 shape = SubResource("RectangleShape2D_1yml7")
 disabled = true
+
+[node name="1_skyFree" type="Sprite2D" parent="."]
+position = Vector2(959.5, 550.5)
+scale = Vector2(6.00313, 6.12778)
+texture = ExtResource("15_js6qk")
+
+[node name="2_mountains" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(960.445, 496)
+scale = Vector2(6, 6)
+texture = ExtResource("16_0bc4o")
+
+[node name="3_treesBack" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(959.556, 662)
+scale = Vector2(6.02222, 6.02222)
+texture = ExtResource("17_cvyre")
+
+[node name="4_groundt" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(961, 596)
+scale = Vector2(6.03889, 6.03889)
+texture = ExtResource("18_mevnp")
 
 [connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]
 [connection signal="sorvete_capturado" from="casquinha" to="." method="_on_sorvete_capturado"]
