@@ -1,0 +1,131 @@
+[gd_scene load_steps=9 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="Texture2D" uid="uid://bncdfg5hsd7l" path="res://microjogos/2024S1/projeto_felipe_onorio/recursos/placeholder_B_32x32.png" id="1_t7i6h"]
+[ext_resource type="Texture2D" uid="uid://b5ed1n5o5u3hm" path="res://microjogos/2024S1/projeto_felipe_onorio/recursos/placeholder_cursor_32x32.png" id="2_rqx57"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/cursor_area.gd" id="3_lmjue"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/area_cell_0.gd" id="5_n4jon"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hoh22"]
+
+[sub_resource type="GDScript" id="GDScript_hbppd"]
+script/source = "extends CollisionShape2D
+
+export var right_neighbor_path: NodePath # we assign a path using inspector
+onready var right_neighbor := get_node(right_neighbor_path) as Node2D # then we get a reference
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[sub_resource type="GDScript" id="GDScript_r2cga"]
+script/source = "extends Sprite2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[sub_resource type="GDScript" id="GDScript_q6t0q"]
+script/source = "extends CollisionShape2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	print(\"AAAAAAAAAAAAAAAA\")
+	position = Vector2(222,111)
+	print(\"BBBBBBBBBBBBB\")
+	var misc_position = get_node(^\"../Cell_0\").position
+	print(\"CCCCCCCCCCC\")
+	position = misc_position
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="Main" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_hoh22")
+
+[node name="Cell_1" type="Sprite2D" parent="."]
+position = Vector2(883, 295)
+scale = Vector2(5, 5)
+texture = ExtResource("1_t7i6h")
+
+[node name="Cell_2" type="Sprite2D" parent="."]
+position = Vector2(1052, 295)
+scale = Vector2(5, 5)
+texture = ExtResource("1_t7i6h")
+
+[node name="Cell_3" type="Sprite2D" parent="."]
+position = Vector2(706, 468)
+scale = Vector2(5, 5)
+texture = ExtResource("1_t7i6h")
+
+[node name="Cell_4" type="Sprite2D" parent="."]
+position = Vector2(876, 468)
+scale = Vector2(5, 5)
+texture = ExtResource("1_t7i6h")
+
+[node name="Cell_5" type="Sprite2D" parent="."]
+position = Vector2(1052, 466)
+scale = Vector2(5, 5)
+texture = ExtResource("1_t7i6h")
+
+[node name="Cell_6" type="Sprite2D" parent="."]
+position = Vector2(705, 641)
+scale = Vector2(5, 5)
+texture = ExtResource("1_t7i6h")
+
+[node name="Cell_7" type="Sprite2D" parent="."]
+position = Vector2(878, 643)
+scale = Vector2(5, 5)
+texture = ExtResource("1_t7i6h")
+
+[node name="Cell_8" type="Sprite2D" parent="."]
+position = Vector2(1046, 639)
+scale = Vector2(5, 5)
+texture = ExtResource("1_t7i6h")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="area_cell_0" type="Area2D" parent="."]
+script = ExtResource("5_n4jon")
+
+[node name="Cell_0_hitbox" type="CollisionShape2D" parent="area_cell_0"]
+script = SubResource("GDScript_hbppd")
+
+[node name="Cell_0" type="Sprite2D" parent="area_cell_0/Cell_0_hitbox"]
+position = Vector2(713, 292)
+scale = Vector2(5, 5)
+texture = ExtResource("1_t7i6h")
+script = SubResource("GDScript_r2cga")
+
+[node name="cursor_area" type="Area2D" parent="."]
+scale = Vector2(5, 5)
+script = ExtResource("3_lmjue")
+
+[node name="Cursor" type="CollisionShape2D" parent="cursor_area"]
+scale = Vector2(1, 1)
+script = SubResource("GDScript_q6t0q")
+
+[node name="CursorSprite" type="Sprite2D" parent="cursor_area/Cursor"]
+texture = ExtResource("2_rqx57")
