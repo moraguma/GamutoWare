@@ -139,28 +139,25 @@ disabled = true
 position = Vector2(411, 847)
 shape = SubResource("RectangleShape2D_bdo8l")
 
-[node name="Player" parent="." instance=ExtResource("3_8e26e")]
-position = Vector2(261, 339)
-
-[node name="Player_Piaui" type="CharacterBody2D" parent="Player"]
+[node name="Player_Piaui" type="CharacterBody2D" parent="."]
 position = Vector2(-11, 719)
 script = ExtResource("4_rb7vw")
 
-[node name="Piaui_sprite" type="Sprite2D" parent="Player/Player_Piaui"]
+[node name="Piaui_sprite" type="Sprite2D" parent="Player_Piaui"]
 visibility_layer = 2
 position = Vector2(-96.3, -171.3)
 scale = Vector2(0.161899, 0.161899)
 texture = ExtResource("4_ss1kd")
 
-[node name="Area2D" type="Area2D" parent="Player/Player_Piaui"]
+[node name="Area2D" type="Area2D" parent="Player_Piaui"]
 
-[node name="Piaui_colisao" type="CollisionPolygon2D" parent="Player/Player_Piaui/Area2D"]
+[node name="Piaui_colisao" type="CollisionPolygon2D" parent="Player_Piaui/Area2D"]
 polygon = PackedVector2Array(31, -26, 35, -115, 36, -120, 34, -179, -74, -184, -73, -320, -168, -327, -169, -186, -226, -182, -229, -26)
 
-[node name="Piaui_colisao" type="CollisionPolygon2D" parent="Player/Player_Piaui"]
+[node name="Piaui_colisao" type="CollisionPolygon2D" parent="Player_Piaui"]
 polygon = PackedVector2Array(31, -26, 35, -115, 36, -120, 34, -179, -74, -184, -73, -320, -168, -327, -169, -186, -226, -182, -229, -26)
 
-[node name="Piaui_sprite_vitoria" type="Sprite2D" parent="Player/Player_Piaui"]
+[node name="Piaui_sprite_vitoria" type="Sprite2D" parent="Player_Piaui"]
 visible = false
 position = Vector2(-96.125, -170.875)
 scale = Vector2(0.161397, 0.161397)
