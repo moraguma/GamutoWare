@@ -1,8 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=18 format=3 uid="uid://bi0ahd7cv37i6"]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-samuel/cenas/scripts/main.gd" id="1_pagkl"]
 [ext_resource type="Texture2D" uid="uid://dhowgnjmp48gk" path="res://microjogos/2024S1/projeto-samuel/recursos/Sprites/Fundo2.png" id="2_5ngcp"]
-[ext_resource type="PackedScene" uid="uid://bt04kcxkd1cau" path="res://piaui.fundo.tscn" id="3_8e26e"]
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-samuel/cenas/scripts/Player.gd" id="4_rb7vw"]
 [ext_resource type="Texture2D" uid="uid://bxw3ady5te873" path="res://microjogos/2024S1/projeto-samuel/recursos/Sprites/Piaui_sprite.png" id="4_ss1kd"]
 [ext_resource type="Texture2D" uid="uid://dfg6835wp3jwn" path="res://microjogos/2024S1/projeto-samuel/recursos/Sprites/Gamuto0.png" id="5_6fjpu"]
@@ -140,7 +139,7 @@ position = Vector2(411, 847)
 shape = SubResource("RectangleShape2D_bdo8l")
 
 [node name="Player_Piaui" type="CharacterBody2D" parent="."]
-position = Vector2(-11, 719)
+position = Vector2(262, 983)
 script = ExtResource("4_rb7vw")
 
 [node name="Piaui_sprite" type="Sprite2D" parent="Player_Piaui"]
@@ -184,7 +183,6 @@ stream = ExtResource("10_tnmcl")
 stream = ExtResource("12_vgbtf")
 volume_db = 10.0
 
-[connection signal="win" from="." to="Player/Player_Piaui" method="_on_main_win"]
 [connection signal="G1" from="Gamuto" to="." method="_on_gamuto_g_1"]
 [connection signal="body_entered" from="Gamuto/Area2D" to="Gamuto" method="_on_area_2d_body_entered"]
 [connection signal="G2" from="Gamuto2" to="." method="_on_gamuto_2_g_2"]
