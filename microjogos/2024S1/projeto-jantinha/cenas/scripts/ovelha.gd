@@ -2,6 +2,7 @@ extends CharacterBody2D
 const velocidade = 300
 var dirfuga = Vector2(0,0)
 var is_dead: bool = false
+
 func _morrer():
 	$WinSound.play()
 	is_dead = true
@@ -10,7 +11,7 @@ func _morrer():
 func _on_hitboxovelha_area_entered(area):
 	if area.name == "hitboxlobo" and not is_dead:
 		_morrer()
-		emit_signal("win")
+		get_parent().get_parent().register_win()
 	pass # Replace with function body.
 
 func _on_sensacao_area_entered(area):

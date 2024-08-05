@@ -7,7 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://y37yqu2l41tx" path="res://microjogos/2024S1/projeto-jantinha/recursos/wolf-howling-140235.mp3" id="5_tr3ky"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0cwrh"]
-size = Vector2(20.3532, 16.66)
+size = Vector2(24.2212, 24.5243)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_pk87m")
@@ -22,6 +22,7 @@ scale = Vector2(7, 1.36)
 zoom = Vector2(4, 4)
 
 [node name="Cabra" parent="." instance=ExtResource("2_gsq2e")]
+position = Vector2(-1, 0)
 scale = Vector2(0.114981, 0.102558)
 
 [node name="Lobo" parent="." instance=ExtResource("3_trt8y")]
@@ -32,23 +33,23 @@ scale = Vector2(0.187645, 0.176466)
 scale = Vector2(3.28, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, -161)
+position = Vector2(0.914634, -148)
 scale = Vector2(7.82927, 1)
 shape = SubResource("RectangleShape2D_0cwrh")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-1.82927, 161)
+position = Vector2(-2.43902, 147)
 scale = Vector2(7.82927, 1)
 shape = SubResource("RectangleShape2D_0cwrh")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-86.8902, -85)
+position = Vector2(-89.6342, -81)
 rotation = 1.5708
 scale = Vector2(28.3449, 1.33682)
 shape = SubResource("RectangleShape2D_0cwrh")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(85.9756, -76)
+position = Vector2(89.313, -68)
 rotation = 1.5708
 scale = Vector2(28.3449, 1.33682)
 shape = SubResource("RectangleShape2D_0cwrh")
