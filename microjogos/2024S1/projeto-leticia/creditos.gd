@@ -7,17 +7,21 @@ extends Resource
 
 
 # Título do seu jogo
-var title_pt = "Lista de Compras"
-var title_en = "Shopping list"
+var title_pt = "Perseguição!"
+var title_en = "Police Chase!"
 
 # Detalhes dos créditos do seu jogo
 var credits_pt = """
-Criado por: [Yago Eizo Yonemura]
+Criado por: [Letícia Gomes]
 
-Você pode preencher o resto deste campo com creditos de assets utilizados, links para sua redes sociais ou qualquer outro detalhe que ache relevante
+Carro Azul Designed By K from https://pngtree.com/freepng/pixel-art-sports-car_6299218.html?sol=downref&id=bef
+Police Car by ID 271959037 © Ddshutter | Dreamstime.com
+Rain, Book And Cup Of Tea by | e s c p | https://www.escp.space
 """
 var credits_en = """https://www.postermywall.com/index.php/art/template/d7dfa26f8c8c759652e2521f0ecd24eb/yellow-notebook-paper-background-design-template
-Made by: [Yago Eizo Yonemura]
+Made by: [Letícia Gomes]
 
-Fill this space with credits to used assets, links to your social medias and whatever other details you think are important
+Blue Car Designed By K from https://pngtree.com/freepng/pixel-art-sports-car_6299218.html?sol=downref&id=bef
+Police Car by ID 271959037 © Ddshutter | Dreamstime.com
+Rain, Book And Cup Of Tea by | e s c p | https://www.escp.space
 """
