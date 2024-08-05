@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://crcmfnefx1oio"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-leticia/cenas/scripts/carro_principal.gd" id="1_6wf1o"]
+[ext_resource type="Texture2D" uid="uid://ucv1bg5u1tim" path="res://microjogos/2024S1/projeto-leticia/recursos/carro_azul.png" id="1_mh4gm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8bhfp"]
+size = Vector2(307, 94.2072)
+
+[node name="carro_principal" type="Area2D"]
+script = ExtResource("1_6wf1o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.5, 25)
+scale = Vector2(1, 0.997802)
+shape = SubResource("RectangleShape2D_8bhfp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.375416, 0.375416)
+texture = ExtResource("1_mh4gm")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
