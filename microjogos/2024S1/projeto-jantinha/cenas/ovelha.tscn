@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://raj217crjm5b"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-jantinha/cenas/scripts/ovelha.gd" id="1_f13f4"]
+[ext_resource type="Texture2D" uid="uid://cfpwjhaf2dkrm" path="res://microjogos/2024S1/projeto-jantinha/recursos/ovelha.png" id="2_4ru08"]
+[ext_resource type="AudioStream" uid="uid://2r3kr188arow" path="res://microjogos/2024S1/projeto-jantinha/recursos/wolf-growls-at-maurice-and-philippe-with-his-teeth-193235.mp3" id="3_mtfj0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_477qq"]
+radius = 238.019
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rrlwn"]
+radius = 1501.11
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ovelha" type="CharacterBody2D" parent="."]
+motion_mode = 1
+script = ExtResource("1_f13f4")
+
+[node name="spriteovelha" type="Sprite2D" parent="ovelha"]
+texture_filter = 3
+position = Vector2(-44, 67)
+scale = Vector2(-26.9343, 25.5449)
+texture = ExtResource("2_4ru08")
+
+[node name="hitboxovelha" type="Area2D" parent="ovelha"]
+monitorable = false
+
+[node name="limitehitboxovelha" type="CollisionShape2D" parent="ovelha/hitboxovelha"]
+position = Vector2(-30, -14)
+shape = SubResource("CircleShape2D_477qq")
+
+[node name="sensacao" type="Area2D" parent="ovelha"]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ovelha/sensacao"]
+shape = SubResource("CircleShape2D_rrlwn")
+
+[node name="WinSound" type="AudioStreamPlayer" parent="ovelha"]
+stream = ExtResource("3_mtfj0")
+
+[connection signal="area_entered" from="ovelha/hitboxovelha" to="ovelha" method="_on_hitboxovelha_area_entered"]
+[connection signal="area_entered" from="ovelha/sensacao" to="ovelha" method="_on_sensacao_area_entered"]
