@@ -4,7 +4,7 @@ signal G1
 
 func _ready():
 	var rng = RandomNumberGenerator.new()
-	position.x = rng.randf_range(-500, 1500)
+	position.x = rng.randf_range(-500, 200)
 	velocity.x = 200
 
 func _physics_process(delta):
