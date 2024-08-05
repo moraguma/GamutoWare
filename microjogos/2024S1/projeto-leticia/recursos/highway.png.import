@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu3nkd21jc3lr"
-path="res://.godot/imported/carro extra azul.png-2f84d051ae10b252e108b72d60874e62.ctex"
+uid="uid://cqj3stfrxjjdj"
+path="res://.godot/imported/highway.png-60870116ff5a186fd8e2793691cff40e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-leticia/recursos/carro extra azul.png"
-dest_files=["res://.godot/imported/carro extra azul.png-2f84d051ae10b252e108b72d60874e62.ctex"]
+source_file="res://microjogos/2024S1/projeto-leticia/recursos/highway.png"
+dest_files=["res://.godot/imported/highway.png-60870116ff5a186fd8e2793691cff40e.ctex"]
 
 [params]
 

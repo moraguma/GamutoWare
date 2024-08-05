@@ -3,14 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://brogtoimnit48" path="res://microjogos/2024S1/projeto-leticia/recursos/carro policia.png" id="1_tl22c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3sfcy"]
-size = Vector2(487, 184)
+size = Vector2(487, 97.7963)
 
 [node name="CarroPolicia" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.7, 0.7)
+scale = Vector2(0.545558, 0.545558)
 texture = ExtResource("1_tl22c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-9.5, -37)
+position = Vector2(-9.5, 0.180372)
+scale = Vector2(0.862617, 0.862617)
 shape = SubResource("RectangleShape2D_3sfcy")

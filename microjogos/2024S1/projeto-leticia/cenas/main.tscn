@@ -1,51 +1,91 @@
-[gd_scene load_steps=7 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=10 format=3 uid="uid://bi0ahd7cv37i6"]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-leticia/cenas/scripts/main.gd" id="1_rw4ml"]
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-leticia/cenas/scripts/carro_policia.gd" id="3_86nno"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-leticia/cenas/scripts/ParallaxBackground.gd" id="7_06ocg"]
+[ext_resource type="Texture2D" uid="uid://dloio4a5ieee0" path="res://microjogos/2024S1/projeto-leticia/recursos/back.png" id="7_uogsr"]
+[ext_resource type="Texture2D" uid="uid://bp2dyc3l183kv" path="res://microjogos/2024S1/projeto-leticia/recursos/buildings.png" id="8_85svw"]
+[ext_resource type="Texture2D" uid="uid://cqj3stfrxjjdj" path="res://microjogos/2024S1/projeto-leticia/recursos/highway.png" id="9_0x86q"]
 [ext_resource type="PackedScene" uid="uid://wqrg04pq4qjo" path="res://microjogos/2024S1/projeto-leticia/cenas/carro_policia.tscn" id="103_2jaq6"]
 [ext_resource type="PackedScene" uid="uid://crcmfnefx1oio" path="res://microjogos/2024S1/projeto-leticia/cenas/carro_principal.tscn" id="104_2yf1n"]
-[ext_resource type="VideoStream" path="res://microjogos/2024S1/projeto-leticia/recursos/fundo.ogv" id="104_lov3g"]
 [ext_resource type="AudioStream" uid="uid://chfbmnr371qg7" path="res://microjogos/2024S1/projeto-leticia/recursos/lofi.ogg" id="106_vcip7"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_rw4ml")
 metadata/_edit_horizontal_guides_ = [-53.0]
 
-[node name="Background" type="VideoStreamPlayer" parent="."]
-z_index = -2
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 1920.0
-offset_right = 3840.0
-offset_bottom = 1080.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(-1, 1)
-stream = ExtResource("104_lov3g")
-autoplay = true
-expand = true
-
 [node name="Policias" type="Node2D" parent="."]
 script = ExtResource("3_86nno")
 
 [node name="CarroPolicia" parent="Policias" instance=ExtResource("103_2jaq6")]
-position = Vector2(284, 787)
+position = Vector2(284, 854)
 scale = Vector2(0.98045, 1.03793)
 
 [node name="CarroPolicia3" parent="Policias" instance=ExtResource("103_2jaq6")]
-position = Vector2(-819, 989)
+position = Vector2(-762, 1005)
 scale = Vector2(0.98045, 1.03793)
 
 [node name="CarroPolicia2" parent="Policias" instance=ExtResource("103_2jaq6")]
-position = Vector2(-2171, 771)
+position = Vector2(-1754, 887)
 scale = Vector2(0.961282, 1.07729)
 
 [node name="carro_principal" parent="." instance=ExtResource("104_2yf1n")]
-position = Vector2(1525, 777)
+position = Vector2(1525, 832)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("106_vcip7")
 autoplay = true
+
+[node name="Background" type="ParallaxBackground" parent="."]
+script = ExtResource("7_06ocg")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(2016, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxLayer"]
+texture_filter = 1
+position = Vector2(500, 540)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("7_uogsr")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(2016, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxLayer4"]
+texture_filter = 1
+position = Vector2(1508, 540)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("7_uogsr")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(2048, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxLayer2"]
+texture_filter = 1
+position = Vector2(500, 550)
+scale = Vector2(4, 4)
+texture = ExtResource("8_85svw")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(2048, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxLayer5"]
+texture_filter = 1
+position = Vector2(1524, 550)
+scale = Vector2(4, 4)
+texture = ExtResource("8_85svw")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Background"]
+motion_mirroring = Vector2(4480, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxLayer3"]
+texture_filter = 1
+position = Vector2(0, 508.399)
+scale = Vector2(5, 5)
+texture = ExtResource("9_0x86q")
 
 [connection signal="lose" from="carro_principal" to="." method="_on_carro_principal_lose"]
