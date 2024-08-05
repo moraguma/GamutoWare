@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://03m8fbni7yot"]
+
+[ext_resource type="Texture2D" uid="uid://clxqlp1vp0abm" path="res://microjogos/2024S1/projeto-jantinha/recursos/lobo.png" id="1_i1rf2"]
+
+[sub_resource type="GDScript" id="GDScript_8spyn"]
+script/source = "extends CharacterBody2D
+
+const SPEED = 200.0
+var dir = Vector2(1, 0)
+var botao
+
+func _physics_process(delta):
+	
+	var target_dir = Input.get_vector(\"esquerda\", \"direita\", \"cima\", \"baixo\")
+	
+	
+	if target_dir != Vector2(0, 0):
+			velocity += target_dir * SPEED * delta
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED * delta)
+		velocity.y = move_toward(velocity.y, 0, SPEED * delta)
+	move_and_slide()
+	
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p711q"]
+radius = 106.075
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CorpoLobo" type="CharacterBody2D" parent="."]
+script = SubResource("GDScript_8spyn")
+
+[node name="spritelobo" type="Sprite2D" parent="CorpoLobo"]
+texture_filter = 3
+position = Vector2(-37, 71)
+scale = Vector2(12.1541, 13.6306)
+texture = ExtResource("1_i1rf2")
+
+[node name="hitboxlobo" type="Area2D" parent="CorpoLobo"]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CorpoLobo/hitboxlobo"]
+shape = SubResource("CircleShape2D_p711q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CorpoLobo"]
+shape = SubResource("CircleShape2D_p711q")

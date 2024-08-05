@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-jantinha/cenas/scripts/main.gd" id="1_pk87m"]
+[ext_resource type="Texture2D" uid="uid://psb30i2ybeqc" path="res://microjogos/2024S1/projeto-jantinha/recursos/grama.png" id="1_y6vwp"]
+[ext_resource type="PackedScene" uid="uid://raj217crjm5b" path="res://microjogos/2024S1/projeto-jantinha/cenas/ovelha.tscn" id="2_gsq2e"]
+[ext_resource type="PackedScene" uid="uid://03m8fbni7yot" path="res://microjogos/2024S1/projeto-jantinha/cenas/lobo.tscn" id="3_trt8y"]
+[ext_resource type="AudioStream" uid="uid://y37yqu2l41tx" path="res://microjogos/2024S1/projeto-jantinha/recursos/wolf-howling-140235.mp3" id="5_tr3ky"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0cwrh"]
+size = Vector2(20.3532, 16.66)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_pk87m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 3
+scale = Vector2(19.88, 10.48)
+texture = ExtResource("1_y6vwp")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(7, 1.36)
+zoom = Vector2(4, 4)
+
+[node name="Cabra" parent="." instance=ExtResource("2_gsq2e")]
+scale = Vector2(0.114981, 0.102558)
+
+[node name="Lobo" parent="." instance=ExtResource("3_trt8y")]
+position = Vector2(200, 100)
+scale = Vector2(0.187645, 0.176466)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+scale = Vector2(3.28, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -161)
+scale = Vector2(7.82927, 1)
+shape = SubResource("RectangleShape2D_0cwrh")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1.82927, 161)
+scale = Vector2(7.82927, 1)
+shape = SubResource("RectangleShape2D_0cwrh")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-86.8902, -85)
+rotation = 1.5708
+scale = Vector2(28.3449, 1.33682)
+shape = SubResource("RectangleShape2D_0cwrh")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(85.9756, -76)
+rotation = 1.5708
+scale = Vector2(28.3449, 1.33682)
+shape = SubResource("RectangleShape2D_0cwrh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_tr3ky")
+autoplay = true

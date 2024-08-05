@@ -1,13 +1,8 @@
 extends "res://principal/cenas/scripts/PressableButton.gd"
 
 
-@export var translation_code: int
+@export var aim_language: int
 
 
 func _pressed():
-	translate()
-
-
-func translate():
-	Global.update_translation(translation_code)
-	get_tree().call_group("translatable", "update_translation")
+	TranslationManager.load_translation(aim_language)

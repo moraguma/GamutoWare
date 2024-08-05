@@ -1,0 +1,265 @@
+[gd_scene load_steps=19 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-do-FelipeG/cenas/scripts/main.gd" id="1_mb7ff"]
+[ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="1_xw2jv"]
+[ext_resource type="Texture2D" uid="uid://di5ld3jg3u3xm" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/oculos.png" id="2_l54ih"]
+[ext_resource type="Texture2D" uid="uid://b0p0h5i2i6tsp" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/sorveterosa.png" id="3_lq4sp"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-do-FelipeG/cenas/velocidades.gd" id="4_7yohs"]
+[ext_resource type="Texture2D" uid="uid://cps6k1t0jvvqn" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/sorvetemarrom.png" id="4_830mq"]
+[ext_resource type="Texture2D" uid="uid://bvx8nry0oq46j" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/sorveteverde.png" id="5_jaw7s"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-do-FelipeG/cenas/Timer.gd" id="5_mqx3i"]
+[ext_resource type="Texture2D" uid="uid://x80dvpolikrw" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/sorveteamarelo.png" id="6_c62d8"]
+[ext_resource type="Texture2D" uid="uid://by53bitd5rbg8" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/sorvetevermelho.png" id="7_8578p"]
+[ext_resource type="Texture2D" uid="uid://dk5if3cv3rl7u" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/sorveteazul.png" id="8_qtuke"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-do-FelipeG/cenas/casquinha.gd" id="9_80hcg"]
+[ext_resource type="Texture2D" uid="uid://b8e08erddibol" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/casquinha2.png" id="10_6qsf7"]
+[ext_resource type="Texture2D" uid="uid://5345krdnl8d5" path="res://microjogos/2024S1/projeto-do-FelipeG/recursos/cenario.jpg" id="13_1iqwa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g1b7y"]
+size = Vector2(18.4778, 18.9961)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_umhry"]
+radius = 31.0
+height = 213.333
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qrh3y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1yml7"]
+size = Vector2(1917, 151)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_mb7ff")
+speed_multiplier = null
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+script = ExtResource("5_mqx3i")
+
+[node name="casquinha" type="CharacterBody2D" parent="."]
+z_index = 1
+position = Vector2(962, 857)
+disable_mode = 1
+script = ExtResource("9_80hcg")
+
+[node name="sprite_casquinha" type="Sprite2D" parent="casquinha"]
+z_index = 1
+position = Vector2(14.125, 7.56238)
+scale = Vector2(3.1625, 3.27125)
+texture = ExtResource("10_6qsf7")
+
+[node name="area_casquinha" type="Area2D" parent="casquinha"]
+z_index = 1
+position = Vector2(7.99988, 6.00049)
+rotation = 1.55683
+scale = Vector2(1, 0.6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="casquinha/area_casquinha"]
+position = Vector2(-10.5646, 16.6683)
+scale = Vector2(9.49, 9.49)
+shape = SubResource("RectangleShape2D_g1b7y")
+
+[node name="sorveterosa" type="RigidBody2D" parent="."]
+z_index = 5
+position = Vector2(1032, -79)
+collision_layer = 0
+collision_mask = 0
+mass = 0.5
+gravity_scale = 0.0
+freeze = true
+linear_velocity = Vector2(0, 250)
+script = ExtResource("4_7yohs")
+
+[node name="sorveterosa" type="Sprite2D" parent="sorveterosa"]
+position = Vector2(10, 56)
+scale = Vector2(4, 4)
+texture = ExtResource("3_lq4sp")
+
+[node name="Area2D" type="Area2D" parent="sorveterosa"]
+position = Vector2(-2.00012, -4.00003)
+rotation = 1.55683
+scale = Vector2(1, 0.6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorveterosa/Area2D"]
+position = Vector2(0, -0.000244141)
+scale = Vector2(1, 1)
+shape = SubResource("CapsuleShape2D_umhry")
+
+[node name="sorvetemarrom" type="RigidBody2D" parent="."]
+z_index = 4
+position = Vector2(731, -94)
+rotation = -1.5708
+mass = 0.5
+gravity_scale = 0.0
+freeze = true
+linear_velocity = Vector2(0, 250)
+script = ExtResource("4_7yohs")
+
+[node name="sorvetemarrom2" type="Sprite2D" parent="sorvetemarrom"]
+position = Vector2(-68, 83.0002)
+rotation = 1.5708
+scale = Vector2(4, 4)
+texture = ExtResource("4_830mq")
+
+[node name="Area2D" type="Area2D" parent="sorvetemarrom"]
+position = Vector2(2.415, 64)
+scale = Vector2(1, 0.6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorvetemarrom/Area2D"]
+position = Vector2(0, -0.000244141)
+scale = Vector2(1, 1)
+shape = SubResource("CapsuleShape2D_umhry")
+
+[node name="sorveteverde" type="RigidBody2D" parent="."]
+z_index = 6
+position = Vector2(1260, -95)
+mass = 0.5
+gravity_scale = 0.0
+freeze = true
+linear_velocity = Vector2(0, 250)
+script = ExtResource("4_7yohs")
+
+[node name="sorveteverde2" type="Sprite2D" parent="sorveteverde"]
+position = Vector2(30, 53)
+scale = Vector2(4, 4)
+texture = ExtResource("5_jaw7s")
+
+[node name="Area2D" type="Area2D" parent="sorveteverde"]
+position = Vector2(16, -2)
+rotation = 1.5708
+scale = Vector2(1, 0.6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorveteverde/Area2D"]
+position = Vector2(-2, -6.66675)
+scale = Vector2(1, 1)
+shape = SubResource("CapsuleShape2D_umhry")
+
+[node name="sorvetevermelho" type="RigidBody2D" parent="."]
+z_index = 3
+position = Vector2(477, -67)
+mass = 0.5
+gravity_scale = 0.0
+freeze = true
+linear_velocity = Vector2(0, 250)
+script = ExtResource("4_7yohs")
+
+[node name="sorvetevermelho" type="Sprite2D" parent="sorvetevermelho"]
+position = Vector2(13, 56)
+scale = Vector2(4, 4)
+texture = ExtResource("7_8578p")
+
+[node name="Area2D" type="Area2D" parent="sorvetevermelho"]
+position = Vector2(5, -5)
+rotation = 1.5708
+scale = Vector2(1, 0.6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorvetevermelho/Area2D"]
+position = Vector2(1, 4.99994)
+scale = Vector2(1, 1)
+shape = SubResource("CapsuleShape2D_umhry")
+
+[node name="sorveteamarelo" type="RigidBody2D" parent="."]
+z_index = 2
+position = Vector2(206, -96)
+mass = 0.5
+gravity_scale = 0.0
+freeze = true
+linear_velocity = Vector2(0, 250)
+script = ExtResource("4_7yohs")
+
+[node name="sorveteamarelo" type="Sprite2D" parent="sorveteamarelo"]
+position = Vector2(26, 62)
+scale = Vector2(4, 4)
+texture = ExtResource("6_c62d8")
+
+[node name="Area2D" type="Area2D" parent="sorveteamarelo"]
+position = Vector2(-3, 2)
+rotation = 1.5708
+scale = Vector2(1, 0.6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorveteamarelo/Area2D"]
+position = Vector2(3, -28.3333)
+scale = Vector2(1, 1)
+shape = SubResource("CapsuleShape2D_umhry")
+
+[node name="sorveteazul" type="RigidBody2D" parent="."]
+z_index = 7
+position = Vector2(1542, -95)
+mass = 0.5
+gravity_scale = 0.0
+freeze = true
+linear_velocity = Vector2(0, 250)
+linear_damp_mode = 1
+script = ExtResource("4_7yohs")
+
+[node name="sorveteazul" type="Sprite2D" parent="sorveteazul"]
+position = Vector2(22, 57)
+scale = Vector2(4, 4)
+texture = ExtResource("8_qtuke")
+
+[node name="Area2D" type="Area2D" parent="sorveteazul"]
+position = Vector2(3, -5)
+rotation = 1.5708
+scale = Vector2(1, 0.6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorveteazul/Area2D"]
+position = Vector2(-4, -6.66668)
+scale = Vector2(1, 1)
+shape = SubResource("CapsuleShape2D_umhry")
+
+[node name="Gamuto" type="RigidBody2D" parent="."]
+position = Vector2(1714, -260)
+scale = Vector2(2, 2)
+mass = 0.5
+gravity_scale = 0.0
+script = ExtResource("4_7yohs")
+
+[node name="Area2D" type="Area2D" parent="Gamuto"]
+rotation = 1.5708
+scale = Vector2(1, 0.6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamuto/Area2D"]
+position = Vector2(-4, -6.66668)
+scale = Vector2(1, 1)
+shape = SubResource("CapsuleShape2D_umhry")
+
+[node name="gamuto" type="Sprite2D" parent="Gamuto"]
+position = Vector2(4.79997, -11.6)
+texture = ExtResource("1_xw2jv")
+
+[node name="oculos" type="Sprite2D" parent="Gamuto/gamuto"]
+position = Vector2(1.99998, 7.99999)
+scale = Vector2(0.029272, 0.0327578)
+texture = ExtResource("2_l54ih")
+
+[node name="cenario" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(961, 710)
+scale = Vector2(3.13235, 5.28096)
+texture = ExtResource("13_1iqwa")
+
+[node name="chao" type="StaticBody2D" parent="."]
+position = Vector2(946, 1022)
+physics_material_override = SubResource("PhysicsMaterial_qrh3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chao"]
+position = Vector2(15, 4)
+shape = SubResource("RectangleShape2D_1yml7")
+disabled = true
+
+[connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]
+[connection signal="sorvete_capturado" from="casquinha" to="." method="_on_sorvete_capturado"]
+[connection signal="area_entered" from="casquinha/area_casquinha" to="casquinha" method="_on_area_2d_body_entered"]
+[connection signal="sorvete_contacted" from="sorveterosa" to="casquinha" method="_on_sorvete_contacted"]
+[connection signal="area_entered" from="sorveterosa/Area2D" to="sorveterosa" method="_sorvete_contacted"]
+[connection signal="sorvete_contacted" from="sorvetemarrom" to="casquinha" method="_on_sorvete_contacted"]
+[connection signal="area_entered" from="sorvetemarrom/Area2D" to="sorvetemarrom" method="_sorvete_contacted"]
+[connection signal="sorvete_contacted" from="sorveteverde" to="casquinha" method="_on_sorvete_contacted"]
+[connection signal="area_entered" from="sorveteverde/Area2D" to="sorveteverde" method="_sorvete_contacted"]
+[connection signal="sorvete_contacted" from="sorvetevermelho" to="casquinha" method="_on_sorvete_contacted"]
+[connection signal="area_entered" from="sorvetevermelho/Area2D" to="sorvetevermelho" method="_sorvete_contacted"]
+[connection signal="sorvete_contacted" from="sorveteamarelo" to="casquinha" method="_on_sorvete_contacted"]
+[connection signal="area_entered" from="sorveteamarelo/Area2D" to="sorveteamarelo" method="_sorvete_contacted"]
+[connection signal="sorvete_contacted" from="sorveteazul" to="casquinha" method="_on_sorvete_contacted"]
+[connection signal="area_entered" from="sorveteazul/Area2D" to="sorveteazul" method="_sorvete_contacted"]
+[connection signal="sorvete_contacted" from="Gamuto" to="casquinha" method="_on_sorvete_contacted"]
+[connection signal="area_entered" from="Gamuto/Area2D" to="Gamuto" method="_sorvete_contacted"]

@@ -1,0 +1,112 @@
+[gd_scene load_steps=14 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-FastFood/cenas/scripts/main.gd" id="1_yqjmj"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-FastFood/cenas/scripts/Player_seta.gd" id="2_dj13i"]
+[ext_resource type="Texture2D" uid="uid://d0h8w1p216yfn" path="res://microjogos/2024S1/projeto-FastFood/Sprites/fundo_branco.png" id="2_ktowv"]
+[ext_resource type="Texture2D" uid="uid://dq4x2neptbk5v" path="res://microjogos/2024S1/projeto-FastFood/Sprites/Lanches/Prato.png" id="5_be0ax"]
+[ext_resource type="Texture2D" uid="uid://bopygicqau0hl" path="res://microjogos/2024S1/projeto-FastFood/Sprites/red_arrow_right.png" id="5_ex6fd"]
+[ext_resource type="Texture2D" uid="uid://bevltp43ekgsa" path="res://microjogos/2024S1/projeto-FastFood/Sprites/Lanches/Hamburguer.png" id="6_nl2fj"]
+[ext_resource type="Texture2D" uid="uid://corwmr5246544" path="res://microjogos/2024S1/projeto-FastFood/Sprites/Lanches/Refri.png" id="7_44b3x"]
+[ext_resource type="Texture2D" uid="uid://b1f5s8o8ukh73" path="res://microjogos/2024S1/projeto-FastFood/Sprites/Lanches/Batata_frita.png" id="8_cuctr"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-FastFood/cenas/scripts/Pedido.gd" id="10_45x8o"]
+[ext_resource type="Texture2D" uid="uid://c5ql2bdm8utth" path="res://microjogos/2024S1/projeto-FastFood/Sprites/Balcao.png" id="10_gxnn4"]
+[ext_resource type="Texture2D" uid="uid://dv0taox4ow2tl" path="res://microjogos/2024S1/projeto-FastFood/Sprites/Tela.png" id="11_w24uo"]
+[ext_resource type="FontFile" uid="uid://hwoavt5p4j15" path="res://principal/recursos/fonts/Playpen_Sans/PlaypenSans-VariableFont_wght.ttf" id="12_ov4r4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_m5h7r"]
+font = ExtResource("12_ov4r4")
+font_size = 50
+font_color = Color(0.0980392, 0.0980392, 0.133333, 1)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_yqjmj")
+
+[node name="Cenário" type="Node2D" parent="."]
+
+[node name="Fundo" type="Sprite2D" parent="Cenário"]
+z_index = -1
+texture_filter = 1
+scale = Vector2(60.0312, 33.7188)
+texture = ExtResource("2_ktowv")
+centered = false
+
+[node name="Balcao" type="Sprite2D" parent="Cenário"]
+texture_filter = 1
+position = Vector2(962, 551.078)
+scale = Vector2(30.0937, 33.9326)
+texture = ExtResource("10_gxnn4")
+
+[node name="Tela" type="Sprite2D" parent="Cenário"]
+texture_filter = 1
+position = Vector2(964, 223)
+scale = Vector2(11.0625, 11.0625)
+texture = ExtResource("11_w24uo")
+
+[node name="Pratos" type="Node2D" parent="."]
+
+[node name="Prato1" type="Sprite2D" parent="Pratos"]
+position = Vector2(517, 697)
+scale = Vector2(0.574013, 0.574013)
+texture = ExtResource("5_be0ax")
+
+[node name="Prato2" type="Sprite2D" parent="Pratos"]
+position = Vector2(1373, 707)
+scale = Vector2(0.574013, 0.574013)
+texture = ExtResource("5_be0ax")
+
+[node name="Prato0" type="Sprite2D" parent="Pratos"]
+position = Vector2(972, 974)
+scale = Vector2(0.574013, 0.574013)
+texture = ExtResource("5_be0ax")
+
+[node name="Player_seta" type="Sprite2D" parent="."]
+top_level = true
+position = Vector2(972, 638)
+scale = Vector2(0.562011, 0.562011)
+texture = ExtResource("5_ex6fd")
+script = ExtResource("2_dj13i")
+
+[node name="Lanches" type="Node2D" parent="."]
+
+[node name="Hamburguer" type="Sprite2D" parent="Lanches"]
+texture_filter = 1
+position = Vector2(963, 905)
+scale = Vector2(0.529352, 0.529352)
+texture = ExtResource("6_nl2fj")
+
+[node name="Refri" type="Sprite2D" parent="Lanches"]
+texture_filter = 1
+position = Vector2(1371, 648)
+scale = Vector2(0.303133, 0.303133)
+texture = ExtResource("7_44b3x")
+
+[node name="BatataFrita" type="Sprite2D" parent="Lanches"]
+texture_filter = 1
+position = Vector2(517, 619)
+scale = Vector2(0.396364, 0.3811)
+texture = ExtResource("8_cuctr")
+
+[node name="Display" type="Node2D" parent="."]
+
+[node name="Pedido" type="Sprite2D" parent="Display"]
+z_index = 2
+texture_filter = 1
+position = Vector2(966, 221)
+scale = Vector2(0.342105, 0.342105)
+texture = ExtResource("8_cuctr")
+script = ExtResource("10_45x8o")
+
+[node name="Timer" type="Timer" parent="Display/Pedido"]
+wait_time = 0.5
+
+[node name="Label" type="Label" parent="."]
+offset_left = 577.0
+offset_top = 400.0
+offset_right = 1334.0
+offset_bottom = 541.0
+label_settings = SubResource("LabelSettings_m5h7r")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="jogo_vencido" from="Display/Pedido" to="." method="register_win"]
+[connection signal="timeout" from="Display/Pedido/Timer" to="Display/Pedido" method="_on_timer_timeout"]

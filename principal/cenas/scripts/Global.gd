@@ -1,8 +1,6 @@
 extends Node
 
-
 enum LANGUAGE {PT, EN}
-
 
 const SaveFile = preload("res://principal/cenas/scripts/SaveFile.gd")
 const SAVE_PATH = "res://principal/saves/"
@@ -13,9 +11,6 @@ const SAVE_VARS = ["played_minigames", "minigame_settings", "filter_settings", "
 var save
 
 
-var language = LANGUAGE.PT
-
-
 var current_scene = null
 var current_path = ""
 var transitioning = false
@@ -24,6 +19,7 @@ var call_queued = false
 var queued_method
 var queued_parameters
 
+var language
 
 func _ready():
 	var root = get_tree().get_root()
@@ -33,7 +29,6 @@ func _ready():
 	
 	
 	load_game()
-
 
 func goto_scene_and_call(path, method_name, parameters):
 	call_queued = true
@@ -74,10 +69,6 @@ func restart():
 	goto_scene(current_path)
 
 
-func update_translation(code):
-	language = code
-
-
 # --------------------------------------------------------------------------------------------------
 # SAVE
 # --------------------------------------------------------------------------------------------------
@@ -114,6 +105,10 @@ func load_game():
 	return true
 
 
+func get_modifier_settings():
+	return save.modifier_settings
+
+
 func get_minigame_settings():
 	return save.minigame_settings
 
@@ -122,12 +117,31 @@ func get_filter_settings():
 	return save.filter_settings
 
 
+func get_language():
+	if save.language == -1:
+		match OS.get_locale_language():
+			"pt":
+				set_language(Global.LANGUAGE.PT)
+			"en":
+				set_language(Global.LANGUAGE.EN)
+	return save.language
+
+
+func set_modifier_settings(modifier_settings):
+	save.modifier_settings = modifier_settings
+
+
 func set_minigame_settings(minigame_settings):
 	save.minigame_settings = minigame_settings
 
 
 func set_filter_settings(filter_settings):
 	save.filter_settings = filter_settings
+
+
+func set_language(language):
+	save.language = language
+	save_game()
 
 
 func register_minigame(path):

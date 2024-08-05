@@ -1,0 +1,93 @@
+[gd_scene load_steps=16 format=3 uid="uid://c2h1omei7qn0b"]
+
+[ext_resource type="Texture2D" uid="uid://dcd4773grmog7" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/player.png" id="1_5mntg"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-asteroids/cenas/scripts/player.gd" id="1_mgqdo"]
+[ext_resource type="PackedScene" uid="uid://dealv2l1gdr0h" path="res://microjogos/2024S1/projeto-asteroids/cenas/bullet.tscn" id="2_iw268"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-asteroids/cenas/scripts/spriteplayer.gd" id="4_prepb"]
+[ext_resource type="Texture2D" uid="uid://8p120t3sf7wl" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/explosion_sprites.png" id="5_05mas"]
+[ext_resource type="AudioStream" uid="uid://0tf321pxpcpr" path="res://microjogos/2024S1/projeto-asteroids/recursos/466866__mikee63__enhanced-blaster-2.ogg" id="6_vld3x"]
+[ext_resource type="AudioStream" uid="uid://duxmmq4u5i32u" path="res://microjogos/2024S1/projeto-asteroids/recursos/523091__magnuswaker__shotgun-blast-1.ogg" id="7_wco4p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xov8t"]
+size = Vector2(42, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bykic"]
+atlas = ExtResource("5_05mas")
+region = Rect2(0, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjnib"]
+atlas = ExtResource("5_05mas")
+region = Rect2(300, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lry3h"]
+atlas = ExtResource("5_05mas")
+region = Rect2(0, 300, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2i4j"]
+atlas = ExtResource("5_05mas")
+region = Rect2(300, 300, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olvx6"]
+atlas = ExtResource("5_05mas")
+region = Rect2(0, 600, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vux44"]
+atlas = ExtResource("5_05mas")
+region = Rect2(300, 600, 300, 300)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4rav7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bykic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjnib")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lry3h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2i4j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olvx6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vux44")
+}],
+"loop": false,
+"name": &"new_animation",
+"speed": 7.0
+}]
+
+[node name="Base" type="Node2D"]
+
+[node name="Player" type="Area2D" parent="."]
+script = ExtResource("1_mgqdo")
+Bullet = ExtResource("2_iw268")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_xov8t")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+position = Vector2(16, -8)
+texture = ExtResource("1_5mntg")
+script = ExtResource("4_prepb")
+
+[node name="Muzzle" type="Marker2D" parent="Player"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+sprite_frames = SubResource("SpriteFrames_4rav7")
+animation = &"new_animation"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource("6_vld3x")
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource("7_wco4p")
+
+[connection signal="body_entered" from="Player" to="Player/Sprite2D" method="_on_player_body_entered"]
+[connection signal="dead" from="Player/Sprite2D" to="Player" method="_on_player_died"]
+[connection signal="animation_finished" from="Player/AnimatedSprite2D" to="Player" method="_on_animated_sprite_2d_animation_finished" flags=6]

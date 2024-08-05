@@ -1,0 +1,13 @@
+TODO:
+[]portals in each cardinal direction for changing the theme
+	[]predefined ones in three directions, random button in down direction
+	[]animation for choosing the portal, teleport back to the square before
+[]themes and a sentence, and background:
+	[]rotating fruits: banana, watermelon, orange, "choose all different fruit!"
+		[]same, but only sine rotation with boomerang effect
+	[]gems: icosahedron(red), tetrahedron(blue), cube(green), "select different polyhedra!"
+	[]aminals: cat, lizard, piquirito, "don't repeat the aminals!"
+	[]capitalism: coins (bronze / silver / gold), "accumulate all the monies!"
+	[]communism: scythe, hammer, red, "seize all the means of production!"
+	[]anarchy: all random themes for each cell "yes!!!"
+	[]ideologies: communism(flag), capitalism(gold coin), anarchy (stylized A), "collect all ideologies!"
