@@ -28,7 +28,6 @@ func _ready():
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("PÊNALTI!")
 	
-	randomize()
 	$Gamutos.position[0] = CENTER + randf_range(-AMPLITUDE, AMPLITUDE)
 
 
