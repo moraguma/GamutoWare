@@ -66,6 +66,7 @@ grow_vertical = 2
 scale = Vector2(8.5, 8.5)
 size_flags_horizontal = 6
 size_flags_vertical = 6
+mouse_filter = 2
 stretch = true
 
 [node name="Game" type="SubViewport" parent="Display"]
