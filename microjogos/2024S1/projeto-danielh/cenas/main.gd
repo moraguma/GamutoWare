@@ -11,6 +11,12 @@ signal lose
 const WIDTH = 1920
 const HEIGHT = 1080
 
+const SPAWN_POSITIONS = [
+	Vector2(0, 0),
+	Vector2(96, -592),
+	Vector2(520, -8)
+]
+
 
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES PADRÃO
@@ -18,15 +24,17 @@ const HEIGHT = 1080
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
+	randomize()
 	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
+			NotificationCenter.notify("ESCAPE!")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FACA ALGO!")
+			NotificationCenter.notify("ESCAPE!")
 	$Prision.play("Prision")
 	$Gamuto.play("gamuto")
+	$Player.position = SPAWN_POSITIONS[randi() % len(SPAWN_POSITIONS)]
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
