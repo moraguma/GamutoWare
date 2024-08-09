@@ -30,7 +30,6 @@ func _ready():
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("CONSERTE OS PNGs!")
 	
-	randomize()
 	gmts[randi() % len(gmts)].queue_free()
 	$Ela_e_tao_tudo.play()
 
