@@ -28,7 +28,10 @@ var icon_dict = {}
 var microgame_dict = {}
 
 var total_lives = 3
-var score = 0
+var score = 0 :
+	set(value):
+		score = value
+		Global.difficulty = int((value - (value % 5)) / 5)
 
 var difficulty_level = 0
 var difficulty_slot = 0
