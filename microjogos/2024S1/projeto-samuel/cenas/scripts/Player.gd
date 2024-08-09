@@ -15,9 +15,9 @@ func _physics_process(delta):
 		velocity.x = 0
 		
 	if (Input.is_action_just_pressed("acao") or Input.is_action_just_pressed("cima")) and is_on_floor():
-		velocity.y = -600
+		velocity.y = -750
 
-	velocity.y += 800 * delta
+	velocity.y += 1000 * delta
 	
 	move_and_slide()
 
