@@ -29,7 +29,6 @@ func _ready():
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("FUJA!")
 	
-	randomize()
 	for car in $Policias.get_children():
 		car.position[1] = UP_POS if randi() % 2 == 0 else DOWN_POS
 	
