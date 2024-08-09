@@ -11,6 +11,9 @@ signal lose
 const WIDTH = 1920
 const HEIGHT = 1080
 
+const UP_POS = 854
+const DOWN_POS = 1005
+
 
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES PADRÃO
@@ -25,7 +28,11 @@ func _ready():
 			NotificationCenter.notify("ESCAPE!")
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("FUJA!")
-
+	
+	randomize()
+	for car in $Policias.get_children():
+		car.position[1] = UP_POS if randi() % 2 == 0 else DOWN_POS
+	
 	register_win()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
