@@ -8,7 +8,7 @@
 radius = 238.019
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rrlwn"]
-radius = 1501.11
+radius = 1310.15
 
 [node name="Node2D" type="Node2D"]
 
@@ -40,3 +40,4 @@ stream = ExtResource("3_mtfj0")
 
 [connection signal="area_entered" from="ovelha/hitboxovelha" to="ovelha" method="_on_hitboxovelha_area_entered"]
 [connection signal="area_entered" from="ovelha/sensacao" to="ovelha" method="_on_sensacao_area_entered"]
+[connection signal="area_exited" from="ovelha/sensacao" to="ovelha" method="_on_sensacao_area_exited"]

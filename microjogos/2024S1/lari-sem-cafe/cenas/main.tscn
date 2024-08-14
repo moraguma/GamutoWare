@@ -896,7 +896,7 @@ stream = ExtResource("36_o4vuh")
 [node name="Lari2" type="Node2D" parent="."]
 position = Vector2(2, 0)
 script = ExtResource("17_8a2xr")
-speed = 135
+speed = 130
 metadata/_edit_group_ = true
 
 [node name="Path2D" type="Path2D" parent="Lari2"]

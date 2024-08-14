@@ -52,7 +52,7 @@ func update_label():
 
 func _ready():
 	produtos.shuffle()
-	for i in range(3):
+	for i in range(2):
 		sacola[produtos[i]] = false
 	print(sacola)
 	update_label()

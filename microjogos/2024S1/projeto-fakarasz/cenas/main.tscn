@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=17 format=3 uid="uid://bi0ahd7cv37i6"]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-fakarasz/cenas/scripts/main.gd" id="1_m2u1k"]
 [ext_resource type="Texture2D" uid="uid://di67cocvoahhu" path="res://microjogos/2024S1/projeto-fakarasz/recursos/gol.png" id="1_u0vwt"]
@@ -17,7 +17,10 @@ colors = PackedColorArray(0.261762, 0.544894, 0.150256, 1)
 gradient = SubResource("Gradient_ispyj")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xbn13"]
-radius = 58.675
+radius = 40.5216
+
+[sub_resource type="Animation" id="Animation_wejta"]
+length = 0.001
 
 [sub_resource type="Animation" id="Animation_yg82t"]
 resource_name = "rotation"
@@ -36,9 +39,6 @@ tracks/0/keys = {
 "values": [0.523599, 1.5708, 2.61799, 1.5708, 0.523599, 1.5708, 2.61799]
 }
 
-[sub_resource type="Animation" id="Animation_wejta"]
-length = 0.001
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rgfuy"]
 _data = {
 "RESET": SubResource("Animation_wejta"),
@@ -46,14 +46,11 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y0hhe"]
-radius = 73.0
-height = 530.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iw3vd"]
-size = Vector2(124, 704)
+radius = 58.0
+height = 428.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_47hke"]
-size = Vector2(370, 142)
+size = Vector2(848, 190)
 
 [node name="Main" type="Node2D"]
 position = Vector2(827, 451)
@@ -129,60 +126,40 @@ offset = Vector2(-550, -224)
 libraries = {
 "": SubResource("AnimationLibrary_rgfuy")
 }
-speed_scale = 1.5
+speed_scale = 1.2
 script = ExtResource("4_ftoe5")
 
-[node name="Sprite2D6" type="Sprite2D" parent="."]
-position = Vector2(-173, 4)
-scale = Vector2(3, 3)
-texture = ExtResource("4_3x7q6")
-
-[node name="Sprite2D7" type="Sprite2D" parent="."]
-position = Vector2(12, 4)
-scale = Vector2(3, 3)
-texture = ExtResource("4_3x7q6")
-
-[node name="Sprite2D8" type="Sprite2D" parent="."]
-position = Vector2(197, 4)
-scale = Vector2(3, 3)
-texture = ExtResource("4_3x7q6")
-
 [node name="Gamutos" type="Area2D" parent="."]
-position = Vector2(-474.95, 17)
+position = Vector2(113.05, -47)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Gamutos"]
+position = Vector2(-138.05, -13)
+scale = Vector2(3, 3)
+texture = ExtResource("4_3x7q6")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Gamutos"]
+position = Vector2(-1.05005, -13)
+scale = Vector2(3, 3)
+texture = ExtResource("4_3x7q6")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Gamutos"]
+position = Vector2(135.95, -13)
+scale = Vector2(3, 3)
+texture = ExtResource("4_3x7q6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gamutos"]
-position = Vector2(490.95, -50)
+position = Vector2(-1.05005, -18)
 rotation = 1.57079
 shape = SubResource("CapsuleShape2D_y0hhe")
-
-[node name="Gamutos2" type="Area2D" parent="."]
-position = Vector2(-1156, -199)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamutos2"]
-position = Vector2(267, 87)
-rotation = 0.00872665
-shape = SubResource("RectangleShape2D_iw3vd")
-
-[node name="Gamutos3" type="Area2D" parent="."]
-position = Vector2(-1156, -199)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamutos3"]
-position = Vector2(2060, -9.99988)
-rotation = 2.2602
-shape = SubResource("RectangleShape2D_iw3vd")
 
 [node name="Gol" type="Area2D" parent="."]
 position = Vector2(-1309, -265)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gol"]
-position = Vector2(1674, -101)
+position = Vector2(1452, -77)
 shape = SubResource("RectangleShape2D_47hke")
 
 [connection signal="area_entered" from="Gamutos" to="." method="_on_Gamutos_area_entered"]
 [connection signal="body_shape_entered" from="Gamutos" to="." method="_on_area_2d_body_shape_entered"]
-[connection signal="area_entered" from="Gamutos2" to="." method="_on_Gamutos_area_entered"]
-[connection signal="body_shape_entered" from="Gamutos2" to="." method="_on_area_2d_body_shape_entered"]
-[connection signal="area_entered" from="Gamutos3" to="." method="_on_Gamutos_area_entered"]
-[connection signal="body_shape_entered" from="Gamutos3" to="." method="_on_area_2d_body_shape_entered"]
 [connection signal="area_entered" from="Gol" to="." method="_on_Gol_area_entered"]
 [connection signal="child_entered_tree" from="Gol/CollisionShape2D" to="." method="_on_collision_shape_2d_child_entered_tree"]

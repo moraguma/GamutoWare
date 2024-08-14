@@ -13,6 +13,8 @@ signal lose
 const WIDTH = 1920
 const HEIGHT = 1080
 
+@onready var gmts = [$Gamuto, $Gamuto2, $Gamuto3]
+
 
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES PADRÃO
@@ -27,7 +29,8 @@ func _ready():
 			NotificationCenter.notify("FIX THE PNGs!")
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("CONSERTE OS PNGs!")
-			
+	
+	gmts[randi() % len(gmts)].queue_free()
 	$Ela_e_tao_tudo.play()
 
 
@@ -42,7 +45,7 @@ func _physics_process(delta):
 # como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
 # desde a última chamada desta função. O comando pass não faz nada
 func _process(delta):
-	if vitoria >= 3:
+	if vitoria >= 2:
 		vitoria = 0
 		register_win()
 

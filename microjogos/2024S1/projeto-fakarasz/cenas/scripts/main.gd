@@ -10,6 +10,8 @@ signal lose
 # 16:9
 const WIDTH = 1920
 const HEIGHT = 1080
+const AMPLITUDE = 112
+const CENTER = 113
 
 
 # --------------------------------------------------------------------------------------------------
@@ -22,9 +24,11 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
+			NotificationCenter.notify("PENALTY!")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("PENALTY")
+			NotificationCenter.notify("PÊNALTI!")
+	
+	$Gamutos.position[0] = CENTER + randf_range(-AMPLITUDE, AMPLITUDE)
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
@@ -75,12 +79,15 @@ func register_lose():
 func _on_Gamutos_area_entered(area):
 	area.queue_free()
 	register_lose()
-	NotificationCenter.notify("PERDEU")
 
 	
 func _on_Gol_area_entered(area):
 	area.queue_free()
 	register_win()
-	NotificationCenter.notify("GOOOOLLL")
+	match Global.language:
+		Global.LANGUAGE.EN:
+			NotificationCenter.notify("GOOOOOOOOAL!")
+		Global.LANGUAGE.PT:
+			NotificationCenter.notify("GOOOOOOOL!")
 
 
