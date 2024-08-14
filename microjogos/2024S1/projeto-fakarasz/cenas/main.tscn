@@ -50,7 +50,7 @@ radius = 58.0
 height = 428.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_47hke"]
-size = Vector2(817, 190)
+size = Vector2(848, 190)
 
 [node name="Main" type="Node2D"]
 position = Vector2(827, 451)
@@ -126,11 +126,11 @@ offset = Vector2(-550, -224)
 libraries = {
 "": SubResource("AnimationLibrary_rgfuy")
 }
-speed_scale = 1.5
+speed_scale = 1.2
 script = ExtResource("4_ftoe5")
 
 [node name="Gamutos" type="Area2D" parent="."]
-position = Vector2(113.05, -15)
+position = Vector2(113.05, -47)
 
 [node name="Sprite2D6" type="Sprite2D" parent="Gamutos"]
 position = Vector2(-138.05, -13)
@@ -156,7 +156,7 @@ shape = SubResource("CapsuleShape2D_y0hhe")
 position = Vector2(-1309, -265)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gol"]
-position = Vector2(1450.5, -77)
+position = Vector2(1452, -77)
 shape = SubResource("RectangleShape2D_47hke")
 
 [connection signal="area_entered" from="Gamutos" to="." method="_on_Gamutos_area_entered"]
