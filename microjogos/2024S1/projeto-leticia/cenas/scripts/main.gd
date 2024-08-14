@@ -29,8 +29,22 @@ func _ready():
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("FUJA!")
 	
-	for car in $Policias.get_children():
-		car.position[1] = UP_POS if randi() % 2 == 0 else DOWN_POS
+	randomize()
+	var gone_up = false
+	var gone_down = false
+	var cars = $Policias.get_children()
+	for car in cars:
+		var r = randi() % 2 == 0
+		if r:
+			gone_up = true
+		else:
+			gone_down = true
+		car.position[1] = UP_POS if r else DOWN_POS
+	
+	if not gone_down:
+		cars[1].position[1] = DOWN_POS
+	elif not gone_up:
+		cars[1].position[1] = UP_POS
 	
 	register_win()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
