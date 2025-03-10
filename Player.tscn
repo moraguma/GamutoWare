@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3sl5fdttf5ub"]
+
+[ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="1_h8oak"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qa6tp"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_qa6tp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_h8oak")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -19.0
+offset_top = -15.0
+offset_right = 21.0
+offset_bottom = 25.0
