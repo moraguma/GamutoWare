@@ -1,3 +1,4 @@
 /.godot
 /.import
 /principal/saves/save.tres
+*.uid
