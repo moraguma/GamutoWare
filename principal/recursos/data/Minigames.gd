@@ -1,7 +1,8 @@
 extends Resource
 
 const packs = [
-	"res://principal/recursos/data/packs/moraguma.tres"
+	"res://principal/recursos/data/packs/moraguma.tres",
+	"res://principal/recursos/data/packs/godotware.tres"
 ]
 
 const minigame_packs = {
