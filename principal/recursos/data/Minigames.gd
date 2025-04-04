@@ -1,5 +1,8 @@
 extends Resource
 
+const packs = [
+	"res://principal/recursos/data/packs/moraguma.tres"
+]
 
 const minigame_packs = {
   "class_of_2024": ["res://microjogos/2024S1/projeto-eco-g/cenas/main.tscn", "res://microjogos/2024S1/projeto-andre/cenas/main.tscn", "res://microjogos/2024S1/jucamm/cenas/main.tscn", "res://microjogos/2024S1/projeto-asteroids/cenas/main.tscn", "res://microjogos/2024S1/projeto-matheusSC/cenas/main.tscn", "res://microjogos/2024S1/projeto-FastFood/cenas/main.tscn", "res://microjogos/2024S1/projeto-naomi/cenas/main.tscn", "res://microjogos/2024S1/nyan-thulu/cenas/main.tscn", "res://microjogos/2024S1/projeto-felipe-silva/cenas/main.tscn", "res://microjogos/2024S1/projeto-estrela/cenas/main.tscn", "res://microjogos/2024S1/projeto-cores/cenas/main.tscn", "res://microjogos/2024S1/Projeto-Yago/cenas/main.tscn", "res://microjogos/2024S1/ShootGamuto/cenas/main.tscn", "res://microjogos/2024S1/lari-sem-cafe/cenas/main.tscn", "res://microjogos/2024S1/gamufit/cenas/main.tscn", "res://microjogos/2024S1/projeto-guilherme/cenas/main.tscn", "res://microjogos/2024S1/projeto-danielh/cenas/main.tscn", "res://microjogos/2024S1/projeto_felipe_onorio/cenas/main.tscn", "res://microjogos/2024S1/projeto-jantinha/cenas/main.tscn", "res://microjogos/2024S1/projeto-fakarasz/cenas/main.tscn", "res://microjogos/2024S1/projeto-do-FelipeG/cenas/main.tscn", "res://microjogos/2024S1/projeto-samuel/cenas/main.tscn", "res://microjogos/2024S1/projeto-leticia/cenas/main.tscn"],
