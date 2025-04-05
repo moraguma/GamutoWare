@@ -1,0 +1,98 @@
+[gd_scene load_steps=22 format=3 uid="uid://cg5clbaowdm38"]
+
+[ext_resource type="Texture2D" uid="uid://dyv1nqpjgsr7l" path="res://microjogos/2025S1/project_so_ze/white.png" id="1_hkndl"]
+[ext_resource type="Script" uid="uid://f7qetnfu0gep" path="res://microjogos/2025S1/project_so_ze/cenas/scripts/player.gd" id="1_lj4lc"]
+[ext_resource type="Texture2D" uid="uid://cbuyiq54g673s" path="res://microjogos/2025S1/project_so_ze/recursos/imagens/sprite_test/MAGIC_GIRL_GAME_2.png" id="2_lj4lc"]
+[ext_resource type="Texture2D" uid="uid://gl7ecccbypfu" path="res://microjogos/2025S1/project_so_ze/recursos/imagens/sprite_test/MAGIC_GIRL_GAME_1.png" id="3_i26xa"]
+[ext_resource type="Script" uid="uid://droalcluk51ya" path="res://microjogos/2025S1/project_so_ze/cenas/scripts/head.gd" id="3_lj4lc"]
+[ext_resource type="Script" uid="uid://bx6ccwuvx2yr3" path="res://microjogos/2025S1/project_so_ze/cenas/scripts/body.gd" id="3_q4xny"]
+[ext_resource type="Texture2D" uid="uid://c7an8frts0nls" path="res://microjogos/2025S1/project_so_ze/recursos/imagens/sprite_test/MAGIC_GIRL_GAME_3.png" id="4_e8560"]
+[ext_resource type="Script" uid="uid://cmyfvtnc0td6i" path="res://microjogos/2025S1/project_so_ze/cenas/scripts/right_arm.gd" id="5_0mhtu"]
+[ext_resource type="Texture2D" uid="uid://b3a4qw8km36s6" path="res://microjogos/2025S1/project_so_ze/recursos/imagens/sprite_test/MAGIC_GIRL_GAME_4.png" id="5_t2wj6"]
+[ext_resource type="Script" uid="uid://c4l4jf2shouu8" path="res://microjogos/2025S1/project_so_ze/cenas/scripts/left_arm.gd" id="6_263ix"]
+[ext_resource type="Texture2D" uid="uid://qbvfkhhjtt52" path="res://microjogos/2025S1/project_so_ze/recursos/imagens/sprite_test/MAGIC_GIRL_GAME_5.png" id="6_q4xny"]
+[ext_resource type="Texture2D" uid="uid://dgxoxj2shqn3r" path="res://microjogos/2025S1/project_so_ze/recursos/imagens/sprite_test/MAGIC_GIRL_GAME_6.png" id="7_0mhtu"]
+[ext_resource type="Script" uid="uid://dbcpjx5vowyu4" path="res://microjogos/2025S1/project_so_ze/cenas/scripts/legs.gd" id="7_ksfxt"]
+[ext_resource type="Texture2D" uid="uid://dr4estxehijgp" path="res://microjogos/2025S1/project_so_ze/recursos/imagens/sprite_test/MAGIC_GIRL_GAME_7.png" id="8_263ix"]
+[ext_resource type="Texture2D" uid="uid://c2334teabv0g2" path="res://microjogos/2025S1/project_so_ze/recursos/imagens/sprite_test/MAGIC_GIRL_GAME_8.png" id="9_ksfxt"]
+[ext_resource type="Texture2D" uid="uid://c6nunt3jhl5b2" path="res://microjogos/2025S1/project_so_ze/recursos/imagens/sprite_test/MAGIC_GIRL_GAME_9.png" id="10_4lmh1"]
+[ext_resource type="Texture2D" uid="uid://dckbjun3pvglh" path="res://microjogos/2025S1/project_so_ze/recursos/imagens/sprite_test/MAGIC_GIRL_GAME_10.png" id="11_5bdw3"]
+[ext_resource type="Texture2D" uid="uid://ckii70tjcig2q" path="res://microjogos/2025S1/project_so_ze/recursos/imagens/sprite_test/MAGIC_GIRL_GAME_11.png" id="12_228w0"]
+[ext_resource type="Texture2D" uid="uid://de5h4bccs41td" path="res://microjogos/2025S1/project_so_ze/recursos/imagens/sprite_test/MAGIC_GIRL_GAME_12.png" id="13_80j82"]
+[ext_resource type="Texture2D" uid="uid://cbco6yfhtshj0" path="res://microjogos/2025S1/project_so_ze/recursos/imagens/sprite_test/MAGIC_GIRL_GAME_13.png" id="14_yb64s"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cek2s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_i26xa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_lj4lc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_e8560")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_t2wj6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_q4xny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0mhtu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_263ix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ksfxt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4lmh1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5bdw3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_228w0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_80j82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_yb64s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_lj4lc")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(948, 555)
+scale = Vector2(4.51111, 2.65333)
+texture = ExtResource("1_hkndl")
+
+[node name="Body" type="Sprite2D" parent="."]
+script = ExtResource("3_q4xny")
+
+[node name="Head" type="Sprite2D" parent="."]
+script = ExtResource("3_lj4lc")
+
+[node name="RightArm" type="Sprite2D" parent="."]
+script = ExtResource("5_0mhtu")
+
+[node name="LeftArm" type="Sprite2D" parent="."]
+script = ExtResource("6_263ix")
+
+[node name="Legs" type="Sprite2D" parent="."]
+script = ExtResource("7_ksfxt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 546)
+sprite_frames = SubResource("SpriteFrames_cek2s")
+
+[node name="Timer" type="Timer" parent="."]

@@ -1,13 +1,21 @@
-[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=2 format=3 uid="uid://cxdumqr3o4e3m"]
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://cxdumqr3o4e3m"]
 
 [ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_58ijf"]
+[ext_resource type="Texture2D" uid="uid://dvghkheomem8e" path="res://microjogos/2025S1/project_so_ze/capa.png" id="1_r0xc8"]
+[ext_resource type="PackedScene" uid="uid://bkd4yt5yljwiu" path="res://microjogos/2025S1/project_so_ze/cenas/main.tscn" id="2_vob5c"]
 
 [resource]
 script = ExtResource("1_58ijf")
+cover = ExtResource("1_r0xc8")
 title_pt = &"TÍTULO DO JOGO"
 title_en = &"GAME TITLE"
-credits_pt = "Créditos do jogo"
-credits_en = "Game crédits"
+credits_pt = "Créditos do jogo
+José Theodoro
+Sofia Adelina"
+credits_en = "Game credits
+José Theodoro
+Sofia Adelina"
 start_message_pt = &"FAÇA ALGO!"
 start_message_en = &"DO SOMETHING!"
+main_scene = ExtResource("2_vob5c")
 difficulty = 0
