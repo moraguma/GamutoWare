@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://di12nlfr1idjr"]
+
+[ext_resource type="Script" uid="uid://caopud87pssfg" path="res://microjogos/2022S1/race/cenas/scripts/main.gd" id="1_ysg2t"]
+
+[node name="SeuJogo" type="Node2D"]
+script = ExtResource("1_ysg2t")
