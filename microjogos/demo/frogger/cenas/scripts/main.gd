@@ -26,11 +26,6 @@ var turns = 0
 
 
 func _ready():
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("CROSS THE ROAD!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("ATRAVESSE A RUA!")
 	
 	# Popula a rua com carros igualmente espaçados
 	var x_pos = -STEP_SIZE / 2

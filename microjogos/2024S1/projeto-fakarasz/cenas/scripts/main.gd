@@ -20,13 +20,6 @@ const CENTER = 113
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
-	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
-	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("PENALTY!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("PÊNALTI!")
 	
 	$Gamutos.position[0] = CENTER + randf_range(-AMPLITUDE, AMPLITUDE)
 
@@ -84,10 +77,5 @@ func _on_Gamutos_area_entered(area):
 func _on_Gol_area_entered(area):
 	area.queue_free()
 	register_win()
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("GOOOOOOOOAL!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("GOOOOOOOL!")
 
 

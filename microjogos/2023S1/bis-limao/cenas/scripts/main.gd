@@ -102,9 +102,4 @@ func register_lose(reason: String):
 		return
 	emit_signal("lose")
 	alreadyLost = true
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("Perdeu :/")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("You lost :/")
 	get_node("Gamuto").loseAnim(reason)
