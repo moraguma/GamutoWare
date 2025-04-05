@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://v8jttrvrrsx5"]
+[gd_scene load_steps=8 format=3 uid="uid://v8jttrvrrsx5"]
 
 [ext_resource type="Texture2D" uid="uid://drf3l66xobgo8" path="res://microjogos/2025S1/projeto-plataformer/recursos/imagens/character.png" id="1_qwkws"]
 
@@ -75,6 +75,9 @@ _data = {
 &"run": SubResource("Animation_qwkws")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qwkws"]
+size = Vector2(20, 36)
+
 [node name="Personagem" type="CharacterBody2D"]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -88,3 +91,7 @@ texture_filter = 1
 texture = ExtResource("1_qwkws")
 hframes = 8
 vframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_qwkws")
