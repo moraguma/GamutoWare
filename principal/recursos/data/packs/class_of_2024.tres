@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="MicrogamePack" load_steps=12 format=3 uid="uid://b807t7ca7dpsc"]
+
+[ext_resource type="Resource" uid="uid://mq4hfu5iury" path="res://microjogos/2024S1/gamufit/microgame.tres" id="1_e6uyl"]
+[ext_resource type="Script" path="res://principal/recursos/data/MicrogamePack.gd" id="1_vkav3"]
+[ext_resource type="Resource" uid="uid://chhpm5vky1rjl" path="res://microjogos/2024S1/jucamm/microgame.tres" id="2_3ia0r"]
+[ext_resource type="Resource" uid="uid://cdhgtpk1ysx8c" path="res://microjogos/2024S1/lari-sem-cafe/microgame.tres" id="3_j1wcf"]
+[ext_resource type="Resource" uid="uid://dl0i4gjn5ctrv" path="res://microjogos/2024S1/nyan-thulu/microgame.tres" id="4_4seuy"]
+[ext_resource type="Resource" uid="uid://cy3e18xu32ssy" path="res://microjogos/2024S1/projeto-andre/microgame.tres" id="5_ea52p"]
+[ext_resource type="Resource" uid="uid://d02dd7lf2bibb" path="res://microjogos/2024S1/projeto-asteroids/microgame.tres" id="6_7gh2d"]
+[ext_resource type="Resource" uid="uid://dne3qe7n5sm2k" path="res://microjogos/2024S1/projeto-cores/microgame.tres" id="7_a18t2"]
+[ext_resource type="Resource" uid="uid://c05ut3c8o7ooj" path="res://microjogos/2024S1/projeto-danielh/microgame.tres" id="8_j6ccu"]
+[ext_resource type="Resource" uid="uid://2vr1kv6rp5y3" path="res://microjogos/2024S1/projeto-do-FelipeG/microgame.tres" id="9_qmm7k"]
+[ext_resource type="Resource" uid="uid://byfaf8d05oeau" path="res://microjogos/2024S1/projeto-eco-g/microgame.tres" id="10_xujri"]
+
+[resource]
+script = ExtResource("1_vkav3")
+pack_name = &"Class of 2024"
+microgames = Array[Resource("res://principal/microgame_asset.gd")]([ExtResource("1_e6uyl"), ExtResource("2_3ia0r"), ExtResource("3_j1wcf"), ExtResource("4_4seuy"), ExtResource("5_ea52p"), ExtResource("6_7gh2d"), ExtResource("7_a18t2"), ExtResource("8_j6ccu"), ExtResource("9_qmm7k"), ExtResource("10_xujri"), null, null, null, null, null, null, null, null, null, null, null, null, null])

@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://cy3e18xu32ssy"]
+
+[ext_resource type="Texture2D" uid="uid://bkvcg7ivmjl0d" path="res://microjogos/2024S1/projeto-andre/capa.png" id="1_4r1yp"]
+[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_uobfu"]
+[ext_resource type="PackedScene" uid="uid://bi0ahd7cv37i6" path="res://microjogos/2024S1/projeto-andre/cenas/main.tscn" id="2_8riau"]
+
+[resource]
+script = ExtResource("1_uobfu")
+cover = ExtResource("1_4r1yp")
+title_pt = &"Faça ou passa!"
+title_en = &"Stand or pass!"
+credits_pt = "Criado por: André Amadeu Satorres
+
+Adivinhe se sua carta vence ou não o jogo!
+
+SFX de Kenney.nl
+
+Baseado em fodinha. Você pode ler mais sobre as regras do jogo em https://ludopedia.com.br/jogo/fodinha"
+credits_en = "Made by: André Amadeu Satorres
+
+Guess whether or not your card wins the game!
+
+SFX from Kenney.nl
+
+Based on fodinha. You can read more about the rules of the game in https://ludopedia.com.br/jogo/fodinha"
+start_message_pt = &"<- FAÇA OU PASSA! ->"
+start_message_en = &"<- STAND OR PASS! ->"
+main_scene = ExtResource("2_8riau")
+difficulty = 0
