@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://20353fthsy75"]
+
+[node name="Background" type="Node2D"]
+modulate = Color(0.415686, 0.27451, 0.184314, 1)
+self_modulate = Color(0.415686, 0.27451, 0.184314, 1)
+z_index = -1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.415686, 0.27451, 0.184314, 1)
+self_modulate = Color(0.415686, 0.27451, 0.184314, 1)
+
+[node name="WallTile" type="StaticBody2D" parent="."]
+position = Vector2(190, 190)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WallTile"]
+position = Vector2(-142, -83)
+scale = Vector2(1.6875, 1.75)
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 10, 0, 10)
+
+[node name="Sprite2D" type="Sprite2D" parent="WallTile"]
+
+[node name="GroundTile" type="StaticBody2D" parent="."]
+position = Vector2(190, 190)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GroundTile"]
+position = Vector2(-142, -83)
+scale = Vector2(1.6875, 1.75)
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 10, 0, 10)
+
+[node name="Sprite2D" type="Sprite2D" parent="GroundTile"]

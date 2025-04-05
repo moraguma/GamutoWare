@@ -1,4 +1,17 @@
-[gd_scene format=3 uid="uid://bmgphy6yq6iwe"]
+[gd_scene load_steps=3 format=3 uid="uid://stlqu31l16x3"]
 
-[node name="Main" type="Node2D"]
-texture_filter = 1
+[ext_resource type="PackedScene" uid="uid://20353fthsy75" path="res://microjogos/2025S1/Bomb_Zone/cenas/Background.tscn" id="1_e8j42"]
+[ext_resource type="PackedScene" uid="uid://b4a5d6str4bhj" path="res://microjogos/2025S1/Bomb_Zone/cenas/scripts/character_body_2d.tscn" id="2_blibq"]
+
+[node name="main" type="Node2D"]
+physics_interpolation_mode = 2
+position = Vector2(-32, -16)
+
+[node name="Background" parent="." instance=ExtResource("1_e8j42")]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_blibq")]
+position = Vector2(24, 16)
+
+[node name="Bomb" type="StaticBody2D" parent="."]
+
+[node name="Explosion" type="Area2D" parent="."]
