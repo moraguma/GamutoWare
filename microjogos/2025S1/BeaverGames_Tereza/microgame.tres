@@ -6,7 +6,8 @@
 script = ExtResource("1_ievdr")
 title_pt = &"TÍTULO DO JOGO"
 title_en = &"GAME TITLE"
-credits_pt = "Créditos do jogo"
+credits_pt = "Créditos do jogo
+Tereza"
 credits_en = "Game crédits"
 start_message_pt = &"FAÇA ALGO!"
 start_message_en = &"DO SOMETHING!"
