@@ -29,14 +29,6 @@ func _ready():
 	$Bat.position.y  += rng.randf_range(-y_range, y_range)
 	$Bat2.position.y  += rng.randf_range(-y_range, y_range)
 
-	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
-	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("GET THE STAR")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("PEGUE A ESTRELA")
-
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
 # a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde

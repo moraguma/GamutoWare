@@ -29,11 +29,6 @@ var venceu = false
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("ARRANGE")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("ORGANIZE")
 	
 	ambient.play()
 	

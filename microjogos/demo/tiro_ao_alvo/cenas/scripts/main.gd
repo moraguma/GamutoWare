@@ -13,14 +13,6 @@ const TOTAL_TARGETS = 4
 var hits = 0
 
 func _ready():
-	# No inicio, verifica a linguagem do jogo e mostra uma mensagem de início 
-	
-	match Global.language:
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("ACERTE OS ALVOS!")
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("HIT THE TARGETS!")
-	
 	randomize()
 	
 	# Cria um total de [TOTAL_TARGETS] alvos

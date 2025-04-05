@@ -29,11 +29,6 @@ var active = true
 
 
 func _ready():
-	match Global.language:
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("CONQUISTE!")
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("CHARM!")
 	
 	animation_player.play("idle")
 	

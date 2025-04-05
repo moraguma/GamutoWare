@@ -61,11 +61,11 @@ func _process(delta):
 		$"../../Display/Pedido".texture=ResourceLoader.load("res://microjogos/2024S1/projeto-FastFood/Sprites/Lanches/Refri.png")
 	if acertos >= 3:
 		if !jogo_terminado:
-			match Global.language:
-				Global.LANGUAGE.EN:
-					NotificationCenter.notify("YOU WIN!")
-				Global.LANGUAGE.PT:
-					NotificationCenter.notify("VOCÊ GANHOU!")
+			#match Global.language:
+			#	Global.LANGUAGE.EN:
+			#		NotificationCenter.notify("YOU WIN!")
+			#	Global.LANGUAGE.PT:
+			#		NotificationCenter.notify("VOCÊ GANHOU!")
 			# Não funciona por algum motivo. A popup de "win" aparece, mas uma vida é perdida.
 			# Talvez seja gerado um signal novo com o mesmo nome mas identificador interno diferente? 
 			#emit_signal("win") 

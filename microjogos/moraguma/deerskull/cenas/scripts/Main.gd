@@ -24,11 +24,6 @@ const MAX_SPREAD = PI/3
 
 
 func _ready():
-	match Global.language:
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("DESVIE!")
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DODGE!")
 	
 	music.play()
 	

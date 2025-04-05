@@ -47,4 +47,3 @@ func start_deletion(go_right: bool):
 	deleting = true
 	modulate.a = 0.75
 	if not go_right: horizontal_speed *= -1
-

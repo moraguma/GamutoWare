@@ -31,13 +31,6 @@ var morreu = false
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
-	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
-	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DEFEND YOUR SHIP!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("DEFENDA SUA NAVE!")
 	
 	var y = START_Y
 	for inimigo in inimigos:

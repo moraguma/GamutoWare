@@ -11,11 +11,6 @@ var winnable = true
 var losable = true
 
 func _ready():
-	match Global.language:
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("VENCA A CORRIDA!")
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("WIN THE RACE!")
 	
 	randomize()
 

@@ -21,12 +21,6 @@ func _ready():
 	timer.start(0.5)
 	
 	register_win()
-	
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("Survive!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("Sobreviva!")
 
 	
 	

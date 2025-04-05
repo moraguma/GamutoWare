@@ -21,11 +21,6 @@ var base_node_name: String = "status_checker/area_cell_"
 @onready var status_checker: Node2D = $status_checker
 
 func _ready():
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("COMPLETE!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("COMPLETE!")
 	
 	var rand1 = randi() % 8
 	var rand2 = randi() % 8

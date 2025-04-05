@@ -19,11 +19,7 @@ const HEIGHT = 1080
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("BUY!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("COMPRE!")
+	pass
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -31,20 +27,20 @@ func _process(delta):
 
 	
 func register_win():
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("WIN!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("COMPRA COMPLETA!")
+	#match Global.language:
+	#	Global.LANGUAGE.EN:
+	#		NotificationCenter.notify("WIN!")
+	#	Global.LANGUAGE.PT:
+	#		NotificationCenter.notify("COMPRA COMPLETA!")
 	emit_signal("win")
 	remove_child($Player)
 
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("LOSE!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("PERDEU PLAYBOY!")
+	#match Global.language:
+	#	Global.LANGUAGE.EN:
+	#		NotificationCenter.notify("LOSE!")
+	#	Global.LANGUAGE.PT:
+	#		NotificationCenter.notify("PERDEU PLAYBOY!")
 	emit_signal("lose")
 	remove_child($Player)

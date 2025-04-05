@@ -18,13 +18,7 @@ const HEIGHT = 270
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
-	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
-	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("FOLLOW!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("SIGA!")
+	pass
 
 # --------------------------------------------------------------------------------------------------
 # CONDIÇÕES DE VITÓRIA
