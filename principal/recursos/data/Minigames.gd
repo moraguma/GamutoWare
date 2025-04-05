@@ -1,23 +1,37 @@
 extends Resource
 
+class_name Minigames
+
 const minigame_packs = {
-	"class_of_2024" : "res://principal/recursos/data/packs/class_of_2024.tres",
-	"class_of_2023" : "res://principal/recursos/data/packs/class_of_2023.tres",
-	"class_of_2022" : "res://principal/recursos/data/packs/class_of_2022.tres",
-	"demo" : "res://principal/recursos/data/packs/demo.tres",
-	"godotware": "res://principal/recursos/data/packs/godotware.tres",
-	"moraguma":  "res://principal/recursos/data/packs/moraguma.tres"
+	"class_of_2024" : preload("res://principal/recursos/data/packs/class_of_2024.tres"),
+	"class_of_2023" : preload("res://principal/recursos/data/packs/class_of_2023.tres"),
+	"class_of_2022" : preload("res://principal/recursos/data/packs/class_of_2022.tres"),
+	"demo" : preload("res://principal/recursos/data/packs/demo.tres"),
+	"godotware": preload("res://principal/recursos/data/packs/godotware.tres"),
+	"moraguma":  preload("res://principal/recursos/data/packs/moraguma.tres")
 }
 
 # Removed from Moraguma
 # "res://microjogos/moraguma/whale_eater/cenas/Main.tscn"
 
 const filters = {
-	"no_gore": "res://principal/recursos/data/filters/no_gore.tres",
-	"no_luck": "res://principal/recursos/data/filters/no_luck.tres"
+	"no_gore": preload("res://principal/recursos/data/filters/no_gore.tres"),
+	"no_luck": preload("res://principal/recursos/data/filters/no_luck.tres")
 }
 
-const minigame_data = {
+static var pack_data = minigame_packs.values() + filters.values()
+static var _minigame_data = []
+static var minigame_data: Array:
+	get:
+		if _minigame_data.is_empty():
+			var data = []
+			for pack in pack_data:
+				data.append_array(pack.microgames)
+			
+			_minigame_data = data
+		return _minigame_data
+
+const minigame_data_old = {
 	"gamutoware": {"credits": "res://principal/creditos.gd", "cover": "res://principal/recursos/sprites/capagmtware.png", "difficulty": 0},
 	"res://microjogos/2024S1/projeto-leticia/cenas/main.tscn": {"credits": "res://microjogos/2024S1/projeto-leticia/creditos.gd", "cover": "res://microjogos/2024S1/projeto-leticia/capa.png", "difficulty": 0},
 	"res://microjogos/2024S1/projeto-samuel/cenas/main.tscn": {"credits": "res://microjogos/2024S1/projeto-samuel/creditos.gd", "cover": "res://microjogos/2024S1/projeto-samuel/capa.png", "difficulty": 0},

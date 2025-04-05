@@ -1,10 +1,12 @@
-[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=3 format=3 uid="uid://ccyjotwrv4pgd"]
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://ccyjotwrv4pgd"]
 
 [ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_6o3uj"]
+[ext_resource type="Texture2D" uid="uid://c1eou22qdwk2q" path="res://microjogos/2022S1/baleia/capa.png" id="1_latwk"]
 [ext_resource type="PackedScene" uid="uid://cvldogolyh14f" path="res://microjogos/2022S1/baleia/cenas/baleiaGame.tscn" id="1_t6cqj"]
 
 [resource]
 script = ExtResource("1_6o3uj")
+cover = ExtResource("1_latwk")
 title_pt = &"Baleia"
 title_en = &"Whale"
 credits_pt = "Criado por: Lucca Fuke Fachinetti

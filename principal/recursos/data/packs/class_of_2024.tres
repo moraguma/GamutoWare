@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="MicrogamePack" load_steps=24 format=3 uid="uid://b807t7ca7dpsc"]
+[gd_resource type="Resource" script_class="MicrogamePack" load_steps=25 format=3 uid="uid://b807t7ca7dpsc"]
 
 [ext_resource type="Resource" uid="uid://mq4hfu5iury" path="res://microjogos/2024S1/gamufit/microgame.tres" id="1_e6uyl"]
 [ext_resource type="Script" path="res://principal/recursos/data/MicrogamePack.gd" id="1_vkav3"]
 [ext_resource type="Resource" uid="uid://chhpm5vky1rjl" path="res://microjogos/2024S1/jucamm/microgame.tres" id="2_3ia0r"]
 [ext_resource type="Resource" uid="uid://cdhgtpk1ysx8c" path="res://microjogos/2024S1/lari-sem-cafe/microgame.tres" id="3_j1wcf"]
 [ext_resource type="Resource" uid="uid://dl0i4gjn5ctrv" path="res://microjogos/2024S1/nyan-thulu/microgame.tres" id="4_4seuy"]
+[ext_resource type="Resource" uid="uid://cy3e18xu32ssy" path="res://microjogos/2024S1/projeto-andre/microgame.tres" id="5_ea52p"]
 [ext_resource type="Resource" uid="uid://d02dd7lf2bibb" path="res://microjogos/2024S1/projeto-asteroids/microgame.tres" id="6_7gh2d"]
 [ext_resource type="Resource" uid="uid://dne3qe7n5sm2k" path="res://microjogos/2024S1/projeto-cores/microgame.tres" id="7_a18t2"]
 [ext_resource type="Resource" uid="uid://c05ut3c8o7ooj" path="res://microjogos/2024S1/projeto-danielh/microgame.tres" id="8_j6ccu"]
@@ -27,4 +28,4 @@
 [resource]
 script = ExtResource("1_vkav3")
 pack_name = &"Class of 2024"
-microgames = Array[Resource("res://principal/microgame_asset.gd")]([ExtResource("1_e6uyl"), ExtResource("2_3ia0r"), ExtResource("3_j1wcf"), ExtResource("4_4seuy"), ExtResource("6_7gh2d"), ExtResource("7_a18t2"), ExtResource("8_j6ccu"), ExtResource("9_qmm7k"), ExtResource("10_xujri"), ExtResource("11_bygbd"), ExtResource("12_hpcrb"), ExtResource("13_qebww"), ExtResource("14_plspg"), ExtResource("15_aaipd"), ExtResource("16_0u8tk"), ExtResource("17_uvyas"), ExtResource("18_uc1bj"), ExtResource("19_dfb3f"), ExtResource("20_lgru5"), ExtResource("21_coska"), ExtResource("22_th4lo"), ExtResource("23_i0spc")])
+microgames = Array[Resource("res://principal/microgame_asset.gd")]([ExtResource("1_e6uyl"), ExtResource("2_3ia0r"), ExtResource("3_j1wcf"), ExtResource("4_4seuy"), ExtResource("6_7gh2d"), ExtResource("7_a18t2"), ExtResource("8_j6ccu"), ExtResource("9_qmm7k"), ExtResource("10_xujri"), ExtResource("11_bygbd"), ExtResource("12_hpcrb"), ExtResource("13_qebww"), ExtResource("14_plspg"), ExtResource("15_aaipd"), ExtResource("16_0u8tk"), ExtResource("17_uvyas"), ExtResource("18_uc1bj"), ExtResource("19_dfb3f"), ExtResource("20_lgru5"), ExtResource("21_coska"), ExtResource("22_th4lo"), ExtResource("23_i0spc"), ExtResource("5_ea52p")])

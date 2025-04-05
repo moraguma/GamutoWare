@@ -35,7 +35,7 @@ func load_cover(cover):
 
 
 func load_button(active, path, to_call):
-	can_play = path != "gamutoware"
+	can_play = path.resource_path != "res://principal/recursos/data/gamutoware-asset.tres"
 	
 	load_button_ref()
 	

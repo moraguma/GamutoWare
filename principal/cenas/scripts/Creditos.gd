@@ -16,8 +16,6 @@ var last_pressed
 var aim_pos = MINIGAMES_POS
 var playing = false
 
-
-@onready var minigame_data = preload("res://principal/recursos/data/Minigames.gd").new().minigame_data
 @onready var credits = $Credits
 @onready var minigames_container = $Credits/Minigames/VBoxContainer/Minigames/GridContainer
 @onready var menu_button = $Credits/Minigames/VBoxContainer/Menu
@@ -30,13 +28,22 @@ var playing = false
 func _ready():
 	minigame_display.set_mask_center(Vector2(960, 540))
 	
-	for minigame in minigame_data:
+	var minigame_list = [
+		load("res://principal/recursos/data/gamutoware-asset.tres") # GamutoWare Microgame Asset
+	]
+	for pack in Minigames.minigame_packs.values():
+		minigame_list.append_array(pack.microgames)
+	
+	for filter in Minigames.filters.values():
+		minigame_list.append_array(filter.microgames)
+	
+	for minigame in minigame_list:
 		var new_cover_button = CoverButton.instantiate()
-		var active = Global.check_minigame(minigame)
+		var active = minigame.resource_path == "res://principal/recursos/data/gamutoware-asset.tres" or Global.check_minigame(minigame.resource_path)
 		new_cover_button.load_button(active, minigame, self)
 		
 		if active:
-			new_cover_button.load_cover(load(minigame_data[minigame]["cover"]))
+			new_cover_button.load_cover(minigame.cover)
 		else: 
 			new_cover_button.load_cover(LOCKED_COVER)
 			new_cover_button.get_node("Shadow").hide()
@@ -76,7 +83,7 @@ func _process(delta):
 func detail(path, button):
 	if not playing:
 		if last_pressed == button: # Play microgame
-			if path == "gamutoware":
+			if path.resource_path == "res://principal/recursos/data/gamutoware-asset.tres":
 				fail_detail()
 			else:
 				playing = true
@@ -101,7 +108,7 @@ func detail(path, button):
 			
 			SoundController.play_sfx("click")
 			
-			var credits_data = load(minigame_data[path]["credits"]).new()
+			var credits_data = path
 			
 			var title
 			var body

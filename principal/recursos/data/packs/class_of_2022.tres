@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="MicrogamePack" load_steps=4 format=3 uid="uid://bjo7j82c12e42"]
+[gd_resource type="Resource" script_class="MicrogamePack" load_steps=5 format=3 uid="uid://bjo7j82c12e42"]
 
+[ext_resource type="Resource" uid="uid://ccyjotwrv4pgd" path="res://microjogos/2022S1/baleia/microgame.tres" id="1_afjv1"]
 [ext_resource type="Script" path="res://principal/recursos/data/MicrogamePack.gd" id="1_cal65"]
 [ext_resource type="Resource" uid="uid://dqhtycp2n0rnb" path="res://microjogos/2022S1/gamuturai/microgame.tres" id="2_dllfb"]
 [ext_resource type="Resource" uid="uid://m81lsgm2rhpl" path="res://microjogos/2022S1/race/microgame.tres" id="3_yrcs8"]
@@ -7,4 +8,4 @@
 [resource]
 script = ExtResource("1_cal65")
 pack_name = &"Class of 2022"
-microgames = Array[Resource("res://principal/microgame_asset.gd")]([ExtResource("2_dllfb"), ExtResource("3_yrcs8")])
+microgames = Array[Resource("res://principal/microgame_asset.gd")]([ExtResource("2_dllfb"), ExtResource("3_yrcs8"), ExtResource("1_afjv1")])

@@ -3,8 +3,6 @@ extends "res://principal/cenas/scripts/ToTitle.gd"
 const GAME_PATH = "res://principal/cenas/Jogo.tscn"
 const MinigameButton = preload("res://principal/cenas/MinigameButton.tscn")
 
-@onready var minigame_data = preload("res://principal/recursos/data/Minigames.gd").new()
-
 @onready var modifier_button_container = $Checkboxes/Modifier/Control/ModifierButtons/VBoxContainer
 @onready var minigame_button_container = $Checkboxes/Minigames/Control/MinigamesButtons/VBoxContainer
 @onready var filter_button_container = $Checkboxes/Filters/Control/FilterButtons/VBoxContainer
@@ -30,7 +28,7 @@ func _ready():
 	modifier_button_container.add_child(infinite_button)
 	
 	# Minigame pack and filter buttons
-	var data_dicts = [{}, minigame_data.minigame_packs, minigame_data.filters]
+	var data_dicts = [{}, Minigames.minigame_packs, Minigames.filters]
 	var parents = [null, minigame_button_container, filter_button_container]
 	for i in range(1, len(data_dicts)):
 		if len(settings[i]) != len(data_dicts[i]): # Fixes settings if not yet configured
@@ -42,7 +40,7 @@ func _ready():
 		var pos = 0
 		for title in data_dicts[i]: # Create buttons and set intralist neighborhoods
 			var new_button = MinigameButton.instantiate()
-			new_button.load_minigames(TranslationManager.get_translation(title), data_dicts[i][title])
+			new_button.load_minigames(TranslationManager.get_translation(title), data_dicts[i][title].microgames)
 			new_button.button_pressed = settings[i][pos]
 			parents[i].add_child(new_button)
 			
@@ -75,7 +73,7 @@ func _ready():
 
 
 func play():
-	var minigame_paths = []
+	var minigames = []
 	
 	# Save settings
 	var setters: Array[Callable] = [Global.set_modifier_settings, Global.set_minigame_settings, Global.set_filter_settings]
@@ -89,16 +87,16 @@ func play():
 	# Add minigames
 	for minigame_button in minigame_buttons:
 		if minigame_button.button_pressed:
-			minigame_paths.append_array(minigame_button.get_minigames())
+			minigames.append_array(minigame_button.get_minigames())
 	
 	# Erase from filters
 	for filter_button in filter_buttons:
 		if filter_button.button_pressed:
 			for minigame in filter_button.get_minigames():
-				minigame_paths.erase(minigame)
+				minigames.erase(minigame)
 	
-	if len(minigame_paths) > 0:
-		Global.goto_scene_and_call(GAME_PATH, "setup_arcade_mode" if infinite_button.button_pressed else "setup_jam_mode", [minigame_paths])
+	if len(minigames) > 0:
+		Global.goto_scene_and_call(GAME_PATH, "setup_arcade_mode" if infinite_button.button_pressed else "setup_jam_mode", [minigames])
 	else:
 		match Global.language:
 			Global.LANGUAGE.PT:
