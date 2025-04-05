@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://b07e6j2l3hlm4"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/scripts/mapa.gd" id="1_1u4qj"]
+[ext_resource type="Script" uid="uid://b12dtcn8bgxke" path="res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/scripts/mapa.gd" id="1_1u4qj"]
 [ext_resource type="PackedScene" uid="uid://drf41j4cno1to" path="res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/new_tilemap.tscn" id="4_172yr"]
 [ext_resource type="PackedScene" uid="uid://cdorjq3sp7pia" path="res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/background.tscn" id="5_g5ik7"]
 [ext_resource type="PackedScene" uid="uid://cxx5cafpq3hq5" path="res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/Player.tscn" id="11_xlwkk"]

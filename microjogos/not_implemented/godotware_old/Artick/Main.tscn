@@ -1,108 +1,118 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=3 uid="uid://coyj418yolusw"]
 
-[ext_resource path="res://microjogos/godotware/Artick/Main.gd" type="Script" id=1]
-[ext_resource path="res://microjogos/godotware/Artick/artigo.jpg" type="Texture2D" id=3]
-[ext_resource path="res://microjogos/godotware/Artick/idle.png" type="Texture2D" id=5]
-[ext_resource path="res://microjogos/godotware/Artick/platform.png" type="Texture2D" id=8]
+[sub_resource type="Resource" id="Resource_lswwc"]
+metadata/__load_path__ = "res://microjogos/godotware/Artick/Main.gd"
 
-[sub_resource type="RectangleShape2D" id=1]
-size = Vector2( 14.7103, 15.1605 )
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(14.7103, 15.1605)
 
-[sub_resource type="RectangleShape2D" id=2]
-size = Vector2( 35.6332, 58.9214 )
+[sub_resource type="Resource" id="Resource_f3krw"]
+metadata/__load_path__ = "res://microjogos/godotware/Artick/artigo.jpg"
 
-[sub_resource type="RectangleShape2D" id=3]
-size = Vector2( 40.5329, 1.73248 )
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(35.6332, 58.9214)
 
-[sub_resource type="RectangleShape2D" id=4]
-size = Vector2( 32.1826, 2.25949 )
+[sub_resource type="Resource" id="Resource_u4pif"]
+metadata/__load_path__ = "res://microjogos/godotware/Artick/idle.png"
 
-[sub_resource type="RectangleShape2D" id=5]
-size = Vector2( 323.392, 31.3866 )
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(40.5329, 1.73248)
 
-[sub_resource type="RectangleShape2D" id=6]
-size = Vector2( 10, 241.639 )
+[sub_resource type="RectangleShape2D" id="4"]
+size = Vector2(32.1826, 2.25949)
 
-[sub_resource type="RectangleShape2D" id=7]
-size = Vector2( 10, 249.843 )
+[sub_resource type="RectangleShape2D" id="5"]
+size = Vector2(323.392, 31.3866)
 
-[sub_resource type="RectangleShape2D" id=8]
-size = Vector2( 373.528, 10 )
+[sub_resource type="RectangleShape2D" id="6"]
+size = Vector2(10, 241.639)
 
-[sub_resource type="RectangleShape2D" id=9]
-size = Vector2( 87.6903, 12.4284 )
+[sub_resource type="RectangleShape2D" id="7"]
+size = Vector2(10, 249.843)
 
-[sub_resource type="RectangleShape2D" id=10]
-size = Vector2( 377.21, 10 )
+[sub_resource type="RectangleShape2D" id="8"]
+size = Vector2(373.528, 10)
+
+[sub_resource type="Resource" id="Resource_grjgh"]
+metadata/__load_path__ = "res://microjogos/godotware/Artick/platform.png"
+
+[sub_resource type="RectangleShape2D" id="9"]
+size = Vector2(87.6903, 12.4284)
+
+[sub_resource type="Resource" id="Resource_jqlhr"]
+metadata/__load_path__ = "res://microjogos/godotware/Artick/platform.png"
+
+[sub_resource type="RectangleShape2D" id="10"]
+size = Vector2(377.21, 10)
 
 [node name="Main" type="Node2D"]
-script = ExtResource( 1 )
+script = SubResource("Resource_lswwc")
 
 [node name="artigo1" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="artigo1"]
-shape = SubResource( 1 )
+shape = SubResource("1")
 
 [node name="Sprite2D" type="Sprite2D" parent="artigo1"]
-texture = ExtResource( 3 )
+texture = SubResource("Resource_f3krw")
 
 [node name="Personagem" type="CharacterBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem"]
-shape = SubResource( 2 )
+shape = SubResource("2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Personagem"]
-texture = ExtResource( 5 )
+texture = SubResource("Resource_u4pif")
 
 [node name="Area2D" type="Area2D" parent="Personagem"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem/Area2D"]
-shape = SubResource( 3 )
+shape = SubResource("3")
 
 [node name="Area2D 2" type="Area2D" parent="Personagem"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem/Area2D 2"]
-shape = SubResource( 4 )
+shape = SubResource("4")
 
 [node name="ground" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ground"]
-shape = SubResource( 5 )
+shape = SubResource("5")
 
 [node name="right_wall" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="right_wall"]
-shape = SubResource( 6 )
+shape = SubResource("6")
 
 [node name="left_wall" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="left_wall"]
-shape = SubResource( 7 )
+shape = SubResource("7")
 
 [node name="ceiling" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ceiling"]
-shape = SubResource( 8 )
+shape = SubResource("8")
 
 [node name="platform1" type="StaticBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="platform1"]
-texture = ExtResource( 8 )
+texture = SubResource("Resource_grjgh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="platform1"]
-shape = SubResource( 9 )
+shape = SubResource("9")
 
 [node name="platform2" type="StaticBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="platform2"]
-texture = ExtResource( 8 )
+texture = SubResource("Resource_jqlhr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="platform2"]
-shape = SubResource( 9 )
+shape = SubResource("9")
 
 [node name="TextureFrame" type="Node" parent="."]
 
 [node name="dead_line" type="CharacterBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="dead_line"]
-shape = SubResource( 10 )
+shape = SubResource("10")

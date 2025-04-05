@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cp1qj6bl2c0bs"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/Area2D.gd" id="1_tcbpx"]
+[ext_resource type="Script" uid="uid://ccfjua06gjfyw" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/Area2D.gd" id="1_tcbpx"]
 [ext_resource type="Texture2D" uid="uid://bpcmcva7v7ahu" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/Nave_1.png" id="2_l6aqd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pay82"]

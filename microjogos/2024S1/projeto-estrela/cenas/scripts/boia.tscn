@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhx8403wxd3g3"]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="Texture2D" uid="uid://b4gi5g8u0bi34" path="res://microjogos/2024S1/projeto-estrela/recursos/gamutoBoia4.png" id="1_ywi6e"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-estrela/recursos/gamutoBoia4.png" id="1_ywi6e"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dym7c"]
 radius = 106.231

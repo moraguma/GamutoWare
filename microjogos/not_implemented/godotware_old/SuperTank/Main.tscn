@@ -1,25 +1,88 @@
-[gd_scene load_steps=8 format=1]
+[gd_scene load_steps=28 format=3 uid="uid://c20q23rtl5mgl"]
 
-[ext_resource path="res://minigames/SuperTank/Main.gd" type="Script" id=1]
-[ext_resource path="res://minigames/SuperTank/cenario.png" type="Texture2D" id=2]
-[ext_resource path="res://minigames/SuperTank/tank.png" type="Texture2D" id=3]
-[ext_resource path="res://minigames/SuperTank/target.png" type="Texture2D" id=4]
-[ext_resource path="res://minigames/SuperTank/Tile.tscn" type="PackedScene" id=5]
+[sub_resource type="Resource" id="Resource_gbriw"]
+metadata/__load_path__ = "res://minigames/SuperTank/Main.gd"
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="Resource" id="Resource_y5xfx"]
+metadata/__load_path__ = "res://minigames/SuperTank/cenario.png"
 
-custom_solver_bias = 0.0
-size = Vector2( 16.3495, 16.2418 )
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(16.3495, 16.2418)
 
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="Resource" id="Resource_7wnfw"]
+metadata/__load_path__ = "res://minigames/SuperTank/tank.png"
 
-custom_solver_bias = 0.0
-radius = 10.0
+[sub_resource type="CircleShape2D" id="2"]
+
+[sub_resource type="Resource" id="Resource_6jjhv"]
+metadata/__load_path__ = "res://minigames/SuperTank/target.png"
+
+[sub_resource type="Resource" id="Resource_rabix"]
+metadata/__load_path__ = "res://minigames/SuperTank/Tile.tscn"
+
+[sub_resource type="Resource" id="Resource_du5cl"]
+metadata/__load_path__ = "res://minigames/SuperTank/Tile.tscn"
+
+[sub_resource type="Resource" id="Resource_c0sms"]
+metadata/__load_path__ = "res://minigames/SuperTank/Tile.tscn"
+
+[sub_resource type="Resource" id="Resource_bs8b4"]
+metadata/__load_path__ = "res://minigames/SuperTank/Tile.tscn"
+
+[sub_resource type="Resource" id="Resource_f7kpu"]
+metadata/__load_path__ = "res://minigames/SuperTank/Tile.tscn"
+
+[sub_resource type="Resource" id="Resource_lctrv"]
+metadata/__load_path__ = "res://minigames/SuperTank/Tile.tscn"
+
+[sub_resource type="Resource" id="Resource_n7xdj"]
+metadata/__load_path__ = "res://minigames/SuperTank/Tile.tscn"
+
+[sub_resource type="Resource" id="Resource_gko28"]
+metadata/__load_path__ = "res://minigames/SuperTank/Tile.tscn"
+
+[sub_resource type="Resource" id="Resource_fdvi6"]
+metadata/__load_path__ = "res://minigames/SuperTank/Tile.tscn"
+
+[sub_resource type="Resource" id="Resource_e4ihj"]
+metadata/__load_path__ = "res://minigames/SuperTank/Tile.tscn"
+
+[sub_resource type="Resource" id="Resource_swlbu"]
+metadata/__load_path__ = "res://minigames/SuperTank/Tile.tscn"
+
+[sub_resource type="Resource" id="Resource_g2s5w"]
+metadata/__load_path__ = "res://minigames/SuperTank/Tile.tscn"
+
+[sub_resource type="Resource" id="Resource_qit1w"]
+metadata/__load_path__ = "res://minigames/SuperTank/Tile.tscn"
+
+[sub_resource type="Resource" id="Resource_bytrq"]
+metadata/__load_path__ = "res://minigames/SuperTank/Tile.tscn"
+
+[sub_resource type="Resource" id="Resource_gf4bk"]
+metadata/__load_path__ = "res://minigames/SuperTank/Tile.tscn"
+
+[sub_resource type="Resource" id="Resource_ogmh2"]
+metadata/__load_path__ = "res://minigames/SuperTank/Tile.tscn"
+
+[sub_resource type="Resource" id="Resource_oet81"]
+metadata/__load_path__ = "res://minigames/SuperTank/Tile.tscn"
+
+[sub_resource type="Resource" id="Resource_f0ot0"]
+metadata/__load_path__ = "res://minigames/SuperTank/Tile.tscn"
+
+[sub_resource type="Resource" id="Resource_fc0dg"]
+metadata/__load_path__ = "res://minigames/SuperTank/Tile.tscn"
+
+[sub_resource type="Resource" id="Resource_8uxc8"]
+metadata/__load_path__ = "res://minigames/SuperTank/Tile.tscn"
+
+[sub_resource type="Resource" id="Resource_yyrhw"]
+metadata/__load_path__ = "res://minigames/SuperTank/Tile.tscn"
 
 [node name="Main" type="Node2D"]
-
-transform/pos = Vector2( 1, -1 )
-script/script = ExtResource( 1 )
+transform/pos = Vector2(1, -1)
+script/script = SubResource("Resource_gbriw")
 NAME = "Super Tank"
 INSTRUCTION = "drag it"
 DURATION = 7
@@ -28,165 +91,134 @@ USE_KEYS_HUD = false
 USE_MOUSE_HUD = true
 
 [node name="Sprite2D 2" type="Sprite2D" parent="."]
-
-transform/pos = Vector2( 320.001, 202.001 )
-texture = ExtResource( 2 )
+transform/pos = Vector2(320.001, 202.001)
+texture = SubResource("Resource_y5xfx")
 
 [node name="jogador" type="Area2D" parent="."]
-
 editor/display_folded = true
-transform/pos = Vector2( 74.3803, 92.3058 )
-transform/scale = Vector2( 0.728589, 0.783399 )
+transform/pos = Vector2(74.3803, 92.3058)
+transform/scale = Vector2(0.728589, 0.783399)
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, -1.72025, 2.03439 )
+shapes/0/shape = SubResource("1")
+shapes/0/transform = Transform2D(1, 0, 0, 1, -1.72025, 2.03439)
 shapes/0/trigger = false
-gravity_direction = Vector2( 0, 1 )
+gravity_direction = Vector2(0, 1)
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="jogador"]
-
-transform/pos = Vector2( -1.72025, 2.03439 )
-shape = SubResource( 1 )
+transform/pos = Vector2(-1.72025, 2.03439)
+shape = SubResource("1")
 trigger = false
 _update_shape_index = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="jogador"]
-
-transform/pos = Vector2( -2.56969, 1.28872 )
-transform/scale = Vector2( 0.600477, 0.648911 )
-texture = ExtResource( 3 )
+transform/pos = Vector2(-2.56969, 1.28872)
+transform/scale = Vector2(0.600477, 0.648911)
+texture = SubResource("Resource_7wnfw")
 
 [node name="final" type="Area2D" parent="."]
-
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Matrix32( 4.17956, 0, 0, 4.02019, 581.844, 62.7856 )
+shapes/0/shape = SubResource("2")
+shapes/0/transform = Transform2D(4.17956, 0, 0, 4.02019, 581.844, 62.7856)
 shapes/0/trigger = false
-gravity_direction = Vector2( 0, 1 )
+gravity_direction = Vector2(0, 1)
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="final"]
-
-transform/pos = Vector2( 581.844, 62.7856 )
-transform/scale = Vector2( 4.17956, 4.02019 )
-shape = SubResource( 2 )
+transform/pos = Vector2(581.844, 62.7856)
+transform/scale = Vector2(4.17956, 4.02019)
+shape = SubResource("2")
 trigger = false
 _update_shape_index = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="final/CollisionShape2D"]
-
-transform/pos = Vector2( -0.438815, -0.5566 )
-transform/scale = Vector2( 0.347676, 0.353684 )
-texture = ExtResource( 4 )
+transform/pos = Vector2(-0.438815, -0.5566)
+transform/scale = Vector2(0.347676, 0.353684)
+texture = SubResource("Resource_6jjhv")
 
 [node name="Node2D" type="Node2D" parent="."]
+transform/pos = Vector2(452.402, 32.9907)
+transform/scale = Vector2(0.926664, 0.961023)
 
-transform/pos = Vector2( 452.402, 32.9907 )
-transform/scale = Vector2( 0.926664, 0.961023 )
+[node name="Tile" parent="Node2D"]
 
-[node name="Tile" parent="Node2D" instance=ExtResource( 5 )]
+[node name="Tile1" parent="Node2D"]
+transform/pos = Vector2(0.60553, 57.628)
 
-[node name="Tile1" parent="Node2D" instance=ExtResource( 5 )]
+[node name="Tile2" parent="Node2D"]
+transform/pos = Vector2(-1.39447, 115.356)
 
-transform/pos = Vector2( 0.60553, 57.628 )
+[node name="Tile3" parent="Node2D"]
+transform/pos = Vector2(-0.166748, 173.263)
 
-[node name="Tile2" parent="Node2D" instance=ExtResource( 5 )]
+[node name="Tile4" parent="Node2D"]
+transform/pos = Vector2(-0.166748, 232.195)
 
-transform/pos = Vector2( -1.39447, 115.356 )
+[node name="Tile5" parent="Node2D"]
+transform/pos = Vector2(1.99152, 292.354)
 
-[node name="Tile3" parent="Node2D" instance=ExtResource( 5 )]
-
-transform/pos = Vector2( -0.166748, 173.263 )
-
-[node name="Tile4" parent="Node2D" instance=ExtResource( 5 )]
-
-transform/pos = Vector2( -0.166748, 232.195 )
-
-[node name="Tile5" parent="Node2D" instance=ExtResource( 5 )]
-
-transform/pos = Vector2( 1.99152, 292.354 )
-
-[node name="Tile6" parent="Node2D" instance=ExtResource( 5 )]
-
-transform/pos = Vector2( 1.99152, 353.555 )
+[node name="Tile6" parent="Node2D"]
+transform/pos = Vector2(1.99152, 353.555)
 
 [node name="Node2D1" type="Node2D" parent="."]
-
 editor/display_folded = true
-transform/pos = Vector2( 166.901, 33.9907 )
-transform/scale = Vector2( 0.879789, 0.961023 )
+transform/pos = Vector2(166.901, 33.9907)
+transform/scale = Vector2(0.879789, 0.961023)
 
-[node name="Tile" parent="Node2D1" instance=ExtResource( 5 )]
+[node name="Tile" parent="Node2D1"]
+transform/pos = Vector2(-0.39447, -2.30365)
 
-transform/pos = Vector2( -0.39447, -2.30365 )
+[node name="Tile1" parent="Node2D1"]
+transform/pos = Vector2(-0.394501, 57.6279)
 
-[node name="Tile1" parent="Node2D1" instance=ExtResource( 5 )]
+[node name="Tile2" parent="Node2D1"]
+transform/pos = Vector2(0.60553, 116.332)
 
-transform/pos = Vector2( -0.394501, 57.6279 )
+[node name="Tile3" parent="Node2D1"]
+transform/pos = Vector2(-0.166748, 173.263)
 
-[node name="Tile2" parent="Node2D1" instance=ExtResource( 5 )]
+[node name="Tile4" parent="Node2D1"]
+transform/pos = Vector2(-0.166748, 232.195)
 
-transform/pos = Vector2( 0.60553, 116.332 )
+[node name="Tile5" parent="Node2D1"]
+transform/pos = Vector2(0.833252, 293.354)
 
-[node name="Tile3" parent="Node2D1" instance=ExtResource( 5 )]
-
-transform/pos = Vector2( -0.166748, 173.263 )
-
-[node name="Tile4" parent="Node2D1" instance=ExtResource( 5 )]
-
-transform/pos = Vector2( -0.166748, 232.195 )
-
-[node name="Tile5" parent="Node2D1" instance=ExtResource( 5 )]
-
-transform/pos = Vector2( 0.833252, 293.354 )
-
-[node name="Tile6" parent="Node2D1" instance=ExtResource( 5 )]
-
-transform/pos = Vector2( -0.166748, 352.514 )
+[node name="Tile6" parent="Node2D1"]
+transform/pos = Vector2(-0.166748, 352.514)
 
 [node name="Node2D2" type="Node2D" parent="."]
-
 editor/display_folded = true
-transform/pos = Vector2( 313.402, 36.4907 )
-transform/scale = Vector2( 0.926664, 0.945398 )
+transform/pos = Vector2(313.402, 36.4907)
+transform/scale = Vector2(0.926664, 0.945398)
 
-[node name="Tile" parent="Node2D2" instance=ExtResource( 5 )]
+[node name="Tile" parent="Node2D2"]
+transform/pos = Vector2(-0.394409, -5.30367)
 
-transform/pos = Vector2( -0.394409, -5.30367 )
+[node name="Tile1" parent="Node2D2"]
+transform/pos = Vector2(-0.394592, 53.6279)
 
-[node name="Tile1" parent="Node2D2" instance=ExtResource( 5 )]
+[node name="Tile2" parent="Node2D2"]
+transform/pos = Vector2(-1.39447, 113.332)
 
-transform/pos = Vector2( -0.394592, 53.6279 )
+[node name="Tile3" parent="Node2D2"]
+transform/pos = Vector2(-0.166748, 173.263)
 
-[node name="Tile2" parent="Node2D2" instance=ExtResource( 5 )]
+[node name="Tile4" parent="Node2D2"]
+transform/pos = Vector2(-0.166748, 232.195)
 
-transform/pos = Vector2( -1.39447, 113.332 )
+[node name="Tile5" parent="Node2D2"]
+transform/pos = Vector2(0.833252, 293.354)
 
-[node name="Tile3" parent="Node2D2" instance=ExtResource( 5 )]
-
-transform/pos = Vector2( -0.166748, 173.263 )
-
-[node name="Tile4" parent="Node2D2" instance=ExtResource( 5 )]
-
-transform/pos = Vector2( -0.166748, 232.195 )
-
-[node name="Tile5" parent="Node2D2" instance=ExtResource( 5 )]
-
-transform/pos = Vector2( 0.833252, 293.354 )
-
-[node name="Tile6" parent="Node2D2" instance=ExtResource( 5 )]
-
-transform/pos = Vector2( -0.166748, 352.514 )
+[node name="Tile6" parent="Node2D2"]
+transform/pos = Vector2(-0.166748, 352.514)
 
 [node name="Mouse" type="Label" parent="."]
-
 rect/rotation = 22.7143
-rect/scale = Vector2( 1.4, 1.4 )
+rect/scale = Vector2(1.4, 1.4)
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -199,5 +231,3 @@ text = "Mouse aqui!"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-
-

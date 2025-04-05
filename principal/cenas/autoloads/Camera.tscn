@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://kbgyjixulq48"]
 
-[ext_resource type="Script" path="res://principal/cenas/scripts/Camera.gd" id="1"]
+[ext_resource type="Script" uid="uid://35v12u2uexjp" path="res://principal/cenas/scripts/Camera.gd" id="1"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "transition"
@@ -44,7 +44,7 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_h6p2p"]
 _data = {
-"transition": SubResource("1")
+&"transition": SubResource("1")
 }
 
 [node name="Camera" type="Camera2D"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bmp04tx2qox2x"]
 
-[ext_resource type="Script" path="res://microjogos/moraguma/soulchain/cenas/scripts/Hook.gd" id="1"]
+[ext_resource type="Script" uid="uid://c2dch4n8e0wey" path="res://microjogos/moraguma/soulchain/cenas/scripts/Hook.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://b54gki0ur20bq" path="res://microjogos/moraguma/soulchain/recursos/sprites/chain.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://co468hyr0rcvh" path="res://microjogos/moraguma/soulchain/recursos/sprites/tinydeathhook.png" id="3"]
 
@@ -55,9 +55,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vl4xp"]
 _data = {
-"RESET": SubResource("1"),
-"air": SubResource("2"),
-"idle": SubResource("3")
+&"RESET": SubResource("1"),
+&"air": SubResource("2"),
+&"idle": SubResource("3")
 }
 
 [node name="Hook" type="Sprite2D"]

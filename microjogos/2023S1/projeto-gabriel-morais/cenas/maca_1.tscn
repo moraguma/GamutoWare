@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://mqowq5d2yjbd"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/scripts/maca_1.gd" id="1_6v8b2"]
+[ext_resource type="Script" uid="uid://btjpjuayq24og" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/scripts/maca_1.gd" id="1_6v8b2"]
 [ext_resource type="Texture2D" uid="uid://du67ks0qtxx8s" path="res://microjogos/2023S1/projeto-gabriel-morais/recursos/maca.png" id="2_qfwst"]
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/scripts/Sprite2D.gd" id="3_yu5ds"]
+[ext_resource type="Script" uid="uid://cwaucfm7w8lrn" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/scripts/Sprite2D.gd" id="3_yu5ds"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1m63x"]
 radius = 78.0577

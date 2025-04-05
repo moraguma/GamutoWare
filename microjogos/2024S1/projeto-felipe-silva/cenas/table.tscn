@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dskcw2kj7rh76"]
+[gd_scene load_steps=5 format=3]
 
-[ext_resource type="Texture2D" uid="uid://crttkynvvjyk" path="res://microjogos/2024S1/projeto-felipe-silva/recursos/table.png" id="1_g13vg"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-felipe-silva/recursos/table.png" id="1_g13vg"]
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-felipe-silva/cenas/scripts/table.gd" id="1_jpqed"]
-[ext_resource type="PackedScene" uid="uid://dkn31ikfk2e14" path="res://microjogos/2024S1/projeto-felipe-silva/cenas/anon.tscn" id="2_gbce8"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-felipe-silva/cenas/anon.tscn" id="2_gbce8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mhmx4"]
 size = Vector2(90, 272)

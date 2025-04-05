@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cq6mbm4e13a5e"]
+[gd_scene load_steps=5 format=3]
 
-[ext_resource type="Texture2D" uid="uid://cmwxt6tdp5etk" path="res://microjogos/2024S1/nyan-thulu/recursos/bullet.png" id="1_ivt4k"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/nyan-thulu/recursos/bullet.png" id="1_ivt4k"]
 [ext_resource type="Script" path="res://microjogos/2024S1/nyan-thulu/cenas/scripts/bullet.gd" id="1_k4wxm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ww5d4"]

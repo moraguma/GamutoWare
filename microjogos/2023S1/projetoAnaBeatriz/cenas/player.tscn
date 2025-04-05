@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://dqwdde2v241xr"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/player.gd" id="1_1ywkb"]
+[ext_resource type="Script" uid="uid://cfwiss4fjoor0" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/player.gd" id="1_1ywkb"]
 [ext_resource type="Texture2D" uid="uid://cywen6tasoke4" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/SpaceShip.png" id="2_87uws"]
-[ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/SpaceShip.gd" id="3_081xl"]
+[ext_resource type="Script" uid="uid://c1xao37dw48ty" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/SpaceShip.gd" id="3_081xl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_68caw"]
 size = Vector2(92.1212, 93.617)

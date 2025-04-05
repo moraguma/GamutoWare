@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://smjky501ygt5"]
+[gd_scene load_steps=8 format=3]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-naomi/cenas/scripts/enemy.gd" id="1_qltfr"]
-[ext_resource type="Texture2D" uid="uid://bvks0p03n65t" path="res://microjogos/2024S1/projeto-naomi/recursos/enemies.png" id="2_55gwo"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-naomi/recursos/enemies.png" id="2_55gwo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5au76"]
 atlas = ExtResource("2_55gwo")

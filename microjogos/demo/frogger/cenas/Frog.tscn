@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://b4ji1qu54goc1"]
 
 [ext_resource type="Texture2D" uid="uid://cnage6e7bhl5f" path="res://microjogos/demo/frogger/recursos/sprites/froggy.png" id="1"]
-[ext_resource type="Script" path="res://microjogos/demo/frogger/cenas/scripts/Frog.gd" id="2"]
+[ext_resource type="Script" uid="uid://dld3xhf8mqksh" path="res://microjogos/demo/frogger/cenas/scripts/Frog.gd" id="2"]
 [ext_resource type="AudioStream" uid="uid://o3ie5n0vbvir" path="res://microjogos/demo/frogger/recursos/sound/162395__zut50__yay.wav" id="3"]
 [ext_resource type="AudioStream" uid="uid://de06u585m3bje" path="res://microjogos/demo/frogger/recursos/sound/445117__breviceps__cartoon-splat.wav" id="4"]
 [ext_resource type="AudioStream" uid="uid://cqebbp3yibyf3" path="res://microjogos/demo/frogger/recursos/sound/happy.ogg" id="5"]
@@ -74,10 +74,10 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_embpx"]
 _data = {
-"RESET": SubResource("1"),
-"down": SubResource("2"),
-"side": SubResource("3"),
-"up": SubResource("4")
+&"RESET": SubResource("1"),
+&"down": SubResource("2"),
+&"side": SubResource("3"),
+&"up": SubResource("4")
 }
 
 [sub_resource type="RectangleShape2D" id="5"]

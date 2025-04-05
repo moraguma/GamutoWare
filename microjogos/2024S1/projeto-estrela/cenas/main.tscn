@@ -1,13 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=9 format=3]
 
-[ext_resource type="PackedScene" uid="uid://bmhh2veb4ba3s" path="res://microjogos/2024S1/projeto-estrela/cenas/lago.tscn" id="1_aomlo"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-estrela/cenas/lago.tscn" id="1_aomlo"]
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-estrela/cenas/scripts/main.gd" id="1_r3386"]
-[ext_resource type="PackedScene" uid="uid://botov3x1oaokx" path="res://microjogos/2024S1/projeto-estrela/cenas/scripts/PATO.tscn" id="2_lrswt"]
-[ext_resource type="PackedScene" uid="uid://dsfppy6si105e" path="res://microjogos/2024S1/projeto-estrela/cenas/scripts/patinho.tscn" id="3_h8exp"]
-[ext_resource type="PackedScene" uid="uid://byuft7r8ys605" path="res://microjogos/2024S1/projeto-estrela/cenas/scripts/obs1.tscn" id="4_kjds8"]
-[ext_resource type="PackedScene" uid="uid://xd0ylioakf58" path="res://microjogos/2024S1/projeto-estrela/cenas/scripts/lotad.tscn" id="5_fmmh7"]
-[ext_resource type="PackedScene" uid="uid://bjh2lhwsbqihl" path="res://microjogos/2024S1/projeto-estrela/cenas/scripts/obs3.tscn" id="6_y4lcq"]
-[ext_resource type="PackedScene" uid="uid://dhx8403wxd3g3" path="res://microjogos/2024S1/projeto-estrela/cenas/scripts/boia.tscn" id="7_ayd5e"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-estrela/cenas/scripts/PATO.tscn" id="2_lrswt"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-estrela/cenas/scripts/patinho.tscn" id="3_h8exp"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-estrela/cenas/scripts/obs1.tscn" id="4_kjds8"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-estrela/cenas/scripts/lotad.tscn" id="5_fmmh7"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-estrela/cenas/scripts/obs3.tscn" id="6_y4lcq"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-estrela/cenas/scripts/boia.tscn" id="7_ayd5e"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_r3386")

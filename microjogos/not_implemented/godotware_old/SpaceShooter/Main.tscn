@@ -1,15 +1,28 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=3 uid="uid://dgyuxfeng02bg"]
 
-[ext_resource path="res://microjogos/godotware/SpaceShooter/Main.gd" type="Script" id=1]
-[ext_resource path="res://microjogos/godotware/SpaceShooter/scenes/Audio_Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://microjogos/godotware/SpaceShooter/scenes/Spawner_Enemy.tscn" type="PackedScene" id=3]
-[ext_resource path="res://microjogos/godotware/SpaceShooter/sprites/stars_far.png" type="Texture2D" id=4]
-[ext_resource path="res://microjogos/godotware/SpaceShooter/scripts/Camera.gd" type="Script" id=5]
-[ext_resource path="res://microjogos/godotware/SpaceShooter/scenes/Ship.tscn" type="PackedScene" id=6]
+[sub_resource type="Resource" id="Resource_5hpes"]
+metadata/__load_path__ = "res://microjogos/godotware/SpaceShooter/Main.gd"
+
+[sub_resource type="Resource" id="Resource_wp0uq"]
+metadata/__load_path__ = "res://microjogos/godotware/SpaceShooter/scenes/Audio_Player.tscn"
+
+[sub_resource type="Resource" id="Resource_3g40t"]
+metadata/__load_path__ = "res://microjogos/godotware/SpaceShooter/scenes/Spawner_Enemy.tscn"
+
+[sub_resource type="Resource" id="Resource_jtskh"]
+metadata/__load_path__ = "res://microjogos/godotware/SpaceShooter/sprites/stars_far.png"
+
+[sub_resource type="Resource" id="Resource_3xysh"]
+metadata/__load_path__ = "res://microjogos/godotware/SpaceShooter/sprites/stars_far.png"
+
+[sub_resource type="Resource" id="Resource_1j8vy"]
+metadata/__load_path__ = "res://microjogos/godotware/SpaceShooter/scripts/Camera.gd"
+
+[sub_resource type="Resource" id="Resource_4omgp"]
+metadata/__load_path__ = "res://microjogos/godotware/SpaceShooter/scenes/Ship.tscn"
 
 [node name="Main" type="Node2D"]
-
-script/script = ExtResource( 1 )
+script/script = SubResource("Resource_5hpes")
 NAME = "Space Shooter"
 INSTRUCTION = "Survive!"
 DURATION = 6
@@ -17,33 +30,30 @@ TIMEOUT_WIN = true
 USE_KEYS_HUD = true
 USE_MOUSE_HUD = true
 
-[node name="Audio_Player" parent="." instance=ExtResource( 2 )]
+[node name="Audio_Player" parent="."]
 
-[node name="Spawner_Enemy" parent="." instance=ExtResource( 3 )]
+[node name="Spawner_Enemy" parent="."]
 
 [node name="Stars_0" type="Sprite2D" parent="."]
-
-transform/pos = Vector2( -24, -24 )
-transform/scale = Vector2( 2.5, 2.5 )
-texture = ExtResource( 4 )
+transform/pos = Vector2(-24, -24)
+transform/scale = Vector2(2.5, 2.5)
+texture = SubResource("Resource_jtskh")
 centered = false
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="Stars_1" type="Sprite2D" parent="."]
-
-transform/pos = Vector2( 400, -24 )
-transform/scale = Vector2( 2.5, 2.5 )
-texture = ExtResource( 4 )
+transform/pos = Vector2(400, -24)
+transform/scale = Vector2(2.5, 2.5)
+texture = SubResource("Resource_3xysh")
 centered = false
 
 [node name="Camera3D" type="Camera2D" parent="."]
-
 anchor_mode = 0
-ignore_rotation =true # reversed "rotating" for Camera2D
-current = false
-zoom = Vector2( 1, 1 )
+ignore_rotation = true
+rotatingforCamera2Dcurrent = false
+zoom = Vector2(1, 1)
 limit/left = -10000000
 limit/top = -10000000
 limit/right = 10000000
@@ -56,10 +66,7 @@ drag_margin/left = 0.2
 drag_margin/top = 0.2
 drag_margin/right = 0.2
 drag_margin/bottom = 0.2
-script/script = ExtResource( 5 )
+script/script = SubResource("Resource_1j8vy")
 
-[node name="Ship" parent="." instance=ExtResource( 6 )]
-
-transform/pos = Vector2( 320, 200 )
-
-
+[node name="Ship" parent="."]
+transform/pos = Vector2(320, 200)

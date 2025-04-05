@@ -1,35 +1,29 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=3 format=3 uid="uid://ckkoulxqbn4mk"]
 
-[ext_resource path="res://minigames/SpaceShooter/scripts/Laser.gd" type="Script" id=1]
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(10, 10)
 
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-size = Vector2( 10, 10 )
+[sub_resource type="Resource" id="Resource_cdy1s"]
+metadata/__load_path__ = "res://minigames/SpaceShooter/scripts/Laser.gd"
 
 [node name="Laser" type="Area2D"]
-
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/shape = SubResource("1")
+shapes/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
 shapes/0/trigger = false
-gravity_direction = Vector2( 0, 1 )
+gravity_direction = Vector2(0, 1)
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
-script/script = ExtResource( 1 )
-speed = Vector2( 0, 0 )
+script/script = SubResource("Resource_cdy1s")
+speed = Vector2(0, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="Shape3D" type="CollisionShape2D" parent="."]
-
-shape = SubResource( 1 )
+shape = SubResource("1")
 trigger = false
 _update_shape_index = 0
 
 [node name="Visibility_Notifier" type="VisibleOnScreenNotifier2D" parent="."]
-
-rect = Rect2( -10, -10, 20, 20 )
-
-
+rect = Rect2(-10, -10, 20, 20)

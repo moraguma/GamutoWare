@@ -1,13 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://bhuj8qm6aduut"]
+[gd_scene load_steps=10 format=3]
 
-[ext_resource type="PackedScene" uid="uid://do2urvm5xovij" path="res://microjogos/2024S1/projeto-eco-g/cenas/stone_8.tscn" id="2_ftro1"]
-[ext_resource type="PackedScene" uid="uid://cfbei5u5icyew" path="res://microjogos/2024S1/projeto-eco-g/cenas/stone_1.tscn" id="3_0r01d"]
-[ext_resource type="PackedScene" uid="uid://c37t80aqgqvh3" path="res://microjogos/2024S1/projeto-eco-g/cenas/stone_2.tscn" id="4_1vy6m"]
-[ext_resource type="PackedScene" uid="uid://c50n3sissnbcn" path="res://microjogos/2024S1/projeto-eco-g/cenas/stone_3.tscn" id="5_f25ge"]
-[ext_resource type="PackedScene" uid="uid://c6s6bacidswnq" path="res://microjogos/2024S1/projeto-eco-g/cenas/stone_4.tscn" id="6_naxrv"]
-[ext_resource type="PackedScene" uid="uid://blyaoeavka6mq" path="res://microjogos/2024S1/projeto-eco-g/cenas/stone_5.tscn" id="7_au80i"]
-[ext_resource type="PackedScene" uid="uid://3p2g2bdc0u3t" path="res://microjogos/2024S1/projeto-eco-g/cenas/stone_6.tscn" id="8_upexq"]
-[ext_resource type="PackedScene" uid="uid://c1tlnmwosk7at" path="res://microjogos/2024S1/projeto-eco-g/cenas/stone_7.tscn" id="9_j0j83"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-eco-g/cenas/stone_8.tscn" id="2_ftro1"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-eco-g/cenas/stone_1.tscn" id="3_0r01d"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-eco-g/cenas/stone_2.tscn" id="4_1vy6m"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-eco-g/cenas/stone_3.tscn" id="5_f25ge"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-eco-g/cenas/stone_4.tscn" id="6_naxrv"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-eco-g/cenas/stone_5.tscn" id="7_au80i"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-eco-g/cenas/stone_6.tscn" id="8_upexq"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-eco-g/cenas/stone_7.tscn" id="9_j0j83"]
 
 [sub_resource type="GDScript" id="GDScript_mu1a1"]
 script/source = "extends Node2D

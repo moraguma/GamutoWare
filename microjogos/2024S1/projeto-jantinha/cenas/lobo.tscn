@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://03m8fbni7yot"]
+[gd_scene load_steps=4 format=3]
 
-[ext_resource type="Texture2D" uid="uid://clxqlp1vp0abm" path="res://microjogos/2024S1/projeto-jantinha/recursos/lobo.png" id="1_i1rf2"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-jantinha/recursos/lobo.png" id="1_i1rf2"]
 
 [sub_resource type="GDScript" id="GDScript_8spyn"]
 script/source = "extends CharacterBody2D

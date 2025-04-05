@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbn6cwj4iliug"]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="Texture2D" uid="uid://ix3ilaidkysh" path="res://microjogos/2024S1/ShootGamuto/recursos/amigo.png" id="1_2nyd7"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/ShootGamuto/recursos/amigo.png" id="1_2nyd7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xcp88"]
 radius = 51.0098

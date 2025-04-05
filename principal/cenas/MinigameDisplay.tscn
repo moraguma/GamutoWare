@@ -1,11 +1,11 @@
 [gd_scene load_steps=14 format=3 uid="uid://dnhn2yadjkru6"]
 
 [ext_resource type="Texture2D" uid="uid://d2g21riptaer" path="res://principal/recursos/sprites/GreenGameIcon.png" id="1_6hgjj"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/MinigameDisplay.gd" id="1_p7qgm"]
-[ext_resource type="Shader" path="res://principal/recursos/shaders/mask.gdshader" id="2_f644r"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/TimerIndicator.gd" id="4_rcas5"]
+[ext_resource type="Script" uid="uid://b2yf8wwore3fa" path="res://principal/cenas/scripts/MinigameDisplay.gd" id="1_p7qgm"]
+[ext_resource type="Shader" uid="uid://cyqqio3liuygn" path="res://principal/recursos/shaders/mask.gdshader" id="2_f644r"]
+[ext_resource type="Script" uid="uid://dt1v4yls087us" path="res://principal/cenas/scripts/TimerIndicator.gd" id="4_rcas5"]
 [ext_resource type="Texture2D" uid="uid://b83mxv1sg7wbc" path="res://principal/recursos/sprites/clock.png" id="5_vteeu"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/Twitcher.gd" id="6_nkvio"]
+[ext_resource type="Script" uid="uid://d63sifxq5gdk" path="res://principal/cenas/scripts/Twitcher.gd" id="6_nkvio"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_ilc1l"]
 viewport_path = NodePath("MicrogameMaskViewport")

@@ -1,8 +1,8 @@
-[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://h5t14mq1njco"]
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3]
 
 [ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_mq6lb"]
-[ext_resource type="Texture2D" uid="uid://8hmaryvrwd7s" path="res://microjogos/moraguma/deerskull/capa.png" id="1_s5r6s"]
-[ext_resource type="PackedScene" uid="uid://ci10ibxytwob5" path="res://microjogos/moraguma/deerskull/cenas/Main.tscn" id="2_w8deb"]
+[ext_resource type="Texture2D" path="res://microjogos/moraguma/deerskull/capa.png" id="1_s5r6s"]
+[ext_resource type="PackedScene" path="res://microjogos/moraguma/deerskull/cenas/Main.tscn" id="2_w8deb"]
 
 [resource]
 script = ExtResource("1_mq6lb")

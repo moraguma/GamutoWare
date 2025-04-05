@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://bjm26yvl38ria"]
 
 [ext_resource type="FontFile" uid="uid://censsrpbpgb4h" path="res://microjogos/moraguma/ifuv/recursos/fonts/Pixel Millennium.ttf" id="1"]
-[ext_resource type="Script" path="res://microjogos/moraguma/ifuv/cenas/scripts/NumberButton.gd" id="2"]
+[ext_resource type="Script" uid="uid://cr1g1ewn45w8d" path="res://microjogos/moraguma/ifuv/cenas/scripts/NumberButton.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://uh5wj3xsynuw" path="res://microjogos/moraguma/ifuv/recursos/sprites/button.png" id="3"]
 
 [sub_resource type="Animation" id="1"]
@@ -85,18 +85,15 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kx8rk"]
 _data = {
-"RESET": SubResource("1"),
-"press": SubResource("2")
+&"RESET": SubResource("1"),
+&"press": SubResource("2")
 }
 
 [sub_resource type="FontFile" id="14"]
+fallbacks = Array[Font]([ExtResource("1"), ExtResource("1")])
 subpixel_positioning = 0
 msdf_pixel_range = 14
 msdf_size = 128
-fallbacks = Array[Font]([ExtResource("1"), ExtResource("1")])
-face_index = null
-embolden = null
-transform = null
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0

@@ -5,8 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cs75vvw01oafl" path="res://principal/recursos/sprites/GMToutline.png" id="3_rhf5u"]
 
 [sub_resource type="Curve" id="Curve_fojjj"]
-min_value = -360.0
-max_value = 360.0
+_limits = [-360.0, 360.0, 0.0, 1.0]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.990196, 360), 0.0, 0.0, 0, 0]
 point_count = 2
 

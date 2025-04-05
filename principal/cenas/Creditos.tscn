@@ -1,15 +1,15 @@
 [gd_scene load_steps=16 format=3 uid="uid://bhkyw6qpi38e6"]
 
-[ext_resource type="Script" path="res://principal/cenas/scripts/TransitionButton.gd" id="2"]
+[ext_resource type="Script" uid="uid://blgobgb0ujtkr" path="res://principal/cenas/scripts/TransitionButton.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://breiq50cu5612" path="res://principal/cenas/BG.tscn" id="2_gn47d"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/TranslatableText.gd" id="5"]
+[ext_resource type="Script" uid="uid://i6y2mm407mm6" path="res://principal/cenas/scripts/TranslatableText.gd" id="5"]
 [ext_resource type="Theme" uid="uid://dt5djib7huxvm" path="res://principal/recursos/themes/ButtonTheme.tres" id="6"]
 [ext_resource type="PackedScene" uid="uid://dr5dxsgtiww88" path="res://principal/cenas/CreditosInfo.tscn" id="7_t6oxa"]
 [ext_resource type="PackedScene" uid="uid://dnhn2yadjkru6" path="res://principal/cenas/MinigameDisplay.tscn" id="8_rotds"]
 [ext_resource type="Theme" uid="uid://cb4tlwb81nq48" path="res://principal/recursos/themes/TitleTheme.tres" id="9"]
 [ext_resource type="Texture2D" uid="uid://d1pcvjogk0whm" path="res://principal/recursos/sprites/GMTIconSpritesheet.png" id="9_vqk2p"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/CreditsWinDisplay.gd" id="10_mlycp"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/Creditos.gd" id="11"]
+[ext_resource type="Script" uid="uid://cp1lvrreskaap" path="res://principal/cenas/scripts/CreditsWinDisplay.gd" id="10_mlycp"]
+[ext_resource type="Script" uid="uid://dyuwxnq6xo47r" path="res://principal/cenas/scripts/Creditos.gd" id="11"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_88gp3"]
 bg_color = Color(0.572549, 0.572549, 0.572549, 0)
@@ -63,9 +63,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5cvp6"]
 _data = {
-"RESET": SubResource("Animation_l0el1"),
-"lose": SubResource("Animation_dwgyt"),
-"win": SubResource("Animation_lltom")
+&"RESET": SubResource("Animation_l0el1"),
+&"lose": SubResource("Animation_dwgyt"),
+&"win": SubResource("Animation_lltom")
 }
 
 [node name="Credits" type="Node2D"]

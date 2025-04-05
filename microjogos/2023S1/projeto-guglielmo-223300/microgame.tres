@@ -1,8 +1,8 @@
-[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://c8uhfgavrf4eo"]
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3]
 
 [ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_aupcd"]
-[ext_resource type="Texture2D" uid="uid://b12l3gxpuafc" path="res://microjogos/2023S1/projeto-guglielmo-223300/capa.png" id="1_swybl"]
-[ext_resource type="PackedScene" uid="uid://dqgxc73w0nr63" path="res://microjogos/2023S1/projeto-guglielmo-223300/cenas/main.tscn" id="2_73dmv"]
+[ext_resource type="Texture2D" path="res://microjogos/2023S1/projeto-guglielmo-223300/capa.png" id="1_swybl"]
+[ext_resource type="PackedScene" path="res://microjogos/2023S1/projeto-guglielmo-223300/cenas/main.tscn" id="2_73dmv"]
 
 [resource]
 script = ExtResource("1_aupcd")

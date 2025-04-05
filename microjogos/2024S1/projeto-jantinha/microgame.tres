@@ -1,12 +1,12 @@
-[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://tgwfbkbexo64"]
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3]
 
 [ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_8omlt"]
-[ext_resource type="Texture2D" uid="uid://bkvcg7ivmjl0d" path="res://microjogos/2024S1/projeto-jantinha/capa.png" id="1_54ems"]
-[ext_resource type="PackedScene" uid="uid://bi0ahd7cv37i6" path="res://microjogos/2024S1/projeto-jantinha/cenas/main.tscn" id="2_niga3"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-jantinha/capa.png" id="1_vf6bw"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-jantinha/cenas/main.tscn" id="2_vf6bw"]
 
 [resource]
 script = ExtResource("1_8omlt")
-cover = ExtResource("1_54ems")
+cover = ExtResource("1_vf6bw")
 title_pt = &"Jantinha"
 title_en = &"Dinner time"
 credits_pt = "Criado por: Henrique Magalhães Ribeiro
@@ -17,5 +17,5 @@ credits_en = "Made by: Henrique Magalhães Ribeiro
 Sound Effects: https://pixabay.com/sound-effects/search/wolf/"
 start_message_pt = &"HORA DA JANTA"
 start_message_en = &"DINNER TIME"
-main_scene = ExtResource("2_niga3")
+main_scene = ExtResource("2_vf6bw")
 difficulty = 0

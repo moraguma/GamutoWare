@@ -1,21 +1,45 @@
 [gd_scene load_steps=15 format=3 uid="uid://jg4fqkyuoonw"]
 
 [ext_resource type="Texture2D" uid="uid://dogwrk2nqqk03" path="res://principal/recursos/sprites/excited.png" id="2"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/TransitionButton.gd" id="3"]
+[ext_resource type="Script" uid="uid://blgobgb0ujtkr" path="res://principal/cenas/scripts/TransitionButton.gd" id="3"]
 [ext_resource type="Texture2D" uid="uid://cs75vvw01oafl" path="res://principal/recursos/sprites/GMToutline.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://ja6urlsch5m7" path="res://principal/recursos/sprites/MenuBase.png" id="5"]
 [ext_resource type="Theme" uid="uid://cb4tlwb81nq48" path="res://principal/recursos/themes/TitleTheme.tres" id="5_nb20q"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/AutoplayIdleAnimationPlayer.gd" id="6"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/TranslatableText.gd" id="7"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/ToTitle.gd" id="8"]
+[ext_resource type="Script" uid="uid://spvmw4ssh0xx" path="res://principal/cenas/scripts/AutoplayIdleAnimationPlayer.gd" id="6"]
+[ext_resource type="Script" uid="uid://i6y2mm407mm6" path="res://principal/cenas/scripts/TranslatableText.gd" id="7"]
+[ext_resource type="Script" uid="uid://dsgo12vxotenh" path="res://principal/cenas/scripts/ToTitle.gd" id="8"]
 [ext_resource type="Material" uid="uid://bfefepnpbds1x" path="res://principal/recursos/shaders/Diamond.tres" id="9"]
 [ext_resource type="Theme" uid="uid://dt5djib7huxvm" path="res://principal/recursos/themes/ButtonTheme.tres" id="9_ek2g8"]
 
 [sub_resource type="Curve" id="Curve_fdtmv"]
-min_value = -360.0
-max_value = 360.0
+_limits = [-360.0, 360.0, 0.0, 1.0]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.990196, 360), 0.0, 0.0, 0, 0]
 point_count = 2
+
+[sub_resource type="Animation" id="Animation_jc2mm"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.3, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.3, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
 
 [sub_resource type="Animation" id="Animation_itf0j"]
 resource_name = "idle"
@@ -43,35 +67,10 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0.8, 1)
 }
 
-[sub_resource type="Animation" id="Animation_jc2mm"]
-length = 0.001
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0.3, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:scale:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0.3, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_eaanj"]
 _data = {
-"RESET": SubResource("Animation_jc2mm"),
-"idle": SubResource("Animation_itf0j")
+&"RESET": SubResource("Animation_jc2mm"),
+&"idle": SubResource("Animation_itf0j")
 }
 
 [node name="Vitoria" type="Node2D"]

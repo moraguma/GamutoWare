@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://dg5uxs8qt1qbc"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-brabesf/cenas/scripts/main.gd" id="1_fhjug"]
+[ext_resource type="Script" uid="uid://cncxcvvsupgya" path="res://microjogos/2023S1/projeto-brabesf/cenas/scripts/main.gd" id="1_fhjug"]
 [ext_resource type="Texture2D" uid="uid://dgkpur2irlsp4" path="res://microjogos/2023S1/projeto-brabesf/recursos/sprites/5586989.jpg" id="2_q1nam"]
 [ext_resource type="Texture2D" uid="uid://cce878bie0clp" path="res://microjogos/2023S1/projeto-brabesf/recursos/sprites/Cards.png" id="3_vc2bu"]
 [ext_resource type="Texture2D" uid="uid://mx2xp2nicnnd" path="res://microjogos/2023S1/projeto-brabesf/recursos/sprites/orange.png" id="4_u6h1q"]

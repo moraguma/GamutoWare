@@ -1,6 +1,6 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cb4tlwb81nq48"]
+[gd_resource type="Theme" load_steps=2 format=3]
 
-[ext_resource type="FontFile" uid="uid://cvvv4ta4o2y3l" path="res://principal/recursos/fonts/Delius_Unicase/DeliusUnicase-Bold.ttf" id="1_ywgrd"]
+[ext_resource type="FontFile" path="res://principal/recursos/fonts/Delius_Unicase/DeliusUnicase-Bold.ttf" id="1_ywgrd"]
 
 [resource]
 default_font = ExtResource("1_ywgrd")

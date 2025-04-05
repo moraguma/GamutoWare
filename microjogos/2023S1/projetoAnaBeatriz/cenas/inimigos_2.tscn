@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c8dd2hph341t7"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/inimigos_2.gd" id="2_wg8w2"]
+[ext_resource type="Script" uid="uid://ce532qssktq83" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/inimigos_2.gd" id="2_wg8w2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c5bxu"]
 size = Vector2(920, 299.286)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://n7g7kj0h3vxt"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-esteche/cenas/Asteroide.gd" id="1_i0vci"]
+[ext_resource type="Script" uid="uid://c33ikxlvg5bm4" path="res://microjogos/2023S1/projeto-esteche/cenas/Asteroide.gd" id="1_i0vci"]
 [ext_resource type="Texture2D" uid="uid://dq08qdq0vcaoa" path="res://microjogos/2023S1/projeto-esteche/recursos/sprites/Asteroid Brown.png" id="2_t2alo"]
 [ext_resource type="AudioStream" uid="uid://c48a4gj3u6f1x" path="res://microjogos/2023S1/projeto-esteche/recursos/sounds/explosion1.ogg" id="3_rku12"]
 

@@ -1,8 +1,8 @@
-[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://sf2itq0xun27"]
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3]
 
 [ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_46hhp"]
-[ext_resource type="Texture2D" uid="uid://cxjjj8rxs67d7" path="res://microjogos/2024S1/projeto-FastFood/capa.png" id="1_lehnm"]
-[ext_resource type="PackedScene" uid="uid://bi0ahd7cv37i6" path="res://microjogos/2024S1/projeto-FastFood/cenas/main.tscn" id="2_nbhlq"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-FastFood/capa.png" id="1_lehnm"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-FastFood/cenas/main.tscn" id="2_vwftq"]
 
 [resource]
 script = ExtResource("1_46hhp")
@@ -43,5 +43,5 @@ https://red-voxel.itch.io/
 public domain CC0"
 start_message_pt = &"FAÇA O PEDIDO"
 start_message_en = &"MAKE THE ORDER!"
-main_scene = ExtResource("2_nbhlq")
+main_scene = ExtResource("2_vwftq")
 difficulty = 0

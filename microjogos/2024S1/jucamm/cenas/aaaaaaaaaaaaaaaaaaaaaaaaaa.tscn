@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://maikal0ivixg"]
+[gd_scene load_steps=6 format=3]
 
-[ext_resource type="Texture2D" uid="uid://crmyv4of0j7w3" path="res://microjogos/2024S1/jucamm/recursos/facilitado0.png" id="1_v0q8d"]
-[ext_resource type="Texture2D" uid="uid://b0s6brpnsyjwt" path="res://microjogos/2024S1/jucamm/recursos/facilitado1.png" id="2_vigul"]
-[ext_resource type="Texture2D" uid="uid://ca5ga4pm8v6bt" path="res://microjogos/2024S1/jucamm/recursos/facilitado2.png" id="3_1uc74"]
-[ext_resource type="Texture2D" uid="uid://cqerm4615yb4v" path="res://microjogos/2024S1/jucamm/recursos/facilitado3.png" id="4_p6omm"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/jucamm/recursos/facilitado0.png" id="1_v0q8d"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/jucamm/recursos/facilitado1.png" id="2_vigul"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/jucamm/recursos/facilitado2.png" id="3_1uc74"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/jucamm/recursos/facilitado3.png" id="4_p6omm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sal8r"]
 animations = [{

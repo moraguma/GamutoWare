@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bfvh54l5qqwar" path="res://microjogos/moraguma/ifuv/recursos/sprites/bg.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://dsshfvye1lmdi" path="res://microjogos/moraguma/ifuv/recursos/sprites/monster.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://baudtlmadlgyv" path="res://microjogos/moraguma/ifuv/recursos/sprites/door.png" id="5"]
-[ext_resource type="Script" path="res://microjogos/moraguma/ifuv/cenas/scripts/Main.gd" id="6"]
+[ext_resource type="Script" uid="uid://cb1q8fdsic64j" path="res://microjogos/moraguma/ifuv/cenas/scripts/Main.gd" id="6"]
 [ext_resource type="AudioStream" uid="uid://beaxyttumkqns" path="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/Key3.wav" id="7"]
 [ext_resource type="AudioStream" uid="uid://xjc2c27wxqvb" path="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/Key4.wav" id="8"]
 [ext_resource type="AudioStream" uid="uid://ch03yulh8pnlf" path="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/Key1.wav" id="9"]
@@ -14,12 +14,12 @@
 [ext_resource type="AudioStream" uid="uid://yk083ye2bw2h" path="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/error.wav" id="12"]
 [ext_resource type="Texture2D" uid="uid://b06io5t3210bh" path="res://microjogos/moraguma/ifuv/recursos/sprites/pad.png" id="13"]
 [ext_resource type="PackedScene" uid="uid://bjm26yvl38ria" path="res://microjogos/moraguma/ifuv/cenas/NumberButton.tscn" id="14"]
-[ext_resource type="PackedScene" path="res://microjogos/moraguma/ifuv/cenas/EnterButton.tscn" id="15"]
-[ext_resource type="PackedScene" path="res://microjogos/moraguma/ifuv/cenas/EraseButton.tscn" id="16"]
+[ext_resource type="PackedScene" uid="uid://cya84ntij2frm" path="res://microjogos/moraguma/ifuv/cenas/EnterButton.tscn" id="15"]
+[ext_resource type="PackedScene" uid="uid://bobxtk8f0mr5g" path="res://microjogos/moraguma/ifuv/cenas/EraseButton.tscn" id="16"]
 [ext_resource type="Texture2D" uid="uid://bu010d1nfpkst" path="res://microjogos/moraguma/ifuv/recursos/sprites/cursor.png" id="17"]
 [ext_resource type="FontFile" uid="uid://censsrpbpgb4h" path="res://microjogos/moraguma/ifuv/recursos/fonts/Pixel Millennium.ttf" id="18"]
-[ext_resource type="Script" path="res://microjogos/moraguma/ifuv/cenas/scripts/Arrow.gd" id="19"]
-[ext_resource type="Script" path="res://microjogos/moraguma/ifuv/cenas/scripts/Twitcher.gd" id="20"]
+[ext_resource type="Script" uid="uid://bgc71yypx2i5f" path="res://microjogos/moraguma/ifuv/cenas/scripts/Arrow.gd" id="19"]
+[ext_resource type="Script" uid="uid://cphl5uiq4yt73" path="res://microjogos/moraguma/ifuv/cenas/scripts/Twitcher.gd" id="20"]
 [ext_resource type="Texture2D" uid="uid://dg6fsfxrkkikj" path="res://microjogos/moraguma/ifuv/recursos/sprites/paperslip.png" id="21"]
 [ext_resource type="AudioStream" uid="uid://bv852g6lkjsm6" path="res://microjogos/moraguma/ifuv/recursos/sounds/music/ifuv.ogg" id="22"]
 
@@ -120,8 +120,8 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_os2gd"]
 _data = {
-"RESET": SubResource("1"),
-"approaching": SubResource("2")
+&"RESET": SubResource("1"),
+&"approaching": SubResource("2")
 }
 
 [sub_resource type="Animation" id="3"]
@@ -185,8 +185,8 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t6uk2"]
 _data = {
-"RESET": SubResource("3"),
-"close": SubResource("4")
+&"RESET": SubResource("3"),
+&"close": SubResource("4")
 }
 
 [sub_resource type="AtlasTexture" id="5"]
@@ -241,6 +241,9 @@ animations = [{
 
 [sub_resource type="FontFile" id="14"]
 fallbacks = Array[Font]([ExtResource("18")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -263,6 +266,9 @@ RichTextLabel/font_sizes/normal_font_size = 8
 
 [sub_resource type="FontFile" id="16"]
 fallbacks = Array[Font]([ExtResource("18")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0

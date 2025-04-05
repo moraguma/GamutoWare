@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://cjme8wnqg17an"]
 
-[ext_resource type="Script" path="res://microjogos/moraguma/candle prick/cenas/scripts/Element.gd" id="1"]
+[ext_resource type="Script" uid="uid://c1j1r2s5vu3qd" path="res://microjogos/moraguma/candle prick/cenas/scripts/Element.gd" id="1"]
 [ext_resource type="PackedScene" path="res://microjogos/moraguma/candle prick/cenas/LightModule.tscn" id="2"]
 [ext_resource type="Texture2D" uid="uid://bmeepox12qo7g" path="res://microjogos/moraguma/candle prick/recursos/sprites/candle.png" id="3"]
 [ext_resource type="AudioStream" uid="uid://b3e1jdefk3tox" path="res://microjogos/moraguma/candle prick/recursos/sounds/stab.wav" id="4"]
@@ -70,9 +70,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_eosvk"]
 _data = {
-"RESET": SubResource("2"),
-"idle": SubResource("3"),
-"pop": SubResource("4")
+&"RESET": SubResource("2"),
+&"idle": SubResource("3"),
+&"pop": SubResource("4")
 }
 
 [node name="Candle" type="Area2D"]

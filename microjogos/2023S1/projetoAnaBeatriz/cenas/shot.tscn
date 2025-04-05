@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bdxg1iljtis02"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/shot.gd" id="1_odbk1"]
+[ext_resource type="Script" uid="uid://barcqpy7ffoc3" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/shot.gd" id="1_odbk1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_eg8fb"]
 radius = 8.0

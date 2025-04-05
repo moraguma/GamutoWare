@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://dv28f7nw1t7i1"]
 
-[ext_resource type="Script" path="res://microjogos/moraguma/candle prick/cenas/scripts/Player.gd" id="1"]
+[ext_resource type="Script" uid="uid://qhgdf8jxeqbs" path="res://microjogos/moraguma/candle prick/cenas/scripts/Player.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://c7utftnuq5qdp" path="res://microjogos/moraguma/candle prick/recursos/sprites/ghost.png" id="2"]
-[ext_resource type="PackedScene" path="res://microjogos/moraguma/candle prick/cenas/LightModule.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://6t6kjfekq5fc" path="res://microjogos/moraguma/candle prick/cenas/LightModule.tscn" id="3"]
 [ext_resource type="AudioStream" uid="uid://b7o588l46lavp" path="res://microjogos/moraguma/candle prick/recursos/sounds/move.wav" id="4"]
 [ext_resource type="AudioStream" uid="uid://cl4mtgihtemco" path="res://microjogos/moraguma/candle prick/recursos/sounds/nope.wav" id="5"]
 
@@ -43,8 +43,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xe3te"]
 _data = {
-"RESET": SubResource("2"),
-"idle": SubResource("3")
+&"RESET": SubResource("2"),
+&"idle": SubResource("3")
 }
 
 [node name="Player" type="Area2D"]

@@ -2,16 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://cs75vvw01oafl" path="res://principal/recursos/sprites/GMToutline.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://ja6urlsch5m7" path="res://principal/recursos/sprites/MenuBase.png" id="3"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/GameOver.gd" id="4"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/TransitionButton.gd" id="5"]
+[ext_resource type="Script" uid="uid://d23ein12xwrnl" path="res://principal/cenas/scripts/GameOver.gd" id="4"]
+[ext_resource type="Script" uid="uid://blgobgb0ujtkr" path="res://principal/cenas/scripts/TransitionButton.gd" id="5"]
 [ext_resource type="Theme" uid="uid://cb4tlwb81nq48" path="res://principal/recursos/themes/TitleTheme.tres" id="5_oy72l"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/TranslatableText.gd" id="6"]
+[ext_resource type="Script" uid="uid://i6y2mm407mm6" path="res://principal/cenas/scripts/TranslatableText.gd" id="6"]
 [ext_resource type="Material" uid="uid://bfefepnpbds1x" path="res://principal/recursos/shaders/Diamond.tres" id="7"]
 [ext_resource type="Theme" uid="uid://dt5djib7huxvm" path="res://principal/recursos/themes/ButtonTheme.tres" id="8"]
 
 [sub_resource type="Curve" id="Curve_bvt3g"]
-min_value = -360.0
-max_value = 360.0
+_limits = [-360.0, 360.0, 0.0, 1.0]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.990196, 360), 0.0, 0.0, 0, 0]
 point_count = 2
 

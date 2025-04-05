@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://rl6ndtum3pap"]
+[gd_scene load_steps=6 format=3]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/jucamm/cenas/RigidBody2D.gd" id="1_qqbmj"]
-[ext_resource type="Texture2D" uid="uid://bpyjbdvt81uop" path="res://microjogos/2024S1/jucamm/recursos/bola basket.png" id="2_axee8"]
-[ext_resource type="AudioStream" uid="uid://dwqjjgrubj2o4" path="res://microjogos/2024S1/jucamm/recursos/51461__andrenascimento__basket_ball_02_bounce.wav" id="3_b6cwg"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/jucamm/recursos/bola basket.png" id="2_axee8"]
+[ext_resource type="AudioStream" path="res://microjogos/2024S1/jucamm/recursos/51461__andrenascimento__basket_ball_02_bounce.wav" id="3_b6cwg"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_c6s2k"]
 

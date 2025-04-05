@@ -1,8 +1,8 @@
-[gd_scene load_steps=24 format=3 uid="uid://botov3x1oaokx"]
+[gd_scene load_steps=24 format=3]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-estrela/cenas/scripts/CharacterBody2D.gd" id="1_06xe5"]
-[ext_resource type="AudioStream" uid="uid://dsuaafsm815av" path="res://microjogos/2024S1/projeto-estrela/recursos/quack.mp3" id="3_ircyp"]
-[ext_resource type="Texture2D" uid="uid://cc3npoo5jwtk0" path="res://microjogos/2024S1/projeto-estrela/recursos/PATÃO.png" id="3_lim82"]
+[ext_resource type="AudioStream" path="res://microjogos/2024S1/projeto-estrela/recursos/quack.mp3" id="3_ircyp"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-estrela/recursos/PATÃO.png" id="3_lim82"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h1wop"]
 radius = 131.137

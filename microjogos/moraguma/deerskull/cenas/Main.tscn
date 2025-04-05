@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://ctrgtmrh5lpp6" path="res://microjogos/moraguma/deerskull/recursos/sprites/bg.png" id="1"]
 [ext_resource type="AudioStream" uid="uid://dkeg421ef3dsq" path="res://microjogos/moraguma/deerskull/recursos/sounds/music/music.ogg" id="2"]
-[ext_resource type="Script" path="res://microjogos/moraguma/deerskull/cenas/scripts/Main.gd" id="3"]
-[ext_resource type="Script" path="res://microjogos/moraguma/deerskull/cenas/scripts/BG.gd" id="4"]
+[ext_resource type="Script" uid="uid://b0ds5gyev5t7s" path="res://microjogos/moraguma/deerskull/cenas/scripts/Main.gd" id="3"]
+[ext_resource type="Script" uid="uid://dvsbuagtpgppc" path="res://microjogos/moraguma/deerskull/cenas/scripts/BG.gd" id="4"]
 [ext_resource type="PackedScene" uid="uid://be1s2on25iqi7" path="res://microjogos/moraguma/deerskull/cenas/Player.tscn" id="5"]
 
 [sub_resource type="Curve2D" id="1"]

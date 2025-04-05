@@ -1,14 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=10 format=3]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-leticia/cenas/scripts/main.gd" id="1_rw4ml"]
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-leticia/cenas/scripts/carro_policia.gd" id="3_86nno"]
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-leticia/cenas/scripts/ParallaxBackground.gd" id="7_06ocg"]
-[ext_resource type="Texture2D" uid="uid://dloio4a5ieee0" path="res://microjogos/2024S1/projeto-leticia/recursos/back.png" id="7_uogsr"]
-[ext_resource type="Texture2D" uid="uid://bp2dyc3l183kv" path="res://microjogos/2024S1/projeto-leticia/recursos/buildings.png" id="8_85svw"]
-[ext_resource type="Texture2D" uid="uid://cqj3stfrxjjdj" path="res://microjogos/2024S1/projeto-leticia/recursos/highway.png" id="9_0x86q"]
-[ext_resource type="PackedScene" uid="uid://wqrg04pq4qjo" path="res://microjogos/2024S1/projeto-leticia/cenas/carro_policia.tscn" id="103_2jaq6"]
-[ext_resource type="PackedScene" uid="uid://crcmfnefx1oio" path="res://microjogos/2024S1/projeto-leticia/cenas/carro_principal.tscn" id="104_2yf1n"]
-[ext_resource type="AudioStream" uid="uid://chfbmnr371qg7" path="res://microjogos/2024S1/projeto-leticia/recursos/lofi.ogg" id="106_vcip7"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-leticia/recursos/back.png" id="7_uogsr"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-leticia/recursos/buildings.png" id="8_85svw"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-leticia/recursos/highway.png" id="9_0x86q"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-leticia/cenas/carro_policia.tscn" id="103_2jaq6"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-leticia/cenas/carro_principal.tscn" id="104_2yf1n"]
+[ext_resource type="AudioStream" path="res://microjogos/2024S1/projeto-leticia/recursos/lofi.ogg" id="106_vcip7"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_rw4ml")

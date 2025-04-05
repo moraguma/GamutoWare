@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://l2wyijspia5i"]
 
 [ext_resource type="AudioStream" uid="uid://dl115sdxxo83o" path="res://principal/recursos/sounds/music/Menu.ogg" id="1"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/SoundController.gd" id="2"]
+[ext_resource type="Script" uid="uid://cfnt1e3r8s6wk" path="res://principal/cenas/scripts/SoundController.gd" id="2"]
 [ext_resource type="AudioStream" uid="uid://c33urwvdqrcb2" path="res://principal/recursos/sounds/music/GameIntro.ogg" id="3"]
 [ext_resource type="AudioStream" uid="uid://d30uubn5314a5" path="res://principal/recursos/sounds/music/GameLoop.ogg" id="4"]
 [ext_resource type="AudioStream" uid="uid://cycxh1stplo2i" path="res://principal/recursos/sounds/SFX/Throw.wav" id="5"]

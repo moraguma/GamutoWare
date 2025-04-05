@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://crcmfnefx1oio"]
+[gd_scene load_steps=4 format=3]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-leticia/cenas/scripts/carro_principal.gd" id="1_6wf1o"]
-[ext_resource type="Texture2D" uid="uid://ucv1bg5u1tim" path="res://microjogos/2024S1/projeto-leticia/recursos/carro_azul.png" id="1_mh4gm"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-leticia/recursos/carro_azul.png" id="1_mh4gm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8bhfp"]
 size = Vector2(307, 94.2072)

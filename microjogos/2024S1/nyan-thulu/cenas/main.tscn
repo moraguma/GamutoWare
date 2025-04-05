@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=5 format=3]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/nyan-thulu/cenas/scripts/main.gd" id="1_31gxf"]
-[ext_resource type="PackedScene" uid="uid://dfili7vccjfht" path="res://microjogos/2024S1/nyan-thulu/cenas/enemy.tscn" id="2_d0ga4"]
-[ext_resource type="Texture2D" uid="uid://d2vkb6jxul1pi" path="res://microjogos/2024S1/nyan-thulu/recursos/Cartoon_green_texture_grass.jpg" id="3_lmyr4"]
-[ext_resource type="PackedScene" uid="uid://dv0x5ftif1q5g" path="res://microjogos/2024S1/nyan-thulu/cenas/player.tscn" id="4_4wsic"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/nyan-thulu/cenas/enemy.tscn" id="2_d0ga4"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/nyan-thulu/recursos/Cartoon_green_texture_grass.jpg" id="3_lmyr4"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/nyan-thulu/cenas/player.tscn" id="4_4wsic"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_31gxf")

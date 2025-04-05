@@ -1,9 +1,9 @@
 [gd_scene load_steps=13 format=3 uid="uid://c1oq5ibmk5d8q"]
 
-[ext_resource type="Script" path="res://microjogos/moraguma/whale_eater/cenas/scripts/Player.gd" id="1"]
+[ext_resource type="Script" uid="uid://blta57jvy0d6m" path="res://microjogos/moraguma/whale_eater/cenas/scripts/Player.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://bqb638hsr2w4v" path="res://microjogos/moraguma/whale_eater/recursos/sprites/player.png" id="2"]
 [ext_resource type="AudioStream" uid="uid://buoq3th5ltucr" path="res://microjogos/moraguma/whale_eater/recursos/sounds/sfx/PlayerLand.wav" id="3"]
-[ext_resource type="Script" path="res://microjogos/moraguma/whale_eater/cenas/scripts/AnimationPlayer.gd" id="4"]
+[ext_resource type="Script" uid="uid://baa14o0jawjqi" path="res://microjogos/moraguma/whale_eater/cenas/scripts/AnimationPlayer.gd" id="4"]
 
 [sub_resource type="CircleShape2D" id="7"]
 radius = 8.0
@@ -118,12 +118,12 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_12kvf"]
 _data = {
-"RESET": SubResource("1"),
-"float": SubResource("2"),
-"idle": SubResource("3"),
-"land": SubResource("4"),
-"spin": SubResource("5"),
-"walk": SubResource("6")
+&"RESET": SubResource("1"),
+&"float": SubResource("2"),
+&"idle": SubResource("3"),
+&"land": SubResource("4"),
+&"spin": SubResource("5"),
+&"walk": SubResource("6")
 }
 
 [node name="Player" type="CharacterBody2D"]

@@ -1,8 +1,8 @@
-[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://dkay07nd31jve"]
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3]
 
-[ext_resource type="Texture2D" uid="uid://n1xi0j7uo83l" path="res://microjogos/2024S1/projeto-leticia/capa.png" id="1_euupp"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-leticia/capa.png" id="1_euupp"]
 [ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_iq1my"]
-[ext_resource type="PackedScene" uid="uid://bi0ahd7cv37i6" path="res://microjogos/2024S1/projeto-leticia/cenas/main.tscn" id="2_8secn"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-leticia/cenas/main.tscn" id="2_6xjh3"]
 
 [resource]
 script = ExtResource("1_iq1my")
@@ -22,5 +22,5 @@ Police Car by ID 271959037 © Ddshutter | Dreamstime.com
 Rain, Book And Cup Of Tea by | e s c p | https://www.escp.space"
 start_message_pt = &"FUJA!"
 start_message_en = &"ESCAPE!"
-main_scene = ExtResource("2_8secn")
+main_scene = ExtResource("2_6xjh3")
 difficulty = 0

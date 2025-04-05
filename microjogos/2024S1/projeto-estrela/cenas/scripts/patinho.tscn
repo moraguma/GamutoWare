@@ -1,8 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://dsfppy6si105e"]
+[gd_scene load_steps=23 format=3]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-estrela/cenas/scripts/patinho.gd" id="1_adfd0"]
-[ext_resource type="Texture2D" uid="uid://clgs80ombyml7" path="res://microjogos/2024S1/projeto-estrela/recursos/patinhopix2.png" id="2_mxv7m"]
-[ext_resource type="Texture2D" uid="uid://c43i1iyaww5dk" path="res://microjogos/2024S1/projeto-estrela/recursos/patinhopix.direita.png" id="3_ksiw7"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-estrela/recursos/patinhopix2.png" id="2_mxv7m"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-estrela/recursos/patinhopix.direita.png" id="3_ksiw7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r7rko"]
 radius = 81.0247

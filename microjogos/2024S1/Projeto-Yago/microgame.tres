@@ -1,8 +1,8 @@
-[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://c48kh0d0dywit"]
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3]
 
 [ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_7hrs2"]
-[ext_resource type="PackedScene" uid="uid://bi0ahd7cv37i6" path="res://microjogos/2024S1/Projeto-Yago/cenas/main.tscn" id="1_botba"]
-[ext_resource type="Texture2D" uid="uid://b46ghbxbis6lo" path="res://microjogos/2024S1/Projeto-Yago/capa.png" id="1_twkme"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/Projeto-Yago/capa.png" id="1_twkme"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/Projeto-Yago/cenas/main.tscn" id="2_47tvr"]
 
 [resource]
 script = ExtResource("1_7hrs2")
@@ -14,5 +14,5 @@ credits_en = "https://www.postermywall.com/index.php/art/template/d7dfa26f8c8c75
 Made by: [Yago Eizo Yonemura]"
 start_message_pt = &"COMPRE!"
 start_message_en = &"BUY!"
-main_scene = ExtResource("1_botba")
+main_scene = ExtResource("2_47tvr")
 difficulty = 0

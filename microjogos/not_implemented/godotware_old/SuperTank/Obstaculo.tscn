@@ -1,31 +1,25 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=3 format=3 uid="uid://bsm53qb3r4wvv"]
 
-[ext_resource path="res://iconware.png" type="Texture2D" id=1]
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(32.7114, 32.3358)
 
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-size = Vector2( 32.7114, 32.3358 )
+[sub_resource type="Resource" id="Resource_1hjon"]
+metadata/__load_path__ = "res://iconware.png"
 
 [node name="Obstaculo" type="Area2D"]
-
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/shape = SubResource("1")
+shapes/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
 shapes/0/trigger = false
-gravity_direction = Vector2( 0, 1 )
+gravity_direction = Vector2(0, 1)
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-
-texture = ExtResource( 1 )
+texture = SubResource("Resource_1hjon")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-
-shape = SubResource( 1 )
+shape = SubResource("1")
 trigger = false
 _update_shape_index = 0
-
-

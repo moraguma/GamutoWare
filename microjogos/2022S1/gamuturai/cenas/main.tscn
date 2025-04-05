@@ -1,18 +1,18 @@
 [gd_scene load_steps=37 format=3 uid="uid://cqphd8ut3m756"]
 
-[ext_resource type="Script" path="res://microjogos/2022S1/gamuturai/cenas/scripts/main.gd" id="1"]
+[ext_resource type="Script" uid="uid://cd2ka0s1cunw4" path="res://microjogos/2022S1/gamuturai/cenas/scripts/main.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://c6nfyxsgdqr8c" path="res://microjogos/2022S1/gamuturai/recursos/Barrinha.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://ca0ywq7o242hd" path="res://microjogos/2022S1/gamuturai/recursos/FGUNDAO2.png" id="3_frve6"]
-[ext_resource type="Script" path="res://microjogos/2022S1/gamuturai/cenas/Espada.gd" id="4"]
+[ext_resource type="Script" uid="uid://borbt7k5dx8vs" path="res://microjogos/2022S1/gamuturai/cenas/Espada.gd" id="4"]
 [ext_resource type="Texture2D" uid="uid://boomx1qux1pq7" path="res://microjogos/2022S1/gamuturai/recursos/gamutorai-todos.png" id="5"]
-[ext_resource type="Script" path="res://microjogos/2022S1/gamuturai/cenas/Gamuturai.gd" id="6"]
+[ext_resource type="Script" uid="uid://bwlh05yogvxb3" path="res://microjogos/2022S1/gamuturai/cenas/Gamuturai.gd" id="6"]
 [ext_resource type="Texture2D" uid="uid://bgy2kbi5l5ni8" path="res://microjogos/2022S1/gamuturai/recursos/New Piskel.png" id="7_1p18t"]
 [ext_resource type="Texture2D" uid="uid://bmulo4yi83sa" path="res://microjogos/2022S1/gamuturai/recursos/folha.png" id="8"]
 [ext_resource type="Texture2D" uid="uid://oaay72pklbd6" path="res://microjogos/2022S1/gamuturai/recursos/BambuDoBalocobaco.png" id="10"]
 [ext_resource type="Texture2D" uid="uid://dtitgbci3fhpl" path="res://microjogos/2022S1/gamuturai/recursos/Panda.png" id="11"]
 [ext_resource type="Texture2D" uid="uid://5m6yp3avumvy" path="res://microjogos/2022S1/gamuturai/recursos/folha(amongus)(1).png" id="11_7ysg3"]
-[ext_resource type="Script" path="res://microjogos/2022S1/gamuturai/cenas/ShakeCamera2D.gd" id="12"]
-[ext_resource type="Script" path="res://microjogos/2022S1/gamuturai/cenas/PandaDoBalacobaco.gd" id="13"]
+[ext_resource type="Script" uid="uid://cr7c7ykyfhadm" path="res://microjogos/2022S1/gamuturai/cenas/ShakeCamera2D.gd" id="12"]
+[ext_resource type="Script" uid="uid://0fnhypoys26y" path="res://microjogos/2022S1/gamuturai/cenas/PandaDoBalacobaco.gd" id="13"]
 [ext_resource type="AudioStream" uid="uid://dvqb0rqjq6vt8" path="res://microjogos/2022S1/gamuturai/sons/morte.wav" id="14"]
 [ext_resource type="AudioStream" uid="uid://0453uyrhkp48" path="res://microjogos/2022S1/gamuturai/sons/slash.wav" id="15"]
 [ext_resource type="AudioStream" uid="uid://cm70fysg5nvag" path="res://microjogos/2022S1/gamuturai/sons/panda.wav" id="16"]
@@ -389,11 +389,11 @@ tracks/7/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k7gop"]
 _data = {
-"Iddle": SubResource("Animation_ij1mx"),
-"RESET": SubResource("Animation_3dxoi"),
-"half": SubResource("Animation_enu8l"),
-"lose": SubResource("Animation_s7te6"),
-"win": SubResource("Animation_em2wn")
+&"Iddle": SubResource("Animation_ij1mx"),
+&"RESET": SubResource("Animation_3dxoi"),
+&"half": SubResource("Animation_enu8l"),
+&"lose": SubResource("Animation_s7te6"),
+&"win": SubResource("Animation_em2wn")
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kswpj"]

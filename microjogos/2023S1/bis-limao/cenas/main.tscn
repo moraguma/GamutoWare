@@ -1,9 +1,9 @@
 [gd_scene load_steps=13 format=3 uid="uid://md5kotfjs6lq"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/bis-limao/cenas/scripts/main.gd" id="1_ow836"]
+[ext_resource type="Script" uid="uid://cauqmu8hfd6o2" path="res://microjogos/2023S1/bis-limao/cenas/scripts/main.gd" id="1_ow836"]
 [ext_resource type="Texture2D" uid="uid://ci0eq5fj5mmlx" path="res://microjogos/2023S1/bis-limao/recursos/gamuto.png" id="2_yqach"]
 [ext_resource type="Texture2D" uid="uid://dcmtjn4tkgm8u" path="res://microjogos/2023S1/bis-limao/recursos/background novo.png" id="3_3rc8f"]
-[ext_resource type="Script" path="res://microjogos/2023S1/bis-limao/cenas/scripts/gamuto.gd" id="4_stjrp"]
+[ext_resource type="Script" uid="uid://bp35ymy7ce13n" path="res://microjogos/2023S1/bis-limao/cenas/scripts/gamuto.gd" id="4_stjrp"]
 [ext_resource type="Texture2D" uid="uid://d0e21ar0vx5kb" path="res://microjogos/2023S1/bis-limao/recursos/seta.png" id="5_1ywgu"]
 [ext_resource type="Animation" uid="uid://ce7mea400wrua" path="res://microjogos/2023S1/bis-limao/recursos/bye_lemon_anim.res" id="5_2w07m"]
 [ext_resource type="Texture2D" uid="uid://hrdus5lya23d" path="res://microjogos/2023S1/bis-limao/recursos/spacebar.png" id="6_2kbr5"]
@@ -52,9 +52,9 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bwsx4"]
 _data = {
-"RESET": ExtResource("5_2w07m"),
-"blue_eaten": ExtResource("6_tjyqm"),
-"bye_lemon": SubResource("Animation_u3vr4")
+&"RESET": ExtResource("5_2w07m"),
+&"blue_eaten": ExtResource("6_tjyqm"),
+&"bye_lemon": SubResource("Animation_u3vr4")
 }
 
 [node name="Main" type="Node2D"]

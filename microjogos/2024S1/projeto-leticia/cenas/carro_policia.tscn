@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://wqrg04pq4qjo"]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="Texture2D" uid="uid://brogtoimnit48" path="res://microjogos/2024S1/projeto-leticia/recursos/carro policia.png" id="1_tl22c"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-leticia/recursos/carro policia.png" id="1_tl22c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3sfcy"]
 size = Vector2(487, 97.7963)

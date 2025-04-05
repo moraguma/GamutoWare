@@ -44,8 +44,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
-	var resultado  = $resultado
-	
 	#entrada dos botoes
 	if Input.is_action_just_pressed("cima") and tentativas <=4:
 		bot_atual = "1"

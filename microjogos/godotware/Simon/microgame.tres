@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=3 format=3 uid="uid://cf17wbtsfxdm1"]
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_rc2nu"]
 [ext_resource type="PackedScene" path="res://microjogos/godotware/Simon/Main.tscn" id="1_x3ipl"]

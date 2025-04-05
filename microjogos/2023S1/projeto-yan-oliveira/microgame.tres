@@ -1,8 +1,8 @@
-[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://dt26o5q8jl8tt"]
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3]
 
-[ext_resource type="Texture2D" uid="uid://ds2yptk8rhaww" path="res://microjogos/2023S1/projeto-yan-oliveira/capa.png" id="1_c1st8"]
+[ext_resource type="Texture2D" path="res://microjogos/2023S1/projeto-yan-oliveira/capa.png" id="1_c1st8"]
 [ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_rdkg0"]
-[ext_resource type="PackedScene" uid="uid://da2h160pqjtfs" path="res://microjogos/2023S1/projeto-yan-oliveira/cenas/main.tscn" id="2_0a1xe"]
+[ext_resource type="PackedScene" path="res://microjogos/2023S1/projeto-yan-oliveira/cenas/main.tscn" id="2_0a1xe"]
 
 [resource]
 script = ExtResource("1_rdkg0")

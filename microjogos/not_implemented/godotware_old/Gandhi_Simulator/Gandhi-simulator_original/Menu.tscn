@@ -1,18 +1,27 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=7 format=3 uid="uid://dhby4k0m2l463"]
 
-[ext_resource path="res://Menu.gd" type="Script" id=1]
-[ext_resource path="res://Cenas/start.png" type="Texture2D" id=2]
-[ext_resource path="res://Cenas/tela_inicial.png" type="Texture2D" id=3]
-[ext_resource path="res://Cenas/Creditos.png" type="Texture2D" id=4]
-[ext_resource path="res://Personagens/Gandhi1.png" type="Texture2D" id=5]
-[ext_resource path="res://Audio/Música_menu.ogg" type="AudioStream" id=6]
+[sub_resource type="Resource" id="Resource_ex7q4"]
+metadata/__load_path__ = "res://Menu.gd"
+
+[sub_resource type="Resource" id="Resource_kb7qt"]
+metadata/__load_path__ = "res://Cenas/start.png"
+
+[sub_resource type="Resource" id="Resource_4pang"]
+metadata/__load_path__ = "res://Cenas/tela_inicial.png"
+
+[sub_resource type="Resource" id="Resource_7wy5m"]
+metadata/__load_path__ = "res://Cenas/Creditos.png"
+
+[sub_resource type="Resource" id="Resource_c3680"]
+metadata/__load_path__ = "res://Personagens/Gandhi1.png"
+
+[sub_resource type="Resource" id="Resource_is2ot"]
+metadata/__load_path__ = "res://Audio/Música_menu.ogg"
 
 [node name="Node2D" type="Node2D"]
-
-script/script = ExtResource( 1 )
+script/script = SubResource("Resource_ex7q4")
 
 [node name="Button" type="Button" parent="."]
-
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -27,19 +36,16 @@ shortcut = null
 flat = false
 
 [node name="Sprite2D" type="Sprite2D" parent="Button"]
-
-transform/pos = Vector2( 103.099, 34.1203 )
-transform/scale = Vector2( 0.658821, 0.572407 )
-texture = ExtResource( 2 )
+transform/pos = Vector2(103.099, 34.1203)
+transform/scale = Vector2(0.658821, 0.572407)
+texture = SubResource("Resource_kb7qt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-
 visibility/behind_parent = true
-transform/pos = Vector2( 640, 360 )
-texture = ExtResource( 3 )
+transform/pos = Vector2(640, 360)
+texture = SubResource("Resource_4pang")
 
 [node name="Button 2" type="Button" parent="."]
-
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -54,20 +60,17 @@ shortcut = null
 flat = false
 
 [node name="Sprite2D" type="Sprite2D" parent="Button 2"]
-
-transform/pos = Vector2( 117.565, 34.3308 )
-transform/scale = Vector2( 0.746245, 0.677219 )
-texture = ExtResource( 4 )
+transform/pos = Vector2(117.565, 34.3308)
+transform/scale = Vector2(0.746245, 0.677219)
+texture = SubResource("Resource_7wy5m")
 
 [node name="Sprite2D 2" type="Sprite2D" parent="."]
-
-transform/pos = Vector2( 1062.5, 443.642 )
-transform/scale = Vector2( 0.469272, 0.467484 )
-texture = ExtResource( 5 )
+transform/pos = Vector2(1062.5, 443.642)
+transform/scale = Vector2(0.469272, 0.467484)
+texture = SubResource("Resource_c3680")
 
 [node name="StreamPlayer" type="StreamPlayer" parent="."]
-
-stream/stream = ExtResource( 6 )
+stream/stream = SubResource("Resource_is2ot")
 stream/play = true
 stream/loop = false
 stream/volume_db = 15.0
@@ -77,7 +80,4 @@ stream/loop_restart_time = 0.0
 stream/buffering_ms = 500
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
-
 [connection signal="pressed" from="Button 2" to="." method="_on_Button_2_pressed"]
-
-

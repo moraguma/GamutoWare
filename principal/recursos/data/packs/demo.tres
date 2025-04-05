@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="MicrogamePack" load_steps=4 format=3 uid="uid://dw4nuyx1g5u3v"]
+[gd_resource type="Resource" script_class="MicrogamePack" load_steps=5 format=3]
 
+[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_3pjuu"]
 [ext_resource type="Script" path="res://principal/recursos/data/MicrogamePack.gd" id="1_e6qtn"]
-[ext_resource type="Resource" uid="uid://cidgco3cp8osr" path="res://microjogos/demo/tiro_ao_alvo/microgame.tres" id="1_po08r"]
-[ext_resource type="Resource" uid="uid://conkkubhmdnan" path="res://microjogos/demo/frogger/microgame.tres" id="2_73db5"]
+[ext_resource type="Resource" path="res://microjogos/demo/tiro_ao_alvo/microgame.tres" id="1_po08r"]
+[ext_resource type="Resource" path="res://microjogos/demo/frogger/microgame.tres" id="2_73db5"]
 
 [resource]
 script = ExtResource("1_e6qtn")
 pack_name = &"Demo"
-microgames = Array[Resource("res://principal/microgame_asset.gd")]([ExtResource("1_po08r"), ExtResource("2_73db5")])
+microgames = Array[ExtResource("1_3pjuu")]([ExtResource("1_po08r"), ExtResource("2_73db5")])

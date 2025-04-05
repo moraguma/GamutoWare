@@ -1,7 +1,7 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://b47o3eh6wmwgj"]
+[gd_resource type="TileSet" load_steps=5 format=3]
 
-[ext_resource type="Texture2D" uid="uid://bgtr2c0jbmvbo" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/Tilemap/monochrome_tilemap_packed_scaled_6x_pngcrushed.png" id="1_1t4e4"]
-[ext_resource type="Texture2D" uid="uid://1e33hn1tkmh6" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/Tilemap/monochrome_tilemap_transparent_packed_scaled_6x_pngcrushed.png" id="2_dask0"]
+[ext_resource type="Texture2D" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/Tilemap/monochrome_tilemap_packed_scaled_6x_pngcrushed.png" id="1_1t4e4"]
+[ext_resource type="Texture2D" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/Tilemap/monochrome_tilemap_transparent_packed_scaled_6x_pngcrushed.png" id="2_dask0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ho8vt"]
 texture = ExtResource("1_1t4e4")

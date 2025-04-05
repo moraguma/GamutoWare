@@ -1,8 +1,8 @@
-[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://c6h8hn0js3ujx"]
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3]
 
-[ext_resource type="Texture2D" uid="uid://dfl2je4j3f5ag" path="res://microjogos/2023S1/mail_cleaner/capa.png" id="1_80r4g"]
+[ext_resource type="Texture2D" path="res://microjogos/2023S1/mail_cleaner/capa.png" id="1_80r4g"]
 [ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_id2f1"]
-[ext_resource type="PackedScene" uid="uid://bwf53xp28gd35" path="res://microjogos/2023S1/mail_cleaner/cenas/main.tscn" id="1_vx0x5"]
+[ext_resource type="PackedScene" path="res://microjogos/2023S1/mail_cleaner/cenas/main.tscn" id="1_vx0x5"]
 
 [resource]
 script = ExtResource("1_id2f1")

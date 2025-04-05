@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6s6bacidswnq"]
+[gd_scene load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-eco-g/cenas/scripts/stone.gd" id="1_ftpdb"]
-
 
 [sub_resource type="Gradient" id="Gradient_jnv0i"]
 offsets = PackedFloat32Array(0, 0.233333, 0.526667, 0.78, 1)

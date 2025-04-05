@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=3 format=3 uid="uid://d2t0o5va7rwk"]
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=3 format=3]
 
-[ext_resource type="Texture2D" uid="uid://dckwaw103r1cc" path="res://principal/recursos/sprites/capagmtware.png" id="1_8nbo0"]
+[ext_resource type="Texture2D" path="res://principal/recursos/sprites/capagmtware.png" id="1_8nbo0"]
 [ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_hbu11"]
 
 [resource]

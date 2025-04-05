@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://dqcxt8bqxi2kk"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto_alexia/cenas/scripts/main.gd" id="1_burau"]
+[ext_resource type="Script" uid="uid://cc58sjc2rhs8v" path="res://microjogos/2023S1/projeto_alexia/cenas/scripts/main.gd" id="1_burau"]
 [ext_resource type="Texture2D" uid="uid://ssv0d2w1iqai" path="res://microjogos/2023S1/projeto_alexia/recursos/fundocomtexto.png" id="2_xhhxm"]
 [ext_resource type="PackedScene" uid="uid://ce3ee5mdg7u1e" path="res://microjogos/2023S1/projeto_alexia/cenas/Livro1.tscn" id="3_h6603"]
 [ext_resource type="PackedScene" uid="uid://clhma2nyl4uev" path="res://microjogos/2023S1/projeto_alexia/cenas/Livro2.tscn" id="4_8go4c"]

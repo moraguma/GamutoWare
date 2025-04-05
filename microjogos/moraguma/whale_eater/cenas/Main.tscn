@@ -1,11 +1,11 @@
 [gd_scene load_steps=16 format=3 uid="uid://dvwoaxdlv7rpl"]
 
-[ext_resource type="Script" path="res://microjogos/moraguma/whale_eater/cenas/scripts/Main.gd" id="2"]
+[ext_resource type="Script" uid="uid://8m6p7u0ak8iy" path="res://microjogos/moraguma/whale_eater/cenas/scripts/Main.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://bxqe3ioudqa82" path="res://microjogos/moraguma/whale_eater/recursos/sprites/BG.png" id="3"]
 [ext_resource type="AudioStream" uid="uid://chc2dqarb0qtp" path="res://microjogos/moraguma/whale_eater/recursos/sounds/music/the-whale.ogg" id="4"]
-[ext_resource type="Script" path="res://microjogos/moraguma/whale_eater/cenas/scripts/Arrow.gd" id="5"]
+[ext_resource type="Script" uid="uid://ca1r35no86w7n" path="res://microjogos/moraguma/whale_eater/cenas/scripts/Arrow.gd" id="5"]
 [ext_resource type="Texture2D" uid="uid://cftdvajkxfn21" path="res://microjogos/moraguma/whale_eater/recursos/sprites/arrow.png" id="6"]
-[ext_resource type="Script" path="res://microjogos/moraguma/whale_eater/cenas/scripts/Camera.gd" id="7"]
+[ext_resource type="Script" uid="uid://ijvp1qldiw1t" path="res://microjogos/moraguma/whale_eater/cenas/scripts/Camera.gd" id="7"]
 [ext_resource type="Texture2D" uid="uid://0ke1wn2i2afl" path="res://microjogos/moraguma/whale_eater/recursos/sprites/left.png" id="8"]
 [ext_resource type="TileSet" uid="uid://qjq7ia0du4xu" path="res://microjogos/moraguma/whale_eater/recursos/tilesets/whaleeater.tres" id="8_d0jrr"]
 [ext_resource type="Texture2D" uid="uid://e8iu4p5ny6v3" path="res://microjogos/moraguma/whale_eater/recursos/sprites/right.png" id="9"]
@@ -109,8 +109,8 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0mfar"]
 _data = {
-"enter": SubResource("2"),
-"loop": SubResource("3")
+&"enter": SubResource("2"),
+&"loop": SubResource("3")
 }
 
 [sub_resource type="RectangleShape2D" id="1"]

@@ -1,49 +1,64 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=11 format=3 uid="uid://c62qhhfmkvajw"]
 
-[ext_resource path="res://microjogos/godotware/Bang/Main.gd" type="Script" id=1]
-[ext_resource path="res://microjogos/godotware/Bang/bang_1.png" type="Texture2D" id=2]
-[ext_resource path="res://microjogos/godotware/Bang/bang_2.png" type="Texture2D" id=3]
-[ext_resource path="res://microjogos/godotware/Bang/bang_4.png" type="Texture2D" id=4]
-[ext_resource path="res://microjogos/godotware/Bang/bang_3.png" type="Texture2D" id=5]
-[ext_resource path="res://microjogos/godotware/Bang/bang_0.png" type="Texture2D" id=6]
-[ext_resource path="res://microjogos/godotware/Bang/lassolady.ogg" type="AudioStream" id=7]
-[ext_resource path="res://microjogos/godotware/Bang/shoot.wav" type="AudioStream" id=8]
-[ext_resource path="res://microjogos/godotware/Bang/click.wav" type="AudioStream" id=10]
+[ext_resource type="Script" uid="uid://b202upkyvtcjw" path="res://microjogos/godotware/Bang/Main.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://4fhuta60norx" path="res://microjogos/godotware/Bang/bang_1.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://cag6yxdb2w55g" path="res://microjogos/godotware/Bang/bang_2.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://bvctp43x44iin" path="res://microjogos/godotware/Bang/bang_4.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://cfp7l5derfqvf" path="res://microjogos/godotware/Bang/bang_3.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://drfthobbfw0ih" path="res://microjogos/godotware/Bang/bang_0.png" id="6"]
+[ext_resource type="AudioStream" uid="uid://c38m5s1raika8" path="res://microjogos/godotware/Bang/lassolady.ogg" id="7"]
+[ext_resource type="AudioStream" uid="uid://b58jv4o262lad" path="res://microjogos/godotware/Bang/shoot.wav" id="8"]
+[ext_resource type="AudioStream" uid="uid://cecjcutv41i2r" path="res://microjogos/godotware/Bang/click.wav" id="10"]
 
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 5 ) ],
+[sub_resource type="SpriteFrames" id="1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5")
+}],
 "loop": true,
-"name": "bang",
+"name": &"bang",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 2 ) ],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2")
+}],
 "loop": true,
-"name": "default",
+"name": &"default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ) ],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6")
+}],
 "loop": true,
-"name": "dodge",
+"name": &"dodge",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ) ],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3")
+}],
 "loop": true,
-"name": "ready",
+"name": &"ready",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ) ],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4")
+}],
 "loop": true,
-"name": "win",
+"name": &"win",
 "speed": 5.0
-} ]
+}]
 
 [node name="Main" type="Node2D"]
-script = ExtResource( 1 )
+script = ExtResource("1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2( 0, -20 )
-frames = SubResource( 1 )
+position = Vector2(0, -20)
+frames = SubResource("1")
 centered = false
 
 [node name="WaitTimer" type="Timer" parent="."]
@@ -56,10 +71,10 @@ one_shot = true
 one_shot = true
 
 [node name="Click" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 10 )
+stream = ExtResource("10")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 7 )
+stream = ExtResource("7")
 
 [node name="Shoot" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 8 )
+stream = ExtResource("8")

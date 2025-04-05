@@ -1,13 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://c101tbn8wn1uo"]
+[gd_scene load_steps=11 format=3]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-eco-g/cenas/scripts/character_body_2d.gd" id="1_wfdvr"]
-[ext_resource type="Texture2D" uid="uid://cs6adeqqv5pnc" path="res://microjogos/2024S1/projeto-eco-g/recursos/sprites/gamuto-frames/gamuto_0.png" id="2_fw3a7"]
-[ext_resource type="Texture2D" uid="uid://crf71h67wk4ki" path="res://microjogos/2024S1/projeto-eco-g/recursos/sprites/gamuto-frames/gamuto_1.png" id="3_fiivp"]
-[ext_resource type="Texture2D" uid="uid://ds8vr5bw605sa" path="res://microjogos/2024S1/projeto-eco-g/recursos/sprites/gamuto-frames/gamuto_2.png" id="4_7ddth"]
-[ext_resource type="PackedScene" uid="uid://0src2rul5tqr" path="res://microjogos/2024S1/projeto-eco-g/cenas/sonar.tscn" id="5_if3ph"]
-[ext_resource type="Texture2D" uid="uid://c466ekhc3kaoj" path="res://microjogos/2024S1/projeto-eco-g/recursos/sprites/gamuto_dead.png" id="5_rbk58"]
-[ext_resource type="AudioStream" uid="uid://umndci4yqpjj" path="res://microjogos/2024S1/projeto-eco-g/recursos/eco-G.ogg" id="7_f4f6v"]
-[ext_resource type="AudioStream" uid="uid://dxlfdhqjjmj1l" path="res://microjogos/2024S1/projeto-eco-g/recursos/Death.ogg" id="8_6d4mp"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-eco-g/recursos/sprites/gamuto-frames/gamuto_0.png" id="2_fw3a7"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-eco-g/recursos/sprites/gamuto-frames/gamuto_1.png" id="3_fiivp"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-eco-g/recursos/sprites/gamuto-frames/gamuto_2.png" id="4_7ddth"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-eco-g/cenas/sonar.tscn" id="5_if3ph"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-eco-g/recursos/sprites/gamuto_dead.png" id="5_rbk58"]
+[ext_resource type="AudioStream" path="res://microjogos/2024S1/projeto-eco-g/recursos/eco-G.ogg" id="7_f4f6v"]
+[ext_resource type="AudioStream" path="res://microjogos/2024S1/projeto-eco-g/recursos/Death.ogg" id="8_6d4mp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qmf3g"]
 animations = [{

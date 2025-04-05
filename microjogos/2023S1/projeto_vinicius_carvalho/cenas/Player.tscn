@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://cxx5cafpq3hq5"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/scripts/Player.gd" id="1_inn2u"]
+[ext_resource type="Script" uid="uid://or7afe61yxa2" path="res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/scripts/Player.gd" id="1_inn2u"]
 [ext_resource type="Texture2D" uid="uid://bgifxsftfv8yd" path="res://microjogos/2023S1/projeto_vinicius_carvalho/Player/Sprites_do_morcego/Flying (46x30).png" id="2_tniwm"]
 [ext_resource type="Texture2D" uid="uid://dx12ewaodcqch" path="res://microjogos/2023S1/projeto_vinicius_carvalho/Player/Sprites_do_morcego/Hit (46x30).png" id="3_j11kq"]
 [ext_resource type="AudioStream" uid="uid://bdovraa5gpfl4" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sons/bat_01.mp3" id="4_td4oj"]

@@ -1,21 +1,20 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=3 format=3 uid="uid://6vbf84c2gnah"]
 
-[ext_resource path="res://minigames/Bola/ar.gd" type="Script" id=1]
-[ext_resource path="res://minigames/Bola/mouse.png" type="Texture2D" id=2]
+[sub_resource type="Resource" id="Resource_ng6e4"]
+metadata/__load_path__ = "res://minigames/Bola/ar.gd"
+
+[sub_resource type="Resource" id="Resource_5kkmt"]
+metadata/__load_path__ = "res://minigames/Bola/mouse.png"
 
 [node name="ar" type="Area2D"]
-
 input/pickable = true
-gravity_direction = Vector2( 0, 1 )
+gravity_direction = Vector2(0, 1)
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
-script/script = ExtResource( 1 )
+script/script = SubResource("Resource_ng6e4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-
-transform/pos = Vector2( 0.663422, 82.2641 )
-transform/scale = Vector2( 0.8, 0.8 )
-texture = ExtResource( 2 )
-
-
+transform/pos = Vector2(0.663422, 82.2641)
+transform/scale = Vector2(0.8, 0.8)
+texture = SubResource("Resource_5kkmt")

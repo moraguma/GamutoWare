@@ -1,12 +1,12 @@
 [gd_scene load_steps=33 format=3 uid="uid://cxoiffe5hbttt"]
 
-[ext_resource type="Script" path="res://microjogos/moraguma/candle prick/cenas/scripts/Game.gd" id="1"]
+[ext_resource type="Script" uid="uid://cay6dx45gk4ar" path="res://microjogos/moraguma/candle prick/cenas/scripts/Game.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://ccmq78qsk4i1m" path="res://microjogos/moraguma/candle prick/recursos/sprites/tiles.png" id="2"]
 [ext_resource type="PackedScene" uid="uid://dv28f7nw1t7i1" path="res://microjogos/moraguma/candle prick/cenas/Player.tscn" id="3"]
-[ext_resource type="Script" path="res://microjogos/moraguma/candle prick/cenas/scripts/Camera.gd" id="4"]
+[ext_resource type="Script" uid="uid://by2u6ptr1gdw4" path="res://microjogos/moraguma/candle prick/cenas/scripts/Camera.gd" id="4"]
 [ext_resource type="PackedScene" uid="uid://cjme8wnqg17an" path="res://microjogos/moraguma/candle prick/cenas/Candle.tscn" id="5"]
 [ext_resource type="PackedScene" path="res://microjogos/moraguma/candle prick/cenas/WinningArea.tscn" id="6"]
-[ext_resource type="PackedScene" path="res://microjogos/moraguma/candle prick/cenas/Flame.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://dtj3lc878135i" path="res://microjogos/moraguma/candle prick/cenas/Flame.tscn" id="7"]
 [ext_resource type="Texture2D" uid="uid://dhqayss1khvwq" path="res://microjogos/moraguma/candle prick/recursos/sprites/decoration.png" id="8"]
 [ext_resource type="Texture2D" uid="uid://dw6oygeioj0or" path="res://microjogos/moraguma/candle prick/recursos/sprites/flame.png" id="9_lkuhy"]
 
