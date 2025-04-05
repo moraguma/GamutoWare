@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://0ntakh320qla"]
+
+[ext_resource type="Texture2D" uid="uid://npya4jff5t21" path="res://microjogos/2023S1/projeto-viniwaki/capa.jpg" id="1_4axs7"]
+[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_ur3wp"]
+[ext_resource type="PackedScene" uid="uid://bnf72gff18p7h" path="res://microjogos/2023S1/projeto-viniwaki/cenas/main.tscn" id="2_i6p3m"]
+
+[resource]
+script = ExtResource("1_ur3wp")
+cover = ExtResource("1_4axs7")
+title_pt = &"Fruit Dojo"
+title_en = &"Fruit Dojo"
+credits_pt = "Criado por: wakieu
+
+Arte por:
+	instagram.com/meiamanga
+	twitter.com/meiamanga
+
+SFX & Musica:
+	https://opengameart.org/content/weapon-slash-effect
+	https://opengameart.org/content/samurai
+	https://opengameart.org/content/swish-bamboo-stick-weapon-swhoshes
+	https://opengameart.org/content/swishes-sound-pack
+	https://opengameart.org/content/error"
+credits_en = "Made by: wakieu
+
+Art by:
+	instagram.com/meiamanga
+	twitter.com/meiamanga
+
+SFX & Music:
+	https://opengameart.org/content/weapon-slash-effect
+	https://opengameart.org/content/samurai
+	https://opengameart.org/content/swish-bamboo-stick-weapon-swhoshes
+	https://opengameart.org/content/swishes-sound-pack
+	https://opengameart.org/content/error"
+start_message_pt = &"SLICE!"
+start_message_en = &"CORTE!"
+main_scene = ExtResource("2_i6p3m")
+difficulty = 0

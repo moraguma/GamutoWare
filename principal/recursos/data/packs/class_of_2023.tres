@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MicrogamePack" load_steps=16 format=3 uid="uid://y24kemyesg2c"]
+[gd_resource type="Resource" script_class="MicrogamePack" load_steps=23 format=3 uid="uid://y24kemyesg2c"]
 
 [ext_resource type="Script" path="res://principal/recursos/data/MicrogamePack.gd" id="1_0pwo5"]
 [ext_resource type="Resource" uid="uid://31yk47jynb3a" path="res://microjogos/2023S1/bis-limao/microgame.tres" id="1_xe7pf"]
@@ -15,8 +15,15 @@
 [ext_resource type="Resource" uid="uid://cs4per532dusw" path="res://microjogos/2023S1/projeto-pochete/microgame.tres" id="12_3sb4r"]
 [ext_resource type="Resource" uid="uid://hoi2malga5er" path="res://microjogos/2023S1/projeto-RafaelCarro/microgame.tres" id="13_4dspy"]
 [ext_resource type="Resource" uid="uid://bxvqndj8e730a" path="res://microjogos/2023S1/projeto-thedeas/microgame.tres" id="14_qhakr"]
+[ext_resource type="Resource" uid="uid://cudfgr7ydvmll" path="res://microjogos/2023S1/projeto-tiagoperrupato/microgame.tres" id="15_y12lx"]
+[ext_resource type="Resource" uid="uid://0ntakh320qla" path="res://microjogos/2023S1/projeto-viniwaki/microgame.tres" id="16_tlaue"]
+[ext_resource type="Resource" uid="uid://dt26o5q8jl8tt" path="res://microjogos/2023S1/projeto-yan-oliveira/microgame.tres" id="17_mdomj"]
+[ext_resource type="Resource" uid="uid://6ahn6r85t818" path="res://microjogos/2023S1/projetoAnaBeatriz/microgame.tres" id="18_pxq1y"]
+[ext_resource type="Resource" uid="uid://brwjk80bfuy48" path="res://microjogos/2023S1/projeto_alexia/microgame.tres" id="19_rpkjd"]
+[ext_resource type="Resource" uid="uid://7r4vuj5bhi87" path="res://microjogos/2023S1/projeto_leonardo_valente/microgame.tres" id="20_bg7mp"]
+[ext_resource type="Resource" uid="uid://bwe2vtqkul21t" path="res://microjogos/2023S1/projeto_vinicius_carvalho/microgame.tres" id="21_luyy0"]
 
 [resource]
 script = ExtResource("1_0pwo5")
 pack_name = &"Class of 2023"
-microgames = Array[Resource("res://principal/microgame_asset.gd")]([ExtResource("1_xe7pf"), ExtResource("2_jwl4o"), ExtResource("3_8x7eb"), ExtResource("4_bxq8x"), ExtResource("5_5p1an"), ExtResource("6_hhlnd"), ExtResource("7_hvc6b"), ExtResource("8_s7i8d"), ExtResource("9_wscca"), ExtResource("10_q1qi2"), ExtResource("11_xldpy"), ExtResource("12_3sb4r"), ExtResource("13_4dspy"), ExtResource("14_qhakr")])
+microgames = Array[Resource("res://principal/microgame_asset.gd")]([ExtResource("1_xe7pf"), ExtResource("2_jwl4o"), ExtResource("3_8x7eb"), ExtResource("4_bxq8x"), ExtResource("5_5p1an"), ExtResource("6_hhlnd"), ExtResource("7_hvc6b"), ExtResource("8_s7i8d"), ExtResource("9_wscca"), ExtResource("10_q1qi2"), ExtResource("11_xldpy"), ExtResource("12_3sb4r"), ExtResource("13_4dspy"), ExtResource("14_qhakr"), ExtResource("15_y12lx"), ExtResource("16_tlaue"), ExtResource("17_mdomj"), ExtResource("18_pxq1y"), ExtResource("19_rpkjd"), ExtResource("20_bg7mp"), ExtResource("21_luyy0")])

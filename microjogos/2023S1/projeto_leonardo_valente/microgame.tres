@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://7r4vuj5bhi87"]
+
+[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_4me3j"]
+[ext_resource type="Texture2D" uid="uid://uva8uetqtlh1" path="res://microjogos/2023S1/projeto_leonardo_valente/capa.png" id="1_08ww7"]
+[ext_resource type="PackedScene" uid="uid://btr34bopgnxs3" path="res://microjogos/2023S1/projeto_leonardo_valente/cenas/main.tscn" id="2_hdpre"]
+
+[resource]
+script = ExtResource("1_4me3j")
+cover = ExtResource("1_08ww7")
+title_pt = &"Vinicinho em Perigo"
+title_en = &"Little Viniccius in Danger"
+credits_pt = "Criado por: Leonardo Valente Nascimento
+
+Arte e Programação por Leonardo Valente Nascimento
+Música por Gabriel Morais Barros
+
+Este é um jogo não oficial feito por fãs e não tem afiliação com a marca Minecraft ou Mojang.
+
+Skin do personagem principal baseada no canal \"Viniccius13\": https://www.youtube.com/channel/UCiIZY89KwQkxAW-4Le7U7zg"
+credits_en = "Made by: Leonardo Valente Nascimento
+
+Art and Programming by Leonardo Valente Nascimento
+Music by Gabriel Morais Barros
+
+This is an unofficial fan game which does not have any affiliation with Minecraft or Mojang.
+
+Skin for the main character is based on the channel \"Viniccius13\": https://www.youtube.com/channel/UCiIZY89KwQkxAW-4Le7U7zg"
+start_message_pt = &"NÃO MORRA!"
+start_message_en = &"DON\'T DIE!"
+main_scene = ExtResource("2_hdpre")
+difficulty = 0
