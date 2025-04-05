@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://cfnt2dc0k1j73"]
+
+[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_q3nob"]
+[ext_resource type="Texture2D" uid="uid://bkvcg7ivmjl0d" path="res://microjogos/2024S1/ShootGamuto/capa.png" id="1_v55o0"]
+[ext_resource type="PackedScene" uid="uid://jcn11fua5sck" path="res://microjogos/2024S1/ShootGamuto/cenas/main.tscn" id="2_wwtyr"]
+
+[resource]
+script = ExtResource("1_q3nob")
+cover = ExtResource("1_v55o0")
+title_pt = &"Tiromuto"
+title_en = &"Shootmuto"
+credits_pt = "Criado por: ginocarlo01"
+credits_en = "Made by: ginocarlo01"
+start_message_pt = &"Ataque as torres!"
+start_message_en = &"Attack the towers!"
+main_scene = ExtResource("2_wwtyr")
+difficulty = 0

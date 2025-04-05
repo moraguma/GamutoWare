@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://cf132o6puu5sc"]
+
+[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_6hdjm"]
+[ext_resource type="Texture2D" uid="uid://bvs0msgson7ta" path="res://microjogos/2024S1/projeto-matheusSC/capa.png" id="1_6t2hs"]
+[ext_resource type="PackedScene" uid="uid://bi0ahd7cv37i6" path="res://microjogos/2024S1/projeto-matheusSC/cenas/main.tscn" id="2_78puh"]
+
+[resource]
+script = ExtResource("1_6hdjm")
+cover = ExtResource("1_6t2hs")
+title_pt = &"Dança Robô"
+title_en = &"Robot Dance"
+credits_pt = "Criado por: Matheus Signori Caetano
+
+Música de Snabisch
+SFX de stoltingmediagroup "
+credits_en = "Made by: Matheus Signori Caetano
+
+Music from Snabisch
+SFX from stoltingmediagroup "
+start_message_pt = &"CLIQUE NA SEQUÊNCIA"
+start_message_en = &"CLICK IN ORDER"
+main_scene = ExtResource("2_78puh")
+difficulty = 0

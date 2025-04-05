@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://dacgdsdr4nqi6"]
+
+[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_agjwg"]
+[ext_resource type="Texture2D" uid="uid://bkvcg7ivmjl0d" path="res://microjogos/2024S1/projeto_felipe_onorio/capa.png" id="1_ql56l"]
+[ext_resource type="PackedScene" uid="uid://bi0ahd7cv37i6" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/main.tscn" id="2_6h6gp"]
+
+[resource]
+script = ExtResource("1_agjwg")
+cover = ExtResource("1_ql56l")
+title_pt = &"Mini Sudoku"
+title_en = &"Mini Sudoku"
+credits_pt = "Criado por: [Felipe Onorio]
+
+Cobblestone path background(creative commons):
+	https://storage.needpix.com/rsynced_images/cobblestone-529853_1280.jpg
+
+Animações procedurais criadas pelo autor do jogo usando Pixel Composer (MakhamDev),
+fórmulas disponíveis no repositório do jogo. Todas copyleft sem restrições de uso.
+Links das spritesheets geradas:
+Fogo 1: https://lospec.com/i/fa6g
+Fogo 2: https://lospec.com/i/he5l
+Folha:  https://lospec.com/i/wnoj
+\"Água\": https://lospec.com/i/poiw
+
+Copyleft background music:
+	Track 2 (Party Tonight).wav by Zakiro
+	https://zakiro101.itch.io/free-casual-game-music-pack-vol-2
+	"
+credits_en = "Made by: [Felipe Onorio]
+
+Cobblestone path background(creative commons):
+	https://storage.needpix.com/rsynced_images/cobblestone-529853_1280.jpg
+
+Procedural animations created by the game author using Pixel Composer (MakhamDev),
+formulas available at the game repository. All images are copyleft without usage restriction.
+Generated spritesheet links:
+Flame 1: https://lospec.com/i/fa6g
+Flame 2: https://lospec.com/i/he5l
+Leaf:  https://lospec.com/i/wnoj
+\"Water\": https://lospec.com/i/poiw
+
+Copyleft background music:
+	Track 2 (Party Tonight).wav by Zakiro
+	https://zakiro101.itch.io/free-casual-game-music-pack-vol-2
+"
+start_message_pt = &"COMPLETE!"
+start_message_en = &"COMPLETE!"
+main_scene = ExtResource("2_6h6gp")
+difficulty = 0
