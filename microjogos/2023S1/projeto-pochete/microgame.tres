@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://cs4per532dusw"]
+
+[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_0v44o"]
+[ext_resource type="Texture2D" uid="uid://dwtk3g4t50j07" path="res://microjogos/2023S1/projeto-pochete/capa.png" id="1_3r0gn"]
+[ext_resource type="PackedScene" uid="uid://jy3rr20ai13h" path="res://microjogos/2023S1/projeto-pochete/cenas/main.tscn" id="2_xpkqr"]
+
+[resource]
+script = ExtResource("1_0v44o")
+cover = ExtResource("1_3r0gn")
+title_pt = &"Tessstemunha"
+title_en = &"The Witnesss"
+credits_pt = "Criado por: pochete
+
+Gŕaficos de Snake: https://opengameart.org/content/snake-graphics
+Som ambiente de floresta: https://opengameart.org/content/forest-ambience
+Mordida da maçã: https://opengameart.org/content/apple-bite"
+credits_en = "Made by:  pochete
+
+Snake Graphics: https://opengameart.org/content/snake-graphics
+Forest Ambience: https://opengameart.org/content/forest-ambience
+Apple Bite: https://opengameart.org/content/apple-bite"
+start_message_pt = &"COMA!"
+start_message_en = &"EAT!"
+main_scene = ExtResource("2_xpkqr")
+difficulty = 0

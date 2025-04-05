@@ -13,7 +13,7 @@
 [ext_resource type="Script" path="res://microjogos/2023S1/projeto-pluvinage/Bat.gd" id="8_k2nto"]
 [ext_resource type="Texture2D" uid="uid://djcv041nxf0ip" path="res://microjogos/2023S1/projeto-pluvinage/recursos/bat/01-Idle/__Bat02_Idle_000.png" id="9_0rchk"]
 [ext_resource type="AudioStream" uid="uid://dipyn8ja1keus" path="res://microjogos/2023S1/projeto-pluvinage/recursos/sounds/jump.mp3" id="10_01xnc"]
-[ext_resource type="AudioStream" uid="uid://68gikvdgglt6" path="res://microjogos/2023S1/projeto-pluvinage/recursos/sounds/music.mp3" id="14_s4okj"]
+[ext_resource type="AudioStream" uid="uid://cyxycedypntxb" path="res://microjogos/2023S1/projeto-pluvinage/recursos/sounds/music.ogg" id="14_s4okj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vobhw"]
 
