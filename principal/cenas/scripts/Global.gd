@@ -122,7 +122,7 @@ func get_language():
 		match OS.get_locale_language():
 			"pt":
 				set_language(Global.LANGUAGE.PT)
-			"en":
+			_:
 				set_language(Global.LANGUAGE.EN)
 	return save.language
 
