@@ -22,6 +22,7 @@ NotificationCenter="*res://principal/cenas/autoloads/NotificationCenter.tscn"
 Global="*res://principal/cenas/autoloads/Global.tscn"
 SoundController="*res://principal/cenas/autoloads/SoundController.tscn"
 TranslationManager="*res://principal/cenas/autoloads/TranslationManager.tscn"
+Minigames="*res://principal/recursos/data/Minigames.gd"
 
 [display]
 
@@ -32,10 +33,6 @@ window/size/window_width_override=960
 window/size/window_height_override=540
 window/stretch/mode="viewport"
 window/size/fullscreen=true
-
-[filesystem]
-
-import/blender/enabled=false
 
 [input]
 
