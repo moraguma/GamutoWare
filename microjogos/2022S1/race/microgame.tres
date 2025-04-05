@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://m81lsgm2rhpl"]
+
+[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_4xx67"]
+[ext_resource type="Texture2D" uid="uid://dklmearkggkyw" path="res://microjogos/2022S1/race/capa.png" id="1_pslqg"]
+[ext_resource type="PackedScene" uid="uid://bg780bjjn3cse" path="res://microjogos/2022S1/race/cenas/main.tscn" id="2_l0o5m"]
+
+[resource]
+script = ExtResource("1_4xx67")
+cover = ExtResource("1_pslqg")
+title_pt = &"Corrida"
+title_en = &"Race"
+credits_pt = "Criado por: Victor de Moraes
+
+Acelere e ganhe a corrida. Mas cuidado para nao bater na parede!
+
+Musica: Orbital Colossus - Matthew Pablo
+SFX: https://freesound.org/people/Leszek_Szary/sounds/171671/
+https://freesound.org/people/Leszek_Szary/sounds/171673/
+https://freesound.org/people/InspectorJ/sounds/403664/
+https://freesound.org/people/InspectorJ/sounds/430632/"
+credits_en = "Made by: Victor de Moraes
+
+Speed up and win the race. Careful not to hit a wall!
+
+Music: Orbital Colossus - Matthew Pablo
+SFX: https://freesound.org/people/Leszek_Szary/sounds/171671/
+https://freesound.org/people/Leszek_Szary/sounds/171673/
+https://freesound.org/people/InspectorJ/sounds/403664/
+https://freesound.org/people/InspectorJ/sounds/430632/"
+start_message_pt = &"VENCA A CORRIDA!"
+start_message_en = &"WIN THE RACE!"
+main_scene = ExtResource("2_l0o5m")
+difficulty = 0
