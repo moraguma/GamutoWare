@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="MicrogamePack" load_steps=2 format=3 uid="uid://dw4nuyx1g5u3v"]
+
+[ext_resource type="Script" path="res://principal/recursos/data/MicrogamePack.gd" id="1_e6qtn"]
+
+[resource]
+script = ExtResource("1_e6qtn")
+pack_name = &"Demo"
+microgames = Array[Resource("res://principal/microgame_asset.gd")]([])
