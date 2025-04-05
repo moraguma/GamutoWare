@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MicrogamePack" load_steps=5 format=3]
+
+[ext_resource type="Resource" path="res://microjogos/godotware/Simon/microgame.tres" id="1_1ywgj"]
+[ext_resource type="Script" path="res://principal/recursos/data/MicrogamePack.gd" id="1_n01hx"]
+[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_pdjjr"]
+[ext_resource type="Resource" path="res://microjogos/godotware/Bang/microgame.tres" id="2_evq02"]
+
+[resource]
+script = ExtResource("1_n01hx")
+pack_name = &"GodotWare"
+microgames = Array[ExtResource("1_pdjjr")]([ExtResource("1_1ywgj"), ExtResource("2_evq02")])

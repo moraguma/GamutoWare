@@ -1,14 +1,14 @@
 [gd_scene load_steps=44 format=3 uid="uid://dmaq46tk3gda3"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-matheuspavan/cenas/main.gd" id="1_bsl4o"]
+[ext_resource type="Script" uid="uid://dm6ds2hn5kx0x" path="res://microjogos/2023S1/projeto-matheuspavan/cenas/main.gd" id="1_bsl4o"]
 [ext_resource type="Texture2D" uid="uid://to2vkigeu2yo" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/personagem/Wizard Pack/Idle.png" id="2_b67wv"]
 [ext_resource type="Texture2D" uid="uid://cursuegf8vrlm" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/parallax-mountain-animX1.png" id="2_mc224"]
 [ext_resource type="Texture2D" uid="uid://hih2qv537bnt" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/lightning-blue-1.png" id="3_h88my"]
 [ext_resource type="Texture2D" uid="uid://bygp6wqeyc7yv" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/livro/book.png" id="4_oorb8"]
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-matheuspavan/cenas/magia.gd" id="5_p4caa"]
+[ext_resource type="Script" uid="uid://c6sv27bof2eqg" path="res://microjogos/2023S1/projeto-matheuspavan/cenas/magia.gd" id="5_p4caa"]
 [ext_resource type="Texture2D" uid="uid://bgucgvtvgmrdh" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/lightning-blue-2.png" id="5_vinjh"]
 [ext_resource type="Texture2D" uid="uid://b5ot4tylp8v0s" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito/haste-sky-3.png" id="8_fw285"]
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-matheuspavan/cenas/final_magia2.gd" id="9_0y78u"]
+[ext_resource type="Script" uid="uid://4ayw8m64mb85" path="res://microjogos/2023S1/projeto-matheuspavan/cenas/final_magia2.gd" id="9_0y78u"]
 [ext_resource type="Texture2D" uid="uid://dl1of2j6uj2x2" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5a1.png" id="10_pvqn2"]
 [ext_resource type="Texture2D" uid="uid://byow4xb57vpqc" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5b1.png" id="10_titra"]
 [ext_resource type="Texture2D" uid="uid://hx7635nsgc5l" path="res://microjogos/2023S1/projeto-matheuspavan/recursos/magia/magia_efeito_2/lightning_line5a2.png" id="11_4qqjc"]
@@ -72,8 +72,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_30d73"]
 _data = {
-"RESET": SubResource("Animation_cydcp"),
-"idle_player": SubResource("Animation_6md4s")
+&"RESET": SubResource("Animation_cydcp"),
+&"idle_player": SubResource("Animation_6md4s")
 }
 
 [sub_resource type="Theme" id="Theme_y8mxr"]

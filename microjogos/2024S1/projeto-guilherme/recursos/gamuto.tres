@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://gpr0lki7mf0o"]
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://caljb66tgg5bn"]
 
 [ext_resource type="Texture2D" uid="uid://dip3yiadth6c7" path="res://microjogos/2024S1/projeto-guilherme/recursos/gamuto.png" id="1_xbji1"]
 [ext_resource type="Texture2D" uid="uid://065x6nka203e" path="res://microjogos/2024S1/projeto-guilherme/recursos/gamuto_derrota.png" id="2_vuyk1"]

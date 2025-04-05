@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://c33e5ijkmyaud"]
+[gd_scene load_steps=2 format=3]
 
-[ext_resource type="Texture2D" uid="uid://b76s6mih106c3" path="res://microjogos/2024S1/Projeto-Yago/recursos/Prateleira.png" id="1_yu156"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/Projeto-Yago/recursos/Prateleira.png" id="1_yu156"]
 
 [node name="Sprite2D" type="TextureRect"]
 modulate = Color(0.666667, 0.172549, 0, 1)

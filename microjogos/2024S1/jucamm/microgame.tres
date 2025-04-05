@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://b6sbwywalhvt"]
+
+[ext_resource type="Texture2D" uid="uid://dy118ors4188m" path="res://microjogos/2024S1/jucamm/capa.png" id="1_je322"]
+[ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_ljcpk"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/jucamm/cenas/main.tscn" id="2_je322"]
+
+[resource]
+script = ExtResource("1_ljcpk")
+cover = ExtResource("1_je322")
+title_pt = &"Basquete Equilíbrio"
+title_en = &"Double Ball"
+credits_pt = "Criado por: Juca
+
+SFX de andre.nascimento -- https://freesound.org/s/51461/ -- Licença: Attribution 4.0"
+credits_en = "Made by: Juca
+
+SFX from andre.nascimento -- https://freesound.org/s/51461/ -- License: Attribution 4.0"
+start_message_pt = &"NAO DEIXE CAIR!"
+start_message_en = &"DON\'T DROP IT!"
+main_scene = ExtResource("2_je322")
+difficulty = 0

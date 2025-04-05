@@ -1,9 +1,7 @@
-[gd_scene load_steps=2 format=1]
+[gd_scene load_steps=2 format=3 uid="uid://dlt26016mdbcc"]
 
-[ext_resource path="res://minigames/SpaceShooter/scripts/Spawner_Enemy.gd" type="Script" id=1]
+[sub_resource type="Resource" id="Resource_mpeci"]
+metadata/__load_path__ = "res://minigames/SpaceShooter/scripts/Spawner_Enemy.gd"
 
 [node name="Spawner_Enemy" type="Node"]
-
-script/script = ExtResource( 1 )
-
-
+script/script = SubResource("Resource_mpeci")

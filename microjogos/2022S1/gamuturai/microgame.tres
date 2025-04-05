@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_3et7r"]
+[ext_resource type="Texture2D" path="res://microjogos/2022S1/gamuturai/capa.png" id="1_gfqfs"]
+[ext_resource type="PackedScene" path="res://microjogos/2022S1/gamuturai/cenas/main.tscn" id="2_x5081"]
+
+[resource]
+script = ExtResource("1_3et7r")
+cover = ExtResource("1_gfqfs")
+title_pt = &"Gamuturai"
+title_en = &"Gamuturai"
+credits_pt = "Criado por: Paulo Barreto & Matheus Gravalos
+
+Corte o bambu perfeitamente. Foco e precisao faz o Gamuturai"
+credits_en = "Made by: Paulo Barreto & Matheus Gravalos
+
+Perfectly cut the bamboo. Focus and precision define the Gamuturai"
+start_message_pt = &"CORTE!"
+start_message_en = &"CUT!"
+main_scene = ExtResource("2_x5081")
+difficulty = 0

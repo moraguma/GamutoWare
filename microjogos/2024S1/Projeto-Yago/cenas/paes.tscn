@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dhw8b8n51eo6f"]
+[gd_scene load_steps=4 format=3]
 
-[ext_resource type="Texture2D" uid="uid://d5bqh2t4wyrx" path="res://microjogos/2024S1/Projeto-Yago/recursos/Paes.png" id="1_iyniw"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/Projeto-Yago/recursos/Paes.png" id="1_iyniw"]
 [ext_resource type="Script" path="res://microjogos/2024S1/Projeto-Yago/cenas/scripts/produto.gd" id="1_q3uyb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_717yi"]

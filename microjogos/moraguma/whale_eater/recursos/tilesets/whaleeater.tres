@@ -1,6 +1,6 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://qjq7ia0du4xu"]
+[gd_resource type="TileSet" load_steps=3 format=3]
 
-[ext_resource type="Texture2D" uid="uid://db8u6cytdci6e" path="res://microjogos/moraguma/whale_eater/recursos/sprites/tileset.png" id="1_25t76"]
+[ext_resource type="Texture2D" path="res://microjogos/moraguma/whale_eater/recursos/sprites/tileset.png" id="1_25t76"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gvbew"]
 texture = ExtResource("1_25t76")

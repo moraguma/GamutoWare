@@ -1,11 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://jcn11fua5sck"]
+[gd_scene load_steps=7 format=3]
 
-[ext_resource type="Texture2D" uid="uid://cue4y6xtqt3eb" path="res://microjogos/2024S1/ShootGamuto/recursos/bg.png" id="1_33amm"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/ShootGamuto/recursos/bg.png" id="1_33amm"]
 [ext_resource type="Script" path="res://microjogos/2024S1/ShootGamuto/cenas/scripts/main.gd" id="1_ibml2"]
-[ext_resource type="Texture2D" uid="uid://copg86ej15ck1" path="res://microjogos/2024S1/ShootGamuto/recursos/ilha.png" id="2_32ndn"]
-[ext_resource type="PackedScene" uid="uid://3p3ftk6311dc" path="res://microjogos/2024S1/ShootGamuto/cenas/Canhao2.tscn" id="3_cx6fm"]
-[ext_resource type="AudioStream" uid="uid://6hqebqywd30w" path="res://microjogos/2024S1/ShootGamuto/recursos/3fki8-02cz8.ogg" id="5_qcvfl"]
-[ext_resource type="AudioStream" uid="uid://c84v8q7xe82d" path="res://microjogos/2024S1/ShootGamuto/recursos/laser.wav" id="6_g7c8n"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/ShootGamuto/recursos/ilha.png" id="2_32ndn"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/ShootGamuto/cenas/Canhao2.tscn" id="3_cx6fm"]
+[ext_resource type="AudioStream" path="res://microjogos/2024S1/ShootGamuto/recursos/3fki8-02cz8.ogg" id="5_qcvfl"]
+[ext_resource type="AudioStream" path="res://microjogos/2024S1/ShootGamuto/recursos/laser.wav" id="6_g7c8n"]
 
 [node name="Main" type="Node2D"]
 texture_filter = 1

@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bjh2lhwsbqihl"]
+[gd_scene load_steps=2 format=3]
 
-[ext_resource type="Texture2D" uid="uid://be41ftfhooacx" path="res://microjogos/2024S1/projeto-estrela/recursos/tortuguita.png" id="1_pj1ih"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-estrela/recursos/tortuguita.png" id="1_pj1ih"]
 
 [node name="Node2D" type="Node2D"]
 

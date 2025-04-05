@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_4iqi5"]
+[ext_resource type="Texture2D" path="res://microjogos/demo/frogger/capa.png" id="1_7ibmg"]
+[ext_resource type="PackedScene" path="res://microjogos/demo/frogger/cenas/main.tscn" id="2_xxold"]
+
+[resource]
+script = ExtResource("1_4iqi5")
+cover = ExtResource("1_7ibmg")
+title_pt = &"Frogger"
+title_en = &"Frogger"
+credits_pt = "Criado por: Moraguma
+
+Minigame baseado em um experimento criado para explorar o desenvolvimento de arquiteturas cognitivas no Godot, incluso no artigo 'CST-Godot: Bridging the Gap Between Game Engines and Cognitive Agents', publicado no SBGames 2022
+
+Musica: https://soundcloud.com/rezoner"
+credits_en = "Made by: Moraguma
+
+Minigame based on an experiment developed to explore the development of cognitive architectures on Godot, included in the paper 'CST-Godot: Bridging the Gap Between Game Engines and Cognitive Agents', published in SBGames 2022
+
+Music: https://soundcloud.com/rezoner"
+start_message_pt = &"CROSS THE ROAD!"
+start_message_en = &"ATRAVESSE A RUA!"
+main_scene = ExtResource("2_xxold")
+difficulty = 0

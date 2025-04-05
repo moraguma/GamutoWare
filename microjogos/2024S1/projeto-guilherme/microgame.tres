@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_37mer"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-guilherme/capa.png" id="1_g3o1l"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-guilherme/cenas/main.tscn" id="2_daq41"]
+
+[resource]
+script = ExtResource("1_37mer")
+cover = ExtResource("1_g3o1l")
+title_pt = &"Hora do hambúrguer"
+title_en = &"Burger time"
+credits_pt = "Criado por: Guilherme Henrique da Silva
+
+fonte obtida em: https://www.dafont.com/pt/dogica.font
+"
+credits_en = "Made by: Guilherme Henrique da Silva
+
+font obtained from: https://www.dafont.com/pt/dogica.font"
+start_message_pt = &"MAKE A BURGER!"
+start_message_en = &"\"FAÇA UM HAMBURGUER!"
+main_scene = ExtResource("2_daq41")
+difficulty = 0

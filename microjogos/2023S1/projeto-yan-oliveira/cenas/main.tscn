@@ -1,11 +1,11 @@
 [gd_scene load_steps=11 format=3 uid="uid://da2h160pqjtfs"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-yan-oliveira/cenas/scripts/main.gd" id="1_yj0jh"]
+[ext_resource type="Script" uid="uid://df5yef0nbpif2" path="res://microjogos/2023S1/projeto-yan-oliveira/cenas/scripts/main.gd" id="1_yj0jh"]
 [ext_resource type="Texture2D" uid="uid://b6qvtckr27qbo" path="res://microjogos/2023S1/projeto-yan-oliveira/recursos/Lagoa Oficial.png" id="2_rn75l"]
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-yan-oliveira/cenas/scripts/Player.gd" id="3_f4637"]
+[ext_resource type="Script" uid="uid://0w0ha1nbdm7h" path="res://microjogos/2023S1/projeto-yan-oliveira/cenas/scripts/Player.gd" id="3_f4637"]
 [ext_resource type="Texture2D" uid="uid://blqg4s6mksxvu" path="res://microjogos/2023S1/projeto-yan-oliveira/recursos/Sapo.png" id="4_bq1bp"]
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-yan-oliveira/cenas/scripts/linguada.gd" id="5_2yebe"]
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-yan-oliveira/cenas/scripts/Mosca.gd" id="6_krcl4"]
+[ext_resource type="Script" uid="uid://u0cnhy20eigh" path="res://microjogos/2023S1/projeto-yan-oliveira/cenas/scripts/linguada.gd" id="5_2yebe"]
+[ext_resource type="Script" uid="uid://cooyojiqo0qko" path="res://microjogos/2023S1/projeto-yan-oliveira/cenas/scripts/Mosca.gd" id="6_krcl4"]
 [ext_resource type="Texture2D" uid="uid://da1d3p7dabrki" path="res://microjogos/2023S1/projeto-yan-oliveira/recursos/Mosca Bombada.png" id="7_gulw7"]
 [ext_resource type="AudioStream" uid="uid://v2yjvhogdkdn" path="res://microjogos/2023S1/projeto-yan-oliveira/recursos/BeepBox-Song.ogg" id="8_s0ay3"]
 

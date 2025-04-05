@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://dqgxc73w0nr63"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-guglielmo-223300/cenas/scripts/main.gd" id="1_1neoh"]
+[ext_resource type="Script" uid="uid://bwd6astpgtjfj" path="res://microjogos/2023S1/projeto-guglielmo-223300/cenas/scripts/main.gd" id="1_1neoh"]
 [ext_resource type="Texture2D" uid="uid://bce3wwnq3ewwx" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/Tecladoyomik70-removebg-preview.png" id="2_x0qvo"]
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-guglielmo-223300/cenas/scripts/Teclado.gd" id="2_yfdn2"]
+[ext_resource type="Script" uid="uid://xqg7llpc7ush" path="res://microjogos/2023S1/projeto-guglielmo-223300/cenas/scripts/Teclado.gd" id="2_yfdn2"]
 [ext_resource type="Texture2D" uid="uid://cms8qw0clpfow" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/tecla.png" id="3_e1le8"]
 [ext_resource type="Texture2D" uid="uid://bhf2ikw0qgj4j" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/fundo.jpg" id="3_os28u"]
 [ext_resource type="Texture2D" uid="uid://x16mdibspdi0" path="res://microjogos/2023S1/projeto-guglielmo-223300/recursos/selector.png" id="4_y0ywg"]

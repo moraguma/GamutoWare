@@ -1,9 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://2qg84u0dmxnj"]
+[gd_scene load_steps=13 format=3]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-asteroids/cenas/scripts/asteroid.gd" id="1_pfnyl"]
-[ext_resource type="Texture2D" uid="uid://2jvx43tddngu" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/asteroid.png" id="2_4rixu"]
-[ext_resource type="Texture2D" uid="uid://8p120t3sf7wl" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/explosion_sprites.png" id="3_evv60"]
-[ext_resource type="AudioStream" uid="uid://duxmmq4u5i32u" path="res://microjogos/2024S1/projeto-asteroids/recursos/523091__magnuswaker__shotgun-blast-1.ogg" id="4_w1su8"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/asteroid.png" id="2_4rixu"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/explosion_sprites.png" id="3_evv60"]
+[ext_resource type="AudioStream" path="res://microjogos/2024S1/projeto-asteroids/recursos/523091__magnuswaker__shotgun-blast-1.ogg" id="4_w1su8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u2c7u"]
 radius = 23.3238

@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_rc2nu"]
+[ext_resource type="PackedScene" path="res://microjogos/godotware/Simon/Main.tscn" id="1_x3ipl"]
+
+[resource]
+script = ExtResource("1_rc2nu")
+title_pt = &"Genius"
+title_en = &"Simon Says"
+credits_pt = "Criado por: Alec
+
+Replique o padrao!
+
+Minigame adaptado do Godotware, precursor do Gamutoware!
+
+Assets: https://freesound.org/people/LittleRobotSoundFactory/sounds/270333/"
+credits_en = "Made by: Alec
+
+Copy the pattern!
+
+Minigame adapted from Godotware, Gamutoware's precursor!
+
+Assets: https://freesound.org/people/LittleRobotSoundFactory/sounds/270333/"
+start_message_pt = &"IMITE!"
+start_message_en = &"SIMON SAYS..."
+main_scene = ExtResource("1_x3ipl")
+difficulty = 0

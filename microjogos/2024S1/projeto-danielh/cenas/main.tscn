@@ -1,12 +1,12 @@
-[gd_scene load_steps=25 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=25 format=3]
 
-[ext_resource type="Texture2D" uid="uid://dneg3jyqkc606" path="res://microjogos/2024S1/projeto-danielh/recursos/Imagens/Backgroundazul.jpg" id="1_njfb5"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-danielh/recursos/Imagens/Backgroundazul.jpg" id="1_njfb5"]
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-danielh/cenas/main.gd" id="1_t7o4t"]
-[ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="2_7rsf1"]
-[ext_resource type="Texture2D" uid="uid://b0hlpvhnacxmd" path="res://microjogos/2024S1/projeto-danielh/recursos/Imagens/Gamutobravo.png" id="2_hejk1"]
-[ext_resource type="Texture2D" uid="uid://dyrsi314hmh3y" path="res://microjogos/2024S1/projeto-danielh/recursos/Imagens/cadeia.png" id="3_mdt6i"]
+[ext_resource type="Texture2D" path="res://icon.png" id="2_7rsf1"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-danielh/recursos/Imagens/Gamutobravo.png" id="2_hejk1"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-danielh/recursos/Imagens/cadeia.png" id="3_mdt6i"]
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-danielh/cenas/Player.gd" id="8_7j7ku"]
-[ext_resource type="PackedScene" uid="uid://bh21wb07sifo7" path="res://microjogos/2024S1/projeto-danielh/cenas/maze1.tscn" id="9_tmwib"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-danielh/cenas/maze1.tscn" id="9_tmwib"]
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-danielh/cenas/Area2D.gd" id="10_5iyp6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0l5m6"]

@@ -1,12 +1,16 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=4 format=3 uid="uid://bje1rxqrno7tk"]
 
-[ext_resource path="res://minigames/Dont_move/Main.gd" type="Script" id=1]
-[ext_resource path="res://minigames/Dont_move/fundo1.png" type="Texture2D" id=2]
-[ext_resource path="res://minigames/Dont_move/dont.png" type="Texture2D" id=3]
+[sub_resource type="Resource" id="Resource_8y3kg"]
+metadata/__load_path__ = "res://minigames/Dont_move/Main.gd"
+
+[sub_resource type="Resource" id="Resource_5qjjh"]
+metadata/__load_path__ = "res://minigames/Dont_move/fundo1.png"
+
+[sub_resource type="Resource" id="Resource_gw1ww"]
+metadata/__load_path__ = "res://minigames/Dont_move/dont.png"
 
 [node name="Main" type="Node2D"]
-
-script/script = ExtResource( 1 )
+script/script = SubResource("Resource_8y3kg")
 NAME = "dont_move"
 INSTRUCTION = "Don't move!"
 DURATION = 3
@@ -15,7 +19,6 @@ USE_KEYS_HUD = false
 USE_MOUSE_HUD = false
 
 [node name="TextureFrame" type="TextureFrame" parent="."]
-
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -24,13 +27,10 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 1984.0
 margin/bottom = 1216.0
-texture = ExtResource( 2 )
+texture = SubResource("Resource_5qjjh")
 stretch_mode = 0
 
 [node name="dont" type="Sprite2D" parent="."]
-
-transform/pos = Vector2( 314.427, 173.523 )
-transform/scale = Vector2( 0.499641, 0.499641 )
-texture = ExtResource( 3 )
-
-
+transform/pos = Vector2(314.427, 173.523)
+transform/scale = Vector2(0.499641, 0.499641)
+texture = SubResource("Resource_gw1ww")

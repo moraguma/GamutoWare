@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MicrogamePack" load_steps=5 format=3]
+
+[ext_resource type="Resource" path="res://microjogos/2022S1/baleia/microgame.tres" id="1_i4t4a"]
+[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_ihhb5"]
+[ext_resource type="Script" path="res://principal/recursos/data/MicrogamePack.gd" id="1_pdx8y"]
+[ext_resource type="Resource" path="res://microjogos/2023S1/projeto-thedeas/microgame.tres" id="2_yg03a"]
+
+[resource]
+script = ExtResource("1_pdx8y")
+pack_name = &"No gore"
+microgames = Array[ExtResource("1_ihhb5")]([ExtResource("1_i4t4a"), ExtResource("2_yg03a")])

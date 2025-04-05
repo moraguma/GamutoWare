@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://dvnwqsssiem4k"]
+
+[ext_resource type="Texture2D" uid="uid://boal522ts5e5q" path="res://microjogos/2024S1/gamufit/capa.png" id="1_bo8bj"]
+[ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_fx4lx"]
+[ext_resource type="PackedScene" uid="uid://c50yxjlea2v3q" path="res://microjogos/2024S1/gamufit/cenas/main.tscn" id="2_bo8bj"]
+
+[resource]
+script = ExtResource("1_fx4lx")
+cover = ExtResource("1_bo8bj")
+title_pt = &"Gamuromba"
+title_en = &"Gamufit"
+credits_pt = "Criado por: [Matheus Leite]
+
+Todos os assets criados por IA.(Stable Diffusion e Suno.ai)"
+credits_en = "Made by: [Matheus Leite]
+
+All assets created by AI(Stable Diffusion and Suno.AI)"
+start_message_pt = &"APERTE ESPAÇO!"
+start_message_en = &"\"PRESS SPACEBAR!"
+main_scene = ExtResource("2_bo8bj")
+difficulty = 0

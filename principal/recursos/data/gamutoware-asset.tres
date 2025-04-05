@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=3 format=3]
+
+[ext_resource type="Texture2D" path="res://principal/recursos/sprites/capagmtware.png" id="1_8nbo0"]
+[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_hbu11"]
+
+[resource]
+script = ExtResource("1_hbu11")
+cover = ExtResource("1_8nbo0")
+title_pt = &"GAMUTOWARE"
+title_en = &"GAMUTOWARE"
+credits_pt = "Criado por: Moraguma
+
+O Gamutoware e um projeto do Gamux, a entidade de gamedev da Unicamp. O jogo trata de uma colecao de minigames criada para ensinar os basicos de desenvolvimento de jogos no Godot para caloures. O projeto teve sua primeira iteracao em 2022
+
+Musica: https://opengameart.org/content/nes-shooter-music-5-tracks-3-jingles
+SFX: https://beepyeah.itch.io/8-bit-sfx-pack
+Fonte: https://www.dafont.com/stop-bullying.font"
+credits_en = "Made by: Moraguma
+
+Gamutoware is a project of Gamux, Unicamp's gamedev entity. The game is a minigame collection made to teach the basics of Godot game development to freshmnen. The project had its first iteration in 2022
+
+Music: https://opengameart.org/content/nes-shooter-music-5-tracks-3-jingles
+SFX: https://beepyeah.itch.io/8-bit-sfx-pack
+Font: https://www.dafont.com/stop-bullying.font"
+start_message_pt = &""
+start_message_en = &""
+difficulty = 0

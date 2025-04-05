@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cxoiffe5hbttt" path="res://microjogos/moraguma/candle prick/cenas/Game.tscn" id="1"]
 [ext_resource type="AudioStream" uid="uid://gabkryriv8my" path="res://microjogos/moraguma/candle prick/recursos/sounds/wind_loop.ogg" id="5"]
 [ext_resource type="AudioStream" uid="uid://213h2twagxp6" path="res://microjogos/moraguma/candle prick/recursos/sounds/from_kenney.ogg" id="6"]
-[ext_resource type="Script" path="res://microjogos/moraguma/candle prick/cenas/scripts/Main.gd" id="7"]
+[ext_resource type="Script" uid="uid://cos5n3bh38lyo" path="res://microjogos/moraguma/candle prick/cenas/scripts/Main.gd" id="7"]
 
 [sub_resource type="ViewportTexture" id="1"]
 viewport_path = NodePath("SubViewport")

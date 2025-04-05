@@ -1,60 +1,65 @@
-[gd_scene load_steps=8 format=1]
+[gd_scene load_steps=3 format=3 uid="uid://dd8a6pj61geh5"]
 
-[ext_resource path="res://minigames/Bola/bola.gd" type="Script" id=1]
-[ext_resource path="res://minigames/Bola/0.png" type="Texture2D" id=2]
-[ext_resource path="res://minigames/Bola/3_1.png" type="Texture2D" id=3]
-[ext_resource path="res://minigames/Bola/1.png" type="Texture2D" id=4]
-[ext_resource path="res://minigames/Bola/intervalo.png" type="Texture2D" id=5]
-[ext_resource path="res://minigames/Bola/2.png" type="Texture2D" id=6]
+[sub_resource type="Resource" id="Resource_kc6gl"]
+metadata/__load_path__ = "res://minigames/Bola/bola.gd"
 
-[sub_resource type="SpriteFrames" id=1]
-
-animations = [ {
-"frames": [ ExtResource( 2 ) ],
+[sub_resource type="SpriteFrames" id="1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
 "loop": true,
-"name": "Zero",
+"name": &"Dois",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ) ],
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
 "loop": true,
-"name": "Quatro",
+"name": &"Quatro",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ) ],
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
 "loop": true,
-"name": "Um",
+"name": &"Três",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ) ],
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
 "loop": true,
-"name": "Três",
+"name": &"Um",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ) ],
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
 "loop": true,
-"name": "Dois",
+"name": &"Zero",
 "speed": 5.0
-} ]
+}]
 
 [node name="Bola" type="Area2D"]
-
 input/pickable = true
-gravity_direction = Vector2( 0, 1 )
+gravity_direction = Vector2(0, 1)
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
-script/script = ExtResource( 1 )
+script/script = SubResource("Resource_kc6gl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-
-frames = SubResource( 1 )
+frames = SubResource("1")
 animation = "Zero"
 
 [node name="Timer" type="Timer" parent="."]
-
 process_mode = 1
 wait_time = 2.0
 one_shot = true
 autostart = false
-
-

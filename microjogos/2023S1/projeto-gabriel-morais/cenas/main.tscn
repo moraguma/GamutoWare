@@ -1,14 +1,14 @@
 [gd_scene load_steps=14 format=3 uid="uid://oe5ivv5m376p"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/scripts/main.gd" id="1_luxrx"]
+[ext_resource type="Script" uid="uid://l6scn8xl1ipt" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/scripts/main.gd" id="1_luxrx"]
 [ext_resource type="Texture2D" uid="uid://boenun8pc8oc1" path="res://microjogos/2023S1/projeto-gabriel-morais/recursos/fundo.png" id="2_di1wt"]
 [ext_resource type="Texture2D" uid="uid://bk77807kefqvp" path="res://microjogos/2023S1/projeto-gabriel-morais/recursos/pedra-1.png.png" id="3_f6xe8"]
 [ext_resource type="Texture2D" uid="uid://cq4jyk01gmhi7" path="res://microjogos/2023S1/projeto-gabriel-morais/recursos/newton-removebg-preview.png" id="3_va3ko"]
 [ext_resource type="Texture2D" uid="uid://cpostatogy0n8" path="res://microjogos/2023S1/projeto-gabriel-morais/recursos/estil.png" id="4_hy8fn"]
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/scripts/newton.gd" id="4_ym1hm"]
+[ext_resource type="Script" uid="uid://qgjx0c04aswm" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/scripts/newton.gd" id="4_ym1hm"]
 [ext_resource type="PackedScene" uid="uid://mqowq5d2yjbd" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/maca_1.tscn" id="5_ccmg4"]
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/scripts/Line2D.gd" id="6_jkosv"]
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/scripts/CharacterBody2D.gd" id="7_xs1qc"]
+[ext_resource type="Script" uid="uid://bpqoxcnmgyjb4" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/scripts/Line2D.gd" id="6_jkosv"]
+[ext_resource type="Script" uid="uid://cdj4233n7q02f" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/scripts/CharacterBody2D.gd" id="7_xs1qc"]
 [ext_resource type="AudioStream" uid="uid://clbvnd7xo50wx" path="res://microjogos/2023S1/projeto-gabriel-morais/recursos/353033__renne100__slingshot.mp3" id="8_gvspe"]
 [ext_resource type="AudioStream" uid="uid://8ul3jrtvm66" path="res://microjogos/2023S1/projeto-gabriel-morais/recursos/newtonsveng.wav" id="11_0y8lc"]
 

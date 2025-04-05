@@ -1,18 +1,18 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://c3boji2ftmtcp"]
 
-[ext_resource path="res://microjogos/moraguma/candle prick/cenas/scripts/Light.gd" type="Script" id=1]
-[ext_resource path="res://microjogos/moraguma/candle prick/recursos/sprites/lightbig.png" type="Texture2D" id=2]
-[ext_resource path="res://microjogos/moraguma/candle prick/recursos/sprites/lightsmall.png" type="Texture2D" id=3]
+[ext_resource type="Script" uid="uid://ds40bru51s0oy" path="res://microjogos/moraguma/candle prick/cenas/scripts/Light.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://cpsvbs7wt06fm" path="res://microjogos/moraguma/candle prick/recursos/sprites/lightbig.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://ch6bagcdi1l7l" path="res://microjogos/moraguma/candle prick/recursos/sprites/lightsmall.png" id="3"]
 
 [node name="Light3D" type="Node2D"]
-script = ExtResource( 1 )
+script = ExtResource("1")
 
 [node name="SmallLight" type="PointLight2D" parent="."]
-texture = ExtResource( 3 )
+texture = ExtResource("3")
 mode = 2
 range_item_cull_mask = 2
 
 [node name="BigLight" type="PointLight2D" parent="."]
-texture = ExtResource( 2 )
+texture = ExtResource("2")
 mode = 2
 range_item_cull_mask = 4

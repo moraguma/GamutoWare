@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://rvadjogfn0mw"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto_leonardo_valente/cenas/Creeper.gd" id="1_ohosw"]
+[ext_resource type="Script" uid="uid://pdjehth7sx8c" path="res://microjogos/2023S1/projeto_leonardo_valente/cenas/Creeper.gd" id="1_ohosw"]
 [ext_resource type="Texture2D" uid="uid://dcssfmuy5n8mt" path="res://microjogos/2023S1/projeto_leonardo_valente/recursos/Spritesheet Creeper.png" id="2_apqto"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hpjfv"]
@@ -95,9 +95,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yprj4"]
 _data = {
-"Explosion": SubResource("Animation_yc7vo"),
-"Idle": SubResource("Animation_2v7f8"),
-"Ignited": SubResource("Animation_2vhoe")
+&"Explosion": SubResource("Animation_yc7vo"),
+&"Idle": SubResource("Animation_2v7f8"),
+&"Ignited": SubResource("Animation_2vhoe")
 }
 
 [node name="Creeper" type="CharacterBody2D"]

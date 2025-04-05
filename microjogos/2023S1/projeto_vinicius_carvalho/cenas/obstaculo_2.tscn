@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://b5d378qv55jwf"]
 
 [ext_resource type="Texture2D" uid="uid://cq7d0dfvt2m8r" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Tiles_rock/tile35.png" id="1_hpc1e"]
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/scripts/Obstaculo2.gd" id="1_xdsd4"]
+[ext_resource type="Script" uid="uid://bq4jxyk5o63iv" path="res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/scripts/Obstaculo2.gd" id="1_xdsd4"]
 [ext_resource type="Texture2D" uid="uid://cip7dcnbvq27b" path="res://microjogos/2023S1/projeto_vinicius_carvalho/recursos/sprites/craftpix-785611-free-dungeon-platformer-pixel-art-tileset/PNG/Tiles_rock/tile36.png" id="2_bqv1t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_44aw1"]

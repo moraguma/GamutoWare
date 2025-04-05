@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dxgstxi35e5b1"]
 
-[ext_resource type="Script" path="res://microjogos/demo/frogger/cenas/scripts/main.gd" id="1"]
+[ext_resource type="Script" uid="uid://c7icfb1vn4gtg" path="res://microjogos/demo/frogger/cenas/scripts/main.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://brge38x1oasu4" path="res://microjogos/demo/frogger/recursos/sprites/tiles.png" id="2"]
 [ext_resource type="PackedScene" uid="uid://b4ji1qu54goc1" path="res://microjogos/demo/frogger/cenas/Frog.tscn" id="3"]
 

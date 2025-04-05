@@ -1,12 +1,12 @@
-[gd_scene load_steps=16 format=3 uid="uid://c2h1omei7qn0b"]
+[gd_scene load_steps=16 format=3]
 
-[ext_resource type="Texture2D" uid="uid://dcd4773grmog7" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/player.png" id="1_5mntg"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/player.png" id="1_5mntg"]
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-asteroids/cenas/scripts/player.gd" id="1_mgqdo"]
-[ext_resource type="PackedScene" uid="uid://dealv2l1gdr0h" path="res://microjogos/2024S1/projeto-asteroids/cenas/bullet.tscn" id="2_iw268"]
+[ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-asteroids/cenas/bullet.tscn" id="2_iw268"]
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-asteroids/cenas/scripts/spriteplayer.gd" id="4_prepb"]
-[ext_resource type="Texture2D" uid="uid://8p120t3sf7wl" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/explosion_sprites.png" id="5_05mas"]
-[ext_resource type="AudioStream" uid="uid://0tf321pxpcpr" path="res://microjogos/2024S1/projeto-asteroids/recursos/466866__mikee63__enhanced-blaster-2.ogg" id="6_vld3x"]
-[ext_resource type="AudioStream" uid="uid://duxmmq4u5i32u" path="res://microjogos/2024S1/projeto-asteroids/recursos/523091__magnuswaker__shotgun-blast-1.ogg" id="7_wco4p"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/explosion_sprites.png" id="5_05mas"]
+[ext_resource type="AudioStream" path="res://microjogos/2024S1/projeto-asteroids/recursos/466866__mikee63__enhanced-blaster-2.ogg" id="6_vld3x"]
+[ext_resource type="AudioStream" path="res://microjogos/2024S1/projeto-asteroids/recursos/523091__magnuswaker__shotgun-blast-1.ogg" id="7_wco4p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xov8t"]
 size = Vector2(42, 35)

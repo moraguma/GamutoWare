@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://hl1djwfl7qsa"]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="Texture2D" uid="uid://b2chs50a18x2n" path="res://microjogos/2024S1/projeto-naomi/recursos/entry_door_open_icon_208681.png" id="1_3i27i"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-naomi/recursos/entry_door_open_icon_208681.png" id="1_3i27i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b63cs"]
 size = Vector2(138, 192)

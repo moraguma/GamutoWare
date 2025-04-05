@@ -1,15 +1,25 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=7 format=3 uid="uid://co26olt86tlin"]
 
-[ext_resource path="res://microjogos/godotware/Bola/Main.gd" type="Script" id=1]
-[ext_resource path="res://microjogos/godotware/Bola/grama.png" type="Texture2D" id=2]
-[ext_resource path="res://microjogos/godotware/Bola/corda.png" type="Texture2D" id=3]
-[ext_resource path="res://microjogos/godotware/Bola/ar.tscn" type="PackedScene" id=4]
-[ext_resource path="res://microjogos/godotware/Bola/base.png" type="Texture2D" id=5]
-[ext_resource path="res://microjogos/godotware/Bola/bola.tscn" type="PackedScene" id=6]
+[sub_resource type="Resource" id="Resource_naft0"]
+metadata/__load_path__ = "res://microjogos/godotware/Bola/Main.gd"
+
+[sub_resource type="Resource" id="Resource_fpvt4"]
+metadata/__load_path__ = "res://microjogos/godotware/Bola/grama.png"
+
+[sub_resource type="Resource" id="Resource_g2ire"]
+metadata/__load_path__ = "res://microjogos/godotware/Bola/corda.png"
+
+[sub_resource type="Resource" id="Resource_um1ip"]
+metadata/__load_path__ = "res://microjogos/godotware/Bola/ar.tscn"
+
+[sub_resource type="Resource" id="Resource_6ah10"]
+metadata/__load_path__ = "res://microjogos/godotware/Bola/base.png"
+
+[sub_resource type="Resource" id="Resource_8cqqa"]
+metadata/__load_path__ = "res://microjogos/godotware/Bola/bola.tscn"
 
 [node name="Main" type="Node2D"]
-
-script/script = ExtResource( 1 )
+script/script = SubResource("Resource_naft0")
 NAME = "Bola"
 INSTRUCTION = "Pump It!"
 DURATION = 10
@@ -18,38 +28,30 @@ USE_KEYS_HUD = false
 USE_MOUSE_HUD = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-
-transform/scale = Vector2( 0.55574, 0.626138 )
-texture = ExtResource( 2 )
+transform/scale = Vector2(0.55574, 0.626138)
+texture = SubResource("Resource_fpvt4")
 centered = false
 
 [node name="Corda" type="Sprite2D" parent="."]
+transform/pos = Vector2(388.404, 189.448)
+transform/scale = Vector2(0.735621, 0.647716)
+texture = SubResource("Resource_g2ire")
 
-transform/pos = Vector2( 388.404, 189.448 )
-transform/scale = Vector2( 0.735621, 0.647716 )
-texture = ExtResource( 3 )
-
-[node name="ar" parent="." instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 469.558, 97.1703 )
+[node name="ar" parent="."]
+transform/pos = Vector2(469.558, 97.1703)
 
 [node name="Base" type="Sprite2D" parent="."]
+transform/pos = Vector2(470.853, 315.512)
+transform/scale = Vector2(0.568018, 0.605886)
+texture = SubResource("Resource_6ah10")
 
-transform/pos = Vector2( 470.853, 315.512 )
-transform/scale = Vector2( 0.568018, 0.605886 )
-texture = ExtResource( 5 )
-
-[node name="Bola" parent="." instance=ExtResource( 6 )]
-
-transform/pos = Vector2( 56.8184, -2.34735 )
+[node name="Bola" parent="."]
+transform/pos = Vector2(56.8184, -2.34735)
 
 [node name="AnimatedSprite2D" parent="Bola"]
-
-transform/pos = Vector2( 185.967, 156.185 )
+transform/pos = Vector2(185.967, 156.185)
 
 [node name="Timer" parent="Bola"]
-
 wait_time = 1.0
-
 
 [editable path="Bola"]

@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bad83afs0qqtj"]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="Texture2D" uid="uid://cy1xln5crtpcn" path="res://microjogos/2024S1/Projeto-Yago/recursos/Caixa.png" id="1_jrnhj"]
-[ext_resource type="Texture2D" uid="uid://cxmqc64y4cxs8" path="res://microjogos/2023S1/GamutoVeiga/recursos/gamuto.png" id="2_w30wt"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/Projeto-Yago/recursos/Caixa.png" id="1_jrnhj"]
+[ext_resource type="Texture2D" path="res://microjogos/2023S1/GamutoVeiga/recursos/gamuto.png" id="2_w30wt"]
 
 [node name="Caixa" type="Area2D"]
 texture_filter = 1

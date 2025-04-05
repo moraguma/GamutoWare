@@ -1,8 +1,8 @@
 [gd_scene load_steps=19 format=3 uid="uid://ti82fb7ed1ir"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-pluvinage/cenas/scripts/main.gd" id="1_vdjjx"]
+[ext_resource type="Script" uid="uid://d11v83ud6rdlh" path="res://microjogos/2023S1/projeto-pluvinage/cenas/scripts/main.gd" id="1_vdjjx"]
 [ext_resource type="Texture2D" uid="uid://bjbaijxjheufl" path="res://microjogos/2023S1/projeto-pluvinage/recursos/icon.png" id="2_2vvsw"]
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-pluvinage/cenas/CharacterBody2D.gd" id="2_wmwpe"]
+[ext_resource type="Script" uid="uid://b7a4csk2gdarc" path="res://microjogos/2023S1/projeto-pluvinage/cenas/CharacterBody2D.gd" id="2_wmwpe"]
 [ext_resource type="Texture2D" uid="uid://bdejlfihec1k" path="res://microjogos/2023S1/projeto-pluvinage/recursos/star1.png" id="5_cxjg0"]
 [ext_resource type="Texture2D" uid="uid://dswfre4d3u8yp" path="res://microjogos/2023S1/projeto-pluvinage/recursos/parallax_mountain_pack/layers/parallax-mountain-bg.png" id="5_m6kid"]
 [ext_resource type="AudioStream" uid="uid://crpu3dyotmt1y" path="res://microjogos/2023S1/projeto-pluvinage/recursos/sounds/powerup.mp3" id="5_r87wk"]
@@ -10,10 +10,10 @@
 [ext_resource type="AudioStream" uid="uid://cyl2disxurjyf" path="res://microjogos/2023S1/projeto-pluvinage/recursos/sounds/win.mp3" id="6_qna4x"]
 [ext_resource type="Texture2D" uid="uid://bbi1kl065ysx5" path="res://microjogos/2023S1/projeto-pluvinage/recursos/firerate increaser.png" id="7_104r3"]
 [ext_resource type="AudioStream" uid="uid://br8qp2ntgpi1l" path="res://microjogos/2023S1/projeto-pluvinage/recursos/sounds/lose.mp3" id="7_sbcrm"]
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-pluvinage/Bat.gd" id="8_k2nto"]
+[ext_resource type="Script" uid="uid://da5bdmjnrpkl2" path="res://microjogos/2023S1/projeto-pluvinage/Bat.gd" id="8_k2nto"]
 [ext_resource type="Texture2D" uid="uid://djcv041nxf0ip" path="res://microjogos/2023S1/projeto-pluvinage/recursos/bat/01-Idle/__Bat02_Idle_000.png" id="9_0rchk"]
 [ext_resource type="AudioStream" uid="uid://dipyn8ja1keus" path="res://microjogos/2023S1/projeto-pluvinage/recursos/sounds/jump.mp3" id="10_01xnc"]
-[ext_resource type="AudioStream" uid="uid://68gikvdgglt6" path="res://microjogos/2023S1/projeto-pluvinage/recursos/sounds/music.mp3" id="14_s4okj"]
+[ext_resource type="AudioStream" uid="uid://cyxycedypntxb" path="res://microjogos/2023S1/projeto-pluvinage/recursos/sounds/music.ogg" id="14_s4okj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vobhw"]
 

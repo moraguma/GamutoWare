@@ -1,13 +1,17 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=4 format=3 uid="uid://btgpgvramxxtv"]
 
-[ext_resource path="res://botão_crédito.gd" type="Script" id=1]
-[ext_resource path="res://Cenas/menu.png" type="Texture2D" id=2]
-[ext_resource path="res://Cenas/créditos.png" type="Texture2D" id=3]
+[sub_resource type="Resource" id="Resource_bg3c7"]
+metadata/__load_path__ = "res://botão_crédito.gd"
+
+[sub_resource type="Resource" id="Resource_e048t"]
+metadata/__load_path__ = "res://Cenas/menu.png"
+
+[sub_resource type="Resource" id="Resource_ku7je"]
+metadata/__load_path__ = "res://Cenas/créditos.png"
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Button" type="Button" parent="."]
-
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -20,20 +24,16 @@ toggle_mode = false
 focus_mode = 2
 shortcut = null
 flat = false
-script/script = ExtResource( 1 )
+script/script = SubResource("Resource_bg3c7")
 
 [node name="Sprite2D" type="Sprite2D" parent="Button"]
-
-transform/pos = Vector2( 94.6436, 34.5698 )
-transform/scale = Vector2( 0.60319, 0.612947 )
-texture = ExtResource( 2 )
+transform/pos = Vector2(94.6436, 34.5698)
+transform/scale = Vector2(0.60319, 0.612947)
+texture = SubResource("Resource_e048t")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-
 visibility/behind_parent = true
-transform/pos = Vector2( 640, 360 )
-texture = ExtResource( 3 )
+transform/pos = Vector2(640, 360)
+texture = SubResource("Resource_ku7je")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
-
-

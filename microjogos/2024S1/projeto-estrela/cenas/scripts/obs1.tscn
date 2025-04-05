@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://byuft7r8ys605"]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="Texture2D" uid="uid://dyjd8km0w8u2p" path="res://microjogos/2024S1/projeto-estrela/recursos/vitória(1).png" id="1_iywuv"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-estrela/recursos/vitória(1).png" id="1_iywuv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b8mm2"]
 radius = 68.0074

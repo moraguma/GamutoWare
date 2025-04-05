@@ -1,24 +1,23 @@
 [gd_scene load_steps=17 format=3 uid="uid://dov2m2kbxje2j"]
 
 [ext_resource type="Texture2D" uid="uid://ja6urlsch5m7" path="res://principal/recursos/sprites/MenuBase.png" id="1"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/Logo.gd" id="2"]
+[ext_resource type="Script" uid="uid://dea88dyhy1lyk" path="res://principal/cenas/scripts/Logo.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://cs75vvw01oafl" path="res://principal/recursos/sprites/GMToutline.png" id="5"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/TransitionButton.gd" id="6"]
+[ext_resource type="Script" uid="uid://blgobgb0ujtkr" path="res://principal/cenas/scripts/TransitionButton.gd" id="6"]
 [ext_resource type="Texture2D" uid="uid://bk1fle4aty18" path="res://principal/recursos/sprites/GMTMenu.png" id="6_kbpfi"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/Menu.gd" id="7"]
+[ext_resource type="Script" uid="uid://dcs18lp658xic" path="res://principal/cenas/scripts/Menu.gd" id="7"]
 [ext_resource type="Theme" uid="uid://cb4tlwb81nq48" path="res://principal/recursos/themes/TitleTheme.tres" id="7_6ckci"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/TranslationSetButton.gd" id="8"]
+[ext_resource type="Script" uid="uid://cseu83jwf4jag" path="res://principal/cenas/scripts/TranslationSetButton.gd" id="8"]
 [ext_resource type="FontFile" uid="uid://dv05ux65ppls5" path="res://principal/recursos/fonts/stop_bullying/Stop Bullying.ttf" id="8_ldr7y"]
 [ext_resource type="Theme" uid="uid://dt5djib7huxvm" path="res://principal/recursos/themes/ButtonTheme.tres" id="8_sosii"]
 [ext_resource type="Material" uid="uid://bfefepnpbds1x" path="res://principal/recursos/shaders/Diamond.tres" id="9"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/SoundButton.gd" id="11_a36n0"]
+[ext_resource type="Script" uid="uid://bqt0irlf2w57b" path="res://principal/cenas/scripts/SoundButton.gd" id="11_a36n0"]
 [ext_resource type="Texture2D" uid="uid://dppoevh5cqa2r" path="res://principal/recursos/sprites/sound_off.png" id="11_yush3"]
 [ext_resource type="Texture2D" uid="uid://b20grcuc7rfa7" path="res://principal/recursos/sprites/sound_on.png" id="12_jre51"]
 [ext_resource type="Texture2D" uid="uid://braorhthxynr" path="res://principal/recursos/sprites/sound_focused_mask.png" id="13_v5l1t"]
 
 [sub_resource type="Curve" id="Curve_svfxn"]
-min_value = -360.0
-max_value = 360.0
+_limits = [-360.0, 360.0, 0.0, 1.0]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.990196, 360), 0.0, 0.0, 0, 0]
 point_count = 2
 

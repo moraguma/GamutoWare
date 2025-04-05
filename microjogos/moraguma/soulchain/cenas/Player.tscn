@@ -5,8 +5,8 @@
 [ext_resource type="AudioStream" uid="uid://b7xocw0oplct5" path="res://microjogos/moraguma/soulchain/recursos/sounds/sfx/jump.wav" id="3"]
 [ext_resource type="AudioStream" uid="uid://clupmcd8fp3ug" path="res://microjogos/moraguma/soulchain/recursos/sounds/sfx/footstep.wav" id="4"]
 [ext_resource type="AudioStream" uid="uid://bmej1dluc2w14" path="res://microjogos/moraguma/soulchain/recursos/sounds/sfx/hit.wav" id="5"]
-[ext_resource type="Script" path="res://microjogos/moraguma/soulchain/cenas/scripts/AnimationPlayer.gd" id="6"]
-[ext_resource type="Script" path="res://microjogos/moraguma/soulchain/cenas/scripts/Player.gd" id="7"]
+[ext_resource type="Script" uid="uid://c25siityk6rtd" path="res://microjogos/moraguma/soulchain/cenas/scripts/AnimationPlayer.gd" id="6"]
+[ext_resource type="Script" uid="uid://c7jtmob71tb6y" path="res://microjogos/moraguma/soulchain/cenas/scripts/Player.gd" id="7"]
 [ext_resource type="Texture2D" uid="uid://cnwj3d42ixb6p" path="res://microjogos/moraguma/soulchain/recursos/sprites/tinydeath.png" id="8"]
 [ext_resource type="Texture2D" uid="uid://bbj8iif0o1gek" path="res://microjogos/moraguma/soulchain/recursos/sprites/deathsprites.png" id="10"]
 
@@ -341,18 +341,18 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dk34e"]
 _data = {
-"RESET": SubResource("1"),
-"air": SubResource("2"),
-"death": SubResource("3"),
-"fall": SubResource("4"),
-"jump": SubResource("5"),
-"land": SubResource("6"),
-"void_air": SubResource("7"),
-"void_fall": SubResource("8"),
-"void_jump": SubResource("9"),
-"void_land": SubResource("10"),
-"void_walk": SubResource("11"),
-"walk": SubResource("12")
+&"RESET": SubResource("1"),
+&"air": SubResource("2"),
+&"death": SubResource("3"),
+&"fall": SubResource("4"),
+&"jump": SubResource("5"),
+&"land": SubResource("6"),
+&"void_air": SubResource("7"),
+&"void_fall": SubResource("8"),
+&"void_jump": SubResource("9"),
+&"void_land": SubResource("10"),
+&"void_walk": SubResource("11"),
+&"walk": SubResource("12")
 }
 
 [sub_resource type="CanvasItemMaterial" id="14"]

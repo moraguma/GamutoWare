@@ -1,31 +1,39 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=7 format=3 uid="uid://cf5b30dfvownl"]
 
-[ext_resource path="res://minigames/Hammer/Main.gd" type="Script" id=1]
-[ext_resource path="res://minigames/Hammer/wood-background.png" type="Texture2D" id=2]
-[ext_resource path="res://minigames/Hammer/arrow.png" type="Texture2D" id=3]
-[ext_resource path="res://minigames/Hammer/barred.png" type="Texture2D" id=4]
-[ext_resource path="res://minigames/Hammer/bargreen.png" type="Texture2D" id=5]
+[sub_resource type="Resource" id="Resource_8q506"]
+metadata/__load_path__ = "res://minigames/Hammer/Main.gd"
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Resource" id="Resource_jihtd"]
+metadata/__load_path__ = "res://minigames/Hammer/wood-background.png"
 
-resource/name = "Move"
+[sub_resource type="Resource" id="Resource_lhcmd"]
+metadata/__load_path__ = "res://minigames/Hammer/arrow.png"
+
+[sub_resource type="Animation" id="1"]
 length = 3.0
-loop = true
+loop_mode = 1
 step = 0.01
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:transform/pos")
 tracks/0/interp = 1
-tracks/0/imported = false
+tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": FloatArray( 0, 1.5, 3 ),
-"transitions": FloatArray( 1, 1, 1 ),
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [ Vector2( 20, 150 ), Vector2( 620, 150 ), Vector2( 20, 150 ) ]
+"values": [Vector2(20, 150), Vector2(620, 150), Vector2(20, 150)]
 }
 
-[node name="Main" type="Node2D"]
+[sub_resource type="Resource" id="Resource_whthb"]
+metadata/__load_path__ = "res://minigames/Hammer/barred.png"
 
-script/script = ExtResource( 1 )
+[sub_resource type="Resource" id="Resource_6gqof"]
+metadata/__load_path__ = "res://minigames/Hammer/bargreen.png"
+
+[node name="Main" type="Node2D"]
+script/script = SubResource("Resource_8q506")
 NAME = "Hammer"
 INSTRUCTION = "Hit the nail!"
 DURATION = 5
@@ -34,36 +42,29 @@ USE_KEYS_HUD = true
 USE_MOUSE_HUD = false
 
 [node name="background" type="Sprite2D" parent="."]
-
-texture = ExtResource( 2 )
+texture = SubResource("Resource_jihtd")
 centered = false
 
 [node name="arrow" type="Sprite2D" parent="."]
-
-transform/pos = Vector2( 20, 150 )
-texture = ExtResource( 3 )
+transform/pos = Vector2(20, 150)
+texture = SubResource("Resource_lhcmd")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="arrow"]
-
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/Move = SubResource( 1 )
+anims/Move = SubResource("1")
 playback/active = true
 playback/speed = 1.0
-blend_times = [  ]
+blend_times = []
 autoplay = ""
 
 [node name="barred" type="Sprite2D" parent="."]
-
-transform/pos = Vector2( 20, 180 )
-texture = ExtResource( 4 )
+transform/pos = Vector2(20, 180)
+texture = SubResource("Resource_whthb")
 centered = false
 
 [node name="bargreen" type="Sprite2D" parent="."]
-
-transform/pos = Vector2( 250, 180 )
-texture = ExtResource( 5 )
+transform/pos = Vector2(250, 180)
+texture = SubResource("Resource_6gqof")
 centered = false
-
-

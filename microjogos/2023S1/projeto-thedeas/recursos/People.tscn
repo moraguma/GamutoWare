@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cvhqevojcttds"]
 
-[ext_resource type="Texture2D" uid="uid://de0sewuerm257" path="res://microjogos/2023S1/TheDeas/recursos/Monge.png" id="1_fhvfl"]
+[ext_resource type="Texture2D" uid="uid://de0sewuerm257" path="res://microjogos/2023S1/projeto-thedeas/recursos/Monge.png" id="1_fhvfl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bekob"]
 size = Vector2(224.551, 168)

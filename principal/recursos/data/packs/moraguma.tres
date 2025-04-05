@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="MicrogamePack" load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://principal/recursos/data/MicrogamePack.gd" id="1_0b24r"]
+[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_87tu8"]
+[ext_resource type="Resource" path="res://microjogos/moraguma/ifuv/microgame.tres" id="2_xpa5b"]
+[ext_resource type="Resource" path="res://microjogos/moraguma/hora_da_necromancia/microgame.tres" id="3_f46es"]
+[ext_resource type="Resource" path="res://microjogos/moraguma/deerskull/microgame.tres" id="4_3f166"]
+[ext_resource type="Resource" path="res://microjogos/moraguma/candle prick/microgame.tres" id="5_kdvjp"]
+[ext_resource type="Resource" path="res://microjogos/moraguma/soulchain/microgame.tres" id="6_yeqm7"]
+
+[resource]
+script = ExtResource("1_0b24r")
+pack_name = &"Moraguma"
+microgames = Array[ExtResource("1_87tu8")]([ExtResource("2_xpa5b"), ExtResource("3_f46es"), ExtResource("4_3f166"), ExtResource("5_kdvjp"), ExtResource("6_yeqm7")])

@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dajv4yisow4b6"]
+[gd_scene load_steps=5 format=3]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-naomi/cenas/scripts/player.gd" id="1_7t48d"]
-[ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="2_gux0f"]
+[ext_resource type="Texture2D" path="res://icon.png" id="2_gux0f"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_whvas"]
 radius = 23.0

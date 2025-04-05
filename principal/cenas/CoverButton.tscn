@@ -1,13 +1,13 @@
 [gd_scene load_steps=12 format=3 uid="uid://ciqgtpvnnggd1"]
 
 [ext_resource type="Texture2D" uid="uid://dckwaw103r1cc" path="res://principal/recursos/sprites/capagmtware.png" id="1_6jjfp"]
-[ext_resource type="Shader" path="res://principal/recursos/shaders/CornerRadius.gdshader" id="1_u4r6t"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/CoverButton.gd" id="2"]
+[ext_resource type="Shader" uid="uid://bqoisgthxfigx" path="res://principal/recursos/shaders/CornerRadius.gdshader" id="1_u4r6t"]
+[ext_resource type="Script" uid="uid://dbqqb3hgge5x0" path="res://principal/cenas/scripts/CoverButton.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://wfjt5b1c7wu7" path="res://principal/recursos/sprites/capapreta.png" id="4_rte3u"]
 [ext_resource type="Texture2D" uid="uid://5s6aanelna3g" path="res://principal/recursos/sprites/GamutoHead.png" id="5_1nsvi"]
 [ext_resource type="Theme" uid="uid://v3d547aawndh" path="res://principal/recursos/themes/BodyTheme.tres" id="6_x1ysr"]
 [ext_resource type="StyleBox" uid="uid://dtrtql2gw634d" path="res://principal/recursos/themes/BodyStyleBox.tres" id="7_w3nfy"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/TranslatableText.gd" id="8_p5tao"]
+[ext_resource type="Script" uid="uid://i6y2mm407mm6" path="res://principal/cenas/scripts/TranslatableText.gd" id="8_p5tao"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vrlym"]
 shader = ExtResource("1_u4r6t")

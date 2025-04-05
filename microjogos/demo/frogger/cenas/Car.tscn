@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://fuhbmasky45u"]
 
-[ext_resource type="Script" path="res://microjogos/demo/frogger/cenas/scripts/Car.gd" id="1"]
+[ext_resource type="Script" uid="uid://dom2gu5iwloo4" path="res://microjogos/demo/frogger/cenas/scripts/Car.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://d3hdg7tbswwhp" path="res://microjogos/demo/frogger/recursos/sprites/car.png" id="2"]
 
 [sub_resource type="Animation" id="1"]
@@ -71,10 +71,10 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fubry"]
 _data = {
-"RESET": SubResource("1"),
-"car_0": SubResource("2"),
-"car_1": SubResource("3"),
-"car_2": SubResource("4")
+&"RESET": SubResource("1"),
+&"car_0": SubResource("2"),
+&"car_1": SubResource("3"),
+&"car_2": SubResource("4")
 }
 
 [sub_resource type="RectangleShape2D" id="5"]

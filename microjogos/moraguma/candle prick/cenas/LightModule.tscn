@@ -1,8 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://6t6kjfekq5fc"]
 
-[ext_resource path="res://microjogos/moraguma/candle prick/cenas/scripts/LightModule.gd" type="Script" id=1]
-[ext_resource path="res://microjogos/moraguma/candle prick/cenas/Light.tscn" type="PackedScene" id=2]
+[ext_resource type="Script" uid="uid://nnnboa0uhnvg" path="res://microjogos/moraguma/candle prick/cenas/scripts/LightModule.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://c3boji2ftmtcp" path="res://microjogos/moraguma/candle prick/cenas/Light.tscn" id="2"]
 
 [node name="LightModule" type="Node"]
-script = ExtResource( 1 )
-LightScene = ExtResource( 2 )
+script = ExtResource("1")
+LightScene = ExtResource("2")

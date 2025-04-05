@@ -1,12 +1,12 @@
-[gd_resource type="Theme" load_steps=9 format=3 uid="uid://dt5djib7huxvm"]
+[gd_resource type="Theme" load_steps=9 format=3]
 
-[ext_resource type="StyleBox" uid="uid://b6essgcuagn6o" path="res://principal/recursos/themes/ButtonStyleBox.tres" id="1_d4rdk"]
-[ext_resource type="Texture2D" uid="uid://cip186bal41rd" path="res://principal/recursos/sprites/toggle_checked.png" id="2"]
-[ext_resource type="Texture2D" uid="uid://v1y6bapablah" path="res://principal/recursos/sprites/toggle_unchecked.png" id="3"]
-[ext_resource type="StyleBox" uid="uid://dkwl25lk173se" path="res://principal/recursos/themes/styleboxes/GrabberStyleBox.tres" id="4_exyc2"]
-[ext_resource type="StyleBox" uid="uid://c2o7dc56kybq0" path="res://principal/recursos/themes/styleboxes/GrabberHeldStyleBox.tres" id="5_u3vkt"]
-[ext_resource type="StyleBox" uid="uid://b2j4aj667r7sy" path="res://principal/recursos/themes/styleboxes/TransparentScrollStyleBox.tres" id="6_giv3g"]
-[ext_resource type="FontFile" uid="uid://cvvv4ta4o2y3l" path="res://principal/recursos/fonts/Delius_Unicase/DeliusUnicase-Bold.ttf" id="7_565ej"]
+[ext_resource type="StyleBox" path="res://principal/recursos/themes/ButtonStyleBox.tres" id="1_d4rdk"]
+[ext_resource type="Texture2D" path="res://principal/recursos/sprites/toggle_checked.png" id="2"]
+[ext_resource type="Texture2D" path="res://principal/recursos/sprites/toggle_unchecked.png" id="3"]
+[ext_resource type="StyleBox" path="res://principal/recursos/themes/styleboxes/GrabberStyleBox.tres" id="4_exyc2"]
+[ext_resource type="StyleBox" path="res://principal/recursos/themes/styleboxes/GrabberHeldStyleBox.tres" id="5_u3vkt"]
+[ext_resource type="StyleBox" path="res://principal/recursos/themes/styleboxes/TransparentScrollStyleBox.tres" id="6_giv3g"]
+[ext_resource type="FontFile" path="res://principal/recursos/fonts/Delius_Unicase/DeliusUnicase-Bold.ttf" id="7_565ej"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7ltdf"]
 

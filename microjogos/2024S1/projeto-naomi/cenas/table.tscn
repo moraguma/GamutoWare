@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://blfi2kpblvtoa"]
+[gd_scene load_steps=5 format=3]
 
-[ext_resource type="Texture2D" uid="uid://b1de16pu3ekyu" path="res://microjogos/2024S1/projeto-naomi/recursos/mesa.png" id="1_cmwc4"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-naomi/recursos/mesa.png" id="1_cmwc4"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lgec2"]
 

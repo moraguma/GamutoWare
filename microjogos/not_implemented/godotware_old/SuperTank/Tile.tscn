@@ -1,38 +1,32 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=3 format=3 uid="uid://c5ihbquvepsnm"]
 
-[ext_resource path="res://minigames/SuperTank/obstaculo1.png" type="Texture2D" id=1]
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(10, 10)
 
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-size = Vector2( 10, 10 )
+[sub_resource type="Resource" id="Resource_f5vwj"]
+metadata/__load_path__ = "res://minigames/SuperTank/obstaculo1.png"
 
 [node name="Tile" type="Area2D"]
-
-transform/pos = Vector2( -1.39445, -2.30365 )
-transform/scale = Vector2( 3.32229, 3.01793 )
+transform/pos = Vector2(-1.39445, -2.30365)
+transform/scale = Vector2(3.32229, 3.01793)
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1.01677, 0, 0, 0.745814, 0.218005, -0.925906 )
+shapes/0/shape = SubResource("1")
+shapes/0/transform = Transform2D(1.01677, 0, 0, 0.745814, 0.218005, -0.925906)
 shapes/0/trigger = false
-gravity_direction = Vector2( 0, 1 )
+gravity_direction = Vector2(0, 1)
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-
-transform/pos = Vector2( 0.218005, -0.925906 )
-transform/scale = Vector2( 1.01677, 0.745814 )
-shape = SubResource( 1 )
+transform/pos = Vector2(0.218005, -0.925906)
+transform/scale = Vector2(1.01677, 0.745814)
+shape = SubResource("1")
 trigger = false
 _update_shape_index = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-
-transform/pos = Vector2( 0.518553, -2.26667e-08 )
+transform/pos = Vector2(0.518553, -2.26667e-08)
 transform/rot = 90.0
-transform/scale = Vector2( -0.312845, 0.454129 )
-texture = ExtResource( 1 )
-
-
+transform/scale = Vector2(-0.312845, 0.454129)
+texture = SubResource("Resource_f5vwj")

@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bmhh2veb4ba3s"]
+[gd_scene load_steps=6 format=3]
 
-[ext_resource type="Texture2D" uid="uid://d0iep0odat6tf" path="res://microjogos/2024S1/projeto-estrela/recursos/laginho.png" id="1_443kk"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-estrela/recursos/laginho.png" id="1_443kk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvibd"]
 size = Vector2(654.21, 12.1843)

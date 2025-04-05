@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://drusdx8y6myiu"]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="Texture2D" uid="uid://dmgw4kdhoxsxv" path="res://microjogos/2024S1/ShootGamuto/recursos/inimigo.png" id="1_qk14b"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/ShootGamuto/recursos/inimigo.png" id="1_qk14b"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xcp88"]
 radius = 38.0713

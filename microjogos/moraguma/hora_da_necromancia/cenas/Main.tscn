@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://bsnhh2gvefdda" path="res://microjogos/moraguma/hora_da_necromancia/recursos/sprites/hearteye.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://cl3fmkyy2xxck" path="res://microjogos/moraguma/hora_da_necromancia/recursos/sprites/eye.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://d1y72x6lkwxx3" path="res://microjogos/moraguma/hora_da_necromancia/recursos/sprites/bg.png" id="5"]
-[ext_resource type="Script" path="res://microjogos/moraguma/hora_da_necromancia/cenas/scripts/Twitcher.gd" id="6"]
-[ext_resource type="Script" path="res://microjogos/moraguma/hora_da_necromancia/cenas/scripts/Main.gd" id="7"]
+[ext_resource type="Script" uid="uid://c7j10huw61n82" path="res://microjogos/moraguma/hora_da_necromancia/cenas/scripts/Twitcher.gd" id="6"]
+[ext_resource type="Script" uid="uid://8fvnun21782t" path="res://microjogos/moraguma/hora_da_necromancia/cenas/scripts/Main.gd" id="7"]
 [ext_resource type="FontFile" uid="uid://chgt5ebxijjmi" path="res://microjogos/moraguma/hora_da_necromancia/recursos/fonts/dum1.ttf" id="8"]
 [ext_resource type="Texture2D" uid="uid://d3c7ip18se6tx" path="res://microjogos/moraguma/hora_da_necromancia/recursos/sprites/heartparticle.png" id="9"]
 [ext_resource type="AudioStream" uid="uid://by03pp6yya3h7" path="res://microjogos/moraguma/hora_da_necromancia/recursos/sounds/choose.wav" id="10"]
@@ -375,17 +375,17 @@ tracks/9/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_q6pnd"]
 _data = {
-"RESET": SubResource("1"),
-"hate": SubResource("4"),
-"idle": SubResource("3"),
-"love": SubResource("2")
+&"RESET": SubResource("1"),
+&"hate": SubResource("4"),
+&"idle": SubResource("3"),
+&"love": SubResource("2")
 }
 
 [sub_resource type="FontFile" id="5"]
 fallbacks = Array[Font]([ExtResource("8")])
-face_index = null
-embolden = null
-transform = null
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0

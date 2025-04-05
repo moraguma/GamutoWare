@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://crh4gtcgmy4h3"]
 
-[ext_resource type="Script" path="res://microjogos/moraguma/deerskull/cenas/scripts/Shot.gd" id="1"]
+[ext_resource type="Script" uid="uid://pm7omf5xmo7i" path="res://microjogos/moraguma/deerskull/cenas/scripts/Shot.gd" id="1"]
 [ext_resource type="AudioStream" uid="uid://1h41b0vdkm4o" path="res://microjogos/moraguma/deerskull/recursos/sounds/sfx/shoot.wav" id="2"]
 [ext_resource type="AudioStream" uid="uid://c3sd64ekm814b" path="res://microjogos/moraguma/deerskull/recursos/sounds/sfx/aim.wav" id="3"]
 
@@ -93,8 +93,8 @@ tracks/4/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2uea0"]
 _data = {
-"RESET": SubResource("1"),
-"shot": SubResource("2")
+&"RESET": SubResource("1"),
+&"shot": SubResource("2")
 }
 
 [node name="Shot" type="RayCast2D"]

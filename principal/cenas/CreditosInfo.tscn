@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dr5dxsgtiww88"]
 
-[ext_resource type="Script" path="res://principal/cenas/scripts/CreditosInfo.gd" id="1_qcvn3"]
+[ext_resource type="Script" uid="uid://dtj51ypoahrvw" path="res://principal/cenas/scripts/CreditosInfo.gd" id="1_qcvn3"]
 [ext_resource type="Theme" uid="uid://v3d547aawndh" path="res://principal/recursos/themes/BodyTheme.tres" id="2_awnhk"]
 [ext_resource type="FontFile" uid="uid://cvvv4ta4o2y3l" path="res://principal/recursos/fonts/Delius_Unicase/DeliusUnicase-Bold.ttf" id="3_ga8lw"]
 
@@ -79,8 +79,8 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wyana"]
 _data = {
-"RESET": SubResource("Animation_6x85g"),
-"appear": SubResource("Animation_176od")
+&"RESET": SubResource("Animation_6x85g"),
+&"appear": SubResource("Animation_176od")
 }
 
 [node name="CreditosInfo" type="Node2D"]

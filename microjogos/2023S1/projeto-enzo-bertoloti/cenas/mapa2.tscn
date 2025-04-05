@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://b47o3eh6wmwgj" path="res://microjogos/2023S1/projeto-enzo-bertoloti/cenas/tileset.tres" id="1_w4agt"]
 [ext_resource type="Texture2D" uid="uid://cjxhnaatfs63g" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/MIOJO_DO_MAL_pb.png" id="2_q5boy"]
 [ext_resource type="Texture2D" uid="uid://c80aeiwc24s6a" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/player.png" id="4_d2j25"]
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-enzo-bertoloti/cenas/scripts/CharacterBody2D.gd" id="4_syy0o"]
+[ext_resource type="Script" uid="uid://bgavgpjjldnsg" path="res://microjogos/2023S1/projeto-enzo-bertoloti/cenas/scripts/CharacterBody2D.gd" id="4_syy0o"]
 [ext_resource type="AudioStream" uid="uid://dy2dhshmjh5pp" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/Sons/SFX_Explosion_01.wav" id="6_2pu86"]
 [ext_resource type="AudioStream" uid="uid://cybxjnaru36rm" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/Sons/pulo.wav" id="6_36pv8"]
 

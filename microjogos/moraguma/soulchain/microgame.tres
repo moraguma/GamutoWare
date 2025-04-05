@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3]
+
+[ext_resource type="Texture2D" path="res://microjogos/moraguma/soulchain/capa.png" id="1_65jq3"]
+[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_era8q"]
+[ext_resource type="PackedScene" path="res://microjogos/moraguma/soulchain/cenas/Main.tscn" id="2_htk62"]
+
+[resource]
+script = ExtResource("1_era8q")
+cover = ExtResource("1_65jq3")
+title_pt = &"SOULCHAIN"
+title_en = &"SOULCHAIN"
+credits_pt = "Criado por: Moraguma
+
+Minigame baseado em SOULCHAIN, um jogo de plataforma de precisao sobre usar sua alma como um gancho de escalada, desenvolvido originalmente para a Game Jam de Mentirinha 2021 do Gamux. Aqui, voce tem que soltar o gancho na hora certa para atravessar o abismo!
+
+Jogo original: https://moraguma.itch.io/soulchain
+Musica: https://opengameart.org/content/5-chiptunes-action"
+credits_en = "Made by: Moraguma
+
+Minigame based on SOULCHAIN, a precision platformer about using your soul as a grappling hook, originally developed for Gamux's Game Jam de Mentirinha 2021. Here, you must let go of the grappling hook at the right time to cross the chasm!
+
+Jogo original: https://moraguma.itch.io/soulchain
+Musica: https://opengameart.org/content/5-chiptunes-action"
+start_message_pt = &"ATRAVESSE!"
+start_message_en = &"CROSS!"
+main_scene = ExtResource("2_htk62")
+difficulty = 0

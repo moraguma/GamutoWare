@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_0u7mi"]
+[ext_resource type="Texture2D" path="res://microjogos/2023S1/projeto-thedeas/capa.png" id="1_832bc"]
+[ext_resource type="PackedScene" path="res://microjogos/2023S1/projeto-thedeas/cenas/main.tscn" id="2_mru0d"]
+
+[resource]
+script = ExtResource("1_0u7mi")
+cover = ExtResource("1_832bc")
+title_pt = &"Deus da Morte"
+title_en = &"Death God"
+credits_pt = "Criado por: [Andreas Cisi Ramos]
+
+- Artes: autorais
+- Sons: freesound.org
+
+Instagram: @the_deas_
+GitHub: TheDeas343"
+credits_en = "Made by: [Andreas Cisi Ramos]
+
+- Arts: authorial
+- Sounds:  freesound.org
+
+Instagram: @the_deas_
+GitHub: TheDeas343"
+start_message_pt = &"LIBERTE ELES!"
+start_message_en = &"FREE THEM!"
+main_scene = ExtResource("2_mru0d")
+difficulty = 0

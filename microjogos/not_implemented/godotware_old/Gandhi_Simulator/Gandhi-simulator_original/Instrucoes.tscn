@@ -1,20 +1,22 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=4 format=3 uid="uid://ci2mxnjvno7bd"]
 
-[ext_resource path="res://Instruções.gd" type="Script" id=1]
-[ext_resource path="res://Cenas/instruções.png" type="Texture2D" id=2]
-[ext_resource path="res://Cenas/start.png" type="Texture2D" id=3]
+[sub_resource type="Resource" id="Resource_gh4p8"]
+metadata/__load_path__ = "res://Instruções.gd"
+
+[sub_resource type="Resource" id="Resource_ns556"]
+metadata/__load_path__ = "res://Cenas/instruções.png"
+
+[sub_resource type="Resource" id="Resource_0iju8"]
+metadata/__load_path__ = "res://Cenas/start.png"
 
 [node name="Node2D" type="Node2D"]
-
-script/script = ExtResource( 1 )
+script/script = SubResource("Resource_gh4p8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-
-transform/pos = Vector2( 640.814, 360.815 )
-texture = ExtResource( 2 )
+transform/pos = Vector2(640.814, 360.815)
+texture = SubResource("Resource_ns556")
 
 [node name="Button" type="Button" parent="."]
-
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -29,11 +31,8 @@ shortcut = null
 flat = false
 
 [node name="Sprite2D" type="Sprite2D" parent="Button"]
-
-transform/pos = Vector2( 95.1628, 35.7198 )
-transform/scale = Vector2( 0.619122, 0.594188 )
-texture = ExtResource( 3 )
+transform/pos = Vector2(95.1628, 35.7198)
+transform/scale = Vector2(0.619122, 0.594188)
+texture = SubResource("Resource_0iju8")
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
-
-

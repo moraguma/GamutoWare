@@ -1,12 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://0src2rul5tqr"]
+[gd_scene load_steps=9 format=3]
 
 [ext_resource type="Script" path="res://microjogos/2024S1/projeto-eco-g/cenas/scripts/Sonar.gd" id="1_e0rr8"]
-[ext_resource type="Texture2D" uid="uid://ci1a68h6qcaid" path="res://microjogos/2024S1/projeto-eco-g/recursos/sprites/sonar/sonar_0.png" id="2_e5si4"]
-[ext_resource type="Texture2D" uid="uid://b8vjnoau01e78" path="res://microjogos/2024S1/projeto-eco-g/recursos/sprites/sonar/sonar_1.png" id="3_0c4lj"]
-[ext_resource type="Texture2D" uid="uid://dvbhpckmxfy5y" path="res://microjogos/2024S1/projeto-eco-g/recursos/sprites/sonar/sonar_2.png" id="4_6mnc1"]
-[ext_resource type="Texture2D" uid="uid://csw0cx3h63m3q" path="res://microjogos/2024S1/projeto-eco-g/recursos/sprites/sonar/sonar_3.png" id="5_5r5w3"]
-[ext_resource type="Texture2D" uid="uid://dv74x4nu3657f" path="res://microjogos/2024S1/projeto-eco-g/recursos/sprites/sonar/sonar_4.png" id="6_1cta1"]
-[ext_resource type="Texture2D" uid="uid://53sr0hd4pnk1" path="res://microjogos/2024S1/projeto-eco-g/recursos/sprites/sonar/sonar_5.png" id="7_q2vj5"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-eco-g/recursos/sprites/sonar/sonar_0.png" id="2_e5si4"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-eco-g/recursos/sprites/sonar/sonar_1.png" id="3_0c4lj"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-eco-g/recursos/sprites/sonar/sonar_2.png" id="4_6mnc1"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-eco-g/recursos/sprites/sonar/sonar_3.png" id="5_5r5w3"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-eco-g/recursos/sprites/sonar/sonar_4.png" id="6_1cta1"]
+[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-eco-g/recursos/sprites/sonar/sonar_5.png" id="7_q2vj5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mv811"]
 animations = [{

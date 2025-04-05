@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://dhsdkm5unb16"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-thedeas/cenas/main.gd" id="1_reqd2"]
+[ext_resource type="Script" uid="uid://63oacrlf2s5s" path="res://microjogos/2023S1/projeto-thedeas/cenas/main.gd" id="1_reqd2"]
 [ext_resource type="Texture2D" uid="uid://dmfv2vlqeqb7c" path="res://microjogos/2023S1/projeto-thedeas/recursos/BackGround.png" id="2_b25e2"]
 [ext_resource type="Texture2D" uid="uid://bovvkgqwgjopg" path="res://microjogos/2023S1/projeto-thedeas/recursos/Folha.png" id="4_yaape"]
 [ext_resource type="Texture2D" uid="uid://c1vbf2ibi2x5y" path="res://microjogos/2023S1/projeto-thedeas/recursos/GodAnimation/DeathGod00.png" id="5_5boq4"]
@@ -10,12 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://crun8leypb42d" path="res://microjogos/2023S1/projeto-thedeas/recursos/GodAnimation/DeathGod02.png" id="7_l0a8a"]
 [ext_resource type="Texture2D" uid="uid://to6yw0cytuq5" path="res://microjogos/2023S1/projeto-thedeas/recursos/GodAnimation/DeathGod03.png" id="8_nskvu"]
 [ext_resource type="AudioStream" uid="uid://calwwfonn1ynl" path="res://microjogos/2023S1/projeto-thedeas/recursos/SmashSound.wav" id="9_1tq5x"]
-[ext_resource type="Script" path="res://microjogos/2023S1/projeto-thedeas/cenas/scripts/handMovment.gd" id="9_cvxqj"]
+[ext_resource type="Script" uid="uid://tgex2k73i28s" path="res://microjogos/2023S1/projeto-thedeas/cenas/scripts/handMovment.gd" id="9_cvxqj"]
 [ext_resource type="AudioStream" uid="uid://d1r5mxstd48y6" path="res://microjogos/2023S1/projeto-thedeas/recursos/TerrorSound.wav" id="10_p7615"]
 
 [sub_resource type="Curve" id="5"]
-min_value = -360.0
-max_value = 360.0
+_limits = [-360.0, 360.0, 0.0, 1.0]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.990196, 360), 0.0, 0.0, 0, 0]
 point_count = 2
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dwtd81h2efw8f"]
 
-[ext_resource type="Script" path="res://microjogos/demo/tiro_ao_alvo/cenas/scripts/main.gd" id="1"]
-[ext_resource type="Script" path="res://microjogos/demo/tiro_ao_alvo/cenas/scripts/Mira.gd" id="2"]
+[ext_resource type="Script" uid="uid://c7t7xwwe1x7pi" path="res://microjogos/demo/tiro_ao_alvo/cenas/scripts/main.gd" id="1"]
+[ext_resource type="Script" uid="uid://d1kppjoiy2mli" path="res://microjogos/demo/tiro_ao_alvo/cenas/scripts/Mira.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://bkkux7opqp58t" path="res://microjogos/demo/tiro_ao_alvo/recursos/sprites/aim.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://bw4ng1cjsscl7" path="res://microjogos/demo/tiro_ao_alvo/recursos/sprites/bg.png" id="4"]
 [ext_resource type="AudioStream" uid="uid://dcssatltg8ygf" path="res://microjogos/demo/tiro_ao_alvo/recursos/sounds/Shoot this bitch.ogg" id="5"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dva321mc7rve8"]
 
 [ext_resource type="Texture2D" uid="uid://m4s2k6ysumvj" path="res://microjogos/2023S1/bis-limao/recursos/bus azul.png" id="1_wjbak"]
-[ext_resource type="Script" path="res://microjogos/2023S1/bis-limao/cenas/scripts/bis move.gd" id="2_c537g"]
+[ext_resource type="Script" uid="uid://dpnk34tmtu65e" path="res://microjogos/2023S1/bis-limao/cenas/scripts/bis move.gd" id="2_c537g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_it8vp"]
 size = Vector2(23.6938, 11.3731)

@@ -1,19 +1,19 @@
 [gd_scene load_steps=27 format=3 uid="uid://sediaedhyp4h"]
 
 [ext_resource type="Texture2D" uid="uid://d1pcvjogk0whm" path="res://principal/recursos/sprites/GMTIconSpritesheet.png" id="1"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/Jogo.gd" id="2"]
+[ext_resource type="Script" uid="uid://nuc4ey4h6jxi" path="res://principal/cenas/scripts/Jogo.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://wvr13kxa83wa" path="res://principal/recursos/sprites/Battery.png" id="3"]
 [ext_resource type="Theme" uid="uid://n5yo736vdclg" path="res://principal/recursos/themes/GameTheme.tres" id="3_umkw3"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/Bateria.gd" id="4"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/Relogio.gd" id="6"]
+[ext_resource type="Script" uid="uid://c5686qim2k0a0" path="res://principal/cenas/scripts/Bateria.gd" id="4"]
+[ext_resource type="Script" uid="uid://bo1sbktvlmt0m" path="res://principal/cenas/scripts/Relogio.gd" id="6"]
 [ext_resource type="Texture2D" uid="uid://cf6e7k0jprikg" path="res://principal/recursos/sprites/Cursor.png" id="7"]
 [ext_resource type="Texture2D" uid="uid://d2g21riptaer" path="res://principal/recursos/sprites/GreenGameIcon.png" id="8"]
 [ext_resource type="Texture2D" uid="uid://chkkxnuifd6go" path="res://principal/recursos/sprites/Game.png" id="9"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/Vida.gd" id="10"]
+[ext_resource type="Script" uid="uid://efo8g4tp4r2f" path="res://principal/cenas/scripts/Vida.gd" id="10"]
 [ext_resource type="Theme" uid="uid://cb4tlwb81nq48" path="res://principal/recursos/themes/TitleTheme.tres" id="11_coplq"]
 [ext_resource type="Texture2D" uid="uid://ctijuu2jh4eyo" path="res://principal/recursos/sprites/LifeSpritesheet.png" id="12"]
 [ext_resource type="Texture2D" uid="uid://bwhscrkgcredi" path="res://principal/recursos/sprites/excitedParticles.png" id="14"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/Droppable.gd" id="15"]
+[ext_resource type="Script" uid="uid://il22ucs6kg8r" path="res://principal/cenas/scripts/Droppable.gd" id="15"]
 [ext_resource type="PackedScene" uid="uid://dnhn2yadjkru6" path="res://principal/cenas/MinigameDisplay.tscn" id="15_a3ydg"]
 
 [sub_resource type="Animation" id="6"]
@@ -1440,13 +1440,13 @@ tracks/23/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6caji"]
 _data = {
-"RESET": SubResource("6"),
-"game_over": SubResource("20"),
-"lose": SubResource("7"),
-"start": SubResource("5"),
-"take_damage_and_win": SubResource("24"),
-"win": SubResource("8"),
-"win_game": SubResource("19")
+&"RESET": SubResource("6"),
+&"game_over": SubResource("20"),
+&"lose": SubResource("7"),
+&"start": SubResource("5"),
+&"take_damage_and_win": SubResource("24"),
+&"win": SubResource("8"),
+&"win_game": SubResource("19")
 }
 
 [sub_resource type="Animation" id="Animation_538m5"]
@@ -1502,8 +1502,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ortrc"]
 _data = {
-"RESET": SubResource("Animation_538m5"),
-"idle": SubResource("18")
+&"RESET": SubResource("Animation_538m5"),
+&"idle": SubResource("18")
 }
 
 [node name="Main" type="Node2D"]

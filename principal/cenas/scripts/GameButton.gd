@@ -32,7 +32,7 @@ func _ready():
 		var pos = 0
 		for title in data_dicts[i]:
 			var new_button = MinigameButton.instantiate()
-			new_button.load_minigames(title, data_dicts[i][title])
+			new_button.load_minigames(title, data_dicts[i][title].microgames)
 			new_button.button_pressed = settings[i][pos]
 			parents[i].add_child(new_button)
 			

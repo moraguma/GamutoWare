@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c5fyulimmavxw"]
 
 [ext_resource type="Theme" uid="uid://dt5djib7huxvm" path="res://principal/recursos/themes/ButtonTheme.tres" id="1"]
-[ext_resource type="Script" path="res://principal/cenas/scripts/MinigameButton.gd" id="2"]
+[ext_resource type="Script" uid="uid://clobqtk2s3j6b" path="res://principal/cenas/scripts/MinigameButton.gd" id="2"]
 
 [node name="MinigameButton" type="CheckBox"]
 offset_right = 24.0
