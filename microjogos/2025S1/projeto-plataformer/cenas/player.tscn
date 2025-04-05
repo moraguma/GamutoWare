@@ -19,6 +19,9 @@ tracks/0/keys = {
 "values": [0, 1, 2, 3, 4, 5, 6]
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qwkws"]
+size = Vector2(20, 36)
+
 [sub_resource type="Animation" id="Animation_vs5jv"]
 length = 0.001
 tracks/0/type = "value"
@@ -32,6 +35,30 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:shape")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_qwkws")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1, -1)]
 }
 
 [sub_resource type="Animation" id="Animation_qwkws"]
@@ -66,6 +93,30 @@ tracks/0/keys = {
 "update": 1,
 "values": [16, 17, 19, 18, 20]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:shape")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_qwkws"), SubResource("RectangleShape2D_qwkws"), SubResource("RectangleShape2D_qwkws"), SubResource("RectangleShape2D_qwkws"), SubResource("RectangleShape2D_qwkws")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1, -1), Vector2(-1, -7), Vector2(-1, -7), Vector2(-1, -9), Vector2(-1, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0bja4"]
 _data = {
@@ -74,9 +125,6 @@ _data = {
 &"jump": SubResource("Animation_0bja4"),
 &"run": SubResource("Animation_qwkws")
 }
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qwkws"]
-size = Vector2(20, 36)
 
 [node name="Personagem" type="CharacterBody2D"]
 
@@ -93,5 +141,5 @@ hframes = 8
 vframes = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 2)
+position = Vector2(-1, -1)
 shape = SubResource("RectangleShape2D_qwkws")
