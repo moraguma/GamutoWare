@@ -1,4 +1,0 @@
-[gd_scene format=3 uid="uid://s34c8u1re5fr"]
-
-[node name="Main" type="Node2D"]
-texture_filter = 1

@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://s34c8u1re5fr"]
+
+[ext_resource type="PackedScene" uid="uid://bukwvlpdiph3y" path="res://microjogos/2025S1/gamuto_snap/cenas/cameraPlayer.tscn" id="1_6m65u"]
+[ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="2_frgdu"]
+
+[node name="Main" type="Node2D"]
+texture_filter = 1
+
+[node name="CameraPlayer" parent="." instance=ExtResource("1_6m65u")]
+position = Vector2(960, 540)
+
+[node name="spawPoints" type="Node2D" parent="."]
+
+[node name="topRight" type="Marker2D" parent="spawPoints"]
+position = Vector2(1340, 370)
+
+[node name="topLeft" type="Marker2D" parent="spawPoints"]
+position = Vector2(580, 370)
+
+[node name="botRight" type="Marker2D" parent="spawPoints"]
+position = Vector2(580, 710)
+
+[node name="botLeft" type="Marker2D" parent="spawPoints"]
+position = Vector2(1340, 710)
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(936, 530)
+scale = Vector2(29.0313, 16.7813)
+texture = ExtResource("2_frgdu")
