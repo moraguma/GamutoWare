@@ -28,24 +28,6 @@ var p_posi_max: Vector2
 var speed = 2.5
 
 func _ready():
-	anim_balde.play("default")
-	anim_vara.play("default")
-	
-	v_posi_inic = anim_vara.position
-
-	
-	a_posi_inic = anzol.position
-	a_posi_now = a_posi_inic
-	
-	p_posi_inic = peixe.position
-	p_posi_max = max_peixe.position
-	p_posi_now = p_posi_max
-	
-	match Global.language:
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("MORDERAM A ISCA!")
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("A FISH!")
 	
 	randomize()
 
