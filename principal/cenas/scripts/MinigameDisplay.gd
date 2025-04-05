@@ -46,7 +46,7 @@ func start_game(microgame):
 	if ResourceLoader.load_threaded_get_status(microgame.main_scene.resource_path) == ResourceLoader.ThreadLoadStatus.THREAD_LOAD_INVALID_RESOURCE:
 		print("Loading without previous request: "+microgame.main_scene.resource_path)
 		ResourceLoader.load_threaded_request(microgame.main_scene.resource_path)
-	current_microgame = microgame.main_scene.instantiate()
+	current_microgame = ResourceLoader.load_threaded_get(microgame.main_scene.resource_path).instantiate()
 	current_microgame.connect("win", win_microgame)
 	current_microgame.connect("lose", lose_microgame)
 	

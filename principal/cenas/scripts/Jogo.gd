@@ -25,7 +25,7 @@ var microgame_queue = []
 
 var total_microgames
 # var icon_dict = {}
-var microgame_dict = {}
+# var microgame_dict = {}
 
 var total_lives = 3
 var score = 0
@@ -139,14 +139,14 @@ func update_microgames():
 			total_microgames -= 1
 
 
-func setup_jam_mode(microgames):
+func setup_jam_mode(microgame_list):
 	mode = MODE.JAM
-	self.microgames = microgames
+	self.microgames = microgame_list
 
 
-func setup_arcade_mode(microgames):
+func setup_arcade_mode(microgame_list):
 	mode = MODE.ENDLESS
-	self.microgames = microgames
+	self.microgames = microgame_list
 
 
 func _ready():
