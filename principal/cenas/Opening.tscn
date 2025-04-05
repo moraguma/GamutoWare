@@ -3,7 +3,7 @@
 [ext_resource type="FontFile" uid="uid://blcw2hkcbcxid" path="res://principal/recursos/fonts/stop_bullying/Stop Bullying.otf" id="1"]
 [ext_resource type="Texture2D" uid="uid://c2sgtas737d1o" path="res://principal/recursos/sprites/gamuxlogo.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://c2mwty1vwy3f4" path="res://principal/recursos/sprites/gamux.png" id="3"]
-[ext_resource type="Script" uid="uid://d3ck7n84ihen" path="res://principal/cenas/scripts/Opening.gd" id="4"]
+[ext_resource type="Script" path="res://principal/cenas/scripts/Opening.gd" id="4"]
 
 [sub_resource type="FontFile" id="1"]
 fallbacks = Array[Font]([ExtResource("1")])
@@ -168,8 +168,8 @@ tracks/5/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s2r1r"]
 _data = {
-&"RESET": SubResource("3"),
-&"opening": SubResource("4")
+"RESET": SubResource("3"),
+"opening": SubResource("4")
 }
 
 [node name="Opening" type="Node2D"]
@@ -196,7 +196,7 @@ texture = ExtResource("3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-&"": SubResource("AnimationLibrary_s2r1r")
+"": SubResource("AnimationLibrary_s2r1r")
 }
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
