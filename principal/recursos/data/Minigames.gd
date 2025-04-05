@@ -1,6 +1,7 @@
 extends Resource
 
 const packs = {
+	"class_of_2023" : "res://principal/recursos/data/packs/class_of_2023.tres",
 	"class_of_2022" : "res://principal/recursos/data/packs/class_of_2022.tres",
 	"demo" : "res://principal/recursos/data/packs/demo.tres",
 	"godotware": "res://principal/recursos/data/packs/godotware.tres",

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MicrogamePack" load_steps=9 format=3 uid="uid://y24kemyesg2c"]
+
+[ext_resource type="Script" path="res://principal/recursos/data/MicrogamePack.gd" id="1_0pwo5"]
+[ext_resource type="Resource" uid="uid://31yk47jynb3a" path="res://microjogos/2023S1/bis-limao/microgame.tres" id="1_xe7pf"]
+[ext_resource type="Resource" uid="uid://wtehsve2xe1r" path="res://microjogos/2023S1/GamutoVeiga/microgame.tres" id="2_jwl4o"]
+[ext_resource type="Resource" uid="uid://c6h8hn0js3ujx" path="res://microjogos/2023S1/mail_cleaner/microgame.tres" id="3_8x7eb"]
+[ext_resource type="Resource" uid="uid://bc6w50u05jhxc" path="res://microjogos/2023S1/projeto-brabesf/microgame.tres" id="4_bxq8x"]
+[ext_resource type="Resource" uid="uid://bi25sjapjcs0n" path="res://microjogos/2023S1/projeto-enzo-bertoloti/microgame.tres" id="5_5p1an"]
+[ext_resource type="Resource" uid="uid://jmlthfox8on3" path="res://microjogos/2023S1/projeto-esteche/microgame.tres" id="6_hhlnd"]
+[ext_resource type="Resource" uid="uid://d0d6ciiuncxo2" path="res://microjogos/2023S1/projeto-gabriel-morais/microgame.tres" id="7_hvc6b"]
+
+[resource]
+script = ExtResource("1_0pwo5")
+pack_name = &"Class of 2023"
+microgames = Array[Resource("res://principal/microgame_asset.gd")]([ExtResource("1_xe7pf"), ExtResource("2_jwl4o"), ExtResource("3_8x7eb"), ExtResource("4_bxq8x"), ExtResource("5_5p1an"), ExtResource("6_hhlnd"), ExtResource("7_hvc6b")])
