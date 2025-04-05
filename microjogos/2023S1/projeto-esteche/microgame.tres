@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://jmlthfox8on3"]
+
+[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_csgy1"]
+[ext_resource type="Texture2D" uid="uid://cc11hb0kgudxu" path="res://microjogos/2023S1/projeto-esteche/capa.png" id="1_le1hx"]
+[ext_resource type="PackedScene" uid="uid://csiisnal8j2bo" path="res://microjogos/2023S1/projeto-esteche/cenas/main.tscn" id="2_r6g7k"]
+
+[resource]
+script = ExtResource("1_csgy1")
+cover = ExtResource("1_le1hx")
+title_pt = &"Joguinho de mochila a jato"
+title_en = &"Jetpack minigame"
+credits_pt = "Criado por: [Gustavo Esteche!]
+
+Plataforma de pouso: https://opengameart.org/content/landing-platform
+Plano de fundo estrelado: https://enjl.itch.io/background-starry-space
+Astronauta com mochila a jato: https://opengameart.org/content/monkey-on-mars-share-the-love
+Asteróide: https://opengameart.org/content/brown-asteroid
+Som de explosão: https://opengameart.org/content/wgs-sound-fx-explosion-1
+Fanfarra de vitória: https://opengameart.org/content/8-bit-sound-fx"
+credits_en = "Made by: [Gustavo Esteche!]
+
+Landing platform: https://opengameart.org/content/landing-platform
+Starry background: https://enjl.itch.io/background-starry-space
+Jetpack astronaut: https://opengameart.org/content/monkey-on-mars-share-the-love
+Asteroid: https://opengameart.org/content/brown-asteroid
+Explosion sound: https://opengameart.org/content/wgs-sound-fx-explosion-1
+Victory fanfare: https://opengameart.org/content/8-bit-sound-fx"
+start_message_pt = &"ATRAVESSE"
+start_message_en = &"CROSS"
+main_scene = ExtResource("2_r6g7k")
+difficulty = 0

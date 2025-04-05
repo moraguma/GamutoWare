@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://bi25sjapjcs0n"]
+
+[ext_resource type="Texture2D" uid="uid://csqhb23nris17" path="res://microjogos/2023S1/projeto-enzo-bertoloti/capa.png" id="1_dvh8l"]
+[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_p38ce"]
+[ext_resource type="PackedScene" uid="uid://de2sydr6owt3g" path="res://microjogos/2023S1/projeto-enzo-bertoloti/cenas/main.tscn" id="2_my7hl"]
+
+[resource]
+script = ExtResource("1_p38ce")
+cover = ExtResource("1_dvh8l")
+title_pt = &"Lariojo"
+title_en = &"Starved for ramen"
+credits_pt = "Criado por: Enzo Pacheco Bertoloti
+
+Musica e efeitos por: Jesus Lastra"
+credits_en = "Made by: Enzo Pacheco Bertoloti
+
+Music and sound effects by: Jesus Lastra"
+start_message_pt = &"PEGUE O MIOJO!"
+start_message_en = &"GET THE RAMEN!"
+main_scene = ExtResource("2_my7hl")
+difficulty = 0

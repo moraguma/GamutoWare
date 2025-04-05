@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://bc6w50u05jhxc"]
+
+[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_468sm"]
+[ext_resource type="Texture2D" uid="uid://cgbl4eye2oclu" path="res://microjogos/2023S1/projeto-brabesf/capa.png" id="1_alumg"]
+[ext_resource type="PackedScene" uid="uid://dg5uxs8qt1qbc" path="res://microjogos/2023S1/projeto-brabesf/cenas/main.tscn" id="2_0cjgg"]
+
+[resource]
+script = ExtResource("1_468sm")
+cover = ExtResource("1_alumg")
+title_pt = &"Doce memória"
+title_en = &"Sweet memory"
+credits_pt = "Criado por: Felipe Brabes
+sons:
+	beepbox.com
+imagens:
+	Laranja: Original: Jpbrigand2
+	Banana: Original: Justus Blümer from Deutschland - Derivative:Kimberli Mäkäräinen
+	Maçã: Original: Abhijit Tembhekar from Mumbai, India"
+credits_en = "Made by: Felipe Brabes
+sounds: 
+	beepbox.com
+images:
+	orange: Original: Jpbrigand2
+	Banana: Original: Justus Blümer from Deutschland - Derivative:Kimberli Mäkäräinen
+	apple: Original: Abhijit Tembhekar from Mumbai, India"
+start_message_pt = &"MEMORIZE THE FRUITS!"
+start_message_en = &"MEMORIZE AS FRUTAS!"
+main_scene = ExtResource("2_0cjgg")
+difficulty = 0

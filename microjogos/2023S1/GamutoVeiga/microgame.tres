@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://wtehsve2xe1r"]
+
+[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_fkcek"]
+[ext_resource type="Texture2D" uid="uid://mnbl6w446r01" path="res://microjogos/2023S1/GamutoVeiga/capa.png" id="1_wiclw"]
+[ext_resource type="PackedScene" uid="uid://drosyf6u1slha" path="res://microjogos/2023S1/GamutoVeiga/cenas/main.tscn" id="2_ewne4"]
+
+[resource]
+script = ExtResource("1_fkcek")
+cover = ExtResource("1_wiclw")
+title_pt = &"Glassmuto"
+title_en = &"Glassmuto"
+credits_pt = "Criado por: Matheus Veiga - mvl18;
+			Tiago Zaparoli - TZShinobi;
+			Rafael Hoyos - TochaFh;
+			
+Imagens Utilizadas Retiradas de: Freepik.com e Gamuxunicamp.github.io/website/
+Capa feita utilizando Canva.com"
+credits_en = "Made by: Matheus Veiga - mvl18;
+		 Tiago Zaparoli - TZShinobi;
+		 Rafael Hoyos - TochaFh;
+
+Images Taken From: Freepik.com and Gamuxunicamp.github.io/website/
+Front Cover Made With Canva.com"
+start_message_pt = &"Find Gamuto!"
+start_message_en = &"Ache o Gamuto!"
+main_scene = ExtResource("2_ewne4")
+difficulty = 0

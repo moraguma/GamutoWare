@@ -1,7 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://md5kotfjs6lq"]
+[gd_scene load_steps=13 format=3 uid="uid://md5kotfjs6lq"]
 
 [ext_resource type="Script" path="res://microjogos/2023S1/bis-limao/cenas/scripts/main.gd" id="1_ow836"]
-[ext_resource type="Texture2D" uid="uid://csgyvio782t8q" path="res://microjogos/2023S1/bis-limao/recursos/background antigo.jpg" id="2_27dk0"]
 [ext_resource type="Texture2D" uid="uid://ci0eq5fj5mmlx" path="res://microjogos/2023S1/bis-limao/recursos/gamuto.png" id="2_yqach"]
 [ext_resource type="Texture2D" uid="uid://dcmtjn4tkgm8u" path="res://microjogos/2023S1/bis-limao/recursos/background novo.png" id="3_3rc8f"]
 [ext_resource type="Script" path="res://microjogos/2023S1/bis-limao/cenas/scripts/gamuto.gd" id="4_stjrp"]
@@ -66,7 +65,7 @@ visible = false
 modulate = Color(1, 1, 1, 0.643137)
 position = Vector2(972, 578.875)
 scale = Vector2(1.75, 1.6675)
-texture = ExtResource("2_27dk0")
+texture = ExtResource("3_3rc8f")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1

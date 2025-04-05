@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://31yk47jynb3a"]
+
+[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_ieajq"]
+[ext_resource type="PackedScene" uid="uid://md5kotfjs6lq" path="res://microjogos/2023S1/bis-limao/cenas/main.tscn" id="1_jxfm6"]
+[ext_resource type="Texture2D" uid="uid://bg1h401prxntp" path="res://microjogos/2023S1/bis-limao/capa.png" id="1_st0gp"]
+
+[resource]
+script = ExtResource("1_ieajq")
+cover = ExtResource("1_st0gp")
+title_pt = &"Bus Limao"
+title_en = &"Lemon Bus"
+credits_pt = "Criado por: Rafa Hoyos
+
+GitHub - TochaFh
+Instagram - @rafachoyos
+
+---
+Sprite do Gamuto por Gustavo (moraguma)
+Música e demais sprites por Rafa Hoyos"
+credits_en = "Made by: Rafa Hoyos
+
+GitHub - TochaFh
+Instagram - @rafachoyos
+
+---
+Gamuto sprite by Gustavo (moraguma)
+Music and other sprites by Rafa Hoyos"
+start_message_pt = &"BUS LIMAO SUPREMACY"
+start_message_en = &"LEMON BUS SUPREMACY"
+main_scene = ExtResource("1_jxfm6")
+difficulty = 0
