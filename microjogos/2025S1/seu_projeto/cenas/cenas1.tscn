@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://dwg6yv3kqf2eh"]
+
+[ext_resource type="Texture2D" uid="uid://bgfyrk5qr8xo0" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/Design sem nome (3).png" id="1_2uta7"]
+[ext_resource type="Texture2D" uid="uid://wgcpsoln6a0j" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/poção 1 teste.png" id="2_lbx2f"]
+[ext_resource type="Texture2D" uid="uid://mf2koxn56aue" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/poção 2 - teste.png" id="3_422id"]
+[ext_resource type="Texture2D" uid="uid://83i685dpkq4y" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/poção 3 - teste.png" id="4_dmivy"]
+[ext_resource type="Texture2D" uid="uid://bfkwcn2ny1gev" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/poção 4 - teste.png" id="5_6rkfm"]
+[ext_resource type="Texture2D" uid="uid://ds3b22n84ck47" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/moldura teste (2).png" id="6_422id"]
+
+[node name="Cenas1" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Fundo" type="Sprite2D" parent="Node2D"]
+position = Vector2(960, 540)
+texture = ExtResource("1_2uta7")
+
+[node name="Poção 1" type="Sprite2D" parent="Node2D"]
+position = Vector2(206, 894)
+texture = ExtResource("2_lbx2f")
+
+[node name="Poção 2" type="Sprite2D" parent="Node2D"]
+position = Vector2(206, 243)
+texture = ExtResource("3_422id")
+
+[node name="Poção 3" type="Sprite2D" parent="Node2D"]
+position = Vector2(1729, 243)
+texture = ExtResource("4_dmivy")
+
+[node name="Poção 4" type="Sprite2D" parent="Node2D"]
+position = Vector2(1739, 894)
+texture = ExtResource("5_6rkfm")
+
+[node name="Quadro ?" type="Sprite2D" parent="Node2D"]
+position = Vector2(177, 231)
+scale = Vector2(2.83726, 2.83726)
+texture = ExtResource("6_422id")
