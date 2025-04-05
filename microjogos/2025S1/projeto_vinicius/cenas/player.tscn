@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cajuj4ydxnjt6"]
+
+[ext_resource type="Texture2D" uid="uid://bv87dj26ou83c" path="res://microjogos/2025S1/projeto_vinicius/recursos/imagens/(background-coffee)pixel-art-illustration-coffeeshop-background-pixelated-cafe-cozy-coffeeshop-cafe-background-pixelated-for-the-pixel-art-game-and-icon-for-website-and-video-game-old-school-retro-vector.jpg" id="1_3k5r5"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="(background-coffee)pixel-art-illustration-coffeeshop-background-pixelated-cafe-cozy-coffeeshop-cafe-background-pixelated-for-the-pixel-art-game-and-icon-for-website-and-video-game-old-school-retro-vector" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(1.22449, 1.10204)
+texture = ExtResource("1_3k5r5")
