@@ -19,13 +19,18 @@ const HEIGHT = 1080
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
+	$AnimatedSprite2D.play("default")
+	
+	var spawned_scene = load("res://microjogos/2025S1/projeto_milla/cenas/aboboras.gd")
+	
+	
 	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
+			NotificationCenter.notify("Get the pumpkins")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FAÇA ALGO!")
+			NotificationCenter.notify("Pegue as aboboras!")
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
@@ -70,3 +75,5 @@ func register_win():
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
 	emit_signal("lose")
+func _on_chão_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

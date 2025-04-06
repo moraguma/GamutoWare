@@ -6,7 +6,9 @@
 script = ExtResource("1_q5idk")
 title_pt = &"TÍTULO DO JOGO"
 title_en = &"GAME TITLE"
-credits_pt = "Créditos do jogo"
+credits_pt = "Feito por: Mirella dos Santos Nascimento
+Nome: Menina e Abóboras
+Descrição: As abóboras caem e vc tem que apertar as setas antes que elas chegem no chão."
 credits_en = "Game crédits"
 start_message_pt = &"FAÇA ALGO!"
 start_message_en = &"DO SOMETHING!"

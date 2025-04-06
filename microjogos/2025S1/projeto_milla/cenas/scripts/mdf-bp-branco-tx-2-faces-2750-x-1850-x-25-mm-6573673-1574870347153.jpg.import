@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsaa5xotr2t6g"
-path="res://.godot/imported/capa.png-7290730ead78bd94158db5ffbcf98e92.ctex"
+uid="uid://cfxv8eg6ju868"
+path="res://.godot/imported/mdf-bp-branco-tx-2-faces-2750-x-1850-x-25-mm-6573673-1574870347153.jpg-287b22896f6687c199259a409cb4fdb7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/projeto_milla/capa.png"
-dest_files=["res://.godot/imported/capa.png-7290730ead78bd94158db5ffbcf98e92.ctex"]
+source_file="res://microjogos/2025S1/projeto_milla/cenas/scripts/mdf-bp-branco-tx-2-faces-2750-x-1850-x-25-mm-6573673-1574870347153.jpg"
+dest_files=["res://.godot/imported/mdf-bp-branco-tx-2-faces-2750-x-1850-x-25-mm-6573673-1574870347153.jpg-287b22896f6687c199259a409cb4fdb7.ctex"]
 
 [params]
 
