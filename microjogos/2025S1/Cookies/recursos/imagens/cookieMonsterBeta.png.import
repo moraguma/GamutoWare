@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bons0kdbwx3jv"
-path="res://.godot/imported/capa.png-4f477d70cd04c44dd219df96688f911d.ctex"
+uid="uid://bif4ebpwsg4si"
+path="res://.godot/imported/cookieMonsterBeta.png-05a7ab373b2d2a748f34ab8ef36675f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/Cookies/capa.png"
-dest_files=["res://.godot/imported/capa.png-4f477d70cd04c44dd219df96688f911d.ctex"]
+source_file="res://microjogos/2025S1/Cookies/recursos/imagens/cookieMonsterBeta.png"
+dest_files=["res://.godot/imported/cookieMonsterBeta.png-05a7ab373b2d2a748f34ab8ef36675f2.ctex"]
 
 [params]
 
