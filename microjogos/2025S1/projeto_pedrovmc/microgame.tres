@@ -1,13 +1,21 @@
-[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=2 format=3 uid="uid://dqv3jsfjhejyj"]
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://dqv3jsfjhejyj"]
 
 [ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_30o4y"]
+[ext_resource type="Texture2D" uid="uid://b7alhexk4ll7" path="res://microjogos/2025S1/projeto_pedrovmc/Capa_Pedrovmc.png" id="1_f7ced"]
+[ext_resource type="PackedScene" uid="uid://d357fo7ys3mhi" path="res://microjogos/2025S1/projeto_pedrovmc/cenas/main.tscn" id="2_uio8r"]
 
 [resource]
 script = ExtResource("1_30o4y")
-title_pt = &"TÍTULO DO JOGO"
-title_en = &"GAME TITLE"
-credits_pt = "Créditos do jogo"
-credits_en = "Game crédits"
+cover = ExtResource("1_f7ced")
+title_pt = &"Rodeado por Arqueiros"
+title_en = &"surrounded by archers"
+credits_pt = "Créditos do jogo
+Tinny Swords:
+https://pixelfrog-assets.itch.io/tiny-swords"
+credits_en = "Game crédits
+Tinny Swords:
+https://pixelfrog-assets.itch.io/tiny-swords"
 start_message_pt = &"FAÇA ALGO!"
 start_message_en = &"DO SOMETHING!"
+main_scene = ExtResource("2_uio8r")
 difficulty = 0

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjnqd3iygtsha"
-path="res://.godot/imported/capa.png-a47b31078ba5154ab254ab6de7cd31de.ctex"
+uid="uid://dlmtwvp4vvch6"
+path="res://.godot/imported/Archer_Bow_Red.png-6839e2490a4e21512c6336f4583ac33c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/projeto_pedrovmc/capa.png"
-dest_files=["res://.godot/imported/capa.png-a47b31078ba5154ab254ab6de7cd31de.ctex"]
+source_file="res://microjogos/2025S1/projeto_pedrovmc/recursos/Tiny Swords (Update 010)/Factions/Knights/Troops/Archer/Archer + Bow/Archer_Bow_Red.png"
+dest_files=["res://.godot/imported/Archer_Bow_Red.png-6839e2490a4e21512c6336f4583ac33c.ctex"]
 
 [params]
 
