@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://devce1jy5yrb8"]
+
+[ext_resource type="Script" uid="uid://cwdeg2iachcoh" path="res://microjogos/2025S1/Cookies/cenas/scripts/main.gd" id="1_aashi"]
+[ext_resource type="Texture2D" uid="uid://cdv0dv2taib4f" path="res://microjogos/2025S1/Cookies/recursos/imagens/cookieBeta.webp" id="3_xb0ta"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_aashi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960, 400)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("3_xb0ta")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(960, 400)
+scale = Vector2(50, 50)
+emitting = false
+amount = 1
+texture = ExtResource("3_xb0ta")
+emission_shape = 2
+emission_sphere_radius = 1.0
+direction = Vector2(0, 1)
+spread = 30.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 40.0
+initial_velocity_max = 60.0
+scale_amount_min = 0.1
+scale_amount_max = 0.1
