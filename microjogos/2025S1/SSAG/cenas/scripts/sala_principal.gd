@@ -9,7 +9,9 @@ const WIDTH = 1920
 const HEIGHT = 1080
 
 var porta_demonio = -1
+var erros = 3
 
+@onready var vidas = $vidas
 @onready var global = $GLOBAL
 @onready var texto = $Label
 @onready var morte = $Morte
@@ -27,7 +29,7 @@ func speedup(j):
 		tempo.wait_time -= 0.1
 	if morte.wait_time > 1:
 		morte.wait_time -= 0.2
-	if morte.wait_time <= 1 and morte.wait_time >= 0.5:
+	if morte.wait_time <= 1 and morte.wait_time > 0.5:
 		morte.wait_time -= 0.05
 	else:
 		morte.wait_time = 0.5
@@ -44,6 +46,7 @@ func _ready() -> void:
 	musica.play()
 	tempo.start()
 	print(pdir.speed_scale)
+	vidas.text = "Vidas = 3"
 	
 
 
@@ -71,6 +74,9 @@ func _physics_process(delta):
 			porta_demonio = -1
 			morte.stop()
 			tempo.start()
+		elif(porta_demonio != 1):
+			erros -= 1
+			vidas.text = "Vidas = " + str(erros)
 		bump.play()
 	if(Input.is_action_just_pressed("esquerda")):
 		$"porta-esquerda/portaesq".play("porta_fechando")
@@ -78,6 +84,9 @@ func _physics_process(delta):
 			porta_demonio = -1
 			morte.stop()
 			tempo.start()
+		elif(porta_demonio != 0):
+			erros -= 1
+			vidas.text = "Vidas = " + str(erros)
 		bump.play()
 	if(Input.is_action_just_pressed("cima")):
 		$"porta-frente/portafrente".play("porta_fechando")
@@ -85,7 +94,12 @@ func _physics_process(delta):
 			porta_demonio = -1
 			morte.stop()
 			tempo.start()
+		elif(porta_demonio != 2):
+			erros -= 1
+			vidas.text = "Vidas = " + str(erros)
 		bump.play()
+	if(erros <= 0):
+		on_morte()
 
 func _on_timer_timeout():
 	faceondoor(rng.randi_range(0, 2))

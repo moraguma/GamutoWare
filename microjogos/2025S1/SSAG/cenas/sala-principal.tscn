@@ -269,6 +269,16 @@ autostart = true
 wait_time = 6.0
 autostart = true
 
+[node name="vidas" type="Label" parent="."]
+offset_left = -56.0
+offset_top = -276.0
+offset_right = 24.0
+offset_bottom = -242.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+text = "Vidas = 3"
+
 [connection signal="timeout" from="Morte" to="." method="on_morte"]
 [connection signal="timeout" from="Morte" to="Area2D/Sprite2D/Camera2D" method="morrido"]
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_timeout"]
