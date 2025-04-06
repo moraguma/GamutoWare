@@ -7,12 +7,13 @@
 radius = 95.0
 
 [node name="GamutoPhysics" type="RigidBody2D"]
+linear_velocity = Vector2(0, -500)
 script = ExtResource("1_dvsof")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(3, 3)
+[node name="gamutoPhysicsSprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_rg1vv")
 offset = Vector2(0, 2)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="gamutoPhysicsCollision" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_8vw7n")
+disabled = true

@@ -16,10 +16,10 @@ shader_parameter/add_margins = true
 [sub_resource type="CircleShape2D" id="CircleShape2D_hu13g"]
 radius = 95.1893
 
-[node name="gamutoArea" type="Area2D"]
+[node name="GamutoArea" type="Area2D"]
 script = ExtResource("2_j2cbt")
 
-[node name="gamutoSprite" type="Sprite2D" parent="."]
+[node name="gamutoAreaSprite" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_kkape")
 scale = Vector2(3, 3)
 texture = ExtResource("1_eju3l")

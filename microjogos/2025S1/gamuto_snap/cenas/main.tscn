@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="2_frgdu"]
 [ext_resource type="Script" uid="uid://c5rc7lt2iu062" path="res://microjogos/2025S1/gamuto_snap/cenas/scripts/gamutinhos.gd" id="5_4w37p"]
 [ext_resource type="PackedScene" uid="uid://x6twngw4lu8i" path="res://microjogos/2025S1/gamuto_snap/cenas/gamutos.tscn" id="5_82nyc"]
-[ext_resource type="Script" uid="uid://dge63xquae2yx" path="res://microjogos/2025S1/gamuto_snap/cenas/scripts/gamutinhos_fisicos.gd" id="6_0rp5u"]
+[ext_resource type="Script" uid="uid://dge63xquae2yx" path="res://microjogos/2025S1/gamuto_snap/cenas/scripts/gamutinhos_physics.gd" id="6_0rp5u"]
 
 [node name="Main" type="Node2D"]
 texture_filter = 1
