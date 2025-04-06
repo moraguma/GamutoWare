@@ -1,14 +1,25 @@
-[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=2 format=3 uid="uid://bnq2mrjwe1iby"]
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=3 format=3 uid="uid://bnq2mrjwe1iby"]
 
 [ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_2e3dn"]
+[ext_resource type="Texture2D" uid="uid://dl2jklncu7qhg" path="res://microjogos/2025S1/HImeCaking/recursos/imagens/Spribanner.png" id="1_3yy0q"]
 
 [resource]
 script = ExtResource("1_2e3dn")
-title_pt = &"TÍTULO DO JOGO"
-title_en = &"GAME TITLE"
+cover = ExtResource("1_3yy0q")
+title_pt = &"HIME EAT"
+title_en = &"HIME EAT"
 credits_pt = "Créditos do jogo
-"
-credits_en = "Game crédits"
+Criador:CitricPM
+bmg: Heartbound OST yarr Music
+Art:CitricPM
+spoonPng:https://pngimg.com/image/3043
+te amo mãe"
+credits_en = "Game crédits
+Creator:CitricPM
+bmg: Heartbound OST yarr Music
+Art:CitricPM
+spoonPng:https://pngimg.com/image/3043
+love you mom"
 start_message_pt = &"FAÇA ALGO!"
 start_message_en = &"DO SOMETHING!"
 difficulty = 0
