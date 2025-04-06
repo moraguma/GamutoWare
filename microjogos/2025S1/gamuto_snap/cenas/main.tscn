@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://s34c8u1re5fr"]
+[gd_scene load_steps=8 format=3 uid="uid://s34c8u1re5fr"]
 
 [ext_resource type="PackedScene" uid="uid://bukwvlpdiph3y" path="res://microjogos/2025S1/gamuto_snap/cenas/cameraPlayer.tscn" id="1_6m65u"]
 [ext_resource type="Script" uid="uid://dddvjk0hd57ea" path="res://microjogos/2025S1/gamuto_snap/cenas/scripts/main.gd" id="1_v50tu"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="2_frgdu"]
 [ext_resource type="Script" uid="uid://c5rc7lt2iu062" path="res://microjogos/2025S1/gamuto_snap/cenas/scripts/gamutinhos.gd" id="5_4w37p"]
 [ext_resource type="PackedScene" uid="uid://x6twngw4lu8i" path="res://microjogos/2025S1/gamuto_snap/cenas/gamutos.tscn" id="5_82nyc"]
+[ext_resource type="Script" uid="uid://dge63xquae2yx" path="res://microjogos/2025S1/gamuto_snap/cenas/scripts/gamutinhos_fisicos.gd" id="6_0rp5u"]
 
 [node name="Main" type="Node2D"]
 texture_filter = 1
@@ -15,10 +16,6 @@ script = ExtResource("1_v50tu")
 position = Vector2(959.999, 539.999)
 scale = Vector2(30, 16.875)
 texture = ExtResource("2_frgdu")
-metadata/_edit_lock_ = true
-
-[node name="player" parent="." instance=ExtResource("1_6m65u")]
-position = Vector2(961, 540)
 metadata/_edit_lock_ = true
 
 [node name="barriers" parent="." instance=ExtResource("2_dwaeq")]
@@ -50,6 +47,9 @@ position = Vector2(1685, 873)
 rotation = -0.713508
 scale = Vector2(1.87322, 1.87322)
 
+[node name="gamutinhosFisicos" type="Node" parent="."]
+script = ExtResource("6_0rp5u")
+
 [node name="spawnPoints" type="Node" parent="."]
 
 [node name="spawn1" type="Marker2D" parent="spawnPoints"]
@@ -67,10 +67,16 @@ position = Vector2(263, 300)
 [node name="spawn5" type="Marker2D" parent="spawnPoints"]
 position = Vector2(1685, 873)
 
-[connection signal="snapped_gamuto" from="player" to="gamutinhos" method="_on_player_snapped_gamuto"]
-[connection signal="snapped_gamuto" from="player" to="gamutinhos/gamuto1" method="_on_player_snapped_gamuto"]
+[node name="player" parent="." instance=ExtResource("1_6m65u")]
+position = Vector2(961, 540)
+metadata/_edit_lock_ = true
+
+[connection signal="win" from="." to="player" method="_on_main_win"]
+[connection signal="any_was_snapped" from="gamutinhos" to="." method="_on_gamutinhos_any_was_snapped"]
+[connection signal="this_was_snapped" from="gamutinhos" to="gamutinhosFisicos" method="_on_gamutinhos_this_was_snapped"]
 [connection signal="area_entered" from="gamutinhos/gamuto1" to="player" method="_on_gamuto_1_area_entered"]
 [connection signal="area_entered" from="gamutinhos/gamuto2" to="player" method="_on_gamuto_2_area_entered"]
 [connection signal="area_entered" from="gamutinhos/gamuto3" to="player" method="_on_gamuto_3_area_entered"]
 [connection signal="area_entered" from="gamutinhos/gamuto4" to="player" method="_on_gamuto_4_area_entered"]
 [connection signal="area_entered" from="gamutinhos/gamuto5" to="player" method="_on_gamuto_5_area_entered"]
+[connection signal="snapped_gamuto" from="player" to="gamutinhos" method="_on_player_snapped_gamuto"]

@@ -2,10 +2,7 @@
 
 [ext_resource type="Shader" uid="uid://cu83nvshfiplr" path="res://microjogos/2025S1/gamuto_snap/cenas/shaders/gamutos.gdshader" id="1_3pnec"]
 [ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="1_eju3l"]
-[ext_resource type="Script" uid="uid://c0cvhjqkyktdt" path="res://microjogos/2025S1/gamuto_snap/cenas/scripts/gamutos.gd" id="1_kkape"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_hu13g"]
-radius = 95.1893
+[ext_resource type="Script" uid="uid://c0cvhjqkyktdt" path="res://microjogos/2025S1/gamuto_snap/cenas/scripts/gamuto_area.gd" id="2_j2cbt"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kkape"]
 resource_local_to_scene = true
@@ -16,17 +13,20 @@ shader_parameter/pattern = 0
 shader_parameter/inside = false
 shader_parameter/add_margins = true
 
-[node name="Gamutos" type="Area2D"]
-script = ExtResource("1_kkape")
+[sub_resource type="CircleShape2D" id="CircleShape2D_hu13g"]
+radius = 95.1893
 
-[node name="gamutoCollision" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_hu13g")
+[node name="gamutoArea" type="Area2D"]
+script = ExtResource("2_j2cbt")
 
 [node name="gamutoSprite" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_kkape")
 scale = Vector2(3, 3)
 texture = ExtResource("1_eju3l")
 offset = Vector2(0, 2)
+
+[node name="gamutoAreaCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hu13g")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

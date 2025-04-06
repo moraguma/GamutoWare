@@ -17,6 +17,8 @@ const HEIGHT = 1080
 @onready var gamuto4 : Area2D = $gamutinhos/gamuto4
 @onready var gamuto5 : Area2D = $gamutinhos/gamuto5
 
+var snapped_gamutos : int = 0
+
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES PADRÃO
 # --------------------------------------------------------------------------------------------------
@@ -92,6 +94,14 @@ func remove_others(spawns : Array):
 				gamuto4.queue_free()
 			gamuto5.position:
 				gamuto5.queue_free()
+
+# Função que registra quando algum dos Gamutos foram fotografados e checa a condição de vitória
+func _on_gamutinhos_any_was_snapped() -> void:
+	snapped_gamutos += 1
+	
+	if snapped_gamutos == 2:
+		print("YOU WIN!")
+		register_win()
 
 # --------------------------------------------------------------------------------------------------
 # CONDIÇÕES DE VITÓRIA

@@ -12,6 +12,7 @@ radius = 150.003
 script = ExtResource("1_0sfhs")
 
 [node name="playerCollision" type="CollisionShape2D" parent="."]
+visibility_layer = 2
 shape = SubResource("RectangleShape2D_0sfhs")
 debug_color = Color(0, 0.6, 0.701961, 0.176471)
 

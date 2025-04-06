@@ -80,3 +80,7 @@ func _on_gamuto_4_area_entered(area: Area2D) -> void:
 # Caso entre especificamente na área do Gamuto 5
 func _on_gamuto_5_area_entered(area: Area2D) -> void:
 	is_on_gamuto = 5
+
+# Para impedir que fotos sejam tiradas após já ter ganhado 
+func _on_main_win() -> void:
+	can_snap = false
