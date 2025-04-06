@@ -1,6 +1,45 @@
-[gd_scene load_steps=4 format=3 uid="uid://bukwvlpdiph3y"]
+[gd_scene load_steps=12 format=3 uid="uid://bukwvlpdiph3y"]
 
 [ext_resource type="Script" uid="uid://t5asnuie65sg" path="res://microjogos/2025S1/gamuto_snap/cenas/scripts/camera_player.gd" id="1_0sfhs"]
+[ext_resource type="Texture2D" uid="uid://cvdder12tkqcf" path="res://microjogos/2025S1/gamuto_snap/recursos/imagens/flash.png" id="2_84n45"]
+[ext_resource type="Texture2D" uid="uid://54t0uw7tu616" path="res://microjogos/2025S1/gamuto_snap/recursos/imagens/cam_overlay_sheet.png" id="2_hogq1"]
+[ext_resource type="AudioStream" uid="uid://bqwfuk7ncsmn4" path="res://microjogos/2025S1/gamuto_snap/recursos/sons/photo_sound.ogg" id="4_0qtja"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84n45"]
+atlas = ExtResource("2_hogq1")
+region = Rect2(0, 0, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qtja"]
+atlas = ExtResource("2_hogq1")
+region = Rect2(1920, 0, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oirir"]
+atlas = ExtResource("2_hogq1")
+region = Rect2(3840, 0, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vk3ex"]
+atlas = ExtResource("2_hogq1")
+region = Rect2(5760, 0, 1920, 1080)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_seflk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84n45")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qtja")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oirir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vk3ex")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0sfhs"]
 size = Vector2(700, 300)
@@ -10,6 +49,19 @@ radius = 150.003
 
 [node name="CameraPlayer" type="CharacterBody2D"]
 script = ExtResource("1_0sfhs")
+speed = 400
+
+[node name="playerAnimatedSprite" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.667, 0.667)
+sprite_frames = SubResource("SpriteFrames_seflk")
+autoplay = "default"
+frame = 2
+frame_progress = 0.409853
+
+[node name="playerFlash" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+texture = ExtResource("2_84n45")
 
 [node name="playerCollision" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_0sfhs")
@@ -22,7 +74,11 @@ shape = SubResource("CircleShape2D_0sfhs")
 
 [node name="playerCamera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.5, 1.5)
+process_callback = 0
 position_smoothing_enabled = true
+
+[node name="flashSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_0qtja")
 
 [node name="timers" type="Node" parent="."]
 

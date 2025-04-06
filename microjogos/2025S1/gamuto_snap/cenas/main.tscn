@@ -68,6 +68,7 @@ position = Vector2(263, 300)
 position = Vector2(1685, 873)
 
 [node name="player" parent="." instance=ExtResource("1_6m65u")]
+z_index = 1
 position = Vector2(961, 540)
 metadata/_edit_lock_ = true
 

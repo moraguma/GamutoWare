@@ -2,13 +2,14 @@ extends CharacterBody2D
 
 @export var speed : int = 500
 @onready var timer : Timer = $timers/snap_timer
+@onready var flash : AudioStreamPlayer = $flashSound
 
 var can_snap : bool = true
 var focused : bool = false
 var is_on_gamuto : int = 0		# Identifica qual Gamuto o jogador está focado
 
 signal snapped_gamuto(gamuto : int)		# Sinal que identifica qual Gamuto foi atingido
-
+	
 # Pega o input do jogador para movimentação
 func get_input() -> void:
 	var input_direction : Vector2 = Input.get_vector("esquerda", "direita", "cima", "baixo")
@@ -21,9 +22,13 @@ func get_action() -> void:
 		can_snap = false
 
 		if focused:
+			flash.play()
 			print("SNAP!")
 			snap_gamuto()
 		else:
+			flash.play()
+			await get_tree().create_timer(0.2).timeout
+			flash.stop()
 			print("NOTHING TO SNAP!")
 
 func _process(_delta) -> void:
