@@ -79,14 +79,17 @@ theme_override_constants/v_separation = 100
 columns = 2
 
 [node name="Pergunta1" type="Button" parent="PanelContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
 focus_neighbor_left = NodePath("../Pergunta2")
 focus_neighbor_top = NodePath("../Pergunta3")
 focus_neighbor_right = NodePath("../Pergunta2")
 focus_neighbor_bottom = NodePath("../Pergunta3")
 mouse_filter = 2
+autowrap_mode = 3
 
 [node name="Pergunta2" type="Button" parent="PanelContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
 focus_neighbor_left = NodePath("../Pergunta1")
 focus_neighbor_top = NodePath("../Pergunta4")
@@ -94,8 +97,10 @@ focus_neighbor_right = NodePath("../Pergunta1")
 focus_neighbor_bottom = NodePath("../Pergunta4")
 mouse_filter = 2
 theme = ExtResource("3_pitoj")
+autowrap_mode = 3
 
 [node name="Pergunta3" type="Button" parent="PanelContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
 focus_neighbor_left = NodePath("../Pergunta4")
 focus_neighbor_top = NodePath("../Pergunta1")
@@ -103,8 +108,10 @@ focus_neighbor_right = NodePath("../Pergunta4")
 focus_neighbor_bottom = NodePath("../Pergunta1")
 mouse_filter = 2
 text = "fasfasfafasf"
+autowrap_mode = 3
 
 [node name="Pergunta4" type="Button" parent="PanelContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
 focus_neighbor_left = NodePath("../Pergunta3")
 focus_neighbor_top = NodePath("../Pergunta2")
@@ -112,6 +119,7 @@ focus_neighbor_right = NodePath("../Pergunta3")
 focus_neighbor_bottom = NodePath("../Pergunta2")
 mouse_filter = 2
 text = "dasdasfasf"
+autowrap_mode = 3
 
 [node name="Musica1" type="AudioStreamPlayer" parent="."]
 

@@ -70,6 +70,11 @@ var active = true
 func _ready():
 	$PanelContainer/MarginContainer/GridContainer/Pergunta1.grab_focus()
 	
+	
+	#for i in lista:
+		#i.autowrap = true
+		#i.rect_min_size = Vector2(200,60)
+	
 	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
