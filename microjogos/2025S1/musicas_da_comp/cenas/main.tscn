@@ -1,3 +1,16 @@
-[gd_scene format=3 uid="uid://b8updi1osiwne"]
+[gd_scene load_steps=3 format=3 uid="uid://b8updi1osiwne"]
+
+[ext_resource type="Script" uid="uid://doga4uw2uu7b1" path="res://microjogos/2025S1/musicas_da_comp/cenas/scripts/main.gd" id="1_hypu2"]
+[ext_resource type="Texture2D" uid="uid://dtk8cb3288rnx" path="res://microjogos/2025S1/musicas_da_comp/recursos/imagens/Screenshot From 2025-04-05 19-27-42.png" id="2_4dhqc"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_hypu2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(4.11135, 3.03371)
+texture = ExtResource("2_4dhqc")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]

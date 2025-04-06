@@ -12,7 +12,7 @@ signal lose
 const WIDTH = 1920
 const HEIGHT = 1080
 
-const perguntas_Corpo_Nu = ["Sua mãe ... querendo me matar. Pode deixar minha sogra eu penso em me casar", "Me chamam de ... não quero nem saber, eu sei que estou ... por você", "Alô galera, eu ... agora sou um rapaz sério, muito sério", "Você é minha paixão, chora não, porquê eu te amo Assinado simplesmente: ..."]
+const perguntas_Corpo_Nu = ["Sua mãe ... querendo me matar. Pode deixar minha sogra eu penso em me casar", "Me chamam de ... não quero nem saber, eu sei que estou ... por você", "Alô galera, eu ... agora sou um rapaz sério, muito sério", "Você é minha paixão, assinado: ..."]
 const perguntas_Renata = ["Por ela fui fiel, tão cego eu fiquei ... amigos eu deixei", "Renata ingrata, trocou meu amor por ...", "A lua entristeceu, o céu mudou de cor, Renata foi embora e ...", "Foi irracional ... mas vou deletar, ah, ah, sua insentatez"]
 const perguntas_Ragatanga = ["E o DJ que já conhece ... pra Diego, a canção mais desejada", "Aserehe ra de re De hebe tu de hebere seibiunouba mahabi ...", "Não é por acaso que encontro todo dia ... caminhando", "Olha lá quem vem virando a esquina vem ... com toda a alegria, festejando"]
 const perguntas_Madagascar = ["Ela é tão tudo! Ela é tão tudo! Tudo que eu queria ...", "Cabelo colorido, de tomara que caia, meia preta arrastão pra combinar com ...", "Melhor exposição que tenho ... toda delicadinha usando óculos grande", "Vem comigo, amor, eu vou levar pra passear de mãos dadas na areia ..."]
@@ -23,8 +23,7 @@ const renata = {perguntas_Renata[0]: ["E no night futebol", "Idas para o futebol
 const ragatanga = {perguntas_Ragatanga[0]: ["Toca o som da meia-noite", "Vai tocando toda a noite", "Vai dançando lá no front", "Dedica à meia-noite"], perguntas_Ragatanga[1]: ["An de bugui an de buididipi", "To the rhythm of the boogi, the beat", "Andebuggy Andebuggy Riby", "And the boogie and the boogie, the beat"], perguntas_Ragatanga[2]: ["Cuando me voy", "Quando eu vou", "Quanto eu tô", "Enquando eu vou"], perguntas_Ragatanga[3]: ["Diego", "Fernando", "Hermano", "Miguel"]}
 const madagascar = {perguntas_Madagascar[0]: ["Abraçar, beijar", "Era abraçar beijar", "Era poder beijar", "Amassar, beijar"], perguntas_Madagascar[1]: ["Uma saia", "A saia", "O Saia", "A sala"], perguntas_Madagascar[2]: ["No meu stand", "Na minha estante", "Naquele instante", "No mesmo instante"], perguntas_Madagascar[3]: ["De madagascar", "Da beira mar", "Do lado de lá", "No nosso lar"]}
 
-#Dicionários para buscar as opções de perguntas a partir do nome da música
-#const musicas = {"Corpo Nu": }
+var up_right = 0
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
@@ -36,6 +35,23 @@ func _ready():
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("FAÇA ALGO!")
 
+	randomize()
+		
+	up_right = randi() % 4
+	
+	var up_left = randi() % 4
+	while(up_left == up_right):
+		up_left = randi() % 4
+	
+	var down_right = randi() % 4
+	while(down_right == up_left and down_right == up_right):
+		down_right = randi() % 4
+	
+	var down_left = 0
+	for i in range(4):
+		if (i != up_right and i != up_left and i != down_right):
+			down_left = i
+		
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
 # a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
