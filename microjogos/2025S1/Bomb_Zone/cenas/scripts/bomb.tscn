@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6x1oc5gx1jnt"]
+
+[ext_resource type="Texture2D" uid="uid://cuo3nc07mttdb" path="res://microjogos/2025S1/Bomb_Zone/recursos/imagens/Bomb.png" id="1_cnmwx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cnmwx"]
+size = Vector2(26, 25)
+
+[node name="Bomb" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+texture = ExtResource("1_cnmwx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -2.5)
+shape = SubResource("RectangleShape2D_cnmwx")
