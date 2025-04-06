@@ -41,18 +41,6 @@ func _ready():
 	
 	randomize()
 
-func register_win():
-	if(winnable):
-		losable = false
-		get_node("VictorySFX").play()
-		emit_signal("win")
-
-func register_lose():
-	if(losable):
-		winnable = false
-		losable = false
-		get_node("DefeatSFX").play()
-		emit_signal("lose")
 		
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("baixo"):
@@ -72,3 +60,20 @@ func _process(delta: float) -> void:
 
 func _on_peixe_timer_timeout() -> void:
 	p_posi_now.y = randf_range(p_posi_inic.y, p_posi_max.y)
+
+
+func _on_peixe_area_entered(area: Area2D) -> void:
+	emit_signal("win")
+	match Global.language:
+		Global.LANGUAGE.PT:
+			NotificationCenter.notify("!")
+		Global.LANGUAGE.EN:
+			NotificationCenter.notify("!")
+
+func _on_peixe_area_exited(area: Area2D) -> void:
+	emit_signal("lose")
+	match Global.language:
+		Global.LANGUAGE.PT:
+			NotificationCenter.notify("X")
+		Global.LANGUAGE.EN:
+			NotificationCenter.notify("X")

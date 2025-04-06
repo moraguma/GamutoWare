@@ -60,4 +60,6 @@ texture = ExtResource("2_cnho3")
 [node name="peixeTimer" type="Timer" parent="."]
 autostart = true
 
+[connection signal="area_entered" from="Peixe" to="." method="_on_peixe_area_entered"]
+[connection signal="area_exited" from="Peixe" to="." method="_on_peixe_area_exited"]
 [connection signal="timeout" from="peixeTimer" to="." method="_on_peixe_timer_timeout"]
