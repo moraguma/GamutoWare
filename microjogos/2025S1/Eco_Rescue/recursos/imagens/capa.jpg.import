@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crd71c25xgugm"
-path="res://.godot/imported/4.png-25a84fb6d0ac08492fbd836bc057dab0.ctex"
+uid="uid://dhbu3espfeq10"
+path="res://.godot/imported/capa.jpg-74f36496271428d5fd02264e99c5ff84.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/4.png"
-dest_files=["res://.godot/imported/4.png-25a84fb6d0ac08492fbd836bc057dab0.ctex"]
+source_file="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/capa.jpg"
+dest_files=["res://.godot/imported/capa.jpg-74f36496271428d5fd02264e99c5ff84.ctex"]
 
 [params]
 

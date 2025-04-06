@@ -1,113 +1,110 @@
-[gd_scene load_steps=27 format=3 uid="uid://dh6netreo7fu4"]
+[gd_scene load_steps=15 format=3 uid="uid://dh6netreo7fu4"]
 
 [ext_resource type="Texture2D" uid="uid://t7lad2y14ang" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/9.png" id="1_e86pc"]
-[ext_resource type="Script" uid="uid://dcmqf323bv3ry" path="res://microjogos/2025S1/Eco_Rescue/cenas/lixeira_azul.gd" id="2_gfdqj"]
+[ext_resource type="Script" uid="uid://cucfvuoi148np" path="res://microjogos/2025S1/Eco_Rescue/cenas/scripts/main.gd" id="1_eqogf"]
+[ext_resource type="Texture2D" uid="uid://bbx8ww3avnajr" path="res://microjogos/2023S1/fundo.jpg" id="1_p58j1"]
 [ext_resource type="Texture2D" uid="uid://drh2y1rukqirm" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/10.png" id="3_1wv6f"]
-[ext_resource type="Script" uid="uid://3nhegx0fi4h2" path="res://microjogos/2025S1/Eco_Rescue/cenas/lixeira_vermelha.gd" id="4_fkutc"]
 [ext_resource type="Texture2D" uid="uid://bg5aa2ibugnyr" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/11.png" id="5_6lexf"]
-[ext_resource type="Script" uid="uid://b5j03p1mqhix1" path="res://microjogos/2025S1/Eco_Rescue/cenas/lixeira_verde.gd" id="6_6a63p"]
 [ext_resource type="Texture2D" uid="uid://k28s0dj5iob0" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/12.png" id="7_frcfp"]
-[ext_resource type="Script" uid="uid://d0mwu4bksd2fd" path="res://microjogos/2025S1/Eco_Rescue/cenas/lixeira_amarela.gd" id="8_u8ibt"]
 [ext_resource type="Texture2D" uid="uid://b7ms5o0s6mdbu" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/13.png" id="9_p58j1"]
-[ext_resource type="Script" uid="uid://bstl8ie65668u" path="res://microjogos/2025S1/Eco_Rescue/cenas/lixeira_marrom.gd" id="10_sg5d1"]
-[ext_resource type="Texture2D" uid="uid://cll60xy6ubdut" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/1.png" id="11_u8ibt"]
-[ext_resource type="Script" uid="uid://gbjfj3a68ktb" path="res://microjogos/2025S1/Eco_Rescue/cenas/maca.gd" id="12_i6kd1"]
-[ext_resource type="Texture2D" uid="uid://dl5m52rtwpxnr" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/2.png" id="12_p58j1"]
 [ext_resource type="Texture2D" uid="uid://ibqe66v4sslb" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/3.png" id="13_sg5d1"]
-[ext_resource type="Texture2D" uid="uid://crd71c25xgugm" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/4.png" id="14_i2l4g"]
-[ext_resource type="Script" uid="uid://b2xs120eyotsp" path="res://microjogos/2025S1/Eco_Rescue/cenas/banana.gd" id="14_kb2ns"]
-[ext_resource type="Texture2D" uid="uid://bepyylx1nny2h" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/5.png" id="15_yfvfg"]
-[ext_resource type="Script" uid="uid://dk865jijywhsu" path="res://microjogos/2025S1/Eco_Rescue/cenas/sacola.gd" id="16_eqogf"]
-[ext_resource type="Texture2D" uid="uid://xidxg3xejihu" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/6.png" id="16_njsje"]
-[ext_resource type="Texture2D" uid="uid://dbmh5dkmaewka" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/7.png" id="17_hlhr7"]
 [ext_resource type="Texture2D" uid="uid://d2jlw6ph8sicw" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/8.png" id="18_05nxe"]
-[ext_resource type="Script" uid="uid://dih6dunho3pmc" path="res://microjogos/2025S1/Eco_Rescue/cenas/canudo.gd" id="18_e6i4i"]
-[ext_resource type="Script" uid="uid://ckxg151euebxb" path="res://microjogos/2025S1/Eco_Rescue/cenas/papel.gd" id="20_yexk8"]
-[ext_resource type="Script" uid="uid://dytbv0wq8itjm" path="res://microjogos/2025S1/Eco_Rescue/cenas/prato.gd" id="22_lifvu"]
-[ext_resource type="Script" uid="uid://digwnm1idh03l" path="res://microjogos/2025S1/Eco_Rescue/cenas/garrafa.gd" id="24_5tde7"]
-[ext_resource type="Script" uid="uid://ydhi3qstjfip" path="res://microjogos/2025S1/Eco_Rescue/cenas/lata.gd" id="26_uyycx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_njsje"]
+size = Vector2(280, 41.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hlhr7"]
+size = Vector2(279.5, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_05nxe"]
+size = Vector2(291, 41)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i6kd1"]
+size = Vector2(316, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kb2ns"]
+size = Vector2(316.5, 34)
 
 [node name="Main" type="Node2D"]
 texture_filter = 1
-position = Vector2(2, 0)
+position = Vector2(960, 512)
+script = ExtResource("1_eqogf")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -1)
 
-[node name="lixeiraAzul" type="Sprite2D" parent="."]
-position = Vector2(-687, 286)
-scale = Vector2(4.65625, 4.69375)
-texture = ExtResource("1_e86pc")
-script = ExtResource("2_gfdqj")
+[node name="fundo" type="Sprite2D" parent="."]
+position = Vector2(3, 11.0001)
+scale = Vector2(1.42667, 1.62297)
+texture = ExtResource("1_p58j1")
 
-[node name="lixeiraVermelha" type="Sprite2D" parent="."]
-position = Vector2(-315, 292)
-scale = Vector2(4.60938, 4.69375)
-texture = ExtResource("3_1wv6f")
-script = ExtResource("4_fkutc")
+[node name="Metal" type="Area2D" parent="."]
+position = Vector2(-700, 350)
 
-[node name="lixeiraVerde" type="Sprite2D" parent="."]
-position = Vector2(48, 286)
-scale = Vector2(4.21875, 4.59375)
-texture = ExtResource("5_6lexf")
-script = ExtResource("6_6a63p")
-
-[node name="lixeiraAmarela" type="Sprite2D" parent="."]
-position = Vector2(406, 301)
+[node name="lixeiraAmarela" type="Sprite2D" parent="Metal"]
 scale = Vector2(4.075, 4.6625)
 texture = ExtResource("7_frcfp")
-script = ExtResource("8_u8ibt")
 
-[node name="lixeiraMarrom" type="Sprite2D" parent="."]
-position = Vector2(744, 291)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Metal"]
+shape = SubResource("RectangleShape2D_njsje")
+
+[node name="Organico" type="Area2D" parent="."]
+position = Vector2(-350, 350)
+
+[node name="lixeiraMarrom" type="Sprite2D" parent="Organico"]
 scale = Vector2(4.15, 4.69375)
 texture = ExtResource("9_p58j1")
-script = ExtResource("10_sg5d1")
 
-[node name="maca" type="Sprite2D" parent="."]
-position = Vector2(-644, -274.813)
-scale = Vector2(1.475, 1.49219)
-texture = ExtResource("11_u8ibt")
-script = ExtResource("12_i6kd1")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Organico"]
+shape = SubResource("RectangleShape2D_hlhr7")
 
-[node name="banana" type="Sprite2D" parent="."]
-position = Vector2(-465, -282.813)
-scale = Vector2(1.6, 1.42969)
-texture = ExtResource("12_p58j1")
-script = ExtResource("14_kb2ns")
+[node name="Vidro" type="Area2D" parent="."]
+position = Vector2(0, 350)
 
-[node name="sacola" type="Sprite2D" parent="."]
-position = Vector2(-267, -274.813)
-scale = Vector2(1.54844, 1.45156)
-texture = ExtResource("13_sg5d1")
-script = ExtResource("16_eqogf")
+[node name="lixeiraVerde" type="Sprite2D" parent="Vidro"]
+scale = Vector2(4.21875, 4.59375)
+texture = ExtResource("5_6lexf")
 
-[node name="canudo" type="Sprite2D" parent="."]
-position = Vector2(-90, -261.813)
-scale = Vector2(1.14375, 1.45234)
-texture = ExtResource("14_i2l4g")
-script = ExtResource("18_e6i4i")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vidro"]
+shape = SubResource("RectangleShape2D_05nxe")
 
-[node name="papel" type="Sprite2D" parent="."]
-position = Vector2(95, -266.813)
-scale = Vector2(1.8625, 1.58594)
-texture = ExtResource("15_yfvfg")
-script = ExtResource("20_yexk8")
+[node name="Plastico" type="Area2D" parent="."]
+position = Vector2(350, 350)
 
-[node name="prato" type="Sprite2D" parent="."]
-position = Vector2(272, -265.813)
-scale = Vector2(1.6625, 1.45469)
-texture = ExtResource("16_njsje")
-script = ExtResource("22_lifvu")
+[node name="lixeiraVermelha" type="Sprite2D" parent="Plastico"]
+scale = Vector2(4.60938, 4.69375)
+texture = ExtResource("3_1wv6f")
 
-[node name="garrafa" type="Sprite2D" parent="."]
-position = Vector2(487, -258.813)
-scale = Vector2(1.925, 1.38594)
-texture = ExtResource("17_hlhr7")
-script = ExtResource("24_5tde7")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plastico"]
+shape = SubResource("RectangleShape2D_i6kd1")
 
-[node name="lata" type="Sprite2D" parent="."]
-position = Vector2(681, -269.813)
+[node name="Papel" type="Area2D" parent="."]
+position = Vector2(700, 350)
+
+[node name="lixeiraAzul" type="Sprite2D" parent="Papel"]
+scale = Vector2(4.65625, 4.69375)
+texture = ExtResource("1_e86pc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Papel"]
+shape = SubResource("RectangleShape2D_kb2ns")
+
+[node name="Button2" type="Button" parent="."]
+visible = false
+offset_left = -5.0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="lata" type="Sprite2D" parent="Button2"]
+position = Vector2(742, -61)
 scale = Vector2(1.6, 1.55469)
 texture = ExtResource("18_05nxe")
-script = ExtResource("26_uyycx")
+
+[node name="Button3" type="Button" parent="."]
+visible = false
+
+[node name="sacola" type="Sprite2D" parent="Button3"]
+position = Vector2(45, -66)
+scale = Vector2(1.54844, 1.45156)
+texture = ExtResource("13_sg5d1")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
