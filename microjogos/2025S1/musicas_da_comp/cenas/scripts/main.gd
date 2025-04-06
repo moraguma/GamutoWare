@@ -19,7 +19,7 @@ const perguntas = {
 			"Sua mãe ... querendo me matar. Pode deixar minha sogra eu penso em me casar": ["Bolada", "Com raiva", "Emburrada", "Preocupada"],
 			"Me chamam de ... não quero nem saber, eu sei que estou ... por você": ["Maluco... louco, louco", "Louco... maluco, maluco", "Maluco... maluco, louco", "Louco... louco, maluco"],
 			"Alô galera, eu ... agora sou um rapaz sério, muito sério": ["Parei de zoar", "Cansei de zuar", "Mandei pra lá", "Achei ela"],
-			"Você é minha paixão, assinado: ...": ["Fleury 02", "Vinicius e Andinho", "Piauí", "DJ Marlboro"]
+			"Você é minha paixão, chora não, porquê eu te amo. Assinado simplesmente: ...": ["Fleury 02", "Vinicius e Andinho", "Piauí", "DJ Marlboro"]
 		},
 	"renata":
 		{

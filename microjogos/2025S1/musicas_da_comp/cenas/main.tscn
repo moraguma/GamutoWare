@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://b8updi1osiwne"]
+[gd_scene load_steps=10 format=3 uid="uid://b8updi1osiwne"]
 
 [ext_resource type="Script" uid="uid://doga4uw2uu7b1" path="res://microjogos/2025S1/musicas_da_comp/cenas/scripts/main.gd" id="1_hypu2"]
 [ext_resource type="Texture2D" uid="uid://dtk8cb3288rnx" path="res://microjogos/2025S1/musicas_da_comp/recursos/imagens/Screenshot From 2025-04-05 19-27-42.png" id="2_4dhqc"]
 [ext_resource type="StyleBox" uid="uid://bxcgw4ij0ep3p" path="res://microjogos/2025S1/musicas_da_comp/recursos/new_style_box_flat.tres" id="2_dqw11"]
-[ext_resource type="Theme" uid="uid://6nllk3n6j475" path="res://microjogos/2025S1/musicas_da_comp/recursos/new_theme.tres" id="3_pitoj"]
 [ext_resource type="AudioStream" uid="uid://btyrfhd51x58b" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Ragatanga.mp3" id="4_shx00"]
 [ext_resource type="AudioStream" uid="uid://jl2305j6fyb" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Madagascar.mp3" id="5_dqw11"]
 [ext_resource type="AudioStream" uid="uid://cv0dleulprs34" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Shake_It_Bololo.mp3" id="6_3qdev"]
@@ -78,49 +77,6 @@ theme_override_constants/h_separation = 100
 theme_override_constants/v_separation = 100
 columns = 2
 
-[node name="Pergunta1" type="Button" parent="PanelContainer/MarginContainer/GridContainer"]
-custom_minimum_size = Vector2(200, 100)
-layout_mode = 2
-focus_neighbor_left = NodePath("../Pergunta2")
-focus_neighbor_top = NodePath("../Pergunta3")
-focus_neighbor_right = NodePath("../Pergunta2")
-focus_neighbor_bottom = NodePath("../Pergunta3")
-mouse_filter = 2
-autowrap_mode = 3
-
-[node name="Pergunta2" type="Button" parent="PanelContainer/MarginContainer/GridContainer"]
-custom_minimum_size = Vector2(200, 100)
-layout_mode = 2
-focus_neighbor_left = NodePath("../Pergunta1")
-focus_neighbor_top = NodePath("../Pergunta4")
-focus_neighbor_right = NodePath("../Pergunta1")
-focus_neighbor_bottom = NodePath("../Pergunta4")
-mouse_filter = 2
-theme = ExtResource("3_pitoj")
-autowrap_mode = 3
-
-[node name="Pergunta3" type="Button" parent="PanelContainer/MarginContainer/GridContainer"]
-custom_minimum_size = Vector2(200, 100)
-layout_mode = 2
-focus_neighbor_left = NodePath("../Pergunta4")
-focus_neighbor_top = NodePath("../Pergunta1")
-focus_neighbor_right = NodePath("../Pergunta4")
-focus_neighbor_bottom = NodePath("../Pergunta1")
-mouse_filter = 2
-text = "fasfasfafasf"
-autowrap_mode = 3
-
-[node name="Pergunta4" type="Button" parent="PanelContainer/MarginContainer/GridContainer"]
-custom_minimum_size = Vector2(200, 100)
-layout_mode = 2
-focus_neighbor_left = NodePath("../Pergunta3")
-focus_neighbor_top = NodePath("../Pergunta2")
-focus_neighbor_right = NodePath("../Pergunta3")
-focus_neighbor_bottom = NodePath("../Pergunta2")
-mouse_filter = 2
-text = "dasdasfasf"
-autowrap_mode = 3
-
 [node name="Musica1" type="AudioStreamPlayer" parent="."]
 
 [node name="Musica2" type="AudioStreamPlayer" parent="."]
@@ -136,8 +92,3 @@ parameters/looping = true
 [node name="Musica5" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_3qdev")
 parameters/looping = true
-
-[connection signal="pressed" from="PanelContainer/MarginContainer/GridContainer/Pergunta1" to="." method="pergunta_pressed" binds= [1]]
-[connection signal="pressed" from="PanelContainer/MarginContainer/GridContainer/Pergunta2" to="." method="pergunta_pressed" binds= [2]]
-[connection signal="pressed" from="PanelContainer/MarginContainer/GridContainer/Pergunta3" to="." method="pergunta_pressed" binds= [3]]
-[connection signal="pressed" from="PanelContainer/MarginContainer/GridContainer/Pergunta4" to="." method="pergunta_pressed" binds= [4]]

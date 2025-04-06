@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dopiyjnqiqk1f"
-path="res://.godot/imported/capa.png-547051693749e5bf581cf6c620cca3b8.ctex"
+uid="uid://twrpwtir2f0o"
+path="res://.godot/imported/Capa_Jogo_Musicas_da_Comp.jpeg-f535dcc0407282d2956c80d639488292.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/musicas_da_comp/capa.png"
-dest_files=["res://.godot/imported/capa.png-547051693749e5bf581cf6c620cca3b8.ctex"]
+source_file="res://microjogos/2025S1/musicas_da_comp/Capa_Jogo_Musicas_da_Comp.jpeg"
+dest_files=["res://.godot/imported/Capa_Jogo_Musicas_da_Comp.jpeg-f535dcc0407282d2956c80d639488292.ctex"]
 
 [params]
 
