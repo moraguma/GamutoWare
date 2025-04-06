@@ -6,7 +6,15 @@
 script = ExtResource("1_mhmka")
 title_pt = &"TÍTULO DO JOGO"
 title_en = &"GAME TITLE"
-credits_pt = "Créditos do jogo"
+credits_pt = "Créditos do jogo
+Davi de Castro Alves de Souza
+Gamuto Boxing! 
+	Gamuto está treinando para ser o maior mascote. Ajude-o com o timing e vamos mostrar a força do gamuto!
+
+Fonte:
+https://www.deviantart.com/dxfurno/art/Sandbag-Spritesheet-dxfurno-791592349
+
+https://static.vecteezy.com/system/resources/thumbnails/007/537/705/small_2x/boxing-ring-with-crowded-audience-concept-free-vector.jpg"
 credits_en = "Game crédits"
 start_message_pt = &"FAÇA ALGO!"
 start_message_en = &"DO SOMETHING!"
