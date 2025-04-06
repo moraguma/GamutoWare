@@ -2,9 +2,11 @@ extends CharacterBody2D
 
 @export var speed : int = 500
 @onready var timer : Timer = $timers/snap_timer
+
 var can_snap : bool = true
 var focused : bool = false
 var is_on_gamuto : int = 0		# Identifica qual Gamuto o jogador está focado
+
 signal snapped_gamuto(gamuto : int)		# Sinal que identifica qual Gamuto foi atingido
 
 # Pega o input do jogador para movimentação
@@ -43,6 +45,12 @@ func snap_gamuto() -> void:
 		3:
 			print("GOT ME 3!")
 			emit_signal("snapped_gamuto", 3)
+		4:
+			print("GOT ME 4!")
+			emit_signal("snapped_gamuto", 4)
+		5:
+			print("GOT ME 5!")
+			emit_signal("snapped_gamuto", 5)
 
 # Quando o timer acaba, habilita a ação novamente
 func _on_snap_timer_timeout() -> void:
@@ -60,11 +68,15 @@ func _on_player_area_2d_area_exited(area: Area2D) -> void:
 # Caso entre especificamente na área do Gamuto 1
 func _on_gamuto_1_area_entered(area: Area2D) -> void:
 	is_on_gamuto = 1
-
 # Caso entre especificamente na área do Gamuto 2
 func _on_gamuto_2_area_entered(area: Area2D) -> void:
 	is_on_gamuto = 2
-
 # Caso entre especificamente na área do Gamuto 3
 func _on_gamuto_3_area_entered(area: Area2D) -> void:
 	is_on_gamuto = 3
+# Caso entre especificamente na área do Gamuto 4
+func _on_gamuto_4_area_entered(area: Area2D) -> void:
+	is_on_gamuto = 4
+# Caso entre especificamente na área do Gamuto 5
+func _on_gamuto_5_area_entered(area: Area2D) -> void:
+	is_on_gamuto = 5

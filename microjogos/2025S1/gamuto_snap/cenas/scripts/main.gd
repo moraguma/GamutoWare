@@ -14,6 +14,8 @@ const HEIGHT = 1080
 @onready var gamuto1 : Area2D = $gamutinhos/gamuto1
 @onready var gamuto2 : Area2D = $gamutinhos/gamuto2
 @onready var gamuto3 : Area2D = $gamutinhos/gamuto3
+@onready var gamuto4 : Area2D = $gamutinhos/gamuto4
+@onready var gamuto5 : Area2D = $gamutinhos/gamuto5
 
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES PADRÃO
@@ -64,6 +66,10 @@ func get_spawn_points():
 				print("SPAWN 2 SELECTED!")
 			gamuto3.position:
 				print("SPAWN 3 SELECTED!")
+			gamuto4.position:
+				print("SPAWN 4 SELECTED!")
+			gamuto5.position:
+				print("SPAWN 5 SELECTED!")
 				
 		# Remove a posição já escolhida para não ter repetição
 		spawns.remove_at(selected_spawn_index)
@@ -73,7 +79,7 @@ func get_spawn_points():
 
 # Função que deleta os Gamutos que não foram aleatoriamente escolhidos no começo 
 func remove_others(spawns : Array):
-	# Percorre o array com os Markers restantes
+	# Percorre o array com os Markers restantes	
 	for marker : Marker2D in spawns:
 		match marker.position:
 			gamuto1.position:
@@ -82,6 +88,10 @@ func remove_others(spawns : Array):
 				gamuto2.queue_free()
 			gamuto3.position:
 				gamuto3.queue_free()
+			gamuto4.position:
+				gamuto4.queue_free()
+			gamuto5.position:
+				gamuto5.queue_free()
 
 # --------------------------------------------------------------------------------------------------
 # CONDIÇÕES DE VITÓRIA

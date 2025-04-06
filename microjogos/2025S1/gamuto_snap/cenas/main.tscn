@@ -10,17 +10,17 @@
 texture_filter = 1
 script = ExtResource("1_v50tu")
 
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(959.999, 539.999)
+scale = Vector2(30, 16.875)
+texture = ExtResource("2_frgdu")
+metadata/_edit_lock_ = true
+
 [node name="player" parent="." instance=ExtResource("1_6m65u")]
 position = Vector2(961, 540)
 metadata/_edit_lock_ = true
 
 [node name="barriers" parent="." instance=ExtResource("2_dwaeq")]
-metadata/_edit_lock_ = true
-
-[node name="background" type="Sprite2D" parent="."]
-position = Vector2(959.999, 539.999)
-scale = Vector2(30, 16.875)
-texture = ExtResource("2_frgdu")
 metadata/_edit_lock_ = true
 
 [node name="gamutinhos" type="Node" parent="."]
@@ -29,14 +29,24 @@ metadata/_edit_lock_ = true
 position = Vector2(345, 785)
 
 [node name="gamuto2" parent="gamutinhos" instance=ExtResource("5_82nyc")]
-position = Vector2(1561, 322)
+position = Vector2(1522, 266)
 rotation = -1.309
-scale = Vector2(1.84244, 1.84244)
+scale = Vector2(2.14396, 2.14396)
 
 [node name="gamuto3" parent="gamutinhos" instance=ExtResource("5_82nyc")]
-position = Vector2(595, 303)
+position = Vector2(900, 171)
 rotation = 1.94203
 scale = Vector2(0.560001, 0.560001)
+
+[node name="gamuto4" parent="gamutinhos" instance=ExtResource("5_82nyc")]
+position = Vector2(263, 300)
+rotation = 2.5421
+scale = Vector2(1.49732, 1.50122)
+
+[node name="gamuto5" parent="gamutinhos" instance=ExtResource("5_82nyc")]
+position = Vector2(1685, 873)
+rotation = -0.713508
+scale = Vector2(1.87322, 1.87322)
 
 [node name="spawnPoints" type="Node" parent="."]
 
@@ -44,12 +54,20 @@ scale = Vector2(0.560001, 0.560001)
 position = Vector2(345, 785)
 
 [node name="spawn2" type="Marker2D" parent="spawnPoints"]
-position = Vector2(1561, 322)
+position = Vector2(1522, 266)
 
 [node name="spawn3" type="Marker2D" parent="spawnPoints"]
-position = Vector2(595, 303)
+position = Vector2(900, 171)
+
+[node name="spawn4" type="Marker2D" parent="spawnPoints"]
+position = Vector2(263, 300)
+
+[node name="spawn5" type="Marker2D" parent="spawnPoints"]
+position = Vector2(1685, 873)
 
 [connection signal="snapped_gamuto" from="player" to="gamutinhos/gamuto1" method="_on_player_snapped_gamuto"]
 [connection signal="area_entered" from="gamutinhos/gamuto1" to="player" method="_on_gamuto_1_area_entered"]
 [connection signal="area_entered" from="gamutinhos/gamuto2" to="player" method="_on_gamuto_2_area_entered"]
 [connection signal="area_entered" from="gamutinhos/gamuto3" to="player" method="_on_gamuto_3_area_entered"]
+[connection signal="area_entered" from="gamutinhos/gamuto4" to="player" method="_on_gamuto_4_area_entered"]
+[connection signal="area_entered" from="gamutinhos/gamuto5" to="player" method="_on_gamuto_5_area_entered"]

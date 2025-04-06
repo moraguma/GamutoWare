@@ -16,10 +16,16 @@ func _on_player_snapped_gamuto(gamuto: int) -> void:
 		match gamuto:
 			1:
 				print("YOU SNAPPED 1!")
+				self.queue_free()
 			2:
 				print("YOU SNAPPED 2!")
+				self.queue_free()
 			3:
 				print("YOU SNAPPED 3!")
-
-func _on_main_selected_spawn(marker: Marker2D) -> void:
-	pass # Replace with function body.
+				self.queue_free()
+			4:
+				print("YOU SNAPPED 4!")
+				self.queue_free()
+			5:
+				print("YOU SNAPPED 5!")
+				self.queue_free()
