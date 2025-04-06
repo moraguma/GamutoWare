@@ -504,3 +504,5 @@ vframes = 2
 visible = false
 position = Vector2(960, 536)
 texture = ExtResource("26_228w0")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
