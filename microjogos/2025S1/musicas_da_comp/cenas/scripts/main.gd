@@ -120,12 +120,13 @@ func _ready():
 		aaa.play()
 		
 func _process(delta):
-
 	pass
 
 func pergunta_pressed(pergunta) -> void:
 	$PanelContainer.queue_free()
 	if(musica_Escolhida.get(pergunta_escolhida)[0] == pergunta.text):
 		$VDC_Feliz.visible = true
+		emit_signal("win")
 	else:
 		$VDC_Triste.visible = true
+		emit_signal("lose")
