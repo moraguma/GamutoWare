@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://81cat0n5r3vj"]
+
+[ext_resource type="Script" uid="uid://d0g8p8vw67xc7" path="res://microjogos/2025S1/project_gamuto/cenas/scripts/player.gd" id="1_55qdd"]
+[ext_resource type="Texture2D" uid="uid://btlu3egjx5o4a" path="res://microjogos/2025S1/project_gamuto/shark.png" id="1_qo4i5"]
+[ext_resource type="Texture2D" uid="uid://bgbc5grn2odwc" path="res://microjogos/2025S1/project_gamuto/cenas/ground.png" id="3_78nd5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_55qdd"]
+size = Vector2(30, 45)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wmqkh"]
+size = Vector2(189, 38)
+
+[node name="Scene01" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_55qdd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-3, -28.5)
+shape = SubResource("RectangleShape2D_55qdd")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(-4, -32)
+scale = Vector2(1.42857, 1.42857)
+texture = ExtResource("1_qo4i5")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(9, -4)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(34.325, 23.5)
+scale = Vector2(4.50833, 2.6)
+texture = ExtResource("3_78nd5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(34.5, 23)
+shape = SubResource("RectangleShape2D_wmqkh")
