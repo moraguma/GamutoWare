@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://dov2svkeemfxh"]
+
+[ext_resource type="Script" uid="uid://dnlk7lgk3v3eu" path="res://microjogos/2025S1/Felipe_Fernandes/cenas/scripts/button_controller.gd" id="1_n4ssf"]
+[ext_resource type="PackedScene" uid="uid://d3r1ykj70r6po" path="res://microjogos/2025S1/Felipe_Fernandes/cenas/objects/action_button.tscn" id="2_bb32p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n4ssf"]
+
+[node name="ButtonController" type="Node2D"]
+script = ExtResource("1_n4ssf")
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="ActionButton_up" parent="Buttons" instance=ExtResource("2_bb32p")]
+key = "cima"
+
+[node name="ActionButton_right" parent="Buttons" instance=ExtResource("2_bb32p")]
+key = "direita"
+
+[node name="ActionButton_down" parent="Buttons" instance=ExtResource("2_bb32p")]
+key = "baixo"
+
+[node name="ActionButton_left" parent="Buttons" instance=ExtResource("2_bb32p")]
+key = "esquerda"
+
+[node name="SpawnArea" type="Area2D" parent="."]
+
+[node name="SpawnColl" type="CollisionShape2D" parent="SpawnArea"]
+shape = SubResource("RectangleShape2D_n4ssf")
+disabled = true
+debug_color = Color(0.166668, 0.350982, 0.461456, 0.866667)

@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=2 format=3 uid="uid://c0o1go0v4fv3l"]
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=3 format=3 uid="uid://c0o1go0v4fv3l"]
 
+[ext_resource type="PackedScene" uid="uid://ci37cn34rw60s" path="res://microjogos/2025S1/Felipe_Fernandes/cenas/main.tscn" id="1_jmvv7"]
 [ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_svxc6"]
 
 [resource]
@@ -8,6 +9,7 @@ title_pt = &"TÍTULO DO JOGO"
 title_en = &"GAME TITLE"
 credits_pt = "Créditos do jogo"
 credits_en = "Game crédits"
-start_message_pt = &"FAÇA ALGO!"
+start_message_pt = &"ATIRE ANTES"
 start_message_en = &"DO SOMETHING!"
+main_scene = ExtResource("1_jmvv7")
 difficulty = 0
