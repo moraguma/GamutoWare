@@ -34,6 +34,10 @@ window/size/window_height_override=540
 window/stretch/mode="viewport"
 window/size/fullscreen=true
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 ui_accept={

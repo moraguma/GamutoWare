@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://b2cx72pb6es4v"]
+
+[ext_resource type="Script" uid="uid://eo7hqqfrcioc" path="res://microjogos/2025S1/Ghost_Skulls/cenas/scripts/main.gd" id="1_soc2y"]
+[ext_resource type="PackedScene" uid="uid://b5owtuda8e854" path="res://microjogos/2025S1/Ghost_Skulls/cenas/player.tscn" id="2_fgvfp"]
+[ext_resource type="PackedScene" uid="uid://bero7f0qf75tr" path="res://microjogos/2025S1/Ghost_Skulls/cenas/static_body_2d.tscn" id="3_ly2dt"]
+[ext_resource type="PackedScene" uid="uid://bu7iopjs6uecp" path="res://microjogos/2025S1/Ghost_Skulls/cenas/parede.tscn" id="4_qqrtb"]
+[ext_resource type="PackedScene" uid="uid://dsw11gdy78830" path="res://microjogos/2025S1/Ghost_Skulls/cenas/enemy.tscn" id="5_1xknc"]
+[ext_resource type="PackedScene" uid="uid://d25cq2jsriqao" path="res://microjogos/2025S1/Ghost_Skulls/cenas/victory.tscn" id="6_soc2y"]
+
+[node name="SeuJogo" type="Node2D" node_paths=PackedStringArray("enemy")]
+script = ExtResource("1_soc2y")
+enemy = NodePath("Enemy")
+
+[node name="StaticBody2D" parent="." instance=ExtResource("3_ly2dt")]
+texture_filter = 5
+position = Vector2(981, 670)
+
+[node name="Parede" parent="." instance=ExtResource("4_qqrtb")]
+position = Vector2(-19, 6)
+
+[node name="Parede2" parent="." instance=ExtResource("4_qqrtb")]
+position = Vector2(-2037, 6)
+
+[node name="Enemy" parent="." instance=ExtResource("5_1xknc")]
+position = Vector2(101, 690)
+
+[node name="Victory" parent="." instance=ExtResource("6_soc2y")]
+position = Vector2(120, 584)
+
+[node name="player" parent="." instance=ExtResource("2_fgvfp")]
+position = Vector2(1846, 746)
+
+[connection signal="body_entered" from="Victory" to="." method="_on_victory_body_entered"]
