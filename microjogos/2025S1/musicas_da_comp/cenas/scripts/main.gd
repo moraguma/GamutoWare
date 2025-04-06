@@ -61,6 +61,8 @@ var shuffled_respostas = []
 var selection_X = 0
 var selection_Y = 0
 var active = true
+var pergunta_escolhida
+var musica_Escolhida
 @onready var corpoNu = $Musica1
 @onready var renata = $Musica2
 @onready var ragatanga = $Musica3
@@ -71,23 +73,33 @@ var active = true
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
+	var p1 = $PanelContainer/MarginContainer/GridContainer/Pergunta1
+	var p2 = $PanelContainer/MarginContainer/GridContainer/Pergunta2
+	var p3 = $PanelContainer/MarginContainer/GridContainer/Pergunta3
+	var p4 = $PanelContainer/MarginContainer/GridContainer/Pergunta4
+	
+	p1.pressed.connect(pergunta_pressed.bind(p1))
+	p2.pressed.connect(pergunta_pressed.bind(p2))
+	p3.pressed.connect(pergunta_pressed.bind(p3))
+	p4.pressed.connect(pergunta_pressed.bind(p4))
+	
 	$PanelContainer/MarginContainer/GridContainer/Pergunta1.grab_focus()
 
 	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("COMPETE THE COMP SONG!")
+			NotificationCenter.notify("COMPLETE THE COMP SONG!")
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("COMPLETE A MÚSICA DA COMP!")
 	
 	randomize()
-	var musica_Escolhida = perguntas[musicas[randi() % musicas.size()]] #Escolhe uma das músicas aleatoriamente
-	var num_pergunta = musica_Escolhida.keys()[randi() % musica_Escolhida.size()]
-	respostas =	musica_Escolhida[num_pergunta] #Obtém uma lista das respostas dessa pergunta ordenada corretamente
+	musica_Escolhida = perguntas[musicas[randi() % musicas.size()]] #Escolhe uma das músicas aleatoriamente
+	pergunta_escolhida = musica_Escolhida.keys()[randi() % musica_Escolhida.size()]
+	respostas =	musica_Escolhida[pergunta_escolhida] #Obtém uma lista das respostas dessa pergunta ordenada corretamente
 	shuffled_respostas = respostas.duplicate() #Cria uma cópia das respostas para poder embaralhar
 	shuffled_respostas.shuffle()
-	question.add_text(num_pergunta)
+	question.add_text(pergunta_escolhida)
 	
 	for i in range(4):
 		lista[i].text = shuffled_respostas[i]
@@ -105,7 +117,14 @@ func _ready():
 		shakeItBololo.play()
 		
 func _process(delta):
+
 	pass
 
-func pergunta_pressed(num_pergunta: int) -> void:
-	pass
+func pergunta_pressed(pergunta) -> void:
+	print(pergunta.text)
+
+	print(pergunta_escolhida)
+	
+	if(musica_Escolhida.get(pergunta_escolhida)[0] == pergunta.text):
+		$PanelContainer.queue_free()
+		$VDC_Feliz.visible = true
