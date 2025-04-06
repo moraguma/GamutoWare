@@ -23,6 +23,9 @@ Global="*res://principal/cenas/autoloads/Global.tscn"
 SoundController="*res://principal/cenas/autoloads/SoundController.tscn"
 TranslationManager="*res://principal/cenas/autoloads/TranslationManager.tscn"
 Minigames="*res://principal/recursos/data/Minigames.gd"
+MovingInsectsMoskito="*res://microjogos/2025S1/Drikista_Gamelab/Insects/moving_insects_moskito.tscn"
+MovingInsectsBeetle="*res://microjogos/2025S1/Drikista_Gamelab/Insects/moving_insects_beetle.tscn"
+MovingInsectsMoth="*res://microjogos/2025S1/Drikista_Gamelab/Insects/moving_insects_moth.tscn"
 
 [display]
 

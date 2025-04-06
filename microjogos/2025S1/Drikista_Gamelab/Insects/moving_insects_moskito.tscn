@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://u1sdttsqwxr7"]
+
+[ext_resource type="Script" uid="uid://b4hfmakcjsgfv" path="res://microjogos/2025S1/Drikista_Gamelab/Insects/obj_moskito.gd" id="1_c2rmd"]
+[ext_resource type="Texture2D" uid="uid://coek332550cfm" path="res://microjogos/2025S1/Drikista_Gamelab/Sprites/moskito.png" id="2_8vlj8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c2rmd"]
+size = Vector2(12, 16)
+
+[node name="moving_insects_moskito" type="Area2D"]
+script = ExtResource("1_c2rmd")
+
+[node name="spr_moskito" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_8vlj8")
+
+[node name="col_moskito" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_c2rmd")
