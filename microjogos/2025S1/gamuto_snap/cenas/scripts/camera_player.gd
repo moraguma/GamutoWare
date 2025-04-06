@@ -23,14 +23,13 @@ func get_action() -> void:
 		can_snap = false
 
 		if focused:
-			# Toca o som completamente
-			flash.play()
 			var tween = create_tween()
 			var tween_method = func(x): $playerAnimatedSprite.material.set_shader_parameter("flash", x)
+			print("SNAP!")
+			flash.play()		# Toca o som completamente
+			snap_gamuto()
 			tween.tween_method(tween_method, 0.0, 1.0, 0.2)
 			tween.tween_method(tween_method, 1.0, 0.0, 0.2)
-			print("SNAP!")
-			snap_gamuto()
 		else:
 			# Faz o som parar após 0.2 segundos
 			flash.play()
