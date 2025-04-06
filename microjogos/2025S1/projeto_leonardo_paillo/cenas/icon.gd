@@ -11,26 +11,41 @@ const distancia_max_dado = 5
 #posições x: 645, 772, 899, 1026, 1153, 1280
 #posições y: 300, 427, 554, 681, 808, 935
 
-var dadocount = len(dados)
+var dadometro
+var pode_mexer = true
+
+func _ready():
+	dadometro = get_node("../../dadometro")
 
 func _process(delta: float) -> void:
+	if not pode_mexer: return
 	posx()
 	posy()
+	var dado_colidido = false
 	for dado in dados:
 		if abs(dado.position.x - position.x) <= distancia_max_dado and abs(dado.position.y - position.y) <= distancia_max_dado:
+			dado_colidido = true
+			dadometro.show()
+			
 			if Input.is_action_just_pressed("acao"):
+				dadometro.play("rolls")
 				if dado.frame > 0:
 					dado.frame -= 1
 				else:
 					dados.erase(dado)
 					dado.queue_free()
-#	for poison in poisons:
-#		if abs(poison.position.x - position.x) <= distancia_max_dado and abs(poison.position.y - position.y) <= distancia_max_dado:
-#			emit_signal("lose")
-#			poisons.erase(poison)
-#			poison.queue_free()
-#	if not dadocount:
-#		emit_signal("win")
+			else:
+				if not dadometro.animation == "rolls" or not dadometro.is_playing():
+					dadometro.play("static")
+					dadometro.frame = dado.frame
+	if not dado_colidido:
+		dadometro.hide()
+		
+			
+	if len(dados) == 0:
+		get_parent().get_parent().register_win()
+		pode_mexer = false
+
 
 func posx():
 	if Input.is_action_just_pressed("direita") and position.x < 1280:
@@ -43,6 +58,3 @@ func posy():
 		position.y += movimento
 	if Input.is_action_just_pressed("cima") and position.y > 300:
 		position.y -= movimento
-
-
-#3 dados (quaisquer posições), 2 espinhos (quaisquer-bordas) e 1 posição inicial

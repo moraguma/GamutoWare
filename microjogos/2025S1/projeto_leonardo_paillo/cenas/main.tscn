@@ -1,48 +1,77 @@
-[gd_scene load_steps=28 format=3 uid="uid://djgr8pfav82d5"]
+[gd_scene load_steps=36 format=3 uid="uid://djgr8pfav82d5"]
 
 [ext_resource type="Script" uid="uid://bhyew2sgyr8cq" path="res://microjogos/2025S1/projeto_leonardo_paillo/cenas/dados.gd" id="1_6mo7f"]
+[ext_resource type="Texture2D" uid="uid://cd8e16xpqbk3t" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/tabuleiro1.png" id="1_ieclo"]
+[ext_resource type="Script" uid="uid://b4es8881cyhmm" path="res://microjogos/2025S1/projeto_leonardo_paillo/cenas/scripts/main.gd" id="1_mkbwt"]
 [ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="1_npcfk"]
+[ext_resource type="Texture2D" uid="uid://bglu5tqyqovn8" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/tabuleiro2.png" id="2_33gw0"]
+[ext_resource type="Script" uid="uid://cpw87sybl8mia" path="res://microjogos/2025S1/projeto_leonardo_paillo/cenas/tabuleiro.gd" id="3_33gw0"]
 [ext_resource type="Script" uid="uid://dkitpcp7xinue" path="res://microjogos/2025S1/projeto_leonardo_paillo/cenas/icon.gd" id="3_qa4ji"]
 [ext_resource type="Texture2D" uid="uid://67jrvqgcsq2v" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/dado1.png" id="4_cqiw6"]
+[ext_resource type="Texture2D" uid="uid://cp1obsjc8nxj4" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/diceanimated1.png" id="4_ut36f"]
 [ext_resource type="Texture2D" uid="uid://cljwg0btj5vh0" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/dado2.png" id="5_aho0k"]
+[ext_resource type="Texture2D" uid="uid://chbxdanwuoyyx" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/diceanimated2.png" id="5_lwvi1"]
 [ext_resource type="Texture2D" uid="uid://2so124dqahm3" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/dado3.png" id="6_hdkc0"]
+[ext_resource type="Texture2D" uid="uid://dqh3vtjcybdew" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/diceanimated3.png" id="6_mkbwt"]
 [ext_resource type="Texture2D" uid="uid://cmlc50n7ubyyk" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/dado4.png" id="7_ieclo"]
 [ext_resource type="Texture2D" uid="uid://cej2tnm8j3q01" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/dado5.png" id="8_33gw0"]
 [ext_resource type="Texture2D" uid="uid://c66rhe0150ppx" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/dado6.png" id="9_ut36f"]
 [ext_resource type="Texture2D" uid="uid://dg6xng2mkr7hl" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/dado7.png" id="10_lwvi1"]
 [ext_resource type="Texture2D" uid="uid://34i4l2aiaics" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/dado8.png" id="11_mkbwt"]
 [ext_resource type="Texture2D" uid="uid://njfa5cggy38e" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/dado9.png" id="12_etbqd"]
-[ext_resource type="Texture2D" uid="uid://clyro4dp7onui" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/sprite0cropped.png" id="13_sl2b6"]
-[ext_resource type="Texture2D" uid="uid://bktnl8wmvxl6h" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/sprite1cropped.png" id="14_qvqd8"]
-[ext_resource type="Texture2D" uid="uid://ve7wb10lxemw" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/sprite2cropped.png" id="15_eytck"]
 [ext_resource type="Texture2D" uid="uid://c7d2xvmoa4mey" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/poison1.png" id="16_17o5f"]
 [ext_resource type="Script" uid="uid://dleug5vwgnu4s" path="res://microjogos/2025S1/projeto_leonardo_paillo/cenas/dado_1.gd" id="16_hdkc0"]
 [ext_resource type="Texture2D" uid="uid://ct82pptnu14t3" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/poison2.png" id="17_bjo6a"]
 [ext_resource type="Texture2D" uid="uid://b1qvnq5c3774b" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/poison3.png" id="18_fe2hn"]
+[ext_resource type="Texture2D" uid="uid://4e8tj8f5wrs" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/dado0.png" id="18_mkbwt"]
 [ext_resource type="Texture2D" uid="uid://bwtlm55c1mjwv" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/poison4.png" id="19_6vemf"]
 [ext_resource type="Texture2D" uid="uid://cju3g0pu6grvl" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/poison5.png" id="20_e4ltu"]
 [ext_resource type="Texture2D" uid="uid://cnre4g5t6jxk5" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/poison6.png" id="21_ror5a"]
 [ext_resource type="Texture2D" uid="uid://d2ovmbrr68d1r" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/poison7.png" id="22_y42jl"]
 [ext_resource type="Script" uid="uid://v7hi1ir0c8x0" path="res://microjogos/2025S1/projeto_leonardo_paillo/cenas/poison_1.gd" id="24_aho0k"]
+[ext_resource type="Texture2D" uid="uid://6gr12ynic48r" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/poison8.png" id="27_etbqd"]
+[ext_resource type="AudioStream" uid="uid://d26v7wtfsqkgx" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/sons/ambiance.wav" id="31_etbqd"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c23vy"]
-load_path = "res://.godot/imported/tabuleiro.png-baadd471eca78220186c497faf34f63b.ctex"
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_buvel"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_etbqd"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("13_sl2b6")
+"texture": ExtResource("1_ieclo")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_qvqd8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_eytck")
+"texture": ExtResource("2_33gw0")
 }],
 "loop": true,
-"name": &"roll_dice",
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sl2b6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_mkbwt")
+}],
+"loop": true,
+"name": &"not_here",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ut36f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lwvi1")
+}, {
+"duration": 3.0,
+"texture": ExtResource("6_mkbwt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ut36f")
+}],
+"loop": false,
+"name": &"rolls",
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -73,7 +102,59 @@ animations = [{
 "texture": ExtResource("12_etbqd")
 }],
 "loop": true,
-"name": &"valores",
+"name": &"static",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_buvel"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ut36f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lwvi1")
+}, {
+"duration": 3.0,
+"texture": ExtResource("6_mkbwt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ut36f")
+}],
+"loop": false,
+"name": &"rolldice",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_cqiw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_aho0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hdkc0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ieclo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_33gw0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ut36f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lwvi1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mkbwt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_etbqd")
+}],
+"loop": true,
+"name": &"values",
 "speed": 5.0
 }]
 
@@ -100,6 +181,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("22_y42jl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_etbqd")
 }],
 "loop": true,
 "name": &"poison",
@@ -108,10 +192,20 @@ animations = [{
 
 [node name="Main" type="Node2D"]
 texture_filter = 1
+script = ExtResource("1_mkbwt")
 
-[node name="Tabuleiro" type="Sprite2D" parent="."]
+[node name="Tabuleiro" type="AnimatedSprite2D" parent="."]
 position = Vector2(960, 540)
-texture = SubResource("CompressedTexture2D_c23vy")
+sprite_frames = SubResource("SpriteFrames_etbqd")
+frame_progress = 0.0130384
+script = ExtResource("3_33gw0")
+
+[node name="dadometro" type="AnimatedSprite2D" parent="."]
+position = Vector2(281, 849)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_sl2b6")
+animation = &"rolls"
+frame_progress = 0.18256
 
 [node name="Node2D" type="Node2D" parent="."]
 script = ExtResource("1_6mo7f")
@@ -120,21 +214,21 @@ script = ExtResource("1_6mo7f")
 position = Vector2(1151, 558)
 scale = Vector2(2.42143, 2.45)
 sprite_frames = SubResource("SpriteFrames_buvel")
-animation = &"valores"
+animation = &"values"
 script = ExtResource("16_hdkc0")
 
 [node name="Dado2" type="AnimatedSprite2D" parent="Node2D"]
 position = Vector2(779, 429)
 scale = Vector2(2.42143, 2.45)
 sprite_frames = SubResource("SpriteFrames_buvel")
-animation = &"valores"
+animation = &"values"
 script = ExtResource("16_hdkc0")
 
 [node name="Dado3" type="AnimatedSprite2D" parent="Node2D"]
 position = Vector2(902, 687)
 scale = Vector2(2.42143, 2.45)
 sprite_frames = SubResource("SpriteFrames_buvel")
-animation = &"valores"
+animation = &"values"
 script = ExtResource("16_hdkc0")
 
 [node name="Poison1" type="AnimatedSprite2D" parent="Node2D"]
@@ -157,3 +251,6 @@ scale = Vector2(1.5, 1.372)
 texture = ExtResource("1_npcfk")
 script = ExtResource("3_qa4ji")
 dados = [NodePath("../Dado1"), NodePath("../Dado3"), NodePath("../Dado2")]
+
+[node name="Musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("31_etbqd")

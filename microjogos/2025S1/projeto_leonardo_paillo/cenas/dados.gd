@@ -8,6 +8,7 @@ var positions = []
 
 func _ready():
 	var children = get_children()
+	
 	for child in children:
 		var sobreposto = true
 		while sobreposto:
@@ -16,11 +17,3 @@ func _ready():
 			if Vector2(child.position.x, child.position.y) not in positions:
 				sobreposto = false
 		positions.append(Vector2(child.position.x, child.position.y))
-
-
-#arrumar os dados
-#fazer código de randomização das posições
-#fazer código de randomização dos números dos dados
-#fazer código de aniimação dos dados
-#adicionar sons
-#arrumar imagens
