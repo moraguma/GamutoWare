@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://hssyta72u6rf"]
 
 [ext_resource type="Script" uid="uid://b1d21rsccuh44" path="res://microjogos/2025S1/SSAG/cenas/sala_principal.gd" id="1_bkrwu"]
-[ext_resource type="Texture2D" uid="uid://gv4vxn7svffo" path="res://das.png" id="2_plg5m"]
+[ext_resource type="Texture2D" uid="uid://dg56yxq8jvvn4" path="res://microjogos/2025S1/SSAG/das.png" id="2_bkrwu"]
+[ext_resource type="Texture2D" uid="uid://km2vwmgq7agl" path="res://microjogos/2025S1/SSAG/untitled.png" id="3_plg5m"]
 [ext_resource type="Script" uid="uid://bi1keydovqy6e" path="res://microjogos/2025S1/SSAG/cenas/porta_esquerda.gd" id="4_bkrwu"]
-[ext_resource type="Texture2D" uid="uid://cxhfouilvyky1" path="res://untitled.png" id="4_m8n0c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rxvbk"]
 size = Vector2(85.5, 144.625)
@@ -22,7 +22,7 @@ script = ExtResource("1_bkrwu")
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
 position = Vector2(192, -144)
 scale = Vector2(1.99089, 1.81818)
-texture = ExtResource("2_plg5m")
+texture = ExtResource("2_bkrwu")
 
 [node name="Camera2D" type="Camera2D" parent="Area2D/Sprite2D"]
 zoom = Vector2(3.66, 3.66)
@@ -37,7 +37,7 @@ shape = SubResource("RectangleShape2D_rxvbk")
 [node name="Sprite2D" type="Sprite2D" parent="porta-direita/CollisionShape2D"]
 position = Vector2(0, 4.75)
 scale = Vector2(0.302632, 0.295709)
-texture = ExtResource("4_m8n0c")
+texture = ExtResource("3_plg5m")
 
 [node name="porta-esquerda" type="Area2D" parent="."]
 position = Vector2(2, -51)
@@ -47,14 +47,14 @@ script = ExtResource("4_bkrwu")
 position = Vector2(336, -110)
 shape = SubResource("RectangleShape2D_bkrwu")
 
-[node name="Sprite2D" type="Sprite2D" parent="porta-esquerda/CollisionShape2D"]
-position = Vector2(0, 4.75)
-scale = Vector2(0.302632, 0.295709)
-texture = ExtResource("4_m8n0c")
-flip_h = true
-
 [node name="Timer" type="Timer" parent="porta-esquerda"]
 wait_time = 2.48
+
+[node name="portaesq" type="Sprite2D" parent="porta-esquerda"]
+position = Vector2(336, -105.25)
+scale = Vector2(0.302632, 0.295709)
+texture = ExtResource("3_plg5m")
+flip_h = true
 
 [node name="porta-frente" type="Area2D" parent="."]
 
@@ -65,4 +65,3 @@ shape = SubResource("RectangleShape2D_plg5m")
 [node name="Sprite2D3" type="Sprite2D" parent="porta-frente/CollisionShape2D"]
 position = Vector2(-0.625007, -0.71717)
 scale = Vector2(-0.356328, 0.458299)
-texture = ExtResource("2_plg5m")
