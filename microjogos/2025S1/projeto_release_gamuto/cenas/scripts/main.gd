@@ -83,8 +83,6 @@ func pick_random_spawn_config():
 	}
 	return areas["config1"]
 
-func create_player():
-	var player_instance = player_scene.instantiate()
 	
 func generate_coordenates(dict):
 	var x_start = dict["x_start"]
@@ -120,13 +118,6 @@ func create_something(scene, num, spawn_dict, no_spawn_dicts_list, random_rotati
 		add_child(object_instance)
 		instances.append(object_instance)
 	return instances
-
-func create_obstacles(num=5):
-	for instance_id in num:
-		var obstacle_instance = obstacle_scene.instantiate()
-		obstacle_instance.position = Vector2(randf()*WIDTH, randf()*HEIGHT)
-		obstacle_instance.rotation = randf()
-		add_child(obstacle_instance)
 
 
 # Um método genérico. Crie quantos métodos você precisar!
