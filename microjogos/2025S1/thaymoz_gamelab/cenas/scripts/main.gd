@@ -1,9 +1,15 @@
 extends Node2D
 
 # Declaração dos sinais win e lose
+@onready var quantidades_exposto: Label = $canvas/ui/quantidades_exposto
+@onready var balão: AnimatedSprite2D = $balão
+@export var crescimento : float = 0
 
 signal win
 signal lose
+var texto_do_balão = 0
+var quantidades_de_clicks = 0
+var clicados = 0
 
 # Estas constantes são usadas para determinar o tamanho da tela do seu jogo. Por padrão, definem uma
 # tela 1920x1080, que é padrão para monitores full HD. Caso você queira uma resolução menor para 
@@ -28,6 +34,13 @@ func _ready():
 			NotificationCenter.notify("FAÇA ALGO!")
 
 
+
+	var numeros = randi_range(1,10)
+	quantidades_de_clicks = numeros
+	texto_do_balão = quantidades_de_clicks
+	quantidades_exposto.text = str(texto_do_balão)
+	print(quantidades_de_clicks," randomico")
+
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
 # a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
 # a última chamada desta função. O comando pass não faz nada
@@ -39,9 +52,7 @@ func _physics_process(delta):
 # como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
 # desde a última chamada desta função. O comando pass não faz nada
 func _process(delta):
-	pass
-
-
+	quantidades_exposto.text = str(texto_do_balão)
 # --------------------------------------------------------------------------------------------------
 # SUAS FUNÇÕES
 # --------------------------------------------------------------------------------------------------
@@ -70,3 +81,23 @@ func register_win():
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
 	emit_signal("lose")
+	
+	
+func _input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("acao"):
+		clicados += 1
+		balão.position.y -= 16
+#		comprimento * 32
+		balão.scale.x += crescimento
+		balão.scale.y += crescimento
+		print(clicados)
+		texto_do_balão -= 1
+		if clicados == quantidades_de_clicks:
+#			vc ganhou
+			register_win()
+		elif clicados > quantidades_de_clicks:
+#			explodiu
+			register_lose()
+		elif clicados < quantidades_de_clicks:
+#			murchou
+			register_lose()

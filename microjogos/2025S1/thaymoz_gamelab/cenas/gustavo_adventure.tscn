@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://drtbiw6uosxwt"]
+
+[ext_resource type="Script" uid="uid://c2ocnvc1mqcli" path="res://microjogos/2025S1/thaymoz_gamelab/cenas/scripts/main.gd" id="1_h1h42"]
+[ext_resource type="FontFile" uid="uid://censsrpbpgb4h" path="res://microjogos/moraguma/ifuv/recursos/fonts/Pixel Millennium.ttf" id="2_f31m7"]
+[ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="2_gkidn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f31m7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h1h42"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gkidn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gkidn")
+}],
+"loop": true,
+"name": &"boom",
+"speed": 5.0
+}]
+
+[node name="Gustavo_adventure" type="Node2D"]
+script = ExtResource("1_h1h42")
+crescimento = 0.5
+
+[node name="gustavo" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_f31m7")
+
+[node name="chao" type="Sprite2D" parent="."]
+
+[node name="botão_de_comando" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_h1h42")
+
+[node name="balão" type="AnimatedSprite2D" parent="."]
+position = Vector2(1304, 668)
+sprite_frames = SubResource("SpriteFrames_gkidn")
+animation = &"boom"
+
+[node name="canvas" type="CanvasLayer" parent="."]
+
+[node name="ui" type="Control" parent="canvas"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="quantidades_exposto" type="Label" parent="canvas/ui"]
+layout_mode = 0
+offset_left = 1506.0
+offset_top = 743.0
+offset_right = 1562.0
+offset_bottom = 807.0
+theme_override_fonts/font = ExtResource("2_f31m7")
+theme_override_font_sizes/font_size = 64
