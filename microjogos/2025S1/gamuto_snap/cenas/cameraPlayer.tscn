@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://t5asnuie65sg" path="res://microjogos/2025S1/gamuto_snap/cenas/scripts/camera_player.gd" id="1_0sfhs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0sfhs"]
-size = Vector2(900, 460)
+size = Vector2(700, 300)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0sfhs"]
 radius = 162.151

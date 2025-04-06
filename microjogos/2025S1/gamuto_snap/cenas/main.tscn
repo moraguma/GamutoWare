@@ -10,11 +10,8 @@
 texture_filter = 1
 script = ExtResource("1_v50tu")
 
-[node name="CameraPlayer" parent="." instance=ExtResource("1_6m65u")]
+[node name="player" parent="." instance=ExtResource("1_6m65u")]
 position = Vector2(961, 540)
-
-[node name="Gamutos" parent="." instance=ExtResource("5_82nyc")]
-position = Vector2(288, 833)
 
 [node name="barriers" parent="." instance=ExtResource("2_dwaeq")]
 
@@ -23,4 +20,19 @@ position = Vector2(959.999, 539.999)
 scale = Vector2(30, 16.875)
 texture = ExtResource("2_frgdu")
 
-[connection signal="area_entered" from="Gamutos" to="CameraPlayer" method="_on_gamutos_area_entered"]
+[node name="gamutinhos" type="Node" parent="."]
+
+[node name="gamuto1" parent="gamutinhos" instance=ExtResource("5_82nyc")]
+position = Vector2(345, 785)
+
+[node name="gamuto2" parent="gamutinhos" instance=ExtResource("5_82nyc")]
+position = Vector2(1561, 322)
+rotation = -1.309
+scale = Vector2(1.84244, 1.84244)
+
+[node name="gamuto3" parent="gamutinhos" instance=ExtResource("5_82nyc")]
+position = Vector2(595, 303)
+rotation = 1.94203
+scale = Vector2(0.560001, 0.560001)
+
+[connection signal="area_entered" from="gamutinhos/gamuto1" to="player" method="_on_gamutos_area_entered"]

@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://c0cvhjqkyktdt" path="res://microjogos/2025S1/gamuto_snap/cenas/gamutos.gd" id="1_kkape"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hu13g"]
-radius = 135.015
+radius = 114.004
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kkape"]
 shader = ExtResource("1_3pnec")
@@ -24,7 +24,7 @@ shape = SubResource("CircleShape2D_hu13g")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_kkape")
-scale = Vector2(3.44, 3.44)
+scale = Vector2(3, 3)
 texture = ExtResource("1_eju3l")
 offset = Vector2(0, 2)
 
