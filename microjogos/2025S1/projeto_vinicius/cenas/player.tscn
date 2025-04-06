@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cajuj4ydxnjt6"]
+[gd_scene load_steps=3 format=3 uid="uid://cajuj4ydxnjt6"]
 
 [ext_resource type="Texture2D" uid="uid://bv87dj26ou83c" path="res://microjogos/2025S1/projeto_vinicius/recursos/imagens/(background-coffee)pixel-art-illustration-coffeeshop-background-pixelated-cafe-cozy-coffeeshop-cafe-background-pixelated-for-the-pixel-art-game-and-icon-for-website-and-video-game-old-school-retro-vector.jpg" id="1_3k5r5"]
+[ext_resource type="Texture2D" uid="uid://bew2mjcbtwxwo" path="res://microjogos/2025S1/projeto_vinicius/recursos/imagens/(New)CoffeCup.png" id="2_h0piw"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -8,7 +9,25 @@
 offset_right = 1920.0
 offset_bottom = 1080.0
 
-[node name="(background-coffee)pixel-art-illustration-coffeeshop-background-pixelated-cafe-cozy-coffeeshop-cafe-background-pixelated-for-the-pixel-art-game-and-icon-for-website-and-video-game-old-school-retro-vector" type="Sprite2D" parent="."]
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="ColorRect"]
+position = Vector2(0, 1037)
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect/AnimatableBody2D"]
+offset_right = 1913.0
+offset_bottom = 43.0
+
+[node name="(background-coffee)pixel-art-illustration-coffeeshop-background-pixelated-cafe-cozy-coffeeshop-cafe-background-pixelated-for-the-pixel-art-game-and-icon-for-website-and-video-game-old-school-retro-vector" type="Sprite2D" parent="ColorRect"]
+editor_description = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vecteezy.com%2Fvector-art%2F36155331-pixel-art-illustration-coffeeshop-background-pixelated-cafe-cozy-coffeeshop-cafe-background-pixelated-for-the-pixel-art-game-and-icon-for-website-and-video-game-old-school-retro&psig=AOvVaw2j39hyLbEVPEhIn8GoIUgx&ust=1743976169640000&source=images&cd=vfe&opi=89978449&ved=2ahUKEwiW5vzR78GMAxV9N7kGHTj5CqMQjRx6BAgAEBk"
 position = Vector2(960, 540)
 scale = Vector2(1.22449, 1.10204)
 texture = ExtResource("1_3k5r5")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(1052, 605)
+scale = Vector2(2.8, 2.8)
+texture = ExtResource("2_h0piw")
