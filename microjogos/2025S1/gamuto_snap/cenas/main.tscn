@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://s34c8u1re5fr"]
+[gd_scene load_steps=7 format=3 uid="uid://s34c8u1re5fr"]
 
 [ext_resource type="PackedScene" uid="uid://bukwvlpdiph3y" path="res://microjogos/2025S1/gamuto_snap/cenas/cameraPlayer.tscn" id="1_6m65u"]
 [ext_resource type="Script" uid="uid://dddvjk0hd57ea" path="res://microjogos/2025S1/gamuto_snap/cenas/scripts/main.gd" id="1_v50tu"]
 [ext_resource type="PackedScene" uid="uid://bhbi5lr5iqq0g" path="res://microjogos/2025S1/gamuto_snap/cenas/barriers.tscn" id="2_dwaeq"]
 [ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="2_frgdu"]
+[ext_resource type="Script" uid="uid://c5rc7lt2iu062" path="res://microjogos/2025S1/gamuto_snap/cenas/scripts/gamutinhos.gd" id="5_4w37p"]
 [ext_resource type="PackedScene" uid="uid://x6twngw4lu8i" path="res://microjogos/2025S1/gamuto_snap/cenas/gamutos.tscn" id="5_82nyc"]
 
 [node name="Main" type="Node2D"]
@@ -24,6 +25,7 @@ metadata/_edit_lock_ = true
 metadata/_edit_lock_ = true
 
 [node name="gamutinhos" type="Node" parent="."]
+script = ExtResource("5_4w37p")
 
 [node name="gamuto1" parent="gamutinhos" instance=ExtResource("5_82nyc")]
 position = Vector2(345, 785)
@@ -65,6 +67,7 @@ position = Vector2(263, 300)
 [node name="spawn5" type="Marker2D" parent="spawnPoints"]
 position = Vector2(1685, 873)
 
+[connection signal="snapped_gamuto" from="player" to="gamutinhos" method="_on_player_snapped_gamuto"]
 [connection signal="snapped_gamuto" from="player" to="gamutinhos/gamuto1" method="_on_player_snapped_gamuto"]
 [connection signal="area_entered" from="gamutinhos/gamuto1" to="player" method="_on_gamuto_1_area_entered"]
 [connection signal="area_entered" from="gamutinhos/gamuto2" to="player" method="_on_gamuto_2_area_entered"]

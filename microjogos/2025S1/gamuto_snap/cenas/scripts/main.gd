@@ -79,7 +79,7 @@ func get_spawn_points():
 
 # Função que deleta os Gamutos que não foram aleatoriamente escolhidos no começo 
 func remove_others(spawns : Array):
-	# Percorre o array com os Markers restantes	
+	# Percorre o array com os markers restantes	
 	for marker : Marker2D in spawns:
 		match marker.position:
 			gamuto1.position:
