@@ -8,8 +8,8 @@
 [ext_resource type="AudioStream" uid="uid://cea8hesmc8u6j" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Ragatanga.ogg" id="6_0onx8"]
 [ext_resource type="AudioStream" uid="uid://narf8ge8evym" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Madagascar.ogg" id="7_0g845"]
 [ext_resource type="AudioStream" uid="uid://cbnhji0ed46gx" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Shake It Bololo.ogg" id="8_q1754"]
-[ext_resource type="Texture2D" uid="uid://bdynhd5rt6q4r" path="res://microjogos/2025S1/musicas_da_comp/recursos/imagens/VDC_feliz.png" id="9_xlju7"]
-[ext_resource type="Texture2D" uid="uid://ixrde86tx5e" path="res://microjogos/2025S1/musicas_da_comp/recursos/imagens/VDC_triste.png" id="10_0onx8"]
+[ext_resource type="Texture2D" uid="uid://cljamu34fu106" path="res://microjogos/2025S1/musicas_da_comp/recursos/imagens/VDC_ORGULHOSO.png" id="9_0onx8"]
+[ext_resource type="Texture2D" uid="uid://brqe8lsx8v5jr" path="res://microjogos/2025S1/musicas_da_comp/recursos/imagens/VDC_TE_PERDOA.png" id="10_0onx8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3qdev"]
 bg_color = Color(0.0470588, 0.196078, 0.819608, 1)
@@ -144,11 +144,11 @@ parameters/looping = true
 [node name="VDC_Feliz" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(960, 540)
-scale = Vector2(0.360428, 0.284585)
-texture = ExtResource("9_xlju7")
+scale = Vector2(0.46875, 0.370117)
+texture = ExtResource("9_0onx8")
 
-[node name="VDC_Tristes" type="Sprite2D" parent="."]
+[node name="VDC_Triste" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(960, 540)
-scale = Vector2(0.32, 0.27)
+scale = Vector2(0.46875, 0.39546)
 texture = ExtResource("10_0onx8")

@@ -68,6 +68,7 @@ var musica_Escolhida
 @onready var ragatanga = $Musica3
 @onready var madagascar = $Musica4
 @onready var shakeItBololo = $Musica5
+@onready var a = $Musica6
 @onready var question = %Pergunta
 @onready var lista: Array = $PanelContainer/MarginContainer/GridContainer.get_children()
 
@@ -115,6 +116,8 @@ func _ready():
 		madagascar.play()
 	elif musica_Escolhida == perguntas[musicas[4]]:
 		shakeItBololo.play()
+	elif musica_Escolhida == pergunta_escolhida[musicas[5]]:
+		a.play()
 		
 func _process(delta):
 
@@ -125,4 +128,4 @@ func pergunta_pressed(pergunta) -> void:
 	if(musica_Escolhida.get(pergunta_escolhida)[0] == pergunta.text):
 		$VDC_Feliz.visible = true
 	else:
-		$VDC_Tristes.visible = true
+		$VDC_Triste.visible = true
