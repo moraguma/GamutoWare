@@ -8,6 +8,8 @@ signal lose
 const WIDTH = 1920
 const HEIGHT = 1080
 
+var porta_demonio = -1
+
 @onready var global = $GLOBAL
 @onready var texto = $Label
 @onready var morte = $Morte
@@ -48,32 +50,38 @@ func _ready() -> void:
 func faceondoor(i):
 	if(i == 0):
 		pesq.play("demonio_spawn")
+		porta_demonio = 0
 		morte.start()
 		speedup(pesq)
 	if(i == 1):
 		pdir.play("demonio_spawn")
+		porta_demonio = 1
 		morte.start()
 		speedup(pdir)
 	if(i == 2):
 		pfrente.play("demonio_spawn")
+		porta_demonio = 2
 		morte.start()
 		speedup(pfrente)
 
 func _physics_process(delta):
 	if(Input.is_action_just_pressed("direita")):
 		$"porta-direita/portadir".play("porta_fechando")
-		morte.stop()
-		tempo.start()
+		if(porta_demonio == 1):
+			morte.stop()
+			tempo.start()
 		bump.play()
 	if(Input.is_action_just_pressed("esquerda")):
 		$"porta-esquerda/portaesq".play("porta_fechando")
-		morte.stop()
-		tempo.start()
+		if(porta_demonio == 0):
+			morte.stop()
+			tempo.start()
 		bump.play()
 	if(Input.is_action_just_pressed("cima")):
 		$"porta-frente/portafrente".play("porta_fechando")
-		morte.stop()
-		tempo.start()
+		if(porta_demonio == 2):
+			morte.stop()
+			tempo.start()
 		bump.play()
 
 func _on_timer_timeout():
