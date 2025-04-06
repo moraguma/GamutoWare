@@ -1,16 +1,22 @@
-[gd_scene load_steps=10 format=3 uid="uid://dwg6yv3kqf2eh"]
+[gd_scene load_steps=15 format=3 uid="uid://dwg6yv3kqf2eh"]
 
 [ext_resource type="Texture2D" uid="uid://bgfyrk5qr8xo0" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/Design sem nome (3).png" id="1_2uta7"]
+[ext_resource type="Script" uid="uid://d04sirxomapuy" path="res://microjogos/2025S1/seu_projeto/cenas/scripts/main.gd" id="1_gj4wl"]
 [ext_resource type="Script" uid="uid://d3hurd143uhsj" path="res://microjogos/2025S1/seu_projeto/cenas/scripts/poções.gd" id="2_4366y"]
-[ext_resource type="Texture2D" uid="uid://wgcpsoln6a0j" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/poção 1 teste.png" id="2_lbx2f"]
-[ext_resource type="Texture2D" uid="uid://mf2koxn56aue" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/poção 2 - teste.png" id="3_422id"]
-[ext_resource type="Texture2D" uid="uid://83i685dpkq4y" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/poção 3 - teste.png" id="4_dmivy"]
+[ext_resource type="Texture2D" uid="uid://wgcpsoln6a0j" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/poção 3 teste.png" id="2_lbx2f"]
+[ext_resource type="Texture2D" uid="uid://mf2koxn56aue" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/poção 1 - teste.png" id="3_422id"]
+[ext_resource type="Texture2D" uid="uid://83i685dpkq4y" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/poção 2 - teste.png" id="4_dmivy"]
 [ext_resource type="Texture2D" uid="uid://bfkwcn2ny1gev" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/poção 4 - teste.png" id="5_6rkfm"]
 [ext_resource type="Texture2D" uid="uid://ds3b22n84ck47" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/moldura teste (2).png" id="6_422id"]
 [ext_resource type="Texture2D" uid="uid://m11pvtmra36b" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/quadro de receitas.png" id="8_almq2"]
 [ext_resource type="Texture2D" uid="uid://c0ukqndhi4u7m" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/poção result.png" id="9_3ijsh"]
+[ext_resource type="AudioStream" uid="uid://41oilyxa32sf" path="res://microjogos/2025S1/seu_projeto/recursos/sons/feitico.wav" id="11_3ijsh"]
+[ext_resource type="AudioStream" uid="uid://byrw82vcbq67n" path="res://microjogos/2025S1/seu_projeto/recursos/sons/ganhou.wav" id="12_gj4wl"]
+[ext_resource type="AudioStream" uid="uid://whpu82ibdf4b" path="res://microjogos/2025S1/seu_projeto/recursos/sons/364929__jofae__game-die.mp3" id="12_r4ef3"]
+[ext_resource type="Theme" uid="uid://d2tp6nrlj30it" path="res://principal/recursos/themes/TitleTheme.tres" id="14_l5juk"]
 
 [node name="Cenas1" type="Node2D"]
+script = ExtResource("1_gj4wl")
 
 [node name="Fundo" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
@@ -77,3 +83,42 @@ texture = ExtResource("8_almq2")
 position = Vector2(635, 146)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("9_3ijsh")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Receita" type="HBoxContainer" parent="CanvasLayer"]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_left = 0.388
+anchor_top = 0.048
+anchor_right = 0.758
+anchor_bottom = 0.242
+offset_left = -3.96002
+offset_top = -32.84
+offset_right = 25.64
+offset_bottom = 7.63998
+grow_horizontal = 2
+size_flags_vertical = 0
+alignment = 1
+
+[node name="feitico" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_3ijsh")
+
+[node name="perdeu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_r4ef3")
+
+[node name="ganhou" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_gj4wl")
+
+[node name="Perdeu" type="Label" parent="."]
+visible = false
+offset_left = 345.0
+offset_top = 434.0
+offset_right = 1678.0
+offset_bottom = 681.0
+theme = ExtResource("14_l5juk")
+text = "Você perdeu!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="atual_changing" from="Node2D" to="." method="_on_node_2d_atual_changing"]

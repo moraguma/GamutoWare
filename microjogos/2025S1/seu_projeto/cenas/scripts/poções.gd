@@ -1,5 +1,7 @@
 extends Node2D
+signal atual_changing(id)
 var atual = 1 
+
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("direita"):
 		if atual == 1:
@@ -27,5 +29,16 @@ func _process(delta: float) -> void:
 		elif atual == 2:
 			atual = 4
 			get_node("Pocao2/Quadro").hide()
-			get_node("pocao4/Quadro").show()
-		
+			get_node("Pocao4/Quadro").show()
+	if Input.is_action_just_pressed("cima"):
+		if atual == 3:
+			atual = 1
+			get_node("Pocao3/Quadro").hide()
+			get_node("Pocao1/Quadro").show()
+		elif atual == 4:
+			atual = 2
+			get_node("Pocao4/Quadro").hide()
+			get_node("Pocao2/Quadro").show()
+	if Input.is_action_just_pressed("acao"):
+		print(atual)
+		atual_changing.emit(atual)

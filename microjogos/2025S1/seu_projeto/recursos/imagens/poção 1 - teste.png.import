@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://83i685dpkq4y"
-path="res://.godot/imported/poção 3 - teste.png-b565e288751c8c424073fd58aee5df9e.ctex"
+uid="uid://mf2koxn56aue"
+path="res://.godot/imported/poção 1 - teste.png-b42b41759b31ea3477d8ce7bda3e1d01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/seu_projeto/recursos/imagens/poção 3 - teste.png"
-dest_files=["res://.godot/imported/poção 3 - teste.png-b565e288751c8c424073fd58aee5df9e.ctex"]
+source_file="res://microjogos/2025S1/seu_projeto/recursos/imagens/poção 1 - teste.png"
+dest_files=["res://.godot/imported/poção 1 - teste.png-b42b41759b31ea3477d8ce7bda3e1d01.ctex"]
 
 [params]
 
