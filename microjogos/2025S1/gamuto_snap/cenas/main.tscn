@@ -1,21 +1,26 @@
-[gd_scene load_steps=5 format=3 uid="uid://s34c8u1re5fr"]
+[gd_scene load_steps=6 format=3 uid="uid://s34c8u1re5fr"]
 
 [ext_resource type="PackedScene" uid="uid://bukwvlpdiph3y" path="res://microjogos/2025S1/gamuto_snap/cenas/cameraPlayer.tscn" id="1_6m65u"]
 [ext_resource type="Script" uid="uid://dddvjk0hd57ea" path="res://microjogos/2025S1/gamuto_snap/cenas/scripts/main.gd" id="1_v50tu"]
 [ext_resource type="PackedScene" uid="uid://bhbi5lr5iqq0g" path="res://microjogos/2025S1/gamuto_snap/cenas/barriers.tscn" id="2_dwaeq"]
 [ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="2_frgdu"]
+[ext_resource type="PackedScene" uid="uid://x6twngw4lu8i" path="res://microjogos/2025S1/gamuto_snap/cenas/gamutos.tscn" id="5_82nyc"]
 
 [node name="Main" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_v50tu")
 
+[node name="CameraPlayer" parent="." instance=ExtResource("1_6m65u")]
+position = Vector2(961, 540)
+
+[node name="Gamutos" parent="." instance=ExtResource("5_82nyc")]
+position = Vector2(288, 833)
+
 [node name="barriers" parent="." instance=ExtResource("2_dwaeq")]
 
-[node name="CameraPlayer" parent="." instance=ExtResource("1_6m65u")]
-position = Vector2(960, 540)
-
 [node name="background" type="Sprite2D" parent="."]
-position = Vector2(936, 530)
-scale = Vector2(29.0313, 16.7813)
+position = Vector2(959.999, 539.999)
+scale = Vector2(30, 16.875)
 texture = ExtResource("2_frgdu")
-metadata/_edit_lock_ = true
+
+[connection signal="area_entered" from="Gamutos" to="CameraPlayer" method="_on_gamutos_area_entered"]

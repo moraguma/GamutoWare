@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://bukwvlpdiph3y"]
+[gd_scene load_steps=4 format=3 uid="uid://bukwvlpdiph3y"]
 
 [ext_resource type="Script" uid="uid://t5asnuie65sg" path="res://microjogos/2025S1/gamuto_snap/cenas/scripts/camera_player.gd" id="1_0sfhs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0sfhs"]
-size = Vector2(960, 540)
+size = Vector2(900, 460)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0sfhs"]
+radius = 162.151
 
 [node name="CameraPlayer" type="CharacterBody2D"]
 script = ExtResource("1_0sfhs")
@@ -12,8 +15,13 @@ script = ExtResource("1_0sfhs")
 shape = SubResource("RectangleShape2D_0sfhs")
 debug_color = Color(0, 0.6, 0.701961, 0.176471)
 
+[node name="playerArea2D" type="Area2D" parent="."]
+
+[node name="areaCollision" type="CollisionShape2D" parent="playerArea2D"]
+shape = SubResource("CircleShape2D_0sfhs")
+
 [node name="playerCamera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.3, 1.3)
+zoom = Vector2(1.5, 1.5)
 position_smoothing_enabled = true
 
 [node name="timers" type="Node" parent="."]

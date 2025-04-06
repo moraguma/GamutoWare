@@ -27,3 +27,6 @@ func _physics_process(delta) -> void:
 # Quando o timer acaba, habilita a ação novamente
 func _on_snap_timer_timeout() -> void:
 	can_snap = true
+
+func _on_gamutos_area_entered(area: Area2D) -> void:
+	print("FOUND ME!")
