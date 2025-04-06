@@ -4,8 +4,8 @@
 
 [resource]
 script = ExtResource("1_ees1b")
-title_pt = &"TÍTULO DO JOGO"
-title_en = &"GAME TITLE"
+title_pt = &"MusMus"
+title_en = &"MusMus"
 credits_pt = "Créditos do jogo"
 credits_en = "Game crédits"
 start_message_pt = &"FAÇA ALGO!"
