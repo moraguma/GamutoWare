@@ -14,21 +14,21 @@ var rng = RandomNumberGenerator.new()
 
 func speedup(j):
 	if tempo.wait_time > 0.6:
-			tempo.wait_time -= 0.1
+			tempo.wait_time -= 0.3
 	if tempo.wait_time <= 0.6:
-		tempo.wait_time -= 0.02
+		tempo.wait_time -= 0.1
 	if morte.wait_time > 1:
-		morte.wait_time -= 0.1
+		morte.wait_time -= 0.2
 	if morte.wait_time <= 1:
-		morte.wait_time -= 0.02
+		morte.wait_time -= 0.05
 	if j.speed_scale < 16:
+		pesq.speed_scale += 0.2
+		pdir.speed_scale += 0.2
+		pfrente.speed_scale += 0.2
+	else:
 		pesq.speed_scale += 0.1
 		pdir.speed_scale += 0.1
 		pfrente.speed_scale += 0.1
-	else:
-		pesq.speed_scale += 0.05
-		pdir.speed_scale += 0.05
-		pfrente.speed_scale += 0.05
 
 func _ready() -> void:
 	musica.play()
