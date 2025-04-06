@@ -1,15 +1,15 @@
 [gd_scene load_steps=27 format=3 uid="uid://hssyta72u6rf"]
 
-[ext_resource type="Script" uid="uid://b1d21rsccuh44" path="res://microjogos/2025S1/SSAG/cenas/sala_principal.gd" id="1_bkrwu"]
+[ext_resource type="Script" uid="uid://b1d21rsccuh44" path="res://microjogos/2025S1/SSAG/cenas/scripts/sala_principal.gd" id="1_bkrwu"]
 [ext_resource type="Texture2D" uid="uid://biu76x64ls5l8" path="res://microjogos/2025S1/SSAG/recursos/imagens/backgorundss.png" id="2_hkv0s"]
-[ext_resource type="Script" uid="uid://dwtsk8odrb0ia" path="res://microjogos/2025S1/SSAG/cenas/camera_2d.gd" id="3_lu3tb"]
+[ext_resource type="Script" uid="uid://dwtsk8odrb0ia" path="res://microjogos/2025S1/SSAG/cenas/scripts/camera_2d.gd" id="3_lu3tb"]
 [ext_resource type="Texture2D" uid="uid://f4yqkgellvub" path="res://microjogos/2025S1/SSAG/recursos/imagens/tile_portalat.png" id="6_xufp0"]
 [ext_resource type="Texture2D" uid="uid://y23i2040avjy" path="res://microjogos/2025S1/SSAG/recursos/imagens/tile_porta.png" id="7_2t6n6"]
 [ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="7_lu3tb"]
 [ext_resource type="Texture2D" uid="uid://cjxofl8nnkose" path="res://microjogos/2025S1/SSAG/recursos/imagens/porta_frente.png" id="7_xufp0"]
 [ext_resource type="AudioStream" uid="uid://crrr37wsv714n" path="res://microjogos/2025S1/SSAG/recursos/sons/170141__timgormly__8-bit-bump.wav" id="8_2t6n6"]
 [ext_resource type="AudioStream" uid="uid://bwse77840pu1s" path="res://microjogos/2025S1/SSAG/recursos/sons/251936__dambient__8-bit-loop-halloween-walz-creepy-walz.ogg" id="9_hkv0s"]
-[ext_resource type="Script" uid="uid://cfnl4x2kfsckt" path="res://microjogos/2025S1/SSAG/cenas/label.gd" id="10_hkv0s"]
+[ext_resource type="Script" uid="uid://cfnl4x2kfsckt" path="res://microjogos/2025S1/SSAG/cenas/scripts/label.gd" id="10_hkv0s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f8u7u"]
 atlas = ExtResource("6_xufp0")
