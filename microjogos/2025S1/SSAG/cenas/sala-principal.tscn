@@ -1,12 +1,15 @@
-[gd_scene load_steps=24 format=3 uid="uid://hssyta72u6rf"]
+[gd_scene load_steps=27 format=3 uid="uid://hssyta72u6rf"]
 
 [ext_resource type="Script" uid="uid://b1d21rsccuh44" path="res://microjogos/2025S1/SSAG/cenas/sala_principal.gd" id="1_bkrwu"]
-[ext_resource type="Texture2D" uid="uid://4h45ocmeeg22" path="res://microjogos/2025S1/SSAG/background.png" id="2_xufp0"]
+[ext_resource type="Texture2D" uid="uid://biu76x64ls5l8" path="res://microjogos/2025S1/SSAG/backgorundss.png" id="2_hkv0s"]
 [ext_resource type="Script" uid="uid://dwtsk8odrb0ia" path="res://microjogos/2025S1/SSAG/cenas/camera_2d.gd" id="3_lu3tb"]
 [ext_resource type="Texture2D" uid="uid://f4yqkgellvub" path="res://microjogos/2025S1/SSAG/tile_portalat.png" id="6_xufp0"]
 [ext_resource type="Texture2D" uid="uid://y23i2040avjy" path="res://microjogos/2025S1/SSAG/tile_porta.png" id="7_2t6n6"]
 [ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="7_lu3tb"]
 [ext_resource type="Texture2D" uid="uid://cjxofl8nnkose" path="res://microjogos/2025S1/SSAG/porta_frente.png" id="7_xufp0"]
+[ext_resource type="AudioStream" uid="uid://crrr37wsv714n" path="res://microjogos/2025S1/SSAG/170141__timgormly__8-bit-bump.wav" id="8_2t6n6"]
+[ext_resource type="AudioStream" uid="uid://bwse77840pu1s" path="res://microjogos/2025S1/SSAG/251936__dambient__8-bit-loop-halloween-walz-creepy-walz.ogg" id="9_hkv0s"]
+[ext_resource type="Script" uid="uid://cfnl4x2kfsckt" path="res://microjogos/2025S1/SSAG/cenas/label.gd" id="10_hkv0s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f8u7u"]
 atlas = ExtResource("6_xufp0")
@@ -47,9 +50,6 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_f8u7u")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xufp0")
 }, {
@@ -151,9 +151,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_o4uf6")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_bnhn4")
 }, {
 "duration": 1.0,
@@ -177,6 +174,7 @@ animations = [{
 }]
 
 [node name="Sala-principal" type="Node2D"]
+position = Vector2(76, 289)
 script = ExtResource("1_bkrwu")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -185,7 +183,7 @@ script = ExtResource("1_bkrwu")
 texture_filter = 1
 position = Vector2(199.3, -140)
 scale = Vector2(3.37622, 3.08333)
-texture = ExtResource("2_xufp0")
+texture = ExtResource("2_hkv0s")
 
 [node name="Camera2D" type="Camera2D" parent="Area2D/Sprite2D"]
 zoom = Vector2(3.66, 3.66)
@@ -242,5 +240,32 @@ position = Vector2(215, -180)
 scale = Vector2(14.2031, 14.2031)
 texture = ExtResource("7_lu3tb")
 
+[node name="bump" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_2t6n6")
+
+[node name="musica" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_hkv0s")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 46.0
+offset_top = -176.0
+offset_right = 354.0
+offset_bottom = -113.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 44
+text = "SOBREVIVA!!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("10_hkv0s")
+metadata/_edit_use_anchors_ = true
+
+[node name="GLOBAL" type="Timer" parent="."]
+process_callback = 0
+wait_time = 1.5
+autostart = true
+
 [connection signal="timeout" from="Morte" to="." method="on_morte"]
+[connection signal="timeout" from="Morte" to="Area2D/Sprite2D/Camera2D" method="morrido"]
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="GLOBAL" to="." method="testosd"]

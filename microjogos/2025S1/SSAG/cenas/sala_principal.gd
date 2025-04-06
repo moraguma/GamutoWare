@@ -2,11 +2,15 @@ extends Node2D
 
 var rng = RandomNumberGenerator.new()
 
+@onready var global = $GLOBAL
+@onready var texto = $Label
 @onready var morte = $Morte
 @onready var tempo = $Timer2
 @onready var pesq = $"porta-esquerda/portaesq"
 @onready var pdir = $"porta-direita/portadir"
 @onready var pfrente = $"porta-frente/portafrente"
+@onready var bump = $bump
+@onready var musica = $musica
 
 func speedup(j):
 	if tempo.wait_time > 0.6:
@@ -27,8 +31,11 @@ func speedup(j):
 		pfrente.speed_scale += 0.05
 
 func _ready() -> void:
+	musica.play()
 	tempo.start()
 	print(pdir.speed_scale)
+	
+
 
 func faceondoor(i):
 	if(i == 0):
@@ -49,15 +56,17 @@ func _physics_process(delta):
 		$"porta-direita/portadir".play("porta_fechando")
 		morte.stop()
 		tempo.start()
+		bump.play()
 	if(Input.is_action_just_pressed("esquerda")):
 		$"porta-esquerda/portaesq".play("porta_fechando")
 		morte.stop()
 		tempo.start()
+		bump.play()
 	if(Input.is_action_just_pressed("cima")):
 		$"porta-frente/portafrente".play("porta_fechando")
 		morte.stop()
 		tempo.start()
-	
+		bump.play()
 
 func _on_timer_timeout():
 	faceondoor(rng.randi_range(0, 2))
@@ -65,3 +74,8 @@ func _on_timer_timeout():
 	
 func on_morte():
 	$Sprite2D.visible = true
+	
+
+
+func testosd() -> void:
+	texto.text = ""
