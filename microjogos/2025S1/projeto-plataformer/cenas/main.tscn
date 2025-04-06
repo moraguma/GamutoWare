@@ -17,7 +17,7 @@ script = ExtResource("1_ng8s0")
 position = Vector2(-266, -19)
 
 [node name="Estrela" parent="." instance=ExtResource("3_eeojv")]
-position = Vector2(-219, -102)
+position = Vector2(-137, -86)
 collision_mask = 3
 
 [node name="Porta" parent="." instance=ExtResource("4_ng8s0")]
@@ -31,6 +31,7 @@ position = Vector2(-100, -25)
 zoom = Vector2(4, 4)
 
 [node name="Timer" type="Timer" parent="."]
+one_shot = true
 
 [node name="Efeito" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_lppnp")
