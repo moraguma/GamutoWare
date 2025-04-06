@@ -11,6 +11,10 @@ signal lose
 const WIDTH = 1920
 const HEIGHT = 1080
 
+@onready var gamuto1 : Area2D = $gamutinhos/gamuto1
+@onready var gamuto2 : Area2D = $gamutinhos/gamuto2
+@onready var gamuto3 : Area2D = $gamutinhos/gamuto3
+
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES PADRÃO
 # --------------------------------------------------------------------------------------------------
@@ -24,7 +28,9 @@ func _ready():
 			NotificationCenter.notify("SNAP SOME PICS!")
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("TIRE UMAS FOTOS!")
-
+	
+	# Chama a função para escolher os 2 pontos de spawn
+	get_spawn_points()
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
 # a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
@@ -32,18 +38,35 @@ func _ready():
 func _physics_process(_delta):
 	pass
 
-
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a renderização, 
 # como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
 # desde a última chamada desta função. O comando pass não faz nada
 func _process(_delta):
 	pass
 
-
 # --------------------------------------------------------------------------------------------------
 # SUAS FUNÇÕES
 # --------------------------------------------------------------------------------------------------
 
+# Função para selecionar aleatoriamente duas posições de spawn entre as 5 possíveis
+func get_spawn_points():
+	var spawns : Array = $spawnPoints.get_children()
+	
+	# Loop para rodas 2 vezes
+	for i : int in range(2):
+		var selected_spawn_index : int = randi() % spawns.size()
+		var selected_spawn : Marker2D = spawns[selected_spawn_index]
+		
+		match selected_spawn.position:
+			gamuto1.position:
+				print("SPAWN 1 SELECTED!")
+			gamuto2.position:
+				print("SPAWN 2 SELECTED!")
+			gamuto3.position:
+				print("SPAWN 3 SELECTED!")
+				
+		# Remove a posição já escolhida para não ter repetição
+		spawns.remove_at(selected_spawn_index)
 
 # --------------------------------------------------------------------------------------------------
 # CONDIÇÕES DE VITÓRIA
@@ -54,11 +77,9 @@ func _process(_delta):
 # vencerá o jogo, e se "lose" foi o último sinal emitido ou nenhum sinal foi emitido, o jogador
 # perderá o jogo
 
-
 # Chame esta função para registrar que o jogador venceu o jogo
 func register_win():
 	emit_signal("win")
-
 
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():

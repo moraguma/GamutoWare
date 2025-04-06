@@ -5,7 +5,7 @@ extends CharacterBody2D
 var can_snap : bool = true
 var focused : bool = false
 var is_on_gamuto : int = 0		# Identifica qual Gamuto o jogador está focado
-signal killed_gamuto(gamuto : int)		# Sinal que identifica qual Gamuto foi atingido
+signal snapped_gamuto(gamuto : int)		# Sinal que identifica qual Gamuto foi atingido
 
 # Pega o input do jogador para movimentação
 func get_input() -> void:
@@ -14,34 +14,35 @@ func get_input() -> void:
 
 # Pega o input do jogador para a ação de tirar foto 
 func get_action() -> void:
-	if Input.is_action_pressed("acao"):
+	if Input.is_action_pressed("acao") and can_snap:
 		timer.start(1)
-		print("SNAP!")
 		can_snap = false
-		
+
 		if focused:
-			print("GOT ME!")
-			kill_gamuto()
+			print("SNAP!")
+			snap_gamuto()
+		else:
+			print("NOTHING TO SNAP!")
 
 func _process(_delta) -> void:
-	if can_snap:
-		get_action()
+	get_action()
 
 func _physics_process(_delta) -> void:
 	get_input()
 	move_and_slide()
-	
-func kill_gamuto() -> void:
+
+# Função que emite os sinais de atingido
+func snap_gamuto() -> void:
 	match is_on_gamuto:
 		1:
 			print("GOT ME 1!")
-			emit_signal("killed_gamuto", 1)
+			emit_signal("snapped_gamuto", 1)
 		2:
 			print("GOT ME 2!")
-			emit_signal("killed_gamuto", 2)
+			emit_signal("snapped_gamuto", 2)
 		3:
 			print("GOT ME 3!")
-			emit_signal("killed_gamuto", 3)
+			emit_signal("snapped_gamuto", 3)
 
 # Quando o timer acaba, habilita a ação novamente
 func _on_snap_timer_timeout() -> void:

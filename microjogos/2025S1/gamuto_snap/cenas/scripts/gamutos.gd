@@ -11,11 +11,15 @@ func _on_area_entered(area: Area2D) -> void:
 func _on_area_exited(area: Area2D) -> void:
 	shader.set_shader_parameter("width", 0.0)
 
-func _on_player_killed_gamuto(gamuto: int) -> void:
-	match gamuto:
-		1:
-			print("YOU KILLED 1!")
-		2:
-			print("YOU KILLED 2!")
-		3:
-			print("YOU KILLED 3!")
+# Sinal emitido pelo player que dá qual gamuto foi atingido 
+func _on_player_snapped_gamuto(gamuto: int) -> void:
+		match gamuto:
+			1:
+				print("YOU SNAPPED 1!")
+			2:
+				print("YOU SNAPPED 2!")
+			3:
+				print("YOU SNAPPED 3!")
+
+func _on_main_selected_spawn(marker: Marker2D) -> void:
+	pass # Replace with function body.

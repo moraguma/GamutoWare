@@ -12,13 +12,16 @@ script = ExtResource("1_v50tu")
 
 [node name="player" parent="." instance=ExtResource("1_6m65u")]
 position = Vector2(961, 540)
+metadata/_edit_lock_ = true
 
 [node name="barriers" parent="." instance=ExtResource("2_dwaeq")]
+metadata/_edit_lock_ = true
 
 [node name="background" type="Sprite2D" parent="."]
 position = Vector2(959.999, 539.999)
 scale = Vector2(30, 16.875)
 texture = ExtResource("2_frgdu")
+metadata/_edit_lock_ = true
 
 [node name="gamutinhos" type="Node" parent="."]
 
@@ -35,7 +38,18 @@ position = Vector2(595, 303)
 rotation = 1.94203
 scale = Vector2(0.560001, 0.560001)
 
-[connection signal="killed_gamuto" from="player" to="gamutinhos/gamuto1" method="_on_player_killed_gamuto"]
+[node name="spawnPoints" type="Node" parent="."]
+
+[node name="spawn1" type="Marker2D" parent="spawnPoints"]
+position = Vector2(345, 785)
+
+[node name="spawn2" type="Marker2D" parent="spawnPoints"]
+position = Vector2(1561, 322)
+
+[node name="spawn3" type="Marker2D" parent="spawnPoints"]
+position = Vector2(595, 303)
+
+[connection signal="snapped_gamuto" from="player" to="gamutinhos/gamuto1" method="_on_player_snapped_gamuto"]
 [connection signal="area_entered" from="gamutinhos/gamuto1" to="player" method="_on_gamuto_1_area_entered"]
 [connection signal="area_entered" from="gamutinhos/gamuto2" to="player" method="_on_gamuto_2_area_entered"]
 [connection signal="area_entered" from="gamutinhos/gamuto3" to="player" method="_on_gamuto_3_area_entered"]
