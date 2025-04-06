@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://oaa4tlexufkv"]
+[gd_scene load_steps=25 format=3 uid="uid://oaa4tlexufkv"]
 
 [ext_resource type="Script" uid="uid://287oiojn4vaj" path="res://microjogos/2025S1/Meuprojeto1/cenas/scripts/main.gd" id="1_exq0m"]
 [ext_resource type="Texture2D" uid="uid://b71exebt775fc" path="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/FRAME_comp.png" id="2_ceik6"]
@@ -8,6 +8,7 @@
 [ext_resource type="FontFile" uid="uid://blcw2hkcbcxid" path="res://principal/recursos/fonts/stop_bullying/Stop Bullying.otf" id="3_tjc7y"]
 [ext_resource type="Texture2D" uid="uid://blg3dh5yw5w6h" path="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/ABA.pixelada.png" id="4_wepsu"]
 [ext_resource type="Texture2D" uid="uid://baooqadmyxqhk" path="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/ComputadorBugado.png" id="5_43qgu"]
+[ext_resource type="Texture2D" uid="uid://qcnxhl0pli2s" path="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/BARRAESPAÇO.png" id="5_c4obr"]
 [ext_resource type="Texture2D" uid="uid://dti5doxwyjvnr" path="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/GAMUTOMAL.png" id="7_ceik6"]
 [ext_resource type="Texture2D" uid="uid://8kg8hof4pub2" path="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/SetaBaixo.png" id="9_ug453"]
 [ext_resource type="Texture2D" uid="uid://chno41h1rduwh" path="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/SetaDireita.png" id="10_wepsu"]
@@ -213,6 +214,25 @@ offset_right = -3.79736
 offset_bottom = -723.692
 theme_override_font_sizes/normal_font_size = 33
 text = "ESCOLHA:"
+vertical_alignment = 1
+
+[node name="Barraespaço" type="Sprite2D" parent="OPCOES"]
+position = Vector2(187.949, 204.924)
+scale = Vector2(0.467089, 0.467089)
+texture = ExtResource("5_c4obr")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="OPCOES/Barraespaço"]
+anchors_preset = -1
+anchor_top = -3.2
+anchor_right = 7.35
+anchor_bottom = 5.325
+offset_left = -147.425
+offset_top = -626.007
+offset_right = 152.575
+offset_bottom = -626.007
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 62
+text = "REMOVE"
 vertical_alignment = 1
 
 [node name="Respostas" type="Sprite2D" parent="."]
