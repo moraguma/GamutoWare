@@ -6,9 +6,11 @@ extends Area2D
 func _on_area_entered(area: Area2D) -> void:
 	shader.set_shader_parameter("width", 1.0)
 	print("FOUND ME!")
-	emit_signal("on_focus")
 
 # Remove a outline depois de sair do foco do jogador
 func _on_area_exited(area: Area2D) -> void:
 	shader.set_shader_parameter("width", 0.0)
-	emit_signal("no_focus")
+
+func _on_player_is_shot(gamuto) -> void:
+	if gamuto == 1:
+		print("GOT THE 1!")
