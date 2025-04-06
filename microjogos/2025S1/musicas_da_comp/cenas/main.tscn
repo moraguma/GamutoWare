@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b8updi1osiwne"]
+[gd_scene load_steps=15 format=3 uid="uid://b8updi1osiwne"]
 
 [ext_resource type="Script" uid="uid://doga4uw2uu7b1" path="res://microjogos/2025S1/musicas_da_comp/cenas/scripts/main.gd" id="1_hypu2"]
 [ext_resource type="FontFile" uid="uid://cuqd8akvxgs58" path="res://microjogos/2025S1/musicas_da_comp/Ldfcomicsans-jj7l.ttf" id="2_3qdev"]
@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://cea8hesmc8u6j" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Ragatanga.ogg" id="6_0onx8"]
 [ext_resource type="AudioStream" uid="uid://narf8ge8evym" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Madagascar.ogg" id="7_0g845"]
 [ext_resource type="AudioStream" uid="uid://cbnhji0ed46gx" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Shake It Bololo.ogg" id="8_q1754"]
+[ext_resource type="AudioStream" uid="uid://b6eivp7e3kyjx" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.ogg" id="9_0g845"]
 [ext_resource type="Texture2D" uid="uid://cljamu34fu106" path="res://microjogos/2025S1/musicas_da_comp/recursos/imagens/VDC_ORGULHOSO.png" id="9_0onx8"]
 [ext_resource type="Texture2D" uid="uid://brqe8lsx8v5jr" path="res://microjogos/2025S1/musicas_da_comp/recursos/imagens/VDC_TE_PERDOA.png" id="10_0onx8"]
 
@@ -140,6 +141,8 @@ stream = ExtResource("8_q1754")
 parameters/looping = true
 
 [node name="Musica6" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_0g845")
+parameters/looping = true
 
 [node name="VDC_Feliz" type="Sprite2D" parent="."]
 visible = false
