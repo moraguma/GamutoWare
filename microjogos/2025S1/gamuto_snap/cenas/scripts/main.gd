@@ -1,7 +1,6 @@
 extends Node2D
 
 # Declaração dos sinais win e lose
-
 signal win
 signal lose
 
@@ -12,6 +11,7 @@ signal lose
 const WIDTH = 1920
 const HEIGHT = 1080
 
+@onready var player : CharacterBody2D = $CameraPlayer 
 
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES PADRÃO
@@ -26,6 +26,10 @@ func _ready():
 			NotificationCenter.notify("DO SOMETHING!")
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("FAÇA ALGO!")
+			
+	var spawn_markers : Array = $spawnPoints.get_children()
+	var selected_spawn : Marker2D = spawn_markers[randi() % spawn_markers.size()]
+	player.position = selected_spawn.position
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como

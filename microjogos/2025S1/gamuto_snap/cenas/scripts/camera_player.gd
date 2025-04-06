@@ -24,5 +24,6 @@ func _physics_process(delta) -> void:
 	get_input()
 	move_and_slide()
 
+# Quando o timer acaba, habilita a ação novamente
 func _on_snap_timer_timeout() -> void:
 	can_snap = true
