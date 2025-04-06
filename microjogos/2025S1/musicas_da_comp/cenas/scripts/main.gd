@@ -45,12 +45,16 @@ const perguntas = {
 	"shake_it_bololo":
 		{
 			"Cabelo da ... pra mostrar que é de vilão": ["Tony Country", "Tony Hawk", "Calvin Klein", "Gang mark"],
-			"Na sala ou no ... no ... ou no ...": ["Quarto... beco... carro", "Beco... carro... quarto", "Quarto... prédio... mato", "Mato... prédio... quarto"]
+			"Na sala ou no ... no ... ou no ...": ["Quarto... beco... carro", "Beco... carro... quarto", "Quarto... prédio... mato", "Mato... prédio... quarto"],
+			"Dei um fim na relação, você não acreditou por ... o amor acabou": ["Causa de traição", "Uma decepção", "Negação", "Causa do 100nossão"],
+			"E a cada acelerada é um tipo de risada ...": ["Vrau-vrau-vrau, ho-ho-ho, ha-ha-ha, bololo", "Ha-ha-ha, ho-ho-ho, vrau-vrau-vrau, bololo", "Vrau-vrau-vrau, bololo, ha-ha-ha, ho-ho-ho", "Ha-ha-ha, bololo, vrau-vrau-vrau, ho-ho-ho"]
 		}
 	
 }
 
 var musicas = ["corpo_Nu", "renata", "ragatanga", "madagascar", "shake_it_bololo"]
+var respostas= []
+var shuffled_respostas = []
 var selection_X = 0
 var selection_Y = 0
 var active = true
@@ -59,6 +63,7 @@ var active = true
 @onready var ragatanga = $Musica3
 @onready var madagascar = $Musica4
 @onready var shakeItBololo = $Musica5
+@onready var question = %Pergunta
 @export var lista: Array[Label]
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
@@ -74,23 +79,24 @@ func _ready():
 	randomize()
 	var musica_Escolhida = perguntas[musicas[randi() % musicas.size()]] #Escolhe uma das músicas aleatoriamente
 	var num_pergunta = musica_Escolhida.keys()[randi() % musica_Escolhida.size()]
-	var respostas =	musica_Escolhida[num_pergunta] #Obtém as respostas dessa pergunta
-	var shuffled_respostas = respostas.duplicate() #Cria uma cópia das respostas
+	respostas =	musica_Escolhida[num_pergunta] #Obtém uma lista das respostas dessa pergunta ordenada corretamente
+	shuffled_respostas = respostas.duplicate() #Cria uma cópia das respostas para poder embaralhar
 	shuffled_respostas.shuffle()
+	#question.text(num_pergunta)
 	
-	for i in range(musicas.size()):
+	for i in range(4):
 		lista[i].text = shuffled_respostas[i]
 	
 	#Toca a música de acordo com qual delas foi escolhida aleatoriamente
-	if musica_Escolhida == musicas[0]:
+	if musica_Escolhida == perguntas[musicas[0]]:
 		corpoNu.play()
-	elif musica_Escolhida == musicas[1]:
+	elif musica_Escolhida == perguntas[musicas[1]]:
 		renata.play()
-	elif musica_Escolhida == musicas[2]:
+	elif musica_Escolhida == perguntas[musicas[2]]:
 		ragatanga.play()
-	elif musica_Escolhida == musicas[3]:
+	elif musica_Escolhida == perguntas[musicas[3]]:
 		madagascar.play()
-	elif musica_Escolhida == musicas[4]:
+	elif musica_Escolhida == perguntas[musicas[4]]:
 		shakeItBololo.play()
 		
 func _process(delta):
@@ -110,27 +116,19 @@ func _process(delta):
 			
 		elif Input.is_action_just_pressed("acao"): #Aqui é o ponto de seleção da resposta
 			active = false
+			
+			if (selection_X + selection_Y) == 0:
+				if shuffled_respostas[0] == respostas[0]:
+					emit_signal("win")
+			
 
-# Um método genérico. Crie quantos métodos você precisar!
-func my_method():
-	pass
-
-
-# --------------------------------------------------------------------------------------------------
-# CONDIÇÕES DE VITÓRIA
-# --------------------------------------------------------------------------------------------------
-# Quando o jogo começa, ela assume que o jogador não conseguiu vencer o jogo ainda, ou seja, se não
-# acontecer nada, o jogador vai perder o jogo. A verificação se o jogador venceu o minigame é feita
-# com base na emissão dos sinais "win" e "lose". Se "win" foi o último sinal emitido, o jogador
-# vencerá o jogo, e se "lose" foi o último sinal emitido ou nenhum sinal foi emitido, o jogador
-# perderá o jogo
-
-
-# Chame esta função para registrar que o jogador venceu o jogo
-func register_win():
-	emit_signal("win")
-
-
-# Chame esta função para registrar que o jogador perdeu o jogo
-func register_lose():
-	emit_signal("lose")
+func select(num_X, num_Y):
+	if (num_X + num_Y) == 1:
+		if num_X == 0:
+			return 2
+		else:
+			return 1
+	elif (num_X + num_Y) == 2:
+		return 3
+	else:
+		return 0

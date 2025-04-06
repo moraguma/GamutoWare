@@ -120,18 +120,18 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_pitoj")
 
-[node name="Musica1" type="AudioStreamPlayer2D" parent="."]
+[node name="Musica1" type="AudioStreamPlayer" parent="."]
 
-[node name="Musica2" type="AudioStreamPlayer2D" parent="."]
+[node name="Musica2" type="AudioStreamPlayer" parent="."]
 
-[node name="Musica3" type="AudioStreamPlayer2D" parent="."]
+[node name="Musica3" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_shx00")
 parameters/looping = true
 
-[node name="Musica4" type="AudioStreamPlayer2D" parent="."]
+[node name="Musica4" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_dqw11")
 parameters/looping = true
 
-[node name="Musica5" type="AudioStreamPlayer2D" parent="."]
+[node name="Musica5" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_3qdev")
 parameters/looping = true
