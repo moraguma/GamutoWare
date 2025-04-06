@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjxofl8nnkose"
-path="res://.godot/imported/porta_frente.png-d6b243ead3b6a4a8e46660dc1d131ee6.ctex"
+uid="uid://y23i2040avjy"
+path="res://.godot/imported/tile_porta.png-f6ebf4d3518545c84f6815241e1179c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/SSAG/porta_frente.png"
-dest_files=["res://.godot/imported/porta_frente.png-d6b243ead3b6a4a8e46660dc1d131ee6.ctex"]
+source_file="res://microjogos/2025S1/SSAG/recursos/imagens/tile_porta.png"
+dest_files=["res://.godot/imported/tile_porta.png-f6ebf4d3518545c84f6815241e1179c4.ctex"]
 
 [params]
 

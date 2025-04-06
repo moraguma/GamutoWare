@@ -1,14 +1,14 @@
 [gd_scene load_steps=27 format=3 uid="uid://hssyta72u6rf"]
 
 [ext_resource type="Script" uid="uid://b1d21rsccuh44" path="res://microjogos/2025S1/SSAG/cenas/sala_principal.gd" id="1_bkrwu"]
-[ext_resource type="Texture2D" uid="uid://biu76x64ls5l8" path="res://microjogos/2025S1/SSAG/backgorundss.png" id="2_hkv0s"]
+[ext_resource type="Texture2D" uid="uid://biu76x64ls5l8" path="res://microjogos/2025S1/SSAG/recursos/imagens/backgorundss.png" id="2_hkv0s"]
 [ext_resource type="Script" uid="uid://dwtsk8odrb0ia" path="res://microjogos/2025S1/SSAG/cenas/camera_2d.gd" id="3_lu3tb"]
-[ext_resource type="Texture2D" uid="uid://f4yqkgellvub" path="res://microjogos/2025S1/SSAG/tile_portalat.png" id="6_xufp0"]
-[ext_resource type="Texture2D" uid="uid://y23i2040avjy" path="res://microjogos/2025S1/SSAG/tile_porta.png" id="7_2t6n6"]
+[ext_resource type="Texture2D" uid="uid://f4yqkgellvub" path="res://microjogos/2025S1/SSAG/recursos/imagens/tile_portalat.png" id="6_xufp0"]
+[ext_resource type="Texture2D" uid="uid://y23i2040avjy" path="res://microjogos/2025S1/SSAG/recursos/imagens/tile_porta.png" id="7_2t6n6"]
 [ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="7_lu3tb"]
-[ext_resource type="Texture2D" uid="uid://cjxofl8nnkose" path="res://microjogos/2025S1/SSAG/porta_frente.png" id="7_xufp0"]
-[ext_resource type="AudioStream" uid="uid://crrr37wsv714n" path="res://microjogos/2025S1/SSAG/170141__timgormly__8-bit-bump.wav" id="8_2t6n6"]
-[ext_resource type="AudioStream" uid="uid://bwse77840pu1s" path="res://microjogos/2025S1/SSAG/251936__dambient__8-bit-loop-halloween-walz-creepy-walz.ogg" id="9_hkv0s"]
+[ext_resource type="Texture2D" uid="uid://cjxofl8nnkose" path="res://microjogos/2025S1/SSAG/recursos/imagens/porta_frente.png" id="7_xufp0"]
+[ext_resource type="AudioStream" uid="uid://crrr37wsv714n" path="res://microjogos/2025S1/SSAG/recursos/sons/170141__timgormly__8-bit-bump.wav" id="8_2t6n6"]
+[ext_resource type="AudioStream" uid="uid://bwse77840pu1s" path="res://microjogos/2025S1/SSAG/recursos/sons/251936__dambient__8-bit-loop-halloween-walz-creepy-walz.ogg" id="9_hkv0s"]
 [ext_resource type="Script" uid="uid://cfnl4x2kfsckt" path="res://microjogos/2025S1/SSAG/cenas/label.gd" id="10_hkv0s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f8u7u"]
@@ -174,7 +174,8 @@ animations = [{
 }]
 
 [node name="Sala-principal" type="Node2D"]
-position = Vector2(76, 289)
+position = Vector2(279, 1054)
+scale = Vector2(3.64112, 3.64112)
 script = ExtResource("1_bkrwu")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -186,7 +187,6 @@ scale = Vector2(3.37622, 3.08333)
 texture = ExtResource("2_hkv0s")
 
 [node name="Camera2D" type="Camera2D" parent="Area2D/Sprite2D"]
-zoom = Vector2(3.66, 3.66)
 script = ExtResource("3_lu3tb")
 
 [node name="porta-direita" type="Area2D" parent="."]
@@ -230,6 +230,7 @@ wait_time = 2.0
 
 [node name="Timer2" type="Timer" parent="."]
 process_callback = 0
+wait_time = 1.5
 autostart = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

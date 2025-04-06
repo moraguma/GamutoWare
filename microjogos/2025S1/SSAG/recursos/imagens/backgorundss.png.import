@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://biu76x64ls5l8"
-path="res://.godot/imported/backgorundss.png-911c9da673e24e2c28d244dab9adc329.ctex"
+path="res://.godot/imported/backgorundss.png-be247ae5eecaffb6db9a7e78696f2fb9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/SSAG/backgorundss.png"
-dest_files=["res://.godot/imported/backgorundss.png-911c9da673e24e2c28d244dab9adc329.ctex"]
+source_file="res://microjogos/2025S1/SSAG/recursos/imagens/backgorundss.png"
+dest_files=["res://.godot/imported/backgorundss.png-be247ae5eecaffb6db9a7e78696f2fb9.ctex"]
 
 [params]
 

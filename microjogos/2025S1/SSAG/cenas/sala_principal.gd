@@ -2,6 +2,12 @@ extends Node2D
 
 var rng = RandomNumberGenerator.new()
 
+signal win
+signal lose
+
+const WIDTH = 1920
+const HEIGHT = 1080
+
 @onready var global = $GLOBAL
 @onready var texto = $Label
 @onready var morte = $Morte
