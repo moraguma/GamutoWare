@@ -54,6 +54,11 @@ var musicas = ["corpo_Nu", "renata", "ragatanga", "madagascar", "shake_it_bololo
 var selection_X = 0
 var selection_Y = 0
 var active = true
+@onready var corpoNu = $Musica1
+@onready var renata = $Musica2
+@onready var ragatanga = $Musica3
+@onready var madagascar = $Musica4
+@onready var shakeItBololo = $Musica5
 @export var lista: Array[Label]
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
@@ -76,6 +81,18 @@ func _ready():
 	for i in range(musicas.size()):
 		lista[i].text = shuffled_respostas[i]
 	
+	#Toca a música de acordo com qual delas foi escolhida aleatoriamente
+	if musica_Escolhida == musicas[0]:
+		corpoNu.play()
+	elif musica_Escolhida == musicas[1]:
+		renata.play()
+	elif musica_Escolhida == musicas[2]:
+		ragatanga.play()
+	elif musica_Escolhida == musicas[3]:
+		madagascar.play()
+	elif musica_Escolhida == musicas[4]:
+		shakeItBololo.play()
+		
 func _process(delta):
 	if active:
 		if Input.is_action_just_pressed("cima"):

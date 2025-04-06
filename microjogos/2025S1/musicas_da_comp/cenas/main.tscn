@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://b8updi1osiwne"]
+[gd_scene load_steps=9 format=3 uid="uid://b8updi1osiwne"]
 
 [ext_resource type="Script" uid="uid://doga4uw2uu7b1" path="res://microjogos/2025S1/musicas_da_comp/cenas/scripts/main.gd" id="1_hypu2"]
 [ext_resource type="Texture2D" uid="uid://dtk8cb3288rnx" path="res://microjogos/2025S1/musicas_da_comp/recursos/imagens/Screenshot From 2025-04-05 19-27-42.png" id="2_4dhqc"]
 [ext_resource type="Theme" uid="uid://6nllk3n6j475" path="res://microjogos/2025S1/musicas_da_comp/recursos/new_theme.tres" id="3_pitoj"]
+[ext_resource type="AudioStream" uid="uid://btyrfhd51x58b" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Ragatanga.mp3" id="4_shx00"]
+[ext_resource type="AudioStream" uid="uid://jl2305j6fyb" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Madagascar.mp3" id="5_dqw11"]
+[ext_resource type="AudioStream" uid="uid://cv0dleulprs34" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Shake_It_Bololo.mp3" id="6_3qdev"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pitoj"]
 texture = ExtResource("2_4dhqc")
@@ -116,3 +119,19 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_pitoj")
+
+[node name="Musica1" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Musica2" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Musica3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_shx00")
+parameters/looping = true
+
+[node name="Musica4" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_dqw11")
+parameters/looping = true
+
+[node name="Musica5" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_3qdev")
+parameters/looping = true
