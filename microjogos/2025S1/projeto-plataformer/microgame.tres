@@ -11,14 +11,22 @@ title_pt = &"Starry Knight"
 title_en = &"Starry Knight"
 credits_pt = "Desenvolvido por: Ricardo Emanuel
 Assets do cenário: David G
+https://incolgames.itch.io/dungeon-platformer-tile-set-pixel-art
 Assets do cavalheiro: Mattz Art
+https://xzany.itch.io/free-knight-2d-pixel-art
 Estrela: TotusLotus 
-Efeito vitória: spuispuin"
+https://totuslotus.itch.io/pixel-art-collectibles
+Efeito vitória: spuispuin
+https://opengameart.org/users/spuispuin"
 credits_en = "Developed by: Ricardo Emanuel
 Dungeon Assets: David G
+https://incolgames.itch.io/dungeon-platformer-tile-set-pixel-art
 Knight Assets: Mattz Art
+https://xzany.itch.io/free-knight-2d-pixel-art
 Star Asset: TotusLotus 
-Victory effect: spuispuin"
+https://totuslotus.itch.io/pixel-art-collectibles
+Victory effect: spuispuin
+https://opengameart.org/users/spuispuin"
 start_message_pt = &"TENTE!"
 start_message_en = &"TRY!"
 main_scene = ExtResource("1_7l7aa")
