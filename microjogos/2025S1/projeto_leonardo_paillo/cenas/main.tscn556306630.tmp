@@ -82,27 +82,57 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("16_17o5f")
+}],
+"loop": true,
+"name": &"poison1",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("17_bjo6a")
+}],
+"loop": true,
+"name": &"poison2",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("18_fe2hn")
+}],
+"loop": true,
+"name": &"poison3",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("19_6vemf")
+}],
+"loop": true,
+"name": &"poison4",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("20_e4ltu")
+}],
+"loop": true,
+"name": &"poison5",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("21_ror5a")
+}],
+"loop": true,
+"name": &"poison6",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("22_y42jl")
 }],
 "loop": true,
-"name": &"poison",
+"name": &"poison7",
 "speed": 5.0
 }]
 
@@ -115,6 +145,12 @@ texture = SubResource("CompressedTexture2D_c23vy")
 
 [node name="Node2D" type="Node2D" parent="."]
 script = ExtResource("1_6mo7f")
+
+[node name="Icon" type="Sprite2D" parent="Node2D"]
+position = Vector2(645, 300)
+scale = Vector2(1.5, 1.372)
+texture = ExtResource("1_npcfk")
+script = ExtResource("3_qa4ji")
 
 [node name="Dado1" type="AnimatedSprite2D" parent="Node2D"]
 position = Vector2(1151, 558)
@@ -141,19 +177,11 @@ script = ExtResource("16_hdkc0")
 position = Vector2(1152, 686)
 scale = Vector2(2.3, 2.15714)
 sprite_frames = SubResource("SpriteFrames_2qa26")
-animation = &"poison"
+animation = &"poison7"
 script = ExtResource("24_aho0k")
 
 [node name="Poison2" type="AnimatedSprite2D" parent="Node2D"]
 position = Vector2(904, 815)
 scale = Vector2(2.3, 2.15714)
 sprite_frames = SubResource("SpriteFrames_2qa26")
-animation = &"poison"
-script = ExtResource("24_aho0k")
-
-[node name="Icon" type="Sprite2D" parent="Node2D" node_paths=PackedStringArray("dados")]
-position = Vector2(645, 300)
-scale = Vector2(1.5, 1.372)
-texture = ExtResource("1_npcfk")
-script = ExtResource("3_qa4ji")
-dados = [NodePath("../Dado1"), NodePath("../Dado3"), NodePath("../Dado2")]
+animation = &"poison1"

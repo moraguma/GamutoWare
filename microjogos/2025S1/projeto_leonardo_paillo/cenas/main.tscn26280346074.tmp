@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://djgr8pfav82d5"]
+[gd_scene load_steps=26 format=3 uid="uid://djgr8pfav82d5"]
 
 [ext_resource type="Script" uid="uid://bhyew2sgyr8cq" path="res://microjogos/2025S1/projeto_leonardo_paillo/cenas/dados.gd" id="1_6mo7f"]
 [ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="1_npcfk"]
@@ -16,34 +16,18 @@
 [ext_resource type="Texture2D" uid="uid://bktnl8wmvxl6h" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/sprite1cropped.png" id="14_qvqd8"]
 [ext_resource type="Texture2D" uid="uid://ve7wb10lxemw" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/sprite2cropped.png" id="15_eytck"]
 [ext_resource type="Texture2D" uid="uid://c7d2xvmoa4mey" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/poison1.png" id="16_17o5f"]
-[ext_resource type="Script" uid="uid://dleug5vwgnu4s" path="res://microjogos/2025S1/projeto_leonardo_paillo/cenas/dado_1.gd" id="16_hdkc0"]
 [ext_resource type="Texture2D" uid="uid://ct82pptnu14t3" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/poison2.png" id="17_bjo6a"]
 [ext_resource type="Texture2D" uid="uid://b1qvnq5c3774b" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/poison3.png" id="18_fe2hn"]
 [ext_resource type="Texture2D" uid="uid://bwtlm55c1mjwv" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/poison4.png" id="19_6vemf"]
 [ext_resource type="Texture2D" uid="uid://cju3g0pu6grvl" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/poison5.png" id="20_e4ltu"]
 [ext_resource type="Texture2D" uid="uid://cnre4g5t6jxk5" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/poison6.png" id="21_ror5a"]
 [ext_resource type="Texture2D" uid="uid://d2ovmbrr68d1r" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/poison7.png" id="22_y42jl"]
-[ext_resource type="Script" uid="uid://v7hi1ir0c8x0" path="res://microjogos/2025S1/projeto_leonardo_paillo/cenas/poison_1.gd" id="24_aho0k"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c23vy"]
 load_path = "res://.godot/imported/tabuleiro.png-baadd471eca78220186c497faf34f63b.ctex"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_buvel"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("13_sl2b6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_qvqd8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_eytck")
-}],
-"loop": true,
-"name": &"roll_dice",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("4_cqiw6")
@@ -73,7 +57,85 @@ animations = [{
 "texture": ExtResource("12_etbqd")
 }],
 "loop": true,
-"name": &"valores",
+"name": &"1one",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_aho0k")
+}],
+"loop": true,
+"name": &"2two",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_hdkc0")
+}],
+"loop": true,
+"name": &"3three",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_ieclo")
+}],
+"loop": true,
+"name": &"4four",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_33gw0")
+}],
+"loop": true,
+"name": &"5five",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_ut36f")
+}],
+"loop": true,
+"name": &"6ix",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_lwvi1")
+}],
+"loop": true,
+"name": &"7se7en",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_mkbwt")
+}],
+"loop": true,
+"name": &"8eight",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_etbqd")
+}],
+"loop": true,
+"name": &"9ni9e",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_sl2b6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qvqd8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_eytck")
+}],
+"loop": true,
+"name": &"roll_dice",
 "speed": 5.0
 }]
 
@@ -82,27 +144,57 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("16_17o5f")
+}],
+"loop": true,
+"name": &"poison1",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("17_bjo6a")
+}],
+"loop": true,
+"name": &"poison2",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("18_fe2hn")
+}],
+"loop": true,
+"name": &"poison3",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("19_6vemf")
+}],
+"loop": true,
+"name": &"poison4",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("20_e4ltu")
+}],
+"loop": true,
+"name": &"poison5",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("21_ror5a")
+}],
+"loop": true,
+"name": &"poison6",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("22_y42jl")
 }],
 "loop": true,
-"name": &"poison",
+"name": &"poison7",
 "speed": 5.0
 }]
 
@@ -116,44 +208,38 @@ texture = SubResource("CompressedTexture2D_c23vy")
 [node name="Node2D" type="Node2D" parent="."]
 script = ExtResource("1_6mo7f")
 
+[node name="Icon" type="Sprite2D" parent="Node2D"]
+position = Vector2(645, 300)
+scale = Vector2(1.5, 1.372)
+texture = ExtResource("1_npcfk")
+script = ExtResource("3_qa4ji")
+
 [node name="Dado1" type="AnimatedSprite2D" parent="Node2D"]
 position = Vector2(1151, 558)
 scale = Vector2(2.42143, 2.45)
 sprite_frames = SubResource("SpriteFrames_buvel")
-animation = &"valores"
-script = ExtResource("16_hdkc0")
+animation = &"3three"
 
 [node name="Dado2" type="AnimatedSprite2D" parent="Node2D"]
 position = Vector2(779, 429)
 scale = Vector2(2.42143, 2.45)
 sprite_frames = SubResource("SpriteFrames_buvel")
-animation = &"valores"
-script = ExtResource("16_hdkc0")
+animation = &"4four"
 
 [node name="Dado3" type="AnimatedSprite2D" parent="Node2D"]
 position = Vector2(902, 687)
 scale = Vector2(2.42143, 2.45)
 sprite_frames = SubResource("SpriteFrames_buvel")
-animation = &"valores"
-script = ExtResource("16_hdkc0")
+animation = &"5five"
 
 [node name="Poison1" type="AnimatedSprite2D" parent="Node2D"]
 position = Vector2(1152, 686)
 scale = Vector2(2.3, 2.15714)
 sprite_frames = SubResource("SpriteFrames_2qa26")
-animation = &"poison"
-script = ExtResource("24_aho0k")
+animation = &"poison1"
 
 [node name="Poison2" type="AnimatedSprite2D" parent="Node2D"]
 position = Vector2(904, 815)
 scale = Vector2(2.3, 2.15714)
 sprite_frames = SubResource("SpriteFrames_2qa26")
-animation = &"poison"
-script = ExtResource("24_aho0k")
-
-[node name="Icon" type="Sprite2D" parent="Node2D" node_paths=PackedStringArray("dados")]
-position = Vector2(645, 300)
-scale = Vector2(1.5, 1.372)
-texture = ExtResource("1_npcfk")
-script = ExtResource("3_qa4ji")
-dados = [NodePath("../Dado1"), NodePath("../Dado3"), NodePath("../Dado2")]
+animation = &"poison1"

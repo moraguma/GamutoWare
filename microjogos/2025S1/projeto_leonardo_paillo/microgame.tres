@@ -4,10 +4,12 @@
 
 [resource]
 script = ExtResource("1_uj0jo")
-title_pt = &"TÍTULO DO JOGO"
-title_en = &"GAME TITLE"
-credits_pt = "Créditos do jogo"
-credits_en = "Game crédits"
-start_message_pt = &"FAÇA ALGO!"
-start_message_en = &"DO SOMETHING!"
+title_pt = &"DICE!"
+title_en = &"DICE!"
+credits_pt = "Jogo por: Leonardo Paillo
+Arte da capa: Leonardo Paillo"
+credits_en = "Game by: Leonardo Paillo
+Cover art: Leonardo Paillo"
+start_message_pt = &"TIRE OS DADOS DO TABULEIRO!"
+start_message_en = &"REMOVE THE DICE FROM THE TABLE!"
 difficulty = 0
