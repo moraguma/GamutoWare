@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 var jump_speed = 250.0
-var gravity = 8.0
+var gravity = 9.0
 var acceleration = 15.0
 var final_velocity = 75.0
 var array
