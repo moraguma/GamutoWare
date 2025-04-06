@@ -41,11 +41,16 @@ const perguntas = {
 			"Cabelo colorido, de tomara que caia, meia preta arrastão pra combinar com ...": ["Uma saia", "A saia", "O Saia", "A sala"],
 			"Melhor exposição que tenho ... toda delicadinha usando óculos grande": ["No meu stand", "Na minha estante", "Naquele instante", "No mesmo instante"],
 			"Vem comigo, amor, eu vou levar pra passear de mãos dadas na areia ...": ["De madagascar", "Da beira mar", "Do lado de lá", "No nosso lar"]
+		},
+	"shake_it_bololo":
+		{
+			"Cabelo da ... pra mostrar que é de vilão": ["Tony Country", "Tony Hawk", "Calvin Klein", "Gang mark"],
+			"Na sala ou no ... no ... ou no ...": ["Quarto... beco... carro", "Beco... carro... quarto", "Quarto... prédio... mato", "Mato... prédio... quarto"]
 		}
 	
 }
 
-var musicas = ["corpo_Nu", "renata", "ragatanga", "madagascar"]
+var musicas = ["corpo_Nu", "renata", "ragatanga", "madagascar", "shake_it_bololo"]
 var selection_X = 0
 var selection_Y = 0
 var active = true
@@ -68,11 +73,9 @@ func _ready():
 	var shuffled_respostas = respostas.duplicate() #Cria uma cópia das respostas
 	shuffled_respostas.shuffle()
 	
-	for i in range(4):
+	for i in range(musicas.size()):
 		lista[i].text = shuffled_respostas[i]
 	
-	
-
 func _process(delta):
 	if active:
 		if Input.is_action_just_pressed("cima"):
