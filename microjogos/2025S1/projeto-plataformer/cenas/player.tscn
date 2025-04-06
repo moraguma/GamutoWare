@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://drf3l66xobgo8" path="res://microjogos/2025S1/projeto-plataformer/recursos/imagens/character.png" id="1_qwkws"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qwkws"]
-size = Vector2(20, 36)
+size = Vector2(20, 32)
 
 [sub_resource type="Animation" id="Animation_vs5jv"]
 length = 0.001
@@ -38,10 +38,10 @@ tracks/2/path = NodePath("CollisionShape2D:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-1, -1)]
+"values": [Vector2(0, 3), Vector2(0, 3)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -50,10 +50,10 @@ tracks/3/path = NodePath("CollisionShape2D:shape:size")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(20, 36)]
+"values": [Vector2(20, 32), Vector2(20, 32)]
 }
 
 [sub_resource type="Animation" id="Animation_e7yq2"]
@@ -75,14 +75,26 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CollisionShape2D:position")
+tracks/1/path = NodePath("CollisionShape2D:shape:size")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.20628, 1.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, 2), Vector2(0, 2), Vector2(0, 2), Vector2(0, 2), Vector2(0, 2), Vector2(0, 2), Vector2(0, 2), Vector2(0, 2)]
+"values": [Vector2(20, 32), Vector2(20, 32)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 3), Vector2(0, 3)]
 }
 
 [sub_resource type="Animation" id="Animation_0bja4"]
@@ -119,10 +131,10 @@ tracks/2/path = NodePath("CollisionShape2D:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.600624, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-1, -1), Vector2(-1, -7), Vector2(-1, -7), Vector2(-1, -9), Vector2(-1, 0)]
+"values": [Vector2(-1, -1), Vector2(-1, -7), Vector2(-1, -7), Vector2(-1, -9), Vector2(0, 0), Vector2(-0.499218, -0.499218)]
 }
 
 [sub_resource type="Animation" id="Animation_qwkws"]
@@ -148,10 +160,22 @@ tracks/1/path = NodePath("CollisionShape2D:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1.6),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, 2), Vector2(0, 2), Vector2(0, 2), Vector2(0, 2), Vector2(0, 2), Vector2(0, 2), Vector2(0, 2), Vector2(0, 2), Vector2(0, 2)]
+"values": [Vector2(0, 3), Vector2(0, 3)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:shape:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(20, 32), Vector2(20, 32)]
 }
 
 [sub_resource type="Animation" id="Animation_ikhs2"]
@@ -218,5 +242,7 @@ hframes = 8
 vframes = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -1)
+z_index = 9
+texture_filter = 1
+position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_qwkws")
