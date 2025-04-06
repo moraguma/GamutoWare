@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cukuda88govik"]
 
 [ext_resource type="Texture2D" uid="uid://c52flo43rcjmk" path="res://microjogos/2025S1/projeto_release_gamuto/recursos/imagens/gamuto_spritesheet.png" id="2_gkev1"]
-[ext_resource type="Script" uid="uid://ct4d84e2jx1ip" path="res://microjogos/2025S1/projeto_release_gamuto/cenas/player.gd" id="2_x5r0a"]
+[ext_resource type="Script" uid="uid://ct4d84e2jx1ip" path="res://microjogos/2025S1/projeto_release_gamuto/cenas/scripts/player.gd" id="2_x5r0a"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x5r0a"]
 radius = 30.0167

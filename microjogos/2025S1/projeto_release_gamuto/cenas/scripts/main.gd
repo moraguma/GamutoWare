@@ -74,9 +74,9 @@ func pick_random_spawn_config():
 				"y_end": HEIGHT
 			},
 			"treasure_spawn_area": {
-				"x_start": 800,
+				"x_start": 900,
 				"y_start": 400,
-				"x_end": 1000,
+				"x_end": 1100,
 				"y_end": 600
 			}
 		}
