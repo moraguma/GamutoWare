@@ -72,9 +72,9 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
+			NotificationCenter.notify("COMP SONGS!")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FAÇA ALGO!")
+			NotificationCenter.notify("MÚSICAS DA COMP!")
 	
 	randomize()
 	var musica_Escolhida = perguntas[musicas[randi() % musicas.size()]] #Escolhe uma das músicas aleatoriamente
@@ -82,7 +82,7 @@ func _ready():
 	respostas =	musica_Escolhida[num_pergunta] #Obtém uma lista das respostas dessa pergunta ordenada corretamente
 	shuffled_respostas = respostas.duplicate() #Cria uma cópia das respostas para poder embaralhar
 	shuffled_respostas.shuffle()
-	#question.text(num_pergunta)
+	question.add_text(num_pergunta)
 	
 	for i in range(4):
 		lista[i].text = shuffled_respostas[i]
@@ -117,9 +117,10 @@ func _process(delta):
 		elif Input.is_action_just_pressed("acao"): #Aqui é o ponto de seleção da resposta
 			active = false
 			
-			if (selection_X + selection_Y) == 0:
-				if shuffled_respostas[0] == respostas[0]:
-					emit_signal("win")
+			if shuffled_respostas[select(selection_X, selection_Y)] == respostas[0]:
+				emit_signal("win")
+			else:
+				emit_signal("lose")
 			
 
 func select(num_X, num_Y):
