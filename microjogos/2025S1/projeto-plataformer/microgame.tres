@@ -7,7 +7,7 @@
 [resource]
 script = ExtResource("1_v6eee")
 cover = ExtResource("1_l6lkd")
-title_pt = &"Cavalheiro Estrelado"
+title_pt = &"Starry Knight"
 title_en = &"Starry Knight"
 credits_pt = "Desenvolvido por: Ricardo Emanuel
 Assets do cenário: David G
