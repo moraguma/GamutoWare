@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 # Declaração dos sinais win e lose
 
@@ -14,19 +14,47 @@ const HEIGHT = 1080
 
 const perguntas_Corpo_Nu = ["Sua mãe ... querendo me matar. Pode deixar minha sogra eu penso em me casar", "Me chamam de ... não quero nem saber, eu sei que estou ... por você", "Alô galera, eu ... agora sou um rapaz sério, muito sério", "Você é minha paixão, assinado: ..."]
 const perguntas_Renata = ["Por ela fui fiel, tão cego eu fiquei ... amigos eu deixei", "Renata ingrata, trocou meu amor por ...", "A lua entristeceu, o céu mudou de cor, Renata foi embora e ...", "Foi irracional ... mas vou deletar, ah, ah, sua insentatez"]
-const perguntas_Ragatanga = ["E o DJ que já conhece ... pra Diego, a canção mais desejada", "Aserehe ra de re De hebe tu de hebere seibiunouba mahabi ...", "Não é por acaso que encontro todo dia ... caminhando", "Olha lá quem vem virando a esquina vem ... com toda a alegria, festejando"]
+const perguntas_Ragatanga = []
 const perguntas_Madagascar = ["Ela é tão tudo! Ela é tão tudo! Tudo que eu queria ...", "Cabelo colorido, de tomara que caia, meia preta arrastão pra combinar com ...", "Melhor exposição que tenho ... toda delicadinha usando óculos grande", "Vem comigo, amor, eu vou levar pra passear de mãos dadas na areia ..."]
 
 #Dicionários para salvar as perguntas de cada música
 const corpo_Nu = {perguntas_Corpo_Nu[0]: ["Bolada", "Com raiva", "Emburrada", "Preocupada"], perguntas_Corpo_Nu[1]: ["Maluco... louco, louco", "Louco... maluco, maluco", "Maluco... maluco, louco", "Louco... louco, maluco"], perguntas_Corpo_Nu[2]: ["Parei de zoar", "Cansei de zuar", "Mandei pra lá", "Achei ela"], perguntas_Corpo_Nu[3]: ["Fleury 02", "Vinicius e Andinho", "Piauí", "DJ Marlboro"]}
 const renata = {perguntas_Renata[0]: ["E no night futebol", "Idas para o futebol", "E nas night, futebol", "Indo para o futebol"], perguntas_Renata[1]: ["Uma ilusão", "Um pedaço de pão", "Um garanhão", "Uma sensação"], perguntas_Renata[2]: ["A deprê ficou", "A tevê levou", "Junto o meu amor", "Fez um favor"], perguntas_Renata[3]: ["O que ela fez", "O que você fez", "Como toda vez", "Mais uma vez"]}
-const ragatanga = {perguntas_Ragatanga[0]: ["Toca o som da meia-noite", "Vai tocando toda a noite", "Vai dançando lá no front", "Dedica à meia-noite"], perguntas_Ragatanga[1]: ["An de bugui an de buididipi", "To the rhythm of the boogi, the beat", "Andebuggy Andebuggy Riby", "And the boogie and the boogie, the beat"], perguntas_Ragatanga[2]: ["Cuando me voy", "Quando eu vou", "Quanto eu tô", "Enquando eu vou"], perguntas_Ragatanga[3]: ["Diego", "Fernando", "Hermano", "Miguel"]}
+const ragatanga = {}
 const madagascar = {perguntas_Madagascar[0]: ["Abraçar, beijar", "Era abraçar beijar", "Era poder beijar", "Amassar, beijar"], perguntas_Madagascar[1]: ["Uma saia", "A saia", "O Saia", "A sala"], perguntas_Madagascar[2]: ["No meu stand", "Na minha estante", "Naquele instante", "No mesmo instante"], perguntas_Madagascar[3]: ["De madagascar", "Da beira mar", "Do lado de lá", "No nosso lar"]}
 
-var musica = ["corpo_Nu", "renata", "ragatanga", "madagascar"]
+const perguntas = {
+	"corpo_Nu":
+		{
+			
+		},
+	"renata":
+		{
+			
+		},
+	"ragatanga" : 
+		{
+			"E o DJ que já conhece ... pra Diego, a canção mais desejada" : ["Toca o som da meia-noite", "Vai tocando toda a noite", "Vai dançando lá no front", "Dedica à meia-noite"],
+			"Aserehe ra de re De hebe tu de hebere seibiunouba mahabi ...": ["An de bugui an de buididipi", "To the rhythm of the boogi, the beat", "Andebuggy Andebuggy Riby", "And the boogie and the boogie, the beat"],
+			"Não é por acaso que encontro todo dia ... caminhando": ["Cuando me voy", "Quando eu vou", "Quanto eu tô", "Enquando eu vou"],
+			"Olha lá quem vem virando a esquina vem ... com toda a alegria, festejando": ["Diego", "Fernando", "Hermano", "Miguel"]
+		},
+	"madagascar":
+		{
+			
+		}
+	
+}
+
+var musicas = ["corpo_Nu", "renata", "ragatanga", "madagascar"]
 var selection_X = 0
 var selection_Y = 0
 var active = true
+var up_left = ""
+var up_right = ""
+var down_left = ""
+var down_right = ""
+@export var lista: Array[Label]
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
@@ -39,16 +67,42 @@ func _ready():
 			NotificationCenter.notify("FAÇA ALGO!")
 	
 	randomize()
-	musica.shuffle()
-	var up_left = musica[0]
-	var up_right = musica[1]
-	var down_left = musica[2]
-	var down_right = musica[3]
+	#var musica = perguntas.values()[randi() % 4]
+	var musica = musicas[randi() % 4]
+	var num_pergunta = musica.keys()[randi() % 4]
+	var num_resposta =	musica[num_pergunta][randi() % 4]
+	#var suffled_respostas = musica[pergunta].duplicate()
+	#suffled_respostas.shuffle()
+	#up_left = shuffled_resposta[0]
+	# for i in range(4):
+	# lista[i].text = shuffled_respostas[i]
+	match musica:
+		"corpo_Nu": 
+			up_left = corpo_Nu[perguntas_Corpo_Nu[num_pergunta]][num_resposta]
+			up_right = musica[perguntas_Corpo_Nu[(num_pergunta + 1) % 4]][(num_resposta + 1) % 4]
+			down_left = musica[perguntas_Corpo_Nu[(num_pergunta + 2) % 4]][(num_resposta + 2) % 4]
+			down_right = musica[perguntas_Corpo_Nu[(num_pergunta + 3) % 4]][(num_resposta + 3) % 4]
+		"renata":
+			up_left = corpo_Nu[perguntas_Renata[num_pergunta]][num_resposta]
+			up_right = musica[perguntas_Renata[(num_pergunta + 1) % 4]][(num_resposta + 1) % 4]
+			down_left = musica[perguntas_Renata[(num_pergunta + 2) % 4]][(num_resposta + 2) % 4]
+			down_right = musica[perguntas_Renata[(num_pergunta + 3) % 4]][(num_resposta + 3) % 4]
+		"ragatanga":	
+			up_left = corpo_Nu[perguntas_Ragatanga[num_pergunta]][num_resposta]
+			up_right = musica[perguntas_Ragatanga[(num_pergunta + 1) % 4]][(num_resposta + 1) % 4]
+			down_left = musica[perguntas_Ragatanga[(num_pergunta + 2) % 4]][(num_resposta + 2) % 4]
+			down_right = musica[perguntas_Ragatanga[(num_pergunta + 3) % 4]][(num_resposta + 3) % 4]
+		"madagascar":
+			up_left = corpo_Nu[perguntas_Madagascar[num_pergunta]][num_resposta]
+			up_right = musica[perguntas_Madagascar[(num_pergunta + 1) % 4]][(num_resposta + 1) % 4]
+			down_left = musica[perguntas_Madagascar[(num_pergunta + 2) % 4]][(num_resposta + 2) % 4]
+			down_right = musica[perguntas_Madagascar[(num_pergunta + 3) % 4]][(num_resposta + 3) % 4]
+			
 	
-	%Musica1.text = up_left
-	%Musica2.text = up_right
-	%Musica3.text = down_left
-	%Musica4.text = down_right
+	%Resposta1.text = up_left
+	%Resposta2.text = up_right
+	%Resposta3.text = down_left
+	%Resposta4.text = down_right
 	
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como

@@ -17,7 +17,7 @@ RichTextLabel/constants/line_separation = 10
 RichTextLabel/constants/outline_size = 0
 RichTextLabel/font_sizes/normal_font_size = 100
 
-[node name="Main" type="Control"]
+[node name="Main" type="Control" node_paths=PackedStringArray("lista")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,6 +25,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hypu2")
+lista = [NodePath("PanelContainer/MarginContainer/GridContainer/Resposta1"), NodePath("PanelContainer/MarginContainer/GridContainer/Resposta2"), NodePath("PanelContainer/MarginContainer/GridContainer/Resposta3"), NodePath("PanelContainer/MarginContainer/GridContainer/Resposta4")]
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -60,12 +61,12 @@ theme_override_constants/h_separation = 1000
 theme_override_constants/v_separation = 100
 columns = 2
 
-[node name="Musica1" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
+[node name="Resposta1" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "musica 1"
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/GridContainer/Musica1"]
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/GridContainer/Resposta1"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -74,12 +75,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_pitoj")
 
-[node name="Musica2" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
+[node name="Resposta2" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Musica 2"
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/GridContainer/Musica2"]
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/GridContainer/Resposta2"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -88,12 +89,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_pitoj")
 
-[node name="Musica3" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
+[node name="Resposta3" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "musica 3"
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/GridContainer/Musica3"]
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/GridContainer/Resposta3"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -102,12 +103,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_pitoj")
 
-[node name="Musica4" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
+[node name="Resposta4" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "musica 4"
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/GridContainer/Musica4"]
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/GridContainer/Resposta4"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
