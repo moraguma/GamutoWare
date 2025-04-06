@@ -35,6 +35,7 @@ position = Vector2(595, 303)
 rotation = 1.94203
 scale = Vector2(0.560001, 0.560001)
 
+[connection signal="killed_gamuto" from="player" to="gamutinhos/gamuto1" method="_on_player_killed_gamuto"]
 [connection signal="area_entered" from="gamutinhos/gamuto1" to="player" method="_on_gamuto_1_area_entered"]
 [connection signal="area_entered" from="gamutinhos/gamuto2" to="player" method="_on_gamuto_2_area_entered"]
 [connection signal="area_entered" from="gamutinhos/gamuto3" to="player" method="_on_gamuto_3_area_entered"]

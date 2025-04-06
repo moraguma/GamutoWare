@@ -11,6 +11,11 @@ func _on_area_entered(area: Area2D) -> void:
 func _on_area_exited(area: Area2D) -> void:
 	shader.set_shader_parameter("width", 0.0)
 
-func _on_player_is_shot(gamuto) -> void:
-	if gamuto == 1:
-		print("GOT THE 1!")
+func _on_player_killed_gamuto(gamuto: int) -> void:
+	match gamuto:
+		1:
+			print("YOU KILLED 1!")
+		2:
+			print("YOU KILLED 2!")
+		3:
+			print("YOU KILLED 3!")
