@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3lptt3hr3axo"
-path="res://.godot/imported/capa.png-2db7016b878f7e021ca94aed86e71b59.ctex"
+uid="uid://caj7xuxpao6ps"
+path="res://.godot/imported/vinhaTile2.png-479df86249fa01818793dd7ecce48547.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/projeto_apagao/capa.png"
-dest_files=["res://.godot/imported/capa.png-2db7016b878f7e021ca94aed86e71b59.ctex"]
+source_file="res://microjogos/2025S1/projeto_release_gamuto/recursos/imagens/vinhaTile2.png"
+dest_files=["res://.godot/imported/vinhaTile2.png-479df86249fa01818793dd7ecce48547.ctex"]
 
 [params]
 
