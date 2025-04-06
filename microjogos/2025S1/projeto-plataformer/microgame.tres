@@ -12,11 +12,13 @@ title_en = &"Starry Knight"
 credits_pt = "Desenvolvido por: Ricardo Emanuel
 Assets do cenário: David G
 Assets do cavalheiro: Mattz Art
-Estrela: TotusLotus "
+Estrela: TotusLotus 
+Efeito vitória: spuispuin"
 credits_en = "Developed by: Ricardo Emanuel
 Dungeon Assets: David G
 Knight Assets: Mattz Art
-Star Asset: TotusLotus "
+Star Asset: TotusLotus 
+Victory effect: spuispuin"
 start_message_pt = &"TENTE!"
 start_message_en = &"TRY!"
 main_scene = ExtResource("1_7l7aa")
