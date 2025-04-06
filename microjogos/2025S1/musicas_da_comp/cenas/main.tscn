@@ -1,16 +1,117 @@
-[gd_scene load_steps=3 format=3 uid="uid://b8updi1osiwne"]
+[gd_scene load_steps=6 format=3 uid="uid://b8updi1osiwne"]
 
 [ext_resource type="Script" uid="uid://doga4uw2uu7b1" path="res://microjogos/2025S1/musicas_da_comp/cenas/scripts/main.gd" id="1_hypu2"]
 [ext_resource type="Texture2D" uid="uid://dtk8cb3288rnx" path="res://microjogos/2025S1/musicas_da_comp/recursos/imagens/Screenshot From 2025-04-05 19-27-42.png" id="2_4dhqc"]
+[ext_resource type="Theme" uid="uid://6nllk3n6j475" path="res://microjogos/2025S1/musicas_da_comp/recursos/new_theme.tres" id="3_pitoj"]
 
-[node name="Main" type="Node2D"]
-script = ExtResource("1_hypu2")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(960, 540)
-scale = Vector2(4.11135, 3.03371)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pitoj"]
 texture = ExtResource("2_4dhqc")
 
-[node name="Area2D" type="Area2D" parent="."]
+[sub_resource type="Theme" id="Theme_7eqru"]
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 100
+Label/styles/normal = null
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_pitoj")
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+RichTextLabel/constants/line_separation = 10
+RichTextLabel/constants/outline_size = 0
+RichTextLabel/font_sizes/normal_font_size = 100
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hypu2")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_7eqru")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 200
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 200
+
+[node name="Pergunta" type="RichTextLabel" parent="PanelContainer/MarginContainer"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+size_flags_vertical = 0
+bbcode_enabled = true
+text = "Pergunta"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/h_separation = 1000
+theme_override_constants/v_separation = 100
+columns = 2
+
+[node name="Musica1" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "musica 1"
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/GridContainer/Musica1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_pitoj")
+
+[node name="Musica2" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Musica 2"
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/GridContainer/Musica2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_pitoj")
+
+[node name="Musica3" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "musica 3"
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/GridContainer/Musica3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_pitoj")
+
+[node name="Musica4" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "musica 4"
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/GridContainer/Musica4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_pitoj")

@@ -23,8 +23,7 @@ const renata = {perguntas_Renata[0]: ["E no night futebol", "Idas para o futebol
 const ragatanga = {perguntas_Ragatanga[0]: ["Toca o som da meia-noite", "Vai tocando toda a noite", "Vai dançando lá no front", "Dedica à meia-noite"], perguntas_Ragatanga[1]: ["An de bugui an de buididipi", "To the rhythm of the boogi, the beat", "Andebuggy Andebuggy Riby", "And the boogie and the boogie, the beat"], perguntas_Ragatanga[2]: ["Cuando me voy", "Quando eu vou", "Quanto eu tô", "Enquando eu vou"], perguntas_Ragatanga[3]: ["Diego", "Fernando", "Hermano", "Miguel"]}
 const madagascar = {perguntas_Madagascar[0]: ["Abraçar, beijar", "Era abraçar beijar", "Era poder beijar", "Amassar, beijar"], perguntas_Madagascar[1]: ["Uma saia", "A saia", "O Saia", "A sala"], perguntas_Madagascar[2]: ["No meu stand", "Na minha estante", "Naquele instante", "No mesmo instante"], perguntas_Madagascar[3]: ["De madagascar", "Da beira mar", "Do lado de lá", "No nosso lar"]}
 
-const musica = ["corpo_Nu", "renata", "ragatanga", "madagascar"]
-var up_right = 0
+var musica = ["corpo_Nu", "renata", "ragatanga", "madagascar"]
 var selection_X = 0
 var selection_Y = 0
 var active = true
@@ -38,29 +37,24 @@ func _ready():
 			NotificationCenter.notify("DO SOMETHING!")
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("FAÇA ALGO!")
-
+	
 	randomize()
-		
-	up_right = randi() % 4
+	musica.shuffle()
+	var up_left = musica[0]
+	var up_right = musica[1]
+	var down_left = musica[2]
+	var down_right = musica[3]
 	
-	var up_left = randi() % 4
-	while(up_left == up_right):
-		up_left = randi() % 4
+	%Musica1.text = up_left
+	%Musica2.text = up_right
+	%Musica3.text = down_left
+	%Musica4.text = down_right
 	
-	var down_right = randi() % 4
-	while(down_right == up_left and down_right == up_right):
-		down_right = randi() % 4
-	
-	var down_left = 0
-	for i in range(4):
-		if (i != up_right and i != up_left and i != down_right):
-			down_left = i
-		
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
 # a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
 # a última chamada desta função. O comando pass não faz nada
-func _physics_process(delta):
+func _process(delta):
 	if active:
 		if Input.is_action_just_pressed("cima"):
 			selection_Y -= 1
@@ -75,23 +69,8 @@ func _physics_process(delta):
 			selection_X -= 1
 			selection_X %= 2
 			
-		elif Input.is_action_just_pressed("acao"): #Aqui é o ponto de seleção da resposta 
+		elif Input.is_action_just_pressed("acao"): #Aqui é o ponto de seleção da resposta
 			active = false
-
-	
-
-
-# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a renderização, 
-# como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
-# desde a última chamada desta função. O comando pass não faz nada
-func _process(delta):
-	pass
-
-
-# --------------------------------------------------------------------------------------------------
-# SUAS FUNÇÕES
-# --------------------------------------------------------------------------------------------------
-
 
 # Um método genérico. Crie quantos métodos você precisar!
 func my_method():
