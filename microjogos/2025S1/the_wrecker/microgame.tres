@@ -1,13 +1,25 @@
-[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=2 format=3 uid="uid://ukmirsummivb"]
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://ukmirsummivb"]
 
 [ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_7ja0y"]
+[ext_resource type="PackedScene" uid="uid://dveik7twxfpb2" path="res://microjogos/2025S1/the_wrecker/cenas/main.tscn" id="1_cs7ul"]
+[ext_resource type="Texture2D" uid="uid://cl64m76on27wo" path="res://microjogos/2025S1/the_wrecker/capa_novo.png" id="1_tioee"]
 
 [resource]
 script = ExtResource("1_7ja0y")
-title_pt = &"TÍTULO DO JOGO"
-title_en = &"GAME TITLE"
-credits_pt = "Créditos do jogo"
-credits_en = "Game crédits"
+cover = ExtResource("1_tioee")
+title_pt = &"Velhos Samurais Furiosos"
+title_en = &"Old Enraged Samurais"
+credits_pt = "Créditos do jogo
+FMN
+Background: Eder Muniz (https://edermunizz.itch.io/free-pixel-art-forest)
+Player e Enemy: https://xzany.itch.io/samurai-2d-pixel-art
+Música: Tad (https://opengameart.org/content/samurai)"
+credits_en = "Game crédits
+FMN
+Background: Eder Muniz (https://edermunizz.itch.io/free-pixel-art-forest)
+Player e Enemy: https://xzany.itch.io/samurai-2d-pixel-art
+Música: Tad (https://opengameart.org/content/samurai)"
 start_message_pt = &"FAÇA ALGO!"
 start_message_en = &"DO SOMETHING!"
+main_scene = ExtResource("1_cs7ul")
 difficulty = 0

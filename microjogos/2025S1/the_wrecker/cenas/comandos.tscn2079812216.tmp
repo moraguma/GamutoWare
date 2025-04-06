@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhd0o3opppdo8"]
+
+[ext_resource type="Script" uid="uid://bgrgkiwhu5bay" path="res://microjogos/2025S1/the_wrecker/cenas/scripts/comandos.gd" id="1_ejh4y"]
+
+[sub_resource type="FontVariation" id="FontVariation_pr7ll"]
+
+[node name="Hud" type="CanvasLayer"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -36.0
+offset_right = 36.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_constants/margin_top = 9
+
+[node name="Comandos" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_pr7ll")
+theme_override_font_sizes/font_size = 65
+text = "►◄▲▼▬►▬▲
+"
+script = ExtResource("1_ejh4y")

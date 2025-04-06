@@ -1,4 +1,58 @@
-[gd_scene format=3 uid="uid://dveik7twxfpb2"]
+[gd_scene load_steps=11 format=3 uid="uid://dveik7twxfpb2"]
+
+[ext_resource type="PackedScene" uid="uid://ecdgudiy0ygi" path="res://microjogos/2025S1/the_wrecker/cenas/chao.tscn" id="1_lidqw"]
+[ext_resource type="Script" uid="uid://d04sirxomapuy" path="res://microjogos/2025S1/seu_projeto/cenas/scripts/main.gd" id="1_ofwqk"]
+[ext_resource type="Texture2D" uid="uid://p75ddus4w3hw" path="res://microjogos/2025S1/the_wrecker/recursos/imagens/Free Pixel Art Forest/Preview/Background.png" id="2_boyt2"]
+[ext_resource type="PackedScene" uid="uid://dhd0o3opppdo8" path="res://microjogos/2025S1/the_wrecker/cenas/comandos.tscn" id="2_ha54k"]
+[ext_resource type="PackedScene" uid="uid://c2nk2johqgn1w" path="res://microjogos/2025S1/the_wrecker/cenas/player.tscn" id="3_56sat"]
+[ext_resource type="Texture2D" uid="uid://dfv21gp2nf56" path="res://microjogos/2025S1/the_wrecker/recursos/imagens/Default/keyboard_arrows_left.png" id="3_utryn"]
+[ext_resource type="Texture2D" uid="uid://b6ng11qu0qcsl" path="res://microjogos/2025S1/the_wrecker/recursos/imagens/Default/keyboard_arrows_right.png" id="4_a6yaf"]
+[ext_resource type="PackedScene" uid="uid://by7pctvdk4nmm" path="res://microjogos/2025S1/the_wrecker/cenas/enemy.tscn" id="4_ofwqk"]
+[ext_resource type="FontFile" uid="uid://lx2jxjhgou66" path="res://microjogos/2025S1/the_wrecker/recursos/imagens/Jacquard24-Regular.ttf" id="5_g7pa3"]
+[ext_resource type="AudioStream" uid="uid://c4ehfeolo53nn" path="res://microjogos/2025S1/the_wrecker/recursos/sons/Samurai.wav" id="8_i82oy"]
 
 [node name="Main" type="Node2D"]
 texture_filter = 1
+script = ExtResource("1_ofwqk")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="esquerda" type="Sprite2D" parent="Node2D"]
+position = Vector2(1385, 421)
+scale = Vector2(2.46875, 3.17969)
+texture = ExtResource("3_utryn")
+
+[node name="direita" type="Sprite2D" parent="Node2D"]
+position = Vector2(364, 432)
+scale = Vector2(3.19531, 2.91406)
+texture = ExtResource("4_a6yaf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(973, 531)
+scale = Vector2(2.05065, 1.33796)
+texture = ExtResource("2_boyt2")
+
+[node name="Chao" parent="." instance=ExtResource("1_lidqw")]
+position = Vector2(35, 980)
+
+[node name="Hud" parent="." instance=ExtResource("2_ha54k")]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 611.0
+offset_top = 132.0
+offset_right = 1384.0
+offset_bottom = 263.0
+theme_override_fonts/font = ExtResource("5_g7pa3")
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+
+[node name="Player" parent="." instance=ExtResource("3_56sat")]
+position = Vector2(1005, 908)
+
+[node name="Enemy" parent="." instance=ExtResource("4_ofwqk")]
+position = Vector2(1129, 844)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_i82oy")
