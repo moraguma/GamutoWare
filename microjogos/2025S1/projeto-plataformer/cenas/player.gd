@@ -29,7 +29,7 @@ func _process(delta):
 		if door.overlaps_body(player) and Input.is_action_just_pressed("cima"):
 			parent.register_win()
 			print("ganhei na porta")
-			get_node("../Efeito").play()
+			get_node("../Efeito_vitoria").play()
 
 
 func _physics_process(delta):
@@ -77,7 +77,7 @@ func _on_estrela_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		print("ganhei")
 		get_node("../Estrela").get_node("Sprite2D").visible = false
-		get_node("../Efeito").play()
+		get_node("../Efeito_vitoria").play()
 		won = 1.0
 		parent.register_win()
 
