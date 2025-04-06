@@ -1,7 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://dh6netreo7fu4"]
+[gd_scene load_steps=27 format=3 uid="uid://dh6netreo7fu4"]
 
 [ext_resource type="Texture2D" uid="uid://t7lad2y14ang" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/9.png" id="1_e86pc"]
-[ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="1_j0w7k"]
 [ext_resource type="Script" uid="uid://dcmqf323bv3ry" path="res://microjogos/2025S1/Eco_Rescue/cenas/lixeira_azul.gd" id="2_gfdqj"]
 [ext_resource type="Texture2D" uid="uid://drh2y1rukqirm" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/10.png" id="3_1wv6f"]
 [ext_resource type="Script" uid="uid://3nhegx0fi4h2" path="res://microjogos/2025S1/Eco_Rescue/cenas/lixeira_vermelha.gd" id="4_fkutc"]
@@ -11,6 +10,22 @@
 [ext_resource type="Script" uid="uid://d0mwu4bksd2fd" path="res://microjogos/2025S1/Eco_Rescue/cenas/lixeira_amarela.gd" id="8_u8ibt"]
 [ext_resource type="Texture2D" uid="uid://b7ms5o0s6mdbu" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/13.png" id="9_p58j1"]
 [ext_resource type="Script" uid="uid://bstl8ie65668u" path="res://microjogos/2025S1/Eco_Rescue/cenas/lixeira_marrom.gd" id="10_sg5d1"]
+[ext_resource type="Texture2D" uid="uid://cll60xy6ubdut" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/1.png" id="11_u8ibt"]
+[ext_resource type="Script" uid="uid://gbjfj3a68ktb" path="res://microjogos/2025S1/Eco_Rescue/cenas/maca.gd" id="12_i6kd1"]
+[ext_resource type="Texture2D" uid="uid://dl5m52rtwpxnr" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/2.png" id="12_p58j1"]
+[ext_resource type="Texture2D" uid="uid://ibqe66v4sslb" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/3.png" id="13_sg5d1"]
+[ext_resource type="Texture2D" uid="uid://crd71c25xgugm" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/4.png" id="14_i2l4g"]
+[ext_resource type="Script" uid="uid://b2xs120eyotsp" path="res://microjogos/2025S1/Eco_Rescue/cenas/banana.gd" id="14_kb2ns"]
+[ext_resource type="Texture2D" uid="uid://bepyylx1nny2h" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/5.png" id="15_yfvfg"]
+[ext_resource type="Script" uid="uid://dk865jijywhsu" path="res://microjogos/2025S1/Eco_Rescue/cenas/sacola.gd" id="16_eqogf"]
+[ext_resource type="Texture2D" uid="uid://xidxg3xejihu" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/6.png" id="16_njsje"]
+[ext_resource type="Texture2D" uid="uid://dbmh5dkmaewka" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/7.png" id="17_hlhr7"]
+[ext_resource type="Texture2D" uid="uid://d2jlw6ph8sicw" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/8.png" id="18_05nxe"]
+[ext_resource type="Script" uid="uid://dih6dunho3pmc" path="res://microjogos/2025S1/Eco_Rescue/cenas/canudo.gd" id="18_e6i4i"]
+[ext_resource type="Script" uid="uid://ckxg151euebxb" path="res://microjogos/2025S1/Eco_Rescue/cenas/papel.gd" id="20_yexk8"]
+[ext_resource type="Script" uid="uid://dytbv0wq8itjm" path="res://microjogos/2025S1/Eco_Rescue/cenas/prato.gd" id="22_lifvu"]
+[ext_resource type="Script" uid="uid://digwnm1idh03l" path="res://microjogos/2025S1/Eco_Rescue/cenas/garrafa.gd" id="24_5tde7"]
+[ext_resource type="Script" uid="uid://ydhi3qstjfip" path="res://microjogos/2025S1/Eco_Rescue/cenas/lata.gd" id="26_uyycx"]
 
 [node name="Main" type="Node2D"]
 texture_filter = 1
@@ -49,42 +64,50 @@ scale = Vector2(4.15, 4.69375)
 texture = ExtResource("9_p58j1")
 script = ExtResource("10_sg5d1")
 
-[node name="Sprite2D5" type="Sprite2D" parent="."]
-position = Vector2(-147, -257.5)
-scale = Vector2(0.546875, 0.515625)
-texture = ExtResource("1_j0w7k")
+[node name="maca" type="Sprite2D" parent="."]
+position = Vector2(-644, -274.813)
+scale = Vector2(1.475, 1.49219)
+texture = ExtResource("11_u8ibt")
+script = ExtResource("12_i6kd1")
 
-[node name="Sprite2D6" type="Sprite2D" parent="."]
-position = Vector2(-242, -258)
-scale = Vector2(0.5, 0.484375)
-texture = ExtResource("1_j0w7k")
+[node name="banana" type="Sprite2D" parent="."]
+position = Vector2(-465, -282.813)
+scale = Vector2(1.6, 1.42969)
+texture = ExtResource("12_p58j1")
+script = ExtResource("14_kb2ns")
 
-[node name="Sprite2D7" type="Sprite2D" parent="."]
-position = Vector2(-49, -253)
-scale = Vector2(0.5, 0.484375)
-texture = ExtResource("1_j0w7k")
+[node name="sacola" type="Sprite2D" parent="."]
+position = Vector2(-267, -274.813)
+scale = Vector2(1.54844, 1.45156)
+texture = ExtResource("13_sg5d1")
+script = ExtResource("16_eqogf")
 
-[node name="Sprite2D8" type="Sprite2D" parent="."]
-position = Vector2(56, -251.5)
-scale = Vector2(0.5, 0.484375)
-texture = ExtResource("1_j0w7k")
+[node name="canudo" type="Sprite2D" parent="."]
+position = Vector2(-90, -261.813)
+scale = Vector2(1.14375, 1.45234)
+texture = ExtResource("14_i2l4g")
+script = ExtResource("18_e6i4i")
 
-[node name="Sprite2D9" type="Sprite2D" parent="."]
-position = Vector2(-312, -255)
-scale = Vector2(0.5, 0.484375)
-texture = ExtResource("1_j0w7k")
+[node name="papel" type="Sprite2D" parent="."]
+position = Vector2(95, -266.813)
+scale = Vector2(1.8625, 1.58594)
+texture = ExtResource("15_yfvfg")
+script = ExtResource("20_yexk8")
 
-[node name="Sprite2D10" type="Sprite2D" parent="."]
-position = Vector2(139, -250)
-scale = Vector2(0.5, 0.484375)
-texture = ExtResource("1_j0w7k")
+[node name="prato" type="Sprite2D" parent="."]
+position = Vector2(272, -265.813)
+scale = Vector2(1.6625, 1.45469)
+texture = ExtResource("16_njsje")
+script = ExtResource("22_lifvu")
 
-[node name="Sprite2D11" type="Sprite2D" parent="."]
-position = Vector2(240, -251.5)
-scale = Vector2(0.5, 0.484375)
-texture = ExtResource("1_j0w7k")
+[node name="garrafa" type="Sprite2D" parent="."]
+position = Vector2(487, -258.813)
+scale = Vector2(1.925, 1.38594)
+texture = ExtResource("17_hlhr7")
+script = ExtResource("24_5tde7")
 
-[node name="Sprite2D12" type="Sprite2D" parent="."]
-position = Vector2(349, -245.5)
-scale = Vector2(0.5, 0.484375)
-texture = ExtResource("1_j0w7k")
+[node name="lata" type="Sprite2D" parent="."]
+position = Vector2(681, -269.813)
+scale = Vector2(1.6, 1.55469)
+texture = ExtResource("18_05nxe")
+script = ExtResource("26_uyycx")
