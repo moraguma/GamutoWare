@@ -7,15 +7,26 @@
 [resource]
 script = ExtResource("1_58ijf")
 cover = ExtResource("1_r0xc8")
-title_pt = &"TÍTULO DO JOGO"
-title_en = &"GAME TITLE"
+title_pt = &"Gamux Magix"
+title_en = &"Gamux Magix"
 credits_pt = "Créditos do jogo
 José Theodoro
-Sofia Adelina"
+Sofia Adelina
+
+Descrição: Ajude Gamuto a se tornar uma garota mágica.
+
+Fontes:
+Background: https://opengameart.org/content/morning-sunrise-background"
 credits_en = "Game credits
 José Theodoro
-Sofia Adelina"
-start_message_pt = &"FAÇA ALGO!"
-start_message_en = &"DO SOMETHING!"
+Sofia Adelina
+
+Description:
+Help Gamuto become a magical girl.
+
+Source:
+Background: https://opengameart.org/content/morning-sunrise-background"
+start_message_pt = &"GAMUTO TRANSFORMAR!!!"
+start_message_en = &"GAMUTO TRANSFORM!!!"
 main_scene = ExtResource("2_vob5c")
 difficulty = 0

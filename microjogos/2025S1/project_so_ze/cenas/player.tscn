@@ -1,7 +1,7 @@
 [gd_scene load_steps=51 format=3 uid="uid://cg5clbaowdm38"]
 
-[ext_resource type="Texture2D" uid="uid://dyv1nqpjgsr7l" path="res://microjogos/2025S1/project_so_ze/white.png" id="1_hkndl"]
 [ext_resource type="Script" uid="uid://f7qetnfu0gep" path="res://microjogos/2025S1/project_so_ze/cenas/scripts/player.gd" id="1_lj4lc"]
+[ext_resource type="Texture2D" uid="uid://b7dc777f2ymr2" path="res://microjogos/2025S1/project_so_ze/recursos/imagens/Sunrise.png" id="2_228w0"]
 [ext_resource type="Texture2D" uid="uid://ct30uhn4ro4hw" path="res://microjogos/2025S1/project_so_ze/recursos/imagens/body_parts_test/body-01.png" id="3_d22dx"]
 [ext_resource type="Script" uid="uid://droalcluk51ya" path="res://microjogos/2025S1/project_so_ze/cenas/scripts/head.gd" id="3_lj4lc"]
 [ext_resource type="Script" uid="uid://bx6ccwuvx2yr3" path="res://microjogos/2025S1/project_so_ze/cenas/scripts/body.gd" id="3_q4xny"]
@@ -328,9 +328,9 @@ _data = {
 script = ExtResource("1_lj4lc")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(964, 557)
+position = Vector2(2228, 557)
 scale = Vector2(4.51111, 2.65333)
-texture = ExtResource("1_hkndl")
+texture = ExtResource("2_228w0")
 
 [node name="Body" type="Sprite2D" parent="."]
 position = Vector2(952, 541)
