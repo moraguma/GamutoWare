@@ -32,7 +32,7 @@ const perguntas = {
 		{
 			"E o DJ que já conhece ... pra Diego, a canção mais desejada" : ["Toca o som da meia-noite", "Vai tocando toda a noite", "Vai dançando lá no front", "Dedica à meia-noite"],
 			"Aserehe ra de re De hebe tu de hebere seibiunouba mahabi ...": ["An de bugui an de buididipi", "To the rhythm of the boogi, the beat", "Andebuggy Andebuggy Riby", "And the boogie and the boogie, the beat"],
-			"Não é por acaso que encontro todo dia ... caminhando": ["Cuando me voy", "Quando eu vou", "Quanto eu tô", "Enquanto eu vou"],
+			"Não é por acaso que encontro todo dia (todo dia) ... caminhando": ["Cúando me voy", "Quando eu vou", "Quanto eu tô", "Enquanto eu vou"],
 			"Olha lá quem vem virando a esquina vem ... com toda a alegria, festejando": ["Diego", "Fernando", "Hermano", "Miguel"]
 		},
 	"madagascar":
@@ -51,11 +51,11 @@ const perguntas = {
 		},
 	"a": 
 		{
-			"AAAAAAAAAAAAAAAAAAAAA...": ["AAAAAAAAAA", "arrrrrrrr", "Tanto querer", "*respira*"]
+			"AAAAAAAAAAAAAAAAAAAAA...": ["AAAAAAAAAAAAAAA", "arrrrrrrr", "Tanto querer", "*respira*"]
 		}
 }
 
-var musicas = ["corpo_Nu", "renata", "ragatanga", "madagascar", "shake_it_bololo"]
+var musicas = ["corpo_Nu", "renata", "ragatanga", "madagascar", "shake_it_bololo", "a"]
 var respostas= []
 var shuffled_respostas = []
 var selection_X = 0
@@ -73,7 +73,6 @@ var active = true
 func _ready():
 	$PanelContainer/MarginContainer/GridContainer/Pergunta1.grab_focus()
 
-	
 	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:

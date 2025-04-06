@@ -1,11 +1,13 @@
-[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=2 format=3 uid="uid://i758xdawps43"]
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=3 format=3 uid="uid://i758xdawps43"]
 
+[ext_resource type="Texture2D" uid="uid://twrpwtir2f0o" path="res://microjogos/2025S1/musicas_da_comp/Capa_Jogo_Musicas_da_Comp.jpeg" id="1_6uev7"]
 [ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_i6dib"]
 
 [resource]
 script = ExtResource("1_i6dib")
-title_pt = &"TÍTULO DO JOGO"
-title_en = &"GAME TITLE"
+cover = ExtResource("1_6uev7")
+title_pt = &"MÚSICAS DA COMP"
+title_en = &"COMP SONGS"
 credits_pt = "Créditos do jogo"
 credits_en = "Game crédits"
 start_message_pt = &"FAÇA ALGO!"
