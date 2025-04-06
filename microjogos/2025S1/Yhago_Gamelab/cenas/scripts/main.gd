@@ -60,9 +60,9 @@ func _process(delta: float) -> void:
 		a_posi_now = new_a_posi
 		
 	if !Input.is_action_pressed("acao"):
-		a_posi_now.y = lerp(a_posi_now.y, a_posi_inic.y, delta * speed)
+		a_posi_now.y = lerp(a_posi_now.y, a_posi_inic.y, delta * speed *2)
 		
-	anzol.position.y = lerp(anzol.position.y, a_posi_now.y, delta * speed)
+	anzol.position.y = lerp(anzol.position.y, a_posi_now.y, delta * speed *2)
 		
 	peixe.position.y = lerp(peixe.position.y, p_posi_now.y, delta * speed)
 

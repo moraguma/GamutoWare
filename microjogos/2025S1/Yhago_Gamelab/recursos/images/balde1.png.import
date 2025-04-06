@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sjmchmnlbr8g"
-path="res://.godot/imported/capa.png-013107a9e84cdb7a6eef1926e480631f.ctex"
+uid="uid://b71wdj0doay37"
+path="res://.godot/imported/balde1.png-939fde3cb8b54791eaa747250e4289ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/Yhago_Gamelab/capa.png"
-dest_files=["res://.godot/imported/capa.png-013107a9e84cdb7a6eef1926e480631f.ctex"]
+source_file="res://microjogos/2025S1/Yhago_Gamelab/recursos/images/balde1.png"
+dest_files=["res://.godot/imported/balde1.png-939fde3cb8b54791eaa747250e4289ea.ctex"]
 
 [params]
 
