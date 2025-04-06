@@ -1,0 +1,102 @@
+[gd_scene load_steps=10 format=3 uid="uid://diqtnacd3e6yn"]
+
+[ext_resource type="Script" uid="uid://d2yx11vmrf8pm" path="res://microjogos/2025S1/project-UltFighting/cenas/scripts/main.gd" id="1_l4540"]
+[ext_resource type="Texture2D" uid="uid://cjkgsbcoj7pl0" path="res://microjogos/2025S1/project-UltFighting/recursos/imagens/backgnd.png" id="1_nyq7o"]
+[ext_resource type="Texture2D" uid="uid://diy57haa3qjq3" path="res://microjogos/2025S1/project-UltFighting/recursos/imagens/charHolder.png" id="2_l4540"]
+[ext_resource type="Texture2D" uid="uid://dj41gjbhr5xry" path="res://microjogos/2025S1/project-UltFighting/recursos/imagens/realspoon.png" id="3_d4jpx"]
+[ext_resource type="Texture2D" uid="uid://cumjoakequ1xl" path="res://microjogos/2025S1/project-UltFighting/recursos/imagens/cakeHolder.png" id="4_o2ho2"]
+[ext_resource type="Texture2D" uid="uid://bsd2vtv5yguyk" path="res://microjogos/2025S1/project-UltFighting/recursos/imagens/arrowHolder.png" id="5_owabt"]
+[ext_resource type="Texture2D" uid="uid://mgmrf6tca7ja" path="res://microjogos/2025S1/project-UltFighting/recursos/imagens/arrowHolderdwn.png" id="6_evqch"]
+[ext_resource type="Texture2D" uid="uid://ci4tgk8txnq7s" path="res://microjogos/2025S1/project-UltFighting/recursos/imagens/arrowHolderlft.png" id="7_hqu7e"]
+[ext_resource type="Texture2D" uid="uid://bl430ayem7nn0" path="res://microjogos/2025S1/project-UltFighting/recursos/imagens/arrowHolderrgt.png" id="8_jh2im"]
+
+[node name="Main" type="Node2D" node_paths=PackedStringArray("arrow_nodes")]
+texture_filter = 1
+position = Vector2(0, 1)
+script = ExtResource("1_l4540")
+arrow_up = ExtResource("5_owabt")
+arrow_down = ExtResource("6_evqch")
+arrow_left = ExtResource("7_hqu7e")
+arrow_right = ExtResource("8_jh2im")
+arrow_nodes = [NodePath("arrows/SpriteArrowUp"), NodePath("arrows/SpriteArrowDown"), NodePath("arrows/SpriteArrowLeft"), NodePath("arrows/SpriteArrowRight")]
+
+[node name="baxkground" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(993, 540)
+texture = ExtResource("1_nyq7o")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="mainChar" type="CharacterBody2D" parent="Node2D"]
+
+[node name="SpriteChar" type="Sprite2D" parent="Node2D/mainChar"]
+position = Vector2(570, 508)
+scale = Vector2(7.71875, 8.17188)
+texture = ExtResource("2_l4540")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/mainChar"]
+
+[node name="spoon" type="CharacterBody2D" parent="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/spoon"]
+
+[node name="SpriteSpoon" type="Sprite2D" parent="Node2D/spoon"]
+position = Vector2(895, 474)
+scale = Vector2(0.730278, 0.693333)
+texture = ExtResource("3_d4jpx")
+
+[node name="Node2D2" type="Node2D" parent="."]
+
+[node name="cake" type="CharacterBody2D" parent="Node2D2"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D2/cake"]
+position = Vector2(1491, 434)
+scale = Vector2(8.9375, 8.70313)
+texture = ExtResource("4_o2ho2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/cake"]
+
+[node name="arrows" type="Node2D" parent="."]
+
+[node name="SpriteArrowUp" type="Sprite2D" parent="arrows"]
+position = Vector2(276, 936)
+scale = Vector2(2.78125, 2.98437)
+texture = ExtResource("5_owabt")
+
+[node name="SpriteArrowDown" type="Sprite2D" parent="arrows"]
+position = Vector2(539, 939)
+scale = Vector2(3.03125, 2.90625)
+texture = ExtResource("6_evqch")
+
+[node name="SpriteArrowLeft" type="Sprite2D" parent="arrows"]
+position = Vector2(788, 946)
+scale = Vector2(3.0625, 2.85938)
+texture = ExtResource("7_hqu7e")
+
+[node name="SpriteArrowRight" type="Sprite2D" parent="arrows"]
+position = Vector2(1029, 945)
+scale = Vector2(3.10938, 2.90625)
+texture = ExtResource("8_jh2im")
+
+[node name="SpriteArrowRight2" type="Sprite2D" parent="arrows"]
+visible = false
+position = Vector2(1258, 948)
+scale = Vector2(3.10938, 2.90625)
+texture = ExtResource("8_jh2im")
+
+[node name="SpriteArrowRight3" type="Sprite2D" parent="arrows"]
+visible = false
+position = Vector2(1509, 951)
+scale = Vector2(3.10938, 2.90625)
+texture = ExtResource("8_jh2im")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 826.0
+offset_top = 689.0
+offset_right = 2347.0
+offset_bottom = 1201.0
+theme_override_font_sizes/font_size = 60
+text = "aaaaaaaaaaaaaaaaaaaaaaa"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
