@@ -6,7 +6,7 @@
 size = Vector2(700, 300)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0sfhs"]
-radius = 162.151
+radius = 150.003
 
 [node name="CameraPlayer" type="CharacterBody2D"]
 script = ExtResource("1_0sfhs")
@@ -28,4 +28,6 @@ position_smoothing_enabled = true
 
 [node name="snap_timer" type="Timer" parent="timers"]
 
+[connection signal="area_entered" from="playerArea2D" to="." method="_on_player_area_2d_area_entered"]
+[connection signal="area_exited" from="playerArea2D" to="." method="_on_player_area_2d_area_exited"]
 [connection signal="timeout" from="timers/snap_timer" to="." method="_on_snap_timer_timeout"]

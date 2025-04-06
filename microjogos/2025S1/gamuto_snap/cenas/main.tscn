@@ -34,5 +34,3 @@ scale = Vector2(1.84244, 1.84244)
 position = Vector2(595, 303)
 rotation = 1.94203
 scale = Vector2(0.560001, 0.560001)
-
-[connection signal="area_entered" from="gamutinhos/gamuto1" to="player" method="_on_gamutos_area_entered"]
