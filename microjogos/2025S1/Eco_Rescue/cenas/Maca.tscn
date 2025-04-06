@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bn6tk51rwbbyv"]
+
+[ext_resource type="Texture2D" uid="uid://cll60xy6ubdut" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/1.png" id="1_u0rno"]
+
+[node name="Maca" type="Sprite2D"]
+texture = ExtResource("1_u0rno")
