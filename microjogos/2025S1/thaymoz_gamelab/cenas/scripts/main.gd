@@ -1,7 +1,7 @@
 extends Node2D
 
 # Declaração dos sinais win e lose
-@onready var quantidades_exposto: Label = $canvas/ui/quantidades_exposto
+@onready var quantidades_exposto: Label = $canvas/ui/container/quantidades_exposto
 @onready var balão: AnimatedSprite2D = $balão
 @export var crescimento : float = 0
 
@@ -10,6 +10,8 @@ signal lose
 var texto_do_balão = 0
 var quantidades_de_clicks = 0
 var clicados = 0
+var pode : bool = true
+
 
 # Estas constantes são usadas para determinar o tamanho da tela do seu jogo. Por padrão, definem uma
 # tela 1920x1080, que é padrão para monitores full HD. Caso você queira uma resolução menor para 
@@ -35,7 +37,7 @@ func _ready():
 
 
 
-	var numeros = randi_range(1,10)
+	var numeros = randi_range(10,21)
 	quantidades_de_clicks = numeros
 	texto_do_balão = quantidades_de_clicks
 	quantidades_exposto.text = str(texto_do_balão)
@@ -84,20 +86,26 @@ func register_lose():
 	
 	
 func _input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("acao"):
-		clicados += 1
-		balão.position.y -= 16
-#		comprimento * 32
-		balão.scale.x += crescimento
-		balão.scale.y += crescimento
-		print(clicados)
-		texto_do_balão -= 1
-		if clicados == quantidades_de_clicks:
-#			vc ganhou
-			register_win()
-		elif clicados > quantidades_de_clicks:
-#			explodiu
-			register_lose()
-		elif clicados < quantidades_de_clicks:
-#			murchou
-			register_lose()
+	if pode:
+		if Input.is_action_just_pressed("acao"):
+			clicados += 1
+			balão.position.y -= 28
+	#		comprimento * 32
+			balão.scale.x += crescimento
+			balão.scale.y += crescimento
+			print(clicados)
+			texto_do_balão -= 1
+			if clicados == quantidades_de_clicks:
+	#			vc ganhou
+				quantidades_exposto.add_theme_color_override("font_color", Color("00d100"))
+				register_win()
+			elif clicados > quantidades_de_clicks:
+	#			explodiu
+				quantidades_exposto.add_theme_color_override("font_color", Color("e00000"))
+				register_lose()
+				balão.play("boom")
+				pode = false
+			
+			elif clicados < quantidades_de_clicks:
+	#			murchou
+				register_lose()

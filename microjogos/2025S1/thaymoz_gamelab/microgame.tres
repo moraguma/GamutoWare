@@ -1,13 +1,18 @@
-[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=2 format=3 uid="uid://e13jbkkhfhj0"]
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=3 format=3 uid="uid://dkxvpcatk2xbp"]
 
-[ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_pbjcg"]
+[ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_4iqxg"]
+[ext_resource type="Texture2D" uid="uid://cq4m8nrxghpfi" path="res://microjogos/2025S1/thaymoz_gamelab/Capa intensivao.png" id="1_w0fiu"]
 
 [resource]
-script = ExtResource("1_pbjcg")
-title_pt = &"TÍTULO DO JOGO"
+script = ExtResource("1_4iqxg")
+cover = ExtResource("1_w0fiu")
+title_pt = &"Gugu Gamux"
 title_en = &"GAME TITLE"
-credits_pt = "Créditos do jogo"
+credits_pt = "Programação e arte feitas por mim (Timo)
+Agradecimentos a equipe da Gamux que auxiliou no desenvolvimento do jogo
+
+Fonte foi retirada de um outro jogo jda moraguma verificar o creditos.txt do meu projeto"
 credits_en = "Game crédits"
-start_message_pt = &"FAÇA ALGO!"
+start_message_pt = &"ENCHA!"
 start_message_en = &"DO SOMETHING!"
-difficulty = 0
+difficulty = 3
