@@ -2,12 +2,13 @@
 
 [ext_resource type="Shader" uid="uid://cu83nvshfiplr" path="res://microjogos/2025S1/gamuto_snap/cenas/shaders/gamutos.gdshader" id="1_3pnec"]
 [ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="1_eju3l"]
-[ext_resource type="Script" uid="uid://c0cvhjqkyktdt" path="res://microjogos/2025S1/gamuto_snap/cenas/gamutos.gd" id="1_kkape"]
+[ext_resource type="Script" uid="uid://c0cvhjqkyktdt" path="res://microjogos/2025S1/gamuto_snap/cenas/scripts/gamutos.gd" id="1_kkape"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hu13g"]
 radius = 114.004
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kkape"]
+resource_local_to_scene = true
 shader = ExtResource("1_3pnec")
 shader_parameter/power = Vector2(0, 0)
 shader_parameter/color = Color(1, 1, 1, 1)
