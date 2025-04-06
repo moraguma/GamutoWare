@@ -62,11 +62,12 @@ func _ready():
 			NotificationCenter.notify("FAÇA ALGO!")
 	
 	randomize()
-	var musica = perguntas.values()[randi() % 4]
-	var num_pergunta = musica.keys()[randi() % 4]
-	var num_resposta =	musica[num_pergunta][randi() % 4]
-	var shuffled_respostas = musica[perguntas].duplicate()
+	var musica_Escolhida = perguntas[musicas[randi() % musicas.size()]] #Escolhe uma das músicas aleatoriamente
+	var num_pergunta = musica_Escolhida.keys()[randi() % musica_Escolhida.size()]
+	var respostas =	musica_Escolhida[num_pergunta] #Obtém as respostas dessa pergunta
+	var shuffled_respostas = respostas.duplicate() #Cria uma cópia das respostas
 	shuffled_respostas.shuffle()
+	
 	for i in range(4):
 		lista[i].text = shuffled_respostas[i]
 	
