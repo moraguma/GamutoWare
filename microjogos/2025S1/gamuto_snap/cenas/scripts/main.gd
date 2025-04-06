@@ -23,13 +23,9 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
+			NotificationCenter.notify("SNAP SOME PICS!")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FAÇA ALGO!")
-			
-	var spawn_markers : Array = $spawnPoints.get_children()
-	var selected_spawn : Marker2D = spawn_markers[randi() % spawn_markers.size()]
-	player.position = selected_spawn.position
+			NotificationCenter.notify("TIRE UMAS FOTOS!")
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
