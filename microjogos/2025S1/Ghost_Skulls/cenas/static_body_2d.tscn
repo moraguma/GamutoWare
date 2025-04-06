@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bero7f0qf75tr"]
+
+[ext_resource type="Texture2D" uid="uid://r4ycgph5qygn" path="res://microjogos/2025S1/Ghost_Skulls/pixilart-drawing(1).png" id="1_qy7ii"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fgvfp"]
+size = Vector2(1916.5, 203.625)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-22, 304)
+shape = SubResource("RectangleShape2D_fgvfp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3, 16)
+scale = Vector2(6.37917, 5.23417)
+texture = ExtResource("1_qy7ii")

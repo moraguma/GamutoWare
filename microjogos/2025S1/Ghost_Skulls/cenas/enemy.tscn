@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsw11gdy78830"]
+
+[ext_resource type="Texture2D" uid="uid://djqldd5ujxs3" path="res://microjogos/2025S1/Ghost_Skulls/enemy_tapaburaco.jpg" id="1_hpr48"]
+[ext_resource type="Script" uid="uid://buvxuoawdeivi" path="res://microjogos/2025S1/Ghost_Skulls/cenas/scripts/enemy.gd" id="1_xfu24"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xfu24"]
+radius = 103.0
+height = 206.0
+
+[node name="Enemy" type="Area2D"]
+script = ExtResource("1_xfu24")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(5.00002, 2)
+scale = Vector2(0.255503, 0.22)
+texture = ExtResource("1_hpr48")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -3)
+shape = SubResource("CapsuleShape2D_xfu24")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
