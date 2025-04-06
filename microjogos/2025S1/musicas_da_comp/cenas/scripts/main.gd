@@ -48,8 +48,11 @@ const perguntas = {
 			"Na sala ou no ... no ... ou no ...": ["Quarto... beco... carro", "Beco... carro... quarto", "Quarto... prédio... mato", "Mato... prédio... quarto"],
 			"Dei um fim na relação, você não acreditou por ... o amor acabou": ["Causa de traição", "Uma decepção", "Negação", "Causa do 100nossão"],
 			"E a cada acelerada é um tipo de risada ...": ["Vrau-vrau-vrau, ho-ho-ho, ha-ha-ha, bololo", "Ha-ha-ha, ho-ho-ho, vrau-vrau-vrau, bololo", "Vrau-vrau-vrau, bololo, ha-ha-ha, ho-ho-ho", "Ha-ha-ha, bololo, vrau-vrau-vrau, ho-ho-ho"]
+		},
+	"a": 
+		{
+			"AAAAAAAAAAAAAAAAAAAAA...": ["AAAAAAAAAA", "arrrrrrrr", "Tanto querer", "*respira*"]
 		}
-	
 }
 
 var musicas = ["corpo_Nu", "renata", "ragatanga", "madagascar", "shake_it_bololo"]
@@ -69,19 +72,15 @@ var active = true
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
 	$PanelContainer/MarginContainer/GridContainer/Pergunta1.grab_focus()
-	
-	
-	#for i in lista:
-		#i.autowrap = true
-		#i.rect_min_size = Vector2(200,60)
+
 	
 	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("COMP SONGS!")
+			NotificationCenter.notify("COMPETE THE COMP SONG!")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("MÚSICAS DA COMP!")
+			NotificationCenter.notify("COMPLETE A MÚSICA DA COMP!")
 	
 	randomize()
 	var musica_Escolhida = perguntas[musicas[randi() % musicas.size()]] #Escolhe uma das músicas aleatoriamente
