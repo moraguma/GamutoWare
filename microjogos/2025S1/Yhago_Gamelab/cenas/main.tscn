@@ -142,7 +142,7 @@ texture = ExtResource("2_hwq0u")
 position = Vector2(960, 820)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_wqsqo")
-frame_progress = 0.265212
+frame_progress = 0.555758
 
 [node name="AnimVara" type="AnimatedSprite2D" parent="."]
 position = Vector2(630, 531)
