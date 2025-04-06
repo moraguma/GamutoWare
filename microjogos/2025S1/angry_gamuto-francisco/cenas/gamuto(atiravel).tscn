@@ -1,25 +1,102 @@
-[gd_scene load_steps=4 format=3 uid="uid://bct0x5bt3npp1"]
+[gd_scene load_steps=16 format=3 uid="uid://bct0x5bt3npp1"]
 
-[ext_resource type="Script" uid="uid://cc3h4q3ywlo8m" path="res://microjogos/2025S1/angry_gamuto-francisco/cenas/character_body_2d.gd" id="1_k0n2i"]
+[ext_resource type="Script" uid="uid://cc3h4q3ywlo8m" path="res://microjogos/2025S1/angry_gamuto-francisco/cenas/scripts/character_body_2d.gd" id="1_k0n2i"]
 [ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="2_uaa8c"]
+[ext_resource type="Script" uid="uid://jspfgfiuwwmf" path="res://microjogos/2025S1/angry_gamuto-francisco/cenas/scripts/pivot.gd" id="3_k0n2i"]
+[ext_resource type="Texture2D" uid="uid://bncqstglhuuwh" path="res://microjogos/2025S1/angry_gamuto-francisco/New Piskel (1).png" id="4_l07f2"]
+[ext_resource type="Script" uid="uid://pb55jb4lqtyr" path="res://microjogos/2025S1/angry_gamuto-francisco/cenas/scripts/node_2d.gd" id="4_qax8q"]
+[ext_resource type="Texture2D" uid="uid://dhbnqlcyd16qj" path="res://microjogos/2025S1/angry_gamuto-francisco/recursos/imagens/gradiente de cors.png" id="4_u8ujh"]
+[ext_resource type="Texture2D" uid="uid://dwkb8dyo7wt7j" path="res://microjogos/2025S1/angry_gamuto-francisco/recursos/imagens/barrabranca.png" id="5_qax8q"]
+[ext_resource type="Script" uid="uid://cvf5nudbpmb3" path="res://microjogos/2025S1/angry_gamuto-francisco/cenas/scripts/sprite_2d.gd" id="6_uu05x"]
+[ext_resource type="Script" uid="uid://cfqjqle6tks7y" path="res://microjogos/2025S1/angry_gamuto-francisco/cenas/scripts/animation_player.gd" id="8_uu05x"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k0n2i"]
-radius = 64.0
-height = 128.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_u8ujh"]
+radius = 72.0
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="Animation" id="Animation_lafyv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(264, 24)]
+}
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[sub_resource type="Animation" id="Animation_l07f2"]
+resource_name = "new_animation"
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(-430, 180)
+[sub_resource type="Animation" id="Animation_dak52"]
+resource_name = "new_animation_2"
+
+[sub_resource type="Animation" id="Animation_exs7v"]
+resource_name = "new_animation_3"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(264, 24), Vector2(264, -72), Vector2(264, 24)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7ux68"]
+_data = {
+&"RESET": SubResource("Animation_lafyv"),
+&"new_animation": SubResource("Animation_l07f2"),
+&"new_animation_2": SubResource("Animation_dak52"),
+&"new_animation_3": SubResource("Animation_exs7v")
+}
+
+[node name="Player" type="RigidBody2D" groups=["player"]]
+gravity_scale = 0.0
 script = ExtResource("1_k0n2i")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(-182, 47)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_u8ujh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2.96875, 2.65625)
 texture = ExtResource("2_uaa8c")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(-183, 45)
-shape = SubResource("CapsuleShape2D_k0n2i")
+[node name="Pivot" type="RigidBody2D" parent="."]
+mass = 0.001
+gravity_scale = 0.0
+angular_velocity = 0.523599
+angular_damp_mode = 1
+script = ExtResource("3_k0n2i")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pivot"]
+position = Vector2(0, -152)
+texture = ExtResource("4_l07f2")
+
+[node name="Node2D" type="Node2D" parent="."]
+visible = false
+script = ExtResource("4_qax8q")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+position = Vector2(264, 16)
+texture = ExtResource("4_u8ujh")
+script = ExtResource("6_uu05x")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D"]
+position = Vector2(264, 24)
+texture = ExtResource("5_qax8q")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/Sprite2D3"]
+deterministic = true
+libraries = {
+&"": SubResource("AnimationLibrary_7ux68")
+}
+script = ExtResource("8_uu05x")

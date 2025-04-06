@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="MicrogameAsset" load_steps=2 format=3 uid="uid://dk8tqf26ybl3y"]
 
-[ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_q3ov2"]
+[ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://microjogos/2025S1/angry_gamuto-francisco/microgame_asset.gd" id="1_q3ov2"]
 
 [resource]
 script = ExtResource("1_q3ov2")
