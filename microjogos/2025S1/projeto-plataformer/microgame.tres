@@ -22,4 +22,4 @@ Victory effect: spuispuin"
 start_message_pt = &"TENTE!"
 start_message_en = &"TRY!"
 main_scene = ExtResource("1_7l7aa")
-difficulty = 6
+difficulty = 8
