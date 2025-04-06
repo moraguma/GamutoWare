@@ -1,13 +1,19 @@
-[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=2 format=3 uid="uid://ja0w4c01roxa"]
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=3 format=3 uid="uid://ja0w4c01roxa"]
 
+[ext_resource type="PackedScene" uid="uid://bk7nlchnxeavs" path="res://microjogos/2025S1/projeto-plataformer/cenas/main.tscn" id="1_7l7aa"]
 [ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_v6eee"]
 
 [resource]
 script = ExtResource("1_v6eee")
-title_pt = &"TÍTULO DO JOGO"
-title_en = &"GAME TITLE"
-credits_pt = "Créditos do jogo"
-credits_en = "Game crédits"
-start_message_pt = &"FAÇA ALGO!"
-start_message_en = &"DO SOMETHING!"
-difficulty = 0
+title_pt = &"Cavalheiro Estrelado"
+title_en = &"Starry Knight"
+credits_pt = "Assets do cenário: David G
+Assets do cavalheiro: Mattz Art
+Estrela: TotusLotus "
+credits_en = "Dungeon Assets: David G
+Knight Assets: Mattz Art
+Star Asset: TotusLotus "
+start_message_pt = &"TENTE!"
+start_message_en = &"TRY!"
+main_scene = ExtResource("1_7l7aa")
+difficulty = 6
