@@ -68,18 +68,21 @@ func _physics_process(delta):
 	if(Input.is_action_just_pressed("direita")):
 		$"porta-direita/portadir".play("porta_fechando")
 		if(porta_demonio == 1):
+			porta_demonio = -1
 			morte.stop()
 			tempo.start()
 		bump.play()
 	if(Input.is_action_just_pressed("esquerda")):
 		$"porta-esquerda/portaesq".play("porta_fechando")
 		if(porta_demonio == 0):
+			porta_demonio = -1
 			morte.stop()
 			tempo.start()
 		bump.play()
 	if(Input.is_action_just_pressed("cima")):
 		$"porta-frente/portafrente".play("porta_fechando")
 		if(porta_demonio == 2):
+			porta_demonio = -1
 			morte.stop()
 			tempo.start()
 		bump.play()
