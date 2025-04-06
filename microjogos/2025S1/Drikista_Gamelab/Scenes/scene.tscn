@@ -1,0 +1,114 @@
+[gd_scene load_steps=10 format=3 uid="uid://c1dssl3gprxqx"]
+
+[ext_resource type="Script" uid="uid://cc1qravq8w8jd" path="res://microjogos/2025S1/Drikista_Gamelab/Scenes/scene.gd" id="1_fyw77"]
+[ext_resource type="PackedScene" uid="uid://u1sdttsqwxr7" path="res://microjogos/2025S1/Drikista_Gamelab/Insects/moving_insects_moskito.tscn" id="1_pnfsi"]
+[ext_resource type="PackedScene" uid="uid://cs0npkpprcrrh" path="res://microjogos/2025S1/Drikista_Gamelab/Insects/moving_insects_beetle.tscn" id="2_2ilom"]
+[ext_resource type="Texture2D" uid="uid://cwnjtucmdhpd0" path="res://microjogos/2025S1/Drikista_Gamelab/Sprites/background.png" id="2_2v8co"]
+[ext_resource type="PackedScene" uid="uid://ks30fbr2pbry" path="res://microjogos/2025S1/Drikista_Gamelab/Insects/moving_insects_moth.tscn" id="3_gn8ym"]
+[ext_resource type="Texture2D" uid="uid://dbm4b0m2dyyvs" path="res://microjogos/2025S1/Drikista_Gamelab/Sprites/arrow.png" id="4_ko4lu"]
+[ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="5_18q4f"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_2ilom"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nu0d0"]
+size = Vector2(40, 34)
+
+[node name="Scene" type="Node2D"]
+script = ExtResource("1_fyw77")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(960, 540)
+scale = Vector2(5, 5)
+texture = ExtResource("2_2v8co")
+
+[node name="Plate_moskito" type="Area2D" parent="."]
+
+[node name="spr_plate" type="Sprite2D" parent="Plate_moskito"]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(960, 275)
+scale = Vector2(174, 104.4)
+texture = SubResource("CanvasTexture_2ilom")
+
+[node name="col_plate" type="CollisionShape2D" parent="Plate_moskito"]
+position = Vector2(960, 275)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_nu0d0")
+
+[node name="Plate_beetle" type="Area2D" parent="Plate_moskito"]
+
+[node name="spr_plate" type="Sprite2D" parent="Plate_moskito/Plate_beetle"]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(960, 449)
+scale = Vector2(174, 104.4)
+texture = SubResource("CanvasTexture_2ilom")
+
+[node name="col_plate" type="CollisionShape2D" parent="Plate_moskito/Plate_beetle"]
+position = Vector2(960, 449)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_nu0d0")
+
+[node name="Plate_moth" type="Area2D" parent="Plate_moskito/Plate_beetle"]
+
+[node name="spr_plate" type="Sprite2D" parent="Plate_moskito/Plate_beetle/Plate_moth"]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(960, 623)
+scale = Vector2(174, 104.4)
+texture = SubResource("CanvasTexture_2ilom")
+
+[node name="col_plate" type="CollisionShape2D" parent="Plate_moskito/Plate_beetle/Plate_moth"]
+position = Vector2(960, 623)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_nu0d0")
+
+[node name="moving_insects_moskito" parent="." instance=ExtResource("1_pnfsi")]
+position = Vector2(621, 275)
+scale = Vector2(3, 3)
+
+[node name="moving_insects_beetle" parent="." instance=ExtResource("2_2ilom")]
+position = Vector2(621, 449)
+scale = Vector2(3, 3)
+
+[node name="moving_insects_moth" parent="." instance=ExtResource("3_gn8ym")]
+position = Vector2(621, 623)
+scale = Vector2(3, 3)
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="arrow_left" type="Sprite2D" parent="."]
+modulate = Color(0.647011, 0.201286, 1, 1)
+texture_filter = 1
+position = Vector2(1500, 275)
+rotation = -1.5708
+scale = Vector2(3, 3)
+texture = ExtResource("4_ko4lu")
+
+[node name="arrow_up" type="Sprite2D" parent="."]
+modulate = Color(0.647011, 0.201286, 1, 1)
+texture_filter = 1
+position = Vector2(1500, 449)
+scale = Vector2(3, 3)
+texture = ExtResource("4_ko4lu")
+
+[node name="arrow_right" type="Sprite2D" parent="."]
+modulate = Color(0.647011, 0.201286, 1, 1)
+texture_filter = 1
+position = Vector2(1500, 623)
+rotation = 1.5708
+scale = Vector2(3, 3)
+texture = ExtResource("4_ko4lu")
+
+[node name="Gamuto" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(825, 956)
+rotation = -1.5708
+scale = Vector2(8, 8)
+texture = ExtResource("5_18q4f")
+
+[connection signal="area_entered" from="Plate_moskito" to="moving_insects_moskito" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Plate_moskito" to="moving_insects_moskito" method="_on_plate_area_exited"]
+[connection signal="area_entered" from="Plate_moskito/Plate_beetle" to="moving_insects_beetle" method="_on_plate_beetle_area_entered"]
+[connection signal="area_exited" from="Plate_moskito/Plate_beetle" to="moving_insects_beetle" method="_on_plate_beetle_area_exited"]
+[connection signal="area_entered" from="Plate_moskito/Plate_beetle/Plate_moth" to="moving_insects_moth" method="_on_plate_moth_area_entered"]
+[connection signal="area_exited" from="Plate_moskito/Plate_beetle/Plate_moth" to="moving_insects_moth" method="_on_plate_moth_area_exited"]

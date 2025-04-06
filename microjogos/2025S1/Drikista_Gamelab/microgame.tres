@@ -4,10 +4,10 @@
 
 [resource]
 script = ExtResource("1_qf6b2")
-title_pt = &"TÍTULO DO JOGO"
+title_pt = &"MATE "
 title_en = &"GAME TITLE"
-credits_pt = "Créditos do jogo"
-credits_en = "Game crédits"
+credits_pt = "Drikista"
+credits_en = "Drikista"
 start_message_pt = &"FAÇA ALGO!"
 start_message_en = &"DO SOMETHING!"
 difficulty = 0
