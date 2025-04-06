@@ -24,7 +24,6 @@ expand_margin_right = 16.0
 expand_margin_bottom = 16.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pitoj"]
-texture = ExtResource("4_0onx8")
 
 [sub_resource type="Theme" id="Theme_7eqru"]
 Button/font_sizes/font_size = 64
@@ -59,6 +58,11 @@ anchor_bottom = 1.0
 offset_right = 1920.0
 grow_vertical = 2
 theme = SubResource("Theme_7eqru")
+
+[node name="Sprite2D" type="Sprite2D" parent="PanelContainer"]
+position = Vector2(892, 562)
+scale = Vector2(2.3828, 2.3828)
+texture = ExtResource("4_0onx8")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
 layout_mode = 2
@@ -125,6 +129,8 @@ focus_neighbor_right = NodePath("../Pergunta3")
 focus_neighbor_bottom = NodePath("../Pergunta2")
 mouse_filter = 2
 autowrap_mode = 3
+
+[node name="Musica1" type="AudioStreamPlayer" parent="."]
 
 [node name="Musica2" type="AudioStreamPlayer" parent="."]
 
