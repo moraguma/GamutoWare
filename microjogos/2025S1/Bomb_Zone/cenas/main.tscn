@@ -1,17 +1,143 @@
-[gd_scene load_steps=3 format=3 uid="uid://stlqu31l16x3"]
+[gd_scene load_steps=9 format=4 uid="uid://stlqu31l16x3"]
 
+[ext_resource type="Script" uid="uid://4o606y7qub6q" path="res://microjogos/2025S1/Bomb_Zone/cenas/main.gd" id="1_1vcbf"]
 [ext_resource type="PackedScene" uid="uid://20353fthsy75" path="res://microjogos/2025S1/Bomb_Zone/cenas/Background.tscn" id="1_e8j42"]
 [ext_resource type="PackedScene" uid="uid://b4a5d6str4bhj" path="res://microjogos/2025S1/Bomb_Zone/cenas/scripts/character_body_2d.tscn" id="2_blibq"]
+[ext_resource type="PackedScene" uid="uid://c5q2v52chfcnx" path="res://microjogos/2025S1/Bomb_Zone/cenas/scripts/explosion.tscn" id="3_0ohx1"]
+[ext_resource type="PackedScene" uid="uid://b6x1oc5gx1jnt" path="res://microjogos/2025S1/Bomb_Zone/cenas/scripts/bomb.tscn" id="4_1vcbf"]
+[ext_resource type="Script" uid="uid://b5wrxfkwemi1s" path="res://microjogos/2025S1/Bomb_Zone/cenas/scripts/bomb.gd" id="7_bmbal"]
+[ext_resource type="AudioStream" uid="uid://doxbs2aj2q0c4" path="res://microjogos/2025S1/Bomb_Zone/recursos/sons/jump_run_duck.wav" id="8_wc84h"]
+[ext_resource type="AudioStream" uid="uid://b1t25bvodjaff" path="res://microjogos/2025S1/Bomb_Zone/recursos/sons/win_sound.wav" id="9_ybj0s"]
 
 [node name="main" type="Node2D"]
 physics_interpolation_mode = 2
-position = Vector2(-32, -16)
+script = ExtResource("1_1vcbf")
 
 [node name="Background" parent="." instance=ExtResource("1_e8j42")]
+position = Vector2(425, 1039)
+scale = Vector2(4.5, 4.5)
+tile_map_data = PackedByteArray("AAAGAAIABQAAAAAAAAAAAP//CAAAAAAAAAABAP//CAABAAAAAAACAP//CAABAAAAAAADAP//CAABAAAAAAAEAP//CAABAAAAAAAFAP//CAABAAAAAAAGAP//CAABAAEAAAAAAP7/CAACAAAAAAAAAP3/CAAAAAEAAAAAAPz/CAAAAAEAAAAAAPv/CAAAAAEAAAAGAPv/CAAAAAEAAAAGAPz/CAAAAAEAAAAGAP3/CAAAAAEAAAAGAP7/CAACAAAAAAAAAPr/CAACAAEAAAAGAPr/CAACAAEAAAAGAPn/CAABAAEAAAAAAPn/CAAAAAAAAAABAPn/CAABAAAAAAACAPn/CAABAAAAAAADAPn/CAABAAAAAAAEAPn/CAABAAAAAAAFAPn/CAABAAAAAAABAPr/CAAAAAIAAAACAPv/CAAAAAIAAAACAPr/CAAAAAIAAAADAPr/CAAAAAIAAAADAPv/CAAAAAIAAAADAPz/CAAAAAIAAAADAP3/CAAAAAIAAAADAP7/CAAAAAIAAAAEAPr/CAAAAAIAAAAEAPv/CAAAAAIAAAAEAPz/CAAAAAIAAAAEAP3/CAAAAAIAAAAEAP7/CAAAAAIAAAAFAPr/CAAAAAIAAAAFAPv/CAAAAAIAAAAFAPz/CAAAAAIAAAAFAP3/CAAAAAIAAAAFAP7/CAAAAAIAAAABAPv/CAAAAAIAAAACAPz/CAAAAAIAAAACAP3/CAAAAAIAAAABAP3/CAAAAAIAAAABAP7/CAAAAAIAAAACAP7/CAAAAAIAAAA=")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_blibq")]
-position = Vector2(24, 16)
+[node name="ROBO" parent="." groups=["Player"] instance=ExtResource("2_blibq")]
+position = Vector2(931, 511)
+scale = Vector2(4.5, 4.5)
 
-[node name="Bomb" type="StaticBody2D" parent="."]
+[node name="Bomb" parent="." instance=ExtResource("4_1vcbf")]
+position = Vector2(631, 543)
+scale = Vector2(4.5, 4.5)
+script = ExtResource("7_bmbal")
 
-[node name="Explosion" type="Area2D" parent="."]
+[node name="Cool_Music" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(631, 543)
+scale = Vector2(4.5, 4.5)
+stream = ExtResource("8_wc84h")
+volume_db = 10.0
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_ybj0s")
+volume_db = 10.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="Bomb2" parent="." instance=ExtResource("4_1vcbf")]
+position = Vector2(920, 691)
+scale = Vector2(4.5, 4.5)
+script = ExtResource("7_bmbal")
+
+[node name="Bomb4" parent="." instance=ExtResource("4_1vcbf")]
+position = Vector2(1064, 258)
+scale = Vector2(4.5, 4.5)
+script = ExtResource("7_bmbal")
+
+[node name="Explosions" type="Node2D" parent="."]
+process_mode = 4
+visible = false
+
+[node name="Explosion" parent="Explosions" instance=ExtResource("3_0ohx1")]
+position = Vector2(1213, 251)
+scale = Vector2(4.5, 4.5)
+
+[node name="Explosion2" parent="Explosions" instance=ExtResource("3_0ohx1")]
+position = Vector2(647, 392)
+scale = Vector2(4.5, 4.5)
+
+[node name="Explosion3" parent="Explosions" instance=ExtResource("3_0ohx1")]
+position = Vector2(788, 532)
+scale = Vector2(4.5, 4.5)
+
+[node name="Explosion4" parent="Explosions" instance=ExtResource("3_0ohx1")]
+position = Vector2(644, 679)
+scale = Vector2(4.5, 4.5)
+
+[node name="Explosion5" parent="Explosions" instance=ExtResource("3_0ohx1")]
+position = Vector2(928, 675)
+scale = Vector2(4.5, 4.5)
+
+[node name="Explosion6" parent="Explosions" instance=ExtResource("3_0ohx1")]
+position = Vector2(645, 533)
+scale = Vector2(4.5, 4.5)
+
+[node name="Explosion7" parent="Explosions" instance=ExtResource("3_0ohx1")]
+position = Vector2(648, 251)
+scale = Vector2(4.5, 4.5)
+
+[node name="Explosion8" parent="Explosions" instance=ExtResource("3_0ohx1")]
+position = Vector2(784, 253)
+scale = Vector2(4.5, 4.5)
+
+[node name="Explosion9" parent="Explosions" instance=ExtResource("3_0ohx1")]
+position = Vector2(926, 250)
+scale = Vector2(4.5, 4.5)
+
+[node name="Explosion10" parent="Explosions" instance=ExtResource("3_0ohx1")]
+position = Vector2(1079, 393)
+scale = Vector2(4.5, 4.5)
+
+[node name="Explosion11" parent="Explosions" instance=ExtResource("3_0ohx1")]
+position = Vector2(646, 822)
+scale = Vector2(4.5, 4.5)
+
+[node name="Explosion12" parent="Explosions" instance=ExtResource("3_0ohx1")]
+position = Vector2(1071, 675)
+scale = Vector2(4.5, 4.5)
+
+[node name="Explosion13" parent="Explosions" instance=ExtResource("3_0ohx1")]
+position = Vector2(1082, 538)
+scale = Vector2(4.5, 4.5)
+
+[node name="Explosion14" parent="Explosions" instance=ExtResource("3_0ohx1")]
+position = Vector2(1210, 535)
+scale = Vector2(4.5, 4.5)
+
+[node name="Explosion15" parent="Explosions" instance=ExtResource("3_0ohx1")]
+position = Vector2(1069, 251)
+scale = Vector2(4.5, 4.5)
+
+[node name="Explosion16" parent="Explosions" instance=ExtResource("3_0ohx1")]
+position = Vector2(1073, 821)
+scale = Vector2(4.5, 4.5)
+
+[node name="Explosion17" parent="Explosions" instance=ExtResource("3_0ohx1")]
+position = Vector2(930, 390)
+scale = Vector2(4.5, 4.5)
+
+[node name="Explosion18" parent="Explosions" instance=ExtResource("3_0ohx1")]
+position = Vector2(926, 534)
+scale = Vector2(4.5, 4.5)
+
+[node name="Explosion19" parent="Explosions" instance=ExtResource("3_0ohx1")]
+position = Vector2(927, 821)
+scale = Vector2(4.5, 4.5)
+
+[node name="Explosion20" parent="Explosions" instance=ExtResource("3_0ohx1")]
+position = Vector2(1213, 681)
+scale = Vector2(4.5, 4.5)
+
+[node name="Explosion21" parent="Explosions" instance=ExtResource("3_0ohx1")]
+position = Vector2(784, 677)
+scale = Vector2(4.5, 4.5)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

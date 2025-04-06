@@ -1,11 +1,132 @@
-[gd_scene load_steps=2 format=3 uid="uid://b4a5d6str4bhj"]
+[gd_scene load_steps=23 format=3 uid="uid://b4a5d6str4bhj"]
+
+[ext_resource type="Texture2D" uid="uid://c5tveq2y1tums" path="res://microjogos/2025S1/Bomb_Zone/recursos/imagens/RoboD0000.png" id="1_7n8w1"]
+[ext_resource type="Script" uid="uid://n0gvtqca3pjp" path="res://microjogos/2025S1/Bomb_Zone/cenas/scripts/Robo.gd" id="1_hpsy4"]
+[ext_resource type="Texture2D" uid="uid://b6hdj4gmxa3t7" path="res://microjogos/2025S1/Bomb_Zone/recursos/imagens/RoboD0001.png" id="2_8ul8s"]
+[ext_resource type="Texture2D" uid="uid://ckw65d2m63kmv" path="res://microjogos/2025S1/Bomb_Zone/recursos/imagens/RoboD0002.png" id="3_jwxdu"]
+[ext_resource type="Texture2D" uid="uid://cyqsnkfngu6l8" path="res://microjogos/2025S1/Bomb_Zone/recursos/imagens/RoboD0003.png" id="4_2uar8"]
+[ext_resource type="Texture2D" uid="uid://blvcw8fuxqggo" path="res://microjogos/2025S1/Bomb_Zone/recursos/imagens/RoboR0000.png" id="6_71v6l"]
+[ext_resource type="Texture2D" uid="uid://br0hcntkxg5lx" path="res://microjogos/2025S1/Bomb_Zone/recursos/imagens/RoboR0001.png" id="7_4ahkh"]
+[ext_resource type="Texture2D" uid="uid://bq8rl5kel6d38" path="res://microjogos/2025S1/Bomb_Zone/recursos/imagens/RoboR0002.png" id="8_e0vqv"]
+[ext_resource type="Texture2D" uid="uid://85h1i773011x" path="res://microjogos/2025S1/Bomb_Zone/recursos/imagens/RoboR0003.png" id="9_miyrx"]
+[ext_resource type="Texture2D" uid="uid://bdfav0qfch3pb" path="res://microjogos/2025S1/Bomb_Zone/recursos/imagens/RoboL0000.png" id="10_mva1h"]
+[ext_resource type="Texture2D" uid="uid://2bv344rjs6bc" path="res://microjogos/2025S1/Bomb_Zone/recursos/imagens/RoboL0001.png" id="11_1pr3d"]
+[ext_resource type="Texture2D" uid="uid://c2jvh4ugtlid8" path="res://microjogos/2025S1/Bomb_Zone/recursos/imagens/RoboL0002.png" id="12_b8r6e"]
+[ext_resource type="Texture2D" uid="uid://c534jwfi3mqlv" path="res://microjogos/2025S1/Bomb_Zone/recursos/imagens/RoboL0003.png" id="13_nd1co"]
+[ext_resource type="Texture2D" uid="uid://coxsu8up7cogl" path="res://microjogos/2025S1/Bomb_Zone/recursos/imagens/RoboU0000.png" id="14_gdd3d"]
+[ext_resource type="Texture2D" uid="uid://c4rct0xmfbxhq" path="res://microjogos/2025S1/Bomb_Zone/recursos/imagens/RoboU0001.png" id="15_buavm"]
+[ext_resource type="Texture2D" uid="uid://jdlq8h2yqj2m" path="res://microjogos/2025S1/Bomb_Zone/recursos/imagens/RoboU0002.png" id="16_f70lr"]
+[ext_resource type="Texture2D" uid="uid://bxexi3l6hsa7o" path="res://microjogos/2025S1/Bomb_Zone/recursos/imagens/RoboU0003.png" id="17_y52f0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uwsgp"]
+size = Vector2(18, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7n8w1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7n8w1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8ul8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jwxdu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2uar8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tavwx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_71v6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4ahkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_e0vqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_miyrx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dxvy6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_mva1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1pr3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_b8r6e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_nd1co")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0fsca"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_gdd3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_buavm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_f70lr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_y52f0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="ROBO" type="CharacterBody2D"]
 motion_mode = 1
+platform_on_leave = 2
+script = ExtResource("1_hpsy4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_uwsgp")
 
-[node name="DownAnimation" type="AnimatedSprite2D" parent="."]
+[node name="Down" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7n8w1")
+
+[node name="Right" type="AnimatedSprite2D" parent="."]
+visible = false
+sprite_frames = SubResource("SpriteFrames_tavwx")
+frame = 2
+frame_progress = 0.131812
+
+[node name="Left" type="AnimatedSprite2D" parent="."]
+visible = false
+sprite_frames = SubResource("SpriteFrames_dxvy6")
+frame = 2
+frame_progress = 0.094578
+
+[node name="Up" type="AnimatedSprite2D" parent="."]
+visible = false
+sprite_frames = SubResource("SpriteFrames_0fsca")
+frame = 2
+frame_progress = 0.993164
