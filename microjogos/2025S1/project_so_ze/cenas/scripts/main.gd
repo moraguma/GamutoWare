@@ -65,8 +65,7 @@ func my_method():
 # Chame esta função para registrar que o jogador venceu o jogo
 func register_win():
 	emit_signal("win")
-
-
+		
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
 	emit_signal("lose")
