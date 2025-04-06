@@ -1,4 +1,11 @@
-[gd_scene format=3 uid="uid://b0h0y05nrtbng"]
+[gd_scene load_steps=2 format=3 uid="uid://b0h0y05nrtbng"]
+
+[ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="1_wyvpf"]
 
 [node name="Main" type="Node2D"]
 texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(85, 17)
+scale = Vector2(2.0625, 2.07813)
+texture = ExtResource("1_wyvpf")
