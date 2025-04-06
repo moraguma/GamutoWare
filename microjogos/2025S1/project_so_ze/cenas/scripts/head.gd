@@ -8,7 +8,6 @@ func _process(delta: float) -> void:
 		get_node("../").head = true
 		get_node("../").randomized_index += 1
 		get_node("../AnimationHead").play("teste")
-		frame = 5
 	elif Input.is_action_just_pressed("cima") and get_node("../").randomized_index != get_node("../").head_index:
 		get_node("../").fail = true
 		get_node("../Fail").show()

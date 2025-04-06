@@ -357,7 +357,7 @@ hframes = 6
 script = ExtResource("6_263ix")
 
 [node name="Legs" type="Sprite2D" parent="."]
-position = Vector2(951, 541)
+position = Vector2(952, 541)
 texture = ExtResource("10_r6htq")
 hframes = 6
 script = ExtResource("7_ksfxt")
