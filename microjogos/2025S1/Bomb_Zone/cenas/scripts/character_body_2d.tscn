@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4a5d6str4bhj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uwsgp"]
+
+[node name="ROBO" type="CharacterBody2D"]
+motion_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_uwsgp")
+
+[node name="DownAnimation" type="AnimatedSprite2D" parent="."]
