@@ -67,6 +67,21 @@ func get_spawn_points():
 				
 		# Remove a posição já escolhida para não ter repetição
 		spawns.remove_at(selected_spawn_index)
+	
+	# Chama a função para deletar os Gamutos que não foram escolhidos
+	remove_others(spawns)
+
+# Função que deleta os Gamutos que não foram aleatoriamente escolhidos no começo 
+func remove_others(spawns : Array):
+	# Percorre o array com os Markers restantes
+	for marker : Marker2D in spawns:
+		match marker.position:
+			gamuto1.position:
+				gamuto1.queue_free()
+			gamuto2.position:
+				gamuto2.queue_free()
+			gamuto3.position:
+				gamuto3.queue_free()
 
 # --------------------------------------------------------------------------------------------------
 # CONDIÇÕES DE VITÓRIA
