@@ -1,5 +1,25 @@
 extends Node2D
+@onready var _animated_sprite = $Beaver/AnimationPlayer
+@onready var Bola = $Gamutobola/AnimationPlayer
+@onready var Introduction = $Introduction/IndroductionA
+@export var speed = 400
+var timer
+var sentido
+var rng = RandomNumberGenerator.new()
 
+var x_range = range(0, 1627)
+var y_range = range(661, 811)
+
+var velocity = Vector2(0, 0)
+
+func get_input():
+	var input_direction = Input.get_vector("esquerda","direita","cima","baixo")
+	velocity = input_direction * speed
+	
+func _input(event):
+	if event.is_action_pressed("goto.butt"):
+		$Introduction.visible = not $Introduction.visible
+	
 # Declaração dos sinais win e lose
 
 signal win
@@ -19,27 +39,57 @@ const HEIGHT = 1080
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
+	sentido = rng.randi() % 2
 	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
+	timer = get_node("Timer")
+	timer.start(6)
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
+			NotificationCenter.notify("HIT THE BALL!!")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FAÇA ALGO!")
+			NotificationCenter.notify("REBATA A BOLA!")
 
-
+	var Beaver = get_node("Beaver")
+	Bola.play("Pular")
+	Introduction.play("Sair")
+	
+		
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
 # a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
 # a última chamada desta função. O comando pass não faz nada
 func _physics_process(delta):
-	pass
+	var Beaver = get_node("Beaver")
+	get_input()
+	Beaver.position += velocity * delta
+	
+	#if int(Beaver.position[0]) in range(304, 1627) and int(Beaver.position[1]) in range(661,811):
+	#eaver.position += velocity * delta
+#Beaver.position.x = clamp(Beaver.position.x, x_range[0], x_range[-1])
+#Beaver.position.y = clamp(Beaver.position.y, y_range[0], y_range[-1])
+	#else:
+		#velocity = 0
+	
+	var velocity2 = Vector2(200,0)
+	if sentido == 0:
+		$Gamutobola/Bola.position += velocity2 * delta
+	else:
+		$Gamutobola/Bola.position -= velocity2 * delta
+	
+	
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a renderização, 
 # como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
 # desde a última chamada desta função. O comando pass não faz nada
 func _process(delta):
-	pass
+	if Input.is_action_pressed("direita"):
+		_animated_sprite.play("Right")
+	elif Input.is_action_pressed("esquerda"):
+		_animated_sprite.play("Left")
+	else:
+		_animated_sprite.play("Static")
+		
 
 
 # --------------------------------------------------------------------------------------------------
@@ -70,3 +120,10 @@ func register_win():
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
 	emit_signal("lose")
+
+
+func _on_beaver_area_entered(area: Area2D): #-> void:
+	Bola.play("Rebater")
+	register_win()
+	
+	 # Replace with function body.

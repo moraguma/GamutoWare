@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmvcr65q3nm5u"
-path="res://.godot/imported/capa.png-f8b8de85d5e689bc5dab592d58bdaf9e.ctex"
+uid="uid://bf3xyn4x40ggk"
+path="res://.godot/imported/1743958297968.png-d12b494ea74bbdde861d812ff5cc1d1f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/BeaverGames_Tereza/capa.png"
-dest_files=["res://.godot/imported/capa.png-f8b8de85d5e689bc5dab592d58bdaf9e.ctex"]
+source_file="res://microjogos/2025S1/BeaverGames_Tereza/recursos/imagens/1743958297968.png"
+dest_files=["res://.godot/imported/1743958297968.png-d12b494ea74bbdde861d812ff5cc1d1f.ctex"]
 
 [params]
 
