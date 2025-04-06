@@ -155,5 +155,4 @@ func register_lose():
 
 
 func _on_goal_body_entered(body: Node2D) -> void:
-	print("YOU WIN!!!")
 	register_win()
