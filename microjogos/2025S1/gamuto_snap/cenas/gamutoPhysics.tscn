@@ -8,6 +8,7 @@ radius = 95.0
 
 [node name="GamutoPhysics" type="RigidBody2D"]
 linear_velocity = Vector2(0, -500)
+angular_velocity = 0.174533
 script = ExtResource("1_dvsof")
 
 [node name="gamutoPhysicsSprite" type="Sprite2D" parent="."]
