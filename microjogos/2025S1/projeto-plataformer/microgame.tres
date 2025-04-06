@@ -7,10 +7,12 @@
 script = ExtResource("1_v6eee")
 title_pt = &"Cavalheiro Estrelado"
 title_en = &"Starry Knight"
-credits_pt = "Assets do cenário: David G
+credits_pt = "Desenvolvido por: Ricardo Emanuel
+Assets do cenário: David G
 Assets do cavalheiro: Mattz Art
 Estrela: TotusLotus "
-credits_en = "Dungeon Assets: David G
+credits_en = "Developed by: Ricardo Emanuel
+Dungeon Assets: David G
 Knight Assets: Mattz Art
 Star Asset: TotusLotus "
 start_message_pt = &"TENTE!"
