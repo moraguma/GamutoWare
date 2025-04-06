@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://bfwsayxbk75mm"]
+
+[ext_resource type="Script" uid="uid://cbbkl2dxm3og3" path="res://microjogos/2025S1/gamuto_petpet/cenas/scripts/gamuto.gd" id="1_2a8sa"]
+[ext_resource type="Texture2D" uid="uid://dicvgma08keh3" path="res://microjogos/2025S1/gamuto_petpet/recursos/imagens/gamutotriste1.png" id="2_rlplr"]
+[ext_resource type="Texture2D" uid="uid://lcwrh5miarjp" path="res://microjogos/2025S1/gamuto_petpet/recursos/imagens/gamutotriste2.png" id="3_amd7b"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rlplr"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("2_rlplr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_amd7b")
+}],
+"loop": true,
+"name": &"crying",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3x7b6"]
+radius = 3.92477
+height = 8.31933
+
+[node name="gamuto" type="Area2D"]
+script = ExtResource("1_2a8sa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_rlplr")
+animation = &"crying"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, 16)
+scale = Vector2(46.8817, 40.3878)
+shape = SubResource("CapsuleShape2D_3x7b6")
