@@ -43,6 +43,7 @@ func _process(delta: float) -> void:
 		
 			
 	if len(dados) == 0:
+		dadometro.hide()
 		get_parent().get_parent().register_win()
 		pode_mexer = false
 

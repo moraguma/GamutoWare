@@ -197,7 +197,7 @@ script = ExtResource("1_mkbwt")
 [node name="Tabuleiro" type="AnimatedSprite2D" parent="."]
 position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_etbqd")
-frame_progress = 0.0130384
+frame_progress = 0.463792
 script = ExtResource("3_33gw0")
 
 [node name="dadometro" type="AnimatedSprite2D" parent="."]
