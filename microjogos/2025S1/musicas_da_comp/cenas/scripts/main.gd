@@ -124,7 +124,7 @@ func _process(delta):
 
 func pergunta_pressed(pergunta) -> void:
 	$PanelContainer.queue_free()
-	if(musica_Escolhida.get(pergunta_escolhida)[0] == pergunta.text):
+	if(musica_Escolhida.get(pergunta_escolhida)[0] == pergunta.text) || pergunta.text == "O Saia" || pergunta.text == "*respira*":
 		$VDC_Feliz.visible = true
 		emit_signal("win")
 	else:
