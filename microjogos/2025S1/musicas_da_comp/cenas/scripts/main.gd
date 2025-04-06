@@ -121,10 +121,9 @@ func _process(delta):
 	pass
 
 func pergunta_pressed(pergunta) -> void:
-	print(pergunta.text)
-
-	print(pergunta_escolhida)
-	
+	$PanelContainer.queue_free()
 	if(musica_Escolhida.get(pergunta_escolhida)[0] == pergunta.text):
-		$PanelContainer.queue_free()
 		$VDC_Feliz.visible = true
+	else:
+		$VDC_Tristes.visible = true
+		
