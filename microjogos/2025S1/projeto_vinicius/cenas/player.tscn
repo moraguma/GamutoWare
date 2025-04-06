@@ -5,16 +5,17 @@
 
 [node name="Node2D" type="Node2D"]
 
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = -1.0
+offset_top = 621.0
+offset_right = 1922.0
+offset_bottom = 664.0
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="ColorRect2"]
+
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
-
-[node name="AnimatableBody2D" type="AnimatableBody2D" parent="ColorRect"]
-position = Vector2(0, 1037)
-
-[node name="ColorRect2" type="ColorRect" parent="ColorRect/AnimatableBody2D"]
-offset_right = 1913.0
-offset_bottom = 43.0
 
 [node name="(background-coffee)pixel-art-illustration-coffeeshop-background-pixelated-cafe-cozy-coffeeshop-cafe-background-pixelated-for-the-pixel-art-game-and-icon-for-website-and-video-game-old-school-retro-vector" type="Sprite2D" parent="ColorRect"]
 editor_description = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vecteezy.com%2Fvector-art%2F36155331-pixel-art-illustration-coffeeshop-background-pixelated-cafe-cozy-coffeeshop-cafe-background-pixelated-for-the-pixel-art-game-and-icon-for-website-and-video-game-old-school-retro&psig=AOvVaw2j39hyLbEVPEhIn8GoIUgx&ust=1743976169640000&source=images&cd=vfe&opi=89978449&ved=2ahUKEwiW5vzR78GMAxV9N7kGHTj5CqMQjRx6BAgAEBk"
