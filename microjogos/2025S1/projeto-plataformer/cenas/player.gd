@@ -1,10 +1,10 @@
 extends CharacterBody2D
 
 
-var jump_speed = 250.0
+var jump_speed = 265.0
 var gravity = 9.0
-var acceleration = 15.0
-var final_velocity = 75.0
+var acceleration = 100.0
+var final_velocity = 200.0
 var array
 var animation_player
 var sprite
@@ -42,14 +42,22 @@ func _physics_process(delta):
 	if Input.is_action_pressed("direita"):
 		sprite.flip_h = false
 		animation_player.play("run")
+		if velocity.x < 0:
+			velocity.x = 0
 		if velocity.x < final_velocity:
-			velocity.x += acceleration
+			velocity.x += acceleration * delta
+		else:
+			velocity.x = final_velocity
 	
 	elif Input.is_action_pressed("esquerda"):
 		sprite.flip_h = true
 		animation_player.play("run")
+		if velocity.x > 0:
+			velocity.x = 0
 		if velocity.x > -final_velocity:
-			velocity.x -= acceleration
+			velocity.x -= acceleration * delta
+		else:
+			velocity.x = -final_velocity
 	
 	if is_on_floor() and Input.is_action_pressed("acao"):
 		velocity.y -= jump_speed
@@ -76,4 +84,5 @@ func _on_estrela_body_entered(body: Node2D) -> void:
 
 func _on_timer_timeout() -> void:
 	if won == 0.0:
+		print("perdi")
 		parent.register_lose()
