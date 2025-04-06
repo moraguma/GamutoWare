@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cocckxoolwfwh"]
+
+[ext_resource type="Texture2D" uid="uid://83i685dpkq4y" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/poção 2 - teste.png" id="1_tvi21"]
+
+[node name="Pocao2r" type="TextureRect"]
+offset_right = 200.0
+offset_bottom = 200.0
+texture = ExtResource("1_tvi21")

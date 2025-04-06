@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvxmccsadwycq"]
+
+[ext_resource type="Texture2D" uid="uid://mf2koxn56aue" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/poção 1 - teste.png" id="1_sfbnm"]
+
+[node name="Sprite2D" type="TextureRect"]
+texture = ExtResource("1_sfbnm")
