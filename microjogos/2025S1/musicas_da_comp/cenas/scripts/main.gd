@@ -32,7 +32,7 @@ const perguntas = {
 		{
 			"E o DJ que já conhece ... pra Diego, a canção mais desejada" : ["Toca o som da meia-noite", "Vai tocando toda a noite", "Vai dançando lá no front", "Dedica à meia-noite"],
 			"Aserehe ra de re De hebe tu de hebere seibiunouba mahabi ...": ["An de bugui an de buididipi", "To the rhythm of the boogi, the beat", "Andebuggy Andebuggy Riby", "And the boogie and the boogie, the beat"],
-			"Não é por acaso que encontro todo dia ... caminhando": ["Cuando me voy", "Quando eu vou", "Quanto eu tô", "Enquando eu vou"],
+			"Não é por acaso que encontro todo dia ... caminhando": ["Cuando me voy", "Quando eu vou", "Quanto eu tô", "Enquanto eu vou"],
 			"Olha lá quem vem virando a esquina vem ... com toda a alegria, festejando": ["Diego", "Fernando", "Hermano", "Miguel"]
 		},
 	"madagascar":
@@ -64,10 +64,12 @@ var active = true
 @onready var madagascar = $Musica4
 @onready var shakeItBololo = $Musica5
 @onready var question = %Pergunta
-@export var lista: Array[Label]
+@onready var lista: Array = $PanelContainer/MarginContainer/GridContainer.get_children()
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
+	$PanelContainer/MarginContainer/GridContainer/Pergunta1.grab_focus()
+	
 	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
@@ -100,36 +102,7 @@ func _ready():
 		shakeItBololo.play()
 		
 func _process(delta):
-	if active:
-		if Input.is_action_just_pressed("cima"):
-			selection_Y -= 1
-			selection_Y %= 2
-		elif Input.is_action_just_pressed("baixo"):
-			selection_Y += 1
-			selection_Y %= 2
-		elif Input.is_action_just_pressed("direita"):
-			selection_X += 1
-			selection_X %= 2
-		elif Input.is_action_just_pressed("esquerda"):
-			selection_X -= 1
-			selection_X %= 2
-			
-		elif Input.is_action_just_pressed("acao"): #Aqui é o ponto de seleção da resposta
-			active = false
-			
-			if shuffled_respostas[select(selection_X, selection_Y)] == respostas[0]:
-				emit_signal("win")
-			else:
-				emit_signal("lose")
-			
+	pass
 
-func select(num_X, num_Y):
-	if (num_X + num_Y) == 1:
-		if num_X == 0:
-			return 2
-		else:
-			return 1
-	elif (num_X + num_Y) == 2:
-		return 3
-	else:
-		return 0
+func pergunta_pressed(num_pergunta: int) -> void:
+	pass
