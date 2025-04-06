@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b8updi1osiwne"]
+[gd_scene load_steps=17 format=3 uid="uid://b8updi1osiwne"]
 
 [ext_resource type="Script" uid="uid://doga4uw2uu7b1" path="res://microjogos/2025S1/musicas_da_comp/cenas/scripts/main.gd" id="1_hypu2"]
 [ext_resource type="FontFile" uid="uid://cuqd8akvxgs58" path="res://microjogos/2025S1/musicas_da_comp/Ldfcomicsans-jj7l.ttf" id="2_3qdev"]
@@ -6,6 +6,7 @@
 [ext_resource type="Theme" uid="uid://6nllk3n6j475" path="res://microjogos/2025S1/musicas_da_comp/recursos/new_theme.tres" id="3_pitoj"]
 [ext_resource type="Texture2D" uid="uid://dxtgy4cgsqxcq" path="res://microjogos/2025S1/musicas_da_comp/recursos/imagens/100NOSSAO.png" id="4_0onx8"]
 [ext_resource type="AudioStream" uid="uid://cea8hesmc8u6j" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Ragatanga.ogg" id="6_0onx8"]
+[ext_resource type="AudioStream" uid="uid://k37fq0c8cgxo" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Corpo Nu.ogg" id="6_pw2xx"]
 [ext_resource type="AudioStream" uid="uid://ch0iylke6dil" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Renata.ogg" id="6_q1754"]
 [ext_resource type="AudioStream" uid="uid://narf8ge8evym" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Madagascar.ogg" id="7_0g845"]
 [ext_resource type="AudioStream" uid="uid://cbnhji0ed46gx" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Shake It Bololo.ogg" id="8_q1754"]
@@ -132,6 +133,7 @@ mouse_filter = 2
 autowrap_mode = 3
 
 [node name="Musica1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_pw2xx")
 
 [node name="Musica2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_q1754")

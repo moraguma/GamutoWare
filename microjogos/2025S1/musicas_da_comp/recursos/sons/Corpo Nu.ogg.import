@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://k37fq0c8cgxo"
+path="res://.godot/imported/Corpo Nu.ogg-4e5052ce784970c3ae041fa6e9846cdf.oggvorbisstr"
+
+[deps]
+
+source_file="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Corpo Nu.ogg"
+dest_files=["res://.godot/imported/Corpo Nu.ogg-4e5052ce784970c3ae041fa6e9846cdf.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
