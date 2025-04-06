@@ -1,4 +1,23 @@
-[gd_scene format=3 uid="uid://bk7nlchnxeavs"]
+[gd_scene load_steps=5 format=3 uid="uid://bk7nlchnxeavs"]
+
+[ext_resource type="PackedScene" uid="uid://27mpwj25p8bl" path="res://microjogos/2025S1/projeto-plataformer/cenas/mapa.tscn" id="1_enm8k"]
+[ext_resource type="PackedScene" uid="uid://v8jttrvrrsx5" path="res://microjogos/2025S1/projeto-plataformer/cenas/player.tscn" id="2_1wgp2"]
+[ext_resource type="PackedScene" uid="uid://dmvafb620rp2r" path="res://microjogos/2025S1/projeto-plataformer/cenas/estrela.tscn" id="3_eeojv"]
+[ext_resource type="PackedScene" uid="uid://b4ck6qiv563g1" path="res://microjogos/2025S1/projeto-plataformer/cenas/porta.tscn" id="4_ng8s0"]
 
 [node name="Main" type="Node2D"]
 texture_filter = 1
+
+[node name="mapa" parent="." instance=ExtResource("1_enm8k")]
+
+[node name="Personagem" parent="." instance=ExtResource("2_1wgp2")]
+position = Vector2(-88, -19)
+
+[node name="Estrela" parent="." instance=ExtResource("3_eeojv")]
+position = Vector2(-86, -70)
+
+[node name="Porta" parent="." instance=ExtResource("4_ng8s0")]
+position = Vector2(-135, -16)
+
+[node name="Porta2" parent="." instance=ExtResource("4_ng8s0")]
+position = Vector2(39, 49)
