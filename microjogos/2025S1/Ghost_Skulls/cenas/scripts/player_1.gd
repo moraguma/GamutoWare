@@ -8,7 +8,8 @@ func _physics_process(delta: float) -> void:
 		velocity.x = 0
 	if Input.is_action_just_pressed("acao") and is_on_floor():
 		velocity.y = -700
-	velocity.y += 800 * delta
+	velocity.y += 1000 * delta
 	move_and_slide()
 	
-	
+func _ready():
+	$AudioStreamPlayer2D.play()

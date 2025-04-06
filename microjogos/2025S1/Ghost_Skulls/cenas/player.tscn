@@ -1,11 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5owtuda8e854"]
+[gd_scene load_steps=5 format=3 uid="uid://b5owtuda8e854"]
 
 [ext_resource type="Script" uid="uid://du8vbywfip4g1" path="res://microjogos/2025S1/Ghost_Skulls/cenas/scripts/player_1.gd" id="1_yaahk"]
-[ext_resource type="Texture2D" uid="uid://c1onj0018ye1j" path="res://microjogos/2025S1/Ghost_Skulls/pixilart-drawing.png" id="2_w0fj6"]
+[ext_resource type="Texture2D" uid="uid://c1onj0018ye1j" path="res://microjogos/2025S1/Ghost_Skulls/recursos/pixilart-drawing.png" id="2_w0fj6"]
+[ext_resource type="AudioStream" uid="uid://lsjvkijhcgw3" path="res://microjogos/2025S1/Ghost_Skulls/recursos/Áudio de Júlio (online-audio-converter.com).ogg" id="3_w0fj6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7u87t"]
-radius = 45.0
-height = 90.0
+radius = 38.0
+height = 76.0
 
 [node name="player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_yaahk")
@@ -15,6 +16,12 @@ position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_7u87t")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 5
 position = Vector2(2, 16)
 scale = Vector2(1.46773, 1.40781)
 texture = ExtResource("2_w0fj6")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_w0fj6")
+volume_db = 24.0
+autoplay = true

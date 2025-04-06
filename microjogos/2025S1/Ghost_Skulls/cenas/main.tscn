@@ -11,22 +11,23 @@
 script = ExtResource("1_soc2y")
 enemy = NodePath("Enemy")
 
-[node name="player" parent="." instance=ExtResource("2_fgvfp")]
-position = Vector2(1871, 820)
-
 [node name="StaticBody2D" parent="." instance=ExtResource("3_ly2dt")]
-position = Vector2(973, 677)
+texture_filter = 5
+position = Vector2(981, 670)
 
 [node name="Parede" parent="." instance=ExtResource("4_qqrtb")]
-position = Vector2(2, 2)
+position = Vector2(-19, 6)
 
 [node name="Parede2" parent="." instance=ExtResource("4_qqrtb")]
 position = Vector2(-2037, 6)
 
 [node name="Enemy" parent="." instance=ExtResource("5_1xknc")]
-position = Vector2(94, 760)
+position = Vector2(101, 690)
 
 [node name="Victory" parent="." instance=ExtResource("6_soc2y")]
-position = Vector2(115, 674)
+position = Vector2(120, 584)
+
+[node name="player" parent="." instance=ExtResource("2_fgvfp")]
+position = Vector2(1846, 746)
 
 [connection signal="body_entered" from="Victory" to="." method="_on_victory_body_entered"]

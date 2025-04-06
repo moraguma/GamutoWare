@@ -1,21 +1,24 @@
 [gd_scene load_steps=4 format=3 uid="uid://cw183iooix887"]
 
 [ext_resource type="Script" uid="uid://c7xp2ofarlfbp" path="res://microjogos/2025S1/Ghost_Skulls/cenas/scripts/projetil.gd" id="1_4i40w"]
-[ext_resource type="Texture2D" uid="uid://dnmavwi75grra" path="res://microjogos/2025S1/Ghost_Skulls/projetil_tapaburaco.jpg" id="1_75n1s"]
+[ext_resource type="Texture2D" uid="uid://cfhlnrq5ighn4" path="res://microjogos/2025S1/Ghost_Skulls/recursos/pixilart-drawing(1) (copy).png" id="2_4i40w"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_4i40w"]
-radius = 105.385
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xrvug"]
+radius = 62.0066
+height = 207.734
 
 [node name="Projetil" type="Area2D"]
 script = ExtResource("1_4i40w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 2)
-shape = SubResource("CircleShape2D_4i40w")
+position = Vector2(-12, 0)
+rotation = -1.56146
+shape = SubResource("CapsuleShape2D_xrvug")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-2, 3)
-scale = Vector2(0.12825, 0.132469)
-texture = ExtResource("1_75n1s")
+texture_filter = 5
+position = Vector2(28, 26)
+scale = Vector2(1.96936, 1.84489)
+texture = ExtResource("2_4i40w")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

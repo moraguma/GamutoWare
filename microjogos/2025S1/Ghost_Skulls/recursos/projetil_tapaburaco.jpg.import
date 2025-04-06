@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djqldd5ujxs3"
-path="res://.godot/imported/enemy_tapaburaco.jpg-488018eba687a68faf0da8b0e29d5fb2.ctex"
+uid="uid://dnmavwi75grra"
+path="res://.godot/imported/projetil_tapaburaco.jpg-bfc9d3330af1bb9827ce5f0353d2b9d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/Ghost_Skulls/enemy_tapaburaco.jpg"
-dest_files=["res://.godot/imported/enemy_tapaburaco.jpg-488018eba687a68faf0da8b0e29d5fb2.ctex"]
+source_file="res://microjogos/2025S1/Ghost_Skulls/recursos/projetil_tapaburaco.jpg"
+dest_files=["res://.godot/imported/projetil_tapaburaco.jpg-bfc9d3330af1bb9827ce5f0353d2b9d6.ctex"]
 
 [params]
 

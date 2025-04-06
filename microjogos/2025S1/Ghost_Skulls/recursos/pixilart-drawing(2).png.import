@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://88duiqvcppc4"
-path="res://.godot/imported/capa.png-47ea26af951f274774b439ad00fcaeed.ctex"
+uid="uid://2hcfjnamgqr3"
+path="res://.godot/imported/pixilart-drawing(2).png-c5228f29a07ec2832a853a497692d528.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/Ghost_Skulls/capa.png"
-dest_files=["res://.godot/imported/capa.png-47ea26af951f274774b439ad00fcaeed.ctex"]
+source_file="res://microjogos/2025S1/Ghost_Skulls/recursos/pixilart-drawing(2).png"
+dest_files=["res://.godot/imported/pixilart-drawing(2).png-c5228f29a07ec2832a853a497692d528.ctex"]
 
 [params]
 
