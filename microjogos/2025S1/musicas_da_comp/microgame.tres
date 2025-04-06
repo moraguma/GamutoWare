@@ -12,11 +12,13 @@ title_en = &"COMP SONGS"
 credits_pt = "Jogo por: Caio (Bugre)
 Músicas por: Salmuel (Okynaua) e Leo(LeonerdCDL), inspirado nas músicas da comp feitas em 8-bits
 Apoio: Felipe (Gayatto), Terada, Gustavo Gamux (Moraguma), Isael Gamux
-Participação especial: DJ VDC (Vídeo da Comp), 100nossão"
+Participação especial: DJ VDC (Vídeo da Comp), 100nossão
+Fonte: https://www.fontspace.com/ldfcomicsans-font-f16951	"
 credits_en = "A Game by: Caio (Bugre)
 Songs BY: Samuel (Okynaua) and Leo(LeonerdCDL), inspired in the comp songs made in 8-bits
 Support: Felipe (Gayatto), Terada, Gustavo Gamux (Moraguma), Isael Gamux
-Special Guests: DJ VDC (Video da Comp), 100nossão"
+Special Guests: DJ VDC (Video da Comp), 100nossão
+Font: https://www.fontspace.com/ldfcomicsans-font-f16951"
 start_message_pt = &"COMPLETE A MÚSICA DA COMP!"
 start_message_en = &"COMPLETE THE COMP SONG!"
 main_scene = ExtResource("2_afvcn")
