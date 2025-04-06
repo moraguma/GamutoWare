@@ -12,17 +12,7 @@ signal lose
 const WIDTH = 1920
 const HEIGHT = 1080
 
-const perguntas_Corpo_Nu = []
-const perguntas_Renata = []
-const perguntas_Ragatanga = []
-const perguntas_Madagascar = []
-
-#Dicionários para salvar as perguntas de cada música
-const corpo_Nu = {}
-const renata = {}
-const ragatanga = {}
-const madagascar = {}
-
+#Dicionário para relacionar a música com suas perguntas e respectivas respostas
 const perguntas = {
 	"corpo_Nu":
 		{
@@ -59,10 +49,6 @@ var musicas = ["corpo_Nu", "renata", "ragatanga", "madagascar"]
 var selection_X = 0
 var selection_Y = 0
 var active = true
-var up_left = ""
-var up_right = ""
-var down_left = ""
-var down_right = ""
 @export var lista: Array[Label]
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
@@ -76,47 +62,16 @@ func _ready():
 			NotificationCenter.notify("FAÇA ALGO!")
 	
 	randomize()
-	#var musica = perguntas.values()[randi() % 4]
-	var musica = musicas[randi() % 4]
+	var musica = perguntas.values()[randi() % 4]
 	var num_pergunta = musica.keys()[randi() % 4]
 	var num_resposta =	musica[num_pergunta][randi() % 4]
-	#var suffled_respostas = musica[pergunta].duplicate()
-	#suffled_respostas.shuffle()
-	#up_left = shuffled_resposta[0]
-	# for i in range(4):
-	# lista[i].text = shuffled_respostas[i]
-	match musica:
-		"corpo_Nu": 
-			up_left = corpo_Nu[perguntas_Corpo_Nu[num_pergunta]][num_resposta]
-			up_right = musica[perguntas_Corpo_Nu[(num_pergunta + 1) % 4]][(num_resposta + 1) % 4]
-			down_left = musica[perguntas_Corpo_Nu[(num_pergunta + 2) % 4]][(num_resposta + 2) % 4]
-			down_right = musica[perguntas_Corpo_Nu[(num_pergunta + 3) % 4]][(num_resposta + 3) % 4]
-		"renata":
-			up_left = corpo_Nu[perguntas_Renata[num_pergunta]][num_resposta]
-			up_right = musica[perguntas_Renata[(num_pergunta + 1) % 4]][(num_resposta + 1) % 4]
-			down_left = musica[perguntas_Renata[(num_pergunta + 2) % 4]][(num_resposta + 2) % 4]
-			down_right = musica[perguntas_Renata[(num_pergunta + 3) % 4]][(num_resposta + 3) % 4]
-		"ragatanga":	
-			up_left = corpo_Nu[perguntas_Ragatanga[num_pergunta]][num_resposta]
-			up_right = musica[perguntas_Ragatanga[(num_pergunta + 1) % 4]][(num_resposta + 1) % 4]
-			down_left = musica[perguntas_Ragatanga[(num_pergunta + 2) % 4]][(num_resposta + 2) % 4]
-			down_right = musica[perguntas_Ragatanga[(num_pergunta + 3) % 4]][(num_resposta + 3) % 4]
-		"madagascar":
-			up_left = corpo_Nu[perguntas_Madagascar[num_pergunta]][num_resposta]
-			up_right = musica[perguntas_Madagascar[(num_pergunta + 1) % 4]][(num_resposta + 1) % 4]
-			down_left = musica[perguntas_Madagascar[(num_pergunta + 2) % 4]][(num_resposta + 2) % 4]
-			down_right = musica[perguntas_Madagascar[(num_pergunta + 3) % 4]][(num_resposta + 3) % 4]
-			
+	var shuffled_respostas = musica[perguntas].duplicate()
+	shuffled_respostas.shuffle()
+	for i in range(4):
+		lista[i].text = shuffled_respostas[i]
 	
-	%Resposta1.text = up_left
-	%Resposta2.text = up_right
-	%Resposta3.text = down_left
-	%Resposta4.text = down_right
 	
 
-# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
-# a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
-# a última chamada desta função. O comando pass não faz nada
 func _process(delta):
 	if active:
 		if Input.is_action_just_pressed("cima"):
