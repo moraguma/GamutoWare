@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvdder12tkqcf"
-path="res://.godot/imported/flash.png-c6d1a0b2a218d906ea2aa0e0362b38d2.ctex"
+uid="uid://c8h3itjel18r2"
+path="res://.godot/imported/cave_background.png-e5c155407b38a1447b59a5af1fe2245a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/gamuto_snap/recursos/imagens/flash.png"
-dest_files=["res://.godot/imported/flash.png-c6d1a0b2a218d906ea2aa0e0362b38d2.ctex"]
+source_file="res://microjogos/2025S1/gamuto_snap/recursos/imagens/cave_background.png"
+dest_files=["res://.godot/imported/cave_background.png-e5c155407b38a1447b59a5af1fe2245a.ctex"]
 
 [params]
 

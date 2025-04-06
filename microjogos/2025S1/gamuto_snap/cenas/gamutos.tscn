@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://x6twngw4lu8i"]
 
 [ext_resource type="Shader" uid="uid://cu83nvshfiplr" path="res://microjogos/2025S1/gamuto_snap/cenas/shaders/gamutos.gdshader" id="1_3pnec"]
-[ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="1_eju3l"]
 [ext_resource type="Script" uid="uid://c0cvhjqkyktdt" path="res://microjogos/2025S1/gamuto_snap/cenas/scripts/gamuto_area.gd" id="2_j2cbt"]
+[ext_resource type="Texture2D" uid="uid://bpnelp20isimn" path="res://microjogos/2025S1/gamuto_snap/recursos/imagens/gamuto_sleep.png" id="3_kkape"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kkape"]
 resource_local_to_scene = true
@@ -21,8 +21,8 @@ script = ExtResource("2_j2cbt")
 
 [node name="gamutoAreaSprite" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_kkape")
-scale = Vector2(3, 3)
-texture = ExtResource("1_eju3l")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_kkape")
 offset = Vector2(0, 2)
 
 [node name="gamutoAreaCollision" type="CollisionShape2D" parent="."]

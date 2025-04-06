@@ -33,6 +33,7 @@ func _ready():
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("TIRE UMAS FOTOS!")
 	
+	$mainMusic.play()
 	# Chama a função para escolher os 2 pontos de spawn
 	get_spawn_points()
 

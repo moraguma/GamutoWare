@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwy0sdap2p4mf"
-path="res://.godot/imported/capa.png-8f39a44da6a93ade4f5bddd126bb9bf7.ctex"
+uid="uid://bpnelp20isimn"
+path="res://.godot/imported/gamuto_sleep.png-982038cc8960415860caa2defbc4dd70.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/gamuto_snap/capa.png"
-dest_files=["res://.godot/imported/capa.png-8f39a44da6a93ade4f5bddd126bb9bf7.ctex"]
+source_file="res://microjogos/2025S1/gamuto_snap/recursos/imagens/gamuto_sleep.png"
+dest_files=["res://.godot/imported/gamuto_sleep.png-982038cc8960415860caa2defbc4dd70.ctex"]
 
 [params]
 

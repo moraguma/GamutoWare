@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+# Caso não dê para ganhar, aumentar a velocidade?
 @export var speed : int = 500
 @onready var timer : Timer = $timers/snap_timer
 @onready var flash : AudioStreamPlayer = $flashSound
@@ -22,10 +23,16 @@ func get_action() -> void:
 		can_snap = false
 
 		if focused:
+			# Toca o som completamente
 			flash.play()
+			var tween = create_tween()
+			var tween_method = func(x): $playerAnimatedSprite.material.set_shader_parameter("flash", x)
+			tween.tween_method(tween_method, 0.0, 1.0, 0.2)
+			tween.tween_method(tween_method, 1.0, 0.0, 0.2)
 			print("SNAP!")
 			snap_gamuto()
 		else:
+			# Faz o som parar após 0.2 segundos
 			flash.play()
 			await get_tree().create_timer(0.2).timeout
 			flash.stop()

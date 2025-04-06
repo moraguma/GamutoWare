@@ -4,7 +4,7 @@ extends Area2D
 
 # Adiciona a outline quando estiver no foco do jogador
 func _on_area_entered(area: Area2D) -> void:
-	shader.set_shader_parameter("width", 1.0)
+	shader.set_shader_parameter("width", 10.0)
 	print("FOUND ME!")
 
 # Remove a outline depois de sair do foco do jogador
