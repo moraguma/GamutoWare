@@ -12,25 +12,31 @@ signal lose
 const WIDTH = 1920
 const HEIGHT = 1080
 
-const perguntas_Corpo_Nu = ["Sua mãe ... querendo me matar. Pode deixar minha sogra eu penso em me casar", "Me chamam de ... não quero nem saber, eu sei que estou ... por você", "Alô galera, eu ... agora sou um rapaz sério, muito sério", "Você é minha paixão, assinado: ..."]
-const perguntas_Renata = ["Por ela fui fiel, tão cego eu fiquei ... amigos eu deixei", "Renata ingrata, trocou meu amor por ...", "A lua entristeceu, o céu mudou de cor, Renata foi embora e ...", "Foi irracional ... mas vou deletar, ah, ah, sua insentatez"]
+const perguntas_Corpo_Nu = []
+const perguntas_Renata = []
 const perguntas_Ragatanga = []
-const perguntas_Madagascar = ["Ela é tão tudo! Ela é tão tudo! Tudo que eu queria ...", "Cabelo colorido, de tomara que caia, meia preta arrastão pra combinar com ...", "Melhor exposição que tenho ... toda delicadinha usando óculos grande", "Vem comigo, amor, eu vou levar pra passear de mãos dadas na areia ..."]
+const perguntas_Madagascar = []
 
 #Dicionários para salvar as perguntas de cada música
-const corpo_Nu = {perguntas_Corpo_Nu[0]: ["Bolada", "Com raiva", "Emburrada", "Preocupada"], perguntas_Corpo_Nu[1]: ["Maluco... louco, louco", "Louco... maluco, maluco", "Maluco... maluco, louco", "Louco... louco, maluco"], perguntas_Corpo_Nu[2]: ["Parei de zoar", "Cansei de zuar", "Mandei pra lá", "Achei ela"], perguntas_Corpo_Nu[3]: ["Fleury 02", "Vinicius e Andinho", "Piauí", "DJ Marlboro"]}
-const renata = {perguntas_Renata[0]: ["E no night futebol", "Idas para o futebol", "E nas night, futebol", "Indo para o futebol"], perguntas_Renata[1]: ["Uma ilusão", "Um pedaço de pão", "Um garanhão", "Uma sensação"], perguntas_Renata[2]: ["A deprê ficou", "A tevê levou", "Junto o meu amor", "Fez um favor"], perguntas_Renata[3]: ["O que ela fez", "O que você fez", "Como toda vez", "Mais uma vez"]}
+const corpo_Nu = {}
+const renata = {}
 const ragatanga = {}
-const madagascar = {perguntas_Madagascar[0]: ["Abraçar, beijar", "Era abraçar beijar", "Era poder beijar", "Amassar, beijar"], perguntas_Madagascar[1]: ["Uma saia", "A saia", "O Saia", "A sala"], perguntas_Madagascar[2]: ["No meu stand", "Na minha estante", "Naquele instante", "No mesmo instante"], perguntas_Madagascar[3]: ["De madagascar", "Da beira mar", "Do lado de lá", "No nosso lar"]}
+const madagascar = {}
 
 const perguntas = {
 	"corpo_Nu":
 		{
-			
+			"Sua mãe ... querendo me matar. Pode deixar minha sogra eu penso em me casar": ["Bolada", "Com raiva", "Emburrada", "Preocupada"],
+			"Me chamam de ... não quero nem saber, eu sei que estou ... por você": ["Maluco... louco, louco", "Louco... maluco, maluco", "Maluco... maluco, louco", "Louco... louco, maluco"],
+			"Alô galera, eu ... agora sou um rapaz sério, muito sério": ["Parei de zoar", "Cansei de zuar", "Mandei pra lá", "Achei ela"],
+			"Você é minha paixão, assinado: ...": ["Fleury 02", "Vinicius e Andinho", "Piauí", "DJ Marlboro"]
 		},
 	"renata":
 		{
-			
+			"Por ela fui fiel, tão cego eu fiquei ... amigos eu deixei": ["E no night futebol", "Idas para o futebol", "E nas night, futebol", "Indo para o futebol"],
+			"Renata ingrata, trocou meu amor por ...": ["Uma ilusão", "Um pedaço de pão", "Um garanhão", "Uma sensação"],
+			"A lua entristeceu, o céu mudou de cor, Renata foi embora e ...": ["A deprê ficou", "A tevê levou", "Junto o meu amor", "Fez um favor"],
+			"Foi irracional ... mas vou deletar, ah, ah, sua insentatez": ["O que ela fez", "O que você fez", "Como toda vez", "Mais uma vez"]
 		},
 	"ragatanga" : 
 		{
@@ -41,7 +47,10 @@ const perguntas = {
 		},
 	"madagascar":
 		{
-			
+			"Ela é tão tudo! Ela é tão tudo! Tudo que eu queria ...": ["Abraçar, beijar", "Era abraçar beijar", "Era poder beijar", "Amassar, beijar"],
+			"Cabelo colorido, de tomara que caia, meia preta arrastão pra combinar com ...": ["Uma saia", "A saia", "O Saia", "A sala"],
+			"Melhor exposição que tenho ... toda delicadinha usando óculos grande": ["No meu stand", "Na minha estante", "Naquele instante", "No mesmo instante"],
+			"Vem comigo, amor, eu vou levar pra passear de mãos dadas na areia ...": ["De madagascar", "Da beira mar", "Do lado de lá", "No nosso lar"]
 		}
 	
 }
