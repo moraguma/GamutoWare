@@ -1,0 +1,271 @@
+[gd_scene load_steps=18 format=3 uid="uid://di5al5rc3udt3"]
+
+[ext_resource type="Script" uid="uid://bbbk74b8u3pq8" path="res://microjogos/2025S1/gamupet/cenas/scripts/background.gd" id="1_3hr62"]
+[ext_resource type="Texture2D" uid="uid://d4ia0k42cyysa" path="res://microjogos/2025S1/gamupet/recursos/imagens/pet-backgrounds.png" id="1_07qmy"]
+[ext_resource type="Theme" path="res://principal/recursos/themes/TitleTheme.tres" id="3_foonp"]
+[ext_resource type="Texture2D" uid="uid://dede44f4jfajq" path="res://microjogos/2025S1/gamupet/recursos/imagens/hand.png" id="4_06aup"]
+[ext_resource type="Texture2D" uid="uid://bwx63twb6355v" path="res://microjogos/2025S1/gamupet/recursos/imagens/burger-1.png(1).png" id="5_fl233"]
+[ext_resource type="Texture2D" uid="uid://3s7hblxsa4gs" path="res://microjogos/2025S1/gamupet/recursos/imagens/lamp-1.png(1).png" id="6_6af8k"]
+[ext_resource type="Texture2D" uid="uid://b25fw0wioy68q" path="res://microjogos/2025S1/gamupet/recursos/imagens/shower.png" id="7_3sqo2"]
+[ext_resource type="Texture2D" uid="uid://b3wkla8e4igxn" path="res://microjogos/2025S1/gamupet/recursos/imagens/black-1.png.png" id="8_6af8k"]
+
+[sub_resource type="Animation" id="Animation_3sqo2"]
+resource_name = "pet"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.266667, 0.4, 0.533333, 0.666667, 0.8),
+"transitions": PackedFloat32Array(0.784586, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-960, 900), Vector2(-960, 500), Vector2(-960, 540), Vector2(-960, 500), Vector2(-960, 540), Vector2(-960, 500), Vector2(-960, 540)]
+}
+
+[sub_resource type="Animation" id="Animation_6af8k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-960, 900)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3lk8t"]
+_data = {
+&"RESET": SubResource("Animation_6af8k"),
+&"pet": SubResource("Animation_3sqo2")
+}
+
+[sub_resource type="Animation" id="Animation_fl233"]
+resource_name = "eat"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.233333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(960, 900), Vector2(960, 560)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.566667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(6, 6), Vector2(6, 6), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_06aup"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(960, 900)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(6, 6)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3sqo2"]
+_data = {
+&"RESET": SubResource("Animation_06aup"),
+&"eat": SubResource("Animation_fl233")
+}
+
+[sub_resource type="Animation" id="Animation_3lk8t"]
+resource_name = "shower"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(4820, 900), Vector2(4820, 520)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.433333, 0.633333, 0.833333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_5n1jj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4820, 900)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_308s2"]
+_data = {
+&"RESET": SubResource("Animation_5n1jj"),
+&"shower": SubResource("Animation_3lk8t")
+}
+
+[node name="Background" type="Node2D"]
+script = ExtResource("1_3hr62")
+
+[node name="salas" type="Sprite2D" parent="."]
+position = Vector2(1920, 540)
+scale = Vector2(20, 20)
+texture = ExtResource("1_07qmy")
+
+[node name="Text" type="RichTextLabel" parent="."]
+clip_contents = false
+offset_left = 0.000244141
+offset_top = 180.0
+offset_right = 1920.0
+offset_bottom = 527.0
+theme = ExtResource("3_foonp")
+theme_override_font_sizes/normal_font_size = 128
+bbcode_enabled = true
+text = "[center]COZINHA"
+
+[node name="Text2" type="RichTextLabel" parent="."]
+z_index = 2
+clip_contents = false
+offset_left = 1920.0
+offset_top = 180.0
+offset_right = 3840.0
+offset_bottom = 527.0
+theme = ExtResource("3_foonp")
+theme_override_font_sizes/normal_font_size = 128
+bbcode_enabled = true
+text = "[center]quarto"
+
+[node name="Text3" type="RichTextLabel" parent="."]
+clip_contents = false
+offset_left = 3840.0
+offset_top = 180.0
+offset_right = 5760.0
+offset_bottom = 527.0
+theme = ExtResource("3_foonp")
+theme_override_font_sizes/normal_font_size = 128
+bbcode_enabled = true
+text = "[center]banheiro"
+
+[node name="Text4" type="RichTextLabel" parent="."]
+clip_contents = false
+offset_left = -1920.0
+offset_top = 180.0
+offset_right = 0.000488281
+offset_bottom = 527.0
+theme = ExtResource("3_foonp")
+theme_override_font_sizes/normal_font_size = 128
+bbcode_enabled = true
+text = "[center]Sala"
+
+[node name="Hand" type="Sprite2D" parent="."]
+z_index = 1
+texture_filter = 1
+position = Vector2(-960, 900)
+scale = Vector2(6, 6)
+texture = ExtResource("4_06aup")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hand"]
+libraries = {
+&"": SubResource("AnimationLibrary_3lk8t")
+}
+
+[node name="food" type="Sprite2D" parent="."]
+z_index = 2
+texture_filter = 1
+position = Vector2(960, 900)
+scale = Vector2(6, 6)
+texture = ExtResource("5_fl233")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="food"]
+libraries = {
+&"": SubResource("AnimationLibrary_3sqo2")
+}
+
+[node name="lamp" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(2880, 900)
+scale = Vector2(6, 6)
+texture = ExtResource("6_6af8k")
+
+[node name="shower" type="Sprite2D" parent="."]
+z_index = 1
+texture_filter = 1
+position = Vector2(4820, 900)
+scale = Vector2(6, 6)
+texture = ExtResource("7_3sqo2")
+hframes = 2
+vframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="shower"]
+libraries = {
+&"": SubResource("AnimationLibrary_308s2")
+}
+
+[node name="darkness" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+texture_filter = 1
+position = Vector2(2885, 540)
+scale = Vector2(60.3125, 34)
+texture = ExtResource("8_6af8k")

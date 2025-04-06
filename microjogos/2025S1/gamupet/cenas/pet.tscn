@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bga3houi253dt"]
+
+[ext_resource type="Texture2D" uid="uid://cqbkevfn7hnpq" path="res://microjogos/2025S1/gamupet/recursos/imagens/gamupet.png" id="1_01ujb"]
+
+[node name="gamupet" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("1_01ujb")
+vframes = 2
+frame = 1

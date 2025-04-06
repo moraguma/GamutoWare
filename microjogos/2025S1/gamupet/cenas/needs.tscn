@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://bk7p6hlxhy1y5"]
+
+[ext_resource type="Script" uid="uid://dvet23rvi2xvb" path="res://microjogos/2025S1/gamupet/cenas/scripts/needs.gd" id="1_pmgju"]
+[ext_resource type="Texture2D" uid="uid://c4aohhy0jrh02" path="res://microjogos/2025S1/gamupet/recursos/imagens/food.png" id="1_yh1v7"]
+[ext_resource type="Texture2D" uid="uid://7j7las362jet" path="res://microjogos/2025S1/gamupet/recursos/imagens/happy.png" id="2_pmgju"]
+[ext_resource type="Texture2D" uid="uid://c7q8ywxmqdl6u" path="res://microjogos/2025S1/gamupet/recursos/imagens/sleep.png" id="3_u0x34"]
+[ext_resource type="Texture2D" uid="uid://c2prk82vsu3og" path="res://microjogos/2025S1/gamupet/recursos/imagens/sujera.png" id="5_u0x34"]
+
+[node name="Needs" type="Node2D"]
+script = ExtResource("1_pmgju")
+
+[node name="Food" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-160, 0)
+scale = Vector2(4, 4)
+texture = ExtResource("1_yh1v7")
+vframes = 2
+frame = 1
+
+[node name="Happy" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("2_pmgju")
+vframes = 2
+frame = 1
+
+[node name="Sleep" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(160, 0)
+scale = Vector2(4, 4)
+texture = ExtResource("3_u0x34")
+vframes = 2
+frame = 1
+
+[node name="Sujera" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(9, 500)
+scale = Vector2(8, 8)
+texture = ExtResource("5_u0x34")
+vframes = 2

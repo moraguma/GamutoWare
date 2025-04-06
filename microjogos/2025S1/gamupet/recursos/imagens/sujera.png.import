@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqekrh5c0f2xo"
-path="res://.godot/imported/capa.png-526adc8f4efc58507da3284b33749be8.ctex"
+uid="uid://c2prk82vsu3og"
+path="res://.godot/imported/sujera.png-afe2b114ec53e38a2c4f312dcf2d0abc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/seu_projeto/capa.png"
-dest_files=["res://.godot/imported/capa.png-526adc8f4efc58507da3284b33749be8.ctex"]
+source_file="res://microjogos/2025S1/gamupet/recursos/imagens/sujera.png"
+dest_files=["res://.godot/imported/sujera.png-afe2b114ec53e38a2c4f312dcf2d0abc.ctex"]
 
 [params]
 

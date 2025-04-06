@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://4a8sqqgp1gx6"]
 
 [ext_resource type="Script" uid="uid://cpxde47kber5j" path="res://principal/cenas/scripts/NotificationCenter.gd" id="1"]
-[ext_resource type="Theme" uid="uid://cb4tlwb81nq48" path="res://principal/recursos/themes/TitleTheme.tres" id="2_18get"]
+[ext_resource type="Theme" path="res://principal/recursos/themes/TitleTheme.tres" id="2_18get"]
 
 [sub_resource type="Animation" id="Animation_0hrvw"]
 length = 0.001
@@ -322,9 +322,9 @@ offset_bottom = 279.0
 theme = ExtResource("2_18get")
 theme_override_font_sizes/normal_font_size = 128
 bbcode_enabled = true
-text = "[center]Test"
+text = "[center]"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_w8uvh")
+&"": SubResource("AnimationLibrary_w8uvh")
 }

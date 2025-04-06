@@ -23,9 +23,11 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
+			NotificationCenter.notify("TAKE CARE OF HIM!")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FAÇA ALGO!")
+			NotificationCenter.notify("CUIDE DO GAMUTO!")
+			
+	$explosao.modulate = Color(1.0, 1.0, 1.0, 0.0)
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
@@ -64,9 +66,14 @@ func my_method():
 
 # Chame esta função para registrar que o jogador venceu o jogo
 func register_win():
+	print('ganhou')
 	emit_signal("win")
 
 
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
+	$explosao.modulate = Color(1.0, 1.0, 1.0, 1.0)
+	$explosao/AnimationPlayer.play('explode')
+	$gamupet/Sprite2D.modulate = Color(1.0, 1.0, 1.0, 0.0)
+	print('perdeu')
 	emit_signal("lose")

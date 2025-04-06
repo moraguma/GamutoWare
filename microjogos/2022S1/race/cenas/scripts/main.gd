@@ -13,21 +13,23 @@ var losable = true
 func _ready():
 	match Global.language:
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("VENCA A CORRIDA!")
+			NotificationCenter.notify("CUIDE DO GAMUTO!")
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("WIN THE RACE!")
+			NotificationCenter.notify("TAKE CARE OF HIM!")
 	
 	randomize()
 
 
 func register_win():
 	if(winnable):
+		print('ganhou')
 		losable = false
 		get_node("VictorySFX").play()
 		emit_signal("win")
 
 func register_lose():
 	if(losable):
+		print('perdeu')
 		winnable = false
 		losable = false
 		get_node("DefeatSFX").play()
