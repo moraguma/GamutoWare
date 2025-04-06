@@ -23,7 +23,11 @@ const renata = {perguntas_Renata[0]: ["E no night futebol", "Idas para o futebol
 const ragatanga = {perguntas_Ragatanga[0]: ["Toca o som da meia-noite", "Vai tocando toda a noite", "Vai dançando lá no front", "Dedica à meia-noite"], perguntas_Ragatanga[1]: ["An de bugui an de buididipi", "To the rhythm of the boogi, the beat", "Andebuggy Andebuggy Riby", "And the boogie and the boogie, the beat"], perguntas_Ragatanga[2]: ["Cuando me voy", "Quando eu vou", "Quanto eu tô", "Enquando eu vou"], perguntas_Ragatanga[3]: ["Diego", "Fernando", "Hermano", "Miguel"]}
 const madagascar = {perguntas_Madagascar[0]: ["Abraçar, beijar", "Era abraçar beijar", "Era poder beijar", "Amassar, beijar"], perguntas_Madagascar[1]: ["Uma saia", "A saia", "O Saia", "A sala"], perguntas_Madagascar[2]: ["No meu stand", "Na minha estante", "Naquele instante", "No mesmo instante"], perguntas_Madagascar[3]: ["De madagascar", "Da beira mar", "Do lado de lá", "No nosso lar"]}
 
+const musica = ["corpo_Nu", "renata", "ragatanga", "madagascar"]
 var up_right = 0
+var selection_X = 0
+var selection_Y = 0
+var active = true
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
@@ -57,7 +61,24 @@ func _ready():
 # a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
 # a última chamada desta função. O comando pass não faz nada
 func _physics_process(delta):
-	pass
+	if active:
+		if Input.is_action_just_pressed("cima"):
+			selection_Y -= 1
+			selection_Y %= 2
+		elif Input.is_action_just_pressed("baixo"):
+			selection_Y += 1
+			selection_Y %= 2
+		elif Input.is_action_just_pressed("direita"):
+			selection_X += 1
+			selection_X %= 2
+		elif Input.is_action_just_pressed("esquerda"):
+			selection_X -= 1
+			selection_X %= 2
+			
+		elif Input.is_action_just_pressed("acao"): #Aqui é o ponto de seleção da resposta 
+			active = false
+
+	
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a renderização, 
