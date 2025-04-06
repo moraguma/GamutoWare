@@ -7,7 +7,6 @@ radius = 59.1354
 
 [node name="CameraPlayer" type="CharacterBody2D"]
 script = ExtResource("1_0sfhs")
-speed = 500
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_rp33h")
