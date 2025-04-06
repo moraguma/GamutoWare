@@ -44,4 +44,3 @@ func register_win():
 
 func register_lose():
 	emit_signal("lose")
-

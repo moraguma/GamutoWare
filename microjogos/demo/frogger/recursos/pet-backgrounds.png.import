@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqekrh5c0f2xo"
-path="res://.godot/imported/capa.png-526adc8f4efc58507da3284b33749be8.ctex"
+uid="uid://i0sn0vf13ipa"
+path="res://.godot/imported/pet-backgrounds.png-247405b893b3a8f5291fe373899392e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/seu_projeto/capa.png"
-dest_files=["res://.godot/imported/capa.png-526adc8f4efc58507da3284b33749be8.ctex"]
+source_file="res://microjogos/demo/frogger/recursos/pet-backgrounds.png"
+dest_files=["res://.godot/imported/pet-backgrounds.png-247405b893b3a8f5291fe373899392e7.ctex"]
 
 [params]
 
