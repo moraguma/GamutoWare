@@ -45,31 +45,44 @@ func _ready():
 	#RANDOMIZAR A LISTA DE COISAS
 	var lista_al = lista_coisas.duplicate()
 	lista_al.shuffle()
-	
+	#TOCAR MUSICA
+	$"Fight(adaptado)".play()
 	#DEFINIÇÃO DAS SETAS
 	up = lista_al[0]
 	down = lista_al[1]
 	left = lista_al[2]
 	right = lista_al[3]
 	
-	print("UP = " + up)
-	print("DOWN = " + down)
-	print("LEFT = " + left)
-	print("RIGHT = " + right)
-	var tween = create_tween()
-	tween.set_ease(Tween.EASE_OUT)
-	tween.set_trans(Tween.TRANS_BOUNCE)
-	tween.tween_property($Sprite2D, "position", Vector2(500, 500), 6)
+	#print("UP = " + up)
+	#print("DOWN = " + down)
+	#print("LEFT = " + left)
+	#print("RIGHT = " + right)
 	
+	#MOVIMENTACAO DO GAMUTO MAL
+	$AnimationPlayer.play("TEXTO")
+	#MOVIMENTACAO DO TEXTO
+	$GamutoMal/AnimationPlayer.play("GAMUTOMAL")
+	#MOVIMENTAÇÃO GAMUTOBEM
+	$Gamutobem/AnimationPlayer.play("GAMUTOBEM")
+	#var tween = create_tween()
+	#tween.set_ease(Tween.EASE_OUT)
+	#tween.set_trans(Tween.TRANS_LINEAR)
+	#tween.tween_property($GamutoMal, "position", Vector2(352, 880), 6)
+	
+	#APARECIMENTO DOS TESTOS
+	$SetaBaixo/Control/RichTextLabel.text = down
+	$SetaDireita/Control/RichTextLabel.text = right
+	$SetaEsquerda/Control/RichTextLabel.text = left
+	$"SetaCima(1)"/Control/RichTextLabel.text = up
+	
+
+	#RESPOSTA
 	var senha = []
 
 	# if (botao cima pressionado and up não ta na lista);
 		# senha.append(up)
 
-
-# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a renderização, 
-# como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
-# desde a última chamada desta função. O comando pass não faz nada
+#TODAS AS KEYBINDS
 func _process(delta):
 	if Input.is_action_pressed("cima") and up not in senha:
 		senha.append(up)
@@ -83,21 +96,56 @@ func _process(delta):
 	elif Input.is_action_pressed("direita") and right not in senha:
 		senha.append(right)
 		comparacao()
-
+		
+	elif len(senha) > 0:
+		if Input.is_action_just_pressed("acao") and len(senha)>0 and len(senha)<2:
+			senha.resize(senha.size() - 1)
+			score-=1
+			$Respostas/Control/RichTextLabel.text = "".join(senha)
+		elif Input.is_action_just_pressed("acao") and lista_coisas.find(senha[-1]) > lista_coisas.find(senha[-2]):
+			senha.resize(senha.size() - 1) 
+			score-=1
+			$Respostas/Control/RichTextLabel.text = "".join(senha)
+		elif Input.is_action_just_pressed("acao") and lista_coisas.find(senha[-1]) < lista_coisas.find(senha[-2]):
+			senha.resize(senha.size() - 1)
+			score+=1
+			$Respostas/Control/RichTextLabel.text = "".join(senha)
+			
+	if up in senha:
+		$"SetaCima(1)"/Control/RichTextLabel.visible = false
+	if up not in senha:
+		$"SetaCima(1)"/Control/RichTextLabel.visible = true
+	if right in senha:
+		$"SetaDireita"/Control/RichTextLabel.visible = false
+	if right not in senha:
+		$"SetaDireita"/Control/RichTextLabel.visible = true
+	if down in senha:
+		$"SetaBaixo"/Control/RichTextLabel.visible = false
+	if down not in senha:
+		$"SetaBaixo"/Control/RichTextLabel.visible = true
+	if left in senha:
+		$"SetaEsquerda"/Control/RichTextLabel.visible = false
+	if left not in senha:
+		$"SetaEsquerda"/Control/RichTextLabel.visible = true
+		
 # --------------------------------------------------------------------------------------------------
 # SUAS FUNÇÕES
 # --------------------------------------------------------------------------------------------------
 
-
-# Um método genérico. Crie quantos métodos você precisar!
+# COMPARAR OS VALORES DADOS
 func comparacao():
 	if len(senha) < 2: 
 		score += 1
 		print("FIRST SCORE UP")
-		return
-	if lista_coisas.find(senha[-1]) > lista_coisas.find(senha[-2]):
+	elif lista_coisas.find(senha[-1]) > lista_coisas.find(senha[-2]):
 		score += 1
 		print("SCORE UP")
+	elif lista_coisas.find(senha[-1]) < lista_coisas.find(senha[-2]):
+		score -= 1 
+	$Respostas/Control/RichTextLabel.text = "".join(senha)
+	if score == 4:
+		register_win()
+		$"VITÓRIA".visible = true
 
 
 # --------------------------------------------------------------------------------------------------
@@ -112,7 +160,8 @@ func comparacao():
 
 # Chame esta função para registrar que o jogador venceu o jogo
 func register_win():
-	emit_signal("win")
+		emit_signal("win")
+		
 
 
 # Chame esta função para registrar que o jogador perdeu o jogo

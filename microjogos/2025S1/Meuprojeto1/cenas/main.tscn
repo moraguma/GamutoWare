@@ -1,11 +1,74 @@
-[gd_scene load_steps=7 format=3 uid="uid://oaa4tlexufkv"]
+[gd_scene load_steps=24 format=3 uid="uid://oaa4tlexufkv"]
 
 [ext_resource type="Script" uid="uid://287oiojn4vaj" path="res://microjogos/2025S1/Meuprojeto1/cenas/scripts/main.gd" id="1_exq0m"]
+[ext_resource type="Texture2D" uid="uid://b71exebt775fc" path="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/FRAME_comp.png" id="2_ceik6"]
 [ext_resource type="Texture2D" uid="uid://cseflm4peg8ad" path="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/Fala Bugada.png" id="2_sx2tx"]
+[ext_resource type="Texture2D" uid="uid://bqmep1vli4n4l" path="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/TELA 1.png" id="3_c8ke5"]
 [ext_resource type="Texture2D" uid="uid://cp82h35txj5qh" path="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/Gamutobem.png" id="3_sx2tx"]
+[ext_resource type="FontFile" uid="uid://blcw2hkcbcxid" path="res://principal/recursos/fonts/stop_bullying/Stop Bullying.otf" id="3_tjc7y"]
+[ext_resource type="Texture2D" uid="uid://blg3dh5yw5w6h" path="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/ABA.pixelada.png" id="4_wepsu"]
+[ext_resource type="Texture2D" uid="uid://baooqadmyxqhk" path="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/ComputadorBugado.png" id="5_43qgu"]
+[ext_resource type="Texture2D" uid="uid://dti5doxwyjvnr" path="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/GAMUTOMAL.png" id="7_ceik6"]
+[ext_resource type="Texture2D" uid="uid://8kg8hof4pub2" path="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/SetaBaixo.png" id="9_ug453"]
+[ext_resource type="Texture2D" uid="uid://chno41h1rduwh" path="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/SetaDireita.png" id="10_wepsu"]
+[ext_resource type="Texture2D" uid="uid://ba6jasoawmo17" path="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/SetaCIMA(1).png" id="11_evlbw"]
+[ext_resource type="Texture2D" uid="uid://ddl2jxpnass2v" path="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/SetaEsquerda.png" id="12_c4obr"]
+[ext_resource type="AudioStream" uid="uid://cfuw623m28u65" path="res://microjogos/2025S1/Meuprojeto1/recursos/sons/fight(ADAPTADO).wav" id="14_evlbw"]
 
 [sub_resource type="Animation" id="3"]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GamutoMal:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1618, 888)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GamutoMal:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/Sprite2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_0ohhc"]
+resource_name = "TEXTO"
+length = 5.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.45, 1, 1.43, 1.95, 2.41, 2.88, 3.6, 4.31, 4.93, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.101229, -0.137881, 0.151844, 0.280998, -0.221657, 0.0767945, -0.153589, 0.169297, -0.169297, -0.164061]
+}
 
 [sub_resource type="Animation" id="4"]
 resource_name = "opening"
@@ -28,23 +91,392 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s2r1r"]
 _data = {
 &"RESET": SubResource("3"),
+&"TEXTO": SubResource("Animation_0ohhc"),
 &"opening": SubResource("4")
+}
+
+[sub_resource type="Animation" id="Animation_ceik6"]
+resource_name = "GAMUTOBEM"
+length = 5.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.533333, 1.03333, 1.53333, 2.03333, 2.53333, 3.03333, 3.6, 4.23333, 4.93, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.101229, -0.137881, 0.151844, 0.280998, -0.221657, 0.0767945, -0.153589, 0.169297, -0.169297, -0.164061]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c8ke5"]
+_data = {
+&"GAMUTOBEM": SubResource("Animation_ceik6")
+}
+
+[sub_resource type="Animation" id="Animation_tjc7y"]
+resource_name = "GAMUTOMAL"
+length = 5.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(-0.0333333, 0, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1571, 903), Vector2(1718, 564), Vector2(1716, 905)]
+}
+
+[sub_resource type="Animation" id="Animation_pmmqs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1571, 903)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0ohhc"]
+_data = {
+&"GAMUTOMAL": SubResource("Animation_tjc7y"),
+&"RESET": SubResource("Animation_pmmqs")
 }
 
 [node name="Main" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_exq0m")
 
+[node name="FrameComp" type="Sprite2D" parent="."]
+position = Vector2(959.5, 539.5)
+scale = Vector2(2.99531, 2.27292)
+texture = ExtResource("2_ceik6")
+
+[node name="Tela1" type="Sprite2D" parent="."]
+position = Vector2(983, 527)
+scale = Vector2(2.97187, 2.2)
+texture = ExtResource("3_c8ke5")
+
+[node name="Aba_pixelada" type="Sprite2D" parent="."]
+position = Vector2(467, 319)
+scale = Vector2(0.852734, 0.975)
+texture = ExtResource("4_wepsu")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Aba_pixelada"]
+anchors_preset = -1
+anchor_top = -3.2
+anchor_right = 7.35
+anchor_bottom = 5.325
+offset_left = -299.038
+offset_top = -723.487
+offset_right = 0.961914
+offset_bottom = -723.487
+theme_override_font_sizes/normal_font_size = 33
+text = "IMPORTANTE!!!!!!:"
+vertical_alignment = 1
+
+[node name="OPCOES" type="Sprite2D" parent="."]
+position = Vector2(893, 701)
+scale = Vector2(1.23438, 1.08333)
+texture = ExtResource("4_wepsu")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="OPCOES"]
+anchors_preset = -1
+anchor_top = -3.2
+anchor_right = 7.35
+anchor_bottom = 5.325
+offset_left = -303.797
+offset_top = -723.692
+offset_right = -3.79736
+offset_bottom = -723.692
+theme_override_font_sizes/normal_font_size = 33
+text = "ESCOLHA:"
+vertical_alignment = 1
+
+[node name="Respostas" type="Sprite2D" parent="."]
+position = Vector2(1309.7, 244)
+scale = Vector2(1.50095, 0.63484)
+texture = ExtResource("4_wepsu")
+
+[node name="Control" type="Control" parent="Respostas"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Respostas/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -3.2
+anchor_right = 7.35
+anchor_bottom = 5.325
+offset_left = -300.0
+offset_bottom = -1.52588e-05
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 43
+vertical_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Respostas/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -3.2
+anchor_right = 7.35
+anchor_bottom = 5.325
+offset_left = -303.424
+offset_top = -257.924
+offset_right = -3.42438
+offset_bottom = -257.924
+theme_override_font_sizes/normal_font_size = 33
+text = "NOVA SENHA:"
+vertical_alignment = 1
+
+[node name="Aba_pixelada4" type="Sprite2D" parent="."]
+position = Vector2(1682.1, 688)
+scale = Vector2(0.490922, 1.26667)
+texture = ExtResource("4_wepsu")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Aba_pixelada4"]
+anchors_preset = -1
+anchor_top = -3.2
+anchor_right = 7.35
+anchor_bottom = 5.325
+offset_left = -287.0
+offset_top = -723.0
+offset_right = 19.0
+offset_bottom = -723.0
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 33
+text = "CUIDADO!!!!!!:"
+vertical_alignment = 1
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_s2r1r")
 }
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1368, 527)
+[node name="Sprite2D" type="Sprite2D" parent="AnimationPlayer"]
+position = Vector2(537, 468)
 scale = Vector2(0.746759, 0.58724)
 texture = ExtResource("2_sx2tx")
 
+[node name="Control" type="Control" parent="AnimationPlayer/Sprite2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AnimationPlayer/Sprite2D/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.141
+anchor_top = -10.836
+anchor_right = 0.5
+anchor_bottom = -6.375
+offset_left = -6.75927
+offset_top = 38.3715
+offset_right = 218.601
+offset_bottom = 8.93153
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_tjc7y")
+theme_override_font_sizes/normal_font_size = 34
+text = "ESCREVA EM ORDEM ALFABÉTICA"
+
 [node name="Gamutobem" type="Sprite2D" parent="."]
+position = Vector2(341, 437)
 scale = Vector2(1.32031, 1.30469)
 texture = ExtResource("3_sx2tx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Gamutobem"]
+libraries = {
+&"": SubResource("AnimationLibrary_c8ke5")
+}
+
+[node name="GamutoMal" type="Sprite2D" parent="."]
+position = Vector2(1571, 903)
+scale = Vector2(1.31015, 1.31563)
+texture = ExtResource("7_ceik6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GamutoMal"]
+libraries = {
+&"": SubResource("AnimationLibrary_0ohhc")
+}
+
+[node name="ComputadorBugado" type="Sprite2D" parent="."]
+position = Vector2(1656, 904)
+scale = Vector2(1.10312, 1.06042)
+texture = ExtResource("5_43qgu")
+
+[node name="SetaBaixo" type="Sprite2D" parent="."]
+position = Vector2(882, 744)
+scale = Vector2(0.326836, 0.417198)
+texture = ExtResource("9_ug453")
+
+[node name="Control" type="Control" parent="SetaBaixo"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="SetaBaixo/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -9.595
+anchor_top = 3.791
+anchor_right = 9.771
+anchor_bottom = 8.866
+offset_left = -4.7739
+offset_top = 23.337
+offset_right = -2.41394
+offset_bottom = 23.3369
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_tjc7y")
+theme_override_font_sizes/normal_font_size = 58
+text = "PALAVRA DOWN"
+horizontal_alignment = 1
+
+[node name="SetaDireita" type="Sprite2D" parent="."]
+position = Vector2(961, 742)
+scale = Vector2(0.436377, 0.302324)
+texture = ExtResource("10_wepsu")
+
+[node name="Control" type="Control" parent="SetaDireita"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -42.3074
+offset_top = 9.52515
+offset_right = -2.30741
+offset_bottom = 49.5252
+
+[node name="RichTextLabel" type="RichTextLabel" parent="SetaDireita/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.15
+anchor_top = -1.191
+anchor_right = 21.77
+anchor_bottom = 3.944
+offset_left = 21.5149
+offset_top = -37.9626
+offset_right = -26.2852
+offset_bottom = -40.3626
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_tjc7y")
+theme_override_font_sizes/normal_font_size = 58
+text = "PALAVRA RIGHT"
+horizontal_alignment = 1
+
+[node name="SetaCima(1)" type="Sprite2D" parent="."]
+position = Vector2(881, 668)
+scale = Vector2(0.32303, 0.431629)
+texture = ExtResource("11_evlbw")
+
+[node name="Control" type="Control" parent="SetaCima(1)"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="SetaCima(1)/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -9.882
+anchor_top = -5.848
+anchor_right = 9.543
+anchor_bottom = -0.773
+offset_left = 29.9892
+offset_top = 6.873
+offset_right = 29.9891
+offset_bottom = 6.873
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_tjc7y")
+theme_override_font_sizes/normal_font_size = 58
+text = "PALAVRA UP"
+horizontal_alignment = 1
+
+[node name="SetaEsquerda" type="Sprite2D" parent="."]
+position = Vector2(812, 738)
+scale = Vector2(0.462187, 0.327229)
+texture = ExtResource("12_c4obr")
+
+[node name="Control" type="Control" parent="SetaEsquerda"]
+layout_mode = 3
+anchor_bottom = 0.148
+offset_left = 4.0
+offset_top = -7.0
+offset_right = 186.0
+offset_bottom = -76.944
+
+[node name="RichTextLabel" type="RichTextLabel" parent="SetaEsquerda/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -4.304
+anchor_top = -1.113
+anchor_right = 0.18
+anchor_bottom = 1.586
+offset_left = 0.02771
+offset_top = -7.03227
+offset_right = -0.0602951
+offset_bottom = 0.00772858
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_tjc7y")
+theme_override_font_sizes/normal_font_size = 58
+text = "PALAVRA LEFT"
+horizontal_alignment = 1
+
+[node name="VITÓRIA" type="Sprite2D" parent="."]
+visible = false
+top_level = true
+position = Vector2(1034, 478)
+scale = Vector2(2.03828, 1.08333)
+texture = ExtResource("4_wepsu")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VITÓRIA"]
+anchors_preset = -1
+anchor_top = -3.2
+anchor_right = 7.35
+anchor_bottom = 5.325
+offset_left = -295.0
+offset_top = -496.0
+offset_right = -357.0
+offset_bottom = -496.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 44
+text = "VOCÊ ESTÁ SEGURO AGORA"
+vertical_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="VITÓRIA"]
+anchors_preset = -1
+anchor_top = -3.2
+anchor_right = 7.35
+anchor_bottom = 5.325
+offset_left = -303.197
+offset_top = -721.846
+offset_right = -3.19678
+offset_bottom = -721.846
+theme_override_font_sizes/normal_font_size = 24
+text = "PARABÉNS!!!!!!!!!!!!!!!!!!!!!!!!!!"
+vertical_alignment = 1
+
+[node name="Fight(adaptado)" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_evlbw")

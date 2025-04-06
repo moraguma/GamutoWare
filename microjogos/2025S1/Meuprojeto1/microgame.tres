@@ -1,15 +1,53 @@
-[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=3 format=3 uid="uid://yfrxbxxvypy8"]
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://yfrxbxxvypy8"]
 
 [ext_resource type="PackedScene" uid="uid://oaa4tlexufkv" path="res://microjogos/2025S1/Meuprojeto1/cenas/main.tscn" id="1_00sl4"]
+[ext_resource type="Texture2D" uid="uid://2sy4tbfhbwuw" path="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/CAPAGAMUTO.png" id="1_80g8v"]
 [ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_glnlj"]
 
 [resource]
 script = ExtResource("1_glnlj")
-title_pt = &"TÍTULO DO JOGO"
-title_en = &"GAME TITLE"
-credits_pt = "Créditos do jogo"
-credits_en = "Game crédits"
-start_message_pt = &"FAÇA ALGO!"
-start_message_en = &"DO SOMETHING!"
+cover = ExtResource("1_80g8v")
+title_pt = &"MudaRápido"
+title_en = &"ChangeFast"
+credits_pt = "Criador:
+Danilo Karpiuck (https://github.com/danexokarpi)
+
+Nome do Jogo: MudaRapido
+Descrição:
+MudaRápido se passa num contexto onde você está prestes a ser hackeado pelo GamutoMAL que se aproxima dos dados de seu computador, na direita. Siga as intruções do GamutoBOM para mudar sua senha antes que o MALLLL consiga acessar seus dados. VOCÊ TEM 6 SEGUNDOS VAI RÁPIDO
+
+
+Setas:
+https://opengameart.org/content/directional-touch-control-ui
+(\"SpicyCatGames\")
+
+Computador:
+https://opengameart.org/content/modernwidescreen-tv-or-computer
+(KobatoGames)
+
+Musica Principal:
+ Site:  https://opengameart.org/content/fast-fight-battle-music
+((http://soundcloud.com/mutkanto (credit to Ville Nousiainen)))"
+credits_en = "Creator:
+Danilo Karpiuck (https://github.com/danexokarpi)
+
+Game Name: ChangeFast
+
+Description:
+ChangeFast is a game that occurs in the context of you being hacked by EVILGamuto, that is trying to get to you coputer (rigth side of the screen). You need to follow the instruction of GOODGamuto to change your password before EVILGamuto takes control. BE FAST YOU HAVE SIX SECONDS.
+
+ARROWS:
+https://opengameart.org/content/directional-touch-control-ui
+(\"SpicyCatGames\")
+
+COMPUTER right down side:
+https://opengameart.org/content/modernwidescreen-tv-or-computer
+(KobatoGames)
+
+Main Music:
+ Site:  https://opengameart.org/content/fast-fight-battle-music
+((http://soundcloud.com/mutkanto (credit to Ville Nousiainen)))"
+start_message_pt = &"Mude sua Senha"
+start_message_en = &"C"
 main_scene = ExtResource("1_00sl4")
 difficulty = 0

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://r1858lqwgbh8"
-path="res://.godot/imported/Gamuto_Mal.png-ecb19213029da74ea56529ebea48a4a5.ctex"
+uid="uid://chno41h1rduwh"
+path="res://.godot/imported/SetaDireita.png-933b69ebd9aa9cc122ca18a8e5051966.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/Gamuto_Mal.png"
-dest_files=["res://.godot/imported/Gamuto_Mal.png-ecb19213029da74ea56529ebea48a4a5.ctex"]
+source_file="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/SetaDireita.png"
+dest_files=["res://.godot/imported/SetaDireita.png-933b69ebd9aa9cc122ca18a8e5051966.ctex"]
 
 [params]
 
