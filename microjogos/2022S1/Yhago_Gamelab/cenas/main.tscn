@@ -21,6 +21,13 @@ position = Vector2(1556, 558)
 scale = Vector2(128, 640)
 texture = SubResource("CanvasTexture_e0oyl")
 
+[node name="posimaxpeixe" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 0.32549, 1, 1)
+position = Vector2(1556, 318)
+scale = Vector2(96, 128)
+texture = SubResource("CanvasTexture_6ii3p")
+
 [node name="Peixe" type="Area2D" parent="."]
 position = Vector2(1556, 786)
 
@@ -49,3 +56,8 @@ shape = SubResource("RectangleShape2D_uhi23")
 position = Vector2(443, 552)
 scale = Vector2(6, 6)
 texture = ExtResource("2_cnho3")
+
+[node name="peixeTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="peixeTimer" to="." method="_on_peixe_timer_timeout"]
