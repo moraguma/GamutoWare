@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dmvafb620rp2r"]
+[gd_scene load_steps=7 format=3 uid="uid://dmvafb620rp2r"]
 
 [ext_resource type="Texture2D" uid="uid://c5vk4dcba056w" path="res://microjogos/2025S1/projeto-plataformer/recursos/imagens/star_w.png" id="1_fdekn"]
+[ext_resource type="Script" uid="uid://bemyaemsc28bw" path="res://microjogos/2025S1/projeto-plataformer/cenas/estrela.gd" id="1_his4y"]
 
 [sub_resource type="Animation" id="Animation_gpare"]
 length = 0.001
@@ -45,6 +46,8 @@ size = Vector2(14, 13.5)
 
 [node name="Estrela" type="Area2D"]
 collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_his4y")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
