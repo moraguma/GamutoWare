@@ -264,7 +264,12 @@ process_callback = 0
 wait_time = 1.5
 autostart = true
 
+[node name="wincondition" type="Timer" parent="."]
+wait_time = 6.0
+autostart = true
+
 [connection signal="timeout" from="Morte" to="." method="on_morte"]
 [connection signal="timeout" from="Morte" to="Area2D/Sprite2D/Camera2D" method="morrido"]
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="GLOBAL" to="." method="testosd"]
+[connection signal="timeout" from="wincondition" to="." method="_on_wincondition_timeout"]

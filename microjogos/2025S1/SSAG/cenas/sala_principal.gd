@@ -19,8 +19,10 @@ func speedup(j):
 		tempo.wait_time -= 0.1
 	if morte.wait_time > 1:
 		morte.wait_time -= 0.2
-	if morte.wait_time <= 1:
+	if morte.wait_time <= 1 and morte.wait_time >= 0.5:
 		morte.wait_time -= 0.05
+	else:
+		morte.wait_time = 0.5
 	if j.speed_scale < 16:
 		pesq.speed_scale += 0.2
 		pdir.speed_scale += 0.2
@@ -74,8 +76,10 @@ func _on_timer_timeout():
 	
 func on_morte():
 	$Sprite2D.visible = true
-	
-
+	emit_signal("lose")
 
 func testosd() -> void:
 	texto.text = ""
+
+func _on_wincondition_timeout() -> void:
+	emit_signal("win")
