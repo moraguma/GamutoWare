@@ -9,7 +9,7 @@ texture_filter = 1
 [node name="CameraPlayer" parent="." instance=ExtResource("1_6m65u")]
 position = Vector2(960, 540)
 
-[node name="spawPoints" type="Node2D" parent="."]
+[node name="spawPoints" type="Node" parent="."]
 
 [node name="topRight" type="Marker2D" parent="spawPoints"]
 position = Vector2(1340, 370)
