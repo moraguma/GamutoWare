@@ -1,1 +1,67 @@
 extends Node2D
+
+var rng = RandomNumberGenerator.new()
+
+@onready var morte = $Morte
+@onready var tempo = $Timer2
+@onready var pesq = $"porta-esquerda/portaesq"
+@onready var pdir = $"porta-direita/portadir"
+@onready var pfrente = $"porta-frente/portafrente"
+
+func speedup(j):
+	if tempo.wait_time > 0.6:
+			tempo.wait_time -= 0.1
+	if tempo.wait_time <= 0.6:
+		tempo.wait_time -= 0.02
+	if morte.wait_time > 1:
+		morte.wait_time -= 0.1
+	if morte.wait_time <= 1:
+		morte.wait_time -= 0.02
+	if j.speed_scale < 16:
+		pesq.speed_scale += 0.1
+		pdir.speed_scale += 0.1
+		pfrente.speed_scale += 0.1
+	else:
+		pesq.speed_scale += 0.05
+		pdir.speed_scale += 0.05
+		pfrente.speed_scale += 0.05
+
+func _ready() -> void:
+	tempo.start()
+	print(pdir.speed_scale)
+
+func faceondoor(i):
+	if(i == 0):
+		pesq.play("demonio_spawn")
+		morte.start()
+		speedup(pesq)
+	if(i == 1):
+		pdir.play("demonio_spawn")
+		morte.start()
+		speedup(pdir)
+	if(i == 2):
+		pfrente.play("demonio_spawn")
+		morte.start()
+		speedup(pfrente)
+
+func _physics_process(delta):
+	if(Input.is_action_just_pressed("direita")):
+		$"porta-direita/portadir".play("porta_fechando")
+		morte.stop()
+		tempo.start()
+	if(Input.is_action_just_pressed("esquerda")):
+		$"porta-esquerda/portaesq".play("porta_fechando")
+		morte.stop()
+		tempo.start()
+	if(Input.is_action_just_pressed("cima")):
+		$"porta-frente/portafrente".play("porta_fechando")
+		morte.stop()
+		tempo.start()
+	
+
+func _on_timer_timeout():
+	faceondoor(rng.randi_range(0, 2))
+	tempo.stop()
+	
+func on_morte():
+	$Sprite2D.visible = true
