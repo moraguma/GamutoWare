@@ -5,9 +5,9 @@
 [ext_resource type="StyleBox" uid="uid://bxcgw4ij0ep3p" path="res://microjogos/2025S1/musicas_da_comp/recursos/new_style_box_flat.tres" id="2_dqw11"]
 [ext_resource type="Theme" uid="uid://6nllk3n6j475" path="res://microjogos/2025S1/musicas_da_comp/recursos/new_theme.tres" id="3_pitoj"]
 [ext_resource type="Texture2D" uid="uid://dxtgy4cgsqxcq" path="res://microjogos/2025S1/musicas_da_comp/recursos/imagens/100NOSSAO.png" id="4_0onx8"]
-[ext_resource type="AudioStream" uid="uid://btyrfhd51x58b" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Ragatanga.mp3" id="4_shx00"]
-[ext_resource type="AudioStream" uid="uid://jl2305j6fyb" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Madagascar.mp3" id="5_dqw11"]
-[ext_resource type="AudioStream" uid="uid://cv0dleulprs34" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Shake_It_Bololo.mp3" id="6_3qdev"]
+[ext_resource type="AudioStream" uid="uid://cea8hesmc8u6j" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Ragatanga.ogg" id="6_0onx8"]
+[ext_resource type="AudioStream" uid="uid://narf8ge8evym" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Madagascar.ogg" id="7_0g845"]
+[ext_resource type="AudioStream" uid="uid://cbnhji0ed46gx" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Shake It Bololo.ogg" id="8_q1754"]
 [ext_resource type="Texture2D" uid="uid://bdynhd5rt6q4r" path="res://microjogos/2025S1/musicas_da_comp/recursos/imagens/VDC_feliz.png" id="9_xlju7"]
 [ext_resource type="Texture2D" uid="uid://ixrde86tx5e" path="res://microjogos/2025S1/musicas_da_comp/recursos/imagens/VDC_triste.png" id="10_0onx8"]
 
@@ -125,21 +125,21 @@ focus_neighbor_bottom = NodePath("../Pergunta2")
 mouse_filter = 2
 autowrap_mode = 3
 
-[node name="Musica1" type="AudioStreamPlayer" parent="."]
-
 [node name="Musica2" type="AudioStreamPlayer" parent="."]
 
 [node name="Musica3" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_shx00")
+stream = ExtResource("6_0onx8")
 parameters/looping = true
 
 [node name="Musica4" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_dqw11")
+stream = ExtResource("7_0g845")
 parameters/looping = true
 
 [node name="Musica5" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_3qdev")
+stream = ExtResource("8_q1754")
 parameters/looping = true
+
+[node name="Musica6" type="AudioStreamPlayer" parent="."]
 
 [node name="VDC_Feliz" type="Sprite2D" parent="."]
 visible = false

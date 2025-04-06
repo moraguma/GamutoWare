@@ -126,4 +126,3 @@ func pergunta_pressed(pergunta) -> void:
 		$VDC_Feliz.visible = true
 	else:
 		$VDC_Tristes.visible = true
-		
