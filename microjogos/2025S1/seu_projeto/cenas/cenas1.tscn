@@ -1,37 +1,79 @@
-[gd_scene load_steps=7 format=3 uid="uid://dwg6yv3kqf2eh"]
+[gd_scene load_steps=10 format=3 uid="uid://dwg6yv3kqf2eh"]
 
 [ext_resource type="Texture2D" uid="uid://bgfyrk5qr8xo0" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/Design sem nome (3).png" id="1_2uta7"]
+[ext_resource type="Script" uid="uid://d3hurd143uhsj" path="res://microjogos/2025S1/seu_projeto/cenas/scripts/poções.gd" id="2_4366y"]
 [ext_resource type="Texture2D" uid="uid://wgcpsoln6a0j" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/poção 1 teste.png" id="2_lbx2f"]
 [ext_resource type="Texture2D" uid="uid://mf2koxn56aue" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/poção 2 - teste.png" id="3_422id"]
 [ext_resource type="Texture2D" uid="uid://83i685dpkq4y" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/poção 3 - teste.png" id="4_dmivy"]
 [ext_resource type="Texture2D" uid="uid://bfkwcn2ny1gev" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/poção 4 - teste.png" id="5_6rkfm"]
 [ext_resource type="Texture2D" uid="uid://ds3b22n84ck47" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/moldura teste (2).png" id="6_422id"]
+[ext_resource type="Texture2D" uid="uid://m11pvtmra36b" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/quadro de receitas.png" id="8_almq2"]
+[ext_resource type="Texture2D" uid="uid://c0ukqndhi4u7m" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/poção result.png" id="9_3ijsh"]
 
 [node name="Cenas1" type="Node2D"]
 
-[node name="Node2D" type="Node2D" parent="."]
-
-[node name="Fundo" type="Sprite2D" parent="Node2D"]
+[node name="Fundo" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
 texture = ExtResource("1_2uta7")
 
-[node name="Poção 1" type="Sprite2D" parent="Node2D"]
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("2_4366y")
+
+[node name="Pocao1" type="Node2D" parent="Node2D"]
+position = Vector2(206, 894)
+
+[node name="Quadro" type="Sprite2D" parent="Node2D/Pocao1"]
+position = Vector2(-40, -674)
+scale = Vector2(2.83726, 2.83726)
+texture = ExtResource("6_422id")
+
+[node name="Poção 1" type="Sprite2D" parent="Node2D/Pocao1"]
+position = Vector2(-13, -640)
+texture = ExtResource("3_422id")
+
+[node name="Pocao2" type="Node2D" parent="Node2D"]
+position = Vector2(206, 243)
+
+[node name="Quadro" type="Sprite2D" parent="Node2D/Pocao2"]
+visible = false
+position = Vector2(1517, -22)
+scale = Vector2(2.83726, 2.83726)
+texture = ExtResource("6_422id")
+
+[node name="Poção 2" type="Sprite2D" parent="Node2D/Pocao2"]
+position = Vector2(1532, 6)
+texture = ExtResource("4_dmivy")
+
+[node name="Pocao3" type="Node2D" parent="Node2D"]
+
+[node name="Quadro" type="Sprite2D" parent="Node2D/Pocao3"]
+visible = false
+position = Vector2(167, 857)
+scale = Vector2(2.83726, 2.83726)
+texture = ExtResource("6_422id")
+
+[node name="Poção 3" type="Sprite2D" parent="Node2D/Pocao3"]
 position = Vector2(206, 894)
 texture = ExtResource("2_lbx2f")
 
-[node name="Poção 2" type="Sprite2D" parent="Node2D"]
-position = Vector2(206, 243)
-texture = ExtResource("3_422id")
+[node name="Pocao4" type="Node2D" parent="Node2D"]
 
-[node name="Poção 3" type="Sprite2D" parent="Node2D"]
-position = Vector2(1729, 243)
-texture = ExtResource("4_dmivy")
-
-[node name="Poção 4" type="Sprite2D" parent="Node2D"]
-position = Vector2(1739, 894)
-texture = ExtResource("5_6rkfm")
-
-[node name="Quadro ?" type="Sprite2D" parent="Node2D"]
-position = Vector2(177, 231)
+[node name="Quadro" type="Sprite2D" parent="Node2D/Pocao4"]
+visible = false
+position = Vector2(1723, 857)
 scale = Vector2(2.83726, 2.83726)
 texture = ExtResource("6_422id")
+
+[node name="Poção 4" type="Sprite2D" parent="Node2D/Pocao4"]
+position = Vector2(1750, 888)
+texture = ExtResource("5_6rkfm")
+
+[node name="Quadro de receitas" type="Sprite2D" parent="Node2D"]
+position = Vector2(1004.5, 144)
+scale = Vector2(5.31285, 4.53571)
+texture = ExtResource("8_almq2")
+
+[node name="Poção resultado" type="Sprite2D" parent="Node2D"]
+position = Vector2(635, 146)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_3ijsh")
