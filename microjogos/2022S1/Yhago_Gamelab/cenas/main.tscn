@@ -1,21 +1,51 @@
-[gd_scene load_steps=4 format=3 uid="uid://bxjif83b36oo2"]
+[gd_scene load_steps=7 format=3 uid="uid://bxjif83b36oo2"]
 
-[ext_resource type="Script" path="res://microjogos/2022S1/race/cenas/scripts/main.gd" id="1_hv27g"]
+[ext_resource type="Script" uid="uid://caopud87pssfg" path="res://microjogos/2022S1/race/cenas/scripts/main.gd" id="1_hv27g"]
+[ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="2_cnho3"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_e0oyl"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_6ii3p"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cnho3"]
+size = Vector2(96, 127)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uhi23"]
+size = Vector2(64, 64)
+
 [node name="SeuJogo" type="Node2D"]
 script = ExtResource("1_hv27g")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(300, 464)
-scale = Vector2(128, 384)
+[node name="TemplateBase" type="Sprite2D" parent="."]
+position = Vector2(1556, 558)
+scale = Vector2(128, 640)
 texture = SubResource("CanvasTexture_e0oyl")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Peixe" type="Area2D" parent="."]
+position = Vector2(1556, 786)
+
+[node name="imagePeixe" type="Sprite2D" parent="Peixe"]
+modulate = Color(1, 0.32549, 1, 1)
+position = Vector2(0, 14)
+scale = Vector2(96, 128)
+texture = SubResource("CanvasTexture_6ii3p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Peixe"]
+position = Vector2(0, 14.5)
+shape = SubResource("RectangleShape2D_cnho3")
+
+[node name="Anzol" type="Area2D" parent="."]
+position = Vector2(1556, 818)
+
+[node name="ImageAnzol" type="Sprite2D" parent="Anzol"]
 modulate = Color(0, 1, 1, 1)
-position = Vector2(300, 600)
 scale = Vector2(64, 64)
 texture = SubResource("CanvasTexture_6ii3p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Anzol"]
+shape = SubResource("RectangleShape2D_uhi23")
+
+[node name="AnimPersonagem" type="Sprite2D" parent="."]
+position = Vector2(443, 552)
+scale = Vector2(6, 6)
+texture = ExtResource("2_cnho3")
