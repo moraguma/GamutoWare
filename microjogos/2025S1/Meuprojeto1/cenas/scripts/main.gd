@@ -11,7 +11,23 @@ signal lose
 # 16:9
 const WIDTH = 1920
 const HEIGHT = 1080
+ # LISTA ANIMAIS STAND BY
+#var animais = [{"nome": "Barata", "tamanho": 1}, {"nome": "Rato", "tamanho": 2},{"nome": "Cobra", "tamanho":3 },
+ #{"nome": "Coelho", "tamanho": 4},{"nome": "Cachorro", "tamanho": 5},{"nome": "Humano", "tamanho": 6},
+#{"nome": "Cavalo", "tamanho": 7},{"nome": "Elefante", "tamanho": 8},{"nome": "Baleia", "tamanho": 9}]
 
+#Lista de Palavras
+#var alfabeto =[{"nome": "Abóbora", "tamanho": 1}, {"nome": "Acerola", "tamanho": 2},{"nome": "Barracuda", "tamanho": 3},
+#{"nome": "Carreta", "tamanho": 4},{"nome": "Crosta", "tamanho": 5},{"nome": "Dedo", "tamanho": 6},
+#{"nome": "Piranha", "tamanho": 7},{"nome": "Queijo", "tamanho": 8}, {"nome": "Saída", "tamanho": 9}]
+
+var lista_coisas = ["Abóbora", "Acerola", "Barracuda", "Carreta", "Crosta", "Dedo", "Piranha", "Queijo", "Saída"]
+var up: StringName # lista_al[up] --> lista_coisas.get_index(up)
+var down : StringName 
+var left : StringName 
+var right : StringName 
+var senha = []
+var score=0
 
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES PADRÃO
@@ -23,24 +39,50 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
+			NotificationCenter.notify("CHANGE YOUR PASSWORD!")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FAÇA ALGO!")
+			NotificationCenter.notify("MUDE SUA SENHA!")
+	#RANDOMIZAR A LISTA DE COISAS
+	var lista_al = lista_coisas.duplicate()
+	lista_al.shuffle()
+	
+	#DEFINIÇÃO DAS SETAS
+	up = lista_al[0]
+	down = lista_al[1]
+	left = lista_al[2]
+	right = lista_al[3]
+	
+	print("UP = " + up)
+	print("DOWN = " + down)
+	print("LEFT = " + left)
+	print("RIGHT = " + right)
+	var tween = create_tween()
+	tween.set_ease(Tween.EASE_OUT)
+	tween.set_trans(Tween.TRANS_BOUNCE)
+	tween.tween_property($Sprite2D, "position", Vector2(500, 500), 6)
+	
+	var senha = []
 
-
-# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
-# a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
-# a última chamada desta função. O comando pass não faz nada
-func _physics_process(delta):
-	pass
+	# if (botao cima pressionado and up não ta na lista);
+		# senha.append(up)
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a renderização, 
 # como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
 # desde a última chamada desta função. O comando pass não faz nada
 func _process(delta):
-	pass
-
+	if Input.is_action_pressed("cima") and up not in senha:
+		senha.append(up)
+		comparacao()
+	elif Input.is_action_pressed("baixo") and down not in senha:
+		senha.append(down)
+		comparacao()
+	elif Input.is_action_pressed("esquerda") and left not in senha:
+		senha.append(left)
+		comparacao()
+	elif Input.is_action_pressed("direita") and right not in senha:
+		senha.append(right)
+		comparacao()
 
 # --------------------------------------------------------------------------------------------------
 # SUAS FUNÇÕES
@@ -48,8 +90,14 @@ func _process(delta):
 
 
 # Um método genérico. Crie quantos métodos você precisar!
-func my_method():
-	pass
+func comparacao():
+	if len(senha) < 2: 
+		score += 1
+		print("FIRST SCORE UP")
+		return
+	if lista_coisas.find(senha[-1]) > lista_coisas.find(senha[-2]):
+		score += 1
+		print("SCORE UP")
 
 
 # --------------------------------------------------------------------------------------------------

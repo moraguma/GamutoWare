@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dub2ipxbh0mow"]
+
+[ext_resource type="Script" uid="uid://bglwmsp5qhgjw" path="res://microjogos/2025S1/Meuprojeto1/cenas/GamutoMal.gd" id="1_1isyh"]
+[ext_resource type="Texture2D" uid="uid://r1858lqwgbh8" path="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/Gamuto_Mal.png" id="1_e3uo1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1isyh"]
+
+[node name="GamutoMAL" type="CharacterBody2D"]
+script = ExtResource("1_1isyh")
+
+[node name="GamutoMal" type="Sprite2D" parent="."]
+scale = Vector2(1.22656, 1.21043)
+texture = ExtResource("1_e3uo1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(7, 7)
+shape = SubResource("CircleShape2D_1isyh")
+one_way_collision_margin = 0.0
