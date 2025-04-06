@@ -1,4 +1,121 @@
-[gd_scene format=3 uid="uid://ca56etyrwy2w8"]
+[gd_scene load_steps=11 format=3 uid="uid://cfj8xkkq6pqh3"]
+
+[ext_resource type="Script" uid="uid://d04sirxomapuy" path="res://microjogos/2025S1/gamupet/cenas/scripts/main.gd" id="1_pgfxg"]
+[ext_resource type="PackedScene" uid="uid://di5al5rc3udt3" path="res://microjogos/2025S1/gamupet/cenas/background.tscn" id="2_1e26w"]
+[ext_resource type="Theme" path="res://principal/recursos/themes/TitleTheme.tres" id="3_c3rhl"]
+[ext_resource type="PackedScene" uid="uid://bk7p6hlxhy1y5" path="res://microjogos/2025S1/gamupet/cenas/needs.tscn" id="4_xy21h"]
+[ext_resource type="PackedScene" uid="uid://bga3houi253dt" path="res://microjogos/2025S1/gamupet/cenas/pet.tscn" id="5_7jqs8"]
+[ext_resource type="Texture2D" uid="uid://ba0n317d8wa7" path="res://microjogos/2025S1/gamupet/recursos/imagens/explosion_13.png" id="6_85whg"]
+[ext_resource type="AudioStream" uid="uid://dov061dgfpdm2" path="res://microjogos/2025S1/gamupet/recursos/sons/gamupet-musica2.ogg" id="7_1e26w"]
+
+[sub_resource type="Animation" id="Animation_nh8fy"]
+resource_name = "explode"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 15]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 1.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_pgfxg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pgfxg"]
+_data = {
+&"RESET": SubResource("Animation_pgfxg"),
+&"explode": SubResource("Animation_nh8fy")
+}
 
 [node name="Main" type="Node2D"]
 texture_filter = 1
+script = ExtResource("1_pgfxg")
+
+[node name="Background" parent="." instance=ExtResource("2_1e26w")]
+metadata/_edit_group_ = true
+
+[node name="gamupet" parent="." instance=ExtResource("5_7jqs8")]
+position = Vector2(948, 581)
+
+[node name="Needs" parent="." instance=ExtResource("4_xy21h")]
+position = Vector2(944, 91)
+
+[node name="explosao" type="Sprite2D" parent="."]
+position = Vector2(967, 581)
+scale = Vector2(6, 6)
+texture = ExtResource("6_85whg")
+hframes = 4
+vframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="explosao"]
+libraries = {
+&"": SubResource("AnimationLibrary_pgfxg")
+}
+
+[node name="Seta" type="RichTextLabel" parent="."]
+clip_contents = false
+offset_left = 1400.0
+offset_top = 840.0
+offset_right = 1557.0
+offset_bottom = 1013.0
+theme = ExtResource("3_c3rhl")
+theme_override_font_sizes/normal_font_size = 128
+bbcode_enabled = true
+text = "[center]>"
+
+[node name="Seta2" type="RichTextLabel" parent="."]
+clip_contents = false
+offset_left = 360.0
+offset_top = 840.0
+offset_right = 524.0
+offset_bottom = 1018.0
+theme = ExtResource("3_c3rhl")
+theme_override_font_sizes/normal_font_size = 128
+bbcode_enabled = true
+text = "[center]<"
+
+[node name="Musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_1e26w")
+autoplay = true

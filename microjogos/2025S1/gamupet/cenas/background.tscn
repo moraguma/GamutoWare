@@ -182,7 +182,7 @@ offset_bottom = 527.0
 theme = ExtResource("3_foonp")
 theme_override_font_sizes/normal_font_size = 128
 bbcode_enabled = true
-text = "[center]COzinha"
+text = "[center]COZINHA"
 
 [node name="Text2" type="RichTextLabel" parent="."]
 z_index = 2

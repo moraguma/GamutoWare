@@ -4,7 +4,19 @@ var sala = 2
 @onready var needs = $"../Needs"
 
 func _ready():
-	pass
+	match Global.language:
+		Global.LANGUAGE.EN:
+			$Text.text = '[center]KITCHEN'
+			$Text2.text = '[center]BEDROOM'
+			$Text3.text = '[center]BATHROOM'
+			$Text4.text = '[center]LIVING ROOM'
+		Global.LANGUAGE.PT:
+			$Text.text = '[center]COZINHA'
+			$Text2.text = '[center]QUARTO'
+			$Text3.text = '[center]BANHEIRO'
+			$Text4.text = '[center]SALA'
+			
+			
 
 func _physics_process(delta):
 	
