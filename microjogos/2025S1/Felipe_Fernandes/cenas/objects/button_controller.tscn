@@ -28,3 +28,5 @@ key = "esquerda"
 shape = SubResource("RectangleShape2D_n4ssf")
 disabled = true
 debug_color = Color(0.166668, 0.350982, 0.461456, 0.866667)
+
+[connection signal="fail_signal" from="Buttons/ActionButton_up" to="Buttons/ActionButton_right" method="_on_action_button_up_fail_signal"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://d3r1ykj70r6po"]
+[gd_scene load_steps=10 format=3 uid="uid://d3r1ykj70r6po"]
 
 [ext_resource type="Texture2D" uid="uid://c53sxonmkp6dl" path="res://microjogos/2025S1/Felipe_Fernandes/recursos/imagens/button_icon.png" id="1_42hei"]
 [ext_resource type="Script" uid="uid://bpanxvt6ganmo" path="res://microjogos/2025S1/Felipe_Fernandes/cenas/scripts/action_button.gd" id="1_crxio"]
 [ext_resource type="Texture2D" uid="uid://dle821kgh1h56" path="res://microjogos/2025S1/Felipe_Fernandes/recursos/imagens/button_radius.png" id="2_4ki71"]
+[ext_resource type="AudioStream" uid="uid://k0pn57wiwl7n" path="res://microjogos/2025S1/Felipe_Fernandes/recursos/sons/mouse-click-117076.mp3" id="4_5788g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_42hei"]
 atlas = ExtResource("1_42hei")
@@ -59,5 +60,8 @@ texture = ExtResource("2_4ki71")
 
 [node name="vanishing_timer" type="Timer" parent="."]
 wait_time = 2.0
+
+[node name="click_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_5788g")
 
 [connection signal="timeout" from="vanishing_timer" to="." method="_on_vanishing_timer_timeout"]
