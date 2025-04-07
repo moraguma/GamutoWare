@@ -120,6 +120,9 @@ func _ready():
 		aaa.play()
 		
 func _process(delta):
+	if $VDC_Feliz.visible == true || $VDC_Triste.visible == true:
+		if Input.is_action_just_pressed("acao"):
+			get_tree().reload_current_scene()
 	pass
 
 func pergunta_pressed(pergunta) -> void:
@@ -130,3 +133,4 @@ func pergunta_pressed(pergunta) -> void:
 	else:
 		$VDC_Triste.visible = true
 		emit_signal("lose")
+		
