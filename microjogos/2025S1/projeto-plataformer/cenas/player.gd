@@ -13,6 +13,7 @@ var parent
 var timer
 var won = 0.0
 var estrela
+var fell = false
 
 func _ready():
 	animation_player = get_node("AnimationPlayer")
@@ -32,6 +33,9 @@ func _process(delta):
 			parent.register_win()
 			won = 1.0
 			get_node("../Efeito_vitoria").play()
+	if position.y >= 8.0 * 16 and not fell:
+		$falling.play()
+		fell = true
 
 
 func _physics_process(delta):

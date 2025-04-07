@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://v8jttrvrrsx5"]
+[gd_scene load_steps=14 format=3 uid="uid://v8jttrvrrsx5"]
 
 [ext_resource type="Script" uid="uid://cl80xo4slqne2" path="res://microjogos/2025S1/projeto-plataformer/cenas/player.gd" id="1_e7yq2"]
 [ext_resource type="Texture2D" uid="uid://drf3l66xobgo8" path="res://microjogos/2025S1/projeto-plataformer/recursos/imagens/character.png" id="1_qwkws"]
 [ext_resource type="AudioStream" uid="uid://bnbn7bpq3cvjc" path="res://microjogos/2025S1/projeto-plataformer/recursos/sons/footstep00_YuwILDIo.wav" id="2_vs5jv"]
 [ext_resource type="AudioStream" uid="uid://bb10yei3a2p68" path="res://microjogos/2025S1/projeto-plataformer/recursos/sons/Jump 1.wav" id="4_0bja4"]
+[ext_resource type="AudioStream" uid="uid://bqrqxgxmfs7of" path="res://microjogos/2025S1/projeto-plataformer/recursos/sons/3yell1.wav" id="5_ikhs2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qwkws"]
 size = Vector2(20, 32)
@@ -320,3 +321,6 @@ shape = SubResource("RectangleShape2D_qwkws")
 
 [node name="landing_sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_0bja4")
+
+[node name="falling" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_ikhs2")
