@@ -40,6 +40,7 @@ func _physics_process(delta):
 	
 	if animation_player.get_current_animation() == "fall" and is_on_floor():
 		animation_player.play("idle")
+		$landing_sound.play()
 	
 	if Input.is_action_pressed("direita"):
 		sprite.flip_h = false
@@ -65,7 +66,6 @@ func _physics_process(delta):
 	
 	if is_on_floor() and Input.is_action_pressed("acao"):
 		if animation_player.current_animation == "run":
-			print("correndo")
 			animation_player.stop()
 			$AnimationPlayer/AudioStreamPlayer2D.stop()
 		velocity.y -= jump_speed
