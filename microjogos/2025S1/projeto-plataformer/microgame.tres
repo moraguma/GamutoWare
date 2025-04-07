@@ -21,7 +21,9 @@ https://opengameart.org/users/spuispuin
 Efeito pouso: Macro CC0
 https://opengameart.org/content/jump-landing
 Efeito de passos: Kenney CC0
-https://opengameart.org/content/50-rpg-sound-effects"
+https://opengameart.org/content/50-rpg-sound-effects
+Efeito de grito durante queda: HaelDB https://opengameart.org/users/haeldb CC0 e OGA-BY 3.0
+https://opengameart.org/content/male-gruntyelling-sounds"
 credits_en = "Developed by: Ricardo Emanuel
 Dungeon Assets: David G CC0
 https://incolgames.itch.io/dungeon-platformer-tile-set-pixel-art
@@ -34,7 +36,9 @@ https://opengameart.org/users/spuispuin
 Landing effect: Macro CC0
 https://opengameart.org/content/jump-landing
 Steps effect: Kenney CC0
-https://opengameart.org/content/50-rpg-sound-effects"
+https://opengameart.org/content/50-rpg-sound-effects
+Screaming effect when falling: HaelDB https://opengameart.org/users/haeldb CC0 e OGA-BY 3.0
+https://opengameart.org/content/male-gruntyelling-sounds"
 start_message_pt = &"TENTE!"
 start_message_en = &"TRY!"
 main_scene = ExtResource("1_7l7aa")
