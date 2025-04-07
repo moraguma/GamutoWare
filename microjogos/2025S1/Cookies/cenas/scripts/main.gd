@@ -16,17 +16,10 @@ const HEIGHT = 1080
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES PADRÃO
 # --------------------------------------------------------------------------------------------------
-var cliques=0;
-var scene_cookie = preload("res://microjogos/2025S1/Cookies/cenas/cookie.tscn")
-var rng = RandomNumberGenerator.new()
-
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
-	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
-	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
-
-	register_win()
+	pass
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
@@ -40,25 +33,9 @@ func _physics_process(delta):
 # como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
 # desde a última chamada desta função. O comando pass não faz nada
 func _process(delta):
-	if Input.is_action_just_pressed("acao"):
-		cliques+=10
-		var my_random_number = rng.randf_range(-300.0, 300.0)
-		var instance_cookie = scene_cookie.instantiate()
-		instance_cookie.position = Vector2(960+my_random_number, 400+sqrt(90000-my_random_number*my_random_number))
-		add_child(instance_cookie)
+	pass
 
-	if Input.is_action_just_pressed("direita") and not $Turret2.enabled:
-		if cliques >= 100:
-			$Turret2.spawn()
-			cliques -= 100
-	if Input.is_action_just_pressed("esquerda") and not $Turret.enabled:
-		if cliques >= 100:
-			$Turret.spawn()
-			cliques -= 100
-	if Input.is_action_just_pressed("cima") and not $Cannon.enabled:
-		if cliques >= 200:
-			$Cannon.spawn()
-			cliques -= 200
+
 # --------------------------------------------------------------------------------------------------
 # SUAS FUNÇÕES
 # --------------------------------------------------------------------------------------------------
