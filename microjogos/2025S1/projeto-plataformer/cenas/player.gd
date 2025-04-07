@@ -12,6 +12,7 @@ var player
 var parent
 var timer
 var won = 0.0
+var estrela
 
 func _ready():
 	animation_player = get_node("AnimationPlayer")
@@ -21,6 +22,7 @@ func _ready():
 	parent = get_parent()
 	animation_player.play("idle")
 	timer = get_node("../Timer")
+	estrela = get_node("../Estrela")
 	timer.start(6.0)
 
 
@@ -75,7 +77,7 @@ func _physics_process(delta):
 
 
 func _on_estrela_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"):
+	if body.is_in_group("player") and estrela.get_node("Sprite2D").visible == true:
 		print("ganhei")
 		get_node("../Estrela").get_node("Sprite2D").visible = false
 		get_node("../Efeito_vitoria").play()
