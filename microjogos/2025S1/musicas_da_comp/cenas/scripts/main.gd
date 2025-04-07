@@ -31,7 +31,7 @@ const perguntas = {
 	"ragatanga" : 
 		{
 			"E o DJ que já conhece ... pra Diego, a canção mais desejada" : ["Toca o som da meia-noite", "Vai tocando toda a noite", "Vai dançando lá no front", "Dedica à meia-noite"],
-			"Aserehe ra de re De hebe tu de hebere seibiunouba mahabi ...": ["An de bugui an de buididipi", "To the rhythm of the boogi, the beat", "Andebuggy Andebuggy Riby", "And the boogie and the boogie, the beat"],
+			"Aserehe ra de re De hebe tu de hebere seibiunouba mahabi ...": ["An de bugui an de buididipi", "To the rhythm of the boogie, the beat", "Andebuggy Andebuggy Riby", "And the boogie and the boogie, the beat"],
 			"Não é por acaso que encontro todo dia (todo dia) ... caminhando": ["Cúando me voy", "Quando eu vou", "Quanto eu tô", "Enquanto eu vou"],
 			"Olha lá quem vem virando a esquina vem ... com toda a alegria, festejando": ["Diego", "Fernando", "Hermano", "Miguel"]
 		},
