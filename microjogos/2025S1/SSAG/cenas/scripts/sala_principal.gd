@@ -45,7 +45,6 @@ func speedup(j):
 func _ready() -> void:
 	musica.play()
 	tempo.start()
-	print(pdir.speed_scale)
 	vidas.text = "Vidas = 3"
 	
 

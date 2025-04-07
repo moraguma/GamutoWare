@@ -242,9 +242,11 @@ texture = ExtResource("7_lu3tb")
 
 [node name="bump" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_2t6n6")
+volume_db = 0.991
 
 [node name="musica" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("9_hkv0s")
+volume_db = -2.971
 
 [node name="Label" type="Label" parent="."]
 offset_left = 46.0
