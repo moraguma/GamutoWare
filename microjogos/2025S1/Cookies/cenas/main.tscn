@@ -1,22 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://devce1jy5yrb8"]
+[gd_scene load_steps=6 format=3 uid="uid://devce1jy5yrb8"]
 
 [ext_resource type="Script" uid="uid://cwdeg2iachcoh" path="res://microjogos/2025S1/Cookies/cenas/scripts/main.gd" id="1_aashi"]
-[ext_resource type="Texture2D" uid="uid://cdv0dv2taib4f" path="res://microjogos/2025S1/Cookies/recursos/imagens/cookieBeta.webp" id="3_xb0ta"]
+[ext_resource type="Texture2D" uid="uid://b2jajfg84rx1d" path="res://microjogos/2025S1/Cookies/recursos/imagens/cookiePixelArt.png" id="2_6m3k1"]
+[ext_resource type="Texture2D" uid="uid://cf573gwx7g2xg" path="res://microjogos/2025S1/Cookies/recursos/imagens/CookieMonsterBocaAberta.webp" id="3_7hjn7"]
+[ext_resource type="Texture2D" uid="uid://debq2jefi5gtr" path="res://microjogos/2025S1/Cookies/recursos/imagens/CookieMonsterBocaFechada.webp" id="4_7hjn7"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7hjn7"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_aashi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 5
 position = Vector2(960, 400)
-scale = Vector2(1.4, 1.4)
-texture = ExtResource("3_xb0ta")
+scale = Vector2(23.5, 23.5)
+texture = ExtResource("2_6m3k1")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 position = Vector2(960, 400)
 scale = Vector2(50, 50)
 emitting = false
 amount = 1
-texture = ExtResource("3_xb0ta")
+texture = SubResource("CompressedTexture2D_7hjn7")
 emission_shape = 2
 emission_sphere_radius = 1.0
 direction = Vector2(0, 1)
@@ -26,3 +31,16 @@ initial_velocity_min = 40.0
 initial_velocity_max = 60.0
 scale_amount_min = 0.1
 scale_amount_max = 0.1
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(750, 1000)
+rotation = -1.5708
+scale = Vector2(2, 2)
+texture = ExtResource("3_7hjn7")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(750, -250)
+rotation = -1.5708
+scale = Vector2(3, 3)
+texture = ExtResource("4_7hjn7")
