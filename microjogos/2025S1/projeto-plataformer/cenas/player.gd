@@ -30,7 +30,6 @@ func _process(delta):
 	for door in array:
 		if door.overlaps_body(player) and Input.is_action_just_pressed("cima"):
 			parent.register_win()
-			print("ganhei na porta")
 			won = 1.0
 			get_node("../Efeito_vitoria").play()
 
@@ -78,7 +77,6 @@ func _physics_process(delta):
 
 func _on_estrela_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and estrela.get_node("Sprite2D").visible == true:
-		print("ganhei")
 		get_node("../Estrela").get_node("Sprite2D").visible = false
 		get_node("../Efeito_vitoria").play()
 		won = 1.0
@@ -87,5 +85,4 @@ func _on_estrela_body_entered(body: Node2D) -> void:
 
 func _on_timer_timeout() -> void:
 	if won == 0.0:
-		print("perdi")
 		parent.register_lose()
