@@ -6,8 +6,10 @@
 script = ExtResource("1_qc8jv")
 title_pt = &"TÍTULO DO JOGO"
 title_en = &"GAME TITLE"
-credits_pt = "Créditos do jogo"
-credits_en = "Game crédits"
+credits_pt = "Jogo: LeonerdCdL
+Cookie: https://opengameart.org/content/pixel-cookie"
+credits_en = "Game: LeonerdCdL
+Cookie: https://opengameart.org/content/pixel-cookie"
 start_message_pt = &"FAÇA ALGO!"
 start_message_en = &"DO SOMETHING!"
 difficulty = 0
