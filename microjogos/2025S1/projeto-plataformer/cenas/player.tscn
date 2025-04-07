@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://v8jttrvrrsx5"]
+[gd_scene load_steps=12 format=3 uid="uid://v8jttrvrrsx5"]
 
 [ext_resource type="Script" uid="uid://cl80xo4slqne2" path="res://microjogos/2025S1/projeto-plataformer/cenas/player.gd" id="1_e7yq2"]
 [ext_resource type="Texture2D" uid="uid://drf3l66xobgo8" path="res://microjogos/2025S1/projeto-plataformer/recursos/imagens/character.png" id="1_qwkws"]
+[ext_resource type="AudioStream" uid="uid://bnbn7bpq3cvjc" path="res://microjogos/2025S1/projeto-plataformer/recursos/sons/footstep00_YuwILDIo.wav" id="2_vs5jv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qwkws"]
 size = Vector2(20, 32)
@@ -55,6 +56,30 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(20, 32), Vector2(20, 32)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/AudioStreamPlayer2D:stream")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_vs5jv")]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/AudioStreamPlayer2D:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_ikhs2"]
@@ -179,7 +204,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_qwkws"]
 resource_name = "run"
-length = 1.6
+length = 0.8
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -188,7 +213,7 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [8, 9, 10, 11, 12, 13, 14, 15]
@@ -200,7 +225,7 @@ tracks/1/path = NodePath("CollisionShape2D:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.6),
+"times": PackedFloat32Array(0, 0.8),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(0, 3), Vector2(0, 3)]
@@ -212,10 +237,49 @@ tracks/2/path = NodePath("CollisionShape2D:shape:size")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 1.6),
+"times": PackedFloat32Array(0, 0.8),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(20, 32), Vector2(20, 32)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/AudioStreamPlayer2D:stream")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("2_vs5jv"), ExtResource("2_vs5jv")]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/AudioStreamPlayer2D:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_dd7ri"]
+resource_name = "walk"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0bja4"]
@@ -224,7 +288,8 @@ _data = {
 &"fall": SubResource("Animation_ikhs2"),
 &"idle": SubResource("Animation_e7yq2"),
 &"jump": SubResource("Animation_0bja4"),
-&"run": SubResource("Animation_qwkws")
+&"run": SubResource("Animation_qwkws"),
+&"walk": SubResource("Animation_dd7ri")
 }
 
 [node name="Personagem" type="CharacterBody2D" groups=["player"]]
@@ -236,6 +301,9 @@ libraries = {
 &"": SubResource("AnimationLibrary_0bja4")
 }
 speed_scale = 1.5
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="AnimationPlayer"]
+stream = ExtResource("2_vs5jv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
