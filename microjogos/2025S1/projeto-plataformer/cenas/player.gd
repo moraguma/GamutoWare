@@ -29,6 +29,7 @@ func _process(delta):
 		if door.overlaps_body(player) and Input.is_action_just_pressed("cima"):
 			parent.register_win()
 			print("ganhei na porta")
+			won = 1.0
 			get_node("../Efeito_vitoria").play()
 
 
