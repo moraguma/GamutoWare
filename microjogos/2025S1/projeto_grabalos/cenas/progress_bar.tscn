@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://btc52ft3vt20x"]
+
+[ext_resource type="Script" uid="uid://6202s4wv3rdy" path="res://microjogos/2025S1/projeto_grabalos/cenas/scripts/progress_bar.gd" id="1_q3fwq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y2a2x"]
+bg_color = Color(1, 0.338634, 0.314986, 1)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(0.0177324, 0.0177324, 0.0177324, 1)
+corner_radius_top_left = 1000
+corner_radius_top_right = 1000
+corner_radius_bottom_right = 1000
+corner_radius_bottom_left = 1000
+shadow_color = Color(0, 0, 0, 0.105882)
+shadow_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fbkrn"]
+bg_color = Color(1, 0.855708, 0.536442, 1)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(0.0687983, 0.0687983, 0.0687982, 1)
+corner_radius_top_left = 1000
+corner_radius_top_right = 1000
+corner_radius_bottom_right = 1000
+corner_radius_bottom_left = 1000
+shadow_color = Color(0, 0, 0, 0.0901961)
+shadow_size = 30
+
+[sub_resource type="Theme" id="Theme_4iy4p"]
+ProgressBar/styles/background = SubResource("StyleBoxFlat_y2a2x")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_fbkrn")
+
+[node name="ProgressBar" type="ProgressBar"]
+anchors_preset = -1
+anchor_right = 0.062
+anchor_bottom = 0.656
+offset_right = 0.959991
+offset_bottom = -0.480042
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_4iy4p")
+value = 18.0
+fill_mode = 3
+show_percentage = false
+script = ExtResource("1_q3fwq")
