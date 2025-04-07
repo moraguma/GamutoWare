@@ -10,23 +10,31 @@ cover = ExtResource("1_l6lkd")
 title_pt = &"Starry Knight"
 title_en = &"Starry Knight"
 credits_pt = "Desenvolvido por: Ricardo Emanuel
-Assets do cenário: David G
+Assets do cenário: David G CC0
 https://incolgames.itch.io/dungeon-platformer-tile-set-pixel-art
-Assets do cavalheiro: Mattz Art
+Assets do cavalheiro: Mattz Art CC0
 https://xzany.itch.io/free-knight-2d-pixel-art
-Estrela: TotusLotus 
+Estrela: TotusLotus CC0
 https://totuslotus.itch.io/pixel-art-collectibles
-Efeito vitória: spuispuin
-https://opengameart.org/users/spuispuin"
+Efeito vitória: spuispuin CC-BY 4.0
+https://opengameart.org/users/spuispuin
+Efeito pouso: Macro CC0
+https://opengameart.org/content/jump-landing
+Efeito de passos: Kenney CC0
+https://opengameart.org/content/50-rpg-sound-effects"
 credits_en = "Developed by: Ricardo Emanuel
-Dungeon Assets: David G
+Dungeon Assets: David G CC0
 https://incolgames.itch.io/dungeon-platformer-tile-set-pixel-art
-Knight Assets: Mattz Art
+Knight Assets: Mattz Art CC0
 https://xzany.itch.io/free-knight-2d-pixel-art
-Star Asset: TotusLotus 
+Star Asset: TotusLotus CC0
 https://totuslotus.itch.io/pixel-art-collectibles
-Victory effect: spuispuin
-https://opengameart.org/users/spuispuin"
+Victory effect: spuispuin CC-BY 4.0
+https://opengameart.org/users/spuispuin
+Landing effect: Macro CC0
+https://opengameart.org/content/jump-landing
+Steps effect: Kenney CC0
+https://opengameart.org/content/50-rpg-sound-effects"
 start_message_pt = &"TENTE!"
 start_message_en = &"TRY!"
 main_scene = ExtResource("1_7l7aa")
