@@ -19,7 +19,7 @@ script = ExtResource("1_ng8s0")
 [node name="mapa" parent="." instance=ExtResource("1_enm8k")]
 
 [node name="Personagem" parent="." instance=ExtResource("2_1wgp2")]
-position = Vector2(-266, -19)
+position = Vector2(-269, -60)
 
 [node name="Estrela" parent="." instance=ExtResource("3_eeojv")]
 position = Vector2(-137, -86)
