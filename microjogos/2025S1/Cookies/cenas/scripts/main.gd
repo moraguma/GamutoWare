@@ -28,9 +28,9 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("ACEPT COOKIES!")
+			NotificationCenter.notify("EAT COOKIES!")
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("ACEITE COOKIES!")
+			NotificationCenter.notify("COMA COOKIES!")
 
 
 
@@ -47,13 +47,17 @@ func _physics_process(delta):
 func _process(delta):
 	if Input.is_action_just_pressed("acao"):
 		cliques+=1
-		emit_signal("clique")
+		$Sprite2D2.position.y-=25
+		$Sprite2D2.scale+=Vector2(0.02,0.02)
 		var my_random_number = rng.randf_range(-300.0, 300.0)
 		var instance_cookie = scene_cookie.instantiate()
 		instance_cookie.position = Vector2(960+my_random_number, 400+sqrt(90000-my_random_number*my_random_number))
 		add_child(instance_cookie)
 
-	if cliques > cliques_win:
+	if cliques >= cliques_win:
+		$Sprite2D2.visible=false
+		$Sprite2D3.visible=true
+		
 		register_win()
 
 
