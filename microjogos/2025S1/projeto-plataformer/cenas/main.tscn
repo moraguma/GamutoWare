@@ -25,7 +25,7 @@ position = Vector2(-269, -60)
 position = Vector2(-137, -86)
 collision_mask = 3
 
-[node name="Porta" parent="." instance=ExtResource("4_ng8s0")]
+[node name="Porta1" parent="." instance=ExtResource("4_ng8s0")]
 position = Vector2(-309, -16)
 
 [node name="Porta2" parent="." instance=ExtResource("4_ng8s0")]
@@ -35,9 +35,6 @@ position = Vector2(101, 80)
 position = Vector2(-100, -25)
 zoom = Vector2(4, 4)
 
-[node name="Timer" type="Timer" parent="."]
-one_shot = true
-
 [node name="Efeito_vitoria" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_lppnp")
 
@@ -45,4 +42,3 @@ stream = ExtResource("6_lppnp")
 stream = SubResource("AudioStreamWAV_lppnp")
 
 [connection signal="body_entered" from="Estrela" to="Personagem" method="_on_estrela_body_entered"]
-[connection signal="timeout" from="Timer" to="Personagem" method="_on_timer_timeout"]
