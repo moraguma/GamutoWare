@@ -8,9 +8,9 @@ var final_velocity: float = 200.0
 var fell: bool = false
 var is_jumping = false
 
-var animation_player
-var sprite
-var landing_sound
+var animation_player: AnimationPlayer
+var sprite: Sprite2D
+var landing_sound: AudioStreamPlayer2D
 
 func _ready():
 	animation_player = $AnimationPlayer
@@ -68,7 +68,7 @@ func _physics_process(delta):
 		is_jumping = true
 		if animation_player.current_animation == "run":
 			animation_player.stop()
-			$AnimationPlayer/AudioStreamPlayer2D.stop()
+			$AnimationPlayer/Steps_sound.stop()
 
 		# Essa animação não funciona se o boneco estiver em idle
 		''' 
@@ -81,13 +81,13 @@ func _physics_process(delta):
 		animation_player.speed_scale = 1.0
 	
 	elif not is_on_floor() and velocity.y > 0.0:
-		$AnimationPlayer/AudioStreamPlayer2D.stop()
+		$AnimationPlayer/Steps_sound.stop()
 		animation_player.play("fall")
 		animation_player.speed_scale = 1.0
 	
 	if not Input.is_action_pressed("esquerda") and not Input.is_action_pressed("direita") and is_on_floor() and not is_jumping:
 		velocity.x = 0
-		$AnimationPlayer/AudioStreamPlayer2D.stop()
+		$AnimationPlayer/Steps_sound.stop()
 		animation_player.play("idle")
 		animation_player.speed_scale = 1.0
 	

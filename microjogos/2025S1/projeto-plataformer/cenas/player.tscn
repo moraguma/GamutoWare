@@ -62,7 +62,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("AnimationPlayer/AudioStreamPlayer2D:stream")
+tracks/4/path = NodePath("AnimationPlayer/Steps_sound:stream")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -74,7 +74,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("AnimationPlayer/AudioStreamPlayer2D:playing")
+tracks/5/path = NodePath("AnimationPlayer/Steps_sound:playing")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -248,7 +248,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("AnimationPlayer/AudioStreamPlayer2D:stream")
+tracks/3/path = NodePath("AnimationPlayer/Steps_sound:stream")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -260,7 +260,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("AnimationPlayer/AudioStreamPlayer2D:playing")
+tracks/4/path = NodePath("AnimationPlayer/Steps_sound:playing")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -305,7 +305,7 @@ libraries = {
 }
 speed_scale = 1.5
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="AnimationPlayer"]
+[node name="Steps_sound" type="AudioStreamPlayer2D" parent="AnimationPlayer"]
 stream = ExtResource("2_vs5jv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
