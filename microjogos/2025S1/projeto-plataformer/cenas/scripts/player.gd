@@ -5,9 +5,10 @@ var jump_speed: float = 265.0
 var gravity: float = 9.0
 var acceleration: float = 100.0
 var final_velocity: float = 200.0
-var animation_player
 var fell: bool = false
 var is_jumping = false
+
+var animation_player
 var sprite
 var landing_sound
 
