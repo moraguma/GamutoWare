@@ -44,7 +44,7 @@ func _physics_process(delta):
 		if is_on_floor():
 			animation_player.play("run")
 		if velocity.x < 0:
-			velocity.x += 1.5 * acceleration * delta
+			velocity.x += 2 * acceleration * delta
 		else:
 			if velocity.x < final_velocity:
 				velocity.x += acceleration * delta
@@ -56,7 +56,7 @@ func _physics_process(delta):
 		if is_on_floor():
 			animation_player.play("run")
 		if velocity.x > 0:
-			velocity.x -= 1.5 * acceleration * delta
+			velocity.x -= 2 * acceleration * delta
 		else:
 			if velocity.x > -final_velocity:
 				velocity.x -= acceleration * delta
