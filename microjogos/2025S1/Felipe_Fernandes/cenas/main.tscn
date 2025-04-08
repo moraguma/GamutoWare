@@ -1,0 +1,253 @@
+[gd_scene load_steps=35 format=3 uid="uid://ci37cn34rw60s"]
+
+[ext_resource type="Texture2D" uid="uid://ccjaof4hl3taj" path="res://microjogos/2025S1/Felipe_Fernandes/recursos/imagens/background2.png" id="1_3qgit"]
+[ext_resource type="PackedScene" uid="uid://dov2svkeemfxh" path="res://microjogos/2025S1/Felipe_Fernandes/cenas/objects/button_controller.tscn" id="1_bpo1f"]
+[ext_resource type="Texture2D" uid="uid://dp4nyadpvn8qf" path="res://microjogos/2025S1/Felipe_Fernandes/recursos/imagens/background1.png" id="1_tfmwe"]
+[ext_resource type="Texture2D" uid="uid://d4hlwn8hod53u" path="res://microjogos/2025S1/Felipe_Fernandes/recursos/imagens/background-defeat.png" id="1_vhghl"]
+[ext_resource type="Texture2D" uid="uid://ct26jlo2nxvhm" path="res://microjogos/2025S1/Felipe_Fernandes/recursos/imagens/bar_under.png" id="2_w3ib7"]
+[ext_resource type="Texture2D" uid="uid://dg88xurk01qvn" path="res://microjogos/2025S1/Felipe_Fernandes/recursos/imagens/bar_outline.png" id="3_t6m2i"]
+[ext_resource type="Texture2D" uid="uid://dbar8hro3l51p" path="res://microjogos/2025S1/Felipe_Fernandes/recursos/imagens/bar_progress.png" id="4_2u8uw"]
+[ext_resource type="Texture2D" uid="uid://duk3s5uvsdnoh" path="res://microjogos/2025S1/Felipe_Fernandes/recursos/imagens/background1-win.png" id="4_jt7hj"]
+[ext_resource type="Script" uid="uid://btnu5mjsj64mf" path="res://microjogos/2025S1/Felipe_Fernandes/cenas/scripts/main.gd" id="6_jt7hj"]
+[ext_resource type="Script" uid="uid://t0i6m8mdhpsr" path="res://microjogos/2025S1/Felipe_Fernandes/cenas/progress_bar.gd" id="6_qhoeu"]
+[ext_resource type="Script" uid="uid://dxef45cuu74nr" path="res://microjogos/2025S1/Felipe_Fernandes/cenas/scripts/control.gd" id="6_vke38"]
+[ext_resource type="Texture2D" uid="uid://cqyka48s6njvh" path="res://microjogos/2025S1/Felipe_Fernandes/recursos/imagens/bar_icon.png" id="7_oxvgq"]
+[ext_resource type="Texture2D" uid="uid://bjitjjl6joynw" path="res://microjogos/2025S1/Felipe_Fernandes/recursos/imagens/bar_target.png" id="8_oxvgq"]
+[ext_resource type="FontFile" uid="uid://84dp7b6ocfu6" path="res://microjogos/2025S1/Felipe_Fernandes/recursos/fontes/DungeonFont.ttf" id="9_va100"]
+[ext_resource type="AudioStream" uid="uid://brpf1v6o451bn" path="res://microjogos/2025S1/Felipe_Fernandes/recursos/sons/gun-shot-sound-effect-224087.mp3" id="14_jt7hj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hloue"]
+atlas = ExtResource("1_vhghl")
+region = Rect2(0, 0, 160, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0moro"]
+atlas = ExtResource("1_3qgit")
+region = Rect2(0, 0, 160, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22he4"]
+atlas = ExtResource("1_3qgit")
+region = Rect2(160, 0, 160, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yafcf"]
+atlas = ExtResource("1_3qgit")
+region = Rect2(320, 0, 160, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmii5"]
+atlas = ExtResource("1_3qgit")
+region = Rect2(480, 0, 160, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3qgit"]
+atlas = ExtResource("1_tfmwe")
+region = Rect2(0, 0, 160, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_blrx6"]
+atlas = ExtResource("1_tfmwe")
+region = Rect2(160, 0, 160, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhghl"]
+atlas = ExtResource("1_tfmwe")
+region = Rect2(320, 0, 160, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jt7hj"]
+atlas = ExtResource("1_tfmwe")
+region = Rect2(480, 0, 160, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vke38"]
+atlas = ExtResource("1_tfmwe")
+region = Rect2(640, 0, 160, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oo3u1"]
+atlas = ExtResource("1_tfmwe")
+region = Rect2(800, 0, 160, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11ku5"]
+atlas = ExtResource("1_tfmwe")
+region = Rect2(960, 0, 160, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2f7vh"]
+atlas = ExtResource("1_tfmwe")
+region = Rect2(1120, 0, 160, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4i5tl"]
+atlas = ExtResource("1_tfmwe")
+region = Rect2(1280, 0, 160, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mnlfx"]
+atlas = ExtResource("4_jt7hj")
+region = Rect2(0, 0, 160, 90)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0moro"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hloue")
+}],
+"loop": true,
+"name": &"defeat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0moro")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_22he4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yafcf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nmii5")
+}],
+"loop": true,
+"name": &"init",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3qgit")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_blrx6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vhghl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jt7hj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vke38")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oo3u1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11ku5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2f7vh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4i5tl")
+}],
+"loop": true,
+"name": &"main_game",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mnlfx")
+}],
+"loop": true,
+"name": &"win",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qhoeu"]
+
+[sub_resource type="Theme" id="Theme_oxvgq"]
+ProgressBar/styles/background = SubResource("StyleBoxFlat_qhoeu")
+ProgressBar/styles/fill = null
+
+[sub_resource type="LabelSettings" id="LabelSettings_tfmwe"]
+font = ExtResource("9_va100")
+font_size = 35
+
+[node name="Main" type="Node2D"]
+texture_filter = 1
+
+[node name="Camera" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+metadata/_edit_group_ = true
+
+[node name="background" type="AnimatedSprite2D" parent="Camera"]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_0moro")
+animation = &"win"
+autoplay = "init"
+
+[node name="ButtonController" parent="Camera" node_paths=PackedStringArray("camera", "progress_bar") instance=ExtResource("1_bpo1f")]
+camera = NodePath("..")
+progress_bar = NodePath("../Control/BoxContainer/ProgressBar")
+
+[node name="Control" type="Control" parent="Camera"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -319.0
+offset_top = -179.0
+offset_right = 320.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_vke38")
+
+[node name="main" type="Node2D" parent="Camera/Control"]
+script = ExtResource("6_jt7hj")
+
+[node name="BoxContainer" type="BoxContainer" parent="Camera/Control"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -90.0
+offset_right = -45.0
+offset_bottom = -180.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(2, 2)
+alignment = 1
+vertical = true
+
+[node name="ProgressBar" type="TextureProgressBar" parent="Camera/Control/BoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_oxvgq")
+value = 5.0
+fill_mode = 3
+stretch_margin_left = 5
+stretch_margin_top = 6
+stretch_margin_right = 5
+stretch_margin_bottom = 5
+texture_under = ExtResource("2_w3ib7")
+texture_over = ExtResource("3_t6m2i")
+texture_progress = ExtResource("4_2u8uw")
+script = ExtResource("6_qhoeu")
+
+[node name="target" type="Sprite2D" parent="Camera/Control/BoxContainer/ProgressBar"]
+position = Vector2(11, 35.5)
+texture = ExtResource("8_oxvgq")
+
+[node name="icon" type="Sprite2D" parent="Camera/Control/BoxContainer/ProgressBar"]
+position = Vector2(11, 74)
+texture = ExtResource("7_oxvgq")
+
+[node name="main_game" type="Timer" parent="Camera/Control"]
+wait_time = 4.0
+one_shot = true
+
+[node name="Label" type="Label" parent="Camera/Control"]
+layout_mode = 0
+offset_right = 85.0
+offset_bottom = 54.0
+text = "0:00"
+label_settings = SubResource("LabelSettings_tfmwe")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="init_time" type="Timer" parent="Camera/Control"]
+one_shot = true
+autostart = true
+
+[node name="end_screen" type="Timer" parent="Camera/Control"]
+one_shot = true
+
+[node name="shoot_sound" type="AudioStreamPlayer2D" parent="Camera/Control"]
+stream = ExtResource("14_jt7hj")
+
+[connection signal="timeout" from="Camera/Control/main_game" to="Camera/Control" method="_on_timer_timeout"]
+[connection signal="timeout" from="Camera/Control/main_game" to="Camera/Control" method="_on_main_game_timeout"]
+[connection signal="timeout" from="Camera/Control/init_time" to="Camera/Control" method="_on_init_time_timeout"]
+[connection signal="timeout" from="Camera/Control/end_screen" to="Camera/Control" method="_on_end_screen_timeout"]

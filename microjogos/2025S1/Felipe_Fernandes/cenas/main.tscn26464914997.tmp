@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://ci37cn34rw60s"]
+
+[ext_resource type="PackedScene" uid="uid://dov2svkeemfxh" path="res://microjogos/2025S1/Felipe_Fernandes/cenas/objects/button_controller.tscn" id="1_bpo1f"]
+
+[node name="Main" type="Node2D"]
+texture_filter = 1
+
+[node name="Camera" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+
+[node name="ButtonController" parent="Camera" node_paths=PackedStringArray("camera") instance=ExtResource("1_bpo1f")]
+camera = NodePath("..")
