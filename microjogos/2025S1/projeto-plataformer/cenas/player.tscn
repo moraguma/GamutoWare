@@ -167,6 +167,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_0bja4"]
 resource_name = "jump"
+length = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -174,10 +175,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [16, 17, 19, 18, 20]
+"values": [16, 17]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -319,8 +320,8 @@ texture_filter = 1
 position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_qwkws")
 
-[node name="landing_sound" type="AudioStreamPlayer2D" parent="."]
+[node name="Landing_sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_0bja4")
 
-[node name="falling" type="AudioStreamPlayer2D" parent="."]
+[node name="Falling" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_ikhs2")
