@@ -1,0 +1,96 @@
+[gd_scene load_steps=10 format=3 uid="uid://s34c8u1re5fr"]
+
+[ext_resource type="PackedScene" uid="uid://bukwvlpdiph3y" path="res://microjogos/2025S1/gamuto_snap/cenas/cameraPlayer.tscn" id="1_6m65u"]
+[ext_resource type="Script" uid="uid://dddvjk0hd57ea" path="res://microjogos/2025S1/gamuto_snap/cenas/scripts/main.gd" id="1_v50tu"]
+[ext_resource type="Texture2D" uid="uid://c8h3itjel18r2" path="res://microjogos/2025S1/gamuto_snap/recursos/imagens/cave_background.png" id="2_0rp5u"]
+[ext_resource type="PackedScene" uid="uid://bhbi5lr5iqq0g" path="res://microjogos/2025S1/gamuto_snap/cenas/barriers.tscn" id="2_dwaeq"]
+[ext_resource type="Texture2D" uid="uid://bl4nschoxudgs" path="res://microjogos/2025S1/gamuto_snap/recursos/imagens/cave_foreground.png" id="3_g14aq"]
+[ext_resource type="Script" uid="uid://c5rc7lt2iu062" path="res://microjogos/2025S1/gamuto_snap/cenas/scripts/gamutinhos.gd" id="5_4w37p"]
+[ext_resource type="PackedScene" uid="uid://x6twngw4lu8i" path="res://microjogos/2025S1/gamuto_snap/cenas/gamutos.tscn" id="5_82nyc"]
+[ext_resource type="Script" uid="uid://dge63xquae2yx" path="res://microjogos/2025S1/gamuto_snap/cenas/scripts/gamutinhos_physics.gd" id="6_0rp5u"]
+[ext_resource type="AudioStream" uid="uid://dcovd3k0b0xp6" path="res://microjogos/2025S1/gamuto_snap/recursos/sons/music.mp3" id="9_d5ds7"]
+
+[node name="Main" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_v50tu")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_0rp5u")
+metadata/_edit_lock_ = true
+
+[node name="foreground" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(960, 540)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_g14aq")
+
+[node name="barriers" parent="." instance=ExtResource("2_dwaeq")]
+metadata/_edit_lock_ = true
+
+[node name="gamutinhos" type="Node" parent="."]
+script = ExtResource("5_4w37p")
+
+[node name="gamuto1" parent="gamutinhos" instance=ExtResource("5_82nyc")]
+position = Vector2(485, 923)
+rotation = 0.261799
+scale = Vector2(0.8, 0.8)
+
+[node name="gamuto2" parent="gamutinhos" instance=ExtResource("5_82nyc")]
+position = Vector2(1539, 157)
+rotation = -2.61799
+scale = Vector2(1.45709, 1.45709)
+
+[node name="gamuto3" parent="gamutinhos" instance=ExtResource("5_82nyc")]
+position = Vector2(929, 81)
+rotation = 3.14159
+scale = Vector2(0.791827, 0.791827)
+
+[node name="gamuto4" parent="gamutinhos" instance=ExtResource("5_82nyc")]
+position = Vector2(323, 314)
+rotation = 2.09439
+scale = Vector2(1.16947, 1.17252)
+
+[node name="gamuto5" parent="gamutinhos" instance=ExtResource("5_82nyc")]
+position = Vector2(1689, 899)
+rotation = -0.521797
+scale = Vector2(3.1714, 3.1714)
+
+[node name="gamutinhosFisicos" type="Node" parent="."]
+script = ExtResource("6_0rp5u")
+
+[node name="spawnPoints" type="Node" parent="."]
+
+[node name="spawn1" type="Marker2D" parent="spawnPoints"]
+position = Vector2(485, 923)
+
+[node name="spawn2" type="Marker2D" parent="spawnPoints"]
+position = Vector2(1539, 157)
+
+[node name="spawn3" type="Marker2D" parent="spawnPoints"]
+position = Vector2(929, 81)
+
+[node name="spawn4" type="Marker2D" parent="spawnPoints"]
+position = Vector2(323, 314)
+
+[node name="spawn5" type="Marker2D" parent="spawnPoints"]
+position = Vector2(1689, 899)
+
+[node name="player" parent="." instance=ExtResource("1_6m65u")]
+z_index = 1
+position = Vector2(961, 540)
+metadata/_edit_lock_ = true
+
+[node name="mainMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_d5ds7")
+
+[connection signal="win" from="." to="player" method="_on_main_win"]
+[connection signal="any_was_snapped" from="gamutinhos" to="." method="_on_gamutinhos_any_was_snapped"]
+[connection signal="this_was_snapped" from="gamutinhos" to="gamutinhosFisicos" method="_on_gamutinhos_this_was_snapped"]
+[connection signal="area_entered" from="gamutinhos/gamuto1" to="player" method="_on_gamuto_1_area_entered"]
+[connection signal="area_entered" from="gamutinhos/gamuto2" to="player" method="_on_gamuto_2_area_entered"]
+[connection signal="area_entered" from="gamutinhos/gamuto3" to="player" method="_on_gamuto_3_area_entered"]
+[connection signal="area_entered" from="gamutinhos/gamuto4" to="player" method="_on_gamuto_4_area_entered"]
+[connection signal="area_entered" from="gamutinhos/gamuto5" to="player" method="_on_gamuto_5_area_entered"]
+[connection signal="snapped_gamuto" from="player" to="gamutinhos" method="_on_player_snapped_gamuto"]
