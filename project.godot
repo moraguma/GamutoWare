@@ -31,7 +31,7 @@ window/size/viewport_height=1080
 window/size/mode=3
 window/size/window_width_override=960
 window/size/window_height_override=540
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 window/size/fullscreen=true
 
 [input]
@@ -158,6 +158,7 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=3
 renderer/rendering_method="gl_compatibility"
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
 environment/defaults/default_environment="res://default_env.tres"

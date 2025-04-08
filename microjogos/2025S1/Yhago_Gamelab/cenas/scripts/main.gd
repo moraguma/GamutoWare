@@ -43,26 +43,24 @@ func _ready():
 	
 	match Global.language:
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("MORDERAM A ISCA!")
+			NotificationCenter.notify("APERTE ESPAÇO")
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("A FISH!")
+			NotificationCenter.notify("PRESS SPACE")
 	
 	randomize()
 
 		
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("baixo"):
-		get_tree().change_scene_to_file("res://microjogos/2022S1/Yhago_Gamelab/cenas/main.tscn")
-	
-	if Input.is_action_just_pressed("acao"):
+		
+	if Input.is_action_just_pressed("acao") and anzol.position.y > p_posi_inic.y:
 		var new_a_posi: Vector2
 		new_a_posi.y = anzol.position.y - 128
 		a_posi_now = new_a_posi
 		
 	if !Input.is_action_pressed("acao"):
-		a_posi_now.y = lerp(a_posi_now.y, a_posi_inic.y, delta * speed)
+		a_posi_now.y = lerp(a_posi_now.y, a_posi_inic.y, delta * speed *2)
 		
-	anzol.position.y = lerp(anzol.position.y, a_posi_now.y, delta * speed)
+	anzol.position.y = lerp(anzol.position.y, a_posi_now.y, delta * speed *2)
 		
 	peixe.position.y = lerp(peixe.position.y, p_posi_now.y, delta * speed)
 
@@ -91,3 +89,4 @@ func _on_peixe_area_exited(area: Area2D) -> void:
 			NotificationCenter.notify("X")
 		Global.LANGUAGE.EN:
 			NotificationCenter.notify("X")
+			
