@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://d100gdkpfdex6"]
+
+[ext_resource type="Texture2D" uid="uid://dvxafpxjofj2s" path="res://microjogos/2025S1/Projeto_Lucas_Santos/capa.png" id="1_wsmx8"]
+[ext_resource type="Script" uid="uid://cw3nvh416d4pd" path="res://microjogos/2025S1/Projeto_Lucas_Santos/cenas/scripts/tecla.gd" id="2_4woar"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4woar"]
+
+[node name="Tecla" type="Area2D"]
+script = ExtResource("2_4woar")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4woar")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_wsmx8")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
