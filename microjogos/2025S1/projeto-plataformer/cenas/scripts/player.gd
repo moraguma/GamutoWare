@@ -68,10 +68,13 @@ func _physics_process(delta):
 		if animation_player.current_animation == "run":
 			animation_player.stop()
 			$AnimationPlayer/AudioStreamPlayer2D.stop()
+
 		# Essa animação não funciona se o boneco estiver em idle
-		# Em um frame após pular, o boneco ainda estava encostando no chão
-		# e isso fazia com que a animação de idle pra quando
-		# ele estava parado no chão ativasse
+		''' 
+			Em um frame após pular, o boneco ainda estava encostando no chão
+			e isso fazia com que a animação de idle pra quando
+			ele estava parado no chão ativasse
+		'''
 		animation_player.play("jump")
 		velocity.y -= jump_speed
 		animation_player.speed_scale = 1.0
