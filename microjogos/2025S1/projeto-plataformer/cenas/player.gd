@@ -35,6 +35,7 @@ func _process(delta):
 			get_node("../Efeito_vitoria").play()
 	if position.y >= 8.0 * 16 and not fell:
 		$falling.play()
+		$falling.volume_db -= 10.0
 		fell = true
 
 
