@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dmvafb620rp2r"]
 
 [ext_resource type="Texture2D" uid="uid://c5vk4dcba056w" path="res://microjogos/2025S1/projeto-plataformer/recursos/imagens/star_w.png" id="1_fdekn"]
-[ext_resource type="Script" uid="uid://bemyaemsc28bw" path="res://microjogos/2025S1/projeto-plataformer/cenas/estrela.gd" id="1_his4y"]
+[ext_resource type="Script" uid="uid://bemyaemsc28bw" path="res://microjogos/2025S1/projeto-plataformer/cenas/scripts/estrela.gd" id="1_his4y"]
 
 [sub_resource type="Animation" id="Animation_gpare"]
 length = 0.001
