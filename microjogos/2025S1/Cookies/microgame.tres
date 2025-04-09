@@ -1,15 +1,19 @@
-[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=2 format=3 uid="uid://cv2ggbltl0rvv"]
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://cv2ggbltl0rvv"]
 
+[ext_resource type="Texture2D" uid="uid://dnybi8lbbvrgd" path="res://microjogos/2025S1/Cookies/capa.png" id="1_iushw"]
 [ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_qc8jv"]
+[ext_resource type="PackedScene" uid="uid://devce1jy5yrb8" path="res://microjogos/2025S1/Cookies/cenas/main.tscn" id="2_o1lb4"]
 
 [resource]
 script = ExtResource("1_qc8jv")
-title_pt = &"TÍTULO DO JOGO"
-title_en = &"GAME TITLE"
+cover = ExtResource("1_iushw")
+title_pt = &"Cookies"
+title_en = &"Cookies"
 credits_pt = "Jogo: LeonerdCdL
 Cookie: https://opengameart.org/content/pixel-cookie"
 credits_en = "Game: LeonerdCdL
 Cookie: https://opengameart.org/content/pixel-cookie"
-start_message_pt = &"FAÇA ALGO!"
-start_message_en = &"DO SOMETHING!"
+start_message_pt = &"Coma o Cookie"
+start_message_en = &"Eat the Cookie"
+main_scene = ExtResource("2_o1lb4")
 difficulty = 0
