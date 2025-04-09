@@ -1,6 +1,7 @@
 extends Node
 
 const minigame_packs = {
+	"class_of_2025" : preload("res://principal/recursos/data/packs/class_of_2025.tres"),
 	"class_of_2024" : preload("res://principal/recursos/data/packs/class_of_2024.tres"),
 	"class_of_2023" : preload("res://principal/recursos/data/packs/class_of_2023.tres"),
 	"class_of_2022" : preload("res://principal/recursos/data/packs/class_of_2022.tres"),
