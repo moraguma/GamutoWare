@@ -16,6 +16,6 @@ credits_en = "Made by: [Matheus Leite]
 
 All assets created by AI(Stable Diffusion and Suno.AI)"
 start_message_pt = &"APERTE ESPAÇO!"
-start_message_en = &"\"PRESS SPACEBAR!"
+start_message_en = &"PRESS SPACEBAR!"
 main_scene = ExtResource("2_bo8bj")
 difficulty = 0
