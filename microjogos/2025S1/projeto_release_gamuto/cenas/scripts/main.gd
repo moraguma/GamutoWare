@@ -32,10 +32,18 @@ func _ready():
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("FAÇA ALGO!")
 	
-	var spawn_areas_config = pick_random_spawn_config()
-	create_something(obstacle_scene, 100, spawn_areas_config["obstacles_spawn_area"], [spawn_areas_config["player_spawn_area"], spawn_areas_config["treasure_spawn_area"]])
-	create_something(player_scene, 4, spawn_areas_config["player_spawn_area"], [])
-	var goal_scenes = create_something(goal_scene, 1, spawn_areas_config["treasure_spawn_area"], [], false)
+	var config = pick_random_spawn_config()
+	var player_spawn_areas = config["player_spawn_areas"]
+	var obstacles_spawn_restrictions = []
+	obstacles_spawn_restrictions.append_array(player_spawn_areas)
+	obstacles_spawn_restrictions.append(config["treasure_spawn_area"])
+	obstacles_spawn_restrictions.append_array(config["paths"])
+	create_something(obstacle_scene, 500, config["obstacles_spawn_area"], obstacles_spawn_restrictions, -1)
+	
+	for player_spawn_area in player_spawn_areas:
+		create_something(player_scene, 1, player_spawn_area, [], PI/2)
+	
+	var goal_scenes = create_something(goal_scene, 1, config["treasure_spawn_area"], [])
 	for goal_scene in goal_scenes:
 		goal_scene.connect("body_entered", _on_goal_body_entered)
 
@@ -61,60 +69,39 @@ func _process(delta):
 func pick_random_spawn_config():
 	var areas = {
 		"config1": {
-			"player_spawn_area": {
-				"x_start": 400,
-				"y_start": 400,
-				"x_end": 600,
-				"y_end": 600
-			},
-			"obstacles_spawn_area": {
-				"x_start": 0,
-				"y_start": 0,
-				"x_end": WIDTH,
-				"y_end": HEIGHT
-			},
-			"treasure_spawn_area": {
-				"x_start": 900,
-				"y_start": 400,
-				"x_end": 1100,
-				"y_end": 600
-			}
+			"player_spawn_areas": [Rect2(100,100,2,2), Rect2(125,175,2,2), Rect2(195,115,2,2)],
+			"obstacles_spawn_area": Rect2(0,0,WIDTH,HEIGHT),
+			"treasure_spawn_area": Rect2(150,750,2,2),
+			"paths": [Rect2(50,50,1200,300), Rect2(1050,50,200,600), Rect2(50,650,1200,400)]
 		}
 	}
 	return areas["config1"]
-
 	
-func generate_coordenates(dict):
-	var x_start = dict["x_start"]
-	var y_start = dict["y_start"]
-	var x_end = dict["x_end"]
-	var y_end = dict["y_end"]
-	var max_width = x_end - x_start
-	var max_height = y_end - y_start
-	return {"x": x_start + randf() * max_width, "y": y_start + randf() * max_height}
-	
-func if_boxes_contain_coordenates(box_dicts, coordenates):
-	for box_dict in box_dicts:
-		var box_x_start = box_dict["x_start"]
-		var box_y_start = box_dict["y_start"]
-		var box_x_end = box_dict["x_end"]
-		var box_y_end = box_dict["y_end"]
-		var coord_x = coordenates["x"]
-		var coord_y = coordenates["y"]
-		if coord_x > box_x_start and coord_x < box_x_end and coord_y > box_y_start and coord_y < box_y_end:
+func if_coordenates_are_restricted(point, rects):
+	for rect in rects:
+		if rect.has_point(point):
 			return true
 	return false
 
-func create_something(scene, num, spawn_dict, no_spawn_dicts_list, random_rotation=true):
+func create_something(scene, num, spawn_rect: Rect2, spawn_restrictions, rotation=null):
 	var instances = []
 	for instance_id in num:
 		var object_instance = scene.instantiate()
-		var spawn_coordinates = generate_coordenates(spawn_dict)
-		while if_boxes_contain_coordenates(no_spawn_dicts_list, spawn_coordinates):
-			spawn_coordinates = generate_coordenates(spawn_dict)
-		object_instance.position = Vector2(spawn_coordinates["x"], spawn_coordinates["y"])
-		if random_rotation:
-			object_instance.rotation = randf()
+		var random_x = randi_range(spawn_rect.position.x,spawn_rect.end.x)
+		var random_y = randi_range(spawn_rect.position.y,spawn_rect.end.y)
+		var spawn_point := Vector2(random_x,random_y)
+		while if_coordenates_are_restricted(spawn_point, spawn_restrictions):
+			random_x = randi_range(spawn_rect.position.x,spawn_rect.end.x)
+			random_y = randi_range(spawn_rect.position.y,spawn_rect.end.y)
+			spawn_point = Vector2(random_x,random_y)
+		
+		object_instance.position = spawn_point
+		if rotation:
+			if rotation == -1:
+				object_instance.rotation = randf()
+			else:
+				object_instance.rotation = rotation
+		
 		add_child(object_instance)
 		instances.append(object_instance)
 	return instances

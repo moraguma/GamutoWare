@@ -13,7 +13,7 @@ var status = "OK"
 
 
 func _ready() -> void:	
-	collision_timer.wait_time = 0.1
+	collision_timer.wait_time = 0.12
 	add_child(collision_timer)
 	collision_timer.connect("timeout", _on_timer_timeout)
 	
