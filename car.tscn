@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dutd64p5wo1l2"]
+
+[ext_resource type="Texture2D" uid="uid://15cc8gi4o0bc" path="res://microjogos/2024S1/Projeto-Diego/pngegg(1).png" id="1_h5ner"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_30e63"]
+radius = 45.0
+height = 352.0
+
+[node name="RigidBody2D" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(164.125, 139.484)
+scale = Vector2(0.827637, 0.731383)
+texture = ExtResource("1_h5ner")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(163, 138)
+shape = SubResource("CapsuleShape2D_30e63")
