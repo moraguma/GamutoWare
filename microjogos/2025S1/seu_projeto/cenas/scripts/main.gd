@@ -31,7 +31,8 @@ func _ready():
 			NotificationCenter.notify("DO SOMETHING!")
 		Global.LANGUAGE.PT:
 			NotificationCenter.notify("FAÇA A RECEITA!")
-
+				
+	
 	receita.shuffle()
 	receita = receita.slice(0,3)
 	print(receita)
@@ -93,7 +94,7 @@ func register_win():
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
 	emit_signal("lose")
-
+	
 
 func _on_node_2d_atual_changing(id: Variant) -> void:
 	if len(receita)>0:
@@ -104,6 +105,7 @@ func _on_node_2d_atual_changing(id: Variant) -> void:
 				register_win()
 				print("Vitória!")
 				$ganhou.play()
+				$Ganhou.show()
 			else:
 				$feitico.play()
 		else: 

@@ -41,4 +41,9 @@ func _process(delta: float) -> void:
 			get_node("Pocao2/Quadro").show()
 	if Input.is_action_just_pressed("acao"):
 		print(atual)
+		match atual:
+			1: %blue.show()
+			2: %red.show()
+			3: %green.show()
+			4: %yellow.show()
 		atual_changing.emit(atual)

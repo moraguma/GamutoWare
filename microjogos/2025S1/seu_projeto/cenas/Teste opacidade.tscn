@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://b84hwjlctl846"]
+
+[node name="TesteOpacidade" type="TextureRect"]
