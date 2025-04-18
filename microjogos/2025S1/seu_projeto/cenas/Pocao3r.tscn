@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bji8vw5gssrfy"]
+
+[ext_resource type="Texture2D" uid="uid://wgcpsoln6a0j" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/poção 3 teste.png" id="1_escfv"]
+
+
+[node name="Pocao3r" type="TextureRect"]
+texture = ExtResource("1_escfv")

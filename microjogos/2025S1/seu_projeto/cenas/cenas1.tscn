@@ -1,0 +1,175 @@
+[gd_scene load_steps=19 format=3 uid="uid://dwg6yv3kqf2eh"]
+
+[ext_resource type="Texture2D" uid="uid://bgfyrk5qr8xo0" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/Design sem nome (3).png" id="1_2uta7"]
+[ext_resource type="Script" uid="uid://d04sirxomapuy" path="res://microjogos/2025S1/seu_projeto/cenas/scripts/main.gd" id="1_gj4wl"]
+[ext_resource type="Script" uid="uid://d3hurd143uhsj" path="res://microjogos/2025S1/seu_projeto/cenas/scripts/poções.gd" id="2_4366y"]
+[ext_resource type="Texture2D" uid="uid://wgcpsoln6a0j" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/poção 3 teste.png" id="2_lbx2f"]
+[ext_resource type="Texture2D" uid="uid://mf2koxn56aue" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/poção 1 - teste.png" id="3_422id"]
+[ext_resource type="Texture2D" uid="uid://83i685dpkq4y" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/poção 2 - teste.png" id="4_dmivy"]
+[ext_resource type="Texture2D" uid="uid://bfkwcn2ny1gev" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/poção 4 - teste.png" id="5_6rkfm"]
+[ext_resource type="Texture2D" uid="uid://ds3b22n84ck47" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/moldura teste (2).png" id="6_422id"]
+[ext_resource type="Texture2D" uid="uid://m11pvtmra36b" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/quadro de receitas.png" id="8_almq2"]
+[ext_resource type="Texture2D" uid="uid://c0ukqndhi4u7m" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/poção result.png" id="9_3ijsh"]
+[ext_resource type="AudioStream" uid="uid://41oilyxa32sf" path="res://microjogos/2025S1/seu_projeto/recursos/sons/feitico.wav" id="11_3ijsh"]
+[ext_resource type="Texture2D" uid="uid://dkr5vmc4dw604" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/yellow.png" id="12_a0lhe"]
+[ext_resource type="AudioStream" uid="uid://byrw82vcbq67n" path="res://microjogos/2025S1/seu_projeto/recursos/sons/ganhou.wav" id="12_gj4wl"]
+[ext_resource type="AudioStream" uid="uid://whpu82ibdf4b" path="res://microjogos/2025S1/seu_projeto/recursos/sons/364929__jofae__game-die.mp3" id="12_r4ef3"]
+[ext_resource type="Texture2D" uid="uid://drymv7rq85x08" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/blue.png" id="13_iuoml"]
+[ext_resource type="Theme" uid="uid://d2tp6nrlj30it" path="res://principal/recursos/themes/TitleTheme.tres" id="14_l5juk"]
+[ext_resource type="Texture2D" uid="uid://b5ntfthtmg13f" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/teste opacidade.png" id="15_acwgd"]
+[ext_resource type="Texture2D" uid="uid://bff443r8ujewp" path="res://microjogos/2025S1/seu_projeto/recursos/imagens/green.png" id="17_a0lhe"]
+
+[node name="Cenas1" type="Node2D"]
+script = ExtResource("1_gj4wl")
+
+[node name="Fundo" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_2uta7")
+
+[node name="Poções_e_quadros" type="Node2D" parent="."]
+script = ExtResource("2_4366y")
+
+[node name="Pocao1" type="Node2D" parent="Poções_e_quadros"]
+position = Vector2(206, 894)
+
+[node name="Quadro" type="Sprite2D" parent="Poções_e_quadros/Pocao1"]
+position = Vector2(-40, -674)
+scale = Vector2(2.83726, 2.83726)
+texture = ExtResource("6_422id")
+
+[node name="Poção 1" type="Sprite2D" parent="Poções_e_quadros/Pocao1"]
+position = Vector2(-13, -640)
+texture = ExtResource("3_422id")
+
+[node name="Pocao2" type="Node2D" parent="Poções_e_quadros"]
+position = Vector2(206, 243)
+
+[node name="Quadro" type="Sprite2D" parent="Poções_e_quadros/Pocao2"]
+visible = false
+position = Vector2(1517, -22)
+scale = Vector2(2.83726, 2.83726)
+texture = ExtResource("6_422id")
+
+[node name="Poção 2" type="Sprite2D" parent="Poções_e_quadros/Pocao2"]
+position = Vector2(1532, 6)
+texture = ExtResource("4_dmivy")
+
+[node name="Pocao3" type="Node2D" parent="Poções_e_quadros"]
+
+[node name="Quadro" type="Sprite2D" parent="Poções_e_quadros/Pocao3"]
+visible = false
+position = Vector2(167, 857)
+scale = Vector2(2.83726, 2.83726)
+texture = ExtResource("6_422id")
+
+[node name="Poção 3" type="Sprite2D" parent="Poções_e_quadros/Pocao3"]
+position = Vector2(206, 894)
+texture = ExtResource("2_lbx2f")
+
+[node name="Pocao4" type="Node2D" parent="Poções_e_quadros"]
+
+[node name="Quadro" type="Sprite2D" parent="Poções_e_quadros/Pocao4"]
+visible = false
+position = Vector2(1723, 857)
+scale = Vector2(2.83726, 2.83726)
+texture = ExtResource("6_422id")
+
+[node name="Poção 4" type="Sprite2D" parent="Poções_e_quadros/Pocao4"]
+position = Vector2(1750, 888)
+texture = ExtResource("5_6rkfm")
+
+[node name="Quadro de receitas" type="Sprite2D" parent="Poções_e_quadros"]
+position = Vector2(1004.5, 144)
+scale = Vector2(5.31285, 4.53571)
+texture = ExtResource("8_almq2")
+
+[node name="Poção resultado" type="Sprite2D" parent="Poções_e_quadros"]
+position = Vector2(635, 146)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_3ijsh")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(1019, 767)
+scale = Vector2(0.2, 0.2)
+
+[node name="yellow" type="Sprite2D" parent="Node2D"]
+unique_name_in_owner = true
+visible = false
+texture = ExtResource("12_a0lhe")
+
+[node name="blue" type="Sprite2D" parent="Node2D"]
+unique_name_in_owner = true
+visible = false
+texture = ExtResource("13_iuoml")
+
+[node name="green" type="Sprite2D" parent="Node2D"]
+unique_name_in_owner = true
+visible = false
+texture = ExtResource("17_a0lhe")
+
+[node name="red" type="Sprite2D" parent="Node2D"]
+unique_name_in_owner = true
+visible = false
+texture = ExtResource("15_acwgd")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Receita" type="HBoxContainer" parent="CanvasLayer"]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_left = 0.388
+anchor_top = 0.048
+anchor_right = 0.758
+anchor_bottom = 0.242
+offset_left = -3.96002
+offset_top = -32.84
+offset_right = 25.64
+offset_bottom = 7.63995
+grow_horizontal = 2
+size_flags_vertical = 0
+alignment = 1
+
+[node name="Container" type="Container" parent="CanvasLayer"]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_left = 0.318
+anchor_top = 0.694
+anchor_right = 0.758
+anchor_bottom = 0.906
+offset_left = 0.439941
+offset_top = 0.47998
+offset_right = -0.359985
+offset_bottom = -0.480042
+
+[node name="feitico" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_3ijsh")
+
+[node name="perdeu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_r4ef3")
+
+[node name="ganhou" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_gj4wl")
+
+[node name="Perdeu" type="Label" parent="."]
+visible = false
+offset_left = 345.0
+offset_top = 434.0
+offset_right = 1678.0
+offset_bottom = 681.0
+theme = ExtResource("14_l5juk")
+text = "Você perdeu!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Ganhou" type="Label" parent="."]
+visible = false
+offset_left = 345.0
+offset_top = 434.0
+offset_right = 1678.0
+offset_bottom = 681.0
+theme = ExtResource("14_l5juk")
+text = "Você ganhou!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="atual_changing" from="Poções_e_quadros" to="." method="_on_node_2d_atual_changing"]
