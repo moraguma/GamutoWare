@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://devce1jy5yrb8"]
+[gd_scene load_steps=18 format=3 uid="uid://devce1jy5yrb8"]
 
 [ext_resource type="Script" uid="uid://cwdeg2iachcoh" path="res://microjogos/2025S1/Cookies/cenas/scripts/main.gd" id="1_aashi"]
 [ext_resource type="Texture2D" uid="uid://b2jajfg84rx1d" path="res://microjogos/2025S1/Cookies/recursos/imagens/cookiePixelArt.png" id="2_6m3k1"]
@@ -7,7 +7,6 @@
 [ext_resource type="Script" uid="uid://chaioddbvl0si" path="res://microjogos/2025S1/Cookies/cenas/scripts/sub_viewport.gd" id="5_6m3k1"]
 [ext_resource type="Texture2D" uid="uid://cf84ffudbmww5" path="res://microjogos/2025S1/Cookies/recursos/imagens/turret.png" id="5_a83ac"]
 [ext_resource type="PackedScene" uid="uid://3vfixad66wd3" path="res://microjogos/2025S1/Cookies/cenas/turret.tscn" id="5_aj31b"]
-[ext_resource type="Script" uid="uid://bbfctgh3puax0" path="res://microjogos/2025S1/Cookies/cenas/scripts/label.gd" id="5_atimq"]
 [ext_resource type="Texture2D" uid="uid://53ixq7myuojr" path="res://microjogos/2025S1/Cookies/recursos/imagens/cannon.png" id="6_3pa5t"]
 [ext_resource type="PackedScene" uid="uid://46h8nsrltfop" path="res://microjogos/2025S1/Cookies/cenas/cannon.tscn" id="7_3ps7f"]
 [ext_resource type="Script" uid="uid://dcewx2vxy4cxa" path="res://microjogos/2025S1/Cookies/cenas/scripts/panel_container.gd" id="7_nra8u"]
@@ -88,8 +87,7 @@ position = Vector2(960, 2000)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Minimap" type="SubViewportContainer" parent="CanvasLayer"]
-visible = false
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer"]
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
@@ -99,15 +97,15 @@ offset_bottom = 453.5
 grow_vertical = 2
 size_flags_horizontal = 0
 
-[node name="SubViewport" type="SubViewport" parent="CanvasLayer/Minimap" node_paths=PackedStringArray("monster", "camera")]
+[node name="SubViewport" type="SubViewport" parent="CanvasLayer/SubViewportContainer" node_paths=PackedStringArray("monster", "camera")]
 handle_input_locally = false
 size = Vector2i(137, 917)
-render_target_update_mode = 0
+render_target_update_mode = 4
 script = ExtResource("5_6m3k1")
 monster = NodePath("../../../Monster")
 camera = NodePath("Camera2D")
 
-[node name="Camera2D" type="Camera2D" parent="CanvasLayer/Minimap/SubViewport"]
+[node name="Camera2D" type="Camera2D" parent="CanvasLayer/SubViewportContainer/SubViewport"]
 position = Vector2(960, 1000)
 zoom = Vector2(0.15, 0.15)
 
@@ -124,16 +122,6 @@ grow_horizontal = 0
 grow_vertical = 2
 theme = SubResource("Theme_a83ac")
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/MarginContainer" node_paths=PackedStringArray("main")]
-layout_mode = 2
-size_flags_horizontal = 8
-text = "0"
-script = ExtResource("5_atimq")
-main = NodePath("../../../..")
-
 [node name="Turret" type="MarginContainer" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 
@@ -143,7 +131,6 @@ custom_minimum_size = Vector2(300, 150)
 layout_mode = 2
 script = ExtResource("7_nra8u")
 main = NodePath("../../../..")
-price = 100
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/VBoxContainer/Turret/PanelContainer"]
 layout_mode = 2
@@ -180,7 +167,6 @@ custom_minimum_size = Vector2(300, 150)
 layout_mode = 2
 script = ExtResource("7_nra8u")
 main = NodePath("../../../..")
-price = 100
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/VBoxContainer/Turret2/PanelContainer"]
 layout_mode = 2
@@ -216,7 +202,6 @@ material = SubResource("ShaderMaterial_suxxg")
 layout_mode = 2
 script = ExtResource("7_nra8u")
 main = NodePath("../../../..")
-price = 200
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/VBoxContainer/Cannon/PanelContainer"]
 layout_mode = 2
