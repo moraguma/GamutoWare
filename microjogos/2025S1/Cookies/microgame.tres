@@ -9,11 +9,17 @@ script = ExtResource("1_qc8jv")
 cover = ExtResource("1_iushw")
 title_pt = &"Cookies"
 title_en = &"Cookies"
-credits_pt = "Jogo: LeonerdCdL
+credits_pt = "Jogo: 
+Demo: LeonerdCdL 
+Remake: AyudaV
 Cookie: https://opengameart.org/content/pixel-cookie"
-credits_en = "Game: LeonerdCdL
+Turrets: https://zintoki.itch.io/ground-shaker
+credits_en = "Game: 
+Demo: LeonerdCdL
+Remake: AyudaV
 Cookie: https://opengameart.org/content/pixel-cookie"
-start_message_pt = &"Coma o Cookie"
-start_message_en = &"Eat the Cookie"
+Turrets: https://zintoki.itch.io/ground-shaker
+start_message_pt = &"Proteja o Cookie"
+start_message_en = &"Protect the Cookie"
 main_scene = ExtResource("2_o1lb4")
 difficulty = 0
