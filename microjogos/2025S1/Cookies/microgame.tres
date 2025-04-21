@@ -13,8 +13,13 @@ credits_pt = "Jogo:
 Demo: LeonerdCdL 
 Remake: AyudaV
 Cookie: https://opengameart.org/content/pixel-cookie"
-credits_en = ""
-start_message_pt = &""
+Turrets: https://zintoki.itch.io/ground-shaker
+credits_en = "Game: 
+Demo: LeonerdCdL
+Remake: AyudaV
+Cookie: https://opengameart.org/content/pixel-cookie"
+Turrets: https://zintoki.itch.io/ground-shaker
+start_message_pt = &"Proteja o Cookie"
 start_message_en = &"Protect the Cookie"
 main_scene = ExtResource("2_o1lb4")
 difficulty = 0
