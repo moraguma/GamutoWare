@@ -1,12 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://qafrv8wbyx52"]
+[gd_scene load_steps=4 format=3 uid="uid://qafrv8wbyx52"]
 
-[ext_resource type="Script" uid="uid://bxnc4htm6qpky" path="res://microjogos/2025S1/Cookies/cenas/cookie.gd" id="1_rgcpd"]
+[ext_resource type="Script" uid="uid://bxnc4htm6qpky" path="res://microjogos/2025S1/Cookies/cenas/scripts/cookie.gd" id="1_rgcpd"]
 [ext_resource type="Texture2D" uid="uid://b2jajfg84rx1d" path="res://microjogos/2025S1/Cookies/recursos/imagens/cookiePixelArt.png" id="2_rgcpd"]
 
-[node name="Cookie" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_rgcpd"]
+radius = 45.0444
+
+[node name="Cookie" type="Area2D" groups=["Cookie"]]
 z_index = -1
 script = ExtResource("1_rgcpd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 3
 scale = Vector2(3, 3)
 texture = ExtResource("2_rgcpd")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rgcpd")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
