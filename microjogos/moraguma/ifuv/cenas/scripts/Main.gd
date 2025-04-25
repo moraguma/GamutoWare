@@ -31,11 +31,6 @@ var enabled = true
 
 
 func _ready():
-	match Global.language:
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("DIGITE!")
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("TYPE!")
 	
 	music.play()
 	

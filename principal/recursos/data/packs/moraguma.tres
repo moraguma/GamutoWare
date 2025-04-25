@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="MicrogamePack" load_steps=8 format=3]
+[gd_resource type="Resource" script_class="MicrogamePack" load_steps=8 format=3 uid="uid://brjxkdxebiu1f"]
 
-[ext_resource type="Script" path="res://principal/recursos/data/MicrogamePack.gd" id="1_0b24r"]
-[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_87tu8"]
+[ext_resource type="Script" uid="uid://cv53qaorwqxj0" path="res://principal/recursos/data/MicrogamePack.gd" id="1_0b24r"]
+[ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_87tu8"]
 [ext_resource type="Resource" path="res://microjogos/moraguma/ifuv/microgame.tres" id="2_xpa5b"]
 [ext_resource type="Resource" path="res://microjogos/moraguma/hora_da_necromancia/microgame.tres" id="3_f46es"]
 [ext_resource type="Resource" path="res://microjogos/moraguma/deerskull/microgame.tres" id="4_3f166"]
