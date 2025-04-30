@@ -109,11 +109,6 @@ func put_color(i):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("ORDER THE COLORS!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("ORDENE AS CORES!")
 	
 	while sqrt(pow(R0 - R1, 2) + pow(B0 - B1, 2) + pow(G0 - G1, 2)) < COLOR_TOLERANCE:
 		R0 = rng.randf()
@@ -181,4 +176,3 @@ func _unhandled_input(event):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-

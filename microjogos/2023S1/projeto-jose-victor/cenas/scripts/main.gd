@@ -17,11 +17,6 @@ var musica_tocada = false
  
 func _ready(): 
 	randomize()
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("Eat the Fruits!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("Coma as frutas!")
 	var spawns = [ 
 		{ "min": Vector2(500,300), "max": Vector2(1700,800) },
 	]

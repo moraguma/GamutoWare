@@ -22,10 +22,8 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("MAKE THE ORDER!")
 			$Label.text = "[Space] to Select!"
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FAÇA O PEDIDO")
 			$Label.text = "[Espaço] para selecionar!"
 
 
