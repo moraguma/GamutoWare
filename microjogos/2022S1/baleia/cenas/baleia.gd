@@ -10,13 +10,7 @@ var time = 0
 @onready var base = get_parent()
 var vivo = true
 
-func _ready():
-	match Global.language:
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("MATE A BALEIA")
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("KILL THE WHALE")
-	
+func _ready():	
 	baleia_animacao.play("baleia")
 	
 func _on_Terra_body_entered(body):
@@ -47,6 +41,3 @@ func _physics_process(delta):
 		move_and_slide()
 		velocidade = velocity
 	
-
-
-
