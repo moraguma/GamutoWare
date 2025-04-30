@@ -21,13 +21,7 @@ const DOWN_POS = 1005
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
-	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
-	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("ESCAPE!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FUJA!")
+	pass
 	
 	randomize()
 	var gone_up = false
@@ -88,11 +82,6 @@ func register_win():
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
 	emit_signal("lose")
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("YOU LOSE!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("VOCÊ PERDEU!")
 
 func _on_carro_principal_lose():
 	register_lose()
