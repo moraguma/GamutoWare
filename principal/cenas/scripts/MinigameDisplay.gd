@@ -60,6 +60,12 @@ func start_game(microgame):
 	
 	game.add_child(current_microgame)
 	
+	match Global.language:
+		Global.LANGUAGE.EN:
+			NotificationCenter.notify(microgame.start_message_en)
+		Global.LANGUAGE.PT:
+			NotificationCenter.notify(microgame.start_message_pt)
+	
 	timer.start(MICROGAME_TIME)
 	
 	reset_tween()
