@@ -15,11 +15,6 @@ const WIN_HORIZONTAL_STATES = [false, false, true]
 
 
 func _ready():
-	match Global.language:
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("EMPURRE!")
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("PUSH!")
 	
 	randomize()
 	

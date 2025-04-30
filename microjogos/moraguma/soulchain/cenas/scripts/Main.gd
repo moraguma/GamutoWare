@@ -21,11 +21,6 @@ const MAX_PLAYER_VARIATION = Vector2(-16, 0)
 
 
 func _ready():
-	match Global.language:
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("ATRAVESSE!")
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("CROSS!")
 	
 	$Music.play()
 	

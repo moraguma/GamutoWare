@@ -25,11 +25,6 @@ var rng = RandomNumberGenerator.new()
 func _ready():
 	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("PROTECT THE COOKIE!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("PROTEJA O COOKIE!")
 
 	register_win()
 

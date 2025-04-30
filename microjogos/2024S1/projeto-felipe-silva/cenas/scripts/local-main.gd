@@ -15,11 +15,6 @@ const NUM_ANONS = 25
 const anon_scene = preload("res://microjogos/2024S1/projeto-felipe-silva/cenas/anon.tscn")
 
 func _ready():
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("GO LUNCH!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("VÁ ALMOÇAR!")
 
 	for _n in range(0, NUM_ANONS):
 		var c_scene = anon_scene.instantiate()
