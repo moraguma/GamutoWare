@@ -37,10 +37,8 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify("<- STAND OR PASS! ->")
 			$RichTextLabel.text = "I'LL WIN! = ←\nI'LL LOSE! = →"
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify("<- FAÇA OU PASSA! ->")
 			$RichTextLabel.text = "FAÇO! = ←\nPASSO! = →"
 	
 	$Fan.play()
