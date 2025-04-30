@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="MicrogamePack" load_steps=24 format=3]
+[gd_resource type="Resource" script_class="MicrogamePack" load_steps=24 format=3 uid="uid://dlwrs2qpel6ga"]
 
-[ext_resource type="Script" path="res://principal/recursos/data/MicrogamePack.gd" id="1_0pwo5"]
-[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_dpsfb"]
+[ext_resource type="Script" uid="uid://cv53qaorwqxj0" path="res://principal/recursos/data/MicrogamePack.gd" id="1_0pwo5"]
+[ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_dpsfb"]
 [ext_resource type="Resource" path="res://microjogos/2023S1/bis-limao/microgame.tres" id="1_xe7pf"]
 [ext_resource type="Resource" path="res://microjogos/2023S1/GamutoVeiga/microgame.tres" id="2_jwl4o"]
 [ext_resource type="Resource" path="res://microjogos/2023S1/mail_cleaner/microgame.tres" id="3_8x7eb"]
@@ -22,7 +22,7 @@
 [ext_resource type="Resource" path="res://microjogos/2023S1/projetoAnaBeatriz/microgame.tres" id="18_pxq1y"]
 [ext_resource type="Resource" path="res://microjogos/2023S1/projeto_alexia/microgame.tres" id="19_rpkjd"]
 [ext_resource type="Resource" path="res://microjogos/2023S1/projeto_leonardo_valente/microgame.tres" id="20_bg7mp"]
-[ext_resource type="Resource" path="res://microjogos/2023S1/projeto_vinicius_carvalho/microgame.tres" id="21_luyy0"]
+[ext_resource type="Resource" uid="uid://bdqllmd3pmqm3" path="res://microjogos/2023S1/projeto_vinicius_carvalho/microgame.tres" id="21_luyy0"]
 
 [resource]
 script = ExtResource("1_0pwo5")
