@@ -31,11 +31,6 @@ var active = false
 
 
 func _ready():
-	match Global.language:
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("IMITE!")
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("SIMON SAYS...")
 	
 	for i in range(TOTAL_COLORS):
 		color_order.append(randi() % 4)

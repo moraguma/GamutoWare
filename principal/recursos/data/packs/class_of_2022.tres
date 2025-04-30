@@ -1,8 +1,8 @@
-[gd_resource type="Resource" script_class="MicrogamePack" load_steps=6 format=3]
+[gd_resource type="Resource" script_class="MicrogamePack" load_steps=6 format=3 uid="uid://dvbbrj0uhnk5m"]
 
-[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_7p2fa"]
-[ext_resource type="Resource" path="res://microjogos/2022S1/baleia/microgame.tres" id="1_afjv1"]
-[ext_resource type="Script" path="res://principal/recursos/data/MicrogamePack.gd" id="1_cal65"]
+[ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_7p2fa"]
+[ext_resource type="Resource" uid="uid://c5knh88jsxqkc" path="res://microjogos/2022S1/baleia/microgame.tres" id="1_afjv1"]
+[ext_resource type="Script" uid="uid://cv53qaorwqxj0" path="res://principal/recursos/data/MicrogamePack.gd" id="1_cal65"]
 [ext_resource type="Resource" path="res://microjogos/2022S1/gamuturai/microgame.tres" id="2_dllfb"]
 [ext_resource type="Resource" path="res://microjogos/2022S1/race/microgame.tres" id="3_yrcs8"]
 

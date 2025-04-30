@@ -40,13 +40,6 @@ var chosen_fruit = randi_range (0, 3)
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
-	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
-	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("MEMORIZE THE FRUITS!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("MEMORIZE AS FRUTAS!")
 		
 	
 	var fruit_list = [0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3]
@@ -215,4 +208,3 @@ func _on_timer_timeout():
 			register_win()
 		else:
 			register_lose()
-

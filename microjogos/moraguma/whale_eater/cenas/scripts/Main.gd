@@ -28,11 +28,6 @@ var active = true
 
 
 func _ready():
-	match Global.language:
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FOGE!")
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("GET OUT!")
 	
 	$Music.play()
 	
