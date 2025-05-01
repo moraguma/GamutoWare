@@ -20,7 +20,7 @@ const HEIGHT = 1080
 
 var  bgm = "res://microjogos/2025S1/HImeCaking/recursos/sons/bgm.wav"
 
-const ARROW_QUANTITY = 4
+const ARROW_QUANTITY = 3
 
 @onready var spoon = $SpriteSpoon/AnimationPlayer
 @onready var hime_eat = $SpriteChar/AnimationPlayer
@@ -36,14 +36,6 @@ var sequence = []
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
-	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
-	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("EAT THE MAGIC CAKE \n IN THE RIGHT DIRECTION!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("COMA O BOLO MÁGICO \n NA DIREÇÃO CERTA!")
-	
 	_arrows.shuffle()
 	sequence = _arrows
 	#for a in range(ARROW_QUANTITY):

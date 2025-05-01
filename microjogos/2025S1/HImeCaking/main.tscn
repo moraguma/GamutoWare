@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dq6ml1o1v02or"]
+[gd_scene load_steps=28 format=3 uid="uid://d4lxsuq673buh"]
 
 [ext_resource type="Script" uid="uid://d2yx11vmrf8pm" path="res://microjogos/2025S1/HImeCaking/cenas/scripts/main.gd" id="1_acbhf"]
 [ext_resource type="Texture2D" uid="uid://bsd2vtv5yguyk" path="res://microjogos/2025S1/HImeCaking/recursos/imagens/arrowHolder.png" id="2_7uivm"]
@@ -20,6 +20,21 @@
 [ext_resource type="AudioStream" uid="uid://copdvb3s2abtq" path="res://microjogos/2025S1/HImeCaking/recursos/sons/win.wav" id="13_dfnaw"]
 [ext_resource type="Texture2D" uid="uid://chqstdpqpq8yd" path="res://microjogos/2025S1/HImeCaking/recursos/imagens/cakeHolder5.png" id="13_nbl63"]
 
+[sub_resource type="Animation" id="Animation_djl2f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteChar:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("7_wll86")]
+}
+
 [sub_resource type="Animation" id="Animation_yjliw"]
 resource_name = "open_mouth"
 length = 0.8
@@ -34,21 +49,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [ExtResource("7_wll86"), ExtResource("8_oqbrg"), ExtResource("7_wll86")]
-}
-
-[sub_resource type="Animation" id="Animation_djl2f"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SpriteChar:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("7_wll86")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g3bss"]
@@ -79,21 +79,6 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
-
-[sub_resource type="Animation" id="Animation_dfnaw"]
-resource_name = "idle"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SpriteSpoon:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [2.35619]
-}
 
 [sub_resource type="Animation" id="Animation_oqbrg"]
 length = 0.001
@@ -126,6 +111,21 @@ tracks/0/keys = {
 "values": [2.35619, 3.92699, 2.35619]
 }
 
+[sub_resource type="Animation" id="Animation_dfnaw"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteSpoon:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.35619]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yjliw"]
 _data = {
 &"RESET": SubResource("Animation_oqbrg"),
@@ -135,7 +135,6 @@ _data = {
 
 [node name="Main" type="Node2D" node_paths=PackedStringArray("arrow_nodes")]
 texture_filter = 1
-position = Vector2(0, 1)
 script = ExtResource("1_acbhf")
 arrow_up = ExtResource("2_7uivm")
 arrow_down = ExtResource("3_58r2m")
@@ -145,7 +144,8 @@ arrow_nodes = [NodePath("arrows/SpriteArrowUp"), NodePath("arrows/SpriteArrowDow
 
 [node name="baxkground" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(999, 543)
+position = Vector2(960, 540)
+scale = Vector2(0.969697, 1)
 texture = ExtResource("6_oqbrg")
 
 [node name="plate" type="Sprite2D" parent="."]
@@ -189,18 +189,6 @@ texture = ExtResource("4_htbns")
 [node name="SpriteArrowRight" type="Sprite2D" parent="arrows"]
 position = Vector2(1791.75, 845.5)
 scale = Vector2(3.89844, 3.73437)
-texture = ExtResource("5_dfnaw")
-
-[node name="SpriteArrowRight2" type="Sprite2D" parent="arrows"]
-visible = false
-position = Vector2(1258, 948)
-scale = Vector2(3.10938, 2.90625)
-texture = ExtResource("5_dfnaw")
-
-[node name="SpriteArrowRight3" type="Sprite2D" parent="arrows"]
-visible = false
-position = Vector2(1509, 951)
-scale = Vector2(3.10938, 2.90625)
 texture = ExtResource("5_dfnaw")
 
 [node name="Label" type="Label" parent="."]
