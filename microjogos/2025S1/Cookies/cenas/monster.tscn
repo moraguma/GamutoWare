@@ -1,0 +1,97 @@
+[gd_scene load_steps=12 format=3 uid="uid://bkfj0uuex0ct0"]
+
+[ext_resource type="Shader" uid="uid://qeh5h1c7ld6l" path="res://microjogos/2025S1/Cookies/recursos/hit.tres" id="1_0ek26"]
+[ext_resource type="Texture2D" uid="uid://cf573gwx7g2xg" path="res://microjogos/2025S1/Cookies/recursos/imagens/CookieMonsterBocaAberta.webp" id="1_pe7co"]
+[ext_resource type="Script" uid="uid://dmlwsu1skvn2f" path="res://microjogos/2025S1/Cookies/cenas/scripts/monster.gd" id="1_vnwer"]
+[ext_resource type="Texture2D" uid="uid://debq2jefi5gtr" path="res://microjogos/2025S1/Cookies/recursos/imagens/CookieMonsterBocaFechada.webp" id="3_0ek26"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_elhee"]
+radius = 335.054
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0ek26"]
+shader = ExtResource("1_0ek26")
+shader_parameter/Enabled = false
+shader_parameter/ColorParameter = Color(1, 1, 1, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vnwer"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pe7co")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0ek26")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_p3y37"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:material:shader_parameter/Enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_elhee"]
+resource_name = "hit_flash"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:material:shader_parameter/Enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pwxbn"]
+_data = {
+&"RESET": SubResource("Animation_p3y37"),
+&"hit_flash": SubResource("Animation_elhee")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ek26"]
+bg_color = Color(0.685708, 0.0779273, 0, 1)
+
+[node name="Monster" type="CharacterBody2D" groups=["Monster"]]
+script = ExtResource("1_vnwer")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_elhee")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_0ek26")
+position = Vector2(-78, -442)
+rotation = -1.5708
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_vnwer")
+frame_progress = 0.514776
+
+[node name="HitFlash" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_pwxbn")
+}
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+offset_left = -214.5
+offset_top = -403.0
+offset_right = 214.5
+offset_bottom = -376.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_0ek26")
+max_value = 500.0
+value = 500.0
+show_percentage = false

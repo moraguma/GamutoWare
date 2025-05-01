@@ -1,0 +1,177 @@
+[gd_scene load_steps=19 format=3 uid="uid://46h8nsrltfop"]
+
+[ext_resource type="Script" uid="uid://custh7oqim0sq" path="res://microjogos/2025S1/Cookies/cenas/scripts/turret.gd" id="1_3cvq0"]
+[ext_resource type="PackedScene" uid="uid://cp1xbchiwyprn" path="res://microjogos/2025S1/Cookies/cenas/cannon_bullet.tscn" id="2_3cvq0"]
+[ext_resource type="Texture2D" uid="uid://blk7td4h1iqai" path="res://microjogos/2025S1/Cookies/recursos/imagens/turrets/turret_02_mk1.png" id="3_3cvq0"]
+[ext_resource type="Shader" uid="uid://qeh5h1c7ld6l" path="res://microjogos/2025S1/Cookies/recursos/hit.tres" id="3_cpdhp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_23q8m"]
+radius = 67.0075
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yb16l"]
+shader = ExtResource("3_cpdhp")
+shader_parameter/Enabled = false
+shader_parameter/ColorParameter = Color(1, 1, 1, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpdhp"]
+atlas = ExtResource("3_3cvq0")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yb16l"]
+atlas = ExtResource("3_3cvq0")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_edqa3"]
+atlas = ExtResource("3_3cvq0")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ifmt8"]
+atlas = ExtResource("3_3cvq0")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8y6cb"]
+atlas = ExtResource("3_3cvq0")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5iw3"]
+atlas = ExtResource("3_3cvq0")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dnfs8"]
+atlas = ExtResource("3_3cvq0")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5eyb"]
+atlas = ExtResource("3_3cvq0")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qd77u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpdhp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yb16l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_edqa3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ifmt8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8y6cb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x5iw3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dnfs8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5eyb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpdhp")
+}],
+"loop": false,
+"name": &"Shot",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_evlve"]
+resource_name = "spawn"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:material:shader_parameter/Enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.01, 0.01), Vector2(3, 3)]
+}
+
+[sub_resource type="Animation" id="Animation_y5yi4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:material:shader_parameter/Enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.1, 0.1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oc1qj"]
+_data = {
+&"RESET": SubResource("Animation_y5yi4"),
+&"spawn": SubResource("Animation_evlve")
+}
+
+[node name="Cannon" type="CharacterBody2D"]
+texture_filter = 3
+scale = Vector2(0.00999999, 0.00999999)
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_3cvq0")
+bullet_scene = ExtResource("2_3cvq0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_23q8m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_yb16l")
+rotation = 1.5708
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_qd77u")
+animation = &"Shot"
+frame = 7
+frame_progress = 1.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(138, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_oc1qj")
+}
+
+[connection signal="timeout" from="Timer" to="." method="shoot"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
