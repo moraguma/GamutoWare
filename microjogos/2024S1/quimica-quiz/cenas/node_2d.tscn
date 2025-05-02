@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dy2flai8ivtbl"]
+
+[ext_resource type="Texture2D" uid="uid://b3hmmafqbhi0y" path="res://microjogos/2024S1/quimica-quiz/recursos/Documento_sem_título_1_-removebg-preview.png" id="1_rvemi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cruqs"]
+size = Vector2(1928, 1095)
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(-5, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(959, 534)
+shape = SubResource("RectangleShape2D_cruqs")
+debug_color = Color(0.384314, 0.482353, 0.976471, 0.419608)
+
+[node name="_Acerte a função orgânica_" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(14, -187)
+scale = Vector2(1.92634, 1.62933)
+texture = ExtResource("1_rvemi")

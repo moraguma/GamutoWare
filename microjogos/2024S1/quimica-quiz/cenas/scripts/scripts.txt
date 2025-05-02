@@ -1,0 +1,2 @@
+Coloque seus scripts aqui!
+extends Node2D
