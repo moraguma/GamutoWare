@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2n8sy0rt2uip"]
+
+[sub_resource type="Curve2D" id="Curve2D_0r5ov"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 304, 1160, 0, 0, 0, 0, 1608, 1160)
+}
+point_count = 2
+
+[node name="Path2D" type="Path2D"]
+curve = SubResource("Curve2D_0r5ov")
+
+[node name="Carspawn" type="PathFollow2D" parent="."]
+position = Vector2(304, 1160)
+
+[node name="_Timer_23948" type="Timer" parent="Carspawn"]
+wait_time = 0.2
+one_shot = true
