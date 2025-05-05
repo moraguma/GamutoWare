@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2sa6coaikkl4"]
+
+[ext_resource type="Texture2D" uid="uid://cxp1k1pifivb" path="res://microjogos/2025S1/Gamuto_Maestro_Davi/cenas/pixil-frame-0.png" id="1_8lhyg"]
+[ext_resource type="Texture2D" uid="uid://l0v51ate5lbq" path="res://microjogos/2025S1/Gamuto_Maestro_Davi/pixil-frame-0_3.png" id="2_8lhyg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_68buh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8lhyg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8lhyg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_8lhyg")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Animação" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 4.12505)
+scale = Vector2(6.005, 5.9885)
+sprite_frames = SubResource("SpriteFrames_68buh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
