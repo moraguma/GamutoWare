@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://ds7lmn5xgukf4"]
+
+[ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="1_2np0a"]
+[ext_resource type="Script" uid="uid://c8ohmwc0dwwq1" path="res://microjogos/2025S1/Projeto_DenisDias/cenas/scripts/CharMove.gd" id="1_3et04"]
+[ext_resource type="Script" uid="uid://6ytpjavwhp4y" path="res://microjogos/2025S1/Projeto_DenisDias/cenas/scripts/fistScript.gd" id="3_n7dbh"]
+[ext_resource type="Texture2D" uid="uid://cwialg3r14kxl" path="res://microjogos/2025S1/Projeto_DenisDias/recursos/imagens/Franca.png" id="3_sgm8k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_alsvu"]
+size = Vector2(57, 58)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n7dbh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sgm8k"]
+size = Vector2(61, 61)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_crquh"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="Body" type="CharacterBody2D" parent="Characters"]
+position = Vector2(584, 411)
+script = ExtResource("1_3et04")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Characters/Body"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_alsvu")
+
+[node name="Sprite2D" type="Sprite2D" parent="Characters/Body"]
+texture = ExtResource("1_2np0a")
+
+[node name="Fist" type="Node2D" parent="Characters/Body"]
+position = Vector2(51, 2)
+script = ExtResource("3_n7dbh")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Characters/Body/Fist"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Characters/Body/Fist/StaticBody2D"]
+shape = SubResource("RectangleShape2D_n7dbh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Characters/Body/Fist"]
+scale = Vector2(0.317678, 0.32)
+texture = ExtResource("1_2np0a")
+
+[node name="Enemy" type="CharacterBody2D" parent="Characters"]
+position = Vector2(785, 331)
+
+[node name="Sprite2D" type="Sprite2D" parent="Characters/Enemy"]
+modulate = Color(1, 0, 0.027451, 1)
+texture = ExtResource("1_2np0a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Characters/Enemy"]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_sgm8k")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(190, 165)
+scale = Vector2(17.28, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_crquh")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+scale = Vector2(0.0291417, -0.0307856)
+texture = ExtResource("3_sgm8k")
