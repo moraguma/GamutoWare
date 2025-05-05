@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://sb2w5csice5x"]
+
+[ext_resource type="Script" uid="uid://bojv7krlow0nj" path="res://microjogos/2025S1/angry_gamuto-francisco/cenas/scripts/area_2d.gd" id="2_e7i34"]
+[ext_resource type="Texture2D" uid="uid://dn1m84ogo2erw" path="res://microjogos/2025S1/angry_gamuto-francisco/icon.png" id="2_ljqjo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e7i34"]
+radius = 10.2319
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_icuj8"]
+radius = 150.083
+
+[node name="Gamuto-vilao" type="RigidBody2D"]
+script = ExtResource("2_e7i34")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(9, 9)
+shape = SubResource("CircleShape2D_e7i34")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3.625, 3.625)
+texture = ExtResource("2_ljqjo")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_icuj8")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
