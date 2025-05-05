@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://bk7nlchnxeavs"]
+
+[ext_resource type="PackedScene" uid="uid://27mpwj25p8bl" path="res://microjogos/2025S1/projeto-plataformer/cenas/mapa.tscn" id="1_enm8k"]
+[ext_resource type="Script" uid="uid://d334y83buygu3" path="res://microjogos/2025S1/projeto-plataformer/cenas/scripts/main.gd" id="1_ng8s0"]
+[ext_resource type="PackedScene" uid="uid://v8jttrvrrsx5" path="res://microjogos/2025S1/projeto-plataformer/cenas/player.tscn" id="2_1wgp2"]
+[ext_resource type="PackedScene" uid="uid://dmvafb620rp2r" path="res://microjogos/2025S1/projeto-plataformer/cenas/estrela.tscn" id="3_eeojv"]
+[ext_resource type="PackedScene" uid="uid://b4ck6qiv563g1" path="res://microjogos/2025S1/projeto-plataformer/cenas/porta.tscn" id="4_ng8s0"]
+[ext_resource type="AudioStream" uid="uid://q76dqnouodu2" path="res://microjogos/2025S1/projeto-plataformer/recursos/sons/Won!.wav" id="6_lppnp"]
+
+[node name="Main" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_ng8s0")
+
+[node name="mapa" parent="." instance=ExtResource("1_enm8k")]
+
+[node name="Personagem" parent="." instance=ExtResource("2_1wgp2")]
+position = Vector2(-269, -60)
+
+[node name="Estrela" parent="." instance=ExtResource("3_eeojv")]
+position = Vector2(-137, -86)
+collision_mask = 3
+
+[node name="Porta1" parent="." instance=ExtResource("4_ng8s0")]
+position = Vector2(-309, -16)
+
+[node name="Porta2" parent="." instance=ExtResource("4_ng8s0")]
+position = Vector2(101, 80)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-100, -25)
+zoom = Vector2(4, 4)
+
+[node name="Efeito_vitoria" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_lppnp")
+
+[connection signal="body_entered" from="Estrela" to="Personagem" method="_on_estrela_body_entered"]

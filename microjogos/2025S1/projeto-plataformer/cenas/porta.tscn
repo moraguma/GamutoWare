@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4ck6qiv563g1"]
+
+[ext_resource type="Texture2D" uid="uid://34j4m5mnjmc6" path="res://microjogos/2025S1/projeto-plataformer/recursos/imagens/Dungeon Tile Set.png" id="1_ocft2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ocft2"]
+size = Vector2(16, 31)
+
+[node name="Porta" type="Area2D"]
+collision_layer = 4
+collision_mask = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_ocft2")
+hframes = 15
+vframes = 9
+frame = 88
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_ocft2")
