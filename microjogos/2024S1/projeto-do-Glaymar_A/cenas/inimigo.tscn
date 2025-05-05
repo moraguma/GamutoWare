@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://deg0v3upu07xf"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-do-Glaymar_A/cenas/inimigo.gd" id="1_ratjc"]
+[ext_resource type="Texture2D" uid="uid://b24foufi834mf" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/New_Piskel_2.png" id="2_cd747"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hhfd2"]
+radius = 25.02
+
+[node name="Inimigo" type="CharacterBody2D"]
+position = Vector2(31, 72)
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_ratjc")
+
+[node name="NewPiskel2" type="Sprite2D" parent="."]
+position = Vector2(15, -52)
+scale = Vector2(0.384375, 0.446875)
+texture = ExtResource("2_cd747")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hhfd2")
+
+[connection signal="child_order_changed" from="CollisionShape2D" to="." method="_on_collision_shape_2d_child_order_changed"]
