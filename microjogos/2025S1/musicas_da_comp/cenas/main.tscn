@@ -1,0 +1,167 @@
+[gd_scene load_steps=17 format=3 uid="uid://b8updi1osiwne"]
+
+[ext_resource type="Script" uid="uid://doga4uw2uu7b1" path="res://microjogos/2025S1/musicas_da_comp/cenas/scripts/main.gd" id="1_hypu2"]
+[ext_resource type="FontFile" uid="uid://cuqd8akvxgs58" path="res://microjogos/2025S1/musicas_da_comp/Ldfcomicsans-jj7l.ttf" id="2_3qdev"]
+[ext_resource type="StyleBox" uid="uid://bxcgw4ij0ep3p" path="res://microjogos/2025S1/musicas_da_comp/recursos/new_style_box_flat.tres" id="2_dqw11"]
+[ext_resource type="Theme" uid="uid://6nllk3n6j475" path="res://microjogos/2025S1/musicas_da_comp/recursos/new_theme.tres" id="3_pitoj"]
+[ext_resource type="Texture2D" uid="uid://dxtgy4cgsqxcq" path="res://microjogos/2025S1/musicas_da_comp/recursos/imagens/100NOSSAO.png" id="4_0onx8"]
+[ext_resource type="AudioStream" uid="uid://cea8hesmc8u6j" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Ragatanga.ogg" id="6_0onx8"]
+[ext_resource type="AudioStream" uid="uid://k37fq0c8cgxo" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Corpo Nu.ogg" id="6_pw2xx"]
+[ext_resource type="AudioStream" uid="uid://ch0iylke6dil" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Renata.ogg" id="6_q1754"]
+[ext_resource type="AudioStream" uid="uid://narf8ge8evym" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Madagascar.ogg" id="7_0g845"]
+[ext_resource type="AudioStream" uid="uid://cbnhji0ed46gx" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Shake It Bololo.ogg" id="8_q1754"]
+[ext_resource type="AudioStream" uid="uid://b6eivp7e3kyjx" path="res://microjogos/2025S1/musicas_da_comp/recursos/sons/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.ogg" id="9_0g845"]
+[ext_resource type="Texture2D" uid="uid://cljamu34fu106" path="res://microjogos/2025S1/musicas_da_comp/recursos/imagens/VDC_ORGULHOSO.png" id="9_0onx8"]
+[ext_resource type="Texture2D" uid="uid://brqe8lsx8v5jr" path="res://microjogos/2025S1/musicas_da_comp/recursos/imagens/VDC_TE_PERDOA.png" id="10_0onx8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3qdev"]
+bg_color = Color(0.0470588, 0.196078, 0.819608, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_left = 16.0
+expand_margin_top = 16.0
+expand_margin_right = 16.0
+expand_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pitoj"]
+
+[sub_resource type="Theme" id="Theme_7eqru"]
+Button/font_sizes/font_size = 64
+Button/fonts/font = ExtResource("2_3qdev")
+Button/styles/focus = SubResource("StyleBoxFlat_3qdev")
+Button/styles/normal = ExtResource("2_dqw11")
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 90
+Label/styles/normal = null
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_pitoj")
+RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
+RichTextLabel/constants/line_separation = 10
+RichTextLabel/constants/outline_size = 0
+RichTextLabel/font_sizes/normal_font_size = 100
+RichTextLabel/fonts/normal_font = ExtResource("2_3qdev")
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_hypu2")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 1920.0
+grow_vertical = 2
+theme = SubResource("Theme_7eqru")
+
+[node name="Sprite2D" type="Sprite2D" parent="PanelContainer"]
+position = Vector2(892, 562)
+scale = Vector2(2.3828, 2.3828)
+texture = ExtResource("4_0onx8")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 73
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 100
+
+[node name="Pergunta" type="RichTextLabel" parent="PanelContainer/MarginContainer"]
+unique_name_in_owner = true
+light_mask = 0
+custom_minimum_size = Vector2(600, 200)
+layout_mode = 2
+size_flags_vertical = 0
+bbcode_enabled = true
+fit_content = true
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/h_separation = 100
+theme_override_constants/v_separation = 100
+columns = 2
+
+[node name="Pergunta1" type="Button" parent="PanelContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(700, 2)
+layout_mode = 2
+focus_neighbor_left = NodePath("../Pergunta2")
+focus_neighbor_top = NodePath("../Pergunta3")
+focus_neighbor_right = NodePath("../Pergunta2")
+focus_neighbor_bottom = NodePath("../Pergunta3")
+mouse_filter = 2
+autowrap_mode = 3
+
+[node name="Pergunta2" type="Button" parent="PanelContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(700, 2)
+layout_mode = 2
+focus_neighbor_left = NodePath("../Pergunta1")
+focus_neighbor_top = NodePath("../Pergunta4")
+focus_neighbor_right = NodePath("../Pergunta1")
+focus_neighbor_bottom = NodePath("../Pergunta4")
+mouse_filter = 2
+theme = ExtResource("3_pitoj")
+autowrap_mode = 3
+
+[node name="Pergunta3" type="Button" parent="PanelContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(700, 2)
+layout_mode = 2
+focus_neighbor_left = NodePath("../Pergunta4")
+focus_neighbor_top = NodePath("../Pergunta1")
+focus_neighbor_right = NodePath("../Pergunta4")
+focus_neighbor_bottom = NodePath("../Pergunta1")
+mouse_filter = 2
+autowrap_mode = 3
+
+[node name="Pergunta4" type="Button" parent="PanelContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(700, 2)
+layout_mode = 2
+focus_neighbor_left = NodePath("../Pergunta3")
+focus_neighbor_top = NodePath("../Pergunta2")
+focus_neighbor_right = NodePath("../Pergunta3")
+focus_neighbor_bottom = NodePath("../Pergunta2")
+mouse_filter = 2
+autowrap_mode = 3
+
+[node name="Musica1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_pw2xx")
+
+[node name="Musica2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_q1754")
+
+[node name="Musica3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_0onx8")
+parameters/looping = true
+
+[node name="Musica4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_0g845")
+parameters/looping = true
+
+[node name="Musica5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_q1754")
+parameters/looping = true
+
+[node name="Musica6" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_0g845")
+parameters/looping = true
+
+[node name="VDC_Feliz" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(960, 540)
+scale = Vector2(0.46875, 0.370117)
+texture = ExtResource("9_0onx8")
+
+[node name="VDC_Triste" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(960, 540)
+scale = Vector2(0.46875, 0.39546)
+texture = ExtResource("10_0onx8")
