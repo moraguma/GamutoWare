@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dft82gvmyae53"]
+
+[ext_resource type="Script" uid="uid://ch4dxpep2pj37" path="res://microjogos/2025S1/gamuto_snap/cenas/scripts/gamuto_physics.gd" id="1_dvsof"]
+[ext_resource type="Texture2D" uid="uid://bl202sfp6rxmg" path="res://microjogos/2025S1/gamuto_snap/recursos/imagens/gamuto_flashed.png" id="2_dvsof"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8vw7n"]
+radius = 95.0
+
+[node name="GamutoPhysics" type="RigidBody2D"]
+linear_velocity = Vector2(0, -500)
+angular_velocity = 0.174533
+script = ExtResource("1_dvsof")
+
+[node name="gamutoPhysicsSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_dvsof")
+offset = Vector2(0, 2)
+
+[node name="gamutoPhysicsCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8vw7n")
+disabled = true
