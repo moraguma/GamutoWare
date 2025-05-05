@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxfeyq5fjqeir"]
+
+[ext_resource type="Texture2D" uid="uid://d2jlw6ph8sicw" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/8.png" id="1_ol0hy"]
+
+[node name="Lata" type="Sprite2D"]
+texture = ExtResource("1_ol0hy")
