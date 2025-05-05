@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=2 format=3 uid="uid://dtasbdcsjjurw"]
+
+[ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_qf6b2"]
+
+[resource]
+script = ExtResource("1_qf6b2")
+title_pt = &"MATE "
+title_en = &"GAME TITLE"
+credits_pt = "Drikista"
+credits_en = "Drikista"
+start_message_pt = &"FAÇA ALGO!"
+start_message_en = &"DO SOMETHING!"
+difficulty = 0

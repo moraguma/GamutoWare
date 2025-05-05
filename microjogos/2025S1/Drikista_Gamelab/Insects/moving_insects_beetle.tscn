@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cs0npkpprcrrh"]
+
+[ext_resource type="Script" uid="uid://cahun7rgsreij" path="res://microjogos/2025S1/Drikista_Gamelab/Insects/obj_beetle.gd" id="1_44nhk"]
+[ext_resource type="Texture2D" uid="uid://c7nmlmftji3cd" path="res://microjogos/2025S1/Drikista_Gamelab/Sprites/beetle.png" id="2_c8qfb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_44nhk"]
+size = Vector2(12, 16)
+
+[node name="moving_insects_beetle" type="Area2D"]
+script = ExtResource("1_44nhk")
+
+[node name="spr_beetle" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_c8qfb")
+
+[node name="col_beetle" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_44nhk")
