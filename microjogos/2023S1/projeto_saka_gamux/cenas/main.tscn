@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://cxr7smivkjji0"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/seu_projeto/cenas/scripts/main.gd" id="1_qe1ko"]
+[ext_resource type="Texture2D" uid="uid://dgi81x2um383v" path="res://microjogos/2023S1/projeto_saka_gamux/recursos/Screenshot from 2023-04-01 17-37-13.png" id="2_4btfk"]
+[ext_resource type="Texture2D" uid="uid://chut27yaui7ck" path="res://microjogos/2023S1/projeto_saka_gamux/recursos/Screenshot from 2023-04-01 18-39-28.png" id="2_tsf6h"]
+[ext_resource type="Texture2D" uid="uid://dte76yet2exga" path="res://microjogos/2023S1/projeto_saka_gamux/recursos/Screenshot from 2023-04-01 18-13-07.png" id="3_keklf"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto_saka_gamux/cenas/scripts/particulas_pi.gd" id="3_lmbp8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o5r8s"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_qe1ko")
+
+[node name="Camera3D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="pimenteiro" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(1151, 224)
+rotation = 1.30202
+scale = Vector2(1.319, 1.319)
+texture = ExtResource("2_tsf6h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(920, 296)
+sprite_frames = SubResource("SpriteFrames_o5r8s")
+
+[node name="particulas_pi" type="CPUParticles2D" parent="AnimatedSprite2D"]
+position = Vector2(0, 8)
+emitting = false
+amount = 75
+speed_scale = 0.7
+randomness = 1.0
+emission_shape = 1
+emission_sphere_radius = 50.0
+scale_amount_min = 0.0
+scale_amount_max = 11.7
+color = Color(0.188235, 0.160784, 0.0470588, 1)
+hue_variation_min = -0.27
+hue_variation_max = 0.08
+script = ExtResource("3_lmbp8")
+
+[node name="Timer" type="Timer" parent="AnimatedSprite2D/particulas_pi"]
+wait_time = 0.5
+one_shot = true
+
+[node name="panela" type="Sprite2D" parent="."]
+position = Vector2(968, 1032)
+scale = Vector2(1.528, 1.528)
+texture = ExtResource("3_keklf")
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -5
+position = Vector2(967, 521.925)
+scale = Vector2(2.137, 2.137)
+texture = ExtResource("2_4btfk")
+
+[connection signal="timeout" from="AnimatedSprite2D/particulas_pi/Timer" to="AnimatedSprite2D/particulas_pi" method="_on_timer_timeout"]
