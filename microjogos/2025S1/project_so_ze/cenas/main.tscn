@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkd4yt5yljwiu"]
+
+[ext_resource type="Script" uid="uid://cqkwr4rkt2o6v" path="res://microjogos/2025S1/project_so_ze/cenas/scripts/main.gd" id="1_g1m0b"]
+[ext_resource type="PackedScene" uid="uid://cg5clbaowdm38" path="res://microjogos/2025S1/project_so_ze/cenas/player.tscn" id="2_qjikd"]
+
+[node name="Main" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_g1m0b")
+
+[node name="Player" parent="." instance=ExtResource("2_qjikd")]
