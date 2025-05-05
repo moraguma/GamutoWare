@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bym71w52mnwkj"]
+
+[ext_resource type="Texture2D" uid="uid://qus8hoyynqta" path="res://microjogos/2025S1/projeto_milla/cenas/photo-1588421357574-87938a86fa28.jpeg" id="1_ul5en"]
+
+[node name="Cena1" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(154, -33)
+scale = Vector2(1.09667, 1.0015)
+texture = ExtResource("1_ul5en")
+
+[node name="Camera2D" type="Camera2D" parent="."]
