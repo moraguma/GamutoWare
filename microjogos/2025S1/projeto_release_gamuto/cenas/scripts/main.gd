@@ -33,19 +33,69 @@ func _ready():
 			NotificationCenter.notify("FAÇA ALGO!")
 	
 	var config = pick_random_spawn_config()
-	var player_spawn_areas = config["player_spawn_areas"]
-	var obstacles_spawn_restrictions = []
-	obstacles_spawn_restrictions.append_array(player_spawn_areas)
-	obstacles_spawn_restrictions.append(config["treasure_spawn_area"])
-	obstacles_spawn_restrictions.append_array(config["paths"])
-	create_something(obstacle_scene, 500, config["obstacles_spawn_area"], obstacles_spawn_restrictions, -1)
+	var start_point = Vector2(250,250)
+	var end_point = Vector2(250,HEIGHT-250)
+	var start_radius = 75
+	var end_radius = 125
+	var path_radius = 150
+	var path = Path2D.new()
+	path.curve = Curve2D.new()
+	path.curve.add_point(start_point)
+	path.curve.add_point(start_point + Vector2(700,0), Vector2(0,0), Vector2(1000,0))
+	path.curve.add_point(end_point + Vector2(700,0), Vector2(1000,0), Vector2(0,0))
+	path.curve.add_point(end_point)
 	
-	for player_spawn_area in player_spawn_areas:
-		create_something(player_scene, 1, player_spawn_area, [], PI/2)
+	# Obstacles
+	var num_obstacles = 500
+	for instance_id in num_obstacles:
+		var obstacle_instance = obstacle_scene.instantiate()
+		var spawn_point := Vector2(randi_range(0,WIDTH),randi_range(0,HEIGHT))
+		var distance_to_path = path.curve.get_closest_point(spawn_point).distance_to(spawn_point)
+		var distance_to_start = spawn_point.distance_to(start_point)
+		var distance_to_end = spawn_point.distance_to(end_point)
+		while distance_to_path <= path_radius or distance_to_start <= start_radius + 75 or distance_to_end <= end_radius + 50:
+			spawn_point = Vector2(randi_range(0,WIDTH),randi_range(0,HEIGHT))
+			distance_to_path = path.curve.get_closest_point(spawn_point).distance_to(spawn_point)
+			distance_to_start = spawn_point.distance_to(start_point)
+			distance_to_end = spawn_point.distance_to(end_point)
+		print(spawn_point, path.curve.get_closest_point(spawn_point))
+		obstacle_instance.position = spawn_point
+		obstacle_instance.rotation = randf()
+		add_child(obstacle_instance)
+	# Goal
+	var goal_instance = goal_scene.instantiate()
+	goal_instance.position = end_point
+	goal_instance.connect("body_entered", _on_goal_body_entered)
+	add_child(goal_instance)
+	# Players
+	var num_players = 3
+	for player in num_players:
+		var player_instance = player_scene.instantiate()
+		var player_spawn_point := Vector2(
+			randi_range(start_point.x-start_radius,start_point.x+start_radius),
+			randi_range(start_point.y-start_radius,start_point.y+start_radius)
+		)
+		while start_point.distance_to(player_spawn_point) > start_radius:
+			player_spawn_point = Vector2(
+				randi_range(start_point.x-start_radius,start_point.x+start_radius),
+				randi_range(start_point.y-start_radius,start_point.y+start_radius)
+			)
+		player_instance.position = player_spawn_point
+		player_instance.rotation = PI/2
+		add_child(player_instance)
+	# var player_spawn_areas = config["player_spawn_areas"]
+	# var obstacles_spawn_restrictions = []
+	 #obstacles_spawn_restrictions.append_array(player_spawn_areas)
+	# obstacles_spawn_restrictions.append(config["treasure_spawn_area"])
+	 #obstacles_spawn_restrictions.append_array(config["paths"])
+	# create_something(obstacle_scene, 500, config["obstacles_spawn_area"], obstacles_spawn_restrictions, -1)
 	
-	var goal_scenes = create_something(goal_scene, 1, config["treasure_spawn_area"], [])
-	for goal_scene in goal_scenes:
-		goal_scene.connect("body_entered", _on_goal_body_entered)
+	 #for player_spawn_area in player_spawn_areas:
+	 #	create_something(player_scene, 1, player_spawn_area, [], PI/2)
+	
+	# var goal_scenes = create_something(goal_scene, 1, config["treasure_spawn_area"], [])
+	# for goal_scene in goal_scenes:
+	#	goal_scene.connect("body_entered", _on_goal_body_entered)
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
