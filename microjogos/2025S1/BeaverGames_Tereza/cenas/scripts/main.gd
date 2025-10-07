@@ -2,7 +2,7 @@ extends Node2D
 @onready var _animated_sprite = $Beaver/AnimationPlayer
 @onready var Bola = $Gamutobola/AnimationPlayer
 @onready var Introduction = $Introduction/IndroductionA
-@export var speed = 400
+@export var speed = 1200
 var timer
 var sentido
 var rng = RandomNumberGenerator.new()
@@ -44,11 +44,7 @@ func _ready():
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
 	timer = get_node("Timer")
 	timer.start(6)
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("HIT THE BALL!!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("REBATA A BOLA!")
+	
 
 	var Beaver = get_node("Beaver")
 	Bola.play("Pular")
