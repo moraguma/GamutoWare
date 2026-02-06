@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvj77rae8x3ws"
-path="res://.godot/imported/GMTTitleFace.png-1c4c3438e3bdf8b49974d15828b80f27.ctex"
+uid="uid://dq5vvfmibjw6k"
+path="res://.godot/imported/maozinhafechada.png-64df55f222a4508e0de824cccc72a3fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/gamuto_petpet/recursos/imagens/GMTTitleFace.png"
-dest_files=["res://.godot/imported/GMTTitleFace.png-1c4c3438e3bdf8b49974d15828b80f27.ctex"]
+source_file="res://microjogos/2025S1/gamuto_petpet/recursos/imagens/maozinhafechada.png"
+dest_files=["res://.godot/imported/maozinhafechada.png-64df55f222a4508e0de824cccc72a3fe.ctex"]
 
 [params]
 

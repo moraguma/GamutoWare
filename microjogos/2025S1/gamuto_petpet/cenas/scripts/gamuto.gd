@@ -1,11 +1,15 @@
 extends Area2D
-@onready var anim: AnimatedSprite2D = $AnimatedSprite2D
+@onready var anim: AnimatedSprite2D = $gam_triste
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	randomize_position()
 	anim.play("crying")
+	
+func tornar_feliz():
+	anim.visible = false
+	$gam_feliz.visible = true
 func randomize_position():
 	var min_x = 80
 	var max_x = 1800

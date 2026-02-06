@@ -18,13 +18,24 @@ func _process(delta):
 	elif Input.get_axis("cima", "baixo") > 0:  # Movimento para baixo
 		velocity.y = speed
 		
-	if poder_petar and Input.is_action_just_pressed("acao"):
-		emit_signal("win")
-		get_parent().register_win()
-		print("foi uma metida satisfatória")
-		
-	move_and_slide()
+	
 
+		
+	if Input.is_action_just_pressed("acao"):
+		$maoA.visible = false
+		$maoF.visible = true
+		if poder_petar:
+			print("foi uma metida satisfatória")
+			emit_signal("win")
+			get_parent().register_win()
+	move_and_slide()
+	if Input.is_action_just_released("acao"):
+		$maoF.visible = false
+		$maoA.visible = true
+		
+	
+	
+	
 func _on_gamuto_body_entered(body: Node2D) -> void:
 		poder_petar = true
 		print("meteu dentro")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ca8ku5ny5gjsw"
-path="res://.godot/imported/Regular.png-d6602d5ed78f94cdc479f9ef639aa4b0.ctex"
+uid="uid://cnpnwhrb7ym55"
+path="res://.godot/imported/gamutofeliz.png-a7944e5bdcaeb6a2eb2c672391ef2430.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/gamuto_petpet/recursos/imagens/Regular.png"
-dest_files=["res://.godot/imported/Regular.png-d6602d5ed78f94cdc479f9ef639aa4b0.ctex"]
+source_file="res://microjogos/2025S1/gamuto_petpet/recursos/imagens/gamutofeliz.png"
+dest_files=["res://.godot/imported/gamutofeliz.png-a7944e5bdcaeb6a2eb2c672391ef2430.ctex"]
 
 [params]
 
