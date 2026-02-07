@@ -2,11 +2,13 @@
 
 [sub_resource type="VisualShaderNodeBooleanParameter" id="VisualShaderNodeBooleanParameter_g275x"]
 parameter_name = "Disabled"
+default_value_enabled = true
 
 [sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_t2fqa"]
 input_name = "color"
 
 [sub_resource type="VisualShaderNodeIf" id="VisualShaderNodeIf_vk8df"]
+output_port_for_preview = 0
 default_input_values = [0, 0.0, 1, 1.0, 2, 1e-05, 3, Vector3(0, 0, 0), 4, Vector3(0, 0, 0), 5, Vector3(0, 0, 0)]
 
 [sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_aawmp"]
@@ -24,7 +26,7 @@ operator = 2
 code = "shader_type canvas_item;
 render_mode blend_mix;
 
-uniform bool Disabled;
+uniform bool Disabled = false;
 
 
 
@@ -73,7 +75,7 @@ void fragment() {
 
 }
 "
-graph_offset = Vector2(-392.531, -85.3952)
+graph_offset = Vector2(-492.81, -34.0884)
 mode = 1
 flags/light_only = false
 nodes/fragment/3/node = SubResource("VisualShaderNodeBooleanParameter_g275x")
@@ -88,4 +90,4 @@ nodes/fragment/8/node = SubResource("VisualShaderNodeFloatConstant_y13rn")
 nodes/fragment/8/position = Vector2(-600, 360)
 nodes/fragment/9/node = SubResource("VisualShaderNodeVectorOp_li71v")
 nodes/fragment/9/position = Vector2(-280, 220)
-nodes/fragment/connections = PackedInt32Array(3, 0, 5, 0, 4, 0, 5, 4, 4, 0, 5, 5, 5, 0, 0, 0, 6, 0, 9, 0, 8, 0, 9, 1, 9, 0, 5, 3)
+nodes/fragment/connections = PackedInt32Array(3, 0, 5, 0, 4, 0, 5, 4, 4, 0, 5, 5, 6, 0, 9, 0, 8, 0, 9, 1, 9, 0, 5, 3, 5, 0, 0, 0)

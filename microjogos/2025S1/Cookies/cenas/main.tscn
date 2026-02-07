@@ -1,16 +1,19 @@
-[gd_scene load_steps=19 format=3 uid="uid://devce1jy5yrb8"]
+[gd_scene load_steps=18 format=3 uid="uid://devce1jy5yrb8"]
 
 [ext_resource type="Script" uid="uid://cwdeg2iachcoh" path="res://microjogos/2025S1/Cookies/cenas/scripts/main.gd" id="1_aashi"]
 [ext_resource type="Texture2D" uid="uid://b2jajfg84rx1d" path="res://microjogos/2025S1/Cookies/recursos/imagens/cookiePixelArt.png" id="2_6m3k1"]
+[ext_resource type="Texture2D" uid="uid://ds6ltl8rxapdm" path="res://microjogos/2025S1/Cookies/recursos/imagens/sky-star-dark-constellation-color-space-610854-pxhere.com.jpg" id="2_kwmw3"]
 [ext_resource type="PackedScene" uid="uid://bkfj0uuex0ct0" path="res://microjogos/2025S1/Cookies/cenas/monster.tscn" id="3_xb0ta"]
-[ext_resource type="Shader" uid="uid://xhkqq21nsdcy" path="res://microjogos/2025S1/Cookies/recursos/disable.tres" id="5_3pa5t"]
+[ext_resource type="Script" uid="uid://cpe76jgr2ka8o" path="res://microjogos/2025S1/Cookies/cenas/scripts/main_cookie.gd" id="4_jdymh"]
 [ext_resource type="Script" uid="uid://chaioddbvl0si" path="res://microjogos/2025S1/Cookies/cenas/scripts/sub_viewport.gd" id="5_6m3k1"]
-[ext_resource type="Texture2D" uid="uid://cf84ffudbmww5" path="res://microjogos/2025S1/Cookies/recursos/imagens/turret.png" id="5_a83ac"]
+[ext_resource type="Texture2D" uid="uid://cf84ffudbmww5" path="res://microjogos/2025S1/Cookies/recursos/imagens/turrets/turret.png" id="5_a83ac"]
 [ext_resource type="PackedScene" uid="uid://3vfixad66wd3" path="res://microjogos/2025S1/Cookies/cenas/turret.tscn" id="5_aj31b"]
 [ext_resource type="Script" uid="uid://bbfctgh3puax0" path="res://microjogos/2025S1/Cookies/cenas/scripts/label.gd" id="5_atimq"]
-[ext_resource type="Texture2D" uid="uid://53ixq7myuojr" path="res://microjogos/2025S1/Cookies/recursos/imagens/cannon.png" id="6_3pa5t"]
+[ext_resource type="Texture2D" uid="uid://53ixq7myuojr" path="res://microjogos/2025S1/Cookies/recursos/imagens/turrets/cannon.png" id="6_3pa5t"]
 [ext_resource type="PackedScene" uid="uid://46h8nsrltfop" path="res://microjogos/2025S1/Cookies/cenas/cannon.tscn" id="7_3ps7f"]
+[ext_resource type="Theme" uid="uid://comie45xtpqxw" path="res://microjogos/2025S1/Cookies/recursos/shaders/theme.tres" id="7_jdymh"]
 [ext_resource type="Script" uid="uid://dcewx2vxy4cxa" path="res://microjogos/2025S1/Cookies/cenas/scripts/panel_container.gd" id="7_nra8u"]
+[ext_resource type="Script" uid="uid://bickou8hwst01" path="res://microjogos/2025S1/Cookies/cenas/scripts/label_translator.gd" id="12_1eumt"]
 
 [sub_resource type="GDScript" id="GDScript_nra8u"]
 script/source = "extends Timer
@@ -23,45 +26,24 @@ func _on_timeout() -> void:
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7hjn7"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3pa5t"]
-bg_color = Color(0.733333, 0.517647, 0.290196, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0.984314, 0.827451, 0.45098, 1)
-
-[sub_resource type="Theme" id="Theme_a83ac"]
-Label/font_sizes/font_size = 50
-MarginContainer/constants/margin_bottom = 10
-MarginContainer/constants/margin_left = 20
-MarginContainer/constants/margin_right = 20
-MarginContainer/constants/margin_top = 10
-PanelContainer/styles/panel = SubResource("StyleBoxFlat_3pa5t")
-VBoxContainer/constants/separation = 3
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nra8u"]
-shader = ExtResource("5_3pa5t")
-shader_parameter/Disabled = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_atimq"]
-shader = ExtResource("5_3pa5t")
-shader_parameter/Disabled = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_suxxg"]
-shader = ExtResource("5_3pa5t")
-shader_parameter/Disabled = true
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_aashi")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sky-star-dark-constellation-color-space-610854-pxhere_com" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.597)
+position = Vector2(960, 540)
+texture = ExtResource("2_kwmw3")
+
+[node name="MainCookie" type="Sprite2D" parent="."]
 texture_filter = 5
 position = Vector2(960, 400)
 scale = Vector2(15, 15)
 texture = ExtResource("2_6m3k1")
+script = ExtResource("4_jdymh")
 
-[node name="Timer" type="Timer" parent="Sprite2D"]
+[node name="Timer" type="Timer" parent="MainCookie"]
 wait_time = 6.0
 autostart = true
 script = SubResource("GDScript_nra8u")
@@ -122,12 +104,12 @@ offset_top = -20.0
 offset_bottom = 20.0
 grow_horizontal = 0
 grow_vertical = 2
-theme = SubResource("Theme_a83ac")
+theme = ExtResource("7_jdymh")
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/MarginContainer" node_paths=PackedStringArray("main")]
+[node name="Bank" type="Label" parent="CanvasLayer/VBoxContainer/MarginContainer" node_paths=PackedStringArray("main")]
 layout_mode = 2
 size_flags_horizontal = 8
 text = "0"
@@ -141,6 +123,7 @@ layout_mode = 2
 material = SubResource("ShaderMaterial_nra8u")
 custom_minimum_size = Vector2(300, 150)
 layout_mode = 2
+theme = ExtResource("7_jdymh")
 script = ExtResource("7_nra8u")
 main = NodePath("../../../..")
 price = 100
@@ -153,31 +136,34 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer/Turret/PanelContainer/MarginContainer/HBoxContainer"]
 texture_filter = 3
-custom_minimum_size = Vector2(200, 200)
+custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 texture = ExtResource("5_a83ac")
+expand_mode = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer/Turret/PanelContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_constants/separation = 10
 alignment = 1
 
-[node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer/Turret/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Price" type="Label" parent="CanvasLayer/VBoxContainer/Turret/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
-text = "100 - [ A ]"
+text = "$100 - [ A ]"
 
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/Turret/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Type" type="Label" parent="CanvasLayer/VBoxContainer/Turret/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Turret"
+script = ExtResource("12_1eumt")
 
 [node name="Turret2" type="MarginContainer" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/VBoxContainer/Turret2" node_paths=PackedStringArray("main")]
-material = SubResource("ShaderMaterial_atimq")
 custom_minimum_size = Vector2(300, 150)
 layout_mode = 2
+theme = ExtResource("7_jdymh")
 script = ExtResource("7_nra8u")
 main = NodePath("../../../..")
 price = 100
@@ -190,30 +176,32 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer/Turret2/PanelContainer/MarginContainer/HBoxContainer"]
 texture_filter = 3
-custom_minimum_size = Vector2(200, 200)
+custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 texture = ExtResource("5_a83ac")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer/Turret2/PanelContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_constants/separation = 10
 alignment = 1
 
-[node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer/Turret2/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Price" type="Label" parent="CanvasLayer/VBoxContainer/Turret2/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
-text = "100 - [ D ]"
+text = "$100 - [ D ]"
 
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/Turret2/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Type" type="Label" parent="CanvasLayer/VBoxContainer/Turret2/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Turret"
+script = ExtResource("12_1eumt")
 
 [node name="Cannon" type="MarginContainer" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/VBoxContainer/Cannon" node_paths=PackedStringArray("main")]
-material = SubResource("ShaderMaterial_suxxg")
 layout_mode = 2
+theme = ExtResource("7_jdymh")
 script = ExtResource("7_nra8u")
 main = NodePath("../../../..")
 price = 200
@@ -226,23 +214,44 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer/Cannon/PanelContainer/MarginContainer/HBoxContainer"]
 texture_filter = 3
-custom_minimum_size = Vector2(200, 200)
+custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 texture = ExtResource("6_3pa5t")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer/Cannon/PanelContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_constants/separation = 10
 alignment = 1
 
-[node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer/Cannon/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Price" type="Label" parent="CanvasLayer/VBoxContainer/Cannon/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
-text = "200 - [ W ]"
+text = "$200 - [ W ]"
 
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/Cannon/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Type" type="Label" parent="CanvasLayer/VBoxContainer/Cannon/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Cannon"
+script = ExtResource("12_1eumt")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("7_jdymh")
+theme_override_constants/margin_bottom = 150
+
+[node name="Info" type="Label" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+text = "Press [Space]"
+script = ExtResource("12_1eumt")
 
 [node name="Turret" parent="." node_paths=PackedStringArray("target") instance=ExtResource("5_aj31b")]
 position = Vector2(600, 175)
@@ -257,4 +266,4 @@ position = Vector2(960, 100)
 scale = Vector2(1, 1)
 target = NodePath("../Monster")
 
-[connection signal="timeout" from="Sprite2D/Timer" to="Sprite2D/Timer" method="_on_timeout"]
+[connection signal="timeout" from="MainCookie/Timer" to="MainCookie/Timer" method="_on_timeout"]

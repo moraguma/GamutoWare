@@ -1,0 +1,29 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://comie45xtpqxw"]
+
+[ext_resource type="FontFile" uid="uid://dwlo6t5wpsswm" path="res://microjogos/2025S1/Cookies/recursos/fonts/Equiva.ttf" id="1_tc1re"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tc1re"]
+bg_color = Color(0, 100, 100, 0.8)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(8.18223e-07, 0.422515, 0.513665, 1)
+border_blend = true
+corner_radius_top_left = 30
+corner_radius_top_right = 15
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 15
+expand_margin_right = 10.0
+shadow_color = Color(0.290335, 0.595314, 0.864423, 0.6)
+shadow_offset = Vector2(10, 10)
+
+[resource]
+Label/font_sizes/font_size = 50
+Label/fonts/font = ExtResource("1_tc1re")
+MarginContainer/constants/margin_bottom = 10
+MarginContainer/constants/margin_left = 20
+MarginContainer/constants/margin_right = 20
+MarginContainer/constants/margin_top = 10
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_tc1re")
+VBoxContainer/constants/separation = 3

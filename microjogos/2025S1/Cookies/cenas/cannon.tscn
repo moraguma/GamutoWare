@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://custh7oqim0sq" path="res://microjogos/2025S1/Cookies/cenas/scripts/turret.gd" id="1_3cvq0"]
 [ext_resource type="PackedScene" uid="uid://cp1xbchiwyprn" path="res://microjogos/2025S1/Cookies/cenas/cannon_bullet.tscn" id="2_3cvq0"]
 [ext_resource type="Texture2D" uid="uid://blk7td4h1iqai" path="res://microjogos/2025S1/Cookies/recursos/imagens/turrets/turret_02_mk1.png" id="3_3cvq0"]
-[ext_resource type="Shader" uid="uid://qeh5h1c7ld6l" path="res://microjogos/2025S1/Cookies/recursos/hit.tres" id="3_cpdhp"]
+[ext_resource type="Shader" uid="uid://qeh5h1c7ld6l" path="res://microjogos/2025S1/Cookies/recursos/shaders/hit.tres" id="3_cpdhp"]
+
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_23q8m"]
 radius = 67.0075

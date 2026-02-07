@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf84ffudbmww5"
-path="res://.godot/imported/turret.png-1ad6435a24d18c632b4e8bd024c05372.ctex"
+uid="uid://53ixq7myuojr"
+path="res://.godot/imported/cannon.png-e24045c47cfeca3760efc28066ac2eeb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/Cookies/recursos/imagens/turret.png"
-dest_files=["res://.godot/imported/turret.png-1ad6435a24d18c632b4e8bd024c05372.ctex"]
+source_file="res://microjogos/2025S1/Cookies/recursos/imagens/turrets/cannon.png"
+dest_files=["res://.godot/imported/cannon.png-e24045c47cfeca3760efc28066ac2eeb.ctex"]
 
 [params]
 

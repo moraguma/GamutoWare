@@ -1,0 +1,15 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bbnk5ixj5a0a3"]
+
+[ext_resource type="FontFile" uid="uid://dwlo6t5wpsswm" path="res://microjogos/2025S1/Cookies/recursos/fonts/Equiva.ttf" id="1_x1iuy"]
+[ext_resource type="StyleBox" uid="uid://gkmoklkbiema" path="res://microjogos/2025S1/Cookies/recursos/shaders/disabled.tres" id="2_x1iuy"]
+
+[resource]
+Label/font_sizes/font_size = 50
+Label/fonts/font = ExtResource("1_x1iuy")
+MarginContainer/constants/margin_bottom = 10
+MarginContainer/constants/margin_left = 20
+MarginContainer/constants/margin_right = 20
+MarginContainer/constants/margin_top = 10
+PanelContainer/styles/enabled = null
+PanelContainer/styles/panel = ExtResource("2_x1iuy")
+VBoxContainer/constants/separation = 3
