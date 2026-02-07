@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://xurr7e0glgtg"]
 
-[ext_resource type="Texture2D" uid="uid://cp82h35txj5qh" path="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/Gamutobem.png" id="1_4vij4"]
+[ext_resource type="Texture2D" uid="uid://cp82h35txj5qh" path="res://microjogos/2025S1/changefast/recursos/imagens/Gamutobem.png" id="1_4vij4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8p11p"]
 

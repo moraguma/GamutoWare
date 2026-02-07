@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qcnxhl0pli2s"
-path="res://.godot/imported/BARRAESPAÇO.png-9a3873520c957faab5b0991767927b37.ctex"
+uid="uid://8kg8hof4pub2"
+path="res://.godot/imported/SetaBaixo.png-49bf26857377121ee0fbb729d1d477f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/BARRAESPAÇO.png"
-dest_files=["res://.godot/imported/BARRAESPAÇO.png-9a3873520c957faab5b0991767927b37.ctex"]
+source_file="res://microjogos/2025S1/changefast/recursos/imagens/SetaBaixo.png"
+dest_files=["res://.godot/imported/SetaBaixo.png-49bf26857377121ee0fbb729d1d477f5.ctex"]
 
 [params]
 

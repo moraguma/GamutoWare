@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp82h35txj5qh"
-path="res://.godot/imported/Gamutobem.png-9831eaf97c6fe040223a321b747b9762.ctex"
+uid="uid://b71exebt775fc"
+path="res://.godot/imported/FRAME_comp.png-3613aab39f9cd02f93c0355672632ba8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/Gamutobem.png"
-dest_files=["res://.godot/imported/Gamutobem.png-9831eaf97c6fe040223a321b747b9762.ctex"]
+source_file="res://microjogos/2025S1/changefast/recursos/imagens/FRAME_comp.png"
+dest_files=["res://.godot/imported/FRAME_comp.png-3613aab39f9cd02f93c0355672632ba8.ctex"]
 
 [params]
 

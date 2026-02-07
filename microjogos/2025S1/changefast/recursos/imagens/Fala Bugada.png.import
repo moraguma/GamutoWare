@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqmep1vli4n4l"
-path="res://.godot/imported/TELA 1.png-85451909892325ef1a8101da42f8dc3e.ctex"
+uid="uid://cseflm4peg8ad"
+path="res://.godot/imported/Fala Bugada.png-bc664ba1880cd6b5ad0bbaecf080b1e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/TELA 1.png"
-dest_files=["res://.godot/imported/TELA 1.png-85451909892325ef1a8101da42f8dc3e.ctex"]
+source_file="res://microjogos/2025S1/changefast/recursos/imagens/Fala Bugada.png"
+dest_files=["res://.godot/imported/Fala Bugada.png-bc664ba1880cd6b5ad0bbaecf080b1e6.ctex"]
 
 [params]
 

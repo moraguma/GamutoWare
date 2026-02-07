@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dti5doxwyjvnr"
-path="res://.godot/imported/GAMUTOMAL.png-4f0ec5d20f6c131d914e09ec302e7b68.ctex"
+path="res://.godot/imported/GAMUTOMAL.png-70bc72f1b4104d4a0f7702a79e76eeac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/GAMUTOMAL.png"
-dest_files=["res://.godot/imported/GAMUTOMAL.png-4f0ec5d20f6c131d914e09ec302e7b68.ctex"]
+source_file="res://microjogos/2025S1/changefast/recursos/imagens/GAMUTOMAL.png"
+dest_files=["res://.godot/imported/GAMUTOMAL.png-70bc72f1b4104d4a0f7702a79e76eeac.ctex"]
 
 [params]
 

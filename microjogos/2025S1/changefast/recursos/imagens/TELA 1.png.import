@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b71exebt775fc"
-path="res://.godot/imported/FRAME_comp.png-a702b852e1be714ce5ad18793a1b4d09.ctex"
+uid="uid://bqmep1vli4n4l"
+path="res://.godot/imported/TELA 1.png-32c590e73405569d93b6becd4904a480.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/FRAME_comp.png"
-dest_files=["res://.godot/imported/FRAME_comp.png-a702b852e1be714ce5ad18793a1b4d09.ctex"]
+source_file="res://microjogos/2025S1/changefast/recursos/imagens/TELA 1.png"
+dest_files=["res://.godot/imported/TELA 1.png-32c590e73405569d93b6becd4904a480.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dub2ipxbh0mow"]
 
-[ext_resource type="Script" uid="uid://bglwmsp5qhgjw" path="res://microjogos/2025S1/Meuprojeto1/cenas/GamutoMal.gd" id="1_1isyh"]
+[ext_resource type="Script" uid="uid://bglwmsp5qhgjw" path="res://microjogos/2025S1/changefast/cenas/GamutoMal.gd" id="1_1isyh"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_e3uo1"]
 load_path = "res://.godot/imported/Gamuto_Mal.png-ecb19213029da74ea56529ebea48a4a5.ctex"

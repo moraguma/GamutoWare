@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ba6jasoawmo17"
-path="res://.godot/imported/SetaCIMA(1).png-563c6b1fcbfbbfd1c85178c7d83b9367.ctex"
+uid="uid://chno41h1rduwh"
+path="res://.godot/imported/SetaDireita.png-ddb5cee8d99b7c53df1145a17f8200b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/SetaCIMA(1).png"
-dest_files=["res://.godot/imported/SetaCIMA(1).png-563c6b1fcbfbbfd1c85178c7d83b9367.ctex"]
+source_file="res://microjogos/2025S1/changefast/recursos/imagens/SetaDireita.png"
+dest_files=["res://.godot/imported/SetaDireita.png-ddb5cee8d99b7c53df1145a17f8200b9.ctex"]
 
 [params]
 

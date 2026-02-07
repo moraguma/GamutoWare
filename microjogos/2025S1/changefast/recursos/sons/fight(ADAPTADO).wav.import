@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cfuw623m28u65"
-path="res://.godot/imported/fight(ADAPTADO).wav-7fc331cf9a20058f7ad892f5bad2badf.sample"
+path="res://.godot/imported/fight(ADAPTADO).wav-83e572b787d8c3d5917a2eec6699ed41.sample"
 
 [deps]
 
-source_file="res://microjogos/2025S1/Meuprojeto1/recursos/sons/fight(ADAPTADO).wav"
-dest_files=["res://.godot/imported/fight(ADAPTADO).wav-7fc331cf9a20058f7ad892f5bad2badf.sample"]
+source_file="res://microjogos/2025S1/changefast/recursos/sons/fight(ADAPTADO).wav"
+dest_files=["res://.godot/imported/fight(ADAPTADO).wav-83e572b787d8c3d5917a2eec6699ed41.sample"]
 
 [params]
 

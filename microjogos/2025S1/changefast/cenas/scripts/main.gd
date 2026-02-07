@@ -37,11 +37,7 @@ var score=0
 func _ready():
 	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("CHANGE YOUR PASSWORD!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("MUDE SUA SENHA!")
+	
 	#RANDOMIZAR A LISTA DE COISAS
 	var lista_al = lista_coisas.duplicate()
 	lista_al.shuffle()

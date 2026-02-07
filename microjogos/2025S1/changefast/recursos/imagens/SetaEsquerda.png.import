@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2sy4tbfhbwuw"
-path="res://.godot/imported/CAPAGAMUTO.png-c46878e20f006b94fb3e1808a8b059af.ctex"
+uid="uid://ddl2jxpnass2v"
+path="res://.godot/imported/SetaEsquerda.png-05ca06707076dfce8259bb2f6bce9dda.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/CAPAGAMUTO.png"
-dest_files=["res://.godot/imported/CAPAGAMUTO.png-c46878e20f006b94fb3e1808a8b059af.ctex"]
+source_file="res://microjogos/2025S1/changefast/recursos/imagens/SetaEsquerda.png"
+dest_files=["res://.godot/imported/SetaEsquerda.png-05ca06707076dfce8259bb2f6bce9dda.ctex"]
 
 [params]
 

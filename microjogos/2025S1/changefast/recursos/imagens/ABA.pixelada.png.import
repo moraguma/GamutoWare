@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://blg3dh5yw5w6h"
-path="res://.godot/imported/ABA.pixelada.png-1a5e0a00fb26b630b6863300cdc1bfb6.ctex"
+path="res://.godot/imported/ABA.pixelada.png-91b9ca1f2183b755986f92e42a13431c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/ABA.pixelada.png"
-dest_files=["res://.godot/imported/ABA.pixelada.png-1a5e0a00fb26b630b6863300cdc1bfb6.ctex"]
+source_file="res://microjogos/2025S1/changefast/recursos/imagens/ABA.pixelada.png"
+dest_files=["res://.godot/imported/ABA.pixelada.png-91b9ca1f2183b755986f92e42a13431c.ctex"]
 
 [params]
 

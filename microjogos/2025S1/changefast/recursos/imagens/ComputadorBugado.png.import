@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddl2jxpnass2v"
-path="res://.godot/imported/SetaEsquerda.png-a39804fd199fa293d6b7aa0c7b19d02a.ctex"
+uid="uid://baooqadmyxqhk"
+path="res://.godot/imported/ComputadorBugado.png-af6ca172b490ae4d5bca36e8e53d90cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/SetaEsquerda.png"
-dest_files=["res://.godot/imported/SetaEsquerda.png-a39804fd199fa293d6b7aa0c7b19d02a.ctex"]
+source_file="res://microjogos/2025S1/changefast/recursos/imagens/ComputadorBugado.png"
+dest_files=["res://.godot/imported/ComputadorBugado.png-af6ca172b490ae4d5bca36e8e53d90cc.ctex"]
 
 [params]
 
