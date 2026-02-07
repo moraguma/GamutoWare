@@ -23,7 +23,7 @@ Camera sound: https://opengameart.org/content/camera
 Cave music: https://opengameart.org/content/mysterious-ambience-song21
 
 "
-start_message_pt = &"FAÇA ALGO!"
-start_message_en = &"DO SOMETHING!"
+start_message_pt = &"TIRE UMAS FOTOS!"
+start_message_en = &"SNAP SOME PICS!"
 main_scene = ExtResource("2_rp2en")
 difficulty = 0

@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 # Caso não dê para ganhar, aumentar a velocidade?
-@export var speed : int = 500
+@export var speed : int = 1000
 @onready var timer : Timer = $timers/snap_timer
 @onready var flashSound : AudioStreamPlayer = $flashSound
 
@@ -19,7 +19,7 @@ func _physics_process(_delta) -> void:
 # Pega o input do jogador para movimentação
 func get_input() -> void:
 	var input_direction : Vector2 = Input.get_vector("esquerda", "direita", "cima", "baixo")
-	velocity = input_direction * speed
+	velocity = input_direction * speed * 2
 
 # Pega o input do jogador para a ação de tirar foto 
 func get_action() -> void:

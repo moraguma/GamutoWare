@@ -27,12 +27,6 @@ var snapped_gamutos : int = 0
 func _ready():
 	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
 	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("SNAP SOME PICS!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("TIRE UMAS FOTOS!")
-	
 	$mainMusic.play()
 	# Chama a função para escolher os 2 pontos de spawn
 	get_spawn_points()
