@@ -40,13 +40,6 @@ func _ready():
 	p_posi_inic = peixe.position
 	p_posi_max = max_peixe.position
 	p_posi_now = p_posi_max
-	
-	match Global.language:
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("APERTE ESPAÇO")
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("PRESS SPACE")
-	
 	randomize()
 
 		
@@ -72,21 +65,8 @@ func _on_peixe_area_entered(area: Area2D) -> void:
 	emit_signal("win")
 	anim_vara.play("puxando")
 	anim_vara.position.y -= 180
-	
-	match Global.language:
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("!")
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("!")
 
 func _on_peixe_area_exited(area: Area2D) -> void:
 	emit_signal("lose")
 	anim_vara.play("default")
 	anim_vara.position = v_posi_inic
-	
-	match Global.language:
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("X")
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("X")
-			

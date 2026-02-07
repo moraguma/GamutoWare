@@ -14,7 +14,7 @@ GameLab FACAMP (@gamelab_facamp)
 "
 credits_en = "Art and programming by Yhago Tomasini (@yhago14.0)
 GameLab FACAMP (@gamelab_facamp)"
-start_message_pt = &"Precione espaço e faça o anzol seguir o peixe para pega-lo!!!"
-start_message_en = &"Press space and follow the fish to catch it!!!"
+start_message_pt = &"APERTE ESPAÇO"
+start_message_en = &"PRESS SPACE"
 main_scene = ExtResource("1_pyl06")
 difficulty = 3
