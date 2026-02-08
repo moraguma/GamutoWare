@@ -69,3 +69,7 @@ func register_win():
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
 	emit_signal("lose")
+
+
+func _on_sun_body_entered(body: Node2D) -> void:
+	register_win()

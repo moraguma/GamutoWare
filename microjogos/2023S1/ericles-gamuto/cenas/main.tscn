@@ -1,83 +1,222 @@
-[gd_scene load_steps=16 format=3 uid="uid://dpkarb7ui7eji"]
+[gd_scene load_steps=24 format=3 uid="uid://dpkarb7ui7eji"]
 
-[ext_resource type="Script" path="res://microjogos/2023S1/seu_projeto/cenas/scripts/main.gd" id="1"]
+[ext_resource type="Script" uid="uid://bvxyk0wmtkko3" path="res://microjogos/2023S1/ericles-gamuto/cenas/scripts/main.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://dxfoim36x58rc" path="res://microjogos/2023S1/ericles-gamuto/recursos/little-sun.png" id="2_61ei3"]
 [ext_resource type="Texture2D" uid="uid://dx7xeexi44c2" path="res://microjogos/2023S1/ericles-gamuto/recursos/little-mercury.png" id="3_wd8ly"]
-[ext_resource type="Script" path="res://microjogos/2023S1/ericles-gamuto/cenas/Little-mercury.gd" id="4_xpb66"]
+[ext_resource type="Script" uid="uid://bejmijbcbcixu" path="res://microjogos/2023S1/ericles-gamuto/cenas/scripts/orbit.gd" id="4_xpb66"]
 [ext_resource type="Texture2D" uid="uid://dvh5oocn1a3f6" path="res://microjogos/2023S1/ericles-gamuto/recursos/little-venus.png" id="5_f5phc"]
 [ext_resource type="Texture2D" uid="uid://da4n5l0y42wl4" path="res://microjogos/2023S1/ericles-gamuto/recursos/little-earth.png" id="6_4twkr"]
-[ext_resource type="Script" path="res://microjogos/2023S1/ericles-gamuto/cenas/Little-venus.gd" id="6_a3rle"]
 [ext_resource type="Texture2D" uid="uid://rudhj6g4ifnp" path="res://microjogos/2023S1/ericles-gamuto/recursos/little-mars.png" id="7_i3hv4"]
 [ext_resource type="Texture2D" uid="uid://cy168cggojj88" path="res://microjogos/2023S1/ericles-gamuto/recursos/little-jupiter.png" id="8_8dyrt"]
-[ext_resource type="Script" path="res://microjogos/2023S1/ericles-gamuto/cenas/Little-earth.gd" id="8_b50rq"]
 [ext_resource type="Texture2D" uid="uid://dnivuxcaownvp" path="res://microjogos/2023S1/ericles-gamuto/recursos/little-saturn.png" id="9_p6rtf"]
 [ext_resource type="Texture2D" uid="uid://dxek4667pguq3" path="res://microjogos/2023S1/ericles-gamuto/recursos/little-uranus.png" id="10_f7lvc"]
 [ext_resource type="Texture2D" uid="uid://b7hys545wqsrd" path="res://microjogos/2023S1/ericles-gamuto/recursos/little-neptune.png" id="11_c7cn7"]
 [ext_resource type="Texture2D" uid="uid://blewbek5hsaac" path="res://microjogos/2023S1/ericles-gamuto/recursos/little-pluto.png" id="12_sc543"]
-[ext_resource type="Texture2D" uid="uid://cqheowfxy606b" path="res://microjogos/2023S1/ericles-gamuto/recursos/nave-norm.png" id="13_mksyi"]
+[ext_resource type="PackedScene" uid="uid://du2dn5p2kg6oy" path="res://microjogos/2023S1/ericles-gamuto/cenas/nave.tscn" id="13_grs78"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_grs78"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_grs78"]
+radius = 18.527
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_snfcl"]
+radius = 15.667
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qqrra"]
+radius = 22.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_agi5j"]
+radius = 67.6195
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8508k"]
+radius = 48.0104
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wp5ky"]
+radius = 20.3919
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3v5r8"]
+radius = 27.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mayw5"]
+radius = 16.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gx7im"]
+radius = 121.264
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1")
 
-[node name="Camera3D" type="Camera2D" parent="."]
-anchor_mode = 0
+[node name="Nave" parent="." instance=ExtResource("13_grs78")]
+position = Vector2(1800, 1000)
+rotation = -0.507891
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Mercury" type="RigidBody2D" parent="." node_paths=PackedStringArray("sun")]
+position = Vector2(554.5, 360)
+physics_material_override = SubResource("PhysicsMaterial_grs78")
+gravity_scale = 0.0
+script = ExtResource("4_xpb66")
+sun = NodePath("../Sun")
+angular_speed_self = 12.4
+angular_speed_external = 8.27
 
-[node name="Little-mercury" type="Sprite2D" parent="."]
-position = Vector2(554.5, 421.885)
+[node name="Little-mercury" type="Sprite2D" parent="Mercury"]
 scale = Vector2(0.0716668, 0.0716668)
 texture = ExtResource("3_wd8ly")
-script = ExtResource("4_xpb66")
 
-[node name="Little-venus" type="Sprite2D" parent="."]
-position = Vector2(670.365, 425.562)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mercury"]
+shape = SubResource("CircleShape2D_grs78")
+
+[node name="Venus" type="RigidBody2D" parent="." node_paths=PackedStringArray("sun")]
+position = Vector2(670.365, 360)
+physics_material_override = SubResource("PhysicsMaterial_grs78")
+gravity_scale = 0.0
+script = ExtResource("4_xpb66")
+sun = NodePath("../Sun")
+angular_speed_self = -2.99
+angular_speed_external = 3.24
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Venus"]
+shape = SubResource("CircleShape2D_snfcl")
+
+[node name="Little-venus" type="Sprite2D" parent="Venus"]
+position = Vector2(-1.36499, 1)
 scale = Vector2(0.0705321, 0.0705321)
 texture = ExtResource("5_f5phc")
-script = ExtResource("6_a3rle")
 
-[node name="Little-earth" type="Sprite2D" parent="."]
-position = Vector2(776, 432)
+[node name="Earth" type="RigidBody2D" parent="." node_paths=PackedStringArray("sun")]
+position = Vector2(776, 360)
+physics_material_override = SubResource("PhysicsMaterial_grs78")
+gravity_scale = 0.0
+script = ExtResource("4_xpb66")
+sun = NodePath("../Sun")
+angular_speed_self = 7.29
+angular_speed_external = 1.99
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Earth"]
+shape = SubResource("CircleShape2D_grs78")
+
+[node name="Little-earth" type="Sprite2D" parent="Earth"]
+position = Vector2(-1, -1)
 scale = Vector2(0.0675835, 0.0675835)
 texture = ExtResource("6_4twkr")
-script = ExtResource("8_b50rq")
 
-[node name="Little-mars" type="Sprite2D" parent="."]
-position = Vector2(928, 424)
+[node name="Mars" type="RigidBody2D" parent="." node_paths=PackedStringArray("sun")]
+position = Vector2(928, 360)
+physics_material_override = SubResource("PhysicsMaterial_grs78")
+gravity_scale = 0.0
+script = ExtResource("4_xpb66")
+sun = NodePath("../Sun")
+angular_speed_self = 7.09
+angular_speed_external = 1.06
+
+[node name="Little-mars" type="Sprite2D" parent="Mars"]
 scale = Vector2(0.089238, 0.089238)
 texture = ExtResource("7_i3hv4")
 
-[node name="Little-jupiter" type="Sprite2D" parent="."]
-position = Vector2(1156.41, 430.875)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mars"]
+shape = SubResource("CircleShape2D_qqrra")
+
+[node name="Jupiter" type="RigidBody2D" parent="." node_paths=PackedStringArray("sun")]
+position = Vector2(1156.41, 360)
+physics_material_override = SubResource("PhysicsMaterial_grs78")
+gravity_scale = 0.0
+script = ExtResource("4_xpb66")
+sun = NodePath("../Sun")
+angular_speed_self = 1.76
+angular_speed_external = 0.167
+
+[node name="Little-jupiter" type="Sprite2D" parent="Jupiter"]
+position = Vector2(-9.41003, -1)
 scale = Vector2(0.262066, 0.262066)
 texture = ExtResource("8_8dyrt")
 
-[node name="Little-saturn" type="Sprite2D" parent="."]
-position = Vector2(1440, 456)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jupiter"]
+shape = SubResource("CircleShape2D_agi5j")
+
+[node name="Saturn" type="RigidBody2D" parent="." node_paths=PackedStringArray("sun")]
+position = Vector2(1440, 360)
+physics_material_override = SubResource("PhysicsMaterial_grs78")
+gravity_scale = 0.0
+script = ExtResource("4_xpb66")
+sun = NodePath("../Sun")
+angular_speed_self = 1.64
+angular_speed_external = 0.067
+
+[node name="Little-saturn" type="Sprite2D" parent="Saturn"]
+position = Vector2(-10, 1)
 scale = Vector2(0.197727, 0.197727)
 texture = ExtResource("9_p6rtf")
 
-[node name="Little-uranus" type="Sprite2D" parent="."]
-position = Vector2(1647.83, 475.75)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Saturn"]
+shape = SubResource("CircleShape2D_8508k")
+
+[node name="Uranus" type="RigidBody2D" parent="." node_paths=PackedStringArray("sun")]
+position = Vector2(1647.83, 360)
+physics_material_override = SubResource("PhysicsMaterial_grs78")
+gravity_scale = 0.0
+script = ExtResource("4_xpb66")
+sun = NodePath("../Sun")
+angular_speed_self = -1.01
+angular_speed_external = 0.024
+
+[node name="Little-uranus" type="Sprite2D" parent="Uranus"]
 scale = Vector2(0.0915841, 0.0915841)
 texture = ExtResource("10_f7lvc")
 
-[node name="Little-neptune" type="Sprite2D" parent="."]
-position = Vector2(1800, 504)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Uranus"]
+shape = SubResource("CircleShape2D_wp5ky")
+
+[node name="Neptune" type="RigidBody2D" parent="." node_paths=PackedStringArray("sun")]
+position = Vector2(1800, 360)
+physics_material_override = SubResource("PhysicsMaterial_grs78")
+gravity_scale = 0.0
+script = ExtResource("4_xpb66")
+sun = NodePath("../Sun")
+angular_speed_self = 1.08
+angular_speed_external = 0.012
+
+[node name="Little-neptune" type="Sprite2D" parent="Neptune"]
+position = Vector2(-4, 0)
 scale = Vector2(0.103715, 0.103715)
 texture = ExtResource("11_c7cn7")
 
-[node name="Little-pluto" type="Sprite2D" parent="."]
-position = Vector2(1976, 496)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neptune"]
+shape = SubResource("CircleShape2D_3v5r8")
+
+[node name="Pluto" type="RigidBody2D" parent="." node_paths=PackedStringArray("sun")]
+position = Vector2(1976, 360)
+physics_material_override = SubResource("PhysicsMaterial_grs78")
+gravity_scale = 0.0
+script = ExtResource("4_xpb66")
+sun = NodePath("../Sun")
+angular_speed_self = 1.14
+angular_speed_external = 0.008
+
+[node name="Little-pluto" type="Sprite2D" parent="Pluto"]
+position = Vector2(-1, 2)
 scale = Vector2(0.061382, 0.061382)
 texture = ExtResource("12_sc543")
 
-[node name="Nave-norm" type="Sprite2D" parent="."]
-position = Vector2(1912, 1072)
-rotation = -0.958186
-texture = ExtResource("13_mksyi")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pluto"]
+shape = SubResource("CircleShape2D_mayw5")
 
-[node name="Little-sun" type="Sprite2D" parent="."]
+[node name="Sun" type="Area2D" parent="."]
 position = Vector2(320, 360)
+
+[node name="Little-sun" type="Sprite2D" parent="Sun"]
 scale = Vector2(0.45202, 0.45202)
 texture = ExtResource("2_61ei3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sun"]
+shape = SubResource("CircleShape2D_gx7im")
+
+[connection signal="body_entered" from="Mercury" to="Nave" method="colide"]
+[connection signal="body_entered" from="Venus" to="Nave" method="colide"]
+[connection signal="body_entered" from="Earth" to="Nave" method="colide"]
+[connection signal="body_entered" from="Mars" to="Nave" method="colide"]
+[connection signal="body_entered" from="Jupiter" to="Nave" method="colide"]
+[connection signal="body_entered" from="Saturn" to="Nave" method="colide"]
+[connection signal="body_entered" from="Uranus" to="Nave" method="colide"]
+[connection signal="body_entered" from="Neptune" to="Nave" method="colide"]
+[connection signal="body_entered" from="Pluto" to="Nave" method="colide"]
+[connection signal="body_entered" from="Sun" to="." method="_on_sun_body_entered"]

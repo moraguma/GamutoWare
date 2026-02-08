@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://du2dn5p2kg6oy"]
+
+[ext_resource type="Script" uid="uid://c13f31x5raw1p" path="res://microjogos/2023S1/ericles-gamuto/cenas/scripts/nave.gd" id="1_hbbck"]
+[ext_resource type="Texture2D" uid="uid://cqheowfxy606b" path="res://microjogos/2023S1/ericles-gamuto/recursos/nave-norm.png" id="2_rg7q1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hbbck"]
+height = 98.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rg7q1"]
+radius = 19.0
+height = 72.0
+
+[node name="Nave" type="CharacterBody2D"]
+script = ExtResource("1_hbbck")
+
+[node name="Nave-norm" type="Sprite2D" parent="."]
+texture_filter = 3
+texture = ExtResource("2_rg7q1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_hbbck")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, 20)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_rg7q1")
