@@ -10,45 +10,6 @@ signal lose
 # 16:9
 const WIDTH = 1920
 const HEIGHT = 1080
-@onready var bola = $"../bola"
-# --------------------------------------------------------------------------------------------------
-# FUNÇÕES PADRÃO
-# --------------------------------------------------------------------------------------------------
-
-# Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
-func _ready():
-	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
-	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("MAKE THE GOAL!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FACA O GOL!")
-
-
-# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
-# a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
-# a última chamada desta função. O comando pass não faz nada
-func _physics_process(delta):
-	pass
-
-
-# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a renderização, 
-# como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
-# desde a última chamada desta função. O comando pass não faz nada
-func _process(delta):
-	pass
-
-
-# --------------------------------------------------------------------------------------------------
-# SUAS FUNÇÕES
-# --------------------------------------------------------------------------------------------------
-
-
-# Um método genérico. Crie quantos métodos você precisar!
-func my_method():
-	pass
-
 
 # --------------------------------------------------------------------------------------------------
 # CONDIÇÕES DE VITÓRIA
@@ -62,12 +23,7 @@ func my_method():
 
 # Chame esta função para registrar que o jogador venceu o jogo
 func register_win():
-	if bola.acertou == true:
-		match Global.language:
-			Global.LANGUAGE.EN:
-				NotificationCenter.notify("GOLLLLLLLLLLLLLLLL!")
-		
-		emit_signal("win")
+	emit_signal("win")
 
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():

@@ -1,45 +1,31 @@
-extends Area2D
+extends CharacterBody2D
 
 @onready var mira = $"../mira"
-#@onready var alvo = $"../alvo"
 var chegouMira = false;
 var comecouMov = false;
-#var target = mira.position;
-
-#var positionXDif = mira.position.x - position.x;
-#var positionYDif = mira.position.y - position.y;
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-	
+var atingiu_alvo = false;
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_pressed("ui_select"):
+	if Input.is_action_pressed("acao"):
 		comecouMov = true
 		$AnimationPlayer.play("chutei")
 		
-	if chegouMira == false && comecouMov == true:
-				position = position.move_toward(mira.position, delta*3000)
-				if(position == mira.position):
-					chegouMira = true;
+	if comecouMov == true:
+		position = lerp(position, mira.position, 0.3)
 	
-	if chegouMira == true:
-		$Spritebola.hide()
-	
-	pass
+		
+func _atingiu_alvo(body: Node2D) -> void:
+	atingiu_alvo = true
 
-	
-
-func _on_area_entered(area):
-	
-	var acertou = false;
-	#if area.name == "gol":
-	if area.name == "alvo":
-		#print("entrou alvo")
-		#if saber:
-		acertou = true
-		print("ganho")
-		$Spritebola.hide()
-	pass # Replace with function body.
+func _chute_finalizado(anim_name: StringName) -> void:
+	if atingiu_alvo:
+		$"../NotificationCenter".notify("GOLLLLLLLLLLLLLLLL!")
+		get_parent().register_win()
+	else:
+		match Global.language:
+			Global.LANGUAGE.EN:
+				$"../NotificationCenter".notify("MISS!")
+			Global.LANGUAGE.PT:
+				$"../NotificationCenter".notify("ERRROU!")
+		get_parent().register_lose()
