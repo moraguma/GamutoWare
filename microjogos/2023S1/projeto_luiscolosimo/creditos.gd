@@ -15,9 +15,14 @@ var credits_pt = """
 Criado por: Luís Felipe Colosimo
 
 GitHub: https://github.com/luisfelipecolosimo
+
+Background: https://hello-tazzina.itch.io/green-woods
 """
 var credits_en = """
 Made by: Luís Felipe Colosimo
 
 GitHub: https://github.com/luisfelipecolosimo
+
+Background: https://hello-tazzina.itch.io/green-woods
+
 """

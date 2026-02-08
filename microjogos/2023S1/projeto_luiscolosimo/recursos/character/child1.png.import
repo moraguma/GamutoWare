@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blvcpbo3lcq82"
-path="res://.godot/imported/dancer_sprite.png-3cc660422c8a2a3ebd301993fbcc7872.ctex"
+uid="uid://cpmtgkkxxq46d"
+path="res://.godot/imported/child1.png-f031aa90655ffa32ae7e8d01f4c0c0e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2023S1/projeto_luiscolosimo/recursos/kobeni/dancer_sprite.png"
-dest_files=["res://.godot/imported/dancer_sprite.png-3cc660422c8a2a3ebd301993fbcc7872.ctex"]
+source_file="res://microjogos/2023S1/projeto_luiscolosimo/recursos/character/child1.png"
+dest_files=["res://.godot/imported/child1.png-f031aa90655ffa32ae7e8d01f4c0c0e9.ctex"]
 
 [params]
 

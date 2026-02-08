@@ -1,4 +1,4 @@
-extends Sprite2D
+extends Area2D
 
 var dentro = false
 @onready var possis = [$"../locais/loc1",$"../locais/loc2",$"../locais/loc3"]
@@ -8,19 +8,15 @@ func _ready():
 	random.randomize()
 	var local = (randi()%3)
 	self.set_position(possis[local].position)
-	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
-func _on_area_2d_area_entered(area):
+func _on_cursor_entered(body: Node2D) -> void:
 	dentro = true
-	pass # Replace with function body.
 
-
-func _on_area_2d_area_exited(area):
+func _on_cursor_exited(body: Node2D) -> void:
 	dentro = false
-	pass # Replace with function body.
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("acao") and dentro:
+		$"Hide".hide()
+		$"Show".show()
+		get_parent().register_win()
