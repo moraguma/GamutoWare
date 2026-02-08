@@ -1,7 +1,7 @@
 [gd_scene load_steps=35 format=3 uid="uid://b5ls0yyhxkuku"]
 
-[ext_resource type="Script" uid="uid://vcjj61wb77ku" path="res://microjogos/2025S1/projeto_pedrovmc/cenas/enemy.gd" id="1_75ykk"]
-[ext_resource type="Texture2D" uid="uid://bhkgld38nh6j" path="res://microjogos/2025S1/projeto_pedrovmc/recursos/Tiny Swords (Update 010)/Factions/Knights/Troops/Archer/Purple/Archer_Purlple.png" id="1_pqfxj"]
+[ext_resource type="Script" uid="uid://vcjj61wb77ku" path="res://microjogos/2025S1/projeto_pedrovmc/cenas/scripts/enemy.gd" id="1_75ykk"]
+[ext_resource type="Texture2D" uid="uid://bhkgld38nh6j" path="res://microjogos/2025S1/projeto_pedrovmc/recursos/imagens/Factions/Knights/Troops/Archer/Purple/Archer_Purlple.png" id="1_pqfxj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d7skp"]
 atlas = ExtResource("1_pqfxj")
@@ -245,9 +245,7 @@ script = ExtResource("1_75ykk")
 
 [node name="EnemyAnimation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_lk7fy")
-animation = &"shoot"
-frame = 7
-frame_progress = 1.0
+animation = &"shoot_down"
 
 [node name="EnemyCollision" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 5)

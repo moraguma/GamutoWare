@@ -15,7 +15,7 @@ https://pixelfrog-assets.itch.io/tiny-swords"
 credits_en = "Game crédits
 Tinny Swords:
 https://pixelfrog-assets.itch.io/tiny-swords"
-start_message_pt = &"FAÇA ALGO!"
-start_message_en = &"DO SOMETHING!"
+start_message_pt = &"SE PROTEJA!!"
+start_message_en = &"PROTECT YOURSELF!!"
 main_scene = ExtResource("2_uio8r")
 difficulty = 0
