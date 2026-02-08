@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2aaj5xhf5mp2"
-path="res://.godot/imported/capa.png-3e841d0f22c887e47e13db1edfe6fd13.ctex"
+uid="uid://o4lpceqhlvq5"
+path="res://.godot/imported/door_open.png-59491291a779c77775b019160f55aaa1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2023S1/projeto-evandro-loyolla/capa.png"
-dest_files=["res://.godot/imported/capa.png-3e841d0f22c887e47e13db1edfe6fd13.ctex"]
+source_file="res://microjogos/2023S1/projeto-evandro-loyolla/recursos/kenney_desert-shooter-pack_1.0/Tiles/door_open.png"
+dest_files=["res://.godot/imported/door_open.png-59491291a779c77775b019160f55aaa1.ctex"]
 
 [params]
 

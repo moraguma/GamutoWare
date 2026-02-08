@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://5tg8ohusxkbq"]
+
+[ext_resource type="Texture2D" uid="uid://caeyvonnh4g54" path="res://microjogos/2023S1/projeto-evandro-loyolla/recursos/kenney_desert-shooter-pack_1.0/Tiles/door_close.png" id="1_q6aph"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fjflr"]
+size = Vector2(32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xbboa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_q6aph")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Door" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_fjflr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 3
+position = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_xbboa")
+autoplay = "default"

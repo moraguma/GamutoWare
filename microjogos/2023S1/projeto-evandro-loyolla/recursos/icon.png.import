@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2aaj5xhf5mp2"
-path="res://.godot/imported/capa.png-3e841d0f22c887e47e13db1edfe6fd13.ctex"
+uid="uid://fway453iu7l2"
+path="res://.godot/imported/icon.png-172d1ccff80876d363adf9bb1eeab0b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2023S1/projeto-evandro-loyolla/capa.png"
-dest_files=["res://.godot/imported/capa.png-3e841d0f22c887e47e13db1edfe6fd13.ctex"]
+source_file="res://microjogos/2023S1/projeto-evandro-loyolla/recursos/icon.png"
+dest_files=["res://.godot/imported/icon.png-172d1ccff80876d363adf9bb1eeab0b3.ctex"]
 
 [params]
 
