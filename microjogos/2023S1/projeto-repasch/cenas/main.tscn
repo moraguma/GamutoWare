@@ -1,0 +1,85 @@
+[gd_scene load_steps=9 format=3 uid="uid://bnvrhxe5qgcom"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/seu_projeto/cenas/scripts/main.gd" id="1"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-repasch/cenas/CharacterBody2D.gd" id="2_yjs4a"]
+[ext_resource type="Texture2D" uid="uid://glqmvixic2tj" path="res://microjogos/2023S1/projeto-repasch/recursos/platito2.png" id="4_m73yk"]
+[ext_resource type="Texture2D" uid="uid://dvfo4fx8455lg" path="res://microjogos/2023S1/projeto-repasch/recursos/Zoom Background - Planetas no Espaço(2).png" id="5_5dlt1"]
+[ext_resource type="AudioStream" uid="uid://88mb3kh2kxt8" path="res://microjogos/2023S1/projeto-repasch/recursos/prato.wav" id="6_cvaty"]
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-repasch/cenas/spawn.gd" id="7_8y1mx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4gnyf"]
+radius = 140.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p2lsa"]
+size = Vector2(1920.57, 119.405)
+
+[node name="Main" type="Node2D"]
+rotation = 0.00103196
+script = ExtResource("1")
+
+[node name="Camera3D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+show_behind_parent = true
+z_index = -5
+position = Vector2(952.569, 551.018)
+scale = Vector2(1.51504, 1.555)
+texture = ExtResource("5_5dlt1")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(144.867, 839.851)
+script = ExtResource("2_yjs4a")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+scale = Vector2(8.038, 8.038)
+texture = ExtResource("4_m73yk")
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D/Sprite2D"]
+scale = Vector2(0.124409, 0.124409)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Sprite2D/Area2D"]
+position = Vector2(-16.0165, -15.9833)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("CircleShape2D_4gnyf")
+debug_color = Color(0.176471, 0.211765, 0.529412, 0.419608)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D"]
+visible = false
+scale = Vector2(0.8, 0.8)
+shape = SubResource("CircleShape2D_4gnyf")
+debug_color = Color(0.176471, 0.211765, 0.529412, 0.419608)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-71.7688, 224.074)
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_p2lsa")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(1992.35, 341.944)
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource("RectangleShape2D_p2lsa")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
+
+[node name="Marker2D" type="Node2D" parent="."]
+position = Vector2(871.859, -136.9)
+script = ExtResource("7_8y1mx")
+
+[node name="Timer" type="Timer" parent="Marker2D"]
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Marker2D"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_cvaty")
+autoplay = true
+
+[connection signal="area_entered" from="CharacterBody2D/Sprite2D/Area2D" to="CharacterBody2D" method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="Marker2D/Timer" to="Marker2D" method="_on_timer_timeout"]

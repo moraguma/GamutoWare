@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhipd001ykoxs"]
+
+[ext_resource type="Script" path="res://microjogos/2023S1/projeto-repasch/cenas/comida.gd" id="1_i4rde"]
+[ext_resource type="Texture2D" uid="uid://n7ksgbk7i2yh" path="res://microjogos/2023S1/projeto-repasch/recursos/batata.png" id="2_k6q3l"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xxofg"]
+radius = 64.0002
+
+[node name="RigidBody2D4" type="Node2D"]
+script = ExtResource("1_i4rde")
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(0.146648, 0.113797)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(6.43243, 10.2033)
+shape = SubResource("CircleShape2D_xxofg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(8, 0)
+scale = Vector2(0.146648, 0.113797)
+texture = ExtResource("2_k6q3l")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
