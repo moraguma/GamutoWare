@@ -1,6 +1,6 @@
-[gd_scene load_steps=73 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=72 format=3 uid="uid://bi0ahd7cv37i6"]
 
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto-de-gsscala/cenas/scripts/main.gd" id="1_j3v7d"]
+[ext_resource type="Script" uid="uid://dwbpnbbspybtt" path="res://microjogos/2024S1/projeto-de-gsscala/cenas/scripts/main.gd" id="1_j3v7d"]
 [ext_resource type="Texture2D" uid="uid://dd0iob5821vxf" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/keys/up.png" id="2_ckvnl"]
 [ext_resource type="Texture2D" uid="uid://b65q4dxkj03vq" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/keys/up/up.png" id="3_hv026"]
 [ext_resource type="Texture2D" uid="uid://cp1fhesqmneq2" path="res://microjogos/2024S1/projeto-de-gsscala/recursos/imagens/keys/down.png" id="3_uhrk5"]
@@ -248,8 +248,6 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_cc8qd"]
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_ownsv"]
 animations = [{
 "frames": [{
@@ -415,12 +413,13 @@ func _process(delta):
 "
 
 [node name="Main" type="Node2D"]
+texture_filter = 3
 script = ExtResource("1_j3v7d")
 
 [node name="arrow_up" type="AnimatedSprite2D" parent="."]
 top_level = true
 texture_filter = 1
-position = Vector2(986, 224)
+position = Vector2(960, 215)
 scale = Vector2(5.096, 5.009)
 sprite_frames = SubResource("SpriteFrames_6h02a")
 animation = &"true"
@@ -429,7 +428,7 @@ frame_progress = 0.66239
 [node name="arrow_down" type="AnimatedSprite2D" parent="."]
 top_level = true
 texture_filter = 1
-position = Vector2(985.824, 384.288)
+position = Vector2(960, 384.288)
 scale = Vector2(5.096, 5.009)
 sprite_frames = SubResource("SpriteFrames_nr5i6")
 animation = &"true"
@@ -438,7 +437,7 @@ frame_progress = 0.830153
 [node name="arrow_right" type="AnimatedSprite2D" parent="."]
 top_level = true
 texture_filter = 1
-position = Vector2(1148, 384)
+position = Vector2(1131, 384)
 scale = Vector2(5.096, 5.009)
 sprite_frames = SubResource("SpriteFrames_bprxa")
 animation = &"true"
@@ -447,7 +446,7 @@ frame_progress = 0.665525
 [node name="arrow_left" type="AnimatedSprite2D" parent="."]
 top_level = true
 texture_filter = 1
-position = Vector2(823, 384)
+position = Vector2(787, 384)
 scale = Vector2(5.096, 5.009)
 sprite_frames = SubResource("SpriteFrames_nojf0")
 animation = &"true"
@@ -456,30 +455,29 @@ frame_progress = 0.778236
 [node name="action" type="AnimatedSprite2D" parent="."]
 top_level = true
 texture_filter = 1
-position = Vector2(986, 573)
+position = Vector2(960, 573)
 scale = Vector2(5.096, 5.009)
 sprite_frames = SubResource("SpriteFrames_hwitg")
 animation = &"true"
 frame = 1
 frame_progress = 0.758318
 
-[node name="bird_1" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.995941, 1.00529)
-sprite_frames = SubResource("SpriteFrames_cc8qd")
-
 [node name="hero" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(167, 547)
+position = Vector2(282, 524)
 scale = Vector2(2.655, 2.655)
 sprite_frames = SubResource("SpriteFrames_ownsv")
-frame_progress = 0.357093
+autoplay = "default"
+frame = 1
+frame_progress = 0.319753
 
 [node name="boss" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(1661, 552)
 scale = Vector2(-6.62, 6.62)
 sprite_frames = SubResource("SpriteFrames_dgd6l")
-animation = &"death"
+animation = &"fly"
+autoplay = "fly"
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 script = SubResource("GDScript_bci5x")
@@ -487,83 +485,82 @@ script = SubResource("GDScript_bci5x")
 [node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground"]
 texture_filter = 1
 texture_repeat = 2
-position = Vector2(961, 542)
-motion_mirroring = Vector2(960, 0)
+motion_mirroring = Vector2(1920, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer7"]
 texture_filter = 1
 texture_repeat = 2
+position = Vector2(960, 540)
 texture = ExtResource("19_thm7k")
 
 [node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
 texture_filter = 1
 texture_repeat = 2
-position = Vector2(961, 542)
 motion_scale = Vector2(0.5, 0.5)
-motion_mirroring = Vector2(960, 0)
+motion_mirroring = Vector2(1920, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
-texture_filter = 1
 texture_repeat = 2
+position = Vector2(960, 540)
 texture = ExtResource("20_c3pod")
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
 texture_filter = 1
-position = Vector2(961, 542)
 motion_scale = Vector2(0.2, 0)
-motion_mirroring = Vector2(960, 0)
+motion_mirroring = Vector2(1920, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
 texture_filter = 1
 texture_repeat = 2
+position = Vector2(960, 540)
 texture = ExtResource("21_ef2lv")
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
 texture_filter = 1
 texture_repeat = 2
-position = Vector2(961, 542)
 motion_scale = Vector2(0.3, 0.3)
-motion_mirroring = Vector2(960, 0)
+motion_mirroring = Vector2(1920, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
 texture_filter = 1
 texture_repeat = 2
+position = Vector2(960, 540)
 texture = ExtResource("22_8tp8a")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
 texture_filter = 1
 texture_repeat = 2
-position = Vector2(961, 542)
 motion_scale = Vector2(2, 2)
-motion_mirroring = Vector2(960, 0)
+motion_mirroring = Vector2(1920, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
 texture_filter = 1
 texture_repeat = 2
+position = Vector2(960, 540)
 texture = ExtResource("23_k8bka")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
 texture_filter = 1
 texture_repeat = 2
-position = Vector2(961, 542)
 motion_scale = Vector2(2.27, 2.27)
-motion_mirroring = Vector2(960, 0)
+motion_mirroring = Vector2(1920, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
 texture_filter = 1
 texture_repeat = 2
+position = Vector2(960, 540)
 texture = ExtResource("24_syvtr")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 texture_filter = 1
 texture_repeat = 2
-position = Vector2(961, 542)
 motion_scale = Vector2(2.395, 2.395)
-motion_mirroring = Vector2(960, 0)
+motion_mirroring = Vector2(1920, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-texture_filter = 2
+texture_filter = 3
 texture_repeat = 2
+position = Vector2(960, 540)
 texture = ExtResource("25_3ibpu")
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]

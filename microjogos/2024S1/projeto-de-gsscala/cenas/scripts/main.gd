@@ -21,14 +21,6 @@ var dicionario = {
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("MATCH THE COMBOS!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("ACERTE OS COMBOS!")
-	$"hero".play("default")
-	$"boss".play("fly")
 	randomize()
 	combo_list.shuffle()
 	
@@ -54,7 +46,6 @@ func _process(delta):
 		#increase panning speed
 		if index > 7:
 			register_win()
-			NotificationCenter.notify("VC VENCEU!")
 			$AudioStreamPlayer3.play()
 			$"boss".play("death")
 			$"arrow_left".play("false")
