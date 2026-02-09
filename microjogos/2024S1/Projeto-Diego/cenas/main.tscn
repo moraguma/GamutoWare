@@ -1,0 +1,84 @@
+[gd_scene load_steps=11 format=3 uid="uid://dplmunnl623xg"]
+
+[ext_resource type="Script" uid="uid://dpt38tsyqoxwa" path="res://microjogos/2024S1/projeto-diego/cenas/scripts/main.gd" id="1_kf020"]
+[ext_resource type="PackedScene" uid="uid://bavqj5q7snaqs" path="res://microjogos/2024S1/projeto-diego/cenas/background.tscn" id="2_5ndas"]
+[ext_resource type="PackedScene" uid="uid://c3sl5fdttf5ub" path="res://microjogos/2024S1/projeto-diego/cenas/Player.tscn" id="3_pqtb5"]
+[ext_resource type="Script" uid="uid://w85tfmyjipkj" path="res://microjogos/2024S1/projeto-diego/cenas/scripts/move_cars.gd" id="4_fpi4u"]
+[ext_resource type="PackedScene" uid="uid://cb437rf6exyb5" path="res://microjogos/2024S1/projeto-diego/cenas/Carro.tscn" id="4_u5vt7"]
+[ext_resource type="PackedScene" uid="uid://cjfyn2wkfw6k" path="res://microjogos/2024S1/projeto-diego/cenas/placa.tscn" id="6_joro3"]
+[ext_resource type="Script" uid="uid://cah5h8jmqxm7a" path="res://microjogos/2024S1/projeto-diego/cenas/scripts/checkpoint.gd" id="7_7ktgi"]
+
+[sub_resource type="Curve2D" id="Curve2D_u5vt7"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 536, -100, 0, 0, 0, 0, 535, 422, -29.7654, -32.0785, 29.7654, 32.0785, 570, 507, 0, 0, 0, 0, 669, 539, 0, 0, 0, 0, 2500, 540)
+}
+point_count = 5
+
+[sub_resource type="Curve2D" id="Curve2D_fpi4u"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1306, -232, 0, 0, 0, 0, 1306, 884, 28.3029, -31.1611, -28.3029, 31.1611, 1278, 960, 0, 0, 0, 0, 1193, 999, 0, 0, 0, 0, -243, 997)
+}
+point_count = 5
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p26vu"]
+radius = 33.3766
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_kf020")
+
+[node name="Node2D" parent="." instance=ExtResource("2_5ndas")]
+
+[node name="Player" parent="." instance=ExtResource("3_pqtb5")]
+position = Vector2(1305, 539)
+
+[node name="Path2D" type="Path2D" parent="."]
+z_index = 2
+curve = SubResource("Curve2D_u5vt7")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(535.357, 235.571)
+rotation = 1.57271
+progress = 335.57
+loop = false
+script = ExtResource("4_fpi4u")
+
+[node name="Carro" parent="Path2D/PathFollow2D" node_paths=PackedStringArray("main") instance=ExtResource("4_u5vt7")]
+z_index = 2
+main = NodePath("../../..")
+
+[node name="Path2D2" type="Path2D" parent="."]
+z_index = 2
+curve = SubResource("Curve2D_fpi4u")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D2"]
+position = Vector2(1306, -232)
+rotation = 1.5708
+loop = false
+script = ExtResource("4_fpi4u")
+
+[node name="Carro" parent="Path2D2/PathFollow2D" node_paths=PackedStringArray("main") instance=ExtResource("4_u5vt7")]
+z_index = 2
+main = NodePath("../../..")
+
+[node name="Placa" parent="." instance=ExtResource("6_joro3")]
+position = Vector2(1306, 377)
+
+[node name="Placa2" parent="." instance=ExtResource("6_joro3")]
+position = Vector2(1132, 537)
+
+[node name="Checkpoint" type="Area2D" parent="."]
+position = Vector2(1642, 537)
+script = ExtResource("7_7ktgi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint"]
+shape = SubResource("CircleShape2D_p26vu")
+
+[node name="Checkpoint2" type="Area2D" parent="."]
+position = Vector2(1305, 795)
+script = ExtResource("7_7ktgi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint2"]
+shape = SubResource("CircleShape2D_p26vu")
+
+[connection signal="body_entered" from="Checkpoint" to="." method="_on_checkpoint_body_entered"]
+[connection signal="body_entered" from="Checkpoint2" to="." method="_on_checkpoint_body_entered"]
