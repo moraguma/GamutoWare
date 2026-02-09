@@ -74,11 +74,11 @@ class GitMergeManager:
         Args:
             branch: Name of the branch to create
             start_point: Starting point for the new branch
-            force: If True, discard local changes when switching
+            force: If True, delete existing branch and create new one
         """
+        if force and self.branch_exists(branch):
+            self.delete_branch(branch, force=True)
         cmd = ["switch", "-c", branch, start_point]
-        if force:
-            cmd.insert(1, "--force")
         self.run_git_check(cmd)
 
     def switch_branch(self, branch: str, force: bool = False) -> None:
