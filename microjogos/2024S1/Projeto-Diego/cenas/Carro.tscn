@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cb437rf6exyb5"]
+
+[ext_resource type="Script" path="res://Carro.gd" id="1_ww71i"]
+[ext_resource type="Texture2D" uid="uid://k55ahyv0ylig" path="res://microjogos/2024S1/Projeto-Diego/recursos/simple-travel-car-top_view.svg" id="2_nki7e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_esr1p"]
+size = Vector2(120, 464)
+
+[node name="Carro" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_ww71i")
+
+[node name="carro_sprite" type="Sprite2D" parent="."]
+position = Vector2(-7.62939e-06, 7.99998)
+rotation = 4.71239
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_nki7e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 0)
+shape = SubResource("RectangleShape2D_esr1p")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(0, 8)
+scale = Vector2(2.4, 9.6)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
