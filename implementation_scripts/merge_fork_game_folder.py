@@ -103,6 +103,12 @@ def merge_fork_game_folder(
         git.create_branch(temp_branch, "FETCH_HEAD", force=True)
         print("Temporary branch created.\n")
 
+        # Switch back to base branch before creating implementation branch
+        # This avoids conflicts with case-sensitive file duplicates
+        print(f"Switching back to base branch '{base_branch}'...")
+        git.switch_branch(base_branch)
+        print("Back on base branch.\n")
+
         # 5. Create the implementation branch from the base branch
         print(
             f"Creating implementation branch '{target_branch_name}' "
