@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbo4w7a2r7xv7"
-path="res://.godot/imported/palco2.png-2fb9812bc5936f2c3994854263a6619e.ctex"
+uid="uid://by2ykc65w1cmp"
+path="res://.godot/imported/estrela_particles.png-83722da3ffd4f52e098e1d6eeb3f306b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/palco2.png"
-dest_files=["res://.godot/imported/palco2.png-2fb9812bc5936f2c3994854263a6619e.ctex"]
+source_file="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/estrela_particles.png"
+dest_files=["res://.godot/imported/estrela_particles.png-83722da3ffd4f52e098e1d6eeb3f306b.ctex"]
 
 [params]
 

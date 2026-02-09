@@ -1,0 +1,92 @@
+[gd_scene load_steps=10 format=3 uid="uid://bxp45krk5k6wt"]
+
+[ext_resource type="Texture2D" uid="uid://crfged8ec65r8" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/Mafe1.png" id="2_725j0"]
+[ext_resource type="Texture2D" uid="uid://jrgo2dn0yqt1" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/Mafe2.png" id="3_vrv34"]
+[ext_resource type="Texture2D" uid="uid://cqnamyodphmd7" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/Mafe3.png" id="4_hb3tl"]
+[ext_resource type="Texture2D" uid="uid://ky7pgfown1js" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/Mafe4.png" id="5_8r8hg"]
+[ext_resource type="AudioStream" uid="uid://421fstbpag8c" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/coin-d.ogg" id="5_k8c8l"]
+
+[sub_resource type="GDScript" id="GDScript_4q4xn"]
+script/source = "extends CharacterBody2D
+
+
+const SPEED = 1500.0
+
+# Get the gravity from the project settings to be synced with RigidBody nodes.
+var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
+
+
+func _physics_process(delta):
+	# Add the gravity.
+	if not is_on_floor():
+		velocity.y += gravity * delta
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var direction = Input.get_axis(\"esquerda\", \"direita\")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+	move_and_slide()
+
+
+func _on_area_2d_body_entered(body: PhysicsBody2D) -> void:
+	if body.is_in_group(\"star\"):
+		$\"Coin-d\".play()
+		body.queue_free()
+"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nnave"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_725j0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vrv34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hb3tl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8r8hg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3wopd"]
+radius = 122.0
+height = 338.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t1n37"]
+radius = 76.0
+height = 280.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
+script = SubResource("GDScript_4q4xn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 3
+position = Vector2(65, -29)
+scale = Vector2(2.122, 1.95)
+sprite_frames = SubResource("SpriteFrames_nnave")
+autoplay = "default"
+frame_progress = 0.0292636
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -168)
+shape = SubResource("CapsuleShape2D_3wopd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -141)
+shape = SubResource("CapsuleShape2D_t1n37")
+
+[node name="Coin-d" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_k8c8l")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

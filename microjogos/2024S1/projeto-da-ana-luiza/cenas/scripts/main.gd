@@ -10,9 +10,9 @@ signal lose
 # 16:9
 const WIDTH = 1920
 const HEIGHT = 1080
+var spawn_position = -100
 
-
-var cena_estrela = preload("res://microjogos/2024S1/projeto-da-ana-luiza/estrela_amarela.tscn")
+var cena_estrela = preload("res://microjogos/2024S1/projeto-da-ana-luiza/cenas/estrela_amarela.tscn")
 
 
 # --------------------------------------------------------------------------------------------------
@@ -21,38 +21,7 @@ var cena_estrela = preload("res://microjogos/2024S1/projeto-da-ana-luiza/estrela
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
-	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
-	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("CATCH!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("PEGUE!")
 	register_win()
-
-
-# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
-# a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
-# a última chamada desta função. O comando pass não faz nada
-func _physics_process(delta):
-	pass
-
-
-# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a renderização, 
-# como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
-# desde a última chamada desta função. O comando pass não faz nada
-func _process(delta):
-	pass
-
-
-# --------------------------------------------------------------------------------------------------
-# SUAS FUNÇÕES
-# --------------------------------------------------------------------------------------------------
-
-
-# Um método genérico. Crie quantos métodos você precisar!
-func my_method():
-	pass
 
 
 # --------------------------------------------------------------------------------------------------
@@ -76,30 +45,14 @@ func register_lose():
 
 
 func spawn_estrela():
-	var estrela_nova = cena_estrela.instantiate()
+	var estrela_nova : RigidBody2D = cena_estrela.instantiate()
 	estrela_nova.position.x = randf_range(300, 1700)
+	estrela_nova.position.y = spawn_position
+	spawn_position -= 100
 	add_child(estrela_nova)
 
 
-func _on_timer_2_timeout():
-	var estrela_nova = cena_estrela.instantiate()
-	estrela_nova.position.x = randf_range(300, 1700)
-	add_child(estrela_nova)
-
-
-func _on_timer_3_timeout():
-	var estrela_nova = cena_estrela.instantiate()
-	estrela_nova.position.x = randf_range(300, 1700)
-	add_child(estrela_nova)
-
-
-func _on_timer_4_timeout():
-	var estrela_nova = cena_estrela.instantiate()
-	estrela_nova.position.x = randf_range(300, 1700)
-	add_child(estrela_nova)
-
-
-func _on_timer_5_timeout():
-	var estrela_nova = cena_estrela.instantiate()
-	estrela_nova.position.x = randf_range(100, 1800)
-	add_child(estrela_nova)
+func _on_area_2d_body_entered(body: PhysicsBody2D) -> void:
+	if body.is_in_group("star"):
+		register_lose()
+		body.delete()
