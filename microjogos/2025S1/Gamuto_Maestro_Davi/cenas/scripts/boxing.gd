@@ -12,7 +12,6 @@ signal lose
 const WIDTH = 1920
 const HEIGHT = 1080
 
-const MPB = 1
 const JAB = 0.5
 
 
@@ -23,48 +22,24 @@ var time_begin
 var time_delay
 var timer
 var aceitando = false
-@onready var animacao_soco = $"Animação/AnimatedSprite2D"
 var pontuacao = 0
-var queue_jab = "$AudioStreamPlayer2D"
-var soco = "$AudioStreamPlayer2D/SOCO"
-var whiff = "$WHIFF"
-var ost = "$OST"
 var passing = 3
+var jab_feito = false
+
+@onready var queue_jab = $"VAI"
+@onready var soco = $"SOCO"
+@onready var whiff = $WHIFF
+@onready var contador = $Contador
 @onready var animacao_saco = $"punchingbag"
-# Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
-func _ready():
-	timer = get_node("Timer")
-	timer.start(MPB)
-	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
-	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
-	match Global.language:
-			Global.LANGUAGE.EN:
-				NotificationCenter.notify("LET'EM HAVE IT!")
-			Global.LANGUAGE.PT:
-				NotificationCenter.notify("VAI PRA CIMA!")
-	$OST.play()
+@onready var animacao_soco = $"Player/AnimatedSprite2D"
+@onready var in_timer = $InTimer
+@onready var off_timer = $OffTimer
 
 
-# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
-# a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
-# a última chamada desta função. O comando pass não faz nada
-func _physics_process(delta):
-	pass
-
-const JAB_FEITO = false
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a renderização, 
 # como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
 # desde a última chamada desta função. O comando pass não faz nada
 func _process(delta):
-	if timer.time_left > MPB - 0.4:
-		aceitando = false
-	elif timer.time_left < 0.4:
-		aceitando = true
-	if timer.time_left > 0.59 and timer.time_left < 0.6 and JAB_FEITO == false:
-		$AudioStreamPlayer2D.play()
-		const JAB_FEITO = true
-		
-	
 	if Input.is_action_just_pressed("acao"):
 		if aceitando:
 			animacao_soco.play("default")
@@ -72,29 +47,23 @@ func _process(delta):
 			pontuacao += 1
 			if pontuacao >= passing:
 				register_win()
-			$Contador.text = str(pontuacao)  
-			$SOCO.play()
-			print("this is working")
-			pass #Acertou
+			soco.play()
 		else:
-			print("Errou")
-			$WHIFF.play()
-			pass # Whiff
-	
-	
-# --------------------------------------------------------------------------------------------------
-# SUAS FUNÇÕES
-# --------------------------------------------------------------------------------------------------
+			whiff.play()
+			pontuacao -= 1
+		jab_feito = true
+		contador.text = str(pontuacao)
+
+func _on_off_timer_timeout() -> void:
+	queue_jab.play()
+	in_timer.start(0.4)
+	aceitando = true
+	jab_feito = false
 
 
-# Um método genérico. Crie quantos métodos você precisar!
-
-
-
-	
-		
-	
-
+func _on_in_timer_timeout() -> void:
+	aceitando = false
+	off_timer.start(0.6)
 
 # --------------------------------------------------------------------------------------------------
 # CONDIÇÕES DE VITÓRIA

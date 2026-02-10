@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b851ueoo2w73n"
-path="res://.godot/imported/punchbagd.png-0c2993a6963f7629c1123401bdca8962.ctex"
+uid="uid://gt0rcliywm8w"
+path="res://.godot/imported/boxing ring.jpg-88a97b4d63893016c904733ea3d80085.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/Gamuto_Maestro_Davi/cenas/scripts/punchbagd.png"
-dest_files=["res://.godot/imported/punchbagd.png-0c2993a6963f7629c1123401bdca8962.ctex"]
+source_file="res://microjogos/2025S1/Gamuto_Maestro_Davi/recursos/imagens/boxing ring.jpg"
+dest_files=["res://.godot/imported/boxing ring.jpg-88a97b4d63893016c904733ea3d80085.ctex"]
 
 [params]
 

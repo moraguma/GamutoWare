@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cpbvq1wo3hxb"
-path="res://.godot/imported/download (2).png-5ac9731699b591eff721e5382ec7c6cc.ctex"
+path="res://.godot/imported/download (2).png-5f2ce19f4bc2f289b630271030d67223.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/Gamuto_Maestro_Davi/cenas/scripts/download (2).png"
-dest_files=["res://.godot/imported/download (2).png-5ac9731699b591eff721e5382ec7c6cc.ctex"]
+source_file="res://microjogos/2025S1/Gamuto_Maestro_Davi/recursos/imagens/download (2).png"
+dest_files=["res://.godot/imported/download (2).png-5f2ce19f4bc2f289b630271030d67223.ctex"]
 
 [params]
 
