@@ -80,6 +80,12 @@ class GitMergeManager:
         code, stdout, _ = self.run_git(["stash", "push", "-m", message], check=False)
         return code == 0 and "No local changes" not in stdout
 
+    def stash_push_paths(self, message: str, paths: List[str]) -> bool:
+        """Stash changes for specific paths. Returns True if something was stashed."""
+        cmd = ["stash", "push", "-m", message, "--"] + paths
+        code, stdout, _ = self.run_git(cmd, check=False)
+        return code == 0 and "No local changes" not in stdout
+
     def stash_pop(self) -> None:
         """Pop the most recent stash."""
         self.run_git_check(["stash", "pop"])

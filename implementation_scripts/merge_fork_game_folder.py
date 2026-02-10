@@ -66,17 +66,43 @@ def merge_fork_game_folder(
     print(f"Game folder       : {game_folder}")
     print()
 
-    # 1. Ensure working tree is clean (auto-stash only .uid changes)
-    dirty_paths = git.get_uncommitted_paths()
-    stashed_uid_only = False
-    if dirty_paths:
+    def switch_branch_uid_safe(branch: str) -> bool:
+        """Switch branches, auto-stashing .uid files if needed."""
+        try:
+            git.switch_branch(branch)
+            return True
+        except RuntimeError as err:
+            err_text = str(err)
+            if "would be overwritten by checkout" in err_text and ".uid" in err_text:
+                print("Checkout blocked by .uid changes; auto-stashing and retrying.")
+                if git.stash_push_paths("auto-stash: .uid files for merge", [":(glob)**/*.uid"]):
+                    uid_stash_count[0] += 1
+                git.switch_branch(branch)
+                return True
+            raise
+
+    def ensure_uid_clean() -> bool:
+        """Ensure only .uid changes are present; auto-stash them if needed."""
+        dirty_paths = git.get_uncommitted_paths()
+        if not dirty_paths:
+            return True
+
         non_uid_paths = [path for path in dirty_paths if not path.endswith(".uid")]
         if non_uid_paths:
             print("ERROR: You have uncommitted changes. Commit or stash them first.")
             return False
 
         print("Uncommitted .uid files detected; auto-stashing to avoid checkout errors.")
-        stashed_uid_only = git.stash_push("auto-stash: .uid files for merge")
+        if git.stash_push("auto-stash: .uid files for merge"):
+            uid_stash_count[0] += 1
+        return True
+
+    # Track how many auto-stashes were created so we can restore them later.
+    uid_stash_count = [0]
+
+    # 1. Ensure working tree is clean (auto-stash only .uid changes)
+    if not ensure_uid_clean():
+        return False
 
     original_branch = git.get_current_branch()
 
@@ -93,7 +119,9 @@ def merge_fork_game_folder(
     try:
         # 2. Switch to base branch and try to update it from origin
         print(f"Switching to base branch '{base_branch}'...")
-        git.switch_branch(base_branch)
+        if not ensure_uid_clean():
+            return False
+        switch_branch_uid_safe(base_branch)
         print("On base branch.")
 
         print("Trying to fast-forward base branch from origin (if configured)...")
@@ -113,7 +141,9 @@ def merge_fork_game_folder(
         # Switch back to base branch before creating implementation branch
         # This avoids conflicts with case-sensitive file duplicates
         print(f"Switching back to base branch '{base_branch}'...")
-        git.switch_branch(base_branch)
+        if not ensure_uid_clean():
+            return False
+        switch_branch_uid_safe(base_branch)
         print("Back on base branch.\n")
 
         # 5. Create the implementation branch from the base branch
@@ -122,7 +152,7 @@ def merge_fork_game_folder(
             f"from '{base_branch}'..."
         )
         git.create_branch(target_branch_name, base_branch, force=True)
-        git.switch_branch(target_branch_name)
+        switch_branch_uid_safe(target_branch_name)
         print("Implementation branch created and checked out.\n")
 
         # 6. Restore only the game folder from the temp branch
@@ -184,11 +214,13 @@ def merge_fork_game_folder(
             pass
 
         # Best-effort: restore any stashed .uid changes
-        if stashed_uid_only:
+        while uid_stash_count[0] > 0:
             try:
                 git.stash_pop()
             except Exception:
                 print("WARNING: Could not auto-apply stashed .uid changes.")
+                break
+            uid_stash_count[0] -= 1
 
 
 def main() -> None:
