@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0p4huepykn3h"
-path="res://.godot/imported/capa.png-593a91e73b0e9a9890d16c904b111654.ctex"
+uid="uid://coek332550cfm"
+path="res://.godot/imported/moskito.png-759158b89ce987330295e3f054cf54d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/Drikista_Gamelab/Sprites/capa.png"
-dest_files=["res://.godot/imported/capa.png-593a91e73b0e9a9890d16c904b111654.ctex"]
+source_file="res://microjogos/2025S1/Drikista_Gamelab/recursos/Sprites/moskito.png"
+dest_files=["res://.godot/imported/moskito.png-759158b89ce987330295e3f054cf54d6.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpjfyqxhrinwm"
-path="res://.godot/imported/moth.png-191876c4345c49b8ad8e6fab0a18f629.ctex"
+uid="uid://d2dgr6nfbtyv4"
+path="res://.godot/imported/Gamuto Head.png-9c66848200f2578e80dbdf3aaf3df53c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/Drikista_Gamelab/Sprites/moth.png"
-dest_files=["res://.godot/imported/moth.png-191876c4345c49b8ad8e6fab0a18f629.ctex"]
+source_file="res://microjogos/2025S1/Drikista_Gamelab/recursos/Sprites/Gamuto Head.png"
+dest_files=["res://.godot/imported/Gamuto Head.png-9c66848200f2578e80dbdf3aaf3df53c.ctex"]
 
 [params]
 

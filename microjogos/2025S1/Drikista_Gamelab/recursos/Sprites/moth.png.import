@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwnjtucmdhpd0"
-path="res://.godot/imported/background.png-f9ba3f0a24ff5624c05bccf0adba66f1.ctex"
+uid="uid://dpjfyqxhrinwm"
+path="res://.godot/imported/moth.png-88d2cbc7f59383b4732f740a8eadc34a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/Drikista_Gamelab/Sprites/background.png"
-dest_files=["res://.godot/imported/background.png-f9ba3f0a24ff5624c05bccf0adba66f1.ctex"]
+source_file="res://microjogos/2025S1/Drikista_Gamelab/recursos/Sprites/moth.png"
+dest_files=["res://.godot/imported/moth.png-88d2cbc7f59383b4732f740a8eadc34a.ctex"]
 
 [params]
 

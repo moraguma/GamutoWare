@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7nmlmftji3cd"
-path="res://.godot/imported/beetle.png-463e2283051747993c2c0bb5beae76a3.ctex"
+uid="uid://dbm4b0m2dyyvs"
+path="res://.godot/imported/arrow.png-f5f98423047141b4535ee0ce379eb3bd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/Drikista_Gamelab/Sprites/beetle.png"
-dest_files=["res://.godot/imported/beetle.png-463e2283051747993c2c0bb5beae76a3.ctex"]
+source_file="res://microjogos/2025S1/Drikista_Gamelab/recursos/Sprites/arrow.png"
+dest_files=["res://.godot/imported/arrow.png-f5f98423047141b4535ee0ce379eb3bd.ctex"]
 
 [params]
 

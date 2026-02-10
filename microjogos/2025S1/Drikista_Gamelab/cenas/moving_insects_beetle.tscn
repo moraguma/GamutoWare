@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cs0npkpprcrrh"]
 
-[ext_resource type="Script" uid="uid://cahun7rgsreij" path="res://microjogos/2025S1/Drikista_Gamelab/Insects/obj_beetle.gd" id="1_44nhk"]
-[ext_resource type="Texture2D" uid="uid://c7nmlmftji3cd" path="res://microjogos/2025S1/Drikista_Gamelab/Sprites/beetle.png" id="2_c8qfb"]
+[ext_resource type="Script" uid="uid://cahun7rgsreij" path="res://microjogos/2025S1/Drikista_Gamelab/cenas/scripts/obj_beetle.gd" id="1_44nhk"]
+[ext_resource type="Texture2D" uid="uid://c7nmlmftji3cd" path="res://microjogos/2025S1/Drikista_Gamelab/recursos/Sprites/beetle.png" id="2_c8qfb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_44nhk"]
 size = Vector2(12, 16)
