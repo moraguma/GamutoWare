@@ -1,0 +1,89 @@
+[gd_scene load_steps=15 format=3 uid="uid://cfcvd6jjkujcn"]
+
+[ext_resource type="PackedScene" uid="uid://c2sa6coaikkl4" path="res://microjogos/2025S1/Gamuto_Maestro_Davi/cenas/Animação.tscn" id="1_6w4jh"]
+[ext_resource type="Script" uid="uid://cgn6ig22oa15d" path="res://microjogos/2025S1/Gamuto_Maestro_Davi/cenas/scripts/boxing.gd" id="1_550ca"]
+[ext_resource type="Texture2D" uid="uid://gt0rcliywm8w" path="res://microjogos/2025S1/Gamuto_Maestro_Davi/cenas/scripts/boxing ring.jpg" id="2_m0owi"]
+[ext_resource type="AudioStream" uid="uid://dpd3csr674lwo" path="res://microjogos/2025S1/Gamuto_Maestro_Davi/cenas/scripts/JABJABJAB.mp3" id="4_uri6g"]
+[ext_resource type="AudioStream" uid="uid://c31jti7xgu4nl" path="res://microjogos/2025S1/Gamuto_Maestro_Davi/cenas/scripts/soco.mp3" id="5_vhk7b"]
+[ext_resource type="AudioStream" uid="uid://bdx4jkspj3218" path="res://microjogos/2025S1/Gamuto_Maestro_Davi/cenas/scripts/audiomass-output.mp3" id="6_kfkk5"]
+[ext_resource type="AudioStream" uid="uid://c0c82so6lshu1" path="res://microjogos/2025S1/Gamuto_Maestro_Davi/cenas/scripts/ost.mp3" id="7_c1tmh"]
+[ext_resource type="Texture2D" uid="uid://b851ueoo2w73n" path="res://microjogos/2025S1/Gamuto_Maestro_Davi/cenas/scripts/punchbagd.png" id="8_8c1uh"]
+[ext_resource type="Texture2D" uid="uid://m6nonoay4e4x" path="res://microjogos/2025S1/Gamuto_Maestro_Davi/cenas/scripts/cartoon-simple-black-crowd-silhouette-elements-png_107154-removebg-preview.png" id="9_anap4"]
+[ext_resource type="Texture2D" uid="uid://wrfi6jbev07k" path="res://microjogos/2025S1/Gamuto_Maestro_Davi/cenas/scripts/punchbag2.png" id="9_lboq3"]
+[ext_resource type="Texture2D" uid="uid://cpbvq1wo3hxb" path="res://microjogos/2025S1/Gamuto_Maestro_Davi/cenas/scripts/download (2).png" id="10_oj8c5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sucju"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_8c1uh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_lboq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_oj8c5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8c1uh")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="FontFile" id="FontFile_anap4"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="Theme" id="Theme_8c1uh"]
+RichTextLabel/font_sizes/normal_font_size = 50
+RichTextLabel/fonts/bold_font = SubResource("FontFile_anap4")
+
+[node name="Boxing" type="Node2D"]
+script = ExtResource("1_550ca")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(956, 542.5)
+scale = Vector2(3.0624, 2.7275)
+texture = ExtResource("2_m0owi")
+
+[node name="Animação" parent="." instance=ExtResource("1_6w4jh")]
+position = Vector2(660, 467)
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_uri6g")
+
+[node name="SOCO" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_vhk7b")
+
+[node name="WHIFF" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_kfkk5")
+
+[node name="OST" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_c1tmh")
+volume_db = -6.338
+
+[node name="punchingbag" type="AnimatedSprite2D" parent="."]
+position = Vector2(1148, 513)
+sprite_frames = SubResource("SpriteFrames_sucju")
+frame = 3
+frame_progress = 1.0
+flip_h = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(1005.69, 713.5)
+scale = Vector2(6.13507, 2.54167)
+texture = ExtResource("9_anap4")
+
+[node name="Contador" type="RichTextLabel" parent="."]
+offset_left = 38.0
+offset_top = 42.0
+offset_right = 405.0
+offset_bottom = 193.0
+theme = SubResource("Theme_8c1uh")
