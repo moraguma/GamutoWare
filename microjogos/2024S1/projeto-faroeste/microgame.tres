@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://bxf5si0ooyqx6"]
+
+[ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_46hhp"]
+[ext_resource type="Texture2D" uid="uid://cb1wrc12x4wil" path="res://microjogos/2024S1/projeto-faroeste/recursos/capa.png" id="1_ymicr"]
+[ext_resource type="PackedScene" uid="uid://bi0ahd7cv37i6" path="res://microjogos/2024S1/projeto-faroeste/cenas/main.tscn" id="2_77ki2"]
+
+[resource]
+script = ExtResource("1_46hhp")
+cover = ExtResource("1_ymicr")
+title_pt = &"Faroeste"
+title_en = &"Far west"
+credits_pt = "Criado por: Vitor
+
+Sprites:
+Background: https://www.freepik.com/free-vector/desert-sunset-landscape_29875035.htm
+Eagle: https://pixabay.com/sound-effects/nature-eagle-281163/
+Gun Shot: https://uppbeat.io/sfx/gunshot-desert-eagle-pistol/5022/19565"
+credits_en = "Made by: Vitor
+
+Sprites:
+Background: https://www.freepik.com/free-vector/desert-sunset-landscape_29875035.htm
+Eagle: https://pixabay.com/sound-effects/nature-eagle-281163/
+Gun Shot: https://uppbeat.io/sfx/gunshot-desert-eagle-pistol/5022/19565
+"
+start_message_pt = &"SEJA MAIS RAPIDO"
+start_message_en = &"BE FASTER"
+main_scene = ExtResource("2_77ki2")
+difficulty = 0
