@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://etid40xm6byd"]
+
+[ext_resource type="Script" uid="uid://dul606h80e14c" path="res://thumbnail.gd" id="1_7uawv"]
+[ext_resource type="Texture2D" uid="uid://d0p4huepykn3h" path="res://microjogos/2025S1/Drikista_Gamelab/Sprites/capa.png" id="1_qwhpu"]
+
+[node name="Node2D" type="Sprite2D"]
+position = Vector2(225, 225)
+texture = ExtResource("1_qwhpu")
+script = ExtResource("1_7uawv")
