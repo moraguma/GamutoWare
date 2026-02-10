@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1gunhxurm3j6"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-do-Glaymar_A/cenas/arma.gd" id="1_f4wxo"]
+[ext_resource type="Texture2D" uid="uid://02uvoafk3bjy" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/Gun.png" id="2_lgl81"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6cuxg"]
+radius = 445.702
+
+[node name="Arma" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_f4wxo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -2.99999)
+rotation = -0.124864
+shape = SubResource("CircleShape2D_6cuxg")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+rotation = 0.0623218
+scale = Vector2(0.743903, 1.33333)
+
+[node name="Gun" type="Sprite2D" parent="Marker2D"]
+position = Vector2(61.2974, -5.89143)
+rotation = -0.0348021
+scale = Vector2(0.316624, 0.191008)
+skew = -0.0765823
+texture = ExtResource("2_lgl81")
+
+[node name="mira" type="Marker2D" parent="Marker2D/Gun"]
+unique_name_in_owner = true
+position = Vector2(199.397, 16.5803)
+rotation = -0.0278242
+scale = Vector2(0.0115685, 0.00412756)
+skew = 0.0641811
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
