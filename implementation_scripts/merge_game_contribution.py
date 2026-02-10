@@ -103,6 +103,14 @@ class GitMergeManager:
         cmd = ["switch", "-c", branch, start_point]
         self.run_git_check(cmd)
 
+    def create_branch_ref(self, branch: str, start_point: str, force: bool = False) -> None:
+        """Create or update a branch ref without switching to it."""
+        cmd = ["branch"]
+        if force:
+            cmd.append("-f")
+        cmd.extend([branch, start_point])
+        self.run_git_check(cmd)
+
     def switch_branch(self, branch: str, force: bool = False) -> None:
         """Switch to a branch.
         
