@@ -66,10 +66,17 @@ def merge_fork_game_folder(
     print(f"Game folder       : {game_folder}")
     print()
 
-    # 1. Ensure working tree is clean
-    if git.has_uncommitted_changes():
-        print("ERROR: You have uncommitted changes. Commit or stash them first.")
-        return False
+    # 1. Ensure working tree is clean (auto-stash only .uid changes)
+    dirty_paths = git.get_uncommitted_paths()
+    stashed_uid_only = False
+    if dirty_paths:
+        non_uid_paths = [path for path in dirty_paths if not path.endswith(".uid")]
+        if non_uid_paths:
+            print("ERROR: You have uncommitted changes. Commit or stash them first.")
+            return False
+
+        print("Uncommitted .uid files detected; auto-stashing to avoid checkout errors.")
+        stashed_uid_only = git.stash_push("auto-stash: .uid files for merge")
 
     original_branch = git.get_current_branch()
 
@@ -175,6 +182,13 @@ def merge_fork_game_folder(
             git.delete_branch(temp_branch, force=True)
         except Exception:
             pass
+
+        # Best-effort: restore any stashed .uid changes
+        if stashed_uid_only:
+            try:
+                git.stash_pop()
+            except Exception:
+                print("WARNING: Could not auto-apply stashed .uid changes.")
 
 
 def main() -> None:

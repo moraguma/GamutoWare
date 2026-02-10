@@ -50,6 +50,22 @@ class GitMergeManager:
         code, stdout, _ = self.run_git(["status", "--porcelain"], check=False)
         return code == 0 and bool(stdout.strip())
 
+    def get_uncommitted_paths(self) -> List[str]:
+        """Get a list of paths with uncommitted changes."""
+        code, stdout, _ = self.run_git(["status", "--porcelain"], check=False)
+        if code != 0 or not stdout.strip():
+            return []
+
+        paths: List[str] = []
+        for line in stdout.splitlines():
+            # Porcelain format: XY <path> or XY <old> -> <new>
+            path_part = line[3:].strip()
+            if "->" in path_part:
+                path_part = path_part.split("->", 1)[1].strip()
+            if path_part:
+                paths.append(path_part)
+        return paths
+
     def get_current_branch(self) -> str:
         """Get the current branch name."""
         return self.run_git_check(["rev-parse", "--abbrev-ref", "HEAD"])
