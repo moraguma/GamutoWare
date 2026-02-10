@@ -17,7 +17,7 @@ credits_en = "Made by: Darlinne Palo Soto
 Assets:
 - https://opengameart.org/content/vine-with-thorns
 - https://opengameart.org/content/teleporter-circle"
-start_message_pt = &"Bora sair daqui! Bora!"
-start_message_en = &"Let\'s get out of here!"
+start_message_pt = &"FUJA!"
+start_message_en = &"ESCAPE!"
 main_scene = ExtResource("2_q8v4x")
 difficulty = 0

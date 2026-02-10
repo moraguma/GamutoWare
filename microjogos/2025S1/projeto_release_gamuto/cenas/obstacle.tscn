@@ -12,4 +12,5 @@ collision_mask = 2
 shape = SubResource("RectangleShape2D_as30t")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 3
 texture = ExtResource("1_0cr48")

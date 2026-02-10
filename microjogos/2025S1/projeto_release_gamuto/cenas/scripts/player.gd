@@ -1,59 +1,47 @@
 extends CharacterBody2D
 
-var speed = 10
-var angular_speed = PI
-var up_counter = 0
+@export var collision_timer : Timer
+@export var sprite : Sprite2D
 
-const WIDTH = 1920
-const HEIGHT = 1080
-var collision_timer := Timer.new()
+@export var speed = 10
+@export var angular_speed = PI
+@export var up_counter = 0
+
+var life := 30
 
 var status = "OK"
 
 
-
-func _ready() -> void:	
-	collision_timer.wait_time = 0.12
-	add_child(collision_timer)
-	collision_timer.connect("timeout", _on_timer_timeout)
-	
-
 func _on_timer_timeout() -> void:
 	status = "OK"
-	get_node("Sprite2D").frame = 0
+	sprite.frame = 0
 
-func _process(delta):	
+func _process(delta):
 	var direction = 0
-	if Input.is_action_pressed("baixo") and status == "OK":
-		velocity = Vector2.ZERO
-		up_counter = 0
-	if Input.is_action_pressed("esquerda") and status == "OK":
-		direction = -1
-		up_counter = max(1,up_counter-1)
-	if Input.is_action_pressed("direita") and status == "OK":
-		direction = 1
-		up_counter = max(1,up_counter-1)
-
+	if status == "OK":
+		if Input.is_action_pressed("baixo"):
+			velocity = Vector2.ZERO
+			up_counter = 0
+		if Input.is_action_pressed("esquerda"):
+			direction = -1
+		if Input.is_action_pressed("direita"):
+			direction = 1
 	rotation += angular_speed * direction * delta
 
 	if Input.is_action_pressed("cima") and status == "OK":
-		up_counter += 1
+		up_counter = min(60, up_counter+1)
 		velocity = Vector2.UP.rotated(rotation) * speed * up_counter
-	
-	var pos_x = self.position.x
-	var pos_y = self.position.y
-	if pos_x >= WIDTH or pos_x <= 0 or pos_y >= HEIGHT or pos_y <= 0:
-		print("VELOCITY", velocity, "POS", pos_x, pos_y, "ROTATION", rotation)
-		status = "BLOCKED"
-		velocity = velocity.bounce(Vector2(pos_y, pos_x))
-		collision_timer.start()
 	
 	var collision = move_and_collide(velocity * delta)
 	if collision:
 		if status == "BLOCKED":
-			get_node("Sprite2D").frame = 2
+			sprite.frame = 2
 		else:
-			get_node("Sprite2D").frame = 1
-		velocity = velocity.bounce(collision.get_normal())
+			sprite.frame = 1
+		velocity = velocity.bounce(collision.get_normal()) * 0.5
+		if status == "OK": 
+			life -= 3
+		if life <= 0:
+			queue_free()
 		status = "BLOCKED"
 		collision_timer.start()

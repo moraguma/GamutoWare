@@ -6,9 +6,11 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_x5r0a"]
 radius = 30.0167
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("collision_timer", "sprite")]
 collision_layer = 3
 script = ExtResource("2_x5r0a")
+collision_timer = NodePath("Timer")
+sprite = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.06, 0.06)
@@ -17,3 +19,8 @@ hframes = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_x5r0a")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.12
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
