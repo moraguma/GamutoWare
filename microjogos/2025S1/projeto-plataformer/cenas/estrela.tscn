@@ -41,12 +41,10 @@ _data = {
 &"idle": SubResource("Animation_his4y")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fdekn"]
-size = Vector2(14, 13.5)
+[sub_resource type="CircleShape2D" id="CircleShape2D_his4y"]
+radius = 6.0
 
 [node name="Estrela" type="Area2D"]
-collision_layer = 2
-collision_mask = 2
 script = ExtResource("1_his4y")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -58,8 +56,10 @@ hframes = 4
 libraries = {
 &"": SubResource("AnimationLibrary_thtpt")
 }
+autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(0, 0.25)
-shape = SubResource("RectangleShape2D_fdekn")
+shape = SubResource("CircleShape2D_his4y")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

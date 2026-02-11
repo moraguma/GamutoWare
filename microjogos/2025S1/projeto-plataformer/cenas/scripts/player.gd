@@ -1,98 +1,58 @@
 extends CharacterBody2D
 
 
-var jump_speed: float = 265.0
-var gravity: float = 9.0
-var acceleration: float = 100.0
-var final_velocity: float = 200.0
+@export var jump_speed: float = 700.0
+@export var acceleration: float = 0.5
+@export var final_velocity: float = 500.0
 var fell: bool = false
 var is_jumping = false
 
-var animation_player: AnimationPlayer
-var sprite: Sprite2D
-var landing_sound: AudioStreamPlayer2D
+@export var animation_player: AnimationPlayer
+@export var sprite: Sprite2D
+@export var landing_sound: AudioStreamPlayer
 
-func _ready():
-	animation_player = $AnimationPlayer
-	animation_player.play("idle")
-	animation_player.speed_scale = 1.0
-	sprite = $Sprite2D
-	landing_sound = $Landing_sound
-
+var inventory = {}
 
 func _process(delta):
-	if animation_player.current_animation != "run":
-		animation_player.speed_scale = 1.0
-	if position.y >= 8.0 * 16 and not fell:
+	if position.y >= 1080 and not fell:
 		var falling = $Falling
 		falling.play()
-		falling.volume_db -= 10.0
 		fell = true
 
 
 func _physics_process(delta):
+	var dir = Input.get_action_strength("direita") - Input.get_action_strength("esquerda")
+	velocity.x = lerpf(velocity.x, final_velocity * dir, acceleration)
+	sprite.flip_h = dir < 0
+	
 	if not is_on_floor():
-		velocity.y += gravity
-	
-	if animation_player.get_current_animation() == "fall" and is_on_floor():
-		animation_player.play("idle")
-		animation_player.speed_scale = 1.0
-		landing_sound.play()
-		is_jumping = false
-	
-	if Input.is_action_pressed("direita"):
-		sprite.flip_h = false
-		if is_on_floor():
-			animation_player.play("run")
-		if velocity.x < 0:
-			velocity.x += 2 * acceleration * delta
-		else:
-			if velocity.x < final_velocity:
-				velocity.x += acceleration * delta
-			else:
-				velocity.x = final_velocity
-	
-	elif Input.is_action_pressed("esquerda"):
-		sprite.flip_h = true
-		if is_on_floor():
-			animation_player.play("run")
-		if velocity.x > 0:
-			velocity.x -= 2 * acceleration * delta
-		else:
-			if velocity.x > -final_velocity:
-				velocity.x -= acceleration * delta
-			else:
-				velocity.x = -final_velocity
-	
-	if is_on_floor() and Input.is_action_pressed("acao"):
-		is_jumping = true
-		if animation_player.current_animation == "run":
-			animation_player.stop()
+		velocity.y += get_gravity().y * delta 
+		if Input.is_action_pressed("baixo"):
+			velocity.y = lerpf(velocity.y, jump_speed * 1.5, acceleration)
+		if velocity.y > 0.0:
 			$AnimationPlayer/Steps_sound.stop()
-
-		# Essa animação não funciona se o boneco estiver em idle
-		''' 
-			Em um frame após pular, o boneco ainda estava encostando no chão
-			e isso fazia com que a animação de idle pra quando
-			ele estava parado no chão ativasse
-		'''
-		animation_player.play("jump")
-		velocity.y -= jump_speed
-		animation_player.speed_scale = 1.0
-	
-	elif not is_on_floor() and velocity.y > 0.0:
-		$AnimationPlayer/Steps_sound.stop()
-		animation_player.play("fall")
-		animation_player.speed_scale = 1.0
-	
-	if not Input.is_action_pressed("esquerda") and not Input.is_action_pressed("direita") and is_on_floor() and not is_jumping:
-		velocity.x = 0
-		$AnimationPlayer/Steps_sound.stop()
-		animation_player.play("idle")
-		animation_player.speed_scale = 1.0
-	
-	if animation_player.current_animation == "run":
-		animation_player.speed_scale = 1.0 + abs(velocity.x) / final_velocity
+			animation_player.play("fall")
 	else:
-		animation_player.speed_scale = 1.0
+		if animation_player.get_current_animation() == "fall":
+			landing_sound.play()
+		if dir != 0: 
+			animation_player.play("run")
+		else:
+			$AnimationPlayer/Steps_sound.stop()
+			animation_player.play("idle")
+		if Input.is_action_just_pressed("acao"):
+			if animation_player.current_animation == "run":
+				$AnimationPlayer/Steps_sound.stop()
+			animation_player.play("jump")
+			velocity.y = -jump_speed
+	if is_on_wall() and Input.is_action_just_pressed("acao"):
+		velocity.x += get_wall_normal().x * final_velocity
+		animation_player.play("jump")
+		velocity.y = -jump_speed
 	move_and_slide()
+
+func add_item(item_name):
+	if item_name in inventory.keys():
+		inventory[item_name] += 1
+	else:
+		inventory[item_name] = 1
