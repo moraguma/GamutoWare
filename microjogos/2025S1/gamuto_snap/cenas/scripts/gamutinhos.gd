@@ -14,23 +14,18 @@ func _on_player_snapped_gamuto(gamuto : int) -> void:
 	# Deleta o Gamuto que teve foto tirada
 	match gamuto:
 		1:
-			print("YOU SNAPPED 1!")
 			emit_signal("this_was_snapped", gamuto1)
 			gamuto1.queue_free()
 		2:
-			print("YOU SNAPPED 2!")
 			emit_signal("this_was_snapped", gamuto2)
 			gamuto2.queue_free()
 		3:
-			print("YOU SNAPPED 3!")
 			emit_signal("this_was_snapped", gamuto3)
 			gamuto3.queue_free()
 		4:
-			print("YOU SNAPPED 4!")
 			emit_signal("this_was_snapped", gamuto4)
 			gamuto4.queue_free()
 		5:
-			print("YOU SNAPPED 5!")
 			emit_signal("this_was_snapped", gamuto5)
 			gamuto5.queue_free()
 			

@@ -49,11 +49,6 @@ func _ready():
 	left = lista_al[2]
 	right = lista_al[3]
 	
-	#print("UP = " + up)
-	#print("DOWN = " + down)
-	#print("LEFT = " + left)
-	#print("RIGHT = " + right)
-	
 	#MOVIMENTACAO DO GAMUTO MAL
 	$AnimationPlayer.play("TEXTO")
 	#MOVIMENTACAO DO TEXTO
@@ -132,10 +127,8 @@ func _process(delta):
 func comparacao():
 	if len(senha) < 2: 
 		score += 1
-		print("FIRST SCORE UP")
 	elif lista_coisas.find(senha[-1]) > lista_coisas.find(senha[-2]):
 		score += 1
-		print("SCORE UP")
 	elif lista_coisas.find(senha[-1]) < lista_coisas.find(senha[-2]):
 		score -= 1 
 	$Respostas/Control/RichTextLabel.text = "".join(senha)

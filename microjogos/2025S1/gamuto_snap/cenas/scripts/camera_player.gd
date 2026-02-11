@@ -28,7 +28,6 @@ func get_action() -> void:
 		can_snap = false
 		
 		if focused:
-			print("SNAP!")
 			flashSound.play()		# Toca o som completamente
 			snap_gamuto()
 			flash_effect()
@@ -37,26 +36,15 @@ func get_action() -> void:
 			flashSound.play()
 			await get_tree().create_timer(0.2).timeout
 			flashSound.stop()
-			print("NOTHING TO SNAP!")
 
 # Função que emite os sinais de atingido
 func snap_gamuto() -> void:
 	match is_on_gamuto:
-		1:
-			print("GOT ME 1!")
-			emit_signal("snapped_gamuto", 1)
-		2:
-			print("GOT ME 2!")
-			emit_signal("snapped_gamuto", 2)
-		3:
-			print("GOT ME 3!")
-			emit_signal("snapped_gamuto", 3)
-		4:
-			print("GOT ME 4!")
-			emit_signal("snapped_gamuto", 4)
-		5:
-			print("GOT ME 5!")
-			emit_signal("snapped_gamuto", 5)
+		1: emit_signal("snapped_gamuto", 1)
+		2: emit_signal("snapped_gamuto", 2)
+		3: emit_signal("snapped_gamuto", 3)
+		4: emit_signal("snapped_gamuto", 4)
+		5: emit_signal("snapped_gamuto", 5)
 
 # Função que faz o efeito de flash da câmera
 func flash_effect() -> void:

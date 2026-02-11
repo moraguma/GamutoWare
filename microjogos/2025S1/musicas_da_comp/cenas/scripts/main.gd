@@ -17,13 +17,13 @@ const perguntas = {
 	"corpo_Nu":
 		{
 			"Sua mãe ... querendo me matar. Pode deixar minha sogra eu penso em me casar": ["Bolada", "Com raiva", "Emburrada", "Preocupada"],
-			"Me chamam de ... não quero nem saber, eu sei que estou ... por você": ["Maluco... louco, louco", "Louco... maluco, maluco", "Maluco... maluco, louco", "Louco... louco, maluco"],
+			"Me chamam de ... não quero nem saber, eu sei que estou ... por você": ["Maluco, louco", "Louco, maluco", "Maluco, doido", "Doido, maluco"],
 			"Alô galera, eu ... agora sou um rapaz sério, muito sério": ["Parei de zoar", "Cansei de zuar", "Mandei pra lá", "Achei ela"],
-			"Você é minha paixão, chora não, porquê eu te amo. Assinado simplesmente: ...": ["Fleury 02", "Vinicius e Andinho", "Piauí", "DJ Marlboro"]
+			"Seus olhos! O seu corpo nu! É um convite pra ... ": ["Dançar", "Cantar", "Amar", "Gostar"]
 		},
 	"renata":
 		{
-			"Por ela fui fiel, tão cego eu fiquei ... amigos eu deixei": ["E no night futebol", "Idas para o futebol", "E nas night, futebol", "Indo para o futebol"],
+			"Quem planta sacanagem colhe ...": ["Solidão", "Ilusão", "Confusão", "Traição"],
 			"Renata ingrata, trocou meu amor por ...": ["Uma ilusão", "Um pedaço de pão", "Um garanhão", "Uma sensação"],
 			"A lua entristeceu, o céu mudou de cor, Renata foi embora e ...": ["A deprê ficou", "A tevê levou", "Junto o meu amor", "Fez um favor"],
 			"Foi irracional ... mas vou deletar, ah, ah, sua insentatez": ["O que ela fez", "O que você fez", "Como toda vez", "Mais uma vez"]
@@ -86,18 +86,10 @@ func _ready():
 	
 	$PanelContainer/MarginContainer/GridContainer/Pergunta1.grab_focus()
 
-	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
-	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("COMPLETE THE COMP SONG!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("COMPLETE A MÚSICA DA COMP!")
-	
 	randomize()
 	musica_Escolhida = perguntas[musicas[randi() % musicas.size()]] #Escolhe uma das músicas aleatoriamente
 	pergunta_escolhida = musica_Escolhida.keys()[randi() % musica_Escolhida.size()]
-	respostas =	musica_Escolhida[pergunta_escolhida] #Obtém uma lista das respostas dessa pergunta ordenada corretamente
+	respostas = musica_Escolhida[pergunta_escolhida] #Obtém uma lista das respostas dessa pergunta ordenada corretamente
 	shuffled_respostas = respostas.duplicate() #Cria uma cópia das respostas para poder embaralhar
 	shuffled_respostas.shuffle()
 	question.add_text(pergunta_escolhida)
@@ -117,14 +109,8 @@ func _ready():
 	elif musica_Escolhida == perguntas[musicas[4]]:
 		shakeItBololo.play()
 	elif musica_Escolhida == perguntas[musicas[5]]:
-		aaa.play()
+		aaa.play(2.0)
 		
-func _process(delta):
-	if $VDC_Feliz.visible == true || $VDC_Triste.visible == true:
-		if Input.is_action_just_pressed("acao"):
-			get_tree().reload_current_scene()
-	pass
-
 func pergunta_pressed(pergunta) -> void:
 	$PanelContainer.queue_free()
 	if(musica_Escolhida.get(pergunta_escolhida)[0] == pergunta.text) || pergunta.text == "O Saia" || pergunta.text == "*respira*":

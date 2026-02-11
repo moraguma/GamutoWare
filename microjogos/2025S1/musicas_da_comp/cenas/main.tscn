@@ -79,6 +79,8 @@ light_mask = 0
 custom_minimum_size = Vector2(600, 200)
 layout_mode = 2
 size_flags_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 10
 bbcode_enabled = true
 fit_content = true
 horizontal_alignment = 1
@@ -94,8 +96,6 @@ columns = 2
 [node name="Pergunta1" type="Button" parent="PanelContainer/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(700, 2)
 layout_mode = 2
-focus_neighbor_left = NodePath("../Pergunta2")
-focus_neighbor_top = NodePath("../Pergunta3")
 focus_neighbor_right = NodePath("../Pergunta2")
 focus_neighbor_bottom = NodePath("../Pergunta3")
 mouse_filter = 2
@@ -105,8 +105,6 @@ autowrap_mode = 3
 custom_minimum_size = Vector2(700, 2)
 layout_mode = 2
 focus_neighbor_left = NodePath("../Pergunta1")
-focus_neighbor_top = NodePath("../Pergunta4")
-focus_neighbor_right = NodePath("../Pergunta1")
 focus_neighbor_bottom = NodePath("../Pergunta4")
 mouse_filter = 2
 theme = ExtResource("3_pitoj")
@@ -115,10 +113,8 @@ autowrap_mode = 3
 [node name="Pergunta3" type="Button" parent="PanelContainer/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(700, 2)
 layout_mode = 2
-focus_neighbor_left = NodePath("../Pergunta4")
 focus_neighbor_top = NodePath("../Pergunta1")
 focus_neighbor_right = NodePath("../Pergunta4")
-focus_neighbor_bottom = NodePath("../Pergunta1")
 mouse_filter = 2
 autowrap_mode = 3
 
@@ -127,31 +123,35 @@ custom_minimum_size = Vector2(700, 2)
 layout_mode = 2
 focus_neighbor_left = NodePath("../Pergunta3")
 focus_neighbor_top = NodePath("../Pergunta2")
-focus_neighbor_right = NodePath("../Pergunta3")
-focus_neighbor_bottom = NodePath("../Pergunta2")
 mouse_filter = 2
 autowrap_mode = 3
 
 [node name="Musica1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_pw2xx")
+volume_db = 4.0
 
 [node name="Musica2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_q1754")
+volume_db = 4.0
 
 [node name="Musica3" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_0onx8")
+volume_db = 4.0
 parameters/looping = true
 
 [node name="Musica4" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_0g845")
+volume_db = 4.0
 parameters/looping = true
 
 [node name="Musica5" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_q1754")
+volume_db = 4.0
 parameters/looping = true
 
 [node name="Musica6" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_0g845")
+volume_db = 4.0
 parameters/looping = true
 
 [node name="VDC_Feliz" type="Sprite2D" parent="."]
