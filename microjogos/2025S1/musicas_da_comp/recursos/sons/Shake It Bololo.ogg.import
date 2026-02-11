@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cbnhji0ed46gx"
+path="res://.godot/imported/Shake It Bololo.ogg-9d0c486882b691e8f03ab7b12e796dc5.oggvorbisstr"
+
+[deps]
+
+source_file="res://microjogos/2025S1/musicas_da_comp/recursos/sons/Shake It Bololo.ogg"
+dest_files=["res://.godot/imported/Shake It Bololo.ogg-9d0c486882b691e8f03ab7b12e796dc5.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
