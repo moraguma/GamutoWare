@@ -68,7 +68,7 @@ func _ready():
 	
 
 	#RESPOSTA
-	var senha = []
+	senha = []
 
 	# if (botao cima pressionado and up não ta na lista);
 		# senha.append(up)
