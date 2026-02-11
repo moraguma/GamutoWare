@@ -157,11 +157,9 @@ parameters/looping = true
 [node name="VDC_Feliz" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(960, 540)
-scale = Vector2(0.46875, 0.370117)
 texture = ExtResource("9_0onx8")
 
 [node name="VDC_Triste" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(960, 540)
-scale = Vector2(0.46875, 0.39546)
 texture = ExtResource("10_0onx8")
