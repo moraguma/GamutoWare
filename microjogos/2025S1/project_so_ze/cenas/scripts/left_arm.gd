@@ -11,4 +11,4 @@ func _process(delta: float) -> void:
 	elif Input.is_action_just_pressed("esquerda") and get_node("../").randomized_index != get_node("../").larm_index:
 		get_node("../").fail = true
 		get_node("../Fail").show()
-		#get_node("../..").register_lose()
+		get_node("../..").register_lose()

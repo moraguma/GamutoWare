@@ -1,6 +1,6 @@
 extends Node2D
 
-var timer
+@export var timer : Timer
 var won = false
 var transforme = false
 var fail = false
@@ -40,7 +40,6 @@ func _ready():
 		if randomized_member[i] == legs_value:
 			legs_index = i
 			get_node("NumberDown").frame = legs_index
-	timer = get_node("Timer")
 	timer.start(5.5)
 	
 
@@ -48,6 +47,7 @@ func _process(delta: float) -> void:
 	if randomized_index == 4 and fail == false and not won:
 		won = true
 		get_node("Transform").show()
+		timer.stop()
 	if fail:
 		get_node("Fail").show()
 		get_node("..").register_lose()
