@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dotlf50qnjafu"
-path="res://.godot/imported/33 Sem Título_20250406182057.png-093873b4f6180312a9272165ee932607.ctex"
+uid="uid://fc80mine21r6"
+path="res://.godot/imported/abobora_baixo.png-3883655cb6f535b622a43acb421b9ea4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/projeto_milla/cenas/scripts/33 Sem Título_20250406182057.png"
-dest_files=["res://.godot/imported/33 Sem Título_20250406182057.png-093873b4f6180312a9272165ee932607.ctex"]
+source_file="res://microjogos/2025S1/projeto_milla/recursos/imagens/abobora_baixo.png"
+dest_files=["res://.godot/imported/abobora_baixo.png-3883655cb6f535b622a43acb421b9ea4.ctex"]
 
 [params]
 

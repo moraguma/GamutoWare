@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5bb4bcd6tu04"
-path="res://.godot/imported/33 Sem Título_20250406182051.png-54e51a8322c616b563b7edf0100019f8.ctex"
+uid="uid://dfhoxrib3r64o"
+path="res://.godot/imported/background.png-7b1edfa5bef4ed5598d33f6ad1e8dacf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/projeto_milla/cenas/scripts/33 Sem Título_20250406182051.png"
-dest_files=["res://.godot/imported/33 Sem Título_20250406182051.png-54e51a8322c616b563b7edf0100019f8.ctex"]
+source_file="res://microjogos/2025S1/projeto_milla/recursos/imagens/background.png"
+dest_files=["res://.godot/imported/background.png-7b1edfa5bef4ed5598d33f6ad1e8dacf.ctex"]
 
 [params]
 

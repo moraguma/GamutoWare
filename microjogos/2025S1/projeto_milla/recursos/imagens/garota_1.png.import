@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfxv8eg6ju868"
-path="res://.godot/imported/mdf-bp-branco-tx-2-faces-2750-x-1850-x-25-mm-6573673-1574870347153.jpg-287b22896f6687c199259a409cb4fdb7.ctex"
+uid="uid://brotp5rphljhe"
+path="res://.godot/imported/garota_1.png-64e844b9b1f040332c5706fffb3cdb51.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/projeto_milla/cenas/scripts/mdf-bp-branco-tx-2-faces-2750-x-1850-x-25-mm-6573673-1574870347153.jpg"
-dest_files=["res://.godot/imported/mdf-bp-branco-tx-2-faces-2750-x-1850-x-25-mm-6573673-1574870347153.jpg-287b22896f6687c199259a409cb4fdb7.ctex"]
+source_file="res://microjogos/2025S1/projeto_milla/recursos/imagens/garota_1.png"
+dest_files=["res://.godot/imported/garota_1.png-64e844b9b1f040332c5706fffb3cdb51.ctex"]
 
 [params]
 
