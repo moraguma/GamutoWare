@@ -1,0 +1,162 @@
+[gd_scene load_steps=24 format=3 uid="uid://dwaeb23407t20"]
+
+[ext_resource type="Texture2D" uid="uid://qus8hoyynqta" path="res://microjogos/2025S1/projeto_milla/cenas/photo-1588421357574-87938a86fa28.jpeg" id="1_befbp"]
+[ext_resource type="Script" uid="uid://tm4tow6nhklc" path="res://microjogos/2025S1/projeto_milla/cenas/scripts/main.gd" id="1_pvuji"]
+[ext_resource type="Script" uid="uid://dp6qwmfxsv273" path="res://microjogos/2025S1/projeto_milla/cenas/character_body_2d.gd" id="3_2l1n7"]
+[ext_resource type="Texture2D" uid="uid://dc4l5re0ci8sp" path="res://microjogos/2025S1/projeto_milla/cenas/scripts/34 Sem Título_20250406193403.png" id="3_4r4ba"]
+[ext_resource type="Texture2D" uid="uid://ceuepxu7ijtut" path="res://microjogos/2025S1/projeto_milla/cenas/scripts/33 Sem Título_20250406182042.png" id="4_4370d"]
+[ext_resource type="Script" uid="uid://beg1sd1kmws0u" path="res://microjogos/2025S1/projeto_milla/cenas/aboboras.gd" id="5_g0qa2"]
+[ext_resource type="Script" uid="uid://cpkpoemchsmtw" path="res://microjogos/2025S1/projeto_milla/cenas/abobora_2.gd" id="5_ou6mn"]
+[ext_resource type="Texture2D" uid="uid://dotlf50qnjafu" path="res://microjogos/2025S1/projeto_milla/cenas/scripts/33 Sem Título_20250406182057.png" id="6_g0qa2"]
+[ext_resource type="Script" uid="uid://bpfqd2wh08aqf" path="res://microjogos/2025S1/projeto_milla/cenas/abobora_3.gd" id="6_pvuji"]
+[ext_resource type="Script" uid="uid://bo7w2tsuiyr6m" path="res://microjogos/2025S1/projeto_milla/cenas/abobora_4.gd" id="7_r2k8h"]
+[ext_resource type="Texture2D" uid="uid://c5bb4bcd6tu04" path="res://microjogos/2025S1/projeto_milla/cenas/scripts/33 Sem Título_20250406182051.png" id="8_4r4ba"]
+[ext_resource type="Texture2D" uid="uid://c6vc7k8shbfgx" path="res://microjogos/2025S1/projeto_milla/cenas/scripts/29 Sem Título_20250406175139.png" id="8_r2k8h"]
+[ext_resource type="Texture2D" uid="uid://brotp5rphljhe" path="res://microjogos/2025S1/projeto_milla/cenas/scripts/29 Sem Título_20250406175150.png" id="9_hvgpo"]
+[ext_resource type="Texture2D" uid="uid://fc80mine21r6" path="res://microjogos/2025S1/projeto_milla/cenas/scripts/33 Sem Título_20250406182035.png" id="10_ujrf2"]
+[ext_resource type="Script" uid="uid://blryenerv2de1" path="res://microjogos/2025S1/projeto_milla/cenas/character_body_2d_2.gd" id="13_ujrf2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_up2ls"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_r2k8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_hvgpo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2l1n7"]
+size = Vector2(2462.5, 301.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wpkvl"]
+size = Vector2(209, 37)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7wuot"]
+size = Vector2(71.75, 46.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dmwja"]
+size = Vector2(172.75, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ujrf2"]
+size = Vector2(112.5, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cojhe"]
+size = Vector2(169.109, 40.0666)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4r4ba"]
+size = Vector2(129, 20)
+
+[node name="Main" type="Node2D"]
+texture_filter = 1
+position = Vector2(954, 532)
+script = ExtResource("1_pvuji")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3.49995, 4.75002)
+scale = Vector2(0.633, 0.53025)
+texture = ExtResource("1_befbp")
+
+[node name="BG2" type="Sprite2D" parent="."]
+position = Vector2(-3.00008, -127.687)
+scale = Vector2(1.86719, 1.74398)
+texture = ExtResource("3_4r4ba")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(24, 24)
+scale = Vector2(0.60418, 0.645928)
+sprite_frames = SubResource("SpriteFrames_up2ls")
+frame = 1
+frame_progress = 0.55014
+
+[node name="Chão" type="Area2D" parent="."]
+position = Vector2(10, -117)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chão"]
+position = Vector2(-17, 937)
+shape = SubResource("RectangleShape2D_2l1n7")
+
+[node name="Aboboras" type="Node2D" parent="."]
+script = ExtResource("5_g0qa2")
+
+[node name="Abobora1" type="CharacterBody2D" parent="Aboboras"]
+position = Vector2(-157, 151)
+script = ExtResource("3_2l1n7")
+
+[node name="Sprite2D" type="Sprite2D" parent="Aboboras/Abobora1"]
+position = Vector2(767.625, -908.375)
+scale = Vector2(0.600961, 0.600961)
+texture = ExtResource("4_4370d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Aboboras/Abobora1"]
+position = Vector2(775.625, -880.375)
+shape = SubResource("RectangleShape2D_wpkvl")
+
+[node name="Abobora2" type="CharacterBody2D" parent="Aboboras"]
+script = ExtResource("5_ou6mn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Aboboras/Abobora2"]
+position = Vector2(-467, -1313.43)
+scale = Vector2(0.408318, 0.395338)
+texture = ExtResource("6_g0qa2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Aboboras/Abobora2"]
+position = Vector2(-470.875, -1289.85)
+shape = SubResource("RectangleShape2D_7wuot")
+
+[node name="Abobora3" type="CharacterBody2D" parent="Aboboras"]
+script = ExtResource("6_pvuji")
+
+[node name="Sprite2D" type="Sprite2D" parent="Aboboras/Abobora3"]
+position = Vector2(-716, -644)
+scale = Vector2(0.47126, 0.362953)
+texture = ExtResource("8_4r4ba")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Aboboras/Abobora3"]
+position = Vector2(-728, -600)
+shape = SubResource("RectangleShape2D_dmwja")
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="Aboboras/Abobora3"]
+script = ExtResource("13_ujrf2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Aboboras/Abobora3/CharacterBody2D2"]
+position = Vector2(-219, -903)
+scale = Vector2(0.385161, 0.385161)
+texture = ExtResource("6_g0qa2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Aboboras/Abobora3/CharacterBody2D2"]
+position = Vector2(-224, -891)
+shape = SubResource("RectangleShape2D_ujrf2")
+
+[node name="Abobora4" type="CharacterBody2D" parent="Aboboras"]
+position = Vector2(109, 60)
+script = ExtResource("7_r2k8h")
+
+[node name="Sprite2D" type="Sprite2D" parent="Aboboras/Abobora4"]
+position = Vector2(138.211, -1155.19)
+scale = Vector2(0.640589, 0.517148)
+texture = ExtResource("10_ujrf2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Aboboras/Abobora4"]
+position = Vector2(140.554, -1112.03)
+shape = SubResource("RectangleShape2D_cojhe")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Aboboras"]
+script = ExtResource("3_2l1n7")
+
+[node name="Sprite2D" type="Sprite2D" parent="Aboboras/CharacterBody2D"]
+position = Vector2(159.5, -1511.05)
+scale = Vector2(0.547297, 0.544832)
+texture = ExtResource("10_ujrf2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Aboboras/CharacterBody2D"]
+position = Vector2(158, -1458.05)
+shape = SubResource("RectangleShape2D_4r4ba")
+
+[connection signal="body_entered" from="Chão" to="." method="_on_chão_body_entered"]
