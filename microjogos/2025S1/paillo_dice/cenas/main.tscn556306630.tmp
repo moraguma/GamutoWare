@@ -1,0 +1,187 @@
+[gd_scene load_steps=28 format=3 uid="uid://djgr8pfav82d5"]
+
+[ext_resource type="Script" uid="uid://bhyew2sgyr8cq" path="res://microjogos/2025S1/projeto_leonardo_paillo/cenas/dados.gd" id="1_6mo7f"]
+[ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="1_npcfk"]
+[ext_resource type="Script" uid="uid://dkitpcp7xinue" path="res://microjogos/2025S1/projeto_leonardo_paillo/cenas/icon.gd" id="3_qa4ji"]
+[ext_resource type="Texture2D" uid="uid://67jrvqgcsq2v" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/dado1.png" id="4_cqiw6"]
+[ext_resource type="Texture2D" uid="uid://cljwg0btj5vh0" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/dado2.png" id="5_aho0k"]
+[ext_resource type="Texture2D" uid="uid://2so124dqahm3" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/dado3.png" id="6_hdkc0"]
+[ext_resource type="Texture2D" uid="uid://cmlc50n7ubyyk" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/dado4.png" id="7_ieclo"]
+[ext_resource type="Texture2D" uid="uid://cej2tnm8j3q01" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/dado5.png" id="8_33gw0"]
+[ext_resource type="Texture2D" uid="uid://c66rhe0150ppx" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/dado6.png" id="9_ut36f"]
+[ext_resource type="Texture2D" uid="uid://dg6xng2mkr7hl" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/dado7.png" id="10_lwvi1"]
+[ext_resource type="Texture2D" uid="uid://34i4l2aiaics" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/dado8.png" id="11_mkbwt"]
+[ext_resource type="Texture2D" uid="uid://njfa5cggy38e" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/dado9.png" id="12_etbqd"]
+[ext_resource type="Texture2D" uid="uid://clyro4dp7onui" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/sprite0cropped.png" id="13_sl2b6"]
+[ext_resource type="Texture2D" uid="uid://bktnl8wmvxl6h" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/sprite1cropped.png" id="14_qvqd8"]
+[ext_resource type="Texture2D" uid="uid://ve7wb10lxemw" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/sprite2cropped.png" id="15_eytck"]
+[ext_resource type="Texture2D" uid="uid://c7d2xvmoa4mey" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/poison1.png" id="16_17o5f"]
+[ext_resource type="Script" uid="uid://dleug5vwgnu4s" path="res://microjogos/2025S1/projeto_leonardo_paillo/cenas/dado_1.gd" id="16_hdkc0"]
+[ext_resource type="Texture2D" uid="uid://ct82pptnu14t3" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/poison2.png" id="17_bjo6a"]
+[ext_resource type="Texture2D" uid="uid://b1qvnq5c3774b" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/poison3.png" id="18_fe2hn"]
+[ext_resource type="Texture2D" uid="uid://bwtlm55c1mjwv" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/poison4.png" id="19_6vemf"]
+[ext_resource type="Texture2D" uid="uid://cju3g0pu6grvl" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/poison5.png" id="20_e4ltu"]
+[ext_resource type="Texture2D" uid="uid://cnre4g5t6jxk5" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/poison6.png" id="21_ror5a"]
+[ext_resource type="Texture2D" uid="uid://d2ovmbrr68d1r" path="res://microjogos/2025S1/projeto_leonardo_paillo/recursos/imagens/poison7.png" id="22_y42jl"]
+[ext_resource type="Script" uid="uid://v7hi1ir0c8x0" path="res://microjogos/2025S1/projeto_leonardo_paillo/cenas/poison_1.gd" id="24_aho0k"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c23vy"]
+load_path = "res://.godot/imported/tabuleiro.png-baadd471eca78220186c497faf34f63b.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_buvel"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_sl2b6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qvqd8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_eytck")
+}],
+"loop": true,
+"name": &"roll_dice",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_cqiw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_aho0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hdkc0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ieclo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_33gw0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ut36f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lwvi1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mkbwt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_etbqd")
+}],
+"loop": true,
+"name": &"valores",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2qa26"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_17o5f")
+}],
+"loop": true,
+"name": &"poison1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_bjo6a")
+}],
+"loop": true,
+"name": &"poison2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_fe2hn")
+}],
+"loop": true,
+"name": &"poison3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_6vemf")
+}],
+"loop": true,
+"name": &"poison4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_e4ltu")
+}],
+"loop": true,
+"name": &"poison5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_ror5a")
+}],
+"loop": true,
+"name": &"poison6",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_y42jl")
+}],
+"loop": true,
+"name": &"poison7",
+"speed": 5.0
+}]
+
+[node name="Main" type="Node2D"]
+texture_filter = 1
+
+[node name="Tabuleiro" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = SubResource("CompressedTexture2D_c23vy")
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("1_6mo7f")
+
+[node name="Icon" type="Sprite2D" parent="Node2D"]
+position = Vector2(645, 300)
+scale = Vector2(1.5, 1.372)
+texture = ExtResource("1_npcfk")
+script = ExtResource("3_qa4ji")
+
+[node name="Dado1" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(1151, 558)
+scale = Vector2(2.42143, 2.45)
+sprite_frames = SubResource("SpriteFrames_buvel")
+animation = &"valores"
+script = ExtResource("16_hdkc0")
+
+[node name="Dado2" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(779, 429)
+scale = Vector2(2.42143, 2.45)
+sprite_frames = SubResource("SpriteFrames_buvel")
+animation = &"valores"
+script = ExtResource("16_hdkc0")
+
+[node name="Dado3" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(902, 687)
+scale = Vector2(2.42143, 2.45)
+sprite_frames = SubResource("SpriteFrames_buvel")
+animation = &"valores"
+script = ExtResource("16_hdkc0")
+
+[node name="Poison1" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(1152, 686)
+scale = Vector2(2.3, 2.15714)
+sprite_frames = SubResource("SpriteFrames_2qa26")
+animation = &"poison7"
+script = ExtResource("24_aho0k")
+
+[node name="Poison2" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(904, 815)
+scale = Vector2(2.3, 2.15714)
+sprite_frames = SubResource("SpriteFrames_2qa26")
+animation = &"poison1"
