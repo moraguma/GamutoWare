@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ibqe66v4sslb"
-path="res://.godot/imported/3.png-f25f3a021ad1c05614b488ef001e12d6.ctex"
+uid="uid://cgoceq7kvcjub"
+path="res://.godot/imported/garrafa.png-da95aa253656c24ad879a6ef6e2f7feb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/3.png"
-dest_files=["res://.godot/imported/3.png-f25f3a021ad1c05614b488ef001e12d6.ctex"]
+source_file="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/garrafa.png"
+dest_files=["res://.godot/imported/garrafa.png-da95aa253656c24ad879a6ef6e2f7feb.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7ms5o0s6mdbu"
-path="res://.godot/imported/13.png-0807ca8ce9aaa732b29a886dc7fb7606.ctex"
+uid="uid://bv55ee5buuvk3"
+path="res://.godot/imported/recycle-bins-trash-sorting.png-1bdbcd134abe46e65ad7dcc3e5214b51.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/13.png"
-dest_files=["res://.godot/imported/13.png-0807ca8ce9aaa732b29a886dc7fb7606.ctex"]
+source_file="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/recycle-bins-trash-sorting.png"
+dest_files=["res://.godot/imported/recycle-bins-trash-sorting.png-1bdbcd134abe46e65ad7dcc3e5214b51.ctex"]
 
 [params]
 

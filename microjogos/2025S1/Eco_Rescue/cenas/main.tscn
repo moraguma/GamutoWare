@@ -1,110 +1,88 @@
-[gd_scene load_steps=15 format=3 uid="uid://dh6netreo7fu4"]
+[gd_scene load_steps=12 format=3 uid="uid://dh6netreo7fu4"]
 
-[ext_resource type="Texture2D" uid="uid://t7lad2y14ang" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/9.png" id="1_e86pc"]
 [ext_resource type="Script" uid="uid://cucfvuoi148np" path="res://microjogos/2025S1/Eco_Rescue/cenas/scripts/main.gd" id="1_eqogf"]
-[ext_resource type="Texture2D" uid="uid://bbx8ww3avnajr" path="res://microjogos/2023S1/fundo.jpg" id="1_p58j1"]
-[ext_resource type="Texture2D" uid="uid://drh2y1rukqirm" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/10.png" id="3_1wv6f"]
-[ext_resource type="Texture2D" uid="uid://bg5aa2ibugnyr" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/11.png" id="5_6lexf"]
-[ext_resource type="Texture2D" uid="uid://k28s0dj5iob0" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/12.png" id="7_frcfp"]
-[ext_resource type="Texture2D" uid="uid://b7ms5o0s6mdbu" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/13.png" id="9_p58j1"]
-[ext_resource type="Texture2D" uid="uid://ibqe66v4sslb" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/3.png" id="13_sg5d1"]
-[ext_resource type="Texture2D" uid="uid://d2jlw6ph8sicw" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/8.png" id="18_05nxe"]
+[ext_resource type="Texture2D" uid="uid://d1yp8f1ecddb5" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/background.png" id="2_alim5"]
+[ext_resource type="Texture2D" uid="uid://bv55ee5buuvk3" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/recycle-bins-trash-sorting.png" id="2_evdkg"]
+[ext_resource type="Script" uid="uid://c24j7f4q01cmh" path="res://microjogos/2025S1/Eco_Rescue/cenas/scripts/lixo.gd" id="3_2ok2m"]
+[ext_resource type="Texture2D" uid="uid://cgoceq7kvcjub" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/garrafa.png" id="6_kxpgf"]
+[ext_resource type="AudioStream" uid="uid://ccla3u7xwb6h3" path="res://microjogos/2025S1/Eco_Rescue/recursos/sons/venceu.wav" id="9_evdkg"]
+[ext_resource type="AudioStream" uid="uid://kpu0ex6vtww0" path="res://microjogos/2025S1/Eco_Rescue/recursos/sons/perdeu.wav" id="10_e86pc"]
+[ext_resource type="Texture2D" uid="uid://ibqe66v4sslb" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/sacola.png" id="13_sg5d1"]
+[ext_resource type="Texture2D" uid="uid://d2jlw6ph8sicw" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/lata.png" id="18_05nxe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_njsje"]
-size = Vector2(280, 41.5)
+size = Vector2(372, 590)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hlhr7"]
-size = Vector2(279.5, 34)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_05nxe"]
-size = Vector2(291, 41)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_i6kd1"]
-size = Vector2(316, 44)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kb2ns"]
-size = Vector2(316.5, 34)
+[sub_resource type="CircleShape2D" id="CircleShape2D_xllak"]
+radius = 73.8241
 
 [node name="Main" type="Node2D"]
 texture_filter = 1
-position = Vector2(960, 512)
 script = ExtResource("1_eqogf")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, -1)
-
 [node name="fundo" type="Sprite2D" parent="."]
-position = Vector2(3, 11.0001)
-scale = Vector2(1.42667, 1.62297)
-texture = ExtResource("1_p58j1")
+position = Vector2(960, 540)
+texture = ExtResource("2_alim5")
+
+[node name="Recycle-bins-trash-sorting" type="Sprite2D" parent="."]
+position = Vector2(960, 826.15)
+texture = ExtResource("2_evdkg")
+
+[node name="Papel" type="Area2D" parent="."]
+position = Vector2(240, 826.15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Papel"]
+shape = SubResource("RectangleShape2D_njsje")
 
 [node name="Metal" type="Area2D" parent="."]
-position = Vector2(-700, 350)
-
-[node name="lixeiraAmarela" type="Sprite2D" parent="Metal"]
-scale = Vector2(4.075, 4.6625)
-texture = ExtResource("7_frcfp")
+position = Vector2(720, 826.15)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Metal"]
 shape = SubResource("RectangleShape2D_njsje")
 
-[node name="Organico" type="Area2D" parent="."]
-position = Vector2(-350, 350)
-
-[node name="lixeiraMarrom" type="Sprite2D" parent="Organico"]
-scale = Vector2(4.15, 4.69375)
-texture = ExtResource("9_p58j1")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Organico"]
-shape = SubResource("RectangleShape2D_hlhr7")
-
-[node name="Vidro" type="Area2D" parent="."]
-position = Vector2(0, 350)
-
-[node name="lixeiraVerde" type="Sprite2D" parent="Vidro"]
-scale = Vector2(4.21875, 4.59375)
-texture = ExtResource("5_6lexf")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Vidro"]
-shape = SubResource("RectangleShape2D_05nxe")
-
 [node name="Plastico" type="Area2D" parent="."]
-position = Vector2(350, 350)
-
-[node name="lixeiraVermelha" type="Sprite2D" parent="Plastico"]
-scale = Vector2(4.60938, 4.69375)
-texture = ExtResource("3_1wv6f")
+position = Vector2(1200, 826.15)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plastico"]
-shape = SubResource("RectangleShape2D_i6kd1")
+shape = SubResource("RectangleShape2D_njsje")
 
-[node name="Papel" type="Area2D" parent="."]
-position = Vector2(700, 350)
+[node name="Vidro" type="Area2D" parent="."]
+position = Vector2(1680, 826.15)
 
-[node name="lixeiraAzul" type="Sprite2D" parent="Papel"]
-scale = Vector2(4.65625, 4.69375)
-texture = ExtResource("1_e86pc")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vidro"]
+shape = SubResource("RectangleShape2D_njsje")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Papel"]
-shape = SubResource("RectangleShape2D_kb2ns")
+[node name="Lixo" type="CharacterBody2D" parent="."]
+position = Vector2(720, 199)
+script = ExtResource("3_2ok2m")
 
-[node name="Button2" type="Button" parent="."]
+[node name="Lata" type="Sprite2D" parent="Lixo"]
 visible = false
-offset_left = -5.0
-offset_right = 8.0
-offset_bottom = 8.0
-
-[node name="lata" type="Sprite2D" parent="Button2"]
-position = Vector2(742, -61)
-scale = Vector2(1.6, 1.55469)
+scale = Vector2(0.21, 0.21)
 texture = ExtResource("18_05nxe")
 
-[node name="Button3" type="Button" parent="."]
+[node name="Sacola" type="Sprite2D" parent="Lixo"]
 visible = false
-
-[node name="sacola" type="Sprite2D" parent="Button3"]
-position = Vector2(45, -66)
-scale = Vector2(1.54844, 1.45156)
+scale = Vector2(0.27, 0.27)
 texture = ExtResource("13_sg5d1")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Garrafa" type="Sprite2D" parent="Lixo"]
+visible = false
+rotation = 0.453786
+scale = Vector2(0.215, 0.215)
+texture = ExtResource("6_kxpgf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lixo"]
+shape = SubResource("CircleShape2D_xllak")
+
+[node name="Win" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_evdkg")
+volume_db = -10.0
+
+[node name="Lose" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_e86pc")
+
+[connection signal="body_entered" from="Papel" to="." method="_on_papel_body_entered"]
+[connection signal="body_entered" from="Metal" to="." method="_on_metal_body_entered"]
+[connection signal="body_entered" from="Plastico" to="." method="_on_plastico_body_entered"]
+[connection signal="body_entered" from="Vidro" to="." method="_on_vidro_body_entered"]

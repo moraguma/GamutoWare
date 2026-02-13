@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://k28s0dj5iob0"
-path="res://.godot/imported/12.png-dd83b5d97f305a0339d9d1577b5bcc75.ctex"
+uid="uid://d2jlw6ph8sicw"
+path="res://.godot/imported/lata.png-c23dfcc288e712c11564937a39a37ed2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/12.png"
-dest_files=["res://.godot/imported/12.png-dd83b5d97f305a0339d9d1577b5bcc75.ctex"]
+source_file="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/lata.png"
+dest_files=["res://.godot/imported/lata.png-c23dfcc288e712c11564937a39a37ed2.ctex"]
 
 [params]
 

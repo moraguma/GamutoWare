@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drh2y1rukqirm"
-path="res://.godot/imported/10.png-0ca0dd55574428287e9e0c80df2414b0.ctex"
+uid="uid://ibqe66v4sslb"
+path="res://.godot/imported/sacola.png-1481f8752c6430cad1c2da9f53d53733.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/10.png"
-dest_files=["res://.godot/imported/10.png-0ca0dd55574428287e9e0c80df2414b0.ctex"]
+source_file="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/sacola.png"
+dest_files=["res://.godot/imported/sacola.png-1481f8752c6430cad1c2da9f53d53733.ctex"]
 
 [params]
 

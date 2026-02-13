@@ -12,88 +12,6 @@ signal lose
 const WIDTH = 1920
 const HEIGHT = 1080
 
-
-# --------------------------------------------------------------------------------------------------
-# FUNÇÕES PADRÃO
-# --------------------------------------------------------------------------------------------------
-
-var maca = preload("res://microjogos/2025S1/Eco_Rescue/cenas/Maca.tscn")
-
-const lixos = [preload("res://microjogos/2025S1/Eco_Rescue/cenas/Maca.tscn"), preload("res://microjogos/2025S1/Eco_Rescue/cenas/Sacola.tscn"), preload("res://microjogos/2025S1/Eco_Rescue/cenas/Lata.tscn")]
-const tipo_correspondentes = [1, 3, 0]
-@onready var lixeiras = [$Metal, $Organico, $Vidro, $Plastico, $Papel]
-@onready var pos = randi() % len(lixeiras)
-
-var lixo
-var lixo_local
-var tentou = false
-
-@onready var som_perdeu = load("res://microjogos/2025S1/Eco_Rescue/recursos/sons/perdeu.wav")
-@onready var som_ganhou = load("res://microjogos/2025S1/Eco_Rescue/recursos/sons/venceu.wav")
-
-# Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
-func _ready():
-	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
-	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DO SOMETHING!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("FAÇA ALGO!")
-
-	randi() % len(lixos)
-	var pos_lixo = randi() %  len(lixos)
-	
-	var lixo_cena = lixos[pos_lixo]
-	lixo_local = tipo_correspondentes[pos_lixo]
-	lixo = lixo_cena.instantiate()
-	
-	add_child(lixo)
-
-# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
-# a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
-# a última chamada desta função. O comando pass não faz nada
-func _physics_process(delta):
-	if Input.is_action_just_pressed("esquerda"):
-		pos = pos - 1
-		
-	if Input.is_action_just_pressed("direita"):
-		pos = pos + 1
-	
-	pos = clamp(pos, 0, 4)
-	
-	if Input.is_action_just_pressed("acao") and not tentou:
-		tentou = true
-		lixo.hide()
-		if pos == lixo_local:
-			register_win() 
-			print("Venceu")
-			
-		else:
-			register_lose()
-			print("Perdeu")
-	
-	var lix_atual = lixeiras[pos]
-	lixo.position.x = lix_atual.position.x
-
-
-# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a renderização, 
-# como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
-# desde a última chamada desta função. O comando pass não faz nada
-func _process(delta):
-	pass
-
-
-# --------------------------------------------------------------------------------------------------
-# SUAS FUNÇÕES
-# --------------------------------------------------------------------------------------------------
-
-
-# Um método genérico. Crie quantos métodos você precisar!
-func my_method():
-	pass
-
-
 # --------------------------------------------------------------------------------------------------
 # CONDIÇÕES DE VITÓRIA
 # --------------------------------------------------------------------------------------------------
@@ -106,13 +24,40 @@ func my_method():
 
 # Chame esta função para registrar que o jogador venceu o jogo
 func register_win():
-	$AudioStreamPlayer.stream = som_ganhou
-	$AudioStreamPlayer.play()
+	$Win.play()
 	emit_signal("win")
 
 
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
-	$AudioStreamPlayer.stream = som_perdeu
-	$AudioStreamPlayer.play()
+	$Lose.play()
 	emit_signal("lose")
+
+
+func _on_vidro_body_entered(body: Node2D) -> void:
+	if body.tipo == 'garrafa':
+		register_win()
+	else:
+		register_lose()
+	body.queue_free()
+
+func _on_plastico_body_entered(body: Node2D) -> void:
+	if body.tipo == 'sacola':
+		register_win()
+	else:
+		register_lose()
+	body.queue_free()
+	
+func _on_metal_body_entered(body: Node2D) -> void:
+	if body.tipo == 'lata':
+		register_win()
+	else:
+		register_lose()
+	body.queue_free()
+
+func _on_papel_body_entered(body: Node2D) -> void:
+	if body.tipo == 'papel':
+		register_win()
+	else:
+		register_lose()
+	body.queue_free()
