@@ -1,0 +1,197 @@
+[gd_scene load_steps=18 format=3 uid="uid://ca56etyrwy2w8"]
+
+[ext_resource type="Script" uid="uid://d04sirxomapuy" path="res://microjogos/2025S1/fast_food_pocao/cenas/scripts/main.gd" id="1_c2pbv"]
+[ext_resource type="Texture2D" uid="uid://mf2koxn56aue" path="res://microjogos/2025S1/fast_food_pocao/recursos/imagens/pocao_roxa.png" id="1_wo8ci"]
+[ext_resource type="Texture2D" uid="uid://83i685dpkq4y" path="res://microjogos/2025S1/fast_food_pocao/recursos/imagens/pocao_rosa.png" id="2_d04la"]
+[ext_resource type="Texture2D" uid="uid://wgcpsoln6a0j" path="res://microjogos/2025S1/fast_food_pocao/recursos/imagens/pocao_verde.png" id="3_c2pbv"]
+[ext_resource type="Texture2D" uid="uid://bfkwcn2ny1gev" path="res://microjogos/2025S1/fast_food_pocao/recursos/imagens/pocao_amarela.png" id="4_w6168"]
+[ext_resource type="AudioStream" uid="uid://41oilyxa32sf" path="res://microjogos/2025S1/fast_food_pocao/recursos/sons/feitico.wav" id="7_2e2rv"]
+[ext_resource type="Texture2D" uid="uid://dna37k7iryy2f" path="res://microjogos/2025S1/fast_food_pocao/recursos/imagens/watercolor-painting-flower-medieval-lace-picture-frame-8fe2e2f04f064b52337c04403cb2dfe5.png" id="7_e21le"]
+[ext_resource type="Texture2D" uid="uid://yscly2hyuxc0" path="res://microjogos/2025S1/fast_food_pocao/recursos/imagens/potion_mix.png" id="8_e21le"]
+[ext_resource type="AudioStream" uid="uid://whpu82ibdf4b" path="res://microjogos/2025S1/fast_food_pocao/recursos/sons/364929__jofae__game-die.mp3" id="8_mljui"]
+[ext_resource type="Texture2D" uid="uid://lx2jxqvs7yfa" path="res://microjogos/2025S1/fast_food_pocao/recursos/imagens/cauderao.png" id="8_r1hvl"]
+[ext_resource type="Script" uid="uid://ys55u4bswdaa" path="res://microjogos/2025S1/fast_food_pocao/cenas/scripts/potion_mix.gd" id="9_d75xv"]
+[ext_resource type="AudioStream" uid="uid://byrw82vcbq67n" path="res://microjogos/2025S1/fast_food_pocao/recursos/sons/ganhou.wav" id="9_r1hvl"]
+[ext_resource type="Theme" path="res://principal/recursos/themes/TitleTheme.tres" id="10_c3ime"]
+[ext_resource type="Texture2D" uid="uid://bgfyrk5qr8xo0" path="res://microjogos/2025S1/fast_food_pocao/recursos/imagens/background.png" id="11_mljui"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_upifg"]
+texture_margin_left = 200.0
+texture_margin_top = 200.0
+texture_margin_right = 200.0
+texture_margin_bottom = 200.0
+
+[sub_resource type="Theme" id="Theme_mljui"]
+Button/styles/focus = SubResource("StyleBoxTexture_upifg")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e21le"]
+bg_color = Color(0.870246, 0.745006, 0.579849, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.429106, 0.25807, 0.0725015, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_color = Color(0, 0, 0, 0.380392)
+shadow_size = 10
+shadow_offset = Vector2(5, 5)
+
+[node name="Main" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c2pbv")
+roxo = ExtResource("1_wo8ci")
+rosa = ExtResource("2_d04la")
+verde = ExtResource("3_c2pbv")
+amarelo = ExtResource("4_w6168")
+
+[node name="Fundo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_mljui")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="Roxo" type="TextureButton" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+focus_neighbor_right = NodePath("../Rosa")
+focus_neighbor_bottom = NodePath("../Verde")
+mouse_filter = 2
+theme = SubResource("Theme_mljui")
+texture_normal = ExtResource("1_wo8ci")
+texture_focused = ExtResource("7_e21le")
+
+[node name="Rosa" type="TextureButton" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+focus_neighbor_left = NodePath("../Roxo")
+focus_neighbor_bottom = NodePath("../Amarelo")
+mouse_filter = 2
+theme = SubResource("Theme_mljui")
+texture_normal = ExtResource("2_d04la")
+texture_focused = ExtResource("7_e21le")
+
+[node name="Verde" type="TextureButton" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+focus_neighbor_top = NodePath("../Roxo")
+focus_neighbor_right = NodePath("../Amarelo")
+mouse_filter = 2
+theme = SubResource("Theme_mljui")
+texture_normal = ExtResource("3_c2pbv")
+texture_focused = ExtResource("7_e21le")
+
+[node name="Amarelo" type="TextureButton" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+focus_neighbor_left = NodePath("../Verde")
+focus_neighbor_top = NodePath("../Rosa")
+mouse_filter = 2
+theme = SubResource("Theme_mljui")
+texture_normal = ExtResource("4_w6168")
+texture_focused = ExtResource("7_e21le")
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_e21le")
+
+[node name="Receita" type="HBoxContainer" parent="MarginContainer/PanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/separation = -20
+
+[node name="PotionMix" type="Sprite2D" parent="."]
+modulate = Color(0.254491, 0.359805, 0.605623, 1)
+position = Vector2(960, 833.25)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_e21le")
+script = ExtResource("9_d75xv")
+
+[node name="Cauderao" type="Sprite2D" parent="."]
+position = Vector2(960, 833.25)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_r1hvl")
+
+[node name="feitico" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_2e2rv")
+
+[node name="perdeu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_mljui")
+
+[node name="ganhou" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_r1hvl")
+
+[node name="Perdeu" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -666.5
+offset_top = -123.5
+offset_right = 666.5
+offset_bottom = 123.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("10_c3ime")
+text = "Você perdeu!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Ganhou" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -666.5
+offset_top = -123.5
+offset_right = 666.5
+offset_bottom = 123.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("10_c3ime")
+text = "Você ganhou!"
+horizontal_alignment = 1
+vertical_alignment = 1
