@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cp1qj6bl2c0bs"]
 
-[ext_resource type="Script" uid="uid://ccfjua06gjfyw" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/Area2D.gd" id="1_tcbpx"]
+[ext_resource type="Script" uid="uid://ccfjua06gjfyw" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/scripts/Area2D.gd" id="1_tcbpx"]
 [ext_resource type="Texture2D" uid="uid://bpcmcva7v7ahu" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/Nave_1.png" id="2_l6aqd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pay82"]
@@ -9,7 +9,6 @@ size = Vector2(256, 80)
 [node name="Inimigo" type="Area2D"]
 light_mask = 3
 visibility_layer = 3
-position = Vector2(880, 624)
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_tcbpx")
@@ -22,4 +21,4 @@ shape = SubResource("RectangleShape2D_pay82")
 texture = ExtResource("2_l6aqd")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
-[connection signal="body_entered" from="." to="." method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

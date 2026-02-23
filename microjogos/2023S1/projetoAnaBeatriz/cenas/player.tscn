@@ -1,21 +1,21 @@
 [gd_scene load_steps=5 format=3 uid="uid://dqwdde2v241xr"]
 
-[ext_resource type="Script" uid="uid://cfwiss4fjoor0" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/player.gd" id="1_1ywkb"]
+[ext_resource type="Script" uid="uid://cfwiss4fjoor0" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/scripts/player.gd" id="1_1ywkb"]
 [ext_resource type="Texture2D" uid="uid://cywen6tasoke4" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/SpaceShip.png" id="2_87uws"]
-[ext_resource type="Script" uid="uid://c1xao37dw48ty" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/SpaceShip.gd" id="3_081xl"]
+[ext_resource type="Script" uid="uid://c1xao37dw48ty" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/scripts/SpaceShip.gd" id="3_081xl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_68caw"]
-size = Vector2(92.1212, 93.617)
+size = Vector2(153, 176)
 
 [node name="Area2D2" type="CharacterBody2D"]
-position = Vector2(885.5, 974)
-scale = Vector2(1.65, 1.88)
 script = ExtResource("1_1ywkb")
 
 [node name="SpaceShip" type="Sprite2D" parent="."]
+texture_filter = 3
+scale = Vector2(1.65, 1.88)
 texture = ExtResource("2_87uws")
 script = ExtResource("3_081xl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.909058, 1.06378)
+position = Vector2(-0.499998, 2)
 shape = SubResource("RectangleShape2D_68caw")

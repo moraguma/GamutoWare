@@ -11,6 +11,19 @@ signal lose
 const WIDTH = 1920
 const HEIGHT = 1080
 
+const MIN_X = 600.0
+const MAX_X = 1320.0
+const START_Y = 250
+const SEPARACAO = 300
+
+
+var timer
+var total_enemies = 4
+var morreu = false
+
+@onready var explosion = $Explosion
+@onready var inimigos = [$Inimigo, $Inimigo2, $Inimigo3, $"Nave maior"]
+
 
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES PADRÃO
@@ -18,21 +31,13 @@ const HEIGHT = 1080
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
-	pass
-
-
-# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
-# a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
-# a última chamada desta função. O comando pass não faz nada
-func _physics_process(delta):
-	pass
-
-
-# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a renderização, 
-# como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
-# desde a última chamada desta função. O comando pass não faz nada
-func _process(delta):
-	pass
+	
+	var y = START_Y
+	for inimigo in inimigos:
+		inimigo.position = Vector2(randf_range(MIN_X, MAX_X), y)
+		y -= SEPARACAO
+	
+	$Music.play()
 
 
 # --------------------------------------------------------------------------------------------------
@@ -40,9 +45,18 @@ func _process(delta):
 # --------------------------------------------------------------------------------------------------
 
 
+func morrer():
+	morreu = true
+
+
 # Um método genérico. Crie quantos métodos você precisar!
-func my_method():
-	pass
+func delete_enemy():
+	explosion.play()
+	
+	total_enemies -= 1
+	
+	if total_enemies == 0 and not morreu:
+		register_win() 
 
 
 # --------------------------------------------------------------------------------------------------
