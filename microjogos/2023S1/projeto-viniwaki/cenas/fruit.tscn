@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://c8nyydvpcpkff"]
 
-[ext_resource type="Script" uid="uid://bfru8pa5r11r8" path="res://microjogos/2023S1/projeto-viniwaki/cenas/fruit.gd" id="1_oy4q4"]
+[ext_resource type="Script" uid="uid://bfru8pa5r11r8" path="res://microjogos/2023S1/projeto-viniwaki/cenas/scripts/fruit.gd" id="1_oy4q4"]
 [ext_resource type="Texture2D" uid="uid://cqmymveo2q7cg" path="res://microjogos/2023S1/projeto-viniwaki/recursos/maca0.png" id="2_namhp"]
 [ext_resource type="Texture2D" uid="uid://583dlj8q6m3i" path="res://microjogos/2023S1/projeto-viniwaki/recursos/maca1.png" id="3_yjht8"]
 [ext_resource type="Texture2D" uid="uid://b7k1yuf8yjjky" path="res://microjogos/2023S1/projeto-viniwaki/recursos/banana0.png" id="4_ljwuf"]
@@ -8,8 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://vc3ktpsdkndw" path="res://microjogos/2023S1/projeto-viniwaki/recursos/abacaxi0.png" id="6_xej1g"]
 [ext_resource type="Texture2D" uid="uid://b6wl0kja2ep81" path="res://microjogos/2023S1/projeto-viniwaki/recursos/abacaxi1.png" id="7_xfo7u"]
 [ext_resource type="Texture2D" uid="uid://dj6eh8y2firss" path="res://microjogos/2023S1/projeto-viniwaki/recursos/melancia0.png" id="8_8wpek"]
-[ext_resource type="Script" uid="uid://d2yjh632gy085" path="res://microjogos/2023S1/projeto-viniwaki/cenas/arrow.gd" id="8_kde45"]
+[ext_resource type="Script" uid="uid://d2yjh632gy085" path="res://microjogos/2023S1/projeto-viniwaki/cenas/scripts/arrow.gd" id="8_kde45"]
 [ext_resource type="Texture2D" uid="uid://dx6s0l443b2tm" path="res://microjogos/2023S1/projeto-viniwaki/recursos/melancia1.png" id="9_vr5a1"]
+[ext_resource type="Texture2D" uid="uid://ck5q02p5r8crp" path="res://microjogos/2023S1/projeto-viniwaki/recursos/kb-arrow.png" id="10_f36c2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0ensf"]
 
@@ -60,9 +61,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h3t2u"]
-load_path = "res://.godot/imported/kb-arrow.png-17172e2d73ec81053a6b7d9d98f42a23.ctex"
-
 [node name="fruit" type="RigidBody2D"]
 gravity_scale = 2.0
 script = ExtResource("1_oy4q4")
@@ -83,9 +81,10 @@ scale = Vector2(6.8, 6.8)
 
 [node name="arrow" type="Sprite2D" parent="."]
 z_index = 1
+texture_filter = 3
 position = Vector2(200, 0)
 scale = Vector2(1.70312, 1.70312)
-texture = SubResource("CompressedTexture2D_h3t2u")
+texture = ExtResource("10_f36c2")
 script = ExtResource("8_kde45")
 
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

@@ -1,12 +1,12 @@
 [gd_scene load_steps=15 format=4 uid="uid://bnf72gff18p7h"]
 
-[ext_resource type="Script" uid="uid://bajbsli8th0u8" path="res://microjogos/2023S1/projeto-viniwaki/cenas/main.gd" id="1_cnk73"]
+[ext_resource type="Script" uid="uid://ba22mmcume6ri" path="res://microjogos/2023S1/projeto-viniwaki/cenas/scripts/main.gd" id="1_cnk73"]
 [ext_resource type="Texture2D" uid="uid://v4o7y7blwf5x" path="res://microjogos/2023S1/projeto-viniwaki/recursos/BGfruitsamurai.jpg" id="2_srmpp"]
 [ext_resource type="Texture2D" uid="uid://b5qgliy6b7wcb" path="res://microjogos/2023S1/projeto-viniwaki/recursos/AnmCortef1.png" id="3_scurw"]
 [ext_resource type="Texture2D" uid="uid://bcrlq1h82jp5a" path="res://microjogos/2023S1/projeto-viniwaki/recursos/AnmCortef2.png" id="4_gayrl"]
 [ext_resource type="Texture2D" uid="uid://b5ybrueifp7qq" path="res://microjogos/2023S1/projeto-viniwaki/recursos/AnmCortef3.png" id="5_vgy4y"]
 [ext_resource type="Texture2D" uid="uid://6n6wm0j0pawg" path="res://microjogos/2023S1/projeto-viniwaki/recursos/AnmCortef4.png" id="6_sbtm5"]
-[ext_resource type="Script" uid="uid://clix3csva27sd" path="res://microjogos/2023S1/projeto-viniwaki/cenas/slice.gd" id="9_rl7mx"]
+[ext_resource type="Script" uid="uid://clix3csva27sd" path="res://microjogos/2023S1/projeto-viniwaki/cenas/scripts/slice.gd" id="9_rl7mx"]
 
 [sub_resource type="Curve2D" id="Curve2D_ngptm"]
 _data = {
