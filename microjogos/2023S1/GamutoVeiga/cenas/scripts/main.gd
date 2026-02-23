@@ -80,11 +80,9 @@ func subir_escolhido(x):
 
 func resultado(x):
 	if abs(copo_2.position.x - x) < TOLERANCE:
-		print("VENCEU")
 		efeito_ganhou.play()
 		register_win()
 	else:
-		print("PERDEU")
 		timer.disconnect("timeout", mostrar)
 		timer.connect("timeout", subir_copo_certo)
 		timer.set_wait_time(0.5)

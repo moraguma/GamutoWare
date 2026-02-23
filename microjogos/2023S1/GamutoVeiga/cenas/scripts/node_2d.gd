@@ -34,24 +34,12 @@ func _process(delta):
 	if Input.is_action_pressed("esquerda"):
 		ja_escolheu = true
 		apenas_subir()
-		if round(copo_2.position.x) == 750:
-			print("VENCEU")
-		else:
-			print("PERDEU")
 	elif Input.is_action_pressed("cima"):
 		ja_escolheu = true
 		apenas_subir()
-		if round(copo_2.position.x) == 1000:
-			print("VENCEU")
-		else:
-			print("PERDEU")
 	elif Input.is_action_pressed("direita"):
 		ja_escolheu = true
 		apenas_subir()
-		if round(copo_2.position.x) == 1250:
-			print("VENCEU")
-		else:
-			print("PERDEU")
 			
 func apenas_subir():
 	copo_1.subir()
