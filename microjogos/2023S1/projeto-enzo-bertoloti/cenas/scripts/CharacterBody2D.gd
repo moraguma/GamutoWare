@@ -38,7 +38,6 @@ func _on_win_body_entered(body):
 	var player = $"../Player"
 	if body == player:
 		base.register_win()
-		print("Voce ganhou!")
 		jogo_acabou = true
 		som_morte.play()
 
@@ -46,7 +45,5 @@ func _on_espinhos_body_entered(body):
 	var player = $"../Player"
 	if body == player:
 		base.emit_signal("lose")
-		print("Voce perdeu!")
 		jogo_acabou = true
 		som_morte.play()
-
