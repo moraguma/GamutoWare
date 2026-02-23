@@ -2,5 +2,3 @@
 /.import
 /principal/saves/save.tres
 /addons
-**/__pycache__/
-*.pyc
