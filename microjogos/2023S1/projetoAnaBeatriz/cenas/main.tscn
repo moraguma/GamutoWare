@@ -45,6 +45,10 @@ collision_mask = 3
 script = ExtResource("5_fecm5")
 vida = 3
 
+[node name="Ufo2" type="Sprite2D" parent="Nave maior"]
+modulate = Color(0.517647, 0.976471, 0.482353, 1)
+texture = ExtResource("8_j23x7")
+
 [node name="Ufo2" type="Sprite2D" parent="Nave maior" unique_id=477275072]
 modulate = Color(0.517647, 0.976471, 0.482353, 1)
 texture = ExtResource("8_j23x7")
