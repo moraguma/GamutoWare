@@ -34,30 +34,7 @@ animations = [{
 
 [node name="Main" type="Node2D"]
 
-[node name="SamplePlayer" type="SamplePlayer" parent="."]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-config/polyphony = 1
-default/volume_db = -3.0
-default/pitch_scale = 1.0
-default/pan = 0.0
-default/depth = 0.0
-default/height = 0.0
-default/filter/type = 0
-default/filter/cutoff = 5000.0
-default/filter/resonance = 1.0
-default/filter/gain = 1.0
-default/reverb_room = 2
-default/reverb_send = 0.0
-default/chorus_send = 0.0
-script = null
+[node name="SamplePlayer" type="AudioStreamPlayer" parent="."]
 
 [node name="EndTimer" type="Timer" parent="."]
 process_mode = 1
@@ -294,30 +271,7 @@ hframes = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goats/Goat_0" groups=["Goats"]]
 shape = SubResource("3")
 
-[node name="SamplePlayer" type="SamplePlayer" parent="Goats/Goat_0"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-config/polyphony = 1
-default/volume_db = -4.0
-default/pitch_scale = 1.0
-default/pan = 0.0
-default/depth = 0.0
-default/height = 0.0
-default/filter/type = 0
-default/filter/cutoff = 5000.0
-default/filter/resonance = 1.0
-default/filter/gain = 1.0
-default/reverb_room = 2
-default/reverb_send = 0.0
-default/chorus_send = 0.0
-script = null
+[node name="SamplePlayer" type="AudioStreamPlayer" parent="Goats/Goat_0"]
 
 [node name="Goat_1" type="CharacterBody2D" parent="Goats" groups=["Goats"]]
 
@@ -327,30 +281,7 @@ hframes = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goats/Goat_1" groups=["Goats"]]
 shape = SubResource("3")
 
-[node name="SamplePlayer" type="SamplePlayer" parent="Goats/Goat_1"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-config/polyphony = 1
-default/volume_db = -4.0
-default/pitch_scale = 1.0
-default/pan = 0.0
-default/depth = 0.0
-default/height = 0.0
-default/filter/type = 0
-default/filter/cutoff = 5000.0
-default/filter/resonance = 1.0
-default/filter/gain = 1.0
-default/reverb_room = 2
-default/reverb_send = 0.0
-default/chorus_send = 0.0
-script = null
+[node name="SamplePlayer" type="AudioStreamPlayer" parent="Goats/Goat_1"]
 
 [node name="Goat_2" type="CharacterBody2D" parent="Goats" groups=["Goats"]]
 
@@ -360,30 +291,7 @@ hframes = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goats/Goat_2" groups=["Goats"]]
 shape = SubResource("3")
 
-[node name="SamplePlayer" type="SamplePlayer" parent="Goats/Goat_2"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-config/polyphony = 1
-default/volume_db = -4.0
-default/pitch_scale = 1.0
-default/pan = 0.0
-default/depth = 0.0
-default/height = 0.0
-default/filter/type = 0
-default/filter/cutoff = 5000.0
-default/filter/resonance = 1.0
-default/filter/gain = 1.0
-default/reverb_room = 2
-default/reverb_send = 0.0
-default/chorus_send = 0.0
-script = null
+[node name="SamplePlayer" type="AudioStreamPlayer" parent="Goats/Goat_2"]
 
 [node name="Aim" type="Area2D" parent="."]
 gravity = 98.0
