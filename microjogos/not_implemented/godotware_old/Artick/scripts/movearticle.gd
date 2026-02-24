@@ -9,4 +9,4 @@ func _ready():
 	# Initialization here
 	pass
 func _process(delta):
-	move(Vector2(0,2))
+	position += Vector2(0,2)

@@ -26,7 +26,7 @@ func shake(new_magnitude, lifetime):
 		var pos = Vector2()
 		pos.x = randf_range(-magnitude, magnitude)
 		pos.y = randf_range(-magnitude, magnitude)
-		set_pos(pos)
+		position = pos
 		
 		# decrease timeleft
 		timeleft -= get_process_delta_time()
@@ -41,4 +41,4 @@ func shake(new_magnitude, lifetime):
 	is_shaking = false
 	
 	# set camera to it's original position
-	set_pos(Vector2(0,0))
+	position = Vector2(0,0)

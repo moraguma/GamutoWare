@@ -7,8 +7,8 @@ var speed = Vector2()
 @export var armor = 1 : set = set_armor
 
 # store explosion scene
-const scn_explosion = preload('res://minigames/SpaceShooter/scenes/Explosion.tscn')
-
+const scn_explosion = preload("res://microjogos/not_implemented/godotware_old/SpaceShooter/scenes/Explosion.tscn"
+)
 # first function called (just one time)
 func _ready():
 	set_process(true) # enable _process
@@ -20,11 +20,11 @@ func _process(delta):
 	translate(speed * delta) # set it's position based on speed
 	
 	# if out of screen, delete the node
-	if get_pos().y-16 >= global.view_size.height or \
-		get_pos().y+16 <= 0 or \
-		get_pos().x-16 >= global.view_size.width or \
-		get_pos().x+16 <= 0:
-			queue_free()
+	#if position.y-16 >= global.view_size.height or \
+	#	position.y+16 <= 0 or \
+		#position.x-16 >= global.view_size.width or \
+		#position.x+16 <= 0:
+			#queue_free()
 
 # when something is colliding...
 func _on_area_enter(other):
@@ -39,8 +39,8 @@ func set_armor(new_value):
 		return 
 	
 	if new_value < armor: # if enemy got damaged...
-		global.main_node.get_node('Audio_Player').play('hit_enemy') # play hit_enemy sound
-		
+		#global.main_node.get_node('Audio_Player').play('hit_enemy') # play hit_enemy sound
+		pass
 	armor = new_value # armor is set to the given parameter
 	
 	if armor <= 0: # if it's armor (life) is 0 or less...
@@ -50,5 +50,5 @@ func set_armor(new_value):
 # creates explosion effect
 func create_explosion():
 	var explosion = scn_explosion.instantiate() # instanciate scn_explosion
-	explosion.set_pos(get_pos()) # set the effect position to enemy's position
-	global.main_node.add_child(explosion) # add it to main node
+	explosion.set_pos(position) # set the effect position to enemy's position
+	#global.main_node.add_child(explosion) # add it to main node

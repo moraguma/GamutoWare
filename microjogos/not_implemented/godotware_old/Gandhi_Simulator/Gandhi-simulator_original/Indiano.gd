@@ -16,7 +16,7 @@ func _ready():
 
 func _on_Area2D_body_enter( body ):
 	if body.get_name() == "Gandhi":
-		set_pos(Vector2(x,y))
+		#set_pos(Vector2(x,y))
 		randomize()
 		x = randi()%1200+40 
 		y = (randi()%600+60)

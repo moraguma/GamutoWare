@@ -33,7 +33,7 @@ func _process(delta):
 		timer += delta
 		if timer >= waitTime:
 			timer = 0
-			move(Vector2(25,0))
+			#move(Vector2(25,0))
 			if sprite == 0:
 				sprite = 1
 				get_node("Sprite2D").set_frame(1)

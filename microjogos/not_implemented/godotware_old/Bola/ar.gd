@@ -14,15 +14,15 @@ func _ready():
 	
 func _process(delta):
 	var position = get_node(".").get_global_pos()
-	if get_global_mouse_pos().y >= 200:
+	if get_global_mouse_position().y >= 200:
 		position.y = 200
 		if pronto:
 			click += 1
 		pronto = false
-	elif get_global_mouse_pos().y <= 100:
+	elif get_global_mouse_position().y <= 100:
 		position.y = 100
 		pronto = true
 	else:
-		position.y = get_global_mouse_pos().y
+		position.y = get_global_mouse_position().y
 	get_node(".").set_global_pos(position)
 			

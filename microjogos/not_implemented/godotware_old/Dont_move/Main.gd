@@ -1,5 +1,3 @@
-extends "res://scripts/minigame.gd"
-
 #=== MINIGAME BOILERPLATE ===#
 
 #-> Check inherited file scripts/minigame.gd for more details
@@ -13,7 +11,7 @@ func _ready():
 	pass
 
 func _input(event):
-	if event.type == InputEvent.MOUSE_MOTION or event.type == InputEvent.MOUSE_BUTTON or event.type == InputEvent.KEY:
+	#if event.type == InputEvent.MOUSE_MOTION or event.type == InputEvent.MOUSE_BUTTON or event.type == InputEvent.KEY:
 		emit_signal("minigame_end", false)
 
 func _process(delta):
@@ -23,15 +21,4 @@ func _process(delta):
 	#To finish the game with a defeat, use:
 	#		emit_signal("minigame_end", false)
 	#Be wary that timeouts may trigger defeat by default. You can change that by tweaking with TIMEOUT_WIN variable in setup
-	pass
-
-func start():
-	#Be sure to only enable minigame elements in this method.
-	set_process_input(true)
-	super.start()
-	pass
-
-func stop():
-	#Be sure to disable active minigame elements in this method.
-	super.stop()
 	pass

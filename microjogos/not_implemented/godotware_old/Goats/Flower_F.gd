@@ -21,5 +21,3 @@ func _process(delta):
 				emit_signal("perdeu")
 				morreu = true
 	pass
-
-

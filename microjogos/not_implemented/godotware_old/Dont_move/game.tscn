@@ -1,19 +1,5 @@
-[gd_scene load_steps=2 format=3 uid="uid://dxwve7nxax4ki"]
-
-[sub_resource type="Resource" id="Resource_5c0dj"]
-metadata/__load_path__ = "res://minigames/Dont_move/dont.png"
+[gd_scene format=3 uid="uid://dxwve7nxax4ki"]
 
 [node name="Main" type="Node2D"]
 
-[node name="TextureFrame" type="TextureFrame" parent="."]
-rect/scale = Vector2(0.5, 0.5)
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -2.0
-margin/top = -41.0
-margin/right = 1278.0
-margin/bottom = 855.0
-texture = SubResource("Resource_5c0dj")
-stretch_mode = 0
+[node name="TextureFrame" type="TextureRect" parent="."]

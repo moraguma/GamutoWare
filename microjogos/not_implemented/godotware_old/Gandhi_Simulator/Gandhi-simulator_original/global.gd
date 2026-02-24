@@ -8,6 +8,7 @@ func _ready():
 	set_process(true)
 	pass
 func _process(delta):
-	if playerpont > record:
-  		record = playerpont
+	#if playerpont > record:
+  	#	record = playerpont
+	pass
 	

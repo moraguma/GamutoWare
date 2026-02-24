@@ -16,5 +16,3 @@ func _process(delta):
 		if body.is_in_group("Goats"):
 			get_node("Sprite2D").set_frame(5)
 	pass
-
-

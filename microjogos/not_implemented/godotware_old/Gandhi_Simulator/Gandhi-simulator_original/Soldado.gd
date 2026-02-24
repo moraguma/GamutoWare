@@ -15,14 +15,14 @@ func _fixed_process(delta):
 			c = randi()%30
 			b = c%4
 		
-		if b ==0:
-			move(Vector2(0,-2))
-		if b == 1:
-			move(Vector2(2,0))
-		if b ==2:
-			move(Vector2(0,2))
-		if b ==3:
-			move(Vector2(-2,0))
+		#if b ==0:
+			#move(Vector2(0,-2))
+		#if b == 1:
+			#move(Vector2(2,0))
+		#if b ==2:
+			#move(Vector2(0,2))
+		#if b ==3:
+			#move(Vector2(-2,0))
 				
 		c = c +1
 	d += 1

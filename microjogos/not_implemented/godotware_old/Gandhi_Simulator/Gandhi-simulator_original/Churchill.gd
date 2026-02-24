@@ -3,9 +3,6 @@ var a = 0
 var b = 0
 var c = 0
 
-func _ready():
-	set_fixed_process(true)
-	pass
 func _fixed_process(delta):
 	if c%80==0:
 		randomize()

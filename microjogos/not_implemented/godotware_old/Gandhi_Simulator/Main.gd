@@ -1,4 +1,4 @@
-extends "res://scripts/minigame.gd"
+#extends "res://scripts/minigame.gd"
 
 #=== MINIGAME BOILERPLATE ===#
 
@@ -21,18 +21,18 @@ func _process(delta):
 	#Be wary that timeouts may trigger defeat by default. You can change that by tweaking with TIMEOUT_WIN variable in setup
 	pass
 
-func start():
-	#Be sure to only enable minigame elements in this method.
-	for node in get_node("Node2D").get_children():
-		if node.is_in_group("inimigo"):
-			node.set_fixed_process(true)
-	super.start()
-	pass
-
-func stop():
-	#Be sure to disable active minigame elements in this method.
-	super.stop()
-	pass
-	
-func lost():
-	emit_signal("minigame_end", false)
+#func start():
+	##Be sure to only enable minigame elements in this method.
+	#for node in get_node("Node2D").get_children():
+		#if node.is_in_group("inimigo"):
+			#node.set_fixed_process(true)
+	#super.start()
+	#pass
+#
+#func stop():
+	##Be sure to disable active minigame elements in this method.
+	#super.stop()
+	#pass
+	#
+#func lost():
+	#emit_signal("minigame_end", false)
