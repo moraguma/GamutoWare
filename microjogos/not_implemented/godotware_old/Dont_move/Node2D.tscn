@@ -1,57 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://bk6g01x2036fl"]
+[gd_scene load_steps=2 format=3 uid="uid://bk6g01x2036fl"]
 
 [ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="8"]
 
-[sub_resource type="Resource" id="Resource_46ky6"]
-metadata/__load_path__ = "res://minigames/Dont_move/Node2D.gd"
-
-[sub_resource type="Resource" id="Resource_d8cvj"]
-metadata/__load_path__ = "res://minigames/Dont_move/dont.png"
-
-[sub_resource type="Resource" id="Resource_oi81b"]
-metadata/__load_path__ = "res://minigames/Dont_move/Main.gd"
-
-[sub_resource type="Resource" id="Resource_mo12i"]
-metadata/__load_path__ = "res://minigames/Dont_move/win.png"
-
-[sub_resource type="Resource" id="Resource_fp1tq"]
-metadata/__load_path__ = "res://minigames/Dont_move/win.gd"
-
-[sub_resource type="Resource" id="Resource_tqmqp"]
-metadata/__load_path__ = "res://minigames/Dont_move/lost.png"
-
-[sub_resource type="Resource" id="Resource_usu1t"]
-metadata/__load_path__ = "res://minigames/Dont_move/lost.gd"
-
-[sub_resource type="Resource" id="Resource_btghy"]
-metadata/__load_path__ = "res://minigames/Dont_move/timer.gd"
-
 [node name="game" type="Node2D"]
-script/script = SubResource("Resource_46ky6")
 
 [node name="dont" type="Sprite2D" parent="."]
-transform/pos = Vector2(504.22, 267.35)
-transform/scale = Vector2(0.799633, 0.730004)
-texture = SubResource("Resource_d8cvj")
-script/script = SubResource("Resource_oi81b")
-NAME = "Sample"
-INSTRUCTION = "TAP!"
-DURATION = 5.0
-TIMEOUT_WIN = false
 
 [node name="win" type="Sprite2D" parent="."]
-transform/pos = Vector2(-622.809, 788)
-transform/scale = Vector2(1, 1.53125)
-texture = SubResource("Resource_mo12i")
-script/script = SubResource("Resource_fp1tq")
 
 [node name="lost" type="Sprite2D" parent="."]
-transform/pos = Vector2(-636.868, 171)
-transform/scale = Vector2(0.966076, 1.35714)
-texture = SubResource("Resource_tqmqp")
-script/script = SubResource("Resource_usu1t")
 
 [node name="timer" type="Sprite2D" parent="."]
-transform/pos = Vector2(1019.69, 579.243)
 texture = ExtResource("8")
-script/script = SubResource("Resource_btghy")
