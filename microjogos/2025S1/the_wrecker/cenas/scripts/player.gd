@@ -36,7 +36,7 @@ func _input(event: InputEvent) -> void:
 		anim_tree.set("parameters/conditions/lat", true)
 		lista_digito.append(2)
 	
-	for i in range(len(lista_digito)):
+	for i in range(min(len(lista_digito), len(lista_true))):
 		if lista_digito[i] != lista_true[i]:
 			texto.text = "Nem fez cógecas"
 			lista_digito = []
