@@ -1,6 +1,6 @@
-[gd_scene load_steps=18 format=3 uid="uid://ca56etyrwy2w8"]
+[gd_scene load_steps=18 format=3 uid="uid://cw7bb6dljqkxg"]
 
-[ext_resource type="Script" uid="uid://d04sirxomapuy" path="res://microjogos/2025S1/fast_food_pocao/cenas/scripts/main.gd" id="1_c2pbv"]
+[ext_resource type="Script" uid="uid://b5qmw60c4xfj" path="res://microjogos/2025S1/fast_food_pocao/cenas/scripts/main.gd" id="1_soe26"]
 [ext_resource type="Texture2D" uid="uid://mf2koxn56aue" path="res://microjogos/2025S1/fast_food_pocao/recursos/imagens/pocao_roxa.png" id="1_wo8ci"]
 [ext_resource type="Texture2D" uid="uid://83i685dpkq4y" path="res://microjogos/2025S1/fast_food_pocao/recursos/imagens/pocao_rosa.png" id="2_d04la"]
 [ext_resource type="Texture2D" uid="uid://wgcpsoln6a0j" path="res://microjogos/2025S1/fast_food_pocao/recursos/imagens/pocao_verde.png" id="3_c2pbv"]
@@ -47,7 +47,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_c2pbv")
+script = ExtResource("1_soe26")
 roxo = ExtResource("1_wo8ci")
 rosa = ExtResource("2_d04la")
 verde = ExtResource("3_c2pbv")
