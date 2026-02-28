@@ -12,11 +12,13 @@ title_en = &"Free the gamutos!"
 credits_pt = "Criado por: Darlinne Palo Soto
 Assets:
 - https://opengameart.org/content/vine-with-thorns
-- https://opengameart.org/content/teleporter-circle"
+- https://opengameart.org/content/teleporter-circle
+- https://pixabay.com/sound-effects/musical-jungle-sound-effect-249042/"
 credits_en = "Made by: Darlinne Palo Soto
 Assets:
 - https://opengameart.org/content/vine-with-thorns
-- https://opengameart.org/content/teleporter-circle"
+- https://opengameart.org/content/teleporter-circle
+- https://pixabay.com/sound-effects/musical-jungle-sound-effect-249042/"
 start_message_pt = &"FUJA!"
 start_message_en = &"ESCAPE!"
 main_scene = ExtResource("2_q8v4x")
