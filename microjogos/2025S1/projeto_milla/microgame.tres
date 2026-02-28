@@ -10,9 +10,19 @@ cover = ExtResource("1_hc4nf")
 title_pt = &"A Menina e as abóboras"
 title_en = &"The girl and the pumpkins"
 credits_pt = "Feito por: Mirella dos Santos Nascimento
-Descrição: As abóboras caem e vc tem que apertar as setas antes que elas chegem no chão."
+Descrição: As abóboras caem e vc tem que apertar as setas antes que elas chegem no chão.
+
+Audios:
+https://pixabay.com/sound-effects/technology-game-bonus-03-487857/
+https://pixabay.com/sound-effects/film-special-effects-error-mistake-sound-effect-incorrect-answer-437420/
+https://pixabay.com/sound-effects/nature-crows-387253/"
 credits_en = "Made by: Mirella dos Santos Nascimento
-Description: The pumpkins fall and you have to press the arrow keys before they hit the ground."
+Description: The pumpkins fall and you have to press the arrow keys before they hit the ground.
+
+Audios:
+https://pixabay.com/sound-effects/technology-game-bonus-03-487857/
+https://pixabay.com/sound-effects/film-special-effects-error-mistake-sound-effect-incorrect-answer-437420/
+https://pixabay.com/sound-effects/nature-crows-387253/"
 start_message_pt = &"Pegue as aboboras!"
 start_message_en = &"Get the pumpkins!"
 main_scene = ExtResource("2_uv50y")

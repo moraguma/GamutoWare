@@ -7,7 +7,7 @@ var lower_position = 0
 
 func _process(delta: float) -> void:
 	lower_position = 0
-	for child : CharacterBody2D in get_children():
+	for child : CharacterBody2D in get_children().filter(func(node): return node is CharacterBody2D):
 		if child.position.y > lower_position:
 			lower_child = child
 			lower_position = child.position.y
