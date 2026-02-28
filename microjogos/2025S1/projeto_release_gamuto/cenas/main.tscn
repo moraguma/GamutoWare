@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://be3qp7eeie8jc"]
+[gd_scene load_steps=13 format=3 uid="uid://be3qp7eeie8jc"]
 
 [ext_resource type="Script" uid="uid://ciwuu88mnfv0m" path="res://microjogos/2025S1/projeto_release_gamuto/cenas/scripts/main.gd" id="1_10v88"]
 [ext_resource type="PackedScene" uid="uid://cukuda88govik" path="res://microjogos/2025S1/projeto_release_gamuto/cenas/player.tscn" id="1_aq3mr"]
@@ -7,6 +7,7 @@
 [ext_resource type="Shader" uid="uid://u41uelcg8ut7" path="res://microjogos/2025S1/projeto_release_gamuto/recursos/obstaculo.tres" id="6_1o0mn"]
 [ext_resource type="Script" uid="uid://bjj7fp5mxyq1r" path="res://microjogos/2025S1/projeto_release_gamuto/cenas/scripts/obstacle_spawner.gd" id="6_2nbt6"]
 [ext_resource type="Texture2D" uid="uid://caj7xuxpao6ps" path="res://microjogos/2025S1/projeto_release_gamuto/recursos/imagens/vinhaTile2.png" id="6_7my77"]
+[ext_resource type="AudioStream" uid="uid://dbvu0p7ff71rt" path="res://microjogos/2025S1/projeto_release_gamuto/recursos/sons/h-beats-jungle-sound-effect-249042.wav" id="8_1o0mn"]
 
 [sub_resource type="Curve2D" id="Curve2D_wdkyw"]
 _data = {
@@ -47,5 +48,9 @@ path = NodePath("../Path2D")
 colision_layer = NodePath("../ColisionLayer")
 
 [node name="ColisionLayer" type="StaticBody2D" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_1o0mn")
+autoplay = true
 
 [connection signal="body_entered" from="Goal" to="." method="_on_goal_body_entered"]
