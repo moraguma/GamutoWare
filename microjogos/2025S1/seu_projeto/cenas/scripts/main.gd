@@ -1,5 +1,5 @@
 extends Node2D
-@onready var musica = get_node("AudioStreamPlayer")
+
 # Declaração dos sinais win e lose
 
 signal win
@@ -19,14 +19,8 @@ const HEIGHT = 1080
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
-	# Verifica a linguagem do jogo e mostra texto nesta linguagem. Deve dar uma ideia do que deve
-	# ser feito para vencer o jogo. A fonte usada não suporta caracteres latinos como ~ ou ´
-	match Global.language:
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("DEFEAT THE FOE!")
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("DERROTE SEU INIMIGO!")
-	musica.play(13.06)
+	pass
+
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
 # a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
@@ -69,5 +63,4 @@ func register_win():
 
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
-	$Player.lose()
 	emit_signal("lose")

@@ -34,11 +34,6 @@ var end = false
 
 
 func _ready():
-	match Global.language:
-		Global.LANGUAGE.PT:
-			NotificationCenter.notify("SE PREPARE...")
-		Global.LANGUAGE.EN:
-			NotificationCenter.notify("GET READY...")
 	
 	shoot_timer.set_wait_time(SHOOT_TIME)
 	wait_timer.set_wait_time(randf_range(MIN_WAIT_TIME, MAX_WAIT_TIME))

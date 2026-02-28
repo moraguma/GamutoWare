@@ -1,0 +1,245 @@
+[gd_scene load_steps=18 format=3 uid="uid://devce1jy5yrb8"]
+
+[ext_resource type="Script" uid="uid://cwdeg2iachcoh" path="res://microjogos/2025S1/Cookies/cenas/scripts/main.gd" id="1_aashi"]
+[ext_resource type="Texture2D" uid="uid://b2jajfg84rx1d" path="res://microjogos/2025S1/Cookies/recursos/imagens/cookiePixelArt.png" id="2_6m3k1"]
+[ext_resource type="PackedScene" uid="uid://bkfj0uuex0ct0" path="res://microjogos/2025S1/Cookies/cenas/monster.tscn" id="3_xb0ta"]
+[ext_resource type="Shader" uid="uid://xhkqq21nsdcy" path="res://microjogos/2025S1/Cookies/recursos/disable.tres" id="5_3pa5t"]
+[ext_resource type="Script" uid="uid://chaioddbvl0si" path="res://microjogos/2025S1/Cookies/cenas/scripts/sub_viewport.gd" id="5_6m3k1"]
+[ext_resource type="Texture2D" uid="uid://cf84ffudbmww5" path="res://microjogos/2025S1/Cookies/recursos/imagens/turret.png" id="5_a83ac"]
+[ext_resource type="PackedScene" uid="uid://3vfixad66wd3" path="res://microjogos/2025S1/Cookies/cenas/turret.tscn" id="5_aj31b"]
+[ext_resource type="Texture2D" uid="uid://53ixq7myuojr" path="res://microjogos/2025S1/Cookies/recursos/imagens/cannon.png" id="6_3pa5t"]
+[ext_resource type="PackedScene" uid="uid://46h8nsrltfop" path="res://microjogos/2025S1/Cookies/cenas/cannon.tscn" id="7_3ps7f"]
+[ext_resource type="Script" uid="uid://dcewx2vxy4cxa" path="res://microjogos/2025S1/Cookies/cenas/scripts/panel_container.gd" id="7_nra8u"]
+
+[sub_resource type="GDScript" id="GDScript_nra8u"]
+script/source = "extends Timer
+
+
+
+func _on_timeout() -> void:
+	get_parent().queue_free()
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7hjn7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3pa5t"]
+bg_color = Color(0.733333, 0.517647, 0.290196, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.984314, 0.827451, 0.45098, 1)
+
+[sub_resource type="Theme" id="Theme_a83ac"]
+Label/font_sizes/font_size = 50
+MarginContainer/constants/margin_bottom = 10
+MarginContainer/constants/margin_left = 20
+MarginContainer/constants/margin_right = 20
+MarginContainer/constants/margin_top = 10
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_3pa5t")
+VBoxContainer/constants/separation = 3
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nra8u"]
+shader = ExtResource("5_3pa5t")
+shader_parameter/Disabled = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_atimq"]
+shader = ExtResource("5_3pa5t")
+shader_parameter/Disabled = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_suxxg"]
+shader = ExtResource("5_3pa5t")
+shader_parameter/Disabled = true
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_aashi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 5
+position = Vector2(960, 400)
+scale = Vector2(15, 15)
+texture = ExtResource("2_6m3k1")
+
+[node name="Timer" type="Timer" parent="Sprite2D"]
+wait_time = 6.0
+autostart = true
+script = SubResource("GDScript_nra8u")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+visible = false
+position = Vector2(960, 400)
+scale = Vector2(50, 50)
+emitting = false
+amount = 1
+texture = SubResource("CompressedTexture2D_7hjn7")
+emission_shape = 2
+emission_sphere_radius = 1.0
+direction = Vector2(0, 1)
+spread = 30.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 40.0
+initial_velocity_max = 60.0
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+
+[node name="Monster" parent="." instance=ExtResource("3_xb0ta")]
+position = Vector2(960, 2000)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -453.5
+offset_right = 37.0
+offset_bottom = 453.5
+grow_vertical = 2
+size_flags_horizontal = 0
+
+[node name="SubViewport" type="SubViewport" parent="CanvasLayer/SubViewportContainer" node_paths=PackedStringArray("monster", "camera")]
+handle_input_locally = false
+size = Vector2i(137, 917)
+render_target_update_mode = 4
+script = ExtResource("5_6m3k1")
+monster = NodePath("../../../Monster")
+camera = NodePath("Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="CanvasLayer/SubViewportContainer/SubViewport"]
+position = Vector2(960, 1000)
+zoom = Vector2(0.15, 0.15)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = SubResource("Theme_a83ac")
+
+[node name="Turret" type="MarginContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/VBoxContainer/Turret" node_paths=PackedStringArray("main")]
+material = SubResource("ShaderMaterial_nra8u")
+custom_minimum_size = Vector2(300, 150)
+layout_mode = 2
+script = ExtResource("7_nra8u")
+main = NodePath("../../../..")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/VBoxContainer/Turret/PanelContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer/Turret/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer/Turret/PanelContainer/MarginContainer/HBoxContainer"]
+texture_filter = 3
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+texture = ExtResource("5_a83ac")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer/Turret/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer/Turret/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "100 - [ A ]"
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/Turret/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Turret"
+
+[node name="Turret2" type="MarginContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/VBoxContainer/Turret2" node_paths=PackedStringArray("main")]
+material = SubResource("ShaderMaterial_atimq")
+custom_minimum_size = Vector2(300, 150)
+layout_mode = 2
+script = ExtResource("7_nra8u")
+main = NodePath("../../../..")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/VBoxContainer/Turret2/PanelContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer/Turret2/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer/Turret2/PanelContainer/MarginContainer/HBoxContainer"]
+texture_filter = 3
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+texture = ExtResource("5_a83ac")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer/Turret2/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer/Turret2/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "100 - [ D ]"
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/Turret2/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Turret"
+
+[node name="Cannon" type="MarginContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/VBoxContainer/Cannon" node_paths=PackedStringArray("main")]
+material = SubResource("ShaderMaterial_suxxg")
+layout_mode = 2
+script = ExtResource("7_nra8u")
+main = NodePath("../../../..")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/VBoxContainer/Cannon/PanelContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer/Cannon/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer/Cannon/PanelContainer/MarginContainer/HBoxContainer"]
+texture_filter = 3
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+texture = ExtResource("6_3pa5t")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer/Cannon/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer/Cannon/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "200 - [ W ]"
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/Cannon/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Cannon"
+
+[node name="Turret" parent="." node_paths=PackedStringArray("target") instance=ExtResource("5_aj31b")]
+position = Vector2(600, 175)
+target = NodePath("../Monster")
+
+[node name="Turret2" parent="." node_paths=PackedStringArray("target") instance=ExtResource("5_aj31b")]
+position = Vector2(1320, 175)
+target = NodePath("../Monster")
+
+[node name="Cannon" parent="." node_paths=PackedStringArray("target") instance=ExtResource("7_3ps7f")]
+position = Vector2(960, 100)
+scale = Vector2(1, 1)
+target = NodePath("../Monster")
+
+[connection signal="timeout" from="Sprite2D/Timer" to="Sprite2D/Timer" method="_on_timeout"]
