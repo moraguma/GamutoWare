@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=2 format=3 uid="uid://bl6muehk2gf6p"]
+
+[ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_o4dw6"]
+
+[resource]
+script = ExtResource("1_o4dw6")
+title_pt = &"Ghost Skulls"
+title_en = &"Ghost Skulls"
+credits_pt = "DESIGN: Júlio A. S. Telles "
+credits_en = ""
+start_message_pt = &"FAÇA ALGO!"
+start_message_en = &"DO SOMETHING!"
+difficulty = 0

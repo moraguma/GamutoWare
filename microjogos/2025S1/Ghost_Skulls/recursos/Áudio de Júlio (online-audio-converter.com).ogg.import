@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://lsjvkijhcgw3"
+path="res://.godot/imported/Áudio de Júlio (online-audio-converter.com).ogg-356ae79f30287f75a6ed92f4bc9d441e.oggvorbisstr"
+
+[deps]
+
+source_file="res://microjogos/2025S1/Ghost_Skulls/recursos/Áudio de Júlio (online-audio-converter.com).ogg"
+dest_files=["res://.godot/imported/Áudio de Júlio (online-audio-converter.com).ogg-356ae79f30287f75a6ed92f4bc9d441e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
