@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsw11gdy78830"]
+
+[ext_resource type="Script" uid="uid://buvxuoawdeivi" path="res://microjogos/2025S1/Ghost_Skulls/cenas/scripts/enemy.gd" id="1_xfu24"]
+[ext_resource type="Texture2D" uid="uid://2hcfjnamgqr3" path="res://microjogos/2025S1/Ghost_Skulls/recursos/pixilart-drawing(2).png" id="2_xfu24"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xfu24"]
+radius = 106.0
+height = 212.0
+
+[node name="Enemy" type="Area2D"]
+script = ExtResource("1_xfu24")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_xfu24")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 5
+position = Vector2(17, 20)
+scale = Vector2(1.7199, 1.69083)
+texture = ExtResource("2_xfu24")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
