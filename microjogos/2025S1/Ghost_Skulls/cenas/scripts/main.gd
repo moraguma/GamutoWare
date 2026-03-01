@@ -35,5 +35,6 @@ func register_lose():
 func _on_victory_body_entered(player_1: Node2D) -> void:
 	if player_1.is_in_group("player"):
 		register_win()
-		enemy.queue_free()
+		if enemy:
+			enemy.queue_free()
 		
