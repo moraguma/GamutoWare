@@ -1,8 +1,8 @@
 [gd_scene load_steps=16 format=3 uid="uid://s1spkramy4cs"]
 
-[ext_resource type="Texture2D" uid="uid://cii6psgd00xei" path="res://microjogos/2024S1/projeto-faroeste/recursos/vilao.png" id="1_5coh8"]
+[ext_resource type="Texture2D" uid="uid://cii6psgd00xei" path="res://microjogos/2024S1/projeto-faroeste/recursos/images/vilao.png" id="1_5coh8"]
 [ext_resource type="Script" uid="uid://b1vgb2wdy2ugc" path="res://microjogos/2024S1/projeto-faroeste/cenas/scripts/inimigo.gd" id="1_kgqrp"]
-[ext_resource type="AudioStream" uid="uid://1sbr1webk2bo" path="res://microjogos/2024S1/projeto-faroeste/recursos/gunshot-desert-eagle-pistol-fascinatedsound-3-3-00-01.mp3" id="3_ndigo"]
+[ext_resource type="AudioStream" uid="uid://bpkyqer33xn0w" path="res://microjogos/2024S1/projeto-faroeste/recursos/sounds/gunshot-desert-eagle-pistol-fascinatedsound-3-3-00-01.wav" id="3_ndigo"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m76k1"]
 radius = 30.0
@@ -82,6 +82,21 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_vhkr4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
 [sub_resource type="Animation" id="Animation_ndigo"]
 resource_name = "death"
 length = 0.3
@@ -96,21 +111,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 1.5708]
-}
-
-[sub_resource type="Animation" id="Animation_vhkr4"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_64q5e"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0x2kihexrjul"
-path="res://.godot/imported/atire.png-16527822d0d55a49c67406a8b08794e2.ctex"
+uid="uid://cii6psgd00xei"
+path="res://.godot/imported/vilao.png-b3a64865eaac5ef797930f42078249ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-faroeste/recursos/atire.png"
-dest_files=["res://.godot/imported/atire.png-16527822d0d55a49c67406a8b08794e2.ctex"]
+source_file="res://microjogos/2024S1/projeto-faroeste/recursos/images/vilao.png"
+dest_files=["res://.godot/imported/vilao.png-b3a64865eaac5ef797930f42078249ac.ctex"]
 
 [params]
 

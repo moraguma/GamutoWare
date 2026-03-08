@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwdxsst4cfyqb"
-path="res://.godot/imported/New Piskel(1).png-1c39116785f25f00a2b0b9d196466a13.ctex"
+uid="uid://b0x2kihexrjul"
+path="res://.godot/imported/atire.png-05e2160dc219c92ccd6910aa86e2e117.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-faroeste/recursos/New Piskel(1).png"
-dest_files=["res://.godot/imported/New Piskel(1).png-1c39116785f25f00a2b0b9d196466a13.ctex"]
+source_file="res://microjogos/2024S1/projeto-faroeste/recursos/images/atire.png"
+dest_files=["res://.godot/imported/atire.png-05e2160dc219c92ccd6910aa86e2e117.ctex"]
 
 [params]
 

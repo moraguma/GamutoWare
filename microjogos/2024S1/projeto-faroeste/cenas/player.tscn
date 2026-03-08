@@ -1,9 +1,9 @@
 [gd_scene load_steps=17 format=3 uid="uid://btwd0115b2rb8"]
 
-[ext_resource type="Texture2D" uid="uid://bwdxsst4cfyqb" path="res://microjogos/2024S1/projeto-faroeste/recursos/New Piskel(1).png" id="1_20frq"]
+[ext_resource type="Texture2D" uid="uid://bwdxsst4cfyqb" path="res://microjogos/2024S1/projeto-faroeste/recursos/images/New Piskel(1).png" id="1_20frq"]
 [ext_resource type="Script" uid="uid://epd7fsst6rpc" path="res://microjogos/2024S1/projeto-faroeste/cenas/scripts/player.gd" id="1_a16fb"]
-[ext_resource type="Texture2D" uid="uid://c3ta5rn85x016" path="res://microjogos/2024S1/projeto-faroeste/recursos/tiro.png" id="2_a16fb"]
-[ext_resource type="AudioStream" uid="uid://1sbr1webk2bo" path="res://microjogos/2024S1/projeto-faroeste/recursos/gunshot-desert-eagle-pistol-fascinatedsound-3-3-00-01.mp3" id="4_sf642"]
+[ext_resource type="Texture2D" uid="uid://c3ta5rn85x016" path="res://microjogos/2024S1/projeto-faroeste/recursos/images/tiro.png" id="2_a16fb"]
+[ext_resource type="AudioStream" uid="uid://bpkyqer33xn0w" path="res://microjogos/2024S1/projeto-faroeste/recursos/sounds/gunshot-desert-eagle-pistol-fascinatedsound-3-3-00-01.wav" id="4_sf642"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x2ogc"]
 radius = 29.0
@@ -83,6 +83,21 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_8nngl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
 [sub_resource type="Animation" id="Animation_sf642"]
 resource_name = "death"
 length = 0.3
@@ -97,21 +112,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, -1.5708]
-}
-
-[sub_resource type="Animation" id="Animation_8nngl"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_altom"]
