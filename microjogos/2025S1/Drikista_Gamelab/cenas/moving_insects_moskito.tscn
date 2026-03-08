@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://u1sdttsqwxr7"]
+[gd_scene load_steps=5 format=3 uid="uid://u1sdttsqwxr7"]
 
 [ext_resource type="Script" uid="uid://b4hfmakcjsgfv" path="res://microjogos/2025S1/Drikista_Gamelab/cenas/scripts/obj_moskito.gd" id="1_c2rmd"]
 [ext_resource type="Texture2D" uid="uid://coek332550cfm" path="res://microjogos/2025S1/Drikista_Gamelab/recursos/Sprites/moskito.png" id="2_8vlj8"]
+[ext_resource type="AudioStream" uid="uid://bcd15lu7gf1t0" path="res://microjogos/2025S1/Drikista_Gamelab/recursos/sons/freesound_community-flying-mosquito-105770.wav" id="3_pmj5c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c2rmd"]
 size = Vector2(12, 16)
@@ -15,3 +16,8 @@ texture = ExtResource("2_8vlj8")
 
 [node name="col_moskito" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_c2rmd")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_pmj5c")
+volume_db = -8.244
+autoplay = true

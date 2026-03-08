@@ -17,6 +17,7 @@ const HEIGHT = 1080
 
 func contar():
 	contagem += 1
+	$Colar.play()
 	if contagem >= 3:
 		register_win()
 

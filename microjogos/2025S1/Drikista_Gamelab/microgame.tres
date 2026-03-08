@@ -11,10 +11,24 @@ title_pt = &"Cata Inseto "
 title_en = &"Bug Catch"
 credits_pt = "Drikista
 
-Assets autorais"
+Assets autorais
+
+Audios:
+https://pixabay.com/sound-effects/nature-light-wing-flap-6143/
+https://pixabay.com/sound-effects/nature-flying-mosquito-105770/
+https://pixabay.com/sound-effects/film-special-effects-giant-insect-footsteps-4-482550/
+https://pixabay.com/sound-effects/film-special-effects-slime-impact-352473/
+https://pixabay.com/sound-effects/nature-garden-sunny-day-54490/"
 credits_en = "Drikista
 
-Authoral Assets"
+Authoral Assets
+
+Audios:
+https://pixabay.com/sound-effects/nature-light-wing-flap-6143/
+https://pixabay.com/sound-effects/nature-flying-mosquito-105770/
+https://pixabay.com/sound-effects/film-special-effects-giant-insect-footsteps-4-482550/
+https://pixabay.com/sound-effects/film-special-effects-slime-impact-352473/
+https://pixabay.com/sound-effects/nature-garden-sunny-day-54490/"
 start_message_pt = &"CAPTURE"
 start_message_en = &"CAPTURE"
 main_scene = ExtResource("2_u62p5")

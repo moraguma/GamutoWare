@@ -24,6 +24,7 @@ func _process(delta):
 			win_beetle = 1
 			let += 1
 			get_parent().contar()
+			$AudioStreamPlayer2D.stream_paused = true
 		elif bb == false:
 			position.x = start_point
 	

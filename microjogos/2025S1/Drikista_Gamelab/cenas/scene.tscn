@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c1dssl3gprxqx"]
+[gd_scene load_steps=12 format=3 uid="uid://c1dssl3gprxqx"]
 
 [ext_resource type="Script" uid="uid://cc1qravq8w8jd" path="res://microjogos/2025S1/Drikista_Gamelab/cenas/scripts/scene.gd" id="1_fyw77"]
 [ext_resource type="PackedScene" uid="uid://u1sdttsqwxr7" path="res://microjogos/2025S1/Drikista_Gamelab/cenas/moving_insects_moskito.tscn" id="1_pnfsi"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://ks30fbr2pbry" path="res://microjogos/2025S1/Drikista_Gamelab/cenas/moving_insects_moth.tscn" id="3_gn8ym"]
 [ext_resource type="Texture2D" uid="uid://dbm4b0m2dyyvs" path="res://microjogos/2025S1/Drikista_Gamelab/recursos/Sprites/arrow.png" id="4_ko4lu"]
 [ext_resource type="Texture2D" uid="uid://d2dgr6nfbtyv4" path="res://microjogos/2025S1/Drikista_Gamelab/recursos/Sprites/Gamuto Head.png" id="7_4u3ws"]
+[ext_resource type="AudioStream" uid="uid://cskwtmkw1aj7r" path="res://microjogos/2025S1/Drikista_Gamelab/recursos/sons/freesound_community-garden-sunny-day-54490.wav" id="8_45btp"]
+[ext_resource type="AudioStream" uid="uid://ctftvscx3d04o" path="res://microjogos/2025S1/Drikista_Gamelab/recursos/sons/universfield-slime-impact-352473.wav" id="9_a1pcq"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_2ilom"]
 
@@ -101,6 +103,13 @@ scale = Vector2(3, 3)
 [node name="moving_insects_moth" parent="." instance=ExtResource("3_gn8ym")]
 position = Vector2(621, 623)
 scale = Vector2(3, 3)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_45btp")
+autoplay = true
+
+[node name="Colar" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_a1pcq")
 
 [connection signal="area_entered" from="Plate_moth" to="moving_insects_moth" method="_on_plate_moth_area_entered"]
 [connection signal="area_exited" from="Plate_moth" to="moving_insects_moth" method="_on_plate_moth_area_exited"]
