@@ -8,13 +8,27 @@
 script = ExtResource("1_30o4y")
 cover = ExtResource("1_f7ced")
 title_pt = &"Rodeado por Arqueiros"
-title_en = &"surrounded by archers"
+title_en = &"Surrounded by Archers"
 credits_pt = "Créditos do jogo
 Tinny Swords:
-https://pixelfrog-assets.itch.io/tiny-swords"
-credits_en = "Game crédits
+https://pixelfrog-assets.itch.io/tiny-swords
+
+Audios:
+https://pixabay.com/sound-effects/film-special-effects-arrow-146420/
+https://pixabay.com/sound-effects/film-special-effects-arrow-impact-87260/
+https://pixabay.com/sound-effects/film-special-effects-swords-clash-2-82729/
+https://pixabay.com/sound-effects/film-special-effects-hurt-sound-435314/
+https://pixabay.com/sound-effects/musical-medieval-75892/"
+credits_en = "Game credits
 Tinny Swords:
-https://pixelfrog-assets.itch.io/tiny-swords"
+https://pixelfrog-assets.itch.io/tiny-swords
+
+Audios:
+https://pixabay.com/sound-effects/film-special-effects-arrow-146420/
+https://pixabay.com/sound-effects/film-special-effects-arrow-impact-87260/
+https://pixabay.com/sound-effects/film-special-effects-swords-clash-2-82729/
+https://pixabay.com/sound-effects/film-special-effects-hurt-sound-435314/
+https://pixabay.com/sound-effects/musical-medieval-75892/"
 start_message_pt = &"SE PROTEJA!!"
 start_message_en = &"PROTECT YOURSELF!!"
 main_scene = ExtResource("2_uio8r")

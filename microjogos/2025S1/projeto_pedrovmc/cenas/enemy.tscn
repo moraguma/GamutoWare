@@ -1,7 +1,8 @@
-[gd_scene load_steps=35 format=3 uid="uid://b5ls0yyhxkuku"]
+[gd_scene load_steps=36 format=3 uid="uid://b5ls0yyhxkuku"]
 
 [ext_resource type="Script" uid="uid://vcjj61wb77ku" path="res://microjogos/2025S1/projeto_pedrovmc/cenas/scripts/enemy.gd" id="1_75ykk"]
 [ext_resource type="Texture2D" uid="uid://bhkgld38nh6j" path="res://microjogos/2025S1/projeto_pedrovmc/recursos/imagens/Factions/Knights/Troops/Archer/Purple/Archer_Purlple.png" id="1_pqfxj"]
+[ext_resource type="AudioStream" uid="uid://b7pmkb4yaonnc" path="res://microjogos/2025S1/projeto_pedrovmc/recursos/sons/freesound_community-bow-loading-38752.wav" id="3_uqa0r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d7skp"]
 atlas = ExtResource("1_pqfxj")
@@ -250,5 +251,8 @@ animation = &"shoot_down"
 [node name="EnemyCollision" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 5)
 shape = SubResource("RectangleShape2D_bpkcm")
+
+[node name="Load" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_uqa0r")
 
 [connection signal="frame_changed" from="EnemyAnimation" to="." method="_on_enemy_animation_frame_changed"]

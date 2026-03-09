@@ -8,6 +8,7 @@ func _ready() -> void:
 func kill() -> void:
 	get_parent().register_lose()
 	$PlayerAnimation.play("death")
+	$Hurt.play()
 	is_alive = false
 	
 func attack(direction) -> void:
@@ -24,7 +25,10 @@ func attack(direction) -> void:
 			$PlayerSprite.flip_h = true
 			$SwordCollision.scale.x = -1
 		$PlayerAnimation.play("attack_side")
-	
 	await $PlayerAnimation.animation_finished
-	
 	$PlayerAnimation.play("idle")
+
+
+func _on_sword_collision_area_entered(area: Area2D) -> void:
+	if area.name == "Arrow":
+		$Hit.play()

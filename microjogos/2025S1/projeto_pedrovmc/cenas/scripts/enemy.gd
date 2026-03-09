@@ -21,14 +21,13 @@ func shoot() -> void:
 		$EnemyAnimation.play("shoot_down")
 	elif direcao == "Down":
 		$EnemyAnimation.play("shoot_up")
-	
+	$Load.play()
 	await $EnemyAnimation.animation_finished
 	
 	$EnemyAnimation.play("idle")
 
 func kill() -> void:
 	queue_free()
-	get_parent().register_win()
 
 func _on_enemy_animation_frame_changed() -> void:
 	if $EnemyAnimation.animation.contains("shoot") and $EnemyAnimation.frame == 6 :

@@ -1,8 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://cdbf7h4lx6eig"]
+[gd_scene load_steps=16 format=3 uid="uid://cdbf7h4lx6eig"]
 
 [ext_resource type="Texture2D" uid="uid://ciawd0vnwe66f" path="res://microjogos/2025S1/projeto_pedrovmc/recursos/imagens/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_32ug6"]
 [ext_resource type="Script" uid="uid://b7jg2co6wgute" path="res://microjogos/2025S1/projeto_pedrovmc/cenas/scripts/player.gd" id="1_hxvoq"]
 [ext_resource type="Texture2D" uid="uid://dc5dljiayvq08" path="res://microjogos/2025S1/projeto_pedrovmc/recursos/imagens/Factions/Knights/Troops/Dead/Dead.png" id="3_x0fvj"]
+[ext_resource type="AudioStream" uid="uid://6h4rs8fjqw" path="res://microjogos/2025S1/projeto_pedrovmc/recursos/sons/stepir44-hurt-sound-435314.wav" id="4_pyb2f"]
+[ext_resource type="AudioStream" uid="uid://c4u5bh137lh61" path="res://microjogos/2025S1/projeto_pedrovmc/recursos/sons/freesound_community-swords-clash-2-82729.wav" id="5_hlmw0"]
 
 [sub_resource type="Animation" id="Animation_x0fvj"]
 length = 0.001
@@ -432,3 +434,11 @@ shape = SubResource("RectangleShape2D_sfcgr")
 position = Vector2(-40, -3)
 rotation = 0.785398
 shape = SubResource("RectangleShape2D_hxvoq")
+
+[node name="Hurt" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_pyb2f")
+
+[node name="Hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_hlmw0")
+
+[connection signal="area_entered" from="SwordCollision" to="." method="_on_sword_collision_area_entered"]
