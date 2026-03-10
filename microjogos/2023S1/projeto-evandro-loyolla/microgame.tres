@@ -11,10 +11,10 @@ title_pt = &"Portas"
 title_en = &"Doors"
 credits_pt = "Criado por: Evandro loyolla
 
-Assets e Sons: Kenny"
+Assets e Sons: Kenney"
 credits_en = "Made by: Evandro loyolla
 
-Assets e Sounds: Kenny"
+Assets e Sounds: Kenney"
 start_message_pt = &"VÁ ATÉ A CASA"
 start_message_en = &"GO TO THE HOUSE"
 main_scene = ExtResource("2_a61ab")
