@@ -12,11 +12,13 @@ title_en = &"Dancing Queen"
 credits_pt = "Criado por: Criado por: Ana Luiza, Paula e P3
 
 Assets autorais
-Audio coin: keeny"
+Audio: 
+https://pixabay.com/sound-effects/film-special-effects-soft-treble-fast-collect-fade-out-ending-sound-effect-416828/"
 credits_en = "Made by: Ana Luiza, Paula e P3
 
-Assets autorais
-Audio coin: keeny"
+Authoral assets
+Audio coin: 
+https://pixabay.com/sound-effects/film-special-effects-soft-treble-fast-collect-fade-out-ending-sound-effect-416828/"
 start_message_pt = &"PEGUE!"
 start_message_en = &"CATCH!"
 main_scene = ExtResource("2_qigsg")

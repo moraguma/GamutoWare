@@ -10,7 +10,6 @@ signal lose
 # 16:9
 const WIDTH = 1920
 const HEIGHT = 1080
-var spawn_position = -100
 
 var cena_estrela = preload("res://microjogos/2024S1/projeto-da-ana-luiza/cenas/estrela_amarela.tscn")
 
@@ -46,9 +45,9 @@ func register_lose():
 
 func spawn_estrela():
 	var estrela_nova : RigidBody2D = cena_estrela.instantiate()
-	estrela_nova.position.x = randf_range(300, 1700)
-	estrela_nova.position.y = spawn_position
-	spawn_position -= 100
+	estrela_nova.position.x = 960
+	estrela_nova.position.y = 800.0
+	estrela_nova.linear_velocity = Vector2(randf_range(-300, 300), -1400)
 	add_child(estrela_nova)
 
 

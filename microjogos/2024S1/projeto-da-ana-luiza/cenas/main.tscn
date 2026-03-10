@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://v3gsxdydbc3q" path="res://microjogos/2024S1/projeto-da-ana-luiza/cenas/scripts/main.gd" id="1_l1y0h"]
 [ext_resource type="Texture2D" uid="uid://cwe056qhc7fkw" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/FUNDO.png" id="2_h4vyi"]
 [ext_resource type="PackedScene" uid="uid://bxp45krk5k6wt" path="res://microjogos/2024S1/projeto-da-ana-luiza/cenas/mafetotal.tscn" id="3_jer0v"]
-[ext_resource type="Texture2D" uid="uid://cbo4w7a2r7xv7" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/palco.png" id="3_lehno"]
+[ext_resource type="Texture2D" uid="uid://cbo4w7a2r7xv7" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/Palco.png" id="3_lehno"]
 [ext_resource type="Texture2D" uid="uid://bqk72p0lqnmj6" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/plateia.png" id="4_wl3pf"]
 [ext_resource type="Texture2D" uid="uid://d0e6wuxscgwq1" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/holofote.png" id="5_joptk"]
 [ext_resource type="Script" uid="uid://dauyfl4gevks1" path="res://microjogos/2024S1/projeto-da-ana-luiza/cenas/scripts/AnimatedSprite2D.gd" id="8_mo7d0"]
