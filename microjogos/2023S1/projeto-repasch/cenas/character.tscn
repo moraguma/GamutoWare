@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bmr76yqoy6naf" path="res://microjogos/2023S1/projeto-repasch/cenas/scripts/CharacterBody2D.gd" id="1_wsy62"]
 [ext_resource type="Texture2D" uid="uid://7wx81h4e83ke" path="res://microjogos/2023S1/projeto-repasch/recursos/BearSprites.png" id="2_rxoup"]
-[ext_resource type="Script" uid="uid://dg2xvawukl12u" path="res://microjogos/2023S1/projeto-repasch/cenas/scripts/character_sprite.gd" id="3_bfs8s"]
 [ext_resource type="Texture2D" uid="uid://wkgyjleyqief" path="res://microjogos/2023S1/projeto-repasch/recursos/01_dish.png" id="4_rxoup"]
+[ext_resource type="AudioStream" uid="uid://ceudmjispmm4y" path="res://microjogos/2023S1/projeto-repasch/recursos/audio/nahtt-eat-323883.wav" id="5_bfs8s"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4gnyf"]
 radius = 83.7593
@@ -23,7 +23,6 @@ scale = Vector2(8.038, 8.038)
 texture = ExtResource("2_rxoup")
 hframes = 2
 vframes = 5
-script = ExtResource("3_bfs8s")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 scale = Vector2(0.8, 0.8)
@@ -59,5 +58,8 @@ texture_filter = 3
 position = Vector2(-1, 27)
 scale = Vector2(3.6, 3.6)
 texture = ExtResource("4_rxoup")
+
+[node name="Eat" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_bfs8s")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

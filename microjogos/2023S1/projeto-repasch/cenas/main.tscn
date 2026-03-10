@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bprec2y7wsddd" path="res://microjogos/2023S1/projeto-repasch/cenas/scripts/main.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://cy1witbvivusi" path="res://microjogos/2023S1/projeto-repasch/recursos/ShopBG_1920x1080px.png" id="2_y44f2"]
 [ext_resource type="PackedScene" uid="uid://bvfmhfa5w11ii" path="res://microjogos/2023S1/projeto-repasch/cenas/character.tscn" id="3_y44f2"]
-[ext_resource type="AudioStream" uid="uid://biqpr1y5bdjhc" path="res://microjogos/2023S1/projeto-repasch/recursos/lofi_music_library-coffee-lofi-chill-lofi-ambient-458901.wav" id="5_s1mlw"]
+[ext_resource type="AudioStream" uid="uid://biqpr1y5bdjhc" path="res://microjogos/2023S1/projeto-repasch/recursos/audio/lofi_music_library-coffee-lofi-chill-lofi-ambient-458901.wav" id="5_s1mlw"]
 [ext_resource type="Script" uid="uid://1rv5uobtiapg" path="res://microjogos/2023S1/projeto-repasch/cenas/scripts/spawn.gd" id="7_8y1mx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p2lsa"]

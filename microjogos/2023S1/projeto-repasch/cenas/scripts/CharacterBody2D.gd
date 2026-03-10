@@ -2,7 +2,8 @@ extends CharacterBody2D
 
 var comi = 0
 const SPEED = 500.0
-
+func _ready() -> void:
+	$Sprite2D.frame = randi_range(0, 9)
 
 func _physics_process(delta):
 	var dir = Vector2(Input.get_action_strength("direita") - Input.get_action_strength("esquerda"), 0)
@@ -23,3 +24,4 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("food"):
 		soma_comida()
 		body.queue_free()
+		$Eat.play()
