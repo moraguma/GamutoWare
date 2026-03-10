@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cpmtgkkxxq46d" path="res://microjogos/2023S1/projeto_luiscolosimo/recursos/character/child1.png" id="5_xappj"]
 [ext_resource type="Texture2D" uid="uid://bbifbfygrl3ck" path="res://microjogos/2023S1/projeto_luiscolosimo/recursos/dedo.png" id="6_rsfoc"]
 [ext_resource type="Texture2D" uid="uid://bt3ua0mlh0uei" path="res://microjogos/2023S1/projeto_luiscolosimo/recursos/casa/pedra1.png" id="8_8ymq0"]
-[ext_resource type="Texture2D" uid="uid://dk40vxf34co6l" path="res://microjogos/2023S1/projeto_luiscolosimo/recursos/casa/casa2.png" id="8_l8pfv"]
+[ext_resource type="Texture2D" uid="uid://dk40vxf34co6l" path="res://microjogos/2023S1/projeto_luiscolosimo/recursos/casa/background.png" id="8_l8pfv"]
 [ext_resource type="Texture2D" uid="uid://dtae61v0j12cy" path="res://microjogos/2023S1/projeto_luiscolosimo/recursos/casa/planta1.png" id="9_npe7l"]
 [ext_resource type="Texture2D" uid="uid://cvrwgkoawfjct" path="res://microjogos/2023S1/projeto_luiscolosimo/recursos/casa/cerca1.png" id="10_3isog"]
 [ext_resource type="AudioStream" uid="uid://bkjq1nj3l6fuj" path="res://microjogos/2023S1/projeto_luiscolosimo/recursos/musica/bgm.wav" id="11_oga73"]
