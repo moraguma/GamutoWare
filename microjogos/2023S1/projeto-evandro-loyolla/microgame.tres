@@ -11,10 +11,16 @@ title_pt = &"Portas"
 title_en = &"Doors"
 credits_pt = "Criado por: Evandro loyolla
 
-Assets e Sons: Kenney"
+Assets e Sons: Kenney
+
+Som Porta: https://pixabay.com/sound-effects/household-main-door-opening-closing-38280/ 
+BGM: https://pixabay.com/sound-effects/musical-run-130bpm-190419/"
 credits_en = "Made by: Evandro loyolla
 
-Assets e Sounds: Kenney"
+Assets e Sounds: Kenney
+
+Door Sound: https://pixabay.com/sound-effects/household-main-door-opening-closing-38280/ 
+BGM: https://pixabay.com/sound-effects/musical-run-130bpm-190419/"
 start_message_pt = &"VÁ ATÉ A CASA"
 start_message_en = &"GO TO THE HOUSE"
 main_scene = ExtResource("2_a61ab")

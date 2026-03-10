@@ -1,13 +1,13 @@
-[gd_scene load_steps=18 format=4 uid="uid://crb8worwrbjkj"]
+[gd_scene load_steps=15 format=4 uid="uid://crb8worwrbjkj"]
 
 [ext_resource type="Script" uid="uid://bnvbujb4exmlb" path="res://microjogos/2023S1/projeto-evandro-loyolla/cenas/scripts/main.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://d2yfi1cwt1egd" path="res://microjogos/2023S1/projeto-evandro-loyolla/recursos/kenney_desert-shooter-pack_1.0/Tiles/Tilemap/tilemap.png" id="2_4vkbi"]
-[ext_resource type="PackedScene" uid="uid://5tg8ohusxkbq" path="res://microjogos/2023S1/projeto-evandro-loyolla/cenas/door.tscn" id="3_7f82v"]
-[ext_resource type="PackedScene" uid="uid://bxyixgvcknjsr" path="res://microjogos/2023S1/projeto-evandro-loyolla/cenas/true_door.tscn" id="4_ghem6"]
+[ext_resource type="PackedScene" uid="uid://bxyixgvcknjsr" path="res://microjogos/2023S1/projeto-evandro-loyolla/cenas/door.tscn" id="3_7f82v"]
 [ext_resource type="PackedScene" uid="uid://8q04okkwiaa2" path="res://microjogos/2023S1/projeto-evandro-loyolla/cenas/house.tscn" id="6_i8bsd"]
+[ext_resource type="Script" uid="uid://dtx4tb0k6fa1b" path="res://microjogos/2023S1/projeto-evandro-loyolla/cenas/scripts/walls.gd" id="6_oqwlv"]
 [ext_resource type="Texture2D" uid="uid://2qca7f70hmh8" path="res://microjogos/2023S1/projeto-evandro-loyolla/recursos/kenney_desert-shooter-pack_1.0/Tiles/Tilemap/tilemap_packed.png" id="6_w33po"]
 [ext_resource type="PackedScene" uid="uid://cqirf5cg3y2i6" path="res://microjogos/2023S1/projeto-evandro-loyolla/cenas/player.tscn" id="6_ygwjt"]
-[ext_resource type="Script" uid="uid://coytbgm4l88em" path="res://microjogos/2023S1/projeto-evandro-loyolla/cenas/player.gd" id="7_ygwjt"]
+[ext_resource type="AudioStream" uid="uid://vhev214ns1nq" path="res://microjogos/2023S1/projeto-evandro-loyolla/recursos/sounds/background.wav" id="8_w33po"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7f82v"]
 
@@ -186,15 +186,6 @@ sources/0 = SubResource("TileSetAtlasSource_ghem6")
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_i8bsd"]
 
-[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_ghem6"]
-scenes/1/scene = ExtResource("3_7f82v")
-
-[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_i8bsd"]
-scenes/1/scene = ExtResource("4_ghem6")
-
-[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_ygwjt"]
-scenes/1/scene = ExtResource("6_i8bsd")
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oqwlv"]
 texture = ExtResource("6_w33po")
 0:0/0 = 0
@@ -248,7 +239,6 @@ texture = ExtResource("6_w33po")
 12:2/0 = 0
 13:2/0 = 0
 14:2/0 = 0
-14:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 15:2/0 = 0
 16:2/0 = 0
 17:2/0 = 0
@@ -261,7 +251,6 @@ texture = ExtResource("6_w33po")
 6:3/0 = 0
 7:3/0 = 0
 8:3/0 = 0
-8:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:3/0 = 0
 10:3/0 = 0
 11:3/0 = 0
@@ -280,7 +269,6 @@ texture = ExtResource("6_w33po")
 6:4/0 = 0
 7:4/0 = 0
 8:4/0 = 0
-8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:4/0 = 0
 10:4/0 = 0
 11:4/0 = 0
@@ -449,9 +437,6 @@ texture = ExtResource("6_w33po")
 [sub_resource type="TileSet" id="TileSet_oqwlv"]
 physics_layer_0/collision_layer = 1
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_i8bsd")
-sources/1 = SubResource("TileSetScenesCollectionSource_ghem6")
-sources/2 = SubResource("TileSetScenesCollectionSource_i8bsd")
-sources/3 = SubResource("TileSetScenesCollectionSource_ygwjt")
 sources/4 = SubResource("TileSetAtlasSource_oqwlv")
 
 [node name="Main" type="Node2D"]
@@ -466,11 +451,47 @@ tile_set = SubResource("TileSet_ygwjt")
 [node name="Walls" type="TileMapLayer" parent="."]
 texture_filter = 3
 scale = Vector2(8, 8)
-tile_map_data = PackedByteArray("AAAAAAUABAAPAAwAAAAIAAUABAARAAwAAAAJAAUABAAQAAsAAAAKAAUABAAPAAwAAAANAAUABAARAAwAAAAOAAUABAARAAkAAAAOAAYABAARAAoAAAAOAAcABAARAAoAAAAOAAgABAARAAsAAAAEAAUABAAQAAsAAAAFAAUABAAPAAwAAAADAAUABAARAAwAAAD//wUABAAPAAkAAAD//wQABAAPAAoAAAD//wYABAAPAAoAAAAOAAQABAARAAoAAAD//wcABAAPAAoAAAD//wgABAAPAAsAAAAAAAgABAAQAAsAAAABAAgABAAQAAsAAAACAAgABAAQAAsAAAADAAgABAAQAAsAAAAEAAgABAAQAAsAAAAFAAgABAAQAAsAAAAGAAgABAAQAAsAAAAHAAgABAAQAAsAAAAIAAgABAAQAAsAAAAJAAgABAAQAAsAAAAKAAgABAAQAAsAAAALAAgABAAQAAsAAAAMAAgABAAQAAsAAAANAAgABAAQAAsAAAAAAAYABAAIAAMAAAAAAAcABAAIAAQAAAAJAAcABAAIAAIAAAANAAYABAAIAAIAAAAOAAMABAARAAoAAAAOAAIABAARAAoAAAAOAAEABAARAAkAAAAOAAAABAARAAoAAAD//wMABAAPAAoAAAD//wIABAAPAAoAAAD//wEABAAPAAkAAAD//wAABAAPAAoAAAD/////BAAPAAoAAAD///7/BAAPAAoAAAD///3/BAAPAAkAAAD///z/BAAPAAoAAAD///v/BAAPAAoAAAAOAP//BAARAAoAAAAOAP7/BAARAAoAAAAOAP3/BAARAAkAAAAOAPz/BAAPAAoAAAAOAPv/BAAPAAoAAAAOAPr/BAAPAAoAAAAEAAEABAAQAAsAAAAFAAEABAAPAAwAAAAIAAEABAARAAwAAAAJAAEABAAQAAsAAAAKAAEABAAPAAwAAAANAAEABAARAAwAAAAAAAEABAAPAAwAAAAAAP3/BAAPAAwAAAAFAP3/BAAPAAwAAAAKAP3/BAAPAAwAAAADAP3/BAARAAwAAAAIAP3/BAARAAwAAAANAP3/BAARAAwAAAAEAP3/BAAQAAsAAAAJAP3/BAAQAAsAAAADAAEABAARAAwAAAAGAAQAAQAAAAAAAQALAAQAAQAAAAAAAQALAAAAAgAAAAAAAQAGAAAAAQAAAAAAAQABAAAAAQAAAAAAAQABAPz/AQAAAAAAAQAGAPz/AgAAAAAAAQALAPz/AQAAAAAAAQAFAPr/AwAAAAAAAQD///n/BAAPAAkAAAAOAPn/BAARAAkAAAD///r/BAAPAAoAAAABAPn/BAAQAAsAAAACAPn/BAAQAAsAAAADAPn/BAAQAAsAAAAEAPn/BAAQAAsAAAAAAPn/BAAQAAsAAAAFAPn/BAAQAAsAAAAIAPn/BAAQAAsAAAAJAPn/BAAQAAsAAAAKAPn/BAAQAAsAAAALAPn/BAAQAAsAAAAMAPn/BAAQAAsAAAANAPn/BAAQAAsAAAAGAPn/BAAQAAsAAAAHAPn/BAAQAAsAAAABAP7/BAAIAAIAAAAEAPr/BAAIAAIAAAAJAP//BAAIAAIAAAAMAPv/BAAIAAIAAAANAAIABAAOAAIAAAAEAP//BAAIAAQAAAAEAP7/BAAIAAMAAAAJAPr/BAAIAAIAAAADAAYABAAOAAIAAAAFAP7/BAAOAAIAAAABAAQAAgAAAAAAAQA=")
+tile_map_data = PackedByteArray("AAAAAAUABAAPAAwAAAAIAAUABAARAAwAAAAJAAUABAAQAAsAAAAKAAUABAAPAAwAAAANAAUABAARAAwAAAAOAAUABAARAAkAAAAOAAYABAARAAoAAAAOAAcABAARAAoAAAAOAAgABAARAAsAAAAEAAUABAAQAAsAAAAFAAUABAAPAAwAAAADAAUABAARAAwAAAD//wUABAAPAAkAAAD//wQABAAPAAoAAAD//wYABAAPAAoAAAAOAAQABAARAAoAAAD//wcABAAPAAoAAAD//wgABAAPAAsAAAAAAAgABAAQAAsAAAABAAgABAAQAAsAAAACAAgABAAQAAsAAAADAAgABAAQAAsAAAAEAAgABAAQAAsAAAAFAAgABAAQAAsAAAAGAAgABAAQAAsAAAAHAAgABAAQAAsAAAAIAAgABAAQAAsAAAAJAAgABAAQAAsAAAAKAAgABAAQAAsAAAALAAgABAAQAAsAAAAMAAgABAAQAAsAAAANAAgABAAQAAsAAAAAAAYABAAIAAMAAAAAAAcABAAIAAQAAAAJAAcABAAIAAIAAAANAAYABAAIAAIAAAAOAAMABAARAAoAAAAOAAIABAARAAoAAAAOAAEABAARAAkAAAAOAAAABAARAAoAAAD//wMABAAPAAoAAAD//wIABAAPAAoAAAD//wEABAAPAAkAAAD//wAABAAPAAoAAAD/////BAAPAAoAAAD///7/BAAPAAoAAAD///3/BAAPAAkAAAD///z/BAAPAAoAAAD///v/BAAPAAoAAAAOAP//BAARAAoAAAAOAP7/BAARAAoAAAAOAP3/BAARAAkAAAAOAPz/BAAPAAoAAAAOAPv/BAAPAAoAAAAOAPr/BAAPAAoAAAAEAAEABAAQAAsAAAAFAAEABAAPAAwAAAAIAAEABAARAAwAAAAJAAEABAAQAAsAAAAKAAEABAAPAAwAAAANAAEABAARAAwAAAAAAAEABAAPAAwAAAAAAP3/BAAPAAwAAAAFAP3/BAAPAAwAAAAKAP3/BAAPAAwAAAADAP3/BAARAAwAAAAIAP3/BAARAAwAAAANAP3/BAARAAwAAAAEAP3/BAAQAAsAAAAJAP3/BAAQAAsAAAADAAEABAARAAwAAAD///n/BAAPAAkAAAAOAPn/BAARAAkAAAD///r/BAAPAAoAAAABAPn/BAAQAAsAAAACAPn/BAAQAAsAAAADAPn/BAAQAAsAAAAEAPn/BAAQAAsAAAAAAPn/BAAQAAsAAAAFAPn/BAAQAAsAAAAIAPn/BAAQAAsAAAAJAPn/BAAQAAsAAAAKAPn/BAAQAAsAAAALAPn/BAAQAAsAAAAMAPn/BAAQAAsAAAANAPn/BAAQAAsAAAAGAPn/BAAQAAsAAAAHAPn/BAAQAAsAAAAEAPr/BAAIAAIAAAAJAP//BAAIAAIAAAAMAPv/BAAIAAIAAAANAAIABAAOAAIAAAAEAP//BAAIAAQAAAAEAP7/BAAIAAMAAAAJAPr/BAAIAAIAAAADAAYABAAOAAIAAAAFAP7/BAAOAAIAAAA=")
 tile_set = SubResource("TileSet_oqwlv")
 
 [node name="Player" parent="." instance=ExtResource("6_ygwjt")]
 position = Vector2(911, 902)
-script = ExtResource("7_ygwjt")
 
-[connection signal="body_entered" from="Walls/@Area2D@25085" to="Walls/@Area2D@25085" method="_on_body_entered"]
+[node name="Doors" type="Node2D" parent="."]
+scale = Vector2(8, 8)
+script = ExtResource("6_oqwlv")
+
+[node name="Door" parent="Doors" instance=ExtResource("3_7f82v")]
+position = Vector2(24, -56)
+
+[node name="Door2" parent="Doors" instance=ExtResource("3_7f82v")]
+position = Vector2(104, -56)
+
+[node name="Door3" parent="Doors" instance=ExtResource("3_7f82v")]
+position = Vector2(184, -56)
+
+[node name="Door4" parent="Doors" instance=ExtResource("3_7f82v")]
+position = Vector2(24, 8)
+
+[node name="Door5" parent="Doors" instance=ExtResource("3_7f82v")]
+position = Vector2(104, 8)
+
+[node name="Door6" parent="Doors" instance=ExtResource("3_7f82v")]
+position = Vector2(184, 8)
+
+[node name="Door7" parent="Doors" instance=ExtResource("3_7f82v")]
+position = Vector2(24, 72)
+
+[node name="Door8" parent="Doors" instance=ExtResource("3_7f82v")]
+position = Vector2(104, 72)
+
+[node name="Door9" parent="Doors" instance=ExtResource("3_7f82v")]
+position = Vector2(184, 72)
+
+[node name="House" parent="." instance=ExtResource("6_i8bsd")]
+position = Vector2(704, -704)
+scale = Vector2(8, 8)
+
+[node name="Background" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_w33po")
+autoplay = true
