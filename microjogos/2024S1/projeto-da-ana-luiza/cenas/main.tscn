@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=15 format=3 uid="uid://bi0ahd7cv37i6"]
 
 [ext_resource type="Script" uid="uid://v3gsxdydbc3q" path="res://microjogos/2024S1/projeto-da-ana-luiza/cenas/scripts/main.gd" id="1_l1y0h"]
 [ext_resource type="Texture2D" uid="uid://cwe056qhc7fkw" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/FUNDO.png" id="2_h4vyi"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://cbo4w7a2r7xv7" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/Palco.png" id="3_lehno"]
 [ext_resource type="Texture2D" uid="uid://bqk72p0lqnmj6" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/plateia.png" id="4_wl3pf"]
 [ext_resource type="Texture2D" uid="uid://d0e6wuxscgwq1" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/holofote.png" id="5_joptk"]
-[ext_resource type="Script" uid="uid://dauyfl4gevks1" path="res://microjogos/2024S1/projeto-da-ana-luiza/cenas/scripts/AnimatedSprite2D.gd" id="8_mo7d0"]
 [ext_resource type="AudioStream" uid="uid://dhigtx12xrm0q" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/Dancing Queen song.wav" id="9_y3kfu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lehno"]
@@ -20,6 +19,44 @@ size = Vector2(1920, 256)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wjpbq"]
 size = Vector2(60, 700)
 
+[sub_resource type="Animation" id="Animation_lehno"]
+resource_name = "move"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(938, 710), Vector2(938, 690), Vector2(938, 710)]
+}
+
+[sub_resource type="Animation" id="Animation_d0rvo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(938, 710)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2y5b8"]
+_data = {
+&"RESET": SubResource("Animation_d0rvo"),
+&"move": SubResource("Animation_lehno")
+}
+
 [node name="Palco" type="Node2D"]
 script = ExtResource("1_l1y0h")
 
@@ -27,9 +64,9 @@ script = ExtResource("1_l1y0h")
 
 [node name="Background" type="Sprite2D" parent="Background"]
 texture_filter = 3
-position = Vector2(964, 539)
-scale = Vector2(1.928, 1.078)
+scale = Vector2(1.92, 1.078)
 texture = ExtResource("2_h4vyi")
+centered = false
 
 [node name="Palco" type="Sprite2D" parent="Background"]
 texture_filter = 3
@@ -77,7 +114,12 @@ shape = SubResource("RectangleShape2D_wjpbq")
 position = Vector2(938, 710)
 scale = Vector2(2.02178, 1.84251)
 texture = ExtResource("4_wl3pf")
-script = ExtResource("8_mo7d0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Plateia"]
+libraries = {
+&"": SubResource("AnimationLibrary_2y5b8")
+}
+autoplay = "move"
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
