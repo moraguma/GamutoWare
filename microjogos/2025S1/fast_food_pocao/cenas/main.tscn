@@ -8,12 +8,12 @@
 [ext_resource type="AudioStream" uid="uid://41oilyxa32sf" path="res://microjogos/2025S1/fast_food_pocao/recursos/sons/feitico.wav" id="7_2e2rv"]
 [ext_resource type="Texture2D" uid="uid://dna37k7iryy2f" path="res://microjogos/2025S1/fast_food_pocao/recursos/imagens/watercolor-painting-flower-medieval-lace-picture-frame-8fe2e2f04f064b52337c04403cb2dfe5.png" id="7_e21le"]
 [ext_resource type="Texture2D" uid="uid://yscly2hyuxc0" path="res://microjogos/2025S1/fast_food_pocao/recursos/imagens/potion_mix.png" id="8_e21le"]
-[ext_resource type="AudioStream" uid="uid://whpu82ibdf4b" path="res://microjogos/2025S1/fast_food_pocao/recursos/sons/364929__jofae__game-die.mp3" id="8_mljui"]
 [ext_resource type="Texture2D" uid="uid://lx2jxqvs7yfa" path="res://microjogos/2025S1/fast_food_pocao/recursos/imagens/cauderao.png" id="8_r1hvl"]
 [ext_resource type="Script" uid="uid://ys55u4bswdaa" path="res://microjogos/2025S1/fast_food_pocao/cenas/scripts/potion_mix.gd" id="9_d75xv"]
 [ext_resource type="AudioStream" uid="uid://byrw82vcbq67n" path="res://microjogos/2025S1/fast_food_pocao/recursos/sons/ganhou.wav" id="9_r1hvl"]
 [ext_resource type="Theme" path="res://principal/recursos/themes/TitleTheme.tres" id="10_c3ime"]
 [ext_resource type="Texture2D" uid="uid://bgfyrk5qr8xo0" path="res://microjogos/2025S1/fast_food_pocao/recursos/imagens/background.png" id="11_mljui"]
+[ext_resource type="AudioStream" uid="uid://cnuteh5snrl8i" path="res://microjogos/2025S1/fast_food_pocao/recursos/sons/perdeu.wav" id="12_e21le"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_upifg"]
 texture_margin_left = 200.0
@@ -153,7 +153,7 @@ texture = ExtResource("8_r1hvl")
 stream = ExtResource("7_2e2rv")
 
 [node name="perdeu" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_mljui")
+stream = ExtResource("12_e21le")
 
 [node name="ganhou" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_r1hvl")
