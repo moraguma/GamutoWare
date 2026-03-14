@@ -20,18 +20,13 @@ func _process(delta):
 	var direction = 0
 	if status == "OK":
 		if Input.is_action_pressed("baixo"):
-			velocity = Vector2.ZERO
-			up_counter = 0
-		if Input.is_action_pressed("esquerda"):
-			direction = -1
-		if Input.is_action_pressed("direita"):
-			direction = 1
+			velocity *= 0.9
+		direction = Input.get_axis("esquerda", "direita")
+		if Input.is_action_pressed("cima") or Input.is_action_pressed("acao"):
+			up_counter = min(60, up_counter+1)
+			velocity = Vector2.UP.rotated(rotation) * speed * up_counter
 	rotation += angular_speed * direction * delta
 
-	if Input.is_action_pressed("cima") and status == "OK":
-		up_counter = min(60, up_counter+1)
-		velocity = Vector2.UP.rotated(rotation) * speed * up_counter
-	
 	var collision = move_and_collide(velocity * delta)
 	if collision:
 		if status == "BLOCKED":
