@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://cg5clbaowdm38"]
+[gd_scene load_steps=43 format=3 uid="uid://cg5clbaowdm38"]
 
 [ext_resource type="Script" uid="uid://f7qetnfu0gep" path="res://microjogos/2025S1/project_so_ze/cenas/scripts/player.gd" id="1_lj4lc"]
 [ext_resource type="Texture2D" uid="uid://ct30uhn4ro4hw" path="res://microjogos/2025S1/project_so_ze/recursos/imagens/body_parts_test/body-01.png" id="3_d22dx"]
@@ -12,7 +12,6 @@
 [ext_resource type="AudioStream" uid="uid://gxxju1sjy33c" path="res://microjogos/2025S1/project_so_ze/recursos/sons/humordome-fairy-sparkle-451414.wav" id="13_0mhtu"]
 [ext_resource type="AudioStream" uid="uid://cijuicrqbivod" path="res://microjogos/2025S1/project_so_ze/recursos/sons/jci21-fairy-magic-wand-sfx-32584-5.wav" id="13_yb64s"]
 [ext_resource type="Texture2D" uid="uid://cr33pkjl656by" path="res://microjogos/2025S1/project_so_ze/recursos/imagens/PROPS/SETAS_SPRITE_SHEET.png" id="23_28oqe"]
-[ext_resource type="Script" uid="uid://bklc3fwe4kg4w" path="res://microjogos/2025S1/project_so_ze/cenas/scripts/transform.gd" id="23_ksfxt"]
 [ext_resource type="AudioStream" uid="uid://dg4f4fpbketre" path="res://microjogos/2025S1/project_so_ze/recursos/sons/u_8g40a9z0la-fail-234710.wav" id="26_80j82"]
 [ext_resource type="Texture2D" uid="uid://bghhkxr0hqnle" path="res://microjogos/2025S1/project_so_ze/recursos/imagens/GAMUTO_TRANSFORMADO/transformation-11.png" id="26_228w0"]
 [ext_resource type="Texture2D" uid="uid://ii6y86uepnl2" path="res://microjogos/2025S1/project_so_ze/recursos/imagens/PROPS/TRANSFORM_SPRITE_SHEET.png" id="28_cek2s"]
@@ -25,7 +24,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Head:frame")
+tracks/0/path = NodePath("TranformationParts/Head:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -41,7 +40,7 @@ step = 0.0833
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Head:frame")
+tracks/0/path = NodePath("TranformationParts/Head:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -62,7 +61,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("RightArm:frame")
+tracks/0/path = NodePath("TranformationParts/RightArm:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -78,7 +77,7 @@ step = 0.0833
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("RightArm:frame")
+tracks/0/path = NodePath("TranformationParts/RightArm:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -99,7 +98,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("LeftArm:frame")
+tracks/0/path = NodePath("TranformationParts/LeftArm:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -115,7 +114,7 @@ step = 0.0833
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("LeftArm:frame")
+tracks/0/path = NodePath("TranformationParts/LeftArm:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -136,7 +135,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Legs:frame")
+tracks/0/path = NodePath("TranformationParts/Legs:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -152,7 +151,7 @@ step = 0.0833
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Legs:frame")
+tracks/0/path = NodePath("TranformationParts/Legs:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -173,7 +172,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Up:frame")
+tracks/0/path = NodePath("TranformationParts/Up:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -190,7 +189,7 @@ step = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Up:frame")
+tracks/0/path = NodePath("TranformationParts/Up:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -211,7 +210,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Down:frame")
+tracks/0/path = NodePath("TranformationParts/Down:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -227,7 +226,7 @@ step = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Down:frame")
+tracks/0/path = NodePath("TranformationParts/Down:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -248,7 +247,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Right:frame")
+tracks/0/path = NodePath("TranformationParts/Right:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -264,7 +263,7 @@ step = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Right:frame")
+tracks/0/path = NodePath("TranformationParts/Right:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -285,7 +284,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Left:frame")
+tracks/0/path = NodePath("TranformationParts/Left:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -301,7 +300,7 @@ step = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Left:frame")
+tracks/0/path = NodePath("TranformationParts/Left:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -320,16 +319,18 @@ _data = {
 [node name="Player" type="Node2D" node_paths=PackedStringArray("timer", "head", "right_arm", "left_arm", "legs")]
 script = ExtResource("1_lj4lc")
 timer = NodePath("Timer")
-head = NodePath("Head")
-right_arm = NodePath("RightArm")
-left_arm = NodePath("LeftArm")
-legs = NodePath("Legs")
+head = NodePath("TranformationParts/Head")
+right_arm = NodePath("TranformationParts/RightArm")
+left_arm = NodePath("TranformationParts/LeftArm")
+legs = NodePath("TranformationParts/Legs")
 
-[node name="Body" type="Sprite2D" parent="."]
+[node name="TranformationParts" type="Node2D" parent="."]
+
+[node name="Body" type="Sprite2D" parent="TranformationParts"]
 position = Vector2(952, 541)
 texture = ExtResource("3_d22dx")
 
-[node name="Head" type="Sprite2D" parent="." node_paths=PackedStringArray("anim_player", "audio_player")]
+[node name="Head" type="Sprite2D" parent="TranformationParts" node_paths=PackedStringArray("anim_player", "audio_player", "root")]
 position = Vector2(953, 541)
 texture = ExtResource("5_d22dx")
 hframes = 6
@@ -337,18 +338,19 @@ script = ExtResource("4_263ix")
 body_part = "Head"
 anim_player = NodePath("AnimationPlayer")
 audio_player = NodePath("AudioStreamPlayer")
-key_bind = "cima"
+action = &"cima"
+root = NodePath("../..")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Head"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TranformationParts/Head"]
 stream = ExtResource("5_5bdw3")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Head"]
-root_node = NodePath("../..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TranformationParts/Head"]
+root_node = NodePath("../../..")
 libraries = {
 &"": SubResource("AnimationLibrary_228w0")
 }
 
-[node name="RightArm" type="Sprite2D" parent="." node_paths=PackedStringArray("anim_player", "audio_player")]
+[node name="RightArm" type="Sprite2D" parent="TranformationParts" node_paths=PackedStringArray("anim_player", "audio_player", "root")]
 position = Vector2(952, 543)
 texture = ExtResource("7_nk03m")
 hframes = 6
@@ -356,18 +358,19 @@ script = ExtResource("4_263ix")
 body_part = "RightArm"
 anim_player = NodePath("AnimationPlayer")
 audio_player = NodePath("AudioStreamPlayer")
-key_bind = "direita"
+action = &"direita"
+root = NodePath("../..")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="RightArm"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TranformationParts/RightArm"]
 stream = ExtResource("8_228w0")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="RightArm"]
-root_node = NodePath("../..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TranformationParts/RightArm"]
+root_node = NodePath("../../..")
 libraries = {
 &"": SubResource("AnimationLibrary_h82p1")
 }
 
-[node name="LeftArm" type="Sprite2D" parent="." node_paths=PackedStringArray("anim_player", "audio_player")]
+[node name="LeftArm" type="Sprite2D" parent="TranformationParts" node_paths=PackedStringArray("anim_player", "audio_player", "root")]
 position = Vector2(950, 542)
 texture = ExtResource("7_nk03m")
 flip_h = true
@@ -376,18 +379,19 @@ script = ExtResource("4_263ix")
 body_part = "LeftArm"
 anim_player = NodePath("AnimationPlayer")
 audio_player = NodePath("AudioStreamPlayer")
-key_bind = "esquerda"
+action = &"esquerda"
+root = NodePath("../..")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="LeftArm"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TranformationParts/LeftArm"]
 stream = ExtResource("10_80j82")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="LeftArm"]
-root_node = NodePath("../..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TranformationParts/LeftArm"]
+root_node = NodePath("../../..")
 libraries = {
 &"": SubResource("AnimationLibrary_up00n")
 }
 
-[node name="Legs" type="Sprite2D" parent="." node_paths=PackedStringArray("anim_player", "audio_player")]
+[node name="Legs" type="Sprite2D" parent="TranformationParts" node_paths=PackedStringArray("anim_player", "audio_player", "root")]
 position = Vector2(952, 541)
 texture = ExtResource("10_r6htq")
 hframes = 6
@@ -395,65 +399,65 @@ script = ExtResource("4_263ix")
 body_part = "Legs"
 anim_player = NodePath("AnimationPlayer")
 audio_player = NodePath("AudioStreamPlayer")
-key_bind = "baixo"
+action = &"baixo"
+root = NodePath("../..")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Legs"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TranformationParts/Legs"]
 stream = ExtResource("13_yb64s")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Legs"]
-root_node = NodePath("../..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TranformationParts/Legs"]
+root_node = NodePath("../../..")
 libraries = {
 &"": SubResource("AnimationLibrary_d5pbn")
 }
 
-[node name="Transform" type="Sprite2D" parent="."]
+[node name="Transform" type="Sprite2D" parent="TranformationParts"]
 visible = false
 position = Vector2(1086, 749)
 texture = ExtResource("28_cek2s")
 vframes = 2
-script = ExtResource("23_ksfxt")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Transform"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TranformationParts/Transform"]
 stream = ExtResource("13_0mhtu")
 
-[node name="Up" type="Sprite2D" parent="."]
+[node name="Up" type="Sprite2D" parent="TranformationParts"]
 position = Vector2(1434, 159)
 scale = Vector2(0.614476, 0.601709)
 texture = ExtResource("23_28oqe")
 hframes = 2
 
-[node name="AnimationUp" type="AnimationPlayer" parent="Up"]
-root_node = NodePath("../..")
+[node name="AnimationUp" type="AnimationPlayer" parent="TranformationParts/Up"]
+root_node = NodePath("../../..")
 libraries = {
 &"": SubResource("AnimationLibrary_yb64s")
 }
 
-[node name="LetterUp" type="Sprite2D" parent="Up"]
+[node name="LetterUp" type="Sprite2D" parent="TranformationParts/Up"]
 position = Vector2(-4.88232, -43.2103)
 scale = Vector2(1.6274, 1.66193)
 texture = ExtResource("29_28oqe")
 hframes = 4
 
-[node name="NumberUp" type="Sprite2D" parent="Up"]
+[node name="NumberUp" type="Sprite2D" parent="TranformationParts/Up"]
 position = Vector2(302.29, -130.877)
 scale = Vector2(3.06394, 3.78175)
 texture = ExtResource("31_d22dx")
 hframes = 4
 
-[node name="Down" type="Sprite2D" parent="."]
+[node name="Down" type="Sprite2D" parent="TranformationParts"]
 position = Vector2(552, 931)
 rotation = -3.14159
 scale = Vector2(0.619403, 0.627119)
 texture = ExtResource("23_28oqe")
 hframes = 2
 
-[node name="AnimationDown" type="AnimationPlayer" parent="Down"]
-root_node = NodePath("../..")
+[node name="AnimationDown" type="AnimationPlayer" parent="TranformationParts/Down"]
+root_node = NodePath("../../..")
 libraries = {
 &"": SubResource("AnimationLibrary_080qm")
 }
 
-[node name="LetterDown" type="Sprite2D" parent="Down"]
+[node name="LetterDown" type="Sprite2D" parent="TranformationParts/Down"]
 position = Vector2(-6.10352e-05, -4.78381)
 rotation = 3.14159
 scale = Vector2(1.61446, 1.59459)
@@ -461,27 +465,27 @@ texture = ExtResource("29_28oqe")
 hframes = 4
 frame = 2
 
-[node name="NumberDown" type="Sprite2D" parent="Down"]
+[node name="NumberDown" type="Sprite2D" parent="TranformationParts/Down"]
 position = Vector2(358.006, -29.8995)
 rotation = 3.14159
 scale = Vector2(2.80039, 3.82377)
 texture = ExtResource("31_d22dx")
 hframes = 4
 
-[node name="Right" type="Sprite2D" parent="."]
+[node name="Right" type="Sprite2D" parent="TranformationParts"]
 position = Vector2(1648, 513)
 rotation = 1.5708
 scale = Vector2(0.607463, 0.627119)
 texture = ExtResource("23_28oqe")
 hframes = 2
 
-[node name="AnimationRight" type="AnimationPlayer" parent="Right"]
-root_node = NodePath("../..")
+[node name="AnimationRight" type="AnimationPlayer" parent="TranformationParts/Right"]
+root_node = NodePath("../../..")
 libraries = {
 &"": SubResource("AnimationLibrary_28oqe")
 }
 
-[node name="LetterRight" type="Sprite2D" parent="Right"]
+[node name="LetterRight" type="Sprite2D" parent="TranformationParts/Right"]
 position = Vector2(-1.64624, -23.9187)
 rotation = -1.5708
 scale = Vector2(1.59459, 1.64619)
@@ -489,27 +493,27 @@ texture = ExtResource("29_28oqe")
 hframes = 4
 frame = 3
 
-[node name="NumberRight" type="Sprite2D" parent="Right"]
+[node name="NumberRight" type="Sprite2D" parent="TranformationParts/Right"]
 position = Vector2(-207.832, -182.181)
 rotation = -1.5708
 scale = Vector2(2.94311, 4.14908)
 texture = ExtResource("31_d22dx")
 hframes = 4
 
-[node name="Left" type="Sprite2D" parent="."]
+[node name="Left" type="Sprite2D" parent="TranformationParts"]
 position = Vector2(267, 538)
 rotation = -1.5708
 scale = Vector2(0.578358, 0.603814)
 texture = ExtResource("23_28oqe")
 hframes = 2
 
-[node name="AnimationLeft" type="AnimationPlayer" parent="Left"]
-root_node = NodePath("../..")
+[node name="AnimationLeft" type="AnimationPlayer" parent="TranformationParts/Left"]
+root_node = NodePath("../../..")
 libraries = {
 &"": SubResource("AnimationLibrary_d22dx")
 }
 
-[node name="LetterLeft" type="Sprite2D" parent="Left"]
+[node name="LetterLeft" type="Sprite2D" parent="TranformationParts/Left"]
 position = Vector2(3.45819, -44.7157)
 rotation = 1.5708
 scale = Vector2(1.65614, 1.72903)
@@ -517,7 +521,7 @@ texture = ExtResource("29_28oqe")
 hframes = 4
 frame = 1
 
-[node name="NumberLeft" type="Sprite2D" parent="Left"]
+[node name="NumberLeft" type="Sprite2D" parent="TranformationParts/Left"]
 position = Vector2(284.859, -205.774)
 rotation = 1.5708
 scale = Vector2(3.24072, 4.74602)
@@ -537,6 +541,9 @@ position = Vector2(960, 536)
 texture = ExtResource("26_228w0")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 5.5
+one_shot = true
+autostart = true
 
 [node name="LoseSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("26_80j82")

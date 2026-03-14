@@ -17,41 +17,37 @@ func _ready():
 	for i in range(4):
 		if randomized_member[i] == 0:
 			head.index = i
-			get_node("Up/NumberUp").frame = head.index
+			get_node("TranformationParts/Up/NumberUp").frame = head.index
 		if randomized_member[i] == 1:
 			left_arm.index = i
-			get_node("Left/NumberLeft").frame = left_arm.index
+			get_node("TranformationParts/Left/NumberLeft").frame = left_arm.index
 		if randomized_member[i] == 2:
 			right_arm.index = i
-			get_node("Right/NumberRight").frame = right_arm.index
+			get_node("TranformationParts/Right/NumberRight").frame = right_arm.index
 		if randomized_member[i] == 3:
 			legs.index = i
-			get_node("Down/NumberDown").frame = legs.index
-	timer.start(5.5)
-	
+			get_node("TranformationParts/Down/NumberDown").frame = legs.index	
 
 func add_part(body_part):
 	current_index += 1
 	if current_index == 4:
-			get_node("Transform").show()
+			get_node("TranformationParts/Transform").show()
 			timer.stop()
 
 func lose() -> void:
 	fail = true
 	get_node("Fail").show()
-	get_parent().register_lose()
+	timer.stop()
 	$LoseSound.play()
+	get_parent().register_lose()
 
-func win():
+func win() -> void:
 	won = true
-	get_node("Body").hide()
-	get_node("Head").hide()
-	get_node("RightArm").hide()
-	get_node("LeftArm").hide()
-	get_node("Legs").hide()
-	get_node("Left").hide()
-	get_node("Right").hide()
-	get_node("Up").hide()
-	get_node("Down").hide()
+	get_node("TranformationParts").hide()
 	get_node("Transformation").show()
+	get_node("TranformationParts/Transform/AudioStreamPlayer").play()
 	get_parent().register_win()
+	
+func _input(event: InputEvent) -> void:
+	if not fail and not won and event.is_action_pressed("acao"):
+		win() if current_index == 4 else lose()
