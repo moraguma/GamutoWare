@@ -1,7 +1,7 @@
 extends Node2D
 
-const WIDTH = 1920
-const HEIGHT = 1080
+
+
 
 const Target = preload("res://microjogos/demo/tiro_ao_alvo/cenas/Alvo.tscn")
 const TOTAL_TARGETS = 4

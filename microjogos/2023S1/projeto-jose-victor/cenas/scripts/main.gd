@@ -1,7 +1,7 @@
 extends Node2D
 
-const WIDTH = 1920
-const HEIGHT = 1080
+
+
 
 const MIN_X = 500
 const MAX_X = 1700

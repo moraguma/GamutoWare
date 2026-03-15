@@ -10,8 +10,8 @@ signal lose
 # tela 1920x1080, que é padrão para monitores full HD. Caso você queira uma resolução menor para 
 # atingir uma estética mais pixelada, você pode mudar estes números para qualquer outra resolução 
 # 16:9
-const WIDTH = 1920
-const HEIGHT = 1080
+
+
 
 @onready var gmts = [$Gamuto, $Gamuto2, $Gamuto3]
 

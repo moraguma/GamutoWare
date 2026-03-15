@@ -1,8 +1,8 @@
 extends Node2D
 
 # Estas constantes são usadas para determinar o tamanho da tela do seu jogo. Por padrão, definem uma
-const WIDTH = 1920
-const HEIGHT = 1080
+
+
 
 const TOTAL_LIVROS = 6
 

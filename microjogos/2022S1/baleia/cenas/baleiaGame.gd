@@ -1,8 +1,5 @@
 extends Node2D
 
-const WIDTH = 1920
-const HEIGHT = 1080
-
 const MAX_DIFF = 730
 
 func _ready():

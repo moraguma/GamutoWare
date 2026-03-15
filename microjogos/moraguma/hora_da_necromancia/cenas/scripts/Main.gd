@@ -1,7 +1,7 @@
 extends Node2D
 
-const WIDTH = 1920
-const HEIGHT = 1080
+
+
 
 const LOVE = {Global.LANGUAGE.PT: ["Você fica lindo sob a luz do luar", "Os seus chifres são brilhantes", "Seus olhos me incandescem", "Sua capa é tão sedosa..."], Global.LANGUAGE.EN: ["You look beautiful under the moonlight", "Your antlers look radiant", "I could get lost in your eyes", "Your cape is so soft..."]}
 const FAMILY = {Global.LANGUAGE.PT: ["Saudades da sua irmã...", "Aquele teu tio é doido", "E vovó, cadê?", "Me passa o número da sua tia?"], Global.LANGUAGE.EN: ["I miss your sister...", "That uncle of yours is insane", "And grandma? Where is she?", "Can I get your aunt's number?"]}
