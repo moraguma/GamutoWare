@@ -21,3 +21,4 @@ start_message_pt = &"ORDENE AS CORES!"
 start_message_en = &"ORDER THE COLORS!"
 main_scene = ExtResource("2_6kwc0")
 difficulty = 0
+screen_dimensions = Vector2i(320, 180)

@@ -1,8 +1,5 @@
 extends Node2D
 
-const WIDTH = 320
-const HEIGHT = 180
-
 const COLOR_TOLERANCE = 0.5
 
 var rng = RandomNumberGenerator.new()
