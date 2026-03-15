@@ -108,5 +108,5 @@ label_settings = SubResource("LabelSettings_m5h7r")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="jogo_vencido" from="Display/Pedido" to="." method="Minigames.register_win(self)"]
+[connection signal="jogo_vencido" from="Display/Pedido" to="." method="register_win"]
 [connection signal="timeout" from="Display/Pedido/Timer" to="Display/Pedido" method="_on_timer_timeout"]
