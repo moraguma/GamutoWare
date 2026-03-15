@@ -1,9 +1,5 @@
 extends Node2D
 
-
-const WIDTH = 480
-const HEIGHT = 270
-
 var Player = preload("res://microjogos/moraguma/whale_eater/cenas/Player.tscn")
 
 
