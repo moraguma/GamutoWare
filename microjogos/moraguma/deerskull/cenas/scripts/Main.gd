@@ -1,11 +1,5 @@
 extends Node2D
 
-const HEIGHT = 180
-const WIDTH = 320
-
-
-
-
 const LINE_POINTS = [Vector2(-4, -4), Vector2(324, -4), Vector2(324, 184), Vector2(-4, 184), Vector2(-4, -3)]
 const FIRST_TIME = 1
 const SPAWN_TIME = 0.389

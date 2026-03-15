@@ -29,3 +29,4 @@ start_message_pt = &"DIGITE!"
 start_message_en = &"TYPE!"
 main_scene = ExtResource("2_ib0x2")
 difficulty = 0
+screen_dimensions = Vector2i(160,90)

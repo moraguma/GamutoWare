@@ -1,9 +1,5 @@
 extends Node2D
 
-const WIDTH = 160
-const HEIGHT = 90
-
-
 const CURSOR_LERP_WEIGHT = 0.3
 const PASSWORD_LENGTH = 3
 const MAX_LENGTH = 3
