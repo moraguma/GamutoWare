@@ -25,3 +25,4 @@ start_message_pt = &"IMITE!"
 start_message_en = &"SIMON SAYS..."
 main_scene = ExtResource("1_x3ipl")
 difficulty = 0
+screen_dimensions = Vector2i(640,360)

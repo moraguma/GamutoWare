@@ -1,9 +1,5 @@
 extends Node2D
 
-
-const WIDTH = 640
-const HEIGHT = 360
-
 const TOTAL_COLORS = 4
 const WAIT_TIME = 0.5
 const START_EXTRA_TIME = 0.3
