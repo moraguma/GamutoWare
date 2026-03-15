@@ -1,10 +1,5 @@
 extends Node2D
 
-
-signal win
-signal lose
-
-
 const WIDTH = 384
 const HEIGHT = 216
 
@@ -36,8 +31,5 @@ func _ready():
 	player.set_hanger(hook)
 
 
-func Minigames.register_win(self)(_body):
-	emit_signal("win")
-	
-func register_lose(_body):
-	emit_signal("lose")
+func register_win(_body):
+	Minigames.register_win(self)
