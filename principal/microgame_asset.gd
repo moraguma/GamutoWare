@@ -21,3 +21,16 @@ class_name MicrogameAsset
 
 @export var difficulty: int
 
+# Dimensions
+## Sets microgame zoom so that screen dimensions, default is 1920x1080 (16:9)
+@export var screen_dimensions: Vector2i = Vector2i(1920, 1080) :
+	set(value):
+		if value.x < 0:
+			value.x = -value.x
+		if value.x == 0:
+			value.x = screen_dimensions.x
+		if value.y < 0:
+			value.y = -value.y
+		if value.y == 0:
+			value.y = screen_dimensions.y
+		screen_dimensions = value

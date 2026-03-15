@@ -50,9 +50,12 @@ func start_game(microgame):
 		ResourceLoader.load_threaded_request(microgame.main_scene.resource_path)
 	current_microgame = ResourceLoader.load_threaded_get(microgame.main_scene.resource_path).instantiate()
 	
-	var convert_ratio = max(BASE_WIDTH/float(current_microgame.WIDTH),BASE_HEIGHT/float(current_microgame.HEIGHT))
+	var width: int = microgame.screen_dimensions.x
+	var height: int = microgame.screen_dimensions.y
+
+	var convert_ratio = max(BASE_WIDTH/float(width),BASE_HEIGHT/float(height))
 	
-	display.size = Vector2(current_microgame.WIDTH, current_microgame.HEIGHT)
+	display.size = microgame.screen_dimensions
 	display.scale=Vector2(convert_ratio,convert_ratio)
 	display.texture_filter = current_microgame.texture_filter
 	
