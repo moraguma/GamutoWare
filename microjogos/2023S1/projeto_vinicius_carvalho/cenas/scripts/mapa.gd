@@ -3,9 +3,6 @@ extends Node2D
 const WIDTH = 1920
 const HEIGHT = 1080
 
-signal win
-signal lose
-
 var timer
 var timer_win
 var som
@@ -43,10 +40,3 @@ func _on_timer_timeout():
 	timer.start(2)
 	instanciar_obj()
 
-
-func Minigames.register_win(self):
-	emit_signal("win")
-
-
-func Minigames.register_lose(self):
-	emit_signal("lose")
