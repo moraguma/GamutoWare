@@ -1,9 +1,5 @@
 extends Node2D
 
-# Declaração dos sinais win e lose
-signal win
-signal lose
-
 # 16:9
 const WIDTH = 1920
 const HEIGHT = 1080
@@ -43,11 +39,11 @@ func _process(delta):
 	if right:
 		if not mail_list[0].is_red: # wrong
 			lost = true
-			Minigames.register_lose(self)
+			register_lose()
 	elif left:
 		if mail_list[0].is_red: # wrong
 			lost = true
-			Minigames.register_lose(self)
+			register_lose()
 	
 	if left or right:
 		$Hit.play()
@@ -89,15 +85,10 @@ func mail_fall(delta: float):
 # CONDIÇÕES DE VITÓRIA
 # --------------------------------------------------------------------------------------------------
 
-# Chame esta função para registrar que o jogador venceu o jogo
-func Minigames.register_win(self):
-	emit_signal("win")
-
-
 # Chame esta função para registrar que o jogador perdeu o jogo
-func Minigames.register_lose(self):
+func register_lose():
 	$Phone/BlueScreen.visible = true
 	$Music.playing = false
 	$Scratch.playing = true
 	GlobalCamera.add_trauma(0.75)
-	emit_signal("lose")
+	Minigames.register_lose(self)
