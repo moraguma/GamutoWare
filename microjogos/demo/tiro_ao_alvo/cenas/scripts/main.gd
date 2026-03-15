@@ -1,9 +1,5 @@
 extends Node2D
 
-
-signal win
-signal lose
-
 const WIDTH = 1920
 const HEIGHT = 1080
 
@@ -29,11 +25,3 @@ func register_hit():
 	hits += 1
 	if hits >= TOTAL_TARGETS:
 		Minigames.register_win(self)
-
-
-func Minigames.register_win(self):
-	emit_signal("win")
-
-func Minigames.register_lose(self):
-	emit_signal("lose")
-
