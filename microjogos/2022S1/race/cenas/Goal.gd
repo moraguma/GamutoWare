@@ -12,7 +12,7 @@ func _process(_delta):
 	
 func _on_body_entered(body):
 	if(body == player):
-		Minigames.register_win(self)
+		parent.register_win()
 		player.won = true
 	elif(body == enemy):
-		Minigames.register_lose(self)
+		parent.register_lose()

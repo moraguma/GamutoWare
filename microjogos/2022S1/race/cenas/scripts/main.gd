@@ -1,9 +1,5 @@
 extends Node2D
 
-
-signal win
-signal lose
-
 const WIDTH = 1920
 const HEIGHT = 1080
 
@@ -15,15 +11,15 @@ func _ready():
 	randomize()
 
 
-func Minigames.register_win(self):
+func register_win():
 	if(winnable):
 		losable = false
 		get_node("VictorySFX").play()
-		emit_signal("win")
+		Minigames.register_win(self)
 
-func Minigames.register_lose(self):
+func register_lose():
 	if(losable):
 		winnable = false
 		losable = false
 		get_node("DefeatSFX").play()
-		emit_signal("lose")
+		Minigames.register_lose(self)
