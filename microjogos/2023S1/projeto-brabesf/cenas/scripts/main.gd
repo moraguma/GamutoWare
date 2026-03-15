@@ -1,10 +1,5 @@
 extends Node2D
 
-# Declaração dos sinais win e lose
-signal win
-signal lose
-
-
 # Estas constantes são usadas para determinar o tamanho da tela do seu jogo. Por padrão, definem uma
 # tela 1920x1080, que é padrão para monitores full HD. Caso você queira uma resolução menor para 
 # atingir uma estética mais pixelada, você pode mudar estes números para qualquer outra resolução 
@@ -142,9 +137,9 @@ func pode_mover(movimento):
 
 
 # Chame esta função para registrar que o jogador venceu o jogo
-func Minigames.register_win(self):
+func register_win():
 	mostrar_frutas()
-	emit_signal("win")
+	Minigames.register_win(self)
 
 func mostrar_frutas():
 	var im11 = get_node("Card11/fruit2D")
@@ -165,9 +160,9 @@ func mostrar_frutas():
 		im_list[i].set_scale(int_to_scale[fruit_true[i]])
 	
 # Chame esta função para registrar que o jogador perdeu o jogo
-func Minigames.register_lose(self):
+func register_lose():
 	mostrar_frutas()
-	emit_signal("lose")
+	Minigames.register_lose(self)
 
 func draw_gamuto():
 	var gamuto = get_node("Player")
@@ -205,6 +200,6 @@ func _on_timer_timeout():
 		#lógica de game-end
 		
 		if(chosen_fruit == fruit_true[gamuto_position]):
-			Minigames.register_win(self)
+			register_win()
 		else:
-			Minigames.register_lose(self)
+			register_lose()
