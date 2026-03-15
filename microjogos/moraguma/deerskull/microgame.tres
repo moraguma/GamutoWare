@@ -27,3 +27,5 @@ start_message_pt = &"DESVIE!"
 start_message_en = &"DODGE!"
 main_scene = ExtResource("2_w8deb")
 difficulty = 0
+screen_dimensions = Vector2i(320,180)
+
