@@ -4,11 +4,6 @@ extends Node2D
 const WIDTH = 480
 const HEIGHT = 270
 
-
-signal win
-signal lose
-
-
 var Player = preload("res://microjogos/moraguma/whale_eater/cenas/Player.tscn")
 
 
@@ -71,8 +66,8 @@ func get_input_dir():
 	return 0
 
 
-func Minigames.register_win(self)(body):
+func register_win(body):
 	active = false
-	emit_signal("win")
+	Minigames.register_win(self)
 	
 	heart_animation_player.play("enter")
