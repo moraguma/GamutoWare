@@ -45,7 +45,7 @@ func _on_win_body_entered(body):
 func _on_espinhos_body_entered(body):
 	var player = $"../Player"
 	if body == player:
-		base.emit_signal("lose")
+		Minigames.register_lose(self)
 		print("Voce perdeu!")
 		jogo_acabou = true
 		som_morte.play()
