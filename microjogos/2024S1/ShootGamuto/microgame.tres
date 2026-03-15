@@ -15,3 +15,4 @@ start_message_pt = &"Ataque as torres!"
 start_message_en = &"Attack the towers!"
 main_scene = ExtResource("2_wwtyr")
 difficulty = 0
+screen_dimensions = Vector2i(960, 540)
