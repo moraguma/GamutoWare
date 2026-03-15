@@ -1,8 +1,5 @@
 extends Node2D
 
-const WIDTH = 640
-const HEIGHT = 360
-
 const SHOOT_TIME = 0.6
 const MIN_WAIT_TIME = 2
 const MAX_WAIT_TIME = 5
