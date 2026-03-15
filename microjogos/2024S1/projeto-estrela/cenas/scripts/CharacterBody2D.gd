@@ -28,8 +28,8 @@ func _process(_delta):
 
 func _physics_process(delta):
 	
-	var directionx = Input.get_axis("ui_left","ui_right")
-	var directiony = Input.get_axis("ui_up","ui_down")
+	var directionx = Input.get_axis("esquerda","direita")
+	var directiony = Input.get_axis("cima","baixo")
 	velocity.y = directiony * SPEED
 	velocity.x = directionx * SPEED
 	#velocity.y = move_toward(velocity.y, 0, SPEED)
