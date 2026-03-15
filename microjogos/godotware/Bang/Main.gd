@@ -1,10 +1,5 @@
 extends Node2D
 
-
-signal win
-signal lose
-
-
 const WIDTH = 640
 const HEIGHT = 360
 
@@ -55,7 +50,7 @@ func _input(event):
 		
 		if set:
 			animated_sprite.set_animation("win")
-			emit_signal("win")
+			Minigames.register_win(self)
 		else:
 			animated_sprite.set_animation("dodge")
 			music.stop()
