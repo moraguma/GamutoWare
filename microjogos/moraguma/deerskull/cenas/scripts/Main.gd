@@ -1,10 +1,5 @@
 extends Node2D
 
-
-signal win
-signal lose
-
-
 const HEIGHT = 180
 const WIDTH = 320
 
@@ -27,7 +22,7 @@ func _ready():
 	
 	music.play()
 	
-	call_deferred("emit_signal", "win")
+	call_deferred(func (): Minigames.register_win(self))
 	
 	randomize()
 	
@@ -47,7 +42,7 @@ func spawn():
 	timer.start(SPAWN_TIME)
 
 
-func Minigames.register_lose(self):
+func register_lose():
 	timer.stop()
 	
-	emit_signal("lose")
+	Minigames.register_lose(self)

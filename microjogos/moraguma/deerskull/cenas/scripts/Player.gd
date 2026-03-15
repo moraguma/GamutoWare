@@ -36,6 +36,6 @@ func die():
 	
 	nav.drop()
 	deerskull.drop()
-	Minigames.register_lose(self)
+	parent.register_lose()
 	
 	hit_sound.play()
