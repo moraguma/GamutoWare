@@ -19,13 +19,3 @@ const HEIGHT = 1080
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
 	pass
-
-
-# Chame esta função para registrar que o jogador venceu o jogo
-func Minigames.register_win(self):
-	emit_signal("win")
-
-
-# Chame esta função para registrar que o jogador perdeu o jogo
-func Minigames.register_lose(self):
-	emit_signal("lose")
