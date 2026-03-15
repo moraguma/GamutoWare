@@ -2,9 +2,6 @@ extends Node2D
 
 @onready var player = $Player
 
-signal win
-signal lose
-
 # Estas constantes são usadas para determinar o tamanho da tela do seu jogo. Por padrão, definem uma
 # tela 1920x1080, que é padrão para monitores full HD. Caso você queira uma resolução menor para 
 # atingir uma estética mais pixelada, você pode mudar estes números para qualquer outra resolução 
@@ -26,21 +23,21 @@ func _process(delta):
 	pass
 
 	
-func Minigames.register_win(self):
+func register_win():
 	#match Global.language:
 	#	Global.LANGUAGE.EN:
 	#		NotificationCenter.notify("WIN!")
 	#	Global.LANGUAGE.PT:
 	#		NotificationCenter.notify("COMPRA COMPLETA!")
-	emit_signal("win")
+	Minigames.register_win(self)
 	remove_child($Player)
 
 # Chame esta função para registrar que o jogador perdeu o jogo
-func Minigames.register_lose(self):
+func register_lose():
 	#match Global.language:
 	#	Global.LANGUAGE.EN:
 	#		NotificationCenter.notify("LOSE!")
 	#	Global.LANGUAGE.PT:
 	#		NotificationCenter.notify("PERDEU PLAYBOY!")
-	emit_signal("lose")
+	Minigames.register_lose(self)
 	remove_child($Player)
