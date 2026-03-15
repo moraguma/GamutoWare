@@ -8,8 +8,8 @@ func _ready():
 	velocity = Vector2(SPEED, 0)
 
 func _physics_process(delta): 
-	var directionHorizontal = Input.get_axis("ui_left", "ui_right")
-	var directionVertical = Input.get_axis("ui_down", "ui_up")
+	var directionHorizontal = Input.get_axis("esquerda", "direita")
+	var directionVertical = Input.get_axis("baixo", "cima")
  
 	if is_on_floor() or is_on_ceiling() or is_on_wall():
 		acabou = true

@@ -32,7 +32,7 @@ func _physics_process(delta):
 # desde a última chamada desta função. O comando pass não faz nada
 func _process(delta):
 	#var direction = 0
-	#if Input.is_action_pressed("ui_left"):
+	#if Input.is_action_pressed("esquerda"):
 		#direction = -1
 	#$Cell_0.
 	pass
