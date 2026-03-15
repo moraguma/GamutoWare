@@ -23,3 +23,5 @@ start_message_pt = &"CROSS THE ROAD!"
 start_message_en = &"ATRAVESSE A RUA!"
 main_scene = ExtResource("2_xxold")
 difficulty = 0
+screen_dimensions = Vector2i(256, 144)
+
