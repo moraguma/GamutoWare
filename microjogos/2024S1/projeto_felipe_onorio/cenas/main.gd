@@ -1,8 +1,5 @@
 extends Node2D
 
-signal win()
-signal lose()
-
 const WIDTH = 1920
 const HEIGHT = 1080
 
@@ -62,7 +59,7 @@ func game_won():
 	var win_animations = $interface_static_elements/win_animation
 	win_animations.show()
 	win_animations.play("default")
-	win.emit()
+	Minigames.register_win(self)
 	
 
 func _process(_delta):
