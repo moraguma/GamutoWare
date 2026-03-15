@@ -33,7 +33,7 @@ func move(dir):
 	sprite.position -= dir * CELL_SIZE
 
 
-func Minigames.register_win(self):
+func register_win():
 	animation_player.play("pop")
 	$StabSound.play()
 	monitorable = false

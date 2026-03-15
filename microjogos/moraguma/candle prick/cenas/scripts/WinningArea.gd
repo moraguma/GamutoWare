@@ -25,7 +25,7 @@ func _physics_process(delta):
 			active = false
 			
 			Minigames.register_win(self)
-			Minigames.register_win(self)
+			candle.register_win()
 
 
 func _process(delta):

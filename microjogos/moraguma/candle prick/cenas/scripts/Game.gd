@@ -32,7 +32,3 @@ func _ready():
 
 func has_floor(cell_pos):
 	return tiles.get_cell_source_id(0, cell_pos) in VALID_TILES
-
-
-func Minigames.register_win(self):
-	get_parent().get_parent().win_game()
