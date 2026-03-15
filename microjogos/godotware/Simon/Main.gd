@@ -1,10 +1,6 @@
 extends Node2D
 
 
-signal win
-signal lose
-
-
 const WIDTH = 640
 const HEIGHT = 360
 
@@ -83,7 +79,7 @@ func button_click(color_code):
 		active = false
 		win_sound.play()
 		
-		emit_signal("win")
+		Minigames.register_win(self)
 
 
 func play_color(color_code):
