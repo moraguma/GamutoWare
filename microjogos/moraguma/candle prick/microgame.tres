@@ -31,3 +31,4 @@ start_message_pt = &"EMPURRE!"
 start_message_en = &"PUSH!"
 main_scene = ExtResource("2_arxhb")
 difficulty = 0
+screen_dimensions = Vector2i(240,135)
