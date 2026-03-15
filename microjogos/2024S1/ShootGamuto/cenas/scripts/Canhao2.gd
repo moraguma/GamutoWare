@@ -78,12 +78,3 @@ func _attack():
 			acertou_bom = true
 			set_process_input(false)
 			Minigames.register_win(self)
-
-# Chame esta função para registrar que o jogador venceu o jogo
-func Minigames.register_win(self):
-	Minigames.register_win(self)
-
-
-# Chame esta função para registrar que o jogador perdeu o jogo
-func Minigames.register_lose(self):
-	Minigames.register_lose(self)
