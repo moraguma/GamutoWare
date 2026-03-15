@@ -1,8 +1,5 @@
 extends Node2D
 
-signal win
-signal lose
- 
 const WIDTH = 1920
 const HEIGHT = 1080
 
@@ -39,12 +36,4 @@ func ganhar_ponto(body):
 	else:
 		$mordida.play()
 
-func Minigames.register_win(self):
-	emit_signal("win") 
-
-func Minigames.register_lose(self):
-	emit_signal("lose")
-
-
- 
 		
