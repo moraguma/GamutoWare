@@ -22,7 +22,7 @@ func _ready():
 	
 	music.play()
 	
-	call_deferred(func (): Minigames.register_win(self))
+	Minigames.register_win(self)
 	
 	randomize()
 	
