@@ -25,3 +25,5 @@ start_message_pt = &"ATRAVESSE!"
 start_message_en = &"CROSS!"
 main_scene = ExtResource("2_htk62")
 difficulty = 0
+screen_dimensions = Vector2i(384,216)
+

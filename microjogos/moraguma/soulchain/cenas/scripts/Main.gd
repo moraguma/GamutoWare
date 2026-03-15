@@ -1,9 +1,5 @@
 extends Node2D
 
-const WIDTH = 384
-const HEIGHT = 216
-
-
 const MAX_PLAYER_MOVEMENT = Vector2(48, 0)
 const MAX_GOAL_MOVEMENT_1 = Vector2(0, -32)
 const MAX_GOAL_MOVEMENT_2 = Vector2(16, 16)
