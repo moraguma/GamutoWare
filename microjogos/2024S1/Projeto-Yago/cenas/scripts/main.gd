@@ -26,7 +26,7 @@ func _process(delta):
 	pass
 
 	
-func register_win():
+func Minigames.register_win(self):
 	#match Global.language:
 	#	Global.LANGUAGE.EN:
 	#		NotificationCenter.notify("WIN!")
@@ -36,7 +36,7 @@ func register_win():
 	remove_child($Player)
 
 # Chame esta função para registrar que o jogador perdeu o jogo
-func register_lose():
+func Minigames.register_lose(self):
 	#match Global.language:
 	#	Global.LANGUAGE.EN:
 	#		NotificationCenter.notify("LOSE!")

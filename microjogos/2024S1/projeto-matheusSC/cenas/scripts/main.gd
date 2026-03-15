@@ -66,7 +66,7 @@ func _process(delta):
 		if not crowd_anim_played:
 			crowd_anim.play("crowd_shake")
 			crowd_anim_played = true
-		register_win()
+		Minigames.register_win(self)
 	if perdeu:
 		if $Music.playing:
 			$Wrong.play()
@@ -101,10 +101,10 @@ func _on_timer_timeout():
 
 
 # Chame esta função para registrar que o jogador venceu o jogo
-func register_win():
+func Minigames.register_win(self):
 	emit_signal("win")
 
 
 # Chame esta função para registrar que o jogador perdeu o jogo
-func register_lose():
+func Minigames.register_lose(self):
 	emit_signal("lose")

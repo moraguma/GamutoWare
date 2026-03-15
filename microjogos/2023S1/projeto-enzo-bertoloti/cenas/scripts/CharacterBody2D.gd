@@ -37,7 +37,7 @@ func _physics_process(delta):
 func _on_win_body_entered(body):
 	var player = $"../Player"
 	if body == player:
-		base.register_win()
+		Minigames.register_win(self)
 		print("Voce ganhou!")
 		jogo_acabou = true
 		som_morte.play()

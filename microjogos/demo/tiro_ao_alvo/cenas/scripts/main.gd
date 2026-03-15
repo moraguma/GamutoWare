@@ -28,12 +28,12 @@ func _ready():
 func register_hit():
 	hits += 1
 	if hits >= TOTAL_TARGETS:
-		register_win()
+		Minigames.register_win(self)
 
 
-func register_win():
+func Minigames.register_win(self):
 	emit_signal("win")
 
-func register_lose():
+func Minigames.register_lose(self):
 	emit_signal("lose")
 

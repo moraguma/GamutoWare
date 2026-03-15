@@ -14,7 +14,7 @@ func _physics_process(delta):
 	var colisao = get_colliding_bodies()
 	for i in colisao:
 		if i.is_in_group ("area"):
-			main.register_lose()
+			Minigames.register_lose(self)
 	
 	if len(colisao) > 0:
 		$Bounce.play()

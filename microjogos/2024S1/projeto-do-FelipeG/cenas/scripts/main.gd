@@ -60,12 +60,12 @@ func my_method():
 
 
 # Chame esta função para registrar que o jogador venceu o jogo
-func register_win():
+func Minigames.register_win(self):
 	emit_signal("win")
 	NotificationCenter.notify("YOU WIN!")
 
 # Chame esta função para registrar que o jogador perdeu o jogo
-func register_lose():
+func Minigames.register_lose(self):
 	emit_signal("lose")
 
 func _on_sorvete_capturado():
@@ -73,5 +73,5 @@ func _on_sorvete_capturado():
 	if(!won):
 		if(sorvetes_capturados >= sorvetes_para_vitoria):
 			won = true
-			register_win()
+			Minigames.register_win(self)
 	pass # Replace with function body.

@@ -204,4 +204,4 @@ position = Vector2(240, 135)
 position = Vector2(0, 1)
 shape = SubResource("1")
 
-[connection signal="body_exited" from="TransitionArea" to="." method="register_win"]
+[connection signal="body_exited" from="TransitionArea" to="." method="Minigames.register_win(self)"]

@@ -20,7 +20,7 @@ var alreadyLost = false
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
 	
-	register_win()
+	Minigames.register_win(self)
 	
 	rng.randomize()
 	
@@ -92,7 +92,7 @@ func my_method():
 
 
 # Chame esta função para registrar que o jogador venceu o jogo
-func register_win():
+func Minigames.register_win(self):
 	emit_signal("win")
 
 

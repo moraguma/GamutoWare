@@ -123,4 +123,4 @@ bbcode_enabled = true
 [node name="Obstaculos" parent="." instance=ExtResource("15_x2yd0")]
 
 [connection signal="lose" from="Player" to="." method="register_lose"]
-[connection signal="win" from="Player" to="." method="register_win"]
+[connection signal="win" from="Player" to="." method="Minigames.register_win(self)"]

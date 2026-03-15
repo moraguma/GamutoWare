@@ -77,13 +77,13 @@ func _attack():
 			#$"../RichTextLabel".text = "you won"
 			acertou_bom = true
 			set_process_input(false)
-			register_win()
+			Minigames.register_win(self)
 
 # Chame esta função para registrar que o jogador venceu o jogo
-func register_win():
-	main.register_win()
+func Minigames.register_win(self):
+	Minigames.register_win(self)
 
 
 # Chame esta função para registrar que o jogador perdeu o jogo
-func register_lose():
-	main.register_lose()
+func Minigames.register_lose(self):
+	Minigames.register_lose(self)

@@ -6,7 +6,7 @@ func _ready():
 	body_entered.connect(win)
 	
 func win(body):
-	get_parent().register_win()
+	Minigames.register_win(self)
 	body.done = true
 	$VictoryFanfare.play()
 

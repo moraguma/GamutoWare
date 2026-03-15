@@ -32,13 +32,13 @@ func _on_goal_body_entered(body):
 	get_parent().get_node("win_sound").play()
 	body.queue_free()
 	var win = $"../"
-	win.register_win()
+	Minigames.register_win(self)
 
 func _on_go_body_entered(body):
 	get_parent().get_node("lose_sound").play()
 	body.queue_free()
 	var win = $"../"
-	win.register_lose()
+	Minigames.register_lose(self)
 
 
 func _on_powerup_body_entered(body):
@@ -56,22 +56,22 @@ func _on_bat_body_entered(body):
 	get_parent().get_node("lose_sound").play()
 	body.queue_free()
 	var win = $"../"
-	win.register_lose()
+	Minigames.register_lose(self)
 	
 func _on_bat2_body_entered(body):
 	get_parent().get_node("lose_sound").play()
 	body.queue_free()
 	var win = $"../"
-	win.register_lose()
+	Minigames.register_lose(self)
 	
 func _on_bat3_body_entered(body):
 	get_parent().get_node("lose_sound").play()
 	body.queue_free()
 	var win = $"../"
-	win.register_lose()
+	Minigames.register_lose(self)
 	
 func _on_bat4_body_entered(body):
 	get_parent().get_node("lose_sound").play()
 	body.queue_free()
 	var win = $"../"
-	win.register_lose()
+	Minigames.register_lose(self)

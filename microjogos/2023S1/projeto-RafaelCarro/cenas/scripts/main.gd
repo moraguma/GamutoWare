@@ -62,7 +62,7 @@ func my_method():
 func aumentar_acertos():
 	Acertos += 1
 	if Acertos >= 5:
-		register_win()
+		Minigames.register_win(self)
 		
 func hit_sounds():
 	if Acertos == 0:
@@ -89,10 +89,10 @@ func hit_sounds():
 
 
 # Chame esta função para registrar que o jogador venceu o jogo
-func register_win():
+func Minigames.register_win(self):
 	emit_signal("win")
 
 
 # Chame esta função para registrar que o jogador perdeu o jogo
-func register_lose():
+func Minigames.register_lose(self):
 	emit_signal("lose")

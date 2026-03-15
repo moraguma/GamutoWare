@@ -160,17 +160,17 @@ func choice_made(make: bool):
 		m.material.set_shader_parameter("shine_color", Color(0.5, 0.5, 0.5, 0.8))
 	
 	if make == venceu:
-		register_win()
+		Minigames.register_win(self)
 	else:
-		register_lose()
+		Minigames.register_lose(self)
 
 # Chame esta função para registrar que o jogador venceu o jogo
-func register_win():
+func Minigames.register_win(self):
 	print("VENCEU")
 	emit_signal("win")
 
 
 # Chame esta função para registrar que o jogador perdeu o jogo
-func register_lose():
+func Minigames.register_lose(self):
 	print("PERDEU")
 	emit_signal("lose")

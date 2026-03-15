@@ -75,12 +75,12 @@ func game_start():
 
 
 # Chame esta função para registrar que o jogador venceu o jogo
-func register_win():
+func Minigames.register_win(self):
 	emit_signal("win")
 
 
 # Chame esta função para registrar que o jogador perdeu o jogo
-func register_lose():
+func Minigames.register_lose(self):
 	emit_signal("lose")
 
 
@@ -114,7 +114,7 @@ func _on_asteroid_timer_timeout():
 func _on_win_timer_timeout():
 	var a = get_node("Base/Player")
 	if a.is_alive:
-		register_win()
+		Minigames.register_win(self)
 	else:
-		register_lose()
+		Minigames.register_lose(self)
 	pass # Replace with function body.

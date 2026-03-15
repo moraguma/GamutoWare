@@ -71,7 +71,7 @@ func get_input_dir():
 	return 0
 
 
-func register_win(body):
+func Minigames.register_win(self)(body):
 	active = false
 	emit_signal("win")
 	

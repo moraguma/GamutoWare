@@ -20,7 +20,7 @@ func _ready():
 	timer = $Timer
 	timer.start(0.5)
 	
-	register_win()
+	Minigames.register_win(self)
 
 	
 	
@@ -44,9 +44,9 @@ func _on_timer_timeout():
 	instanciar_obj()
 
 
-func register_win():
+func Minigames.register_win(self):
 	emit_signal("win")
 
 
-func register_lose():
+func Minigames.register_lose(self):
 	emit_signal("lose")

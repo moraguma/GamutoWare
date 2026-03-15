@@ -24,8 +24,8 @@ func _physics_process(delta):
 		if candle.position.distance_to(position) < CANDLE_TOLERANCE:
 			active = false
 			
-			parent.register_win()
-			candle.register_win()
+			Minigames.register_win(self)
+			Minigames.register_win(self)
 
 
 func _process(delta):

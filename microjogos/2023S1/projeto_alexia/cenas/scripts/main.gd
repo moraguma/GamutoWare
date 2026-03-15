@@ -53,7 +53,7 @@ func _physics_process(delta):
 		var aux
 		if livros == base:
 			win_sound.play()
-			register_win()
+			Minigames.register_win(self)
 			venceu = true
 		
 		if select == 0:
@@ -134,10 +134,10 @@ func _process(delta):
 
 
 # Chame esta função para registrar que o jogador venceu o jogo
-func register_win():
+func Minigames.register_win(self):
 	emit_signal("win")
 
 
 # Chame esta função para registrar que o jogador perdeu o jogo
-func register_lose():
+func Minigames.register_lose(self):
 	emit_signal("lose")

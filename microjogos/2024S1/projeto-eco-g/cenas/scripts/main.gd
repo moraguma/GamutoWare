@@ -18,7 +18,7 @@ const HEIGHT = 1080
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
-	register_win()
+	Minigames.register_win(self)
 
 
 # Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
@@ -56,15 +56,15 @@ func my_method():
 
 
 # Chame esta função para registrar que o jogador venceu o jogo
-func register_win():
+func Minigames.register_win(self):
 	emit_signal("win")
 
 
 # Chame esta função para registrar que o jogador perdeu o jogo
-func register_lose():
+func Minigames.register_lose(self):
 	#get_tree().paused = true
 	emit_signal("lose")
 
 
 func _on_gamuto_dead():
-	register_lose()
+	Minigames.register_lose(self)

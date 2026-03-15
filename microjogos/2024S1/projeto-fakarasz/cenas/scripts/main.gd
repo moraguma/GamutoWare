@@ -61,21 +61,21 @@ func my_method():
 
 
 # Chame esta função para registrar que o jogador venceu o jogo
-func register_win():
+func Minigames.register_win(self):
 	emit_signal("win")
 
 
 # Chame esta função para registrar que o jogador perdeu o jogo
-func register_lose():
+func Minigames.register_lose(self):
 	emit_signal("lose")
 
 func _on_Gamutos_area_entered(area):
 	area.queue_free()
-	register_lose()
+	Minigames.register_lose(self)
 
 	
 func _on_Gol_area_entered(area):
 	area.queue_free()
-	register_win()
+	Minigames.register_win(self)
 
 

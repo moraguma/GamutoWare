@@ -142,7 +142,7 @@ func pode_mover(movimento):
 
 
 # Chame esta função para registrar que o jogador venceu o jogo
-func register_win():
+func Minigames.register_win(self):
 	mostrar_frutas()
 	emit_signal("win")
 
@@ -165,7 +165,7 @@ func mostrar_frutas():
 		im_list[i].set_scale(int_to_scale[fruit_true[i]])
 	
 # Chame esta função para registrar que o jogador perdeu o jogo
-func register_lose():
+func Minigames.register_lose(self):
 	mostrar_frutas()
 	emit_signal("lose")
 
@@ -205,6 +205,6 @@ func _on_timer_timeout():
 		#lógica de game-end
 		
 		if(chosen_fruit == fruit_true[gamuto_position]):
-			register_win()
+			Minigames.register_win(self)
 		else:
-			register_lose()
+			Minigames.register_lose(self)

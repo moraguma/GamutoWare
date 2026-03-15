@@ -88,12 +88,12 @@ func choose_apples():
 
 
 # Chame esta função para registrar que o jogador venceu o jogo
-func register_win():
+func Minigames.register_win(self):
 	emit_signal("win")
 
 
 # Chame esta função para registrar que o jogador perdeu o jogo
-func register_lose():
+func Minigames.register_lose(self):
 	emit_signal("lose")
 
 
@@ -112,7 +112,7 @@ func _on_head_area_entered(area):
 				win = true
 				break
 		if win:
-			register_win()
+			Minigames.register_win(self)
 			won = true
 			won_i = len(head.tail_nodes)
 			#head.tail_nodes[-1].position = head.position

@@ -43,11 +43,11 @@ func _process(delta):
 	if right:
 		if not mail_list[0].is_red: # wrong
 			lost = true
-			register_lose()
+			Minigames.register_lose(self)
 	elif left:
 		if mail_list[0].is_red: # wrong
 			lost = true
-			register_lose()
+			Minigames.register_lose(self)
 	
 	if left or right:
 		$Hit.play()
@@ -55,7 +55,7 @@ func _process(delta):
 		mail_list.pop_at(0)
 	
 	if len(mail_list) == 0 and not lost:
-		register_win()
+		Minigames.register_win(self)
 
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES LOCAIS
@@ -90,12 +90,12 @@ func mail_fall(delta: float):
 # --------------------------------------------------------------------------------------------------
 
 # Chame esta função para registrar que o jogador venceu o jogo
-func register_win():
+func Minigames.register_win(self):
 	emit_signal("win")
 
 
 # Chame esta função para registrar que o jogador perdeu o jogo
-func register_lose():
+func Minigames.register_lose(self):
 	$Phone/BlueScreen.visible = true
 	$Music.playing = false
 	$Scratch.playing = true

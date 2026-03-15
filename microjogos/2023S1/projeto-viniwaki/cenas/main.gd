@@ -26,7 +26,7 @@ const HEIGHT = 1080
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
-	register_win()
+	Minigames.register_win(self)
 	
 
 
@@ -76,7 +76,7 @@ func successful_cut(dir: int):
 func remove_from_slice_queue(d, fruit):
 	slice_queues[d].erase(fruit)
 	$audio_lose.play()
-	register_lose()
+	Minigames.register_lose(self)
 	
 func throw_fruit():
 	var new_fruit = fruit_scene.instantiate()
@@ -113,10 +113,10 @@ func _on_timer_timeout():
 
 
 # Chame esta função para registrar que o jogador venceu o jogo
-func register_win():
+func Minigames.register_win(self):
 	emit_signal("win")
 
 
 # Chame esta função para registrar que o jogador perdeu o jogo
-func register_lose():
+func Minigames.register_lose(self):
 	emit_signal("lose")

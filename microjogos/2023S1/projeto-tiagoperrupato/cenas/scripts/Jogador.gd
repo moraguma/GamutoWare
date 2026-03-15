@@ -26,4 +26,4 @@ func _physics_process(delta):
 		if collision.get_collider().is_in_group("Veiculos"):
 			explode()
 			velocity.y = 0
-			$"../".register_lose()
+			Minigames.register_lose(self)

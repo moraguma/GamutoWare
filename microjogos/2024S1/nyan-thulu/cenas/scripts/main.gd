@@ -26,7 +26,7 @@ var player_is_dead = false
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
 	
-	register_win()
+	Minigames.register_win(self)
 	rng.randomize()
 	spawners = [$"Spawner", $"Spawner2", $"Spawner3", $"Spawner4"]
 
@@ -41,12 +41,12 @@ func _ready():
 
 
 # Chame esta função para registrar que o jogador venceu o jogo
-func register_win():
+func Minigames.register_win(self):
 	emit_signal("win")
 
 
 # Chame esta função para registrar que o jogador perdeu o jogo
-func register_lose():
+func Minigames.register_lose(self):
 	emit_signal("lose")
 
 
@@ -61,5 +61,5 @@ func _on_timer_timeout():
 
 
 func _on_player_dead():
-	register_lose()
+	Minigames.register_lose(self)
 	player_is_dead = true

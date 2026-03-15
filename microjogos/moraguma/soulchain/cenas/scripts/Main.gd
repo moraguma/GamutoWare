@@ -36,7 +36,7 @@ func _ready():
 	player.set_hanger(hook)
 
 
-func register_win(_body):
+func Minigames.register_win(self)(_body):
 	emit_signal("win")
 	
 func register_lose(_body):

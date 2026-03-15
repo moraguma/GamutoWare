@@ -897,4 +897,4 @@ script = ExtResource("12")
 stream = ExtResource("14")
 volume_db = -10.0
 
-[connection signal="body_entered" from="Goal/WinningArea" to="." method="register_win"]
+[connection signal="body_entered" from="Goal/WinningArea" to="." method="Minigames.register_win(self)"]

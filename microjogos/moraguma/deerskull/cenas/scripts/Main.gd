@@ -47,7 +47,7 @@ func spawn():
 	timer.start(SPAWN_TIME)
 
 
-func register_lose():
+func Minigames.register_lose(self):
 	timer.stop()
 	
 	emit_signal("lose")

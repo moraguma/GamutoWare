@@ -15,13 +15,13 @@ func _ready():
 	randomize()
 
 
-func register_win():
+func Minigames.register_win(self):
 	if(winnable):
 		losable = false
 		get_node("VictorySFX").play()
 		emit_signal("win")
 
-func register_lose():
+func Minigames.register_lose(self):
 	if(losable):
 		winnable = false
 		losable = false

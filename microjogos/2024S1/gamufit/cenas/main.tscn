@@ -98,8 +98,8 @@ autoplay = true
 
 [connection signal="body_entered" from="SmallBar" to="SmallBar" method="_on_body_entered"]
 [connection signal="body_exited" from="SmallBar" to="SmallBar" method="_on_body_exited"]
-[connection signal="gamuto_collided" from="SmallBar" to="." method="register_win"]
+[connection signal="gamuto_collided" from="SmallBar" to="." method="Minigames.register_win(self)"]
 [connection signal="gamuto_collided" from="SmallBar" to="Gahulk" method="_on_gamuto_collided"]
 [connection signal="gamuto_not_collided" from="SmallBar" to="." method="register_lose"]
 [connection signal="gamuto_not_collided" from="SmallBar" to="Gahulk" method="_on_gamuto_not_collided"]
-[connection signal="timeout" from="SmallBar/Timer" to="." method="register_win"]
+[connection signal="timeout" from="SmallBar/Timer" to="." method="Minigames.register_win(self)"]

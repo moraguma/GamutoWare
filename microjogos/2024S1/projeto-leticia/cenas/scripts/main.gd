@@ -40,7 +40,7 @@ func _ready():
 	elif not gone_up:
 		cars[1].position[1] = UP_POS
 	
-	register_win()
+	Minigames.register_win(self)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
 
@@ -75,15 +75,15 @@ func my_method():
 
 
 # Chame esta função para registrar que o jogador venceu o jogo
-func register_win():
+func Minigames.register_win(self):
 	emit_signal("win")
 
 
 # Chame esta função para registrar que o jogador perdeu o jogo
-func register_lose():
+func Minigames.register_lose(self):
 	emit_signal("lose")
 
 func _on_carro_principal_lose():
-	register_lose()
+	Minigames.register_lose(self)
 	$Background.paused = true
 	$Policias.is_lose = true

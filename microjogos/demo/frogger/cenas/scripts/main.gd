@@ -66,9 +66,9 @@ func spawn_car_y(x_pos):
 	car_container.add_child(new_car)
 
 
-func register_win():
+func Minigames.register_win(self):
 	emit_signal("win")
 
 
-func register_lose():
+func Minigames.register_lose(self):
 	emit_signal("lose")

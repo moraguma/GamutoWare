@@ -33,16 +33,16 @@ func _process(delta):
 func ganhar_ponto(body):
 	pontuacao += 1
 	if(pontuacao >= 3):
-		register_win()
+		Minigames.register_win(self)
 		$win.play()
 		$player.acabou = true
 	else:
 		$mordida.play()
 
-func register_win():
+func Minigames.register_win(self):
 	emit_signal("win") 
 
-func register_lose():
+func Minigames.register_lose(self):
 	emit_signal("lose")
 
 
