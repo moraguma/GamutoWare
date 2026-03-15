@@ -13,11 +13,6 @@ var efeito_swap
 var efeito_ganhou
 var efeito_perdeu
 
-
-# Declaração dos sinais win e lose
-signal win
-signal lose
-
 # Estas constantes são usadas para determinar o tamanho da tela do seu jogo. Por padrão, definem uma
 # tela 1920x1080, que é padrão para monitores full HD. Caso você queira uma resolução menor para 
 # atingir uma estética mais pixelada, você pode mudar estes números para qualquer outra resolução 
@@ -154,11 +149,3 @@ func mostrar():
 	gamuto.position = Vector2(copo_2.position.x, 592)
 	gamuto.show()
 	escolha_flag = true
-
-# Chame esta função para registrar que o jogador venceu o jogo
-func Minigames.register_win(self):
-	emit_signal("win")
-
-# Chame esta função para registrar que o jogador perdeu o jogo
-func Minigames.register_lose(self):
-	emit_signal("lose")
