@@ -1,9 +1,5 @@
 extends Node2D
 
-signal win
-signal lose
-
-
 const WIDTH = 1920
 const HEIGHT = 1080
 
@@ -84,7 +80,7 @@ func _physics_process(delta):
 				win_sound.play()
 				wow_sound.play()
 				animation_player.play("love")
-				emit_signal("win")
+				Minigames.register_win(self)
 			else:
 				lose_sound.play()
 				music.stop()
