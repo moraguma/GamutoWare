@@ -1586,7 +1586,6 @@ texture = ExtResource("8")
 script = ExtResource("15")
 
 [node name="Cursor" type="Sprite2D" parent="GameUI"]
-visible = false
 position = Vector2(-600, -120)
 rotation = -12.5664
 texture = ExtResource("7")
