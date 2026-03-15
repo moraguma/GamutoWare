@@ -21,9 +21,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if is_alive == true:
-		if Input.is_action_pressed("ui_right"):
+		if Input.is_action_pressed("direita"):
 			rotation_dir = 1
-		elif Input.is_action_pressed("ui_left"):
+		elif Input.is_action_pressed("esquerda"):
 			rotation_dir = -1
 		else:
 			rotation_dir = 0
