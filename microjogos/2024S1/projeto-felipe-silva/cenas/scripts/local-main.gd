@@ -1,9 +1,5 @@
 extends Node2D
 
-# Declaração dos sinais win e lose
-signal win
-signal lose
-
 # Estas constantes são usadas para determinar o tamanho da tela do seu jogo. Por padrão, definem uma
 # tela 1920x1080, que é padrão para monitores full HD. Caso você queira uma resolução menor para 
 # atingir uma estética mais pixelada, você pode mudar estes números para qualquer outra resolução 
@@ -25,11 +21,11 @@ func _ready():
 
 func _on_world_limit_body_entered(body):
 	if body == $"Main Character":
-		emit_signal("win")
+		Minigames.register_win(self)
 		body.active = false
 		
 
 func _on_porta_area_body_entered(body):
 	if body == $"Main Character":
-		emit_signal("win")
+		Minigames.register_win(self)
 		body.active = false
