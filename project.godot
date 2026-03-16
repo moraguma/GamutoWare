@@ -23,6 +23,7 @@ Global="*res://principal/cenas/autoloads/Global.tscn"
 SoundController="*res://principal/cenas/autoloads/SoundController.tscn"
 TranslationManager="*res://principal/cenas/autoloads/TranslationManager.tscn"
 Minigames="*res://principal/recursos/data/Minigames.gd"
+InputChecker="*res://principal/cenas/autoloads/input_checker.gd"
 
 [display]
 
