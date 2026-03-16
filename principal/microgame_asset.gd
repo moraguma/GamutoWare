@@ -21,3 +21,11 @@ class_name MicrogameAsset
 
 @export var difficulty: int
 
+#region input-hints
+@export_category("input")
+@export var input_cima: bool = true
+@export var input_baixo: bool = true
+@export var input_esquerda: bool = true
+@export var input_direita: bool = true
+@export var input_acao: bool = true
+#endregion
