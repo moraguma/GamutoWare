@@ -34,6 +34,10 @@ window/size/window_height_override=540
 window/stretch/mode="viewport"
 window/size/fullscreen=true
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/microgame-testing/plugin.cfg")
+
 [filesystem]
 
 import/blender/enabled=false
