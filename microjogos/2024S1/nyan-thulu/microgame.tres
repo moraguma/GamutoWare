@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3]
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://chwhl5ab11wxx"]
 
-[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_h7a7i"]
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/nyan-thulu/capa.png" id="1_wlhai"]
+[ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_h7a7i"]
+[ext_resource type="Texture2D" uid="uid://c7jll2vt5d0sk" path="res://microjogos/2024S1/nyan-thulu/capa.png" id="1_wlhai"]
 [ext_resource type="PackedScene" path="res://microjogos/2024S1/nyan-thulu/cenas/main.tscn" id="2_rawgg"]
 
 [resource]
@@ -15,3 +15,8 @@ start_message_pt = &"ATIRE NOS COOKIES!"
 start_message_en = &"SHOOT THE COOKIES!"
 main_scene = ExtResource("2_rawgg")
 difficulty = 0
+input_cima = true
+input_baixo = true
+input_esquerda = true
+input_direita = true
+input_acao = false
