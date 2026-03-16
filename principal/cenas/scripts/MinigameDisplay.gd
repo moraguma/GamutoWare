@@ -62,9 +62,9 @@ func start_game(microgame):
 	
 	match Global.language:
 		Global.LANGUAGE.EN:
-			NotificationCenter.notify(microgame.start_message_en)
+			NotificationCenter.notify_with_input_hint(microgame.start_message_en, microgame)
 		Global.LANGUAGE.PT:
-			NotificationCenter.notify(microgame.start_message_pt)
+			NotificationCenter.notify_with_input_hint(microgame.start_message_pt, microgame)
 	
 	timer.start(MICROGAME_TIME)
 	

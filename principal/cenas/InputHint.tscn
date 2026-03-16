@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://p4ue45bqd41u"]
+[gd_scene load_steps=9 format=3 uid="uid://p4ue45bqd41u"]
 
 [ext_resource type="Texture2D" uid="uid://hma6pfrmoq1n" path="res://principal/recursos/sprites/input-hints/gamepad_buttons-back.png" id="1_8hhyp"]
+[ext_resource type="Script" uid="uid://v2520ixhdm5j" path="res://principal/cenas/scripts/InputHint.gd" id="1_hg5r5"]
 [ext_resource type="Texture2D" uid="uid://2g3vlrsdv4r8" path="res://principal/recursos/sprites/input-hints/gamepad_button.png" id="2_o3vg1"]
 [ext_resource type="Texture2D" uid="uid://c8vn40fkaefdc" path="res://principal/recursos/sprites/input-hints/gamepad_up.png" id="2_xjxh8"]
 [ext_resource type="Texture2D" uid="uid://beie68vt0836c" path="res://principal/recursos/sprites/input-hints/gamepad_dpad_back.png" id="3_fvx66"]
@@ -15,6 +16,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_hg5r5")
 
 [node name="Gamepad" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -35,6 +37,7 @@ custom_minimum_size = Vector2(384, 384)
 layout_mode = 2
 
 [node name="Back" type="TextureRect" parent="Gamepad/HBoxContainer/Dpad"]
+modulate = Color(1, 1, 1, 0.596078)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -109,6 +112,7 @@ custom_minimum_size = Vector2(384, 384)
 layout_mode = 2
 
 [node name="Back" type="TextureRect" parent="Gamepad/HBoxContainer/Buttons"]
+modulate = Color(1, 1, 1, 0.596078)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
