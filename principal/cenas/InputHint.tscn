@@ -1,0 +1,138 @@
+[gd_scene load_steps=8 format=3 uid="uid://p4ue45bqd41u"]
+
+[ext_resource type="Texture2D" uid="uid://hma6pfrmoq1n" path="res://principal/recursos/sprites/input-hints/gamepad_buttons-back.png" id="1_8hhyp"]
+[ext_resource type="Texture2D" uid="uid://2g3vlrsdv4r8" path="res://principal/recursos/sprites/input-hints/gamepad_button.png" id="2_o3vg1"]
+[ext_resource type="Texture2D" uid="uid://c8vn40fkaefdc" path="res://principal/recursos/sprites/input-hints/gamepad_up.png" id="2_xjxh8"]
+[ext_resource type="Texture2D" uid="uid://beie68vt0836c" path="res://principal/recursos/sprites/input-hints/gamepad_dpad_back.png" id="3_fvx66"]
+[ext_resource type="Texture2D" uid="uid://vh2ysof66wyu" path="res://principal/recursos/sprites/input-hints/gamepad_down.png" id="3_hg5r5"]
+[ext_resource type="Texture2D" uid="uid://dyjrvpb7q7am1" path="res://principal/recursos/sprites/input-hints/gamepad_left.png" id="4_eyi2y"]
+[ext_resource type="Texture2D" uid="uid://bavufy334wrll" path="res://principal/recursos/sprites/input-hints/gamepad_right.png" id="5_orn8d"]
+
+[node name="InputHint" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Gamepad" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Gamepad"]
+layout_mode = 2
+theme_override_constants/separation = 256
+alignment = 1
+
+[node name="Dpad" type="Control" parent="Gamepad/HBoxContainer"]
+custom_minimum_size = Vector2(384, 384)
+layout_mode = 2
+
+[node name="Back" type="TextureRect" parent="Gamepad/HBoxContainer/Dpad"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.0
+offset_top = -192.0
+offset_right = 192.0
+offset_bottom = 192.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_fvx66")
+
+[node name="Up" type="TextureRect" parent="Gamepad/HBoxContainer/Dpad"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -192.0
+offset_right = 64.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_xjxh8")
+
+[node name="Down" type="TextureRect" parent="Gamepad/HBoxContainer/Dpad"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = 64.0
+offset_right = 64.0
+offset_bottom = 192.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_hg5r5")
+
+[node name="Left" type="TextureRect" parent="Gamepad/HBoxContainer/Dpad"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -64.0
+offset_right = 128.0
+offset_bottom = 64.0
+grow_vertical = 2
+texture = ExtResource("4_eyi2y")
+
+[node name="Right" type="TextureRect" parent="Gamepad/HBoxContainer/Dpad"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -64.0
+offset_bottom = 64.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("5_orn8d")
+
+[node name="Buttons" type="Control" parent="Gamepad/HBoxContainer"]
+custom_minimum_size = Vector2(384, 384)
+layout_mode = 2
+
+[node name="Back" type="TextureRect" parent="Gamepad/HBoxContainer/Buttons"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.0
+offset_top = -192.0
+offset_right = 192.0
+offset_bottom = 192.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8hhyp")
+
+[node name="ButtonSouth" type="TextureRect" parent="Gamepad/HBoxContainer/Buttons"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -128.0
+offset_right = 64.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_o3vg1")
