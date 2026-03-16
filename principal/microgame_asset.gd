@@ -23,9 +23,9 @@ class_name MicrogameAsset
 
 #region input-hints
 @export_category("input")
-@export var input_cima: bool = true
-@export var input_baixo: bool = true
-@export var input_esquerda: bool = true
-@export var input_direita: bool = true
-@export var input_acao: bool = true
+@export var input_cima: bool = false
+@export var input_baixo: bool = false
+@export var input_esquerda: bool = false
+@export var input_direita: bool = false
+@export var input_acao: bool = false
 #endregion
