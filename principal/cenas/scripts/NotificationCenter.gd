@@ -8,6 +8,9 @@ const TOTAL_NOTIFICATIONS = 3
 @onready var animation_player = $AnimationPlayer
 @onready var input_hint = $NotificationContainer/InputHint
 
+func _ready() -> void:
+	input_hint.visible = false
+
 func notify(text):
 	notification.text = "[center][shake rate=15 level=30]" + text
 	var anim = "notify_" + str(randi() % TOTAL_NOTIFICATIONS + 1)

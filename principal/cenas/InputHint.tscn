@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://p4ue45bqd41u"]
+[gd_scene load_steps=14 format=3 uid="uid://p4ue45bqd41u"]
 
 [ext_resource type="Texture2D" uid="uid://hma6pfrmoq1n" path="res://principal/recursos/sprites/input-hints/gamepad_buttons-back.png" id="1_8hhyp"]
 [ext_resource type="Script" uid="uid://v2520ixhdm5j" path="res://principal/cenas/scripts/InputHint.gd" id="1_hg5r5"]
@@ -8,6 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://vh2ysof66wyu" path="res://principal/recursos/sprites/input-hints/gamepad_down.png" id="3_hg5r5"]
 [ext_resource type="Texture2D" uid="uid://dyjrvpb7q7am1" path="res://principal/recursos/sprites/input-hints/gamepad_left.png" id="4_eyi2y"]
 [ext_resource type="Texture2D" uid="uid://bavufy334wrll" path="res://principal/recursos/sprites/input-hints/gamepad_right.png" id="5_orn8d"]
+[ext_resource type="Texture2D" uid="uid://8chutatyc10p" path="res://principal/recursos/sprites/input-hints/keyboard-space.png" id="9_aiqs6"]
+[ext_resource type="Texture2D" uid="uid://dw7rbsfoc72vf" path="res://principal/recursos/sprites/input-hints/keyboard-up.png" id="10_2mrn2"]
+[ext_resource type="Texture2D" uid="uid://dkgt3sacqfnx" path="res://principal/recursos/sprites/input-hints/keyboard-down.png" id="11_hr0x4"]
+[ext_resource type="Texture2D" uid="uid://sr5ibbwjmw1f" path="res://principal/recursos/sprites/input-hints/keyboard-left.png" id="12_cn5hp"]
+[ext_resource type="Texture2D" uid="uid://cs4enrn51vt4v" path="res://principal/recursos/sprites/input-hints/keyboard-right.png" id="13_0mtju"]
 
 [node name="InputHint" type="Control"]
 layout_mode = 3
@@ -140,3 +145,83 @@ offset_right = 64.0
 grow_horizontal = 2
 grow_vertical = 0
 texture = ExtResource("2_o3vg1")
+
+[node name="Keyboard" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Keyboard"]
+layout_mode = 2
+theme_override_constants/separation = 256
+alignment = 1
+
+[node name="SpaceBar" type="TextureRect" parent="Keyboard/HBoxContainer"]
+custom_minimum_size = Vector2(384, 128)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("9_aiqs6")
+
+[node name="ArrowKeys" type="Control" parent="Keyboard/HBoxContainer"]
+custom_minimum_size = Vector2(384, 384)
+layout_mode = 2
+
+[node name="Up" type="TextureRect" parent="Keyboard/HBoxContainer/ArrowKeys"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -192.0
+offset_right = 64.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_2mrn2")
+
+[node name="Down" type="TextureRect" parent="Keyboard/HBoxContainer/ArrowKeys"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_hr0x4")
+
+[node name="Left" type="TextureRect" parent="Keyboard/HBoxContainer/ArrowKeys"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -64.0
+offset_right = 128.0
+offset_bottom = 64.0
+grow_vertical = 2
+texture = ExtResource("12_cn5hp")
+
+[node name="Right" type="TextureRect" parent="Keyboard/HBoxContainer/ArrowKeys"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -64.0
+offset_bottom = 64.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("13_0mtju")

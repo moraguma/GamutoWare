@@ -1,12 +1,15 @@
 extends Control
 
 @onready var hint_nodes: Dictionary[StringName, Array] = {
-	"cima": [$Gamepad/HBoxContainer/Dpad/Up],
-	"baixo": [$Gamepad/HBoxContainer/Dpad/Down],
-	"esquerda": [$Gamepad/HBoxContainer/Dpad/Left],
-	"direita": [$Gamepad/HBoxContainer/Dpad/Right],
-	"acao": [$Gamepad/HBoxContainer/Buttons/ButtonSouth]
+	"cima": [$Gamepad/HBoxContainer/Dpad/Up, $Keyboard/HBoxContainer/ArrowKeys/Up],
+	"baixo": [$Gamepad/HBoxContainer/Dpad/Down, $Keyboard/HBoxContainer/ArrowKeys/Down],
+	"esquerda": [$Gamepad/HBoxContainer/Dpad/Left, $Keyboard/HBoxContainer/ArrowKeys/Left],
+	"direita": [$Gamepad/HBoxContainer/Dpad/Right, $Keyboard/HBoxContainer/ArrowKeys/Right],
+	"acao": [$Gamepad/HBoxContainer/Buttons/ButtonSouth, $Keyboard/HBoxContainer/SpaceBar]
 }
+
+@onready var gamepad: Control = $Gamepad
+@onready var keyboard: Control = $Keyboard
 
 func display_microgame_actions(microgame: MicrogameAsset) -> void:
 	var actions: Array[StringName] = []
@@ -20,3 +23,6 @@ func display_microgame_actions(microgame: MicrogameAsset) -> void:
 	for action in hint_nodes.keys():
 		for node:Control in hint_nodes[action]:
 			node.visible = action in actions
+	
+	gamepad.visible = InputChecker.last_was_gamepad
+	keyboard.visible = not InputChecker.last_was_gamepad
