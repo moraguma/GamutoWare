@@ -1,4 +1,4 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dhgwmuqlcucbr"]
 
 [sub_resource type="Shader" id="3"]
 code = "shader_type canvas_item;
