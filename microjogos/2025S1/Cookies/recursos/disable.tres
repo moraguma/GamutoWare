@@ -1,4 +1,4 @@
-[gd_resource type="VisualShader" load_steps=7 format=3 uid="uid://xhkqq21nsdcy"]
+[gd_resource type="VisualShader" format=3 uid="uid://xhkqq21nsdcy"]
 
 [sub_resource type="VisualShaderNodeBooleanParameter" id="VisualShaderNodeBooleanParameter_g275x"]
 parameter_name = "Disabled"
@@ -21,59 +21,6 @@ op_type = 2
 operator = 2
 
 [resource]
-code = "shader_type canvas_item;
-render_mode blend_mix;
-
-uniform bool Disabled;
-
-
-
-void fragment() {
-// BooleanParameter:3
-	bool n_out3p0 = Disabled;
-
-
-// Input:6
-	vec4 n_out6p0 = COLOR;
-
-
-// FloatConstant:8
-	float n_out8p0 = 0.500000;
-
-
-// VectorOp:9
-	vec4 n_out9p0 = n_out6p0 * vec4(n_out8p0);
-
-
-// Input:4
-	vec4 n_out4p0 = COLOR;
-
-
-	vec3 n_out5p0;
-// If:5
-	float n_in5p1 = 1.00000;
-	float n_in5p2 = 0.00001;
-	if(abs((n_out3p0 ? 1.0 : 0.0) - n_in5p1) < n_in5p2)
-	{
-		n_out5p0 = vec3(n_out9p0.xyz);
-	}
-	else if((n_out3p0 ? 1.0 : 0.0) < n_in5p1)
-	{
-		n_out5p0 = vec3(n_out4p0.xyz);
-	}
-	else
-	{
-		n_out5p0 = vec3(n_out4p0.xyz);
-	}
-
-
-// Output:0
-	COLOR.rgb = n_out5p0;
-
-
-}
-"
-graph_offset = Vector2(-392.531, -85.3952)
 mode = 1
 flags/light_only = false
 nodes/fragment/3/node = SubResource("VisualShaderNodeBooleanParameter_g275x")

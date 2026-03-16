@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bwf53xp28gd35"]
+[gd_scene format=3 uid="uid://bwf53xp28gd35"]
 
 [ext_resource type="Script" uid="uid://c6l0ax4frv2ul" path="res://microjogos/2023S1/mail_cleaner/cenas/scripts/main.gd" id="1_kyp7x"]
 [ext_resource type="PackedScene" uid="uid://dsxm54jv86dym" path="res://microjogos/2023S1/mail_cleaner/cenas/phone.tscn" id="2_mtjul"]
@@ -118,10 +118,10 @@ _data = {
 &"background_movement": SubResource("Animation_gt1yq")
 }
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=315166068]
 script = ExtResource("1_kyp7x")
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="." unique_id=470889655]
 modulate = Color(0.580392, 0.580392, 0.580392, 1)
 texture_filter = 2
 position = Vector2(980, 570)
@@ -129,34 +129,32 @@ rotation = -0.0566683
 scale = Vector2(18, 18)
 texture = ExtResource("2_ti7tx")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Background"]
-libraries = {
-&"": SubResource("AnimationLibrary_vn30i")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Background" unique_id=1720170152]
+libraries/ = SubResource("AnimationLibrary_vn30i")
 speed_scale = 0.25
 
-[node name="Phone" parent="." instance=ExtResource("2_mtjul")]
+[node name="Phone" parent="." unique_id=154284354 instance=ExtResource("2_mtjul")]
 position = Vector2(726, 121)
 
-[node name="Right" type="Sprite2D" parent="."]
+[node name="Right" type="Sprite2D" parent="." unique_id=160343912]
 texture_filter = 1
 position = Vector2(350, 540)
 scale = Vector2(10, 10)
 texture = ExtResource("4_vmscg")
 
-[node name="Wrong" type="Sprite2D" parent="."]
+[node name="Wrong" type="Sprite2D" parent="." unique_id=1743275317]
 texture_filter = 1
 position = Vector2(1580, 540)
 scale = Vector2(10, 10)
 texture = ExtResource("5_6vicc")
 
-[node name="Music" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1280436315]
 stream = ExtResource("6_cxdmi")
 autoplay = true
 
-[node name="Scratch" type="AudioStreamPlayer" parent="."]
+[node name="Scratch" type="AudioStreamPlayer" parent="." unique_id=1342274063]
 stream = ExtResource("7_7gcfo")
 
-[node name="Hit" type="AudioStreamPlayer" parent="."]
+[node name="Hit" type="AudioStreamPlayer" parent="." unique_id=173311625]
 stream = ExtResource("8_thm37")
 volume_db = -2.0
