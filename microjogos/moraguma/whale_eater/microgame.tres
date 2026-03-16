@@ -29,3 +29,6 @@ start_message_pt = &"FOGE!"
 start_message_en = &"GET OUT!"
 main_scene = ExtResource("2_tcnpy")
 difficulty = 0
+
+input_direita = true
+input_esquerda = true

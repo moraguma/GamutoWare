@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=3 format=3]
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=3 format=3 uid="uid://diuh0sg3v1vay"]
 
-[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_rc2nu"]
-[ext_resource type="PackedScene" path="res://microjogos/godotware/Simon/Main.tscn" id="1_x3ipl"]
+[ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_rc2nu"]
+[ext_resource type="PackedScene" uid="uid://m56hivov4ion" path="res://microjogos/godotware/Simon/Main.tscn" id="1_x3ipl"]
 
 [resource]
 script = ExtResource("1_rc2nu")
@@ -25,3 +25,8 @@ start_message_pt = &"IMITE!"
 start_message_en = &"SIMON SAYS..."
 main_scene = ExtResource("1_x3ipl")
 difficulty = 0
+input_cima = true
+input_baixo = true
+input_esquerda = true
+input_direita = true
+input_acao = false
