@@ -1,7 +1,6 @@
-[gd_scene load_steps=113 format=3 uid="uid://bl4xe8ma8dfpq"]
+[gd_scene load_steps=112 format=3 uid="uid://bl4xe8ma8dfpq"]
 
 [ext_resource type="Texture2D" uid="uid://ca7t6a13spiin" path="res://microjogos/2024S1/lari-sem-cafe/assets/Seasonal Tilesets/Seasonal Tilesets/2 - Autumn Forest/Terrain (16 x 16).png" id="1_2vy5b"]
-[ext_resource type="Script" uid="uid://paavcajuaipg" path="res://microjogos/2024S1/lari-sem-cafe/cenas/scripts/main.gd" id="1_a3vdj"]
 [ext_resource type="Script" uid="uid://bj7i37itbockt" path="res://microjogos/2024S1/lari-sem-cafe/scripts/Player.gd" id="1_eiv4f"]
 [ext_resource type="Texture2D" uid="uid://c6se0pq8eeue8" path="res://microjogos/2024S1/lari-sem-cafe/assets/Sprite Pack 3/Sprite Pack 3/2 - Twiggy/Idle (32 x 32).png" id="1_yh7jc"]
 [ext_resource type="Texture2D" uid="uid://ducnm6t8q8joq" path="res://microjogos/2024S1/lari-sem-cafe/assets/Seasonal Tilesets/Seasonal Tilesets/2 - Autumn Forest/Autumn_entities (16 x 16).png" id="2_mfqs3"]
@@ -630,7 +629,6 @@ shadow_color = Color(1, 0, 0, 0)
 [node name="World" type="Node2D"]
 texture_filter = 1
 position = Vector2(42, 72)
-script = ExtResource("1_a3vdj")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_7uosf")

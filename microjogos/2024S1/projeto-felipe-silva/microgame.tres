@@ -23,4 +23,4 @@ start_message_pt = &"SIGA!"
 start_message_en = &"FOLLOW!"
 main_scene = ExtResource("2_u4car")
 difficulty = 0
-screen_dimensions = Vector2i(480, 270)
+screen_dimensions = Vector2i(1920, 1080)
