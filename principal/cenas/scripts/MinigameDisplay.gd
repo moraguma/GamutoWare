@@ -110,18 +110,16 @@ func reset_tween():
 
 
 func win_microgame(source: Node) -> void:
-	if source == null:
+	if source == null or current_microgame == null:
 		return
 	# Microgame cannot register win if source of win call is not a descendant of the current microgames main node
 	if source != current_microgame and not current_microgame.is_ancestor_of(source):
-		printerr("Node %s attempting lose in path %s not descendant of current scene (%s)" % [source.name, source.get_path(), current_microgame.name])
-		get_tree().quit()
 		return
 	won = true
 
 
 func lose_microgame(source: Node):
-	if source == null:
+	if source == null or current_microgame == null:
 		return
 	# Microgame cannot register lose if source of win call is not a descendant of the current microgames main node
 	if source != current_microgame and not current_microgame.is_ancestor_of(source):
