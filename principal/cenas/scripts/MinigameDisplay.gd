@@ -123,7 +123,5 @@ func lose_microgame(source: Node):
 		return
 	# Microgame cannot register lose if source of win call is not a descendant of the current microgames main node
 	if source != current_microgame and not current_microgame.is_ancestor_of(source):
-		printerr("Node %s attempting lose in path %s not descendant of current scene (%s)" % [source.name, source.get_path(), current_microgame.name])
-		get_tree().quit()
 		return
 	won = false
