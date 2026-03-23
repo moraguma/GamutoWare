@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cfcvd6jjkujcn"]
+[gd_scene load_steps=19 format=3 uid="uid://cfcvd6jjkujcn"]
 
 [ext_resource type="PackedScene" uid="uid://c2sa6coaikkl4" path="res://microjogos/2025S1/Gamuto_Maestro_Davi/cenas/Player.tscn" id="1_6w4jh"]
 [ext_resource type="Script" uid="uid://cgn6ig22oa15d" path="res://microjogos/2025S1/Gamuto_Maestro_Davi/cenas/scripts/boxing.gd" id="1_550ca"]
@@ -11,6 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://m6nonoay4e4x" path="res://microjogos/2025S1/Gamuto_Maestro_Davi/recursos/imagens/cartoon-simple-black-crowd-silhouette-elements-png_107154-removebg-preview.png" id="9_anap4"]
 [ext_resource type="Texture2D" uid="uid://wrfi6jbev07k" path="res://microjogos/2025S1/Gamuto_Maestro_Davi/recursos/imagens/punchbag2.png" id="9_lboq3"]
 [ext_resource type="Texture2D" uid="uid://cpbvq1wo3hxb" path="res://microjogos/2025S1/Gamuto_Maestro_Davi/recursos/imagens/download (2).png" id="10_oj8c5"]
+[ext_resource type="FontFile" uid="uid://cu7e15kn22fwe" path="res://microjogos/2025S1/Gamuto_Maestro_Davi/recursos/fonts/Bangers-Regular.ttf" id="12_8c1uh"]
+[ext_resource type="Texture2D" uid="uid://dmw26aw7ideiv" path="res://microjogos/2025S1/Gamuto_Maestro_Davi/recursos/imagens/speech-bubble-vector-halftone-style-set.png" id="12_lboq3"]
+[ext_resource type="Script" uid="uid://b2gcahob5u7me" path="res://microjogos/2025S1/Gamuto_Maestro_Davi/cenas/scripts/label.gd" id="14_oj8c5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sucju"]
 animations = [{
@@ -32,19 +35,42 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="FontFile" id="FontFile_anap4"]
-subpixel_positioning = 0
-msdf_pixel_range = 14
-msdf_size = 128
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
+[sub_resource type="Animation" id="Animation_lboq3"]
+resource_name = "pop"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1)]
+}
 
-[sub_resource type="Theme" id="Theme_8c1uh"]
-RichTextLabel/font_sizes/normal_font_size = 50
-RichTextLabel/fonts/bold_font = SubResource("FontFile_anap4")
+[sub_resource type="Animation" id="Animation_oj8c5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sucju"]
+_data = {
+&"RESET": SubResource("Animation_oj8c5"),
+&"pop": SubResource("Animation_lboq3")
+}
 
 [node name="Boxing" type="Node2D"]
 script = ExtResource("1_550ca")
@@ -93,11 +119,47 @@ scale = Vector2(6.13507, 2.54167)
 texture = ExtResource("9_anap4")
 
 [node name="Contador" type="RichTextLabel" parent="."]
-offset_left = 38.0
-offset_top = 42.0
-offset_right = 405.0
-offset_bottom = 193.0
-theme = SubResource("Theme_8c1uh")
+offset_left = 1625.0
+offset_top = 908.0
+offset_right = 1829.0
+offset_bottom = 1059.0
+theme_override_fonts/normal_font = ExtResource("12_8c1uh")
+theme_override_font_sizes/normal_font_size = 141
+text = "0"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Punch" type="Node2D" parent="."]
+position = Vector2(276, 331)
+scale = Vector2(1e-05, 1e-05)
+
+[node name="Speech-bubble-vector-halftone-style-set" type="Sprite2D" parent="Punch"]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("12_lboq3")
+
+[node name="Label" type="Label" parent="Punch"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -121.0
+offset_top = -14.0
+offset_right = 178.0
+offset_bottom = 115.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_8c1uh")
+theme_override_font_sizes/font_size = 100
+text = "Soque!"
+script = ExtResource("14_oj8c5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Punch")
+libraries = {
+&"": SubResource("AnimationLibrary_sucju")
+}
 
 [connection signal="timeout" from="OffTimer" to="." method="_on_off_timer_timeout"]
 [connection signal="timeout" from="InTimer" to="." method="_on_in_timer_timeout"]

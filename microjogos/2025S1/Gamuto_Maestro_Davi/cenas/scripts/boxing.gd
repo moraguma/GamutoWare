@@ -59,11 +59,12 @@ func _on_off_timer_timeout() -> void:
 	in_timer.start(0.4)
 	aceitando = true
 	jab_feito = false
-
+	$AnimationPlayer.play("pop")
 
 func _on_in_timer_timeout() -> void:
 	aceitando = false
 	off_timer.start(0.6)
+	$AnimationPlayer.play("RESET")
 
 # --------------------------------------------------------------------------------------------------
 # CONDIÇÕES DE VITÓRIA
