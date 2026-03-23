@@ -4,38 +4,12 @@ extends Node2D
 signal win
 signal lose
 
-var won: int = 0
-var doors: Array
-
 # Estas constantes são usadas para determinar o tamanho da tela do seu jogo. Por padrão, definem uma
 # tela 1920x1080, que é padrão para monitores full HD. Caso você queira uma resolução menor para 
 # atingir uma estética mais pixelada, você pode mudar estes números para qualquer outra resolução 
 # 16:9
 const WIDTH = 1920
 const HEIGHT = 1080
-
-
-# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a renderização, 
-# como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
-# desde a última chamada desta função. O comando pass não faz nada
-func _process(delta):
-	for door in doors:
-		if door.overlaps_body($Personagem) and Input.is_action_just_pressed("cima"):
-			register_win()
-			won = 1.0
-			$Efeito_vitoria.play()
-
-
-# --------------------------------------------------------------------------------------------------
-# SUAS FUNÇÕES
-# --------------------------------------------------------------------------------------------------
-func _on_estrela_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player") and $Estrela/Sprite2D.visible == true:
-		$Estrela/Sprite2D.visible = false
-		$Efeito_vitoria.play()
-		won = 1.0
-		register_win()
-
 
 # --------------------------------------------------------------------------------------------------
 # CONDIÇÕES DE VITÓRIA
@@ -49,6 +23,8 @@ func _on_estrela_body_entered(body: Node2D) -> void:
 
 # Chame esta função para registrar que o jogador venceu o jogo
 func register_win():
+	$Music.stop()
+	$Won.play()
 	emit_signal("win")
 
 

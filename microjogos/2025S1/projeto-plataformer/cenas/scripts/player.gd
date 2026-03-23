@@ -12,10 +12,10 @@ var is_jumping = false
 @export var landing_sound: AudioStreamPlayer
 
 var inventory = {}
+@onready var falling = $Falling
 
 func _process(delta):
 	if position.y >= 1080 and not fell:
-		var falling = $Falling
 		falling.play()
 		fell = true
 
@@ -33,8 +33,6 @@ func _physics_process(delta):
 			$AnimationPlayer/Steps_sound.stop()
 			animation_player.play("fall")
 	else:
-		if animation_player.get_current_animation() == "fall":
-			landing_sound.play()
 		if dir != 0: 
 			animation_player.play("run")
 		else:
@@ -56,3 +54,4 @@ func add_item(item_name):
 		inventory[item_name] += 1
 	else:
 		inventory[item_name] = 1
+	$CollectItem.play()

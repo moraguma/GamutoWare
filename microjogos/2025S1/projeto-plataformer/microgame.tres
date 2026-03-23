@@ -14,31 +14,39 @@ Assets do cenário: David G CC0
 https://incolgames.itch.io/dungeon-platformer-tile-set-pixel-art
 Assets do cavalheiro: Mattz Art CC0
 https://xzany.itch.io/free-knight-2d-pixel-art
-Estrela: TotusLotus CC0
-https://totuslotus.itch.io/pixel-art-collectibles
 Efeito vitória: spuispuin CC-BY 4.0
 https://opengameart.org/users/spuispuin
-Efeito pouso: Macro CC0
-https://opengameart.org/content/jump-landing
 Efeito de passos: Kenney CC0
 https://opengameart.org/content/50-rpg-sound-effects
 Efeito de grito durante queda: HaelDB https://opengameart.org/users/haeldb CC0 e OGA-BY 3.0
-https://opengameart.org/content/male-gruntyelling-sounds"
+https://opengameart.org/content/male-gruntyelling-sounds
+Efeito coleta da chave
+https://pixabay.com/sound-effects/film-special-effects-retro-coin-4-236671/
+Efeito porta destrancada
+https://pixabay.com/sound-effects/household-opening-door-411632/
+Efeito pulo
+https://pixabay.com/sound-effects/film-special-effects-jump-landing-30946/
+Musica:
+https://pixabay.com/sound-effects/musical-lonely-castle-29059/"
 credits_en = "Developed by: Ricardo Emanuel
 Dungeon Assets: David G CC0
 https://incolgames.itch.io/dungeon-platformer-tile-set-pixel-art
 Knight Assets: Mattz Art CC0
 https://xzany.itch.io/free-knight-2d-pixel-art
-Star Asset: TotusLotus CC0
-https://totuslotus.itch.io/pixel-art-collectibles
 Victory effect: spuispuin CC-BY 4.0
 https://opengameart.org/users/spuispuin
-Landing effect: Macro CC0
-https://opengameart.org/content/jump-landing
 Steps effect: Kenney CC0
 https://opengameart.org/content/50-rpg-sound-effects
 Screaming effect when falling: HaelDB https://opengameart.org/users/haeldb CC0 e OGA-BY 3.0
-https://opengameart.org/content/male-gruntyelling-sounds"
+https://opengameart.org/content/male-gruntyelling-sounds
+Key collection effect
+https://pixabay.com/sound-effects/film-special-effects-retro-coin-4-236671/
+Unlocked door effect
+https://pixabay.com/sound-effects/household-opening-door-411632/
+Jump effect
+https://pixabay.com/sound-effects/film-special-effects-jump-landing-30946/
+Music:
+https://pixabay.com/sound-effects/musical-lonely-castle-29059/"
 start_message_pt = &"AVENTURE-SE!"
 start_message_en = &"EXPLORE!"
 main_scene = ExtResource("1_7l7aa")

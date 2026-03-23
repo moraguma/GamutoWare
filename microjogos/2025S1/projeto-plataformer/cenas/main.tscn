@@ -1,12 +1,13 @@
-[gd_scene load_steps=14 format=4 uid="uid://bk7nlchnxeavs"]
+[gd_scene load_steps=15 format=4 uid="uid://bk7nlchnxeavs"]
 
 [ext_resource type="PackedScene" uid="uid://27mpwj25p8bl" path="res://microjogos/2025S1/projeto-plataformer/cenas/mapa.tscn" id="1_enm8k"]
 [ext_resource type="Script" uid="uid://d334y83buygu3" path="res://microjogos/2025S1/projeto-plataformer/cenas/scripts/main.gd" id="1_ng8s0"]
 [ext_resource type="PackedScene" uid="uid://v8jttrvrrsx5" path="res://microjogos/2025S1/projeto-plataformer/cenas/player.tscn" id="2_1wgp2"]
 [ext_resource type="Texture2D" uid="uid://34j4m5mnjmc6" path="res://microjogos/2025S1/projeto-plataformer/recursos/imagens/Dungeon Tile Set.png" id="3_bu54t"]
-[ext_resource type="PackedScene" uid="uid://dmvafb620rp2r" path="res://microjogos/2025S1/projeto-plataformer/cenas/estrela.tscn" id="3_eeojv"]
+[ext_resource type="PackedScene" uid="uid://dmvafb620rp2r" path="res://microjogos/2025S1/projeto-plataformer/cenas/chave.tscn" id="3_eeojv"]
 [ext_resource type="PackedScene" uid="uid://b4ck6qiv563g1" path="res://microjogos/2025S1/projeto-plataformer/cenas/porta.tscn" id="4_ng8s0"]
 [ext_resource type="AudioStream" uid="uid://q76dqnouodu2" path="res://microjogos/2025S1/projeto-plataformer/recursos/sons/Won!.wav" id="6_lppnp"]
+[ext_resource type="AudioStream" uid="uid://k06o5e57jvrk" path="res://microjogos/2025S1/projeto-plataformer/recursos/sons/freesound_community-lonely-castle-29059.wav" id="8_cpuqg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cpuqg"]
 texture = ExtResource("3_bu54t")
@@ -357,11 +358,9 @@ tile_set = SubResource("TileSet_bu54t")
 [node name="Personagem" parent="." instance=ExtResource("2_1wgp2")]
 position = Vector2(290, 487)
 
-[node name="Efeito_vitoria" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_lppnp")
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_cpuqg")
+autoplay = true
 
-[connection signal="body_entered" from="interacoes/@Area2D@26171" to="interacoes/@Area2D@26171" method="_on_body_entered"]
-[connection signal="body_exited" from="interacoes/@Area2D@26171" to="interacoes/@Area2D@26171" method="_on_body_exited"]
-[connection signal="body_entered" from="interacoes/@Area2D@26172" to="interacoes/@Area2D@26172" method="_on_body_entered"]
-[connection signal="body_exited" from="interacoes/@Area2D@26172" to="interacoes/@Area2D@26172" method="_on_body_exited"]
-[connection signal="body_entered" from="interacoes/@Area2D@26173" to="interacoes/@Area2D@26173" method="_on_body_entered"]
+[node name="Won" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_lppnp")
