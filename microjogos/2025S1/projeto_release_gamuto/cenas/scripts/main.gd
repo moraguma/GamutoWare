@@ -21,7 +21,7 @@ const HEIGHT = 1080
 
 # Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
 func _ready():
-	var start_point = Vector2(250,250)
+	var start_point = Vector2(500,250)
 	var start_radius = 75
 	# Players
 	var num_players = 3

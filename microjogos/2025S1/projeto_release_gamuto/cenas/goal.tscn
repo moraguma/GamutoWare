@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://mymft1gnwhxt"]
+[gd_scene load_steps=11 format=3 uid="uid://mymft1gnwhxt"]
 
 [ext_resource type="Script" uid="uid://bs13go1imyc8m" path="res://microjogos/2025S1/projeto_release_gamuto/cenas/scripts/goal.gd" id="1_m3jsi"]
 [ext_resource type="Texture2D" uid="uid://ipfqy8wn1ck6" path="res://microjogos/2025S1/projeto_release_gamuto/recursos/imagens/teleport_128.png" id="1_r478g"]
+[ext_resource type="AudioStream" uid="uid://bg7rxdgbjp6qo" path="res://microjogos/2025S1/projeto_release_gamuto/recursos/sons/freesound_community-item-39146.wav" id="3_aipgo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m3jsi"]
 atlas = ExtResource("1_r478g")
@@ -66,5 +67,8 @@ frame_progress = 0.763123
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -1.5)
 shape = SubResource("RectangleShape2D_7f6o5")
+
+[node name="Enter" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_aipgo")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
