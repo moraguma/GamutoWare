@@ -8,38 +8,28 @@ const HEIGHT = 1080
 
 var index = 0
 var combo_list = ["UD","UL","UR","UA","DL","DR","DA","LR","LA","RA"]
-
-var translated_combos = []
-
-var dicionario = {
-	"U" : "cima",
-	"D" : "baixo",
-	"A" : "acao",
-	"L" : "esquerda",
-	"R" : "direita"
-}
+var input_string = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
 	combo_list.shuffle()
-	
 	combo_list = combo_list.slice(0, 8)
-	
-	
-	for combo in combo_list:
-		var temp = []
-		for l in combo:
-			temp.append(dicionario.get(l))
-		translated_combos.append(temp)
 	update_animations()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if index > 7:
 		return
-		
-	if not false in translated_combos[index].map(func(x): return Input.is_action_pressed(x)):
+	input_string = ""
+	if Input.is_action_pressed("cima"): input_string += 'U' 
+	if Input.is_action_pressed("baixo"): input_string += 'D' 
+	if Input.is_action_pressed("esquerda"): input_string += 'L' 
+	if Input.is_action_pressed("direita"): input_string += 'R' 
+	if Input.is_action_pressed("acao"): input_string += 'A' 
+
+	
+	if combo_list[index] == input_string:
 		index += 1
 		$"boss".play("hit")
 		$AudioStreamPlayer2.play()
@@ -53,9 +43,6 @@ func _process(delta):
 			$"arrow_up".play("false")
 			$"arrow_down".play("false")
 			$"action".play("false")
-			#TODO Remove Before PR merge
-			#get_parent().get_tree().quit()
-			#return
 		else:
 			update_animations()
 
@@ -69,23 +56,23 @@ func register_lose():
 	emit_signal("lose")
 	
 func update_animations():
-	if "esquerda" in translated_combos[index]:
+	if "L" in combo_list[index]:
 		$"arrow_left".play("true")
 	else:
 		$"arrow_left".play("false")
-	if "direita" in translated_combos[index]:
+	if "R" in combo_list[index]:
 		$"arrow_right".play("true")
 	else:
 		$"arrow_right".play("false")
-	if "cima" in translated_combos[index]:
+	if "U" in combo_list[index]:
 		$"arrow_up".play("true")
 	else:
 		$"arrow_up".play("false")
-	if "baixo" in translated_combos[index]:
+	if "D" in combo_list[index]:
 		$"arrow_down".play("true")
 	else:
 		$"arrow_down".play("false")
-	if "acao" in translated_combos[index]:
+	if "A" in combo_list[index]:
 		$"action".play("true")
 	else:
 		$"action".play("false")
