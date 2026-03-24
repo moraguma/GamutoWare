@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn48hu2xy6wev"
-path="res://.godot/imported/capa.png-81980ba1a831e566c4892bb7087af34c.ctex"
+uid="uid://dn8ilv77ju3nc"
+path="res://.godot/imported/Scaffolding_and_BG_Parts (16 x 16).png-5eae4fa09a576be2add337829b6a1ac7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/quimica-quiz/capa.png"
-dest_files=["res://.godot/imported/capa.png-81980ba1a831e566c4892bb7087af34c.ctex"]
+source_file="res://microjogos/2024S1/quimica-quiz/recursos/assets/Cave Tileset/Scaffolding_and_BG_Parts (16 x 16).png"
+dest_files=["res://.godot/imported/Scaffolding_and_BG_Parts (16 x 16).png-5eae4fa09a576be2add337829b6a1ac7.ctex"]
 
 [params]
 

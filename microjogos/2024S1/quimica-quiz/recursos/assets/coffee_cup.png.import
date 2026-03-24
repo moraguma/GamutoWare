@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn48hu2xy6wev"
-path="res://.godot/imported/capa.png-81980ba1a831e566c4892bb7087af34c.ctex"
+uid="uid://cwriymsuop75o"
+path="res://.godot/imported/coffee_cup.png-0322b3556189940f9af3a4917067c027.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/quimica-quiz/capa.png"
-dest_files=["res://.godot/imported/capa.png-81980ba1a831e566c4892bb7087af34c.ctex"]
+source_file="res://microjogos/2024S1/quimica-quiz/recursos/assets/coffee_cup.png"
+dest_files=["res://.godot/imported/coffee_cup.png-0322b3556189940f9af3a4917067c027.ctex"]
 
 [params]
 

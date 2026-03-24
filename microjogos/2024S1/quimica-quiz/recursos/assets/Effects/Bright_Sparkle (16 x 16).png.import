@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn48hu2xy6wev"
-path="res://.godot/imported/capa.png-81980ba1a831e566c4892bb7087af34c.ctex"
+uid="uid://brwji6jr45o7h"
+path="res://.godot/imported/Bright_Sparkle (16 x 16).png-83a13bb9ebde7d6f69686cf439b61667.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/quimica-quiz/capa.png"
-dest_files=["res://.godot/imported/capa.png-81980ba1a831e566c4892bb7087af34c.ctex"]
+source_file="res://microjogos/2024S1/quimica-quiz/recursos/assets/Effects/Bright_Sparkle (16 x 16).png"
+dest_files=["res://.godot/imported/Bright_Sparkle (16 x 16).png-83a13bb9ebde7d6f69686cf439b61667.ctex"]
 
 [params]
 

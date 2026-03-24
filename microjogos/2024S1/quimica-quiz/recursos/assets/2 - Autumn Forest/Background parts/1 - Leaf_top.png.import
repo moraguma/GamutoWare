@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn48hu2xy6wev"
-path="res://.godot/imported/capa.png-81980ba1a831e566c4892bb7087af34c.ctex"
+uid="uid://cqtoh0beloey7"
+path="res://.godot/imported/1 - Leaf_top.png-c229aaddcf60a5c7014a6f4db85ba5ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/quimica-quiz/capa.png"
-dest_files=["res://.godot/imported/capa.png-81980ba1a831e566c4892bb7087af34c.ctex"]
+source_file="res://microjogos/2024S1/quimica-quiz/recursos/assets/2 - Autumn Forest/Background parts/1 - Leaf_top.png"
+dest_files=["res://.godot/imported/1 - Leaf_top.png-c229aaddcf60a5c7014a6f4db85ba5ff.ctex"]
 
 [params]
 

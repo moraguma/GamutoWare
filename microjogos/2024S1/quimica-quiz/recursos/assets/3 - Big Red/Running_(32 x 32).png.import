@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn48hu2xy6wev"
-path="res://.godot/imported/capa.png-81980ba1a831e566c4892bb7087af34c.ctex"
+uid="uid://8q4ijknlh81w"
+path="res://.godot/imported/Running_(32 x 32).png-b30a87dd47f3ef2fd0388c1de4408e8d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/quimica-quiz/capa.png"
-dest_files=["res://.godot/imported/capa.png-81980ba1a831e566c4892bb7087af34c.ctex"]
+source_file="res://microjogos/2024S1/quimica-quiz/recursos/assets/3 - Big Red/Running_(32 x 32).png"
+dest_files=["res://.godot/imported/Running_(32 x 32).png-b30a87dd47f3ef2fd0388c1de4408e8d.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn48hu2xy6wev"
-path="res://.godot/imported/capa.png-81980ba1a831e566c4892bb7087af34c.ctex"
+uid="uid://c022mj6oy8mp5"
+path="res://.godot/imported/6 - Distant_trees.png-b8ad52b240053c4dcde62f79dc46967f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/quimica-quiz/capa.png"
-dest_files=["res://.godot/imported/capa.png-81980ba1a831e566c4892bb7087af34c.ctex"]
+source_file="res://microjogos/2024S1/quimica-quiz/recursos/assets/2 - Autumn Forest/Background parts/6 - Distant_trees.png"
+dest_files=["res://.godot/imported/6 - Distant_trees.png-b8ad52b240053c4dcde62f79dc46967f.ctex"]
 
 [params]
 
