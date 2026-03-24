@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://d2oahab3ot5ql"]
 
 [ext_resource type="Script" uid="uid://cg7hwj32kk0xx" path="res://microjogos/2024S1/projeto-do-Glaymar_A/cenas/scripts/coluna.gd" id="1_1vo7t"]
-[ext_resource type="Texture2D" uid="uid://dxy3gvgm3dijq" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/sombra.png" id="1_2gj1p"]
-[ext_resource type="Texture2D" uid="uid://dq8r1g3g2bu1" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/Tree.png" id="2_o3gwj"]
+[ext_resource type="Texture2D" uid="uid://dxy3gvgm3dijq" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/sprites/sombra.png" id="1_2gj1p"]
+[ext_resource type="Texture2D" uid="uid://dq8r1g3g2bu1" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/sprites/Tree.png" id="2_o3gwj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_anw0x"]
 radius = 12.0

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://deg0v3upu07xf"]
 
 [ext_resource type="Script" uid="uid://b0jgldkcj5sgj" path="res://microjogos/2024S1/projeto-do-Glaymar_A/cenas/scripts/inimigo.gd" id="1_ratjc"]
-[ext_resource type="Texture2D" uid="uid://b24foufi834mf" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/slime.png" id="2_cd747"]
+[ext_resource type="Texture2D" uid="uid://b24foufi834mf" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/sprites/slime.png" id="2_cd747"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cdqa1"]
 radius = 17.0

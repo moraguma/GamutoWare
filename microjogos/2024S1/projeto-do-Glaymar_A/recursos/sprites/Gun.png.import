@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db0cbwirc3omh"
-path="res://.godot/imported/bala.png-1a082ae9e16f89878cec32354e4f1c9c.ctex"
+uid="uid://02uvoafk3bjy"
+path="res://.godot/imported/Gun.png-fd6c7022f8b37cb2377515214da0b308.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/bala.png"
-dest_files=["res://.godot/imported/bala.png-1a082ae9e16f89878cec32354e4f1c9c.ctex"]
+source_file="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/sprites/Gun.png"
+dest_files=["res://.godot/imported/Gun.png-fd6c7022f8b37cb2377515214da0b308.ctex"]
 
 [params]
 

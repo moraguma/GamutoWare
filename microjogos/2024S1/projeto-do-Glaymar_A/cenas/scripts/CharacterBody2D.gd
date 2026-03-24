@@ -12,6 +12,7 @@ func hit(dano:int):
 	vivo = false
 	get_parent().register_lose()
 	$AnimationPlayer.play("death")
+	$Hurt.play()
 	collision_layer = 0
 	$Arma.disabled = true
 	

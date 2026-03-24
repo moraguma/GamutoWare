@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxy3gvgm3dijq"
-path="res://.godot/imported/sombra.png-d86ed25bef34406b41f15da63bc3e419.ctex"
+uid="uid://b24foufi834mf"
+path="res://.godot/imported/slime.png-0f0cb8be92919f105f416eeac54fa26f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/sombra.png"
-dest_files=["res://.godot/imported/sombra.png-d86ed25bef34406b41f15da63bc3e419.ctex"]
+source_file="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/sprites/slime.png"
+dest_files=["res://.godot/imported/slime.png-0f0cb8be92919f105f416eeac54fa26f.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dorh5dd53pwq7"]
 
 [ext_resource type="Script" uid="uid://1vrwk3xpch4s" path="res://microjogos/2024S1/projeto-do-Glaymar_A/cenas/scripts/municao.gd" id="1_2y78e"]
-[ext_resource type="Texture2D" uid="uid://db0cbwirc3omh" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/bala.png" id="1_lec53"]
+[ext_resource type="Texture2D" uid="uid://db0cbwirc3omh" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/sprites/bala.png" id="1_lec53"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dqr2f"]
 size = Vector2(8, 4)

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bi0ahd7cv37i6"]
+[gd_scene load_steps=6 format=3 uid="uid://bi0ahd7cv37i6"]
 
 [ext_resource type="Script" uid="uid://bpfumcx1027mv" path="res://microjogos/2024S1/projeto-do-Glaymar_A/cenas/scripts/main.gd" id="1_qftkj"]
 [ext_resource type="PackedScene" uid="uid://d2oahab3ot5ql" path="res://microjogos/2024S1/projeto-do-Glaymar_A/cenas/coluna.tscn" id="2_osv8d"]
 [ext_resource type="PackedScene" uid="uid://dt7ewgrxnk86g" path="res://microjogos/2024S1/projeto-do-Glaymar_A/cenas/Player.tscn" id="2_w0t5o"]
 [ext_resource type="PackedScene" uid="uid://deg0v3upu07xf" path="res://microjogos/2024S1/projeto-do-Glaymar_A/cenas/inimigo.tscn" id="3_ipfv1"]
+[ext_resource type="AudioStream" uid="uid://fr4hbjxvo2i3" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/sounds/g32gamesonscratch-grudge-revised-409696.wav" id="5_rtowm"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_qftkj")
@@ -99,3 +100,7 @@ position = Vector2(126, 163)
 
 [node name="coluna20" parent="Trees" instance=ExtResource("2_osv8d")]
 position = Vector2(1212, 512)
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_rtowm")
+autoplay = true

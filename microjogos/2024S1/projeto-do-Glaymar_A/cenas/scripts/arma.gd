@@ -15,6 +15,7 @@ func atirar():
 	nova_tiro.global_position = %mira.global_position
 	nova_tiro.global_rotation = %mira.global_rotation
 	%mira.add_child(nova_tiro)
+	$Shot.play()
 
 
 func _on_timer_timeout():

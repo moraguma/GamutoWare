@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dq8r1g3g2bu1"
-path="res://.godot/imported/Tree.png-5106cdea457a100243d56d19b56ae579.ctex"
+uid="uid://3dyh7wv3c65q"
+path="res://.godot/imported/persona.png-51e869ae10f4badb0900b27b57f22ad2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/Tree.png"
-dest_files=["res://.godot/imported/Tree.png-5106cdea457a100243d56d19b56ae579.ctex"]
+source_file="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/sprites/persona.png"
+dest_files=["res://.godot/imported/persona.png-51e869ae10f4badb0900b27b57f22ad2.ctex"]
 
 [params]
 
