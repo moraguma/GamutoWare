@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://7hekxchpcf32"]
+
+[ext_resource type="Script" uid="uid://c2ri0121uc1he" path="res://microjogos/2025S1/Projeto_Lucas_Santos/cenas/tecla_caindo.gd" id="1_0hdkp"]
+[ext_resource type="Texture2D" uid="uid://dvxafpxjofj2s" path="res://microjogos/2025S1/Projeto_Lucas_Santos/capa.png" id="2_5pag8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ktacr"]
+
+[node name="TeclaCaindo" type="Area2D"]
+script = ExtResource("1_0hdkp")
+action_name = &"tecla_caindo"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_5pag8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ktacr")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

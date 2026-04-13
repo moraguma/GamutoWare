@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://cassb5prawjy"]
+
+[ext_resource type="PackedScene" uid="uid://d100gdkpfdex6" path="res://microjogos/2025S1/Projeto_Lucas_Santos/cenas/Tecla.tscn" id="1_fxtfv"]
+[ext_resource type="PackedScene" uid="uid://7hekxchpcf32" path="res://microjogos/2025S1/Projeto_Lucas_Santos/cenas/Tecla_Caindo.tscn" id="2_s1bxe"]
+
+[node name="Main" type="Node2D"]
+texture_filter = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="TeclaCaindo" parent="." instance=ExtResource("2_s1bxe")]
+position = Vector2(-230, -505)
+
+[node name="Tecla" parent="." instance=ExtResource("1_fxtfv")]
+position = Vector2(-230, 400)
+action_name = &"cima"
+
+[node name="Tecla2" parent="." instance=ExtResource("1_fxtfv")]
+position = Vector2(-30, 400)
+action_name = &"direita"
+
+[node name="Tecla3" parent="." instance=ExtResource("1_fxtfv")]
+position = Vector2(200, 400)
+action_name = &"baixo"
+
+[node name="Tecla4" parent="." instance=ExtResource("1_fxtfv")]
+position = Vector2(400, 400)
+action_name = &"esquerda"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
