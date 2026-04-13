@@ -20,4 +20,3 @@ class_name MicrogameAsset
 @export var main_scene: PackedScene
 
 @export var difficulty: int
-

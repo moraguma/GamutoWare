@@ -1,0 +1,19 @@
+Boas vindas à sua área de trabalho! Sinta-se livre para renomear essa pasta com o seu nome ou o nome do seu jogo. O que tiver aqui vai ser sua entrega final quando o seu jogo estiver pronto.
+
+As pastas aqui dentro tem arquivos de texto explicando seu propósito, e a cena principal está localizada em cenas. O arquivo capa é uma imagem 450x450 que aparece quando seu jogo carrega. Troque ela por alguma coisa interessante mais pra frente!
+	A historia é o seguinte você é o Gustavo Gamux e esqueceu de encher os balões para o intensivão da Gamux
+	agora corra para encher o balão do Gamuto antes que o evento começe!!!!!
+
+Lembre de preencher o arquivo creditos.gd antes de entregar o seu jogo!
+	Creditos a mim mesmo que programou e desenhou 
+	Creditos a equipe da Gamux
+	Creditos ao Gamelab que fez companhia
+	e por ultimo a fonte que eu utilizei para a aparecer o numero de cliques você deve
+	dar para encher o balão é uma fonte que eu peguei do jogo do moraguma/ifuv/recursos/fonts
+	Pixel milennium regular do proprio projeto
+
+-#NÃO PEGUEI NADA DA INTERNET#-
+
+
+Esta sem som e a animação da explosão esta chula 
+sinta-se livre para colocar som e mudar um pouco a animação :D
