@@ -1,39 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://btgpgvramxxtv"]
+[gd_scene format=3 uid="uid://btgpgvramxxtv"]
 
-[sub_resource type="Resource" id="Resource_bg3c7"]
-metadata/__load_path__ = "res://botão_crédito.gd"
+[node name="Node2D" type="Node2D" unique_id=599602905]
 
-[sub_resource type="Resource" id="Resource_e048t"]
-metadata/__load_path__ = "res://Cenas/menu.png"
+[node name="Button" type="Button" parent="." unique_id=987473966]
 
-[sub_resource type="Resource" id="Resource_ku7je"]
-metadata/__load_path__ = "res://Cenas/créditos.png"
+[node name="Sprite2D" type="Sprite2D" parent="Button" unique_id=1759127560]
 
-[node name="Node2D" type="Node2D"]
-
-[node name="Button" type="Button" parent="."]
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 987.0
-margin/top = 582.0
-margin/right = 1171.0
-margin/bottom = 654.0
-toggle_mode = false
-focus_mode = 2
-shortcut = null
-flat = false
-script/script = SubResource("Resource_bg3c7")
-
-[node name="Sprite2D" type="Sprite2D" parent="Button"]
-transform/pos = Vector2(94.6436, 34.5698)
-transform/scale = Vector2(0.60319, 0.612947)
-texture = SubResource("Resource_e048t")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visibility/behind_parent = true
-transform/pos = Vector2(640, 360)
-texture = SubResource("Resource_ku7je")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2078345945]
 
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
