@@ -12,9 +12,8 @@ func _physics_process(delta):
 		velocity.x = -600
 	else :
 		velocity.x = 0
-	var colidiu = move_and_slide()
+	move_and_slide()
 
-func _process(delta):
 	if Input.is_action_just_pressed("acao"):
 		shot.play()
 		

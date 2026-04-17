@@ -4,7 +4,7 @@ var gamuto
 var copo_1
 var copo_2
 var copo_3
-var list = [Vector2(750, 554.932), Vector2(1000, 554.932), Vector2(1250, 554.932)]
+var list = [Vector2(660.0, 555.0), Vector2(960.0, 555.0), Vector2(1260.0, 555.0)]
 var i = 0
 var timer: Timer
 var escolha_flag = false

@@ -1,8 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://be84klthp7f5i"]
+[gd_scene format=3 uid="uid://be84klthp7f5i"]
 
 [ext_resource type="Script" uid="uid://b17w6wxafb1de" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/scripts/main.gd" id="1_fa412"]
 [ext_resource type="Texture2D" uid="uid://bs1ddi1rxp50d" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/starfield_alpha.png" id="4_jsmwk"]
-[ext_resource type="Script" uid="uid://ccfjua06gjfyw" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/scripts/Area2D.gd" id="5_fecm5"]
+[ext_resource type="Script" uid="uid://ccfjua06gjfyw" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/scripts/nave_inimiga.gd" id="5_fecm5"]
 [ext_resource type="PackedScene" uid="uid://cp1qj6bl2c0bs" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/Inimigo.tscn" id="8_bmwdm"]
 [ext_resource type="Texture2D" uid="uid://das77euveeme1" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/Ufo2.png" id="8_j23x7"]
 [ext_resource type="AudioStream" uid="uid://cxhpmprv7msst" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/Enterin The Skies.ogg" id="11_rw53c"]
@@ -10,73 +10,69 @@
 [ext_resource type="AudioStream" uid="uid://cb1263x21v5df" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/laser1.wav" id="13_ffplg"]
 [ext_resource type="PackedScene" uid="uid://dqwdde2v241xr" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/player.tscn" id="13_p23la"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2pnn4"]
+size = Vector2(40, 400)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_acfsk"]
+size = Vector2(40, 400)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xsdfa"]
 size = Vector2(111.801, 81.3559)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2pnn4"]
-size = Vector2(43.8441, 1072)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_acfsk"]
-size = Vector2(32, 1072)
-
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=108369418]
 script = ExtResource("1_fa412")
 
-[node name="StarfieldAlpha" type="Sprite2D" parent="."]
+[node name="StarfieldAlpha" type="Sprite2D" parent="." unique_id=741760757]
 texture = ExtResource("4_jsmwk")
 centered = false
 
-[node name="Player" parent="." instance=ExtResource("13_p23la")]
-position = Vector2(960, 974)
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=237175910]
 
-[node name="Nave maior" type="Area2D" parent="."]
-position = Vector2(1232, 786.75)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1508900733]
+position = Vector2(0, 880)
+shape = SubResource("RectangleShape2D_2pnn4")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1694147500]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=308693175]
+position = Vector2(1920, 880)
+shape = SubResource("RectangleShape2D_acfsk")
+
+[node name="Nave maior" type="Area2D" parent="." unique_id=232077955]
 scale = Vector2(2.43289, 1.77)
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("5_fecm5")
 vida = 3
 
-[node name="Ufo2" type="Sprite2D" parent="Nave maior"]
+[node name="Ufo2" type="Sprite2D" parent="Nave maior" unique_id=477275072]
 modulate = Color(0.517647, 0.976471, 0.482353, 1)
 texture = ExtResource("8_j23x7")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Nave maior"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nave maior" unique_id=2112076467]
 position = Vector2(-3.28833, 9.74576)
 shape = SubResource("RectangleShape2D_xsdfa")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Inimigo" parent="." unique_id=2051839290 instance=ExtResource("8_bmwdm")]
+collision_layer = 1
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-0.92207, 544)
-shape = SubResource("RectangleShape2D_2pnn4")
+[node name="Inimigo2" parent="." unique_id=600065262 instance=ExtResource("8_bmwdm")]
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+[node name="Inimigo3" parent="." unique_id=1974194407 instance=ExtResource("8_bmwdm")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(1920, 544)
-shape = SubResource("RectangleShape2D_acfsk")
+[node name="Area2D2" parent="." unique_id=2009172785 instance=ExtResource("13_p23la")]
+position = Vector2(960, 880)
 
-[node name="Inimigo" parent="." instance=ExtResource("8_bmwdm")]
-position = Vector2(537, 163)
-
-[node name="Inimigo2" parent="." instance=ExtResource("8_bmwdm")]
-position = Vector2(1471, 347)
-
-[node name="Inimigo3" parent="." instance=ExtResource("8_bmwdm")]
-position = Vector2(862, 664)
-
-[node name="Music" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1188824339]
 stream = ExtResource("11_rw53c")
 
-[node name="Explosion" type="AudioStreamPlayer" parent="."]
+[node name="Explosion" type="AudioStreamPlayer" parent="." unique_id=2063832356]
 stream = ExtResource("12_ostmr")
 volume_db = 10.0
 
-[node name="Shot" type="AudioStreamPlayer" parent="."]
+[node name="Shot" type="AudioStreamPlayer" parent="." unique_id=590346432]
 stream = ExtResource("13_ffplg")
 volume_db = -5.0
 
 [connection signal="area_entered" from="Nave maior" to="Nave maior" method="_on_area_entered"]
-[connection signal="body_entered" from="Nave maior" to="." method="_on_nave_maior_body_entered"]
 [connection signal="body_entered" from="Nave maior" to="Nave maior" method="_on_body_entered"]

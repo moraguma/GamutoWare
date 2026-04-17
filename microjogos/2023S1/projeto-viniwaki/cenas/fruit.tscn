@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c8nyydvpcpkff"]
+[gd_scene format=3 uid="uid://c8nyydvpcpkff"]
 
 [ext_resource type="Script" uid="uid://bfru8pa5r11r8" path="res://microjogos/2023S1/projeto-viniwaki/cenas/scripts/fruit.gd" id="1_oy4q4"]
 [ext_resource type="Texture2D" uid="uid://cqmymveo2q7cg" path="res://microjogos/2023S1/projeto-viniwaki/recursos/maca0.png" id="2_namhp"]
@@ -61,25 +61,25 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="fruit" type="RigidBody2D"]
+[node name="fruit" type="RigidBody2D" unique_id=1251737174]
 gravity_scale = 2.0
 script = ExtResource("1_oy4q4")
 
-[node name="collision_shape" type="CollisionShape2D" parent="."]
+[node name="collision_shape" type="CollisionShape2D" parent="." unique_id=1901521703]
 scale = Vector2(5, 5)
 shape = SubResource("CircleShape2D_0ensf")
 
-[node name="whole_sprite" type="AnimatedSprite2D" parent="."]
+[node name="whole_sprite" type="AnimatedSprite2D" parent="." unique_id=671722952]
 position = Vector2(0, -16)
 scale = Vector2(0.355, 0.355)
 sprite_frames = SubResource("SpriteFrames_4jsog")
 animation = &"watermelon"
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1123393844]
 position = Vector2(-4, -4)
 scale = Vector2(6.8, 6.8)
 
-[node name="arrow" type="Sprite2D" parent="."]
+[node name="arrow" type="Sprite2D" parent="." unique_id=1449584163]
 z_index = 1
 texture_filter = 3
 position = Vector2(200, 0)

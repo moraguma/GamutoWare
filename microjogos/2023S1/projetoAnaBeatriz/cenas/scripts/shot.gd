@@ -13,7 +13,3 @@ func _physics_process(delta):
 	time += delta
 	if time >= MAX_TIME:
 		queue_free()
-
-
-func _on_area_entered(area):
-	queue_free()

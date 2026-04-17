@@ -18,4 +18,4 @@ func _on_area_entered(area):
 	if vida == 0:
 		get_parent().delete_enemy()
 		queue_free()
-		area.queue_free()
+	area.queue_free()

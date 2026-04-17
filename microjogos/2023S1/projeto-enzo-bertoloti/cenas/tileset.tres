@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://da13lfgmwhjjx"]
+[gd_resource type="TileSet" format=3 uid="uid://da13lfgmwhjjx"]
 
 [ext_resource type="Texture2D" uid="uid://bgtr2c0jbmvbo" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/Tilemap/monochrome_tilemap_packed_scaled_6x_pngcrushed.png" id="1_1t4e4"]
 [ext_resource type="Texture2D" uid="uid://1e33hn1tkmh6" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/Tilemap/monochrome_tilemap_transparent_packed_scaled_6x_pngcrushed.png" id="2_dask0"]

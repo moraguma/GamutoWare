@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://coyj418yolusw"]
+[gd_scene format=3 uid="uid://coyj418yolusw"]
 
 [ext_resource type="Texture2D" uid="uid://dr5b43bk78wal" path="res://microjogos/not_implemented/godotware_old/Artick/artigo.jpg" id="1_f3krw"]
 
@@ -32,70 +32,70 @@ size = Vector2(87.6903, 12.4284)
 [sub_resource type="RectangleShape2D" id="10"]
 size = Vector2(377.21, 10)
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1947233816]
 
-[node name="artigo1" type="Area2D" parent="."]
+[node name="artigo1" type="Area2D" parent="." unique_id=1367909399]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="artigo1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="artigo1" unique_id=1490353716]
 shape = SubResource("1")
 
-[node name="Sprite2D" type="Sprite2D" parent="artigo1"]
+[node name="Sprite2D" type="Sprite2D" parent="artigo1" unique_id=1266464672]
 texture = ExtResource("1_f3krw")
 
-[node name="Personagem" type="CharacterBody2D" parent="."]
+[node name="Personagem" type="CharacterBody2D" parent="." unique_id=784613343]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem" unique_id=746137701]
 shape = SubResource("2")
 
-[node name="Sprite2D" type="Sprite2D" parent="Personagem"]
+[node name="Sprite2D" type="Sprite2D" parent="Personagem" unique_id=1396152464]
 
-[node name="Area2D" type="Area2D" parent="Personagem"]
+[node name="Area2D" type="Area2D" parent="Personagem" unique_id=1393137864]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem/Area2D" unique_id=1003360932]
 shape = SubResource("3")
 
-[node name="Area2D 2" type="Area2D" parent="Personagem"]
+[node name="Area2D 2" type="Area2D" parent="Personagem" unique_id=881849323]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem/Area2D 2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem/Area2D 2" unique_id=505135665]
 shape = SubResource("4")
 
-[node name="ground" type="StaticBody2D" parent="."]
+[node name="ground" type="StaticBody2D" parent="." unique_id=165992128]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ground"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ground" unique_id=1561614649]
 shape = SubResource("5")
 
-[node name="right_wall" type="StaticBody2D" parent="."]
+[node name="right_wall" type="StaticBody2D" parent="." unique_id=362020660]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="right_wall"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right_wall" unique_id=448700159]
 shape = SubResource("6")
 
-[node name="left_wall" type="StaticBody2D" parent="."]
+[node name="left_wall" type="StaticBody2D" parent="." unique_id=56993174]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="left_wall"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left_wall" unique_id=444916803]
 shape = SubResource("7")
 
-[node name="ceiling" type="StaticBody2D" parent="."]
+[node name="ceiling" type="StaticBody2D" parent="." unique_id=443348998]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ceiling"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ceiling" unique_id=1528777398]
 shape = SubResource("8")
 
-[node name="platform1" type="StaticBody2D" parent="."]
+[node name="platform1" type="StaticBody2D" parent="." unique_id=1704861317]
 
-[node name="Sprite2D" type="Sprite2D" parent="platform1"]
+[node name="Sprite2D" type="Sprite2D" parent="platform1" unique_id=1722415845]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="platform1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform1" unique_id=1239545296]
 shape = SubResource("9")
 
-[node name="platform2" type="StaticBody2D" parent="."]
+[node name="platform2" type="StaticBody2D" parent="." unique_id=279452417]
 
-[node name="Sprite2D" type="Sprite2D" parent="platform2"]
+[node name="Sprite2D" type="Sprite2D" parent="platform2" unique_id=92485727]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="platform2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform2" unique_id=2011271193]
 shape = SubResource("9")
 
-[node name="TextureFrame" type="Node" parent="."]
+[node name="TextureFrame" type="Node" parent="." unique_id=330524981]
 
-[node name="dead_line" type="CharacterBody2D" parent="."]
+[node name="dead_line" type="CharacterBody2D" parent="." unique_id=715933202]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="dead_line"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dead_line" unique_id=947439568]
 shape = SubResource("10")
