@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dva321mc7rve8"]
+[gd_scene format=3 uid="uid://dva321mc7rve8"]
 
 [ext_resource type="Texture2D" uid="uid://m4s2k6ysumvj" path="res://microjogos/2023S1/bis-limao/recursos/bus azul.png" id="1_wjbak"]
 [ext_resource type="Script" uid="uid://dpnk34tmtu65e" path="res://microjogos/2023S1/bis-limao/cenas/scripts/bis move.gd" id="2_c537g"]
@@ -6,15 +6,15 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_it8vp"]
 size = Vector2(23.6938, 11.3731)
 
-[node name="Bis Normal" type="Sprite2D"]
+[node name="Bis Normal" type="Sprite2D" unique_id=1630531182]
 texture_filter = 1
 position = Vector2(2168, 350)
 scale = Vector2(8.441, 8.441)
 texture = ExtResource("1_wjbak")
 script = ExtResource("2_c537g")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=643267682]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=729326513]
 position = Vector2(0.473846, -0.710815)
 shape = SubResource("RectangleShape2D_it8vp")

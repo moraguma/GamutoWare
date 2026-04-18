@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dsqlfkk0wh851"]
+[gd_scene format=3 uid="uid://dsqlfkk0wh851"]
 
 [ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="1_rjj2e"]
 [ext_resource type="Script" uid="uid://by1imnfth2pmj" path="res://microjogos/2023S1/projeto-jose-victor/cenas/scripts/player.gd" id="1_t4pjp"]
@@ -6,12 +6,12 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_sl4um"]
 radius = 32.0
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" unique_id=1637719402]
 position = Vector2(256, 136)
 script = ExtResource("1_t4pjp")
 
-[node name="Icon" type="Sprite2D" parent="."]
+[node name="Icon" type="Sprite2D" parent="." unique_id=1724216807]
 texture = ExtResource("1_rjj2e")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=852001870]
 shape = SubResource("CircleShape2D_sl4um")

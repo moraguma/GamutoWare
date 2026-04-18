@@ -1,8 +1,8 @@
-[gd_scene load_steps=19 format=3 uid="uid://ti82fb7ed1ir"]
+[gd_scene format=3 uid="uid://ti82fb7ed1ir"]
 
 [ext_resource type="Script" uid="uid://d11v83ud6rdlh" path="res://microjogos/2023S1/projeto-pluvinage/cenas/scripts/main.gd" id="1_vdjjx"]
 [ext_resource type="Texture2D" uid="uid://bjbaijxjheufl" path="res://microjogos/2023S1/projeto-pluvinage/recursos/icon.png" id="2_2vvsw"]
-[ext_resource type="Script" uid="uid://b7a4csk2gdarc" path="res://microjogos/2023S1/projeto-pluvinage/cenas/CharacterBody2D.gd" id="2_wmwpe"]
+[ext_resource type="Script" uid="uid://b7a4csk2gdarc" path="res://microjogos/2023S1/projeto-pluvinage/cenas/scripts/CharacterBody2D.gd" id="2_wmwpe"]
 [ext_resource type="Texture2D" uid="uid://bdejlfihec1k" path="res://microjogos/2023S1/projeto-pluvinage/recursos/star1.png" id="5_cxjg0"]
 [ext_resource type="Texture2D" uid="uid://dswfre4d3u8yp" path="res://microjogos/2023S1/projeto-pluvinage/recursos/parallax_mountain_pack/layers/parallax-mountain-bg.png" id="5_m6kid"]
 [ext_resource type="AudioStream" uid="uid://crpu3dyotmt1y" path="res://microjogos/2023S1/projeto-pluvinage/recursos/sounds/powerup.mp3" id="5_r87wk"]
@@ -10,7 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://cyl2disxurjyf" path="res://microjogos/2023S1/projeto-pluvinage/recursos/sounds/win.mp3" id="6_qna4x"]
 [ext_resource type="Texture2D" uid="uid://bbi1kl065ysx5" path="res://microjogos/2023S1/projeto-pluvinage/recursos/firerate increaser.png" id="7_104r3"]
 [ext_resource type="AudioStream" uid="uid://br8qp2ntgpi1l" path="res://microjogos/2023S1/projeto-pluvinage/recursos/sounds/lose.mp3" id="7_sbcrm"]
-[ext_resource type="Script" uid="uid://da5bdmjnrpkl2" path="res://microjogos/2023S1/projeto-pluvinage/Bat.gd" id="8_k2nto"]
+[ext_resource type="Script" uid="uid://da5bdmjnrpkl2" path="res://microjogos/2023S1/projeto-pluvinage/cenas/scripts/Bat.gd" id="8_k2nto"]
 [ext_resource type="Texture2D" uid="uid://djcv041nxf0ip" path="res://microjogos/2023S1/projeto-pluvinage/recursos/bat/01-Idle/__Bat02_Idle_000.png" id="9_0rchk"]
 [ext_resource type="AudioStream" uid="uid://dipyn8ja1keus" path="res://microjogos/2023S1/projeto-pluvinage/recursos/sounds/jump.mp3" id="10_01xnc"]
 [ext_resource type="AudioStream" uid="uid://cyxycedypntxb" path="res://microjogos/2023S1/projeto-pluvinage/recursos/sounds/music.ogg" id="14_s4okj"]
@@ -26,186 +26,186 @@ size = Vector2(20, 160)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yq0do"]
 size = Vector2(16.5, 14.9375)
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=288235884]
 script = ExtResource("1_vdjjx")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=67332367]
 anchor_mode = 0
 
-[node name="Player" type="CharacterBody2D" parent="."]
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1227272315]
 position = Vector2(300, 256)
 scale = Vector2(6, 6)
 collision_layer = 3
 script = ExtResource("2_wmwpe")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=89924490]
 shape = SubResource("CircleShape2D_vobhw")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1548137196]
 texture_filter = 1
 position = Vector2(0, -0.723473)
 scale = Vector2(0.375, 0.375)
 texture = ExtResource("2_2vvsw")
 
-[node name="GO" type="Area2D" parent="."]
+[node name="GO" type="Area2D" parent="." unique_id=396802894]
 position = Vector2(968, 1064)
 scale = Vector2(20, 10)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GO"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GO" unique_id=1646164949]
 shape = SubResource("RectangleShape2D_s5pr7")
 
-[node name="PlataformasDraw" type="Sprite2D" parent="."]
+[node name="PlataformasDraw" type="Sprite2D" parent="." unique_id=626222537]
 position = Vector2(968, 600)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("6_lh1vt")
 
-[node name="Platform1" type="RigidBody2D" parent="."]
+[node name="Platform1" type="RigidBody2D" parent="." unique_id=1827150935]
 position = Vector2(266, 529)
 rotation = 0.200817
 scale = Vector2(2.52962, 3.459)
 freeze = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=2064547481]
 rotation = -1.57079
 shape = SubResource("RectangleShape2D_5drih")
 
-[node name="Platform2" type="RigidBody2D" parent="."]
+[node name="Platform2" type="RigidBody2D" parent="." unique_id=49104089]
 position = Vector2(536, 704)
 scale = Vector2(1.76799, 2.09204)
 freeze = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=1397292566]
 rotation = -1.57079
 shape = SubResource("RectangleShape2D_5drih")
 
-[node name="Platform3" type="RigidBody2D" parent="."]
+[node name="Platform3" type="RigidBody2D" parent="." unique_id=1921845950]
 position = Vector2(996, 610)
 rotation = 0.0648052
 scale = Vector2(1.15527, 1.45169)
 freeze = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3" unique_id=541027419]
 rotation = -1.57079
 shape = SubResource("RectangleShape2D_5drih")
 
-[node name="Platform4" type="RigidBody2D" parent="."]
+[node name="Platform4" type="RigidBody2D" parent="." unique_id=120943958]
 position = Vector2(1268, 724)
 rotation = -0.0132251
 scale = Vector2(2.76615, 1.65065)
 freeze = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4" unique_id=357760097]
 rotation = -1.57079
 shape = SubResource("RectangleShape2D_5drih")
 
-[node name="Goal" type="Area2D" parent="."]
+[node name="Goal" type="Area2D" parent="." unique_id=800946136]
 position = Vector2(1024, 112)
 scale = Vector2(5.529, 5.529)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Goal" unique_id=1255420506]
 shape = SubResource("CircleShape2D_vobhw")
 
-[node name="Sprite2D" type="Sprite2D" parent="Goal"]
+[node name="Sprite2D" type="Sprite2D" parent="Goal" unique_id=775486059]
 position = Vector2(0, -0.723473)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("5_cxjg0")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=867444405]
 z_index = -1
 texture_filter = 1
 scale = Vector2(7.5, 7.5)
 texture = ExtResource("5_m6kid")
 centered = false
 
-[node name="Platform5" type="RigidBody2D" parent="."]
+[node name="Platform5" type="RigidBody2D" parent="." unique_id=1131037514]
 position = Vector2(1608, 475)
 rotation = 0.022853
 scale = Vector2(1.75445, -1.30476)
 freeze = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform5"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform5" unique_id=1317157543]
 rotation = -1.57079
 shape = SubResource("RectangleShape2D_5drih")
 
-[node name="Platform6" type="RigidBody2D" parent="."]
+[node name="Platform6" type="RigidBody2D" parent="." unique_id=1097873803]
 position = Vector2(1772, 564)
 rotation = 0.0813683
 scale = Vector2(1.13205, 0.900606)
 freeze = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform6"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform6" unique_id=152987104]
 rotation = -1.57079
 shape = SubResource("RectangleShape2D_5drih")
 
-[node name="Platform7" type="RigidBody2D" parent="."]
+[node name="Platform7" type="RigidBody2D" parent="." unique_id=398781585]
 position = Vector2(1238, 267)
 rotation = 0.0166277
 scale = Vector2(1.75445, -1.30476)
 freeze = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform7"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform7" unique_id=1183962085]
 position = Vector2(2.33716, -1.68127)
 rotation = -1.57079
 shape = SubResource("RectangleShape2D_5drih")
 
-[node name="Powerup" type="Area2D" parent="."]
+[node name="Powerup" type="Area2D" parent="." unique_id=434974476]
 position = Vector2(1408, 664)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Powerup"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Powerup" unique_id=855606096]
 scale = Vector2(4, 4)
 shape = SubResource("RectangleShape2D_yq0do")
 
-[node name="Sprite2D" type="Sprite2D" parent="Powerup"]
+[node name="Sprite2D" type="Sprite2D" parent="Powerup" unique_id=1454389210]
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("7_104r3")
 
-[node name="Bat" type="Area2D" parent="."]
+[node name="Bat" type="Area2D" parent="." unique_id=1272559721]
 position = Vector2(1853, 330)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("8_k2nto")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bat"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bat" unique_id=52637476]
 position = Vector2(4, -5.5)
 scale = Vector2(4, 4)
 shape = SubResource("RectangleShape2D_yq0do")
 
-[node name="Sprite2D" type="Sprite2D" parent="Bat"]
+[node name="Sprite2D" type="Sprite2D" parent="Bat" unique_id=1810677603]
 rotation = 3.14159
 scale = Vector2(0.5, -0.5)
 texture = ExtResource("9_0rchk")
 
-[node name="Bat2" type="Area2D" parent="."]
+[node name="Bat2" type="Area2D" parent="." unique_id=456590496]
 position = Vector2(2116, 722)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("8_k2nto")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bat2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bat2" unique_id=2100042610]
 position = Vector2(3, -2.75)
 scale = Vector2(4, 4)
 shape = SubResource("RectangleShape2D_yq0do")
 
-[node name="Sprite2D" type="Sprite2D" parent="Bat2"]
+[node name="Sprite2D" type="Sprite2D" parent="Bat2" unique_id=1389412570]
 rotation = 3.14159
 scale = Vector2(0.5, -0.5)
 texture = ExtResource("9_0rchk")
 
-[node name="powerup_sound" type="AudioStreamPlayer" parent="."]
+[node name="powerup_sound" type="AudioStreamPlayer" parent="." unique_id=1920441557]
 stream = ExtResource("5_r87wk")
 
-[node name="win_sound" type="AudioStreamPlayer" parent="."]
+[node name="win_sound" type="AudioStreamPlayer" parent="." unique_id=1055384241]
 stream = ExtResource("6_qna4x")
 
-[node name="lose_sound" type="AudioStreamPlayer" parent="."]
+[node name="lose_sound" type="AudioStreamPlayer" parent="." unique_id=959632807]
 stream = ExtResource("7_sbcrm")
 
-[node name="jump_sound" type="AudioStreamPlayer" parent="."]
+[node name="jump_sound" type="AudioStreamPlayer" parent="." unique_id=1917090738]
 stream = ExtResource("10_01xnc")
 
-[node name="Music" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1742787126]
 stream = ExtResource("14_s4okj")
 volume_db = -11.277
 autoplay = true

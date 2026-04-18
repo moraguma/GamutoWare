@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://btr34bopgnxs3"]
+[gd_scene format=3 uid="uid://btr34bopgnxs3"]
 
 [ext_resource type="Script" uid="uid://dyjo3hl0nmndw" path="res://microjogos/2023S1/projeto_leonardo_valente/cenas/main.gd" id="1_m3egb"]
 [ext_resource type="Texture2D" uid="uid://bmdqosyr64d3c" path="res://microjogos/2023S1/projeto_leonardo_valente/recursos/fundotentativa2.png" id="2_e7kly"]
@@ -26,10 +26,10 @@ normal = Vector2(0, 1)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_apv5h"]
 normal = Vector2(-1, 0)
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=390383344]
 script = ExtResource("1_m3egb")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=1930556309]
 offset_right = 1920.0
 offset_bottom = 1080.0
 size_flags_horizontal = 3
@@ -38,66 +38,66 @@ texture = ExtResource("2_e7kly")
 expand_mode = 1
 stretch_mode = 1
 
-[node name="Camera3D" type="Camera2D" parent="."]
+[node name="Camera3D" type="Camera2D" parent="." unique_id=660295233]
 anchor_mode = 0
 
-[node name="CreeperSpawner" type="Node2D" parent="."]
+[node name="CreeperSpawner" type="Node2D" parent="." unique_id=1124541296]
 script = ExtResource("5_ttrfa")
 
-[node name="TimerExplosão" type="Timer" parent="CreeperSpawner"]
+[node name="TimerExplosão" type="Timer" parent="CreeperSpawner" unique_id=900134666]
 one_shot = true
 script = ExtResource("6_eykoc")
 
-[node name="Delay" type="Timer" parent="CreeperSpawner/TimerExplosão"]
+[node name="Delay" type="Timer" parent="CreeperSpawner/TimerExplosão" unique_id=1154693375]
 wait_time = 0.07
 one_shot = true
 script = ExtResource("5_ccmjg")
 
-[node name="BarulhoExplosão" type="AudioStreamPlayer" parent="CreeperSpawner/TimerExplosão/Delay"]
+[node name="BarulhoExplosão" type="AudioStreamPlayer" parent="CreeperSpawner/TimerExplosão/Delay" unique_id=206425949]
 stream = ExtResource("5_0tfti")
 volume_db = -10.0
 
-[node name="TimerIgnite" type="Timer" parent="CreeperSpawner"]
+[node name="TimerIgnite" type="Timer" parent="CreeperSpawner" unique_id=848369313]
 one_shot = true
 script = ExtResource("5_gttv2")
 
-[node name="Player" type="CharacterBody2D" parent="."]
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1889329190]
 position = Vector2(873, 365)
 collision_layer = 3
 script = ExtResource("2_uyjpj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=757278539]
 shape = SubResource("RectangleShape2D_rgntd")
 
-[node name="Vinicin" type="Sprite2D" parent="Player"]
+[node name="Vinicin" type="Sprite2D" parent="Player" unique_id=2060927194]
 texture_filter = 1
 position = Vector2(3.8147e-06, 3.8147e-06)
 scale = Vector2(10, 10)
 texture = ExtResource("3_slgyu")
 
-[node name="Cova" type="Sprite2D" parent="Player"]
+[node name="Cova" type="Sprite2D" parent="Player" unique_id=791124600]
 visible = false
 texture_filter = 1
 scale = Vector2(5, 5)
 texture = ExtResource("7_fu4h7")
 
-[node name="BOUND" type="StaticBody2D" parent="."]
+[node name="BOUND" type="StaticBody2D" parent="." unique_id=253047071]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BOUND"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BOUND" unique_id=267721033]
 shape = SubResource("WorldBoundaryShape2D_rwvjg")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="BOUND"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="BOUND" unique_id=1758419206]
 shape = SubResource("WorldBoundaryShape2D_55ni7")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="BOUND"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="BOUND" unique_id=1545026392]
 position = Vector2(1920, 1080)
 shape = SubResource("WorldBoundaryShape2D_xe0ga")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="BOUND"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="BOUND" unique_id=778985658]
 position = Vector2(1920, 1080)
 shape = SubResource("WorldBoundaryShape2D_apv5h")
 
-[node name="CorreVinicinho" type="AudioStreamPlayer" parent="."]
+[node name="CorreVinicinho" type="AudioStreamPlayer" parent="." unique_id=68681417]
 stream = ExtResource("7_te30o")
 autoplay = true
 
