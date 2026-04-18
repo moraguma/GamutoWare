@@ -1,0 +1,158 @@
+[gd_scene load_steps=16 format=3 uid="uid://bxjif83b36oo2"]
+
+[ext_resource type="Script" uid="uid://cc2nstc41ktlk" path="res://microjogos/2025S1/Yhago_Gamelab/cenas/scripts/main.gd" id="1_v35xu"]
+[ext_resource type="Texture2D" uid="uid://doeedqotu75oi" path="res://microjogos/2025S1/Yhago_Gamelab/recursos/images/gamuto.png" id="2_hwq0u"]
+[ext_resource type="Texture2D" uid="uid://cpr4e8slkpk5b" path="res://microjogos/2025S1/Yhago_Gamelab/recursos/images/peixe.png" id="2_v35xu"]
+[ext_resource type="Texture2D" uid="uid://dodvdt3fkpvdl" path="res://microjogos/2025S1/Yhago_Gamelab/recursos/images/anzol.png" id="3_1vj03"]
+[ext_resource type="Texture2D" uid="uid://b71wdj0doay37" path="res://microjogos/2025S1/Yhago_Gamelab/recursos/images/balde1.png" id="3_v35xu"]
+[ext_resource type="Texture2D" uid="uid://dwxgjqcf68a27" path="res://microjogos/2025S1/Yhago_Gamelab/recursos/images/balde2.png" id="4_1vj03"]
+[ext_resource type="Texture2D" uid="uid://g8o3afvi3j8k" path="res://microjogos/2025S1/Yhago_Gamelab/recursos/images/Spri1.png" id="5_djk22"]
+[ext_resource type="Texture2D" uid="uid://b18q6ai0ky1uv" path="res://microjogos/2025S1/Yhago_Gamelab/recursos/images/Sprit2.png" id="6_xs200"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_s2chn"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_e0oyl"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_6ii3p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cnho3"]
+size = Vector2(96, 161)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uhi23"]
+size = Vector2(64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wqsqo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_v35xu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1vj03")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pf5al"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_djk22")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_xs200")
+}],
+"loop": true,
+"name": &"puxando",
+"speed": 5.0
+}]
+
+[node name="SeuJogo" type="Node2D"]
+script = ExtResource("1_v35xu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.364922, 0.640093, 0.921501, 1)
+position = Vector2(962, 542)
+scale = Vector2(1920, 1080)
+texture = SubResource("CanvasTexture_s2chn")
+
+[node name="TemplateBase7" type="Sprite2D" parent="."]
+modulate = Color(0.890196, 0.329412, 0.596078, 1)
+position = Vector2(1985, 454)
+scale = Vector2(600, 600)
+texture = SubResource("CanvasTexture_e0oyl")
+offset = Vector2(-0.148809, -0.0426471)
+
+[node name="TemplateBase" type="Sprite2D" parent="."]
+modulate = Color(0.145098, 0.0666667, 0.0705882, 1)
+position = Vector2(1625, 589)
+scale = Vector2(168, 680)
+texture = SubResource("CanvasTexture_e0oyl")
+offset = Vector2(-0.148809, -0.0426471)
+
+[node name="TemplateBase4" type="Sprite2D" parent="."]
+modulate = Color(0.607843, 0.678431, 0.717647, 1)
+position = Vector2(1600, 560)
+scale = Vector2(160, 672)
+texture = SubResource("CanvasTexture_e0oyl")
+
+[node name="TemplateBase2" type="Sprite2D" parent="."]
+position = Vector2(1600, 560)
+scale = Vector2(132, 644)
+texture = SubResource("CanvasTexture_e0oyl")
+
+[node name="TemplateBase3" type="Sprite2D" parent="."]
+modulate = Color(0.568627, 0.862745, 0.92549, 1)
+position = Vector2(1600, 560)
+scale = Vector2(128, 640)
+texture = SubResource("CanvasTexture_e0oyl")
+
+[node name="TemplateBase5" type="Sprite2D" parent="."]
+modulate = Color(0.890196, 0.329412, 0.596078, 1)
+position = Vector2(960, 900)
+scale = Vector2(332, 180)
+texture = SubResource("CanvasTexture_e0oyl")
+
+[node name="TemplateBase6" type="Sprite2D" parent="."]
+modulate = Color(0.890196, 0.329412, 0.596078, 1)
+position = Vector2(315, 484)
+scale = Vector2(420, 420)
+texture = SubResource("CanvasTexture_e0oyl")
+
+[node name="posimaxpeixe" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 0.32549, 1, 1)
+position = Vector2(1601, 785)
+scale = Vector2(96, 160)
+texture = SubResource("CanvasTexture_6ii3p")
+
+[node name="Peixe" type="Area2D" parent="."]
+position = Vector2(1601, 314)
+
+[node name="imagePeixe" type="Sprite2D" parent="Peixe"]
+position = Vector2(0, 14)
+texture = ExtResource("2_v35xu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Peixe"]
+position = Vector2(0, 14.5)
+shape = SubResource("RectangleShape2D_cnho3")
+
+[node name="Anzol" type="Area2D" parent="."]
+position = Vector2(1601, 821)
+
+[node name="ImageAnzol" type="Sprite2D" parent="Anzol"]
+texture = ExtResource("3_1vj03")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Anzol"]
+shape = SubResource("RectangleShape2D_uhi23")
+
+[node name="AnimPersonagem" type="Sprite2D" parent="."]
+position = Vector2(420, 560)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_hwq0u")
+
+[node name="AnimBalde" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 820)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_wqsqo")
+frame_progress = 0.555758
+
+[node name="AnimVara" type="AnimatedSprite2D" parent="."]
+position = Vector2(630, 531)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_pf5al")
+animation = &"puxando"
+
+[node name="peixeTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="area_entered" from="Peixe" to="." method="_on_peixe_area_entered"]
+[connection signal="area_exited" from="Peixe" to="." method="_on_peixe_area_exited"]
+[connection signal="timeout" from="peixeTimer" to="." method="_on_peixe_timer_timeout"]
