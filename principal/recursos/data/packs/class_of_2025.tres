@@ -4,6 +4,13 @@
 [ext_resource type="Script" uid="uid://cv53qaorwqxj0" path="res://principal/recursos/data/MicrogamePack.gd" id="1_vkav3"]
 [ext_resource type="Resource" uid="uid://cv2ggbltl0rvv" path="res://microjogos/2025S1/Cookies/microgame.tres" id="2_6j4tg"]
 [ext_resource type="Resource" uid="uid://dtasbdcsjjurw" path="res://microjogos/2025S1/Drikista_Gamelab/microgame.tres" id="3_jq0e5"]
+[ext_resource type="Resource" uid="uid://d4m72pf20pb5p" path="res://microjogos/2025S1/Gamuto_Maestro_Davi/microgame.tres" id="3_jq0e5"]
+[ext_resource type="Resource" uid="uid://xb2s14l0sc2o" path="res://microjogos/2025S1/projeto_release_gamuto/microgame.tres" id="3_jq0e5"]
+[ext_resource type="Resource" uid="uid://dho7x5jlw0yng" path="res://microjogos/2025S1/projeto_milla/microgame.tres" id="3_jq0e5"]
+[ext_resource type="Resource" uid="uid://cxdumqr3o4e3m" path="res://microjogos/2025S1/project_so_ze/microgame.tres" id="3_jq0e5"]
+[ext_resource type="Resource" uid="uid://cu42mp8vwfc81" path="res://microjogos/2025S1/Eco_Rescue/microgame.tres" id="3_jq0e5"]
+[ext_resource type="Resource" uid="uid://dlpkjlx141r5w" path="res://microjogos/2025S1/fast_food_pocao/microgame.tres" id="3_jq0e5"]
+[ext_resource type="Resource" uid="uid://c5xnjw2bm6nyk" path="res://microjogos/2025S1/paillo_dice/microgame.tres" id="3_jq0e5"]
 
 [resource]
 script = ExtResource("1_vkav3")
