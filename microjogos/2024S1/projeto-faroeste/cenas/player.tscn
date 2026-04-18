@@ -1,0 +1,148 @@
+[gd_scene load_steps=17 format=3 uid="uid://btwd0115b2rb8"]
+
+[ext_resource type="Texture2D" uid="uid://bwdxsst4cfyqb" path="res://microjogos/2024S1/projeto-faroeste/recursos/images/New Piskel(1).png" id="1_20frq"]
+[ext_resource type="Script" uid="uid://epd7fsst6rpc" path="res://microjogos/2024S1/projeto-faroeste/cenas/scripts/player.gd" id="1_a16fb"]
+[ext_resource type="Texture2D" uid="uid://c3ta5rn85x016" path="res://microjogos/2024S1/projeto-faroeste/recursos/images/tiro.png" id="2_a16fb"]
+[ext_resource type="AudioStream" uid="uid://bpkyqer33xn0w" path="res://microjogos/2024S1/projeto-faroeste/recursos/sounds/gunshot-desert-eagle-pistol-fascinatedsound-3-3-00-01.wav" id="4_sf642"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x2ogc"]
+radius = 29.0
+height = 234.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iyjgb"]
+atlas = ExtResource("1_20frq")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g0tx7"]
+atlas = ExtResource("1_20frq")
+region = Rect2(0, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sf642"]
+atlas = ExtResource("2_a16fb")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8nngl"]
+atlas = ExtResource("2_a16fb")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_altom"]
+atlas = ExtResource("2_a16fb")
+region = Rect2(0, 100, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwa07"]
+atlas = ExtResource("2_a16fb")
+region = Rect2(50, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pv5hf"]
+atlas = ExtResource("2_a16fb")
+region = Rect2(0, 50, 50, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w06wt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iyjgb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g0tx7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_sf642")
+}, {
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_8nngl")
+}, {
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_altom")
+}, {
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_mwa07")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_pv5hf")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_mwa07")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_altom")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8nngl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sf642")
+}],
+"loop": false,
+"name": &"shot",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_8nngl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_sf642"]
+resource_name = "death"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -1.5708]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_altom"]
+_data = {
+&"RESET": SubResource("Animation_8nngl"),
+&"death": SubResource("Animation_sf642")
+}
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_a16fb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -120)
+shape = SubResource("CapsuleShape2D_x2ogc")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -120)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_w06wt")
+animation = &"shot"
+autoplay = "default"
+frame = 8
+frame_progress = 1.0
+
+[node name="Gunshot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_sf642")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_altom")
+}
+
+[connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]

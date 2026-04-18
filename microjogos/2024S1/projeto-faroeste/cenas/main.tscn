@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="Script" uid="uid://tyed50mv47se" path="res://microjogos/2024S1/projeto-faroeste/cenas/scripts/main.gd" id="1_tlomy"]
+[ext_resource type="Texture2D" uid="uid://dwo337mjnkubj" path="res://microjogos/2024S1/projeto-faroeste/recursos/images/JEMA BRY 1697-15.jpg" id="2_lx4ll"]
+[ext_resource type="PackedScene" uid="uid://btwd0115b2rb8" path="res://microjogos/2024S1/projeto-faroeste/cenas/player.tscn" id="3_om35m"]
+[ext_resource type="PackedScene" uid="uid://s1spkramy4cs" path="res://microjogos/2024S1/projeto-faroeste/cenas/inimigo.tscn" id="4_om35m"]
+[ext_resource type="Texture2D" uid="uid://b0x2kihexrjul" path="res://microjogos/2024S1/projeto-faroeste/recursos/images/atire.png" id="6_jh6h0"]
+[ext_resource type="AudioStream" uid="uid://cj7wlvh5dgfxx" path="res://microjogos/2024S1/projeto-faroeste/recursos/sounds/u_jfkxueyart-eagle-281163.wav" id="6_om35m"]
+[ext_resource type="AudioStream" uid="uid://c7ogbo0qnooqj" path="res://microjogos/2024S1/projeto-faroeste/recursos/sounds/samuel_copier_country-wild-west-harmonica-267552.wav" id="7_prn36"]
+
+[node name="Main" type="Node2D" node_paths=PackedStringArray("intro", "sprite", "player", "enemy")]
+texture_filter = 3
+script = ExtResource("1_tlomy")
+intro = NodePath("TempoIntro")
+sprite = NodePath("Sprite")
+player = NodePath("Player")
+enemy = NodePath("Inimigo")
+
+[node name="JemaBry1697-15" type="Sprite2D" parent="."]
+position = Vector2(960, 305)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_lx4ll")
+
+[node name="Player" parent="." instance=ExtResource("3_om35m")]
+position = Vector2(222, 961)
+
+[node name="Inimigo" parent="." instance=ExtResource("4_om35m")]
+position = Vector2(1785, 959)
+
+[node name="atire" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(960, 540)
+scale = Vector2(3, 3)
+texture = ExtResource("6_jh6h0")
+
+[node name="Sprite" type="Timer" parent="."]
+one_shot = true
+
+[node name="TempoIntro" type="Timer" parent="."]
+wait_time = 4.601
+one_shot = true
+
+[node name="sino" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_om35m")
+
+[node name="BDM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_prn36")
+autoplay = true
+
+[connection signal="timeout" from="Sprite" to="." method="_on_sprite_timeout"]
+[connection signal="timeout" from="TempoIntro" to="." method="_on_tempo_intro_timeout"]
