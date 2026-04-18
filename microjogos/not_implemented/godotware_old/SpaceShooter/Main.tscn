@@ -1,72 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://dgyuxfeng02bg"]
+[gd_scene format=3 uid="uid://dgyuxfeng02bg"]
 
-[sub_resource type="Resource" id="Resource_5hpes"]
-metadata/__load_path__ = "res://microjogos/godotware/SpaceShooter/Main.gd"
+[node name="Main" type="Node2D" unique_id=271255604]
 
-[sub_resource type="Resource" id="Resource_wp0uq"]
-metadata/__load_path__ = "res://microjogos/godotware/SpaceShooter/scenes/Audio_Player.tscn"
-
-[sub_resource type="Resource" id="Resource_3g40t"]
-metadata/__load_path__ = "res://microjogos/godotware/SpaceShooter/scenes/Spawner_Enemy.tscn"
-
-[sub_resource type="Resource" id="Resource_jtskh"]
-metadata/__load_path__ = "res://microjogos/godotware/SpaceShooter/sprites/stars_far.png"
-
-[sub_resource type="Resource" id="Resource_3xysh"]
-metadata/__load_path__ = "res://microjogos/godotware/SpaceShooter/sprites/stars_far.png"
-
-[sub_resource type="Resource" id="Resource_1j8vy"]
-metadata/__load_path__ = "res://microjogos/godotware/SpaceShooter/scripts/Camera.gd"
-
-[sub_resource type="Resource" id="Resource_4omgp"]
-metadata/__load_path__ = "res://microjogos/godotware/SpaceShooter/scenes/Ship.tscn"
-
-[node name="Main" type="Node2D"]
-script/script = SubResource("Resource_5hpes")
-NAME = "Space Shooter"
-INSTRUCTION = "Survive!"
-DURATION = 6
-TIMEOUT_WIN = true
-USE_KEYS_HUD = true
-USE_MOUSE_HUD = true
-
-[node name="Audio_Player" parent="."]
-
-[node name="Spawner_Enemy" parent="."]
-
-[node name="Stars_0" type="Sprite2D" parent="."]
-transform/pos = Vector2(-24, -24)
-transform/scale = Vector2(2.5, 2.5)
-texture = SubResource("Resource_jtskh")
-centered = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Stars_1" type="Sprite2D" parent="."]
-transform/pos = Vector2(400, -24)
-transform/scale = Vector2(2.5, 2.5)
-texture = SubResource("Resource_3xysh")
+[node name="Stars_0" type="Sprite2D" parent="." unique_id=1753018641]
 centered = false
 
-[node name="Camera3D" type="Camera2D" parent="."]
+[node name="Stars_1" type="Sprite2D" parent="." unique_id=675951938]
+centered = false
+
+[node name="Camera3D" type="Camera2D" parent="." unique_id=1790284824]
 anchor_mode = 0
-ignore_rotation = true
-rotatingforCamera2Dcurrent = false
-zoom = Vector2(1, 1)
-limit/left = -10000000
-limit/top = -10000000
-limit/right = 10000000
-limit/bottom = 10000000
-drag_margin/h_enabled = true
-drag_margin/v_enabled = true
-smoothing/enable = false
-smoothing/speed = 5.0
-drag_margin/left = 0.2
-drag_margin/top = 0.2
-drag_margin/right = 0.2
-drag_margin/bottom = 0.2
-script/script = SubResource("Resource_1j8vy")
-
-[node name="Ship" parent="."]
-transform/pos = Vector2(320, 200)

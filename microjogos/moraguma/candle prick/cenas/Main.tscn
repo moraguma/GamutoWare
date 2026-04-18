@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://coegrh14dch8v"]
+[gd_scene format=3 uid="uid://coegrh14dch8v"]
 
 [ext_resource type="PackedScene" uid="uid://cxoiffe5hbttt" path="res://microjogos/moraguma/candle prick/cenas/Game.tscn" id="1"]
 [ext_resource type="AudioStream" uid="uid://gabkryriv8my" path="res://microjogos/moraguma/candle prick/recursos/sounds/wind_loop.ogg" id="5"]
@@ -8,19 +8,19 @@
 [sub_resource type="ViewportTexture" id="1"]
 viewport_path = NodePath("SubViewport")
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1301709168]
 texture_filter = 1
 script = ExtResource("7")
 
-[node name="Camera3D" type="Camera2D" parent="."]
+[node name="Camera3D" type="Camera2D" parent="." unique_id=811330484]
 position = Vector2(120, 67)
 scale = Vector2(1, -1)
 
-[node name="GameBack" type="Sprite2D" parent="."]
+[node name="GameBack" type="Sprite2D" parent="." unique_id=1082247350]
 position = Vector2(120, 67)
 texture = SubResource("1")
 
-[node name="Snow" type="CPUParticles2D" parent="."]
+[node name="Snow" type="CPUParticles2D" parent="." unique_id=924093624]
 position = Vector2(240, 60)
 amount = 32
 lifetime = 2.0
@@ -30,15 +30,15 @@ emission_rect_extents = Vector2(1, 120)
 direction = Vector2(-1, 0)
 gravity = Vector2(-200, 40)
 
-[node name="SubViewport" type="SubViewport" parent="."]
+[node name="SubViewport" type="SubViewport" parent="." unique_id=719966526]
 size = Vector2i(240, 135)
 
-[node name="Game" parent="SubViewport" instance=ExtResource("1")]
+[node name="Game" parent="SubViewport" unique_id=499644117 instance=ExtResource("1")]
 
-[node name="Wind" type="AudioStreamPlayer" parent="."]
+[node name="Wind" type="AudioStreamPlayer" parent="." unique_id=334057788]
 stream = ExtResource("5")
 volume_db = 5.0
 
-[node name="Music" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=910142848]
 stream = ExtResource("6")
 volume_db = 10.0

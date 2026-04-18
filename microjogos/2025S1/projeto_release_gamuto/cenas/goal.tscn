@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://mymft1gnwhxt"]
+[gd_scene format=3 uid="uid://mymft1gnwhxt"]
 
 [ext_resource type="Script" uid="uid://bs13go1imyc8m" path="res://microjogos/2025S1/projeto_release_gamuto/cenas/scripts/goal.gd" id="1_m3jsi"]
 [ext_resource type="Texture2D" uid="uid://ipfqy8wn1ck6" path="res://microjogos/2025S1/projeto_release_gamuto/recursos/imagens/teleport_128.png" id="1_r478g"]
@@ -55,20 +55,20 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7f6o5"]
 size = Vector2(90, 49)
 
-[node name="Goal" type="Area2D"]
+[node name="Goal" type="Area2D" unique_id=953996594]
 script = ExtResource("1_m3jsi")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1717362005]
 texture_filter = 3
 sprite_frames = SubResource("SpriteFrames_vakfp")
 autoplay = "default"
 frame_progress = 0.763123
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=594426259]
 position = Vector2(0, -1.5)
 shape = SubResource("RectangleShape2D_7f6o5")
 
-[node name="Enter" type="AudioStreamPlayer" parent="."]
+[node name="Enter" type="AudioStreamPlayer" parent="." unique_id=1249658767]
 stream = ExtResource("3_aipgo")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

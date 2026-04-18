@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene format=3 uid="uid://cbncxrj8a42bn"]
 
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-danielh/recursos/Imagens/Stonetile.png" id="1_kp0mr"]
+[ext_resource type="Texture2D" uid="uid://dnnby5a6gvwq7" path="res://microjogos/2024S1/projeto-danielh/recursos/Imagens/Stonetile.png" id="1_kp0mr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4aesx"]
 resource_name = "cobble"
@@ -1810,7 +1810,7 @@ texture = ExtResource("1_kp0mr")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_4aesx")
 
-[node name="TileMap" type="TileMap"]
+[node name="TileMap" type="TileMap" unique_id=418937133]
 tile_set = SubResource("TileSet_atdfu")
 format = 2
 layer_0/name = "A"

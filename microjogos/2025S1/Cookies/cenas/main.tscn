@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://devce1jy5yrb8"]
+[gd_scene format=3 uid="uid://devce1jy5yrb8"]
 
 [ext_resource type="Script" uid="uid://cwdeg2iachcoh" path="res://microjogos/2025S1/Cookies/cenas/scripts/main.gd" id="1_aashi"]
 [ext_resource type="Texture2D" uid="uid://b2jajfg84rx1d" path="res://microjogos/2025S1/Cookies/recursos/imagens/cookiePixelArt.png" id="2_6m3k1"]
@@ -52,21 +52,21 @@ shader_parameter/Disabled = true
 shader = ExtResource("5_3pa5t")
 shader_parameter/Disabled = true
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=786747281]
 script = ExtResource("1_aashi")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=158249282]
 texture_filter = 5
 position = Vector2(960, 400)
 scale = Vector2(15, 15)
 texture = ExtResource("2_6m3k1")
 
-[node name="Timer" type="Timer" parent="Sprite2D"]
+[node name="Timer" type="Timer" parent="Sprite2D" unique_id=994039222]
 wait_time = 6.0
 autostart = true
 script = SubResource("GDScript_nra8u")
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=2100104694]
 visible = false
 position = Vector2(960, 400)
 scale = Vector2(50, 50)
@@ -83,12 +83,12 @@ initial_velocity_max = 60.0
 scale_amount_min = 0.1
 scale_amount_max = 0.1
 
-[node name="Monster" parent="." instance=ExtResource("3_xb0ta")]
+[node name="Monster" parent="." unique_id=167520188 instance=ExtResource("3_xb0ta")]
 position = Vector2(960, 2000)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=883730533]
 
-[node name="Minimap" type="SubViewportContainer" parent="CanvasLayer"]
+[node name="Minimap" type="SubViewportContainer" parent="CanvasLayer" unique_id=97364374]
 visible = false
 anchors_preset = 4
 anchor_top = 0.5
@@ -99,7 +99,7 @@ offset_bottom = 453.5
 grow_vertical = 2
 size_flags_horizontal = 0
 
-[node name="SubViewport" type="SubViewport" parent="CanvasLayer/Minimap" node_paths=PackedStringArray("monster", "camera")]
+[node name="SubViewport" type="SubViewport" parent="CanvasLayer/Minimap" unique_id=643325622 node_paths=PackedStringArray("monster", "camera")]
 handle_input_locally = false
 size = Vector2i(137, 917)
 render_target_update_mode = 0
@@ -107,11 +107,11 @@ script = ExtResource("5_6m3k1")
 monster = NodePath("../../../Monster")
 camera = NodePath("Camera2D")
 
-[node name="Camera2D" type="Camera2D" parent="CanvasLayer/Minimap/SubViewport"]
+[node name="Camera2D" type="Camera2D" parent="CanvasLayer/Minimap/SubViewport" unique_id=462097503]
 position = Vector2(960, 1000)
 zoom = Vector2(0.15, 0.15)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=1704587746]
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
@@ -124,20 +124,20 @@ grow_horizontal = 0
 grow_vertical = 2
 theme = SubResource("Theme_a83ac")
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/VBoxContainer" unique_id=1265294647]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/MarginContainer" node_paths=PackedStringArray("main")]
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/MarginContainer" unique_id=890279018 node_paths=PackedStringArray("main")]
 layout_mode = 2
 size_flags_horizontal = 8
 text = "0"
 script = ExtResource("5_atimq")
 main = NodePath("../../../..")
 
-[node name="Turret" type="MarginContainer" parent="CanvasLayer/VBoxContainer"]
+[node name="Turret" type="MarginContainer" parent="CanvasLayer/VBoxContainer" unique_id=888376424]
 layout_mode = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/VBoxContainer/Turret" node_paths=PackedStringArray("main")]
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/VBoxContainer/Turret" unique_id=858716882 node_paths=PackedStringArray("main")]
 material = SubResource("ShaderMaterial_nra8u")
 custom_minimum_size = Vector2(300, 150)
 layout_mode = 2
@@ -145,36 +145,36 @@ script = ExtResource("7_nra8u")
 main = NodePath("../../../..")
 price = 100
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/VBoxContainer/Turret/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/VBoxContainer/Turret/PanelContainer" unique_id=143448711]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer/Turret/PanelContainer/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer/Turret/PanelContainer/MarginContainer" unique_id=1084971995]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer/Turret/PanelContainer/MarginContainer/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer/Turret/PanelContainer/MarginContainer/HBoxContainer" unique_id=1391279202]
 texture_filter = 3
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 texture = ExtResource("5_a83ac")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer/Turret/PanelContainer/MarginContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer/Turret/PanelContainer/MarginContainer/HBoxContainer" unique_id=264886194]
 layout_mode = 2
 alignment = 1
 
-[node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer/Turret/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer/Turret/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1428017270]
 layout_mode = 2
 size_flags_horizontal = 8
 text = "100 - [ A ]"
 
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/Turret/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/Turret/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1168143303]
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Turret"
 
-[node name="Turret2" type="MarginContainer" parent="CanvasLayer/VBoxContainer"]
+[node name="Turret2" type="MarginContainer" parent="CanvasLayer/VBoxContainer" unique_id=239804429]
 layout_mode = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/VBoxContainer/Turret2" node_paths=PackedStringArray("main")]
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/VBoxContainer/Turret2" unique_id=668760691 node_paths=PackedStringArray("main")]
 material = SubResource("ShaderMaterial_atimq")
 custom_minimum_size = Vector2(300, 150)
 layout_mode = 2
@@ -182,77 +182,77 @@ script = ExtResource("7_nra8u")
 main = NodePath("../../../..")
 price = 100
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/VBoxContainer/Turret2/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/VBoxContainer/Turret2/PanelContainer" unique_id=153695172]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer/Turret2/PanelContainer/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer/Turret2/PanelContainer/MarginContainer" unique_id=446606249]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer/Turret2/PanelContainer/MarginContainer/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer/Turret2/PanelContainer/MarginContainer/HBoxContainer" unique_id=1198615874]
 texture_filter = 3
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 texture = ExtResource("5_a83ac")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer/Turret2/PanelContainer/MarginContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer/Turret2/PanelContainer/MarginContainer/HBoxContainer" unique_id=1857143906]
 layout_mode = 2
 alignment = 1
 
-[node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer/Turret2/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer/Turret2/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=900479574]
 layout_mode = 2
 size_flags_horizontal = 8
 text = "100 - [ D ]"
 
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/Turret2/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/Turret2/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1812603246]
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Turret"
 
-[node name="Cannon" type="MarginContainer" parent="CanvasLayer/VBoxContainer"]
+[node name="Cannon" type="MarginContainer" parent="CanvasLayer/VBoxContainer" unique_id=1875954687]
 layout_mode = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/VBoxContainer/Cannon" node_paths=PackedStringArray("main")]
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/VBoxContainer/Cannon" unique_id=1104847791 node_paths=PackedStringArray("main")]
 material = SubResource("ShaderMaterial_suxxg")
 layout_mode = 2
 script = ExtResource("7_nra8u")
 main = NodePath("../../../..")
 price = 200
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/VBoxContainer/Cannon/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/VBoxContainer/Cannon/PanelContainer" unique_id=963983223]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer/Cannon/PanelContainer/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer/Cannon/PanelContainer/MarginContainer" unique_id=249872386]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer/Cannon/PanelContainer/MarginContainer/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer/Cannon/PanelContainer/MarginContainer/HBoxContainer" unique_id=1057894897]
 texture_filter = 3
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 texture = ExtResource("6_3pa5t")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer/Cannon/PanelContainer/MarginContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer/Cannon/PanelContainer/MarginContainer/HBoxContainer" unique_id=115378687]
 layout_mode = 2
 alignment = 1
 
-[node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer/Cannon/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer/Cannon/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=821037821]
 layout_mode = 2
 size_flags_horizontal = 8
 text = "200 - [ W ]"
 
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/Cannon/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/Cannon/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1669652578]
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Cannon"
 
-[node name="Turret" parent="." node_paths=PackedStringArray("target") instance=ExtResource("5_aj31b")]
+[node name="Turret" parent="." unique_id=1523221212 node_paths=PackedStringArray("target") instance=ExtResource("5_aj31b")]
 position = Vector2(600, 175)
 target = NodePath("../Monster")
 
-[node name="Turret2" parent="." node_paths=PackedStringArray("target") instance=ExtResource("5_aj31b")]
+[node name="Turret2" parent="." unique_id=266482974 node_paths=PackedStringArray("target") instance=ExtResource("5_aj31b")]
 position = Vector2(1320, 175)
 target = NodePath("../Monster")
 
-[node name="Cannon" parent="." node_paths=PackedStringArray("target") instance=ExtResource("7_3ps7f")]
+[node name="Cannon" parent="." unique_id=987459550 node_paths=PackedStringArray("target") instance=ExtResource("7_3ps7f")]
 position = Vector2(960, 100)
 scale = Vector2(1, 1)
 target = NodePath("../Monster")

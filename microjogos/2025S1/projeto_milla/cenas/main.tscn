@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dwaeb23407t20"]
+[gd_scene format=3 uid="uid://dwaeb23407t20"]
 
 [ext_resource type="Script" uid="uid://tm4tow6nhklc" path="res://microjogos/2025S1/projeto_milla/cenas/scripts/main.gd" id="1_pvuji"]
 [ext_resource type="Texture2D" uid="uid://dfhoxrib3r64o" path="res://microjogos/2025S1/projeto_milla/recursos/imagens/background.png" id="2_ujrf2"]
@@ -27,45 +27,45 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2l1n7"]
 size = Vector2(2462.5, 42)
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1535185392]
 texture_filter = 1
 script = ExtResource("1_pvuji")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1404739560]
 position = Vector2(960, 540)
 texture = ExtResource("2_ujrf2")
 
-[node name="BG2" type="Sprite2D" parent="."]
+[node name="BG2" type="Sprite2D" parent="." unique_id=1788210524]
 position = Vector2(960, 540)
 texture = ExtResource("3_ujrf2")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=656635349]
 position = Vector2(960, 540)
 scale = Vector2(0.60418, 0.645928)
 sprite_frames = SubResource("SpriteFrames_up2ls")
 autoplay = "default"
 frame_progress = 0.770195
 
-[node name="Chão" type="Area2D" parent="."]
+[node name="Chão" type="Area2D" parent="." unique_id=1061809775]
 position = Vector2(960, 1080)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Chão"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chão" unique_id=1224302622]
 shape = SubResource("RectangleShape2D_2l1n7")
 
-[node name="Aboboras" type="Node2D" parent="."]
+[node name="Aboboras" type="Node2D" parent="." unique_id=1869801367]
 script = ExtResource("6_w265g")
 
-[node name="Win" type="AudioStreamPlayer" parent="Aboboras"]
+[node name="Win" type="AudioStreamPlayer" parent="Aboboras" unique_id=369930922]
 stream = ExtResource("7_r2k8h")
 
-[node name="Lose" type="AudioStreamPlayer" parent="Aboboras"]
+[node name="Lose" type="AudioStreamPlayer" parent="Aboboras" unique_id=1934088773]
 stream = ExtResource("8_hvgpo")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=1932092389]
 wait_time = 0.7
 autostart = true
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=793891031]
 stream = ExtResource("7_ou6mn")
 autoplay = true
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c2sa6coaikkl4"]
+[gd_scene format=3 uid="uid://c2sa6coaikkl4"]
 
 [ext_resource type="Texture2D" uid="uid://cxp1k1pifivb" path="res://microjogos/2025S1/Gamuto_Maestro_Davi/recursos/imagens/pixil-frame-0.png" id="1_8lhyg"]
 [ext_resource type="Texture2D" uid="uid://l0v51ate5lbq" path="res://microjogos/2025S1/Gamuto_Maestro_Davi/recursos/imagens/pixil-frame-0_3.png" id="2_8lhyg"]
@@ -20,9 +20,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="Node2D"]
+[node name="Player" type="Node2D" unique_id=353272821]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=596079348]
 texture_filter = 3
 position = Vector2(0, 4.12505)
 scale = Vector2(6.005, 5.9885)

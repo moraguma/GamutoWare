@@ -1,21 +1,21 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene format=3 uid="uid://bfvipixlbanq5"]
 
-[ext_resource type="Script" path="res://microjogos/2024S1/Projeto-Yago/cenas/scripts/produto.gd" id="1_77aql"]
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/Projeto-Yago/recursos/Tomate.png" id="1_qmw2y"]
+[ext_resource type="Script" uid="uid://id6al53rngj5" path="res://microjogos/2024S1/Projeto-Yago/cenas/scripts/produto.gd" id="1_77aql"]
+[ext_resource type="Texture2D" uid="uid://dj1a7br3l148t" path="res://microjogos/2024S1/Projeto-Yago/recursos/Tomate.png" id="1_qmw2y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_717yi"]
 size = Vector2(246, 462)
 
-[node name="Tomate" type="Area2D"]
+[node name="Tomate" type="Area2D" unique_id=1480986598]
 script = ExtResource("1_77aql")
 produto = "tomate"
 
-[node name="Sprite" type="Sprite2D" parent="."]
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1282949702]
 texture_filter = 1
 scale = Vector2(6, 6)
 texture = ExtResource("1_qmw2y")
 
-[node name="Hitbox" type="CollisionShape2D" parent="."]
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=931503013]
 position = Vector2(3, -21)
 shape = SubResource("RectangleShape2D_717yi")
 

@@ -1,35 +1,35 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene format=3 uid="uid://beic73bno88ch"]
 
-[ext_resource type="Script" path="res://microjogos/2024S1/nyan-thulu/cenas/scripts/main.gd" id="1_31gxf"]
-[ext_resource type="PackedScene" path="res://microjogos/2024S1/nyan-thulu/cenas/enemy.tscn" id="2_d0ga4"]
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/nyan-thulu/recursos/Cartoon_green_texture_grass.jpg" id="3_lmyr4"]
+[ext_resource type="Script" uid="uid://bop6jxgj7f0s5" path="res://microjogos/2024S1/nyan-thulu/cenas/scripts/main.gd" id="1_31gxf"]
+[ext_resource type="PackedScene" uid="uid://bpqibhrab88xq" path="res://microjogos/2024S1/nyan-thulu/cenas/enemy.tscn" id="2_d0ga4"]
+[ext_resource type="Texture2D" uid="uid://d2vkb6jxul1pi" path="res://microjogos/2024S1/nyan-thulu/recursos/Cartoon_green_texture_grass.jpg" id="3_lmyr4"]
 [ext_resource type="PackedScene" path="res://microjogos/2024S1/nyan-thulu/cenas/player.tscn" id="4_4wsic"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=375990061]
 script = ExtResource("1_31gxf")
 cookie_scene = ExtResource("2_d0ga4")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1153609233]
 position = Vector2(934, 560)
 scale = Vector2(0.512359, 0.301161)
 texture = ExtResource("3_lmyr4")
 
-[node name="Player" parent="." instance=ExtResource("4_4wsic")]
+[node name="Player" parent="." unique_id=1422525437 instance=ExtResource("4_4wsic")]
 position = Vector2(960, 540)
 
-[node name="Spawner" type="Node2D" parent="."]
+[node name="Spawner" type="Node2D" parent="." unique_id=1717416732]
 position = Vector2(0, 540)
 
-[node name="Spawner2" type="Node2D" parent="."]
+[node name="Spawner2" type="Node2D" parent="." unique_id=568680286]
 position = Vector2(1920, 540)
 
-[node name="Spawner3" type="Node2D" parent="."]
+[node name="Spawner3" type="Node2D" parent="." unique_id=1857579373]
 position = Vector2(960, 0)
 
-[node name="Spawner4" type="Node2D" parent="."]
+[node name="Spawner4" type="Node2D" parent="." unique_id=136044153]
 position = Vector2(960, 1080)
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=355555248]
 wait_time = 0.5
 autostart = true
 

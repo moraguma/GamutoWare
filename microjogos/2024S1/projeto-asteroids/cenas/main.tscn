@@ -1,12 +1,12 @@
-[gd_scene load_steps=9 format=3]
+[gd_scene format=3 uid="uid://c64byfbw58tha"]
 
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto-asteroids/cenas/scripts/main.gd" id="1_5i45u"]
-[ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-asteroids/cenas/asteroid.tscn" id="2_o7coc"]
+[ext_resource type="Script" uid="uid://bqmkd88e63rgb" path="res://microjogos/2024S1/projeto-asteroids/cenas/scripts/main.gd" id="1_5i45u"]
+[ext_resource type="PackedScene" uid="uid://c5s48feje1a2c" path="res://microjogos/2024S1/projeto-asteroids/cenas/asteroid.tscn" id="2_o7coc"]
 [ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-asteroids/cenas/player.tscn" id="3_fd8yu"]
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/background.png" id="4_vxe38"]
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/planet1.png" id="5_0mmf5"]
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/planet2.png" id="6_y82k8"]
-[ext_resource type="AudioStream" path="res://microjogos/2024S1/projeto-asteroids/recursos/spaceship.ogg" id="7_5d501"]
+[ext_resource type="Texture2D" uid="uid://c7w32pb25k5pb" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/background.png" id="4_vxe38"]
+[ext_resource type="Texture2D" uid="uid://bdvw2l0uahoxl" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/planet1.png" id="5_0mmf5"]
+[ext_resource type="Texture2D" uid="uid://b0pgffxcl3awg" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/planet2.png" id="6_y82k8"]
+[ext_resource type="AudioStream" uid="uid://b6hb7g5vfux25" path="res://microjogos/2024S1/projeto-asteroids/recursos/spaceship.ogg" id="7_5d501"]
 
 [sub_resource type="Curve2D" id="Curve2D_mry0k"]
 _data = {
@@ -14,51 +14,51 @@ _data = {
 }
 point_count = 5
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1031087369]
 script = ExtResource("1_5i45u")
 asteroid_scene = ExtResource("2_o7coc")
 player_scene = ExtResource("3_fd8yu")
 
-[node name="AsteroidTimer" type="Timer" parent="."]
+[node name="AsteroidTimer" type="Timer" parent="." unique_id=1687416333]
 wait_time = 0.3
 
-[node name="StartTimer" type="Timer" parent="."]
+[node name="StartTimer" type="Timer" parent="." unique_id=936380480]
 one_shot = true
 autostart = true
 
-[node name="WinTimer" type="Timer" parent="."]
+[node name="WinTimer" type="Timer" parent="." unique_id=1554198933]
 wait_time = 5.8
 one_shot = true
 autostart = true
 
-[node name="AsteroidPath" type="Path2D" parent="."]
+[node name="AsteroidPath" type="Path2D" parent="." unique_id=1638337368]
 curve = SubResource("Curve2D_mry0k")
 
-[node name="AsteroidSpawn" type="PathFollow2D" parent="AsteroidPath"]
+[node name="AsteroidSpawn" type="PathFollow2D" parent="AsteroidPath" unique_id=581698143]
 position = Vector2(-169, -155)
-rotation = -0.000898472
+rotation = -0.0008984723
 
-[node name="StartPosition" type="Marker2D" parent="."]
+[node name="StartPosition" type="Marker2D" parent="." unique_id=1545907611]
 position = Vector2(960, 540)
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=280415541]
 offset = Vector2(960, 540)
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=322226082]
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("4_vxe38")
 
-[node name="planeta" type="Sprite2D" parent="."]
+[node name="planeta" type="Sprite2D" parent="." unique_id=834400052]
 position = Vector2(261, 865)
 texture = ExtResource("5_0mmf5")
 
-[node name="buraco" type="Sprite2D" parent="."]
+[node name="buraco" type="Sprite2D" parent="." unique_id=1268379924]
 position = Vector2(923, 152)
 rotation = -0.0820305
 texture = ExtResource("6_y82k8")
 
-[node name="Music" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1539375203]
 stream = ExtResource("7_5d501")
 
 [connection signal="timeout" from="AsteroidTimer" to="." method="_on_asteroid_timer_timeout"]
