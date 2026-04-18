@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://ks30fbr2pbry"]
+[gd_scene format=3 uid="uid://ks30fbr2pbry"]
 
 [ext_resource type="Script" uid="uid://cb5oa8b7h88ii" path="res://microjogos/2025S1/Drikista_Gamelab/cenas/scripts/obj_moth.gd" id="1_8redf"]
 [ext_resource type="Texture2D" uid="uid://dpjfyqxhrinwm" path="res://microjogos/2025S1/Drikista_Gamelab/recursos/Sprites/moth.png" id="2_vtc2t"]
@@ -7,17 +7,17 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8redf"]
 size = Vector2(12, 16)
 
-[node name="moving_insects_moth" type="Area2D"]
+[node name="moving_insects_moth" type="Area2D" unique_id=1916491430]
 script = ExtResource("1_8redf")
 
-[node name="spr_moth" type="Sprite2D" parent="."]
+[node name="spr_moth" type="Sprite2D" parent="." unique_id=486705322]
 texture_filter = 1
 texture = ExtResource("2_vtc2t")
 
-[node name="col_moth" type="CollisionShape2D" parent="."]
+[node name="col_moth" type="CollisionShape2D" parent="." unique_id=283173022]
 shape = SubResource("RectangleShape2D_8redf")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="." unique_id=261483010]
 stream = ExtResource("3_15uld")
 volume_db = 6.5
 autoplay = true

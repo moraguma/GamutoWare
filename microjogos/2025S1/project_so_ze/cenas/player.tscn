@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://cg5clbaowdm38"]
+[gd_scene format=3 uid="uid://cg5clbaowdm38"]
 
 [ext_resource type="Script" uid="uid://f7qetnfu0gep" path="res://microjogos/2025S1/project_so_ze/cenas/scripts/player.gd" id="1_lj4lc"]
 [ext_resource type="Texture2D" uid="uid://ct30uhn4ro4hw" path="res://microjogos/2025S1/project_so_ze/recursos/imagens/body_parts_test/body-01.png" id="3_d22dx"]
@@ -316,7 +316,7 @@ _data = {
 &"left": SubResource("Animation_2hb5b")
 }
 
-[node name="Player" type="Node2D" node_paths=PackedStringArray("timer", "head", "right_arm", "left_arm", "legs")]
+[node name="Player" type="Node2D" unique_id=1783902934 node_paths=PackedStringArray("timer", "head", "right_arm", "left_arm", "legs")]
 script = ExtResource("1_lj4lc")
 timer = NodePath("Timer")
 head = NodePath("TranformationParts/Head")
@@ -324,13 +324,13 @@ right_arm = NodePath("TranformationParts/RightArm")
 left_arm = NodePath("TranformationParts/LeftArm")
 legs = NodePath("TranformationParts/Legs")
 
-[node name="TranformationParts" type="Node2D" parent="."]
+[node name="TranformationParts" type="Node2D" parent="." unique_id=862803039]
 
-[node name="Body" type="Sprite2D" parent="TranformationParts"]
+[node name="Body" type="Sprite2D" parent="TranformationParts" unique_id=989744801]
 position = Vector2(952, 541)
 texture = ExtResource("3_d22dx")
 
-[node name="Head" type="Sprite2D" parent="TranformationParts" node_paths=PackedStringArray("anim_player", "audio_player", "root")]
+[node name="Head" type="Sprite2D" parent="TranformationParts" unique_id=1668105071 node_paths=PackedStringArray("anim_player", "audio_player", "root")]
 position = Vector2(953, 541)
 texture = ExtResource("5_d22dx")
 hframes = 6
@@ -341,16 +341,14 @@ audio_player = NodePath("AudioStreamPlayer")
 action = &"cima"
 root = NodePath("../..")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TranformationParts/Head"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TranformationParts/Head" unique_id=850284494]
 stream = ExtResource("5_5bdw3")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TranformationParts/Head"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TranformationParts/Head" unique_id=340467232]
 root_node = NodePath("../../..")
-libraries = {
-&"": SubResource("AnimationLibrary_228w0")
-}
+libraries/ = SubResource("AnimationLibrary_228w0")
 
-[node name="RightArm" type="Sprite2D" parent="TranformationParts" node_paths=PackedStringArray("anim_player", "audio_player", "root")]
+[node name="RightArm" type="Sprite2D" parent="TranformationParts" unique_id=910895059 node_paths=PackedStringArray("anim_player", "audio_player", "root")]
 position = Vector2(952, 543)
 texture = ExtResource("7_nk03m")
 hframes = 6
@@ -361,16 +359,14 @@ audio_player = NodePath("AudioStreamPlayer")
 action = &"direita"
 root = NodePath("../..")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TranformationParts/RightArm"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TranformationParts/RightArm" unique_id=1221618488]
 stream = ExtResource("8_228w0")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TranformationParts/RightArm"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TranformationParts/RightArm" unique_id=1039370693]
 root_node = NodePath("../../..")
-libraries = {
-&"": SubResource("AnimationLibrary_h82p1")
-}
+libraries/ = SubResource("AnimationLibrary_h82p1")
 
-[node name="LeftArm" type="Sprite2D" parent="TranformationParts" node_paths=PackedStringArray("anim_player", "audio_player", "root")]
+[node name="LeftArm" type="Sprite2D" parent="TranformationParts" unique_id=105630323 node_paths=PackedStringArray("anim_player", "audio_player", "root")]
 position = Vector2(950, 542)
 texture = ExtResource("7_nk03m")
 flip_h = true
@@ -382,16 +378,14 @@ audio_player = NodePath("AudioStreamPlayer")
 action = &"esquerda"
 root = NodePath("../..")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TranformationParts/LeftArm"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TranformationParts/LeftArm" unique_id=1553892539]
 stream = ExtResource("10_80j82")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TranformationParts/LeftArm"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TranformationParts/LeftArm" unique_id=386593623]
 root_node = NodePath("../../..")
-libraries = {
-&"": SubResource("AnimationLibrary_up00n")
-}
+libraries/ = SubResource("AnimationLibrary_up00n")
 
-[node name="Legs" type="Sprite2D" parent="TranformationParts" node_paths=PackedStringArray("anim_player", "audio_player", "root")]
+[node name="Legs" type="Sprite2D" parent="TranformationParts" unique_id=1977710665 node_paths=PackedStringArray("anim_player", "audio_player", "root")]
 position = Vector2(952, 541)
 texture = ExtResource("10_r6htq")
 hframes = 6
@@ -402,62 +396,56 @@ audio_player = NodePath("AudioStreamPlayer")
 action = &"baixo"
 root = NodePath("../..")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TranformationParts/Legs"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TranformationParts/Legs" unique_id=1590198672]
 stream = ExtResource("13_yb64s")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TranformationParts/Legs"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TranformationParts/Legs" unique_id=1072593063]
 root_node = NodePath("../../..")
-libraries = {
-&"": SubResource("AnimationLibrary_d5pbn")
-}
+libraries/ = SubResource("AnimationLibrary_d5pbn")
 
-[node name="Transform" type="Sprite2D" parent="TranformationParts"]
+[node name="Transform" type="Sprite2D" parent="TranformationParts" unique_id=256980614]
 visible = false
 position = Vector2(1086, 749)
 texture = ExtResource("28_cek2s")
 vframes = 2
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TranformationParts/Transform"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TranformationParts/Transform" unique_id=1230504631]
 stream = ExtResource("13_0mhtu")
 
-[node name="Up" type="Sprite2D" parent="TranformationParts"]
+[node name="Up" type="Sprite2D" parent="TranformationParts" unique_id=1714731148]
 position = Vector2(1434, 159)
 scale = Vector2(0.614476, 0.601709)
 texture = ExtResource("23_28oqe")
 hframes = 2
 
-[node name="AnimationUp" type="AnimationPlayer" parent="TranformationParts/Up"]
+[node name="AnimationUp" type="AnimationPlayer" parent="TranformationParts/Up" unique_id=1299023369]
 root_node = NodePath("../../..")
-libraries = {
-&"": SubResource("AnimationLibrary_yb64s")
-}
+libraries/ = SubResource("AnimationLibrary_yb64s")
 
-[node name="LetterUp" type="Sprite2D" parent="TranformationParts/Up"]
+[node name="LetterUp" type="Sprite2D" parent="TranformationParts/Up" unique_id=551207473]
 position = Vector2(-4.88232, -43.2103)
 scale = Vector2(1.6274, 1.66193)
 texture = ExtResource("29_28oqe")
 hframes = 4
 
-[node name="NumberUp" type="Sprite2D" parent="TranformationParts/Up"]
+[node name="NumberUp" type="Sprite2D" parent="TranformationParts/Up" unique_id=546905330]
 position = Vector2(302.29, -130.877)
 scale = Vector2(3.06394, 3.78175)
 texture = ExtResource("31_d22dx")
 hframes = 4
 
-[node name="Down" type="Sprite2D" parent="TranformationParts"]
+[node name="Down" type="Sprite2D" parent="TranformationParts" unique_id=2091186586]
 position = Vector2(552, 931)
 rotation = -3.14159
 scale = Vector2(0.619403, 0.627119)
 texture = ExtResource("23_28oqe")
 hframes = 2
 
-[node name="AnimationDown" type="AnimationPlayer" parent="TranformationParts/Down"]
+[node name="AnimationDown" type="AnimationPlayer" parent="TranformationParts/Down" unique_id=991123360]
 root_node = NodePath("../../..")
-libraries = {
-&"": SubResource("AnimationLibrary_080qm")
-}
+libraries/ = SubResource("AnimationLibrary_080qm")
 
-[node name="LetterDown" type="Sprite2D" parent="TranformationParts/Down"]
+[node name="LetterDown" type="Sprite2D" parent="TranformationParts/Down" unique_id=2147366174]
 position = Vector2(-6.10352e-05, -4.78381)
 rotation = 3.14159
 scale = Vector2(1.61446, 1.59459)
@@ -465,27 +453,25 @@ texture = ExtResource("29_28oqe")
 hframes = 4
 frame = 2
 
-[node name="NumberDown" type="Sprite2D" parent="TranformationParts/Down"]
+[node name="NumberDown" type="Sprite2D" parent="TranformationParts/Down" unique_id=1162768687]
 position = Vector2(358.006, -29.8995)
 rotation = 3.14159
 scale = Vector2(2.80039, 3.82377)
 texture = ExtResource("31_d22dx")
 hframes = 4
 
-[node name="Right" type="Sprite2D" parent="TranformationParts"]
+[node name="Right" type="Sprite2D" parent="TranformationParts" unique_id=1667139320]
 position = Vector2(1648, 513)
 rotation = 1.5708
 scale = Vector2(0.607463, 0.627119)
 texture = ExtResource("23_28oqe")
 hframes = 2
 
-[node name="AnimationRight" type="AnimationPlayer" parent="TranformationParts/Right"]
+[node name="AnimationRight" type="AnimationPlayer" parent="TranformationParts/Right" unique_id=1231265682]
 root_node = NodePath("../../..")
-libraries = {
-&"": SubResource("AnimationLibrary_28oqe")
-}
+libraries/ = SubResource("AnimationLibrary_28oqe")
 
-[node name="LetterRight" type="Sprite2D" parent="TranformationParts/Right"]
+[node name="LetterRight" type="Sprite2D" parent="TranformationParts/Right" unique_id=1217963706]
 position = Vector2(-1.64624, -23.9187)
 rotation = -1.5708
 scale = Vector2(1.59459, 1.64619)
@@ -493,27 +479,25 @@ texture = ExtResource("29_28oqe")
 hframes = 4
 frame = 3
 
-[node name="NumberRight" type="Sprite2D" parent="TranformationParts/Right"]
+[node name="NumberRight" type="Sprite2D" parent="TranformationParts/Right" unique_id=1816932321]
 position = Vector2(-207.832, -182.181)
 rotation = -1.5708
 scale = Vector2(2.94311, 4.14908)
 texture = ExtResource("31_d22dx")
 hframes = 4
 
-[node name="Left" type="Sprite2D" parent="TranformationParts"]
+[node name="Left" type="Sprite2D" parent="TranformationParts" unique_id=244107736]
 position = Vector2(267, 538)
 rotation = -1.5708
 scale = Vector2(0.578358, 0.603814)
 texture = ExtResource("23_28oqe")
 hframes = 2
 
-[node name="AnimationLeft" type="AnimationPlayer" parent="TranformationParts/Left"]
+[node name="AnimationLeft" type="AnimationPlayer" parent="TranformationParts/Left" unique_id=318104903]
 root_node = NodePath("../../..")
-libraries = {
-&"": SubResource("AnimationLibrary_d22dx")
-}
+libraries/ = SubResource("AnimationLibrary_d22dx")
 
-[node name="LetterLeft" type="Sprite2D" parent="TranformationParts/Left"]
+[node name="LetterLeft" type="Sprite2D" parent="TranformationParts/Left" unique_id=1523928682]
 position = Vector2(3.45819, -44.7157)
 rotation = 1.5708
 scale = Vector2(1.65614, 1.72903)
@@ -521,31 +505,31 @@ texture = ExtResource("29_28oqe")
 hframes = 4
 frame = 1
 
-[node name="NumberLeft" type="Sprite2D" parent="TranformationParts/Left"]
+[node name="NumberLeft" type="Sprite2D" parent="TranformationParts/Left" unique_id=1633838438]
 position = Vector2(284.859, -205.774)
 rotation = 1.5708
 scale = Vector2(3.24072, 4.74602)
 texture = ExtResource("31_d22dx")
 hframes = 4
 
-[node name="Fail" type="Sprite2D" parent="."]
+[node name="Fail" type="Sprite2D" parent="." unique_id=1945772735]
 visible = false
 position = Vector2(1071.5, 565.5)
 scale = Vector2(2.79036, 4.36523)
 texture = ExtResource("38_h82p1")
 vframes = 2
 
-[node name="Transformation" type="Sprite2D" parent="."]
+[node name="Transformation" type="Sprite2D" parent="." unique_id=754350151]
 visible = false
 position = Vector2(960, 536)
 texture = ExtResource("26_228w0")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=2058073634]
 wait_time = 5.5
 one_shot = true
 autostart = true
 
-[node name="LoseSound" type="AudioStreamPlayer" parent="."]
+[node name="LoseSound" type="AudioStreamPlayer" parent="." unique_id=67794764]
 stream = ExtResource("26_80j82")
 
 [connection signal="timeout" from="Timer" to="." method="lose"]

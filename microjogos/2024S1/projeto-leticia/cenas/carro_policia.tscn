@@ -1,17 +1,17 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene format=3 uid="uid://debaqht7udsd5"]
 
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-leticia/recursos/carro policia.png" id="1_tl22c"]
+[ext_resource type="Texture2D" uid="uid://brogtoimnit48" path="res://microjogos/2024S1/projeto-leticia/recursos/carro policia.png" id="1_tl22c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3sfcy"]
 size = Vector2(487, 97.7963)
 
-[node name="CarroPolicia" type="StaticBody2D"]
+[node name="CarroPolicia" type="StaticBody2D" unique_id=988126025]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=65261445]
 scale = Vector2(0.545558, 0.545558)
 texture = ExtResource("1_tl22c")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=108510402]
 position = Vector2(-9.5, 0.180372)
 scale = Vector2(0.862617, 0.862617)
 shape = SubResource("RectangleShape2D_3sfcy")

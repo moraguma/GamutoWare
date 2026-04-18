@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cw7bb6dljqkxg"]
+[gd_scene format=3 uid="uid://cw7bb6dljqkxg"]
 
 [ext_resource type="Script" uid="uid://b5qmw60c4xfj" path="res://microjogos/2025S1/fast_food_pocao/cenas/scripts/main.gd" id="1_soe26"]
 [ext_resource type="Texture2D" uid="uid://mf2koxn56aue" path="res://microjogos/2025S1/fast_food_pocao/recursos/imagens/pocao_roxa.png" id="1_wo8ci"]
@@ -39,7 +39,7 @@ shadow_color = Color(0, 0, 0, 0.380392)
 shadow_size = 10
 shadow_offset = Vector2(5, 5)
 
-[node name="Main" type="Control"]
+[node name="Main" type="Control" unique_id=2081169897]
 texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
@@ -53,7 +53,7 @@ rosa = ExtResource("2_d04la")
 verde = ExtResource("3_c2pbv")
 amarelo = ExtResource("4_w6168")
 
-[node name="Fundo" type="TextureRect" parent="."]
+[node name="Fundo" type="TextureRect" parent="." unique_id=391879683]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -68,7 +68,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("11_mljui")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=246064877]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -80,7 +80,7 @@ theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
-[node name="Roxo" type="TextureButton" parent="MarginContainer"]
+[node name="Roxo" type="TextureButton" parent="MarginContainer" unique_id=1089888611]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
@@ -91,7 +91,7 @@ theme = SubResource("Theme_mljui")
 texture_normal = ExtResource("1_wo8ci")
 texture_focused = ExtResource("7_e21le")
 
-[node name="Rosa" type="TextureButton" parent="MarginContainer"]
+[node name="Rosa" type="TextureButton" parent="MarginContainer" unique_id=116499806]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
@@ -102,7 +102,7 @@ theme = SubResource("Theme_mljui")
 texture_normal = ExtResource("2_d04la")
 texture_focused = ExtResource("7_e21le")
 
-[node name="Verde" type="TextureButton" parent="MarginContainer"]
+[node name="Verde" type="TextureButton" parent="MarginContainer" unique_id=907875080]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
@@ -113,7 +113,7 @@ theme = SubResource("Theme_mljui")
 texture_normal = ExtResource("3_c2pbv")
 texture_focused = ExtResource("7_e21le")
 
-[node name="Amarelo" type="TextureButton" parent="MarginContainer"]
+[node name="Amarelo" type="TextureButton" parent="MarginContainer" unique_id=2136853654]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
@@ -124,41 +124,41 @@ theme = SubResource("Theme_mljui")
 texture_normal = ExtResource("4_w6168")
 texture_focused = ExtResource("7_e21le")
 
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=1406216806]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_e21le")
 
-[node name="Receita" type="HBoxContainer" parent="MarginContainer/PanelContainer"]
+[node name="Receita" type="HBoxContainer" parent="MarginContainer/PanelContainer" unique_id=728987550]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_constants/separation = -20
 
-[node name="PotionMix" type="Sprite2D" parent="."]
+[node name="PotionMix" type="Sprite2D" parent="." unique_id=246583583]
 modulate = Color(0.254491, 0.359805, 0.605623, 1)
 position = Vector2(960, 833.25)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_e21le")
 script = ExtResource("9_d75xv")
 
-[node name="Cauderao" type="Sprite2D" parent="."]
+[node name="Cauderao" type="Sprite2D" parent="." unique_id=1762302421]
 position = Vector2(960, 833.25)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_r1hvl")
 
-[node name="feitico" type="AudioStreamPlayer" parent="."]
+[node name="feitico" type="AudioStreamPlayer" parent="." unique_id=1383944477]
 stream = ExtResource("7_2e2rv")
 
-[node name="perdeu" type="AudioStreamPlayer" parent="."]
+[node name="perdeu" type="AudioStreamPlayer" parent="." unique_id=1423587830]
 stream = ExtResource("12_e21le")
 
-[node name="ganhou" type="AudioStreamPlayer" parent="."]
+[node name="ganhou" type="AudioStreamPlayer" parent="." unique_id=1743265875]
 stream = ExtResource("9_r1hvl")
 
-[node name="Perdeu" type="Label" parent="."]
+[node name="Perdeu" type="Label" parent="." unique_id=1189956017]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -177,7 +177,7 @@ text = "Você perdeu!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Ganhou" type="Label" parent="."]
+[node name="Ganhou" type="Label" parent="." unique_id=190277141]
 visible = false
 layout_mode = 1
 anchors_preset = 8

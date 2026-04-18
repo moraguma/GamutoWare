@@ -1,18 +1,18 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene format=3 uid="uid://dcmi3bpwxi8ix"]
 
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto-felipe-silva/cenas/scripts/bike.gd" id="1_clyaq"]
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-felipe-silva/recursos/bike.png" id="1_p8xaw"]
+[ext_resource type="Script" uid="uid://7rsu2fiobpb1" path="res://microjogos/2024S1/projeto-felipe-silva/cenas/scripts/bike.gd" id="1_clyaq"]
+[ext_resource type="Texture2D" uid="uid://dta6v1fux30su" path="res://microjogos/2024S1/projeto-felipe-silva/recursos/bike.png" id="1_p8xaw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4q78q"]
 size = Vector2(298.385, 176)
 
-[node name="Bike" type="CharacterBody2D"]
+[node name="Bike" type="CharacterBody2D" unique_id=19735897]
 script = ExtResource("1_clyaq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=591970426]
 shape = SubResource("RectangleShape2D_4q78q")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=994063766]
 texture_filter = 1
 scale = Vector2(11, 11)
 texture = ExtResource("1_p8xaw")
