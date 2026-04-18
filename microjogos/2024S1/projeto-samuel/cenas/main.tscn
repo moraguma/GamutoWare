@@ -1,17 +1,17 @@
-[gd_scene load_steps=18 format=3]
+[gd_scene format=3 uid="uid://dx6ks81475qqn"]
 
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto-samuel/cenas/scripts/main.gd" id="1_pagkl"]
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-samuel/recursos/Sprites/Fundo2.png" id="2_5ngcp"]
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto-samuel/cenas/scripts/Player.gd" id="4_rb7vw"]
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-samuel/recursos/Sprites/Piaui_sprite.png" id="4_ss1kd"]
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-samuel/recursos/Sprites/Gamuto0.png" id="5_6fjpu"]
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto-samuel/cenas/scripts/Gamutos/Gamuto.gd" id="5_tcfmc"]
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto-samuel/cenas/scripts/Gamutos/Gamuto2.gd" id="6_qiipm"]
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto-samuel/cenas/scripts/Gamutos/Gamuto3.gd" id="7_2b0kn"]
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-samuel/recursos/Sprites/Gamuto1.png" id="7_xeq6x"]
-[ext_resource type="AudioStream" path="res://microjogos/2024S1/projeto-samuel/recursos/Sound/Ela_e_tao_tudo.ogg" id="10_tnmcl"]
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-samuel/recursos/Sprites/Piaui_sprite_vitoria.png" id="11_j0u24"]
-[ext_resource type="AudioStream" path="res://microjogos/2024S1/projeto-samuel/recursos/Sound/Yay.ogg" id="12_vgbtf"]
+[ext_resource type="Script" uid="uid://c7xisyh02b52g" path="res://microjogos/2024S1/projeto-samuel/cenas/scripts/main.gd" id="1_pagkl"]
+[ext_resource type="Texture2D" uid="uid://dhowgnjmp48gk" path="res://microjogos/2024S1/projeto-samuel/recursos/Sprites/Fundo2.png" id="2_5ngcp"]
+[ext_resource type="Script" uid="uid://h7c4q7bp80v" path="res://microjogos/2024S1/projeto-samuel/cenas/scripts/Player.gd" id="4_rb7vw"]
+[ext_resource type="Texture2D" uid="uid://bxw3ady5te873" path="res://microjogos/2024S1/projeto-samuel/recursos/Sprites/Piaui_sprite.png" id="4_ss1kd"]
+[ext_resource type="Texture2D" uid="uid://dfg6835wp3jwn" path="res://microjogos/2024S1/projeto-samuel/recursos/Sprites/Gamuto0.png" id="5_6fjpu"]
+[ext_resource type="Script" uid="uid://b5ynkmnah4jri" path="res://microjogos/2024S1/projeto-samuel/cenas/scripts/Gamutos/Gamuto.gd" id="5_tcfmc"]
+[ext_resource type="Script" uid="uid://dacl65jghljct" path="res://microjogos/2024S1/projeto-samuel/cenas/scripts/Gamutos/Gamuto2.gd" id="6_qiipm"]
+[ext_resource type="Script" uid="uid://cpkq7t8vxbvkv" path="res://microjogos/2024S1/projeto-samuel/cenas/scripts/Gamutos/Gamuto3.gd" id="7_2b0kn"]
+[ext_resource type="Texture2D" uid="uid://caa4fiw0tu0pm" path="res://microjogos/2024S1/projeto-samuel/recursos/Sprites/Gamuto1.png" id="7_xeq6x"]
+[ext_resource type="Texture2D" uid="uid://djxph347r8pgb" path="res://microjogos/2024S1/projeto-samuel/recursos/Sprites/Piaui_sprite_vitoria.png" id="11_j0u24"]
+[ext_resource type="AudioStream" uid="uid://cvlmkmju17fe4" path="res://microjogos/2024S1/projeto-samuel/recursos/Sound/Ela_e_tao_tudo.wav" id="11_rttrh"]
+[ext_resource type="AudioStream" uid="uid://b64ddtupceder" path="res://microjogos/2024S1/projeto-samuel/recursos/Sound/Yay.wav" id="12_psrey"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5nk8x"]
 size = Vector2(1920, 48)
@@ -28,159 +28,159 @@ size = Vector2(30, 694)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bdo8l"]
 size = Vector2(150, 150)
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1318751885]
 script = ExtResource("1_pagkl")
 
-[node name="Fundo" type="Node2D" parent="."]
+[node name="Fundo" type="Node2D" parent="." unique_id=1719639589]
 position = Vector2(890.94, 642.204)
 
-[node name="Paint" type="TextureRect" parent="Fundo"]
+[node name="Paint" type="TextureRect" parent="Fundo" unique_id=2024949838]
 offset_left = -890.94
 offset_top = -642.204
 offset_right = 1029.06
 offset_bottom = 437.796
 texture = ExtResource("2_5ngcp")
 
-[node name="Floor" type="StaticBody2D" parent="."]
+[node name="Floor" type="StaticBody2D" parent="." unique_id=2116075690]
 position = Vector2(0, 1030)
 
-[node name="Floor_colision" type="CollisionShape2D" parent="Floor"]
+[node name="Floor_colision" type="CollisionShape2D" parent="Floor" unique_id=1192965684]
 position = Vector2(960, 26)
 shape = SubResource("RectangleShape2D_5nk8x")
 
-[node name="Esquerda" type="StaticBody2D" parent="."]
+[node name="Esquerda" type="StaticBody2D" parent="." unique_id=2004301622]
 position = Vector2(-76.5338, 1033.98)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Esquerda"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Esquerda" unique_id=822090930]
 position = Vector2(53.0338, -309.479)
 shape = SubResource("RectangleShape2D_5elxa")
 
-[node name="Teto" type="StaticBody2D" parent="."]
+[node name="Teto" type="StaticBody2D" parent="." unique_id=1847394983]
 position = Vector2(-51.5213, 16.0788)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Teto"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teto" unique_id=1147031697]
 position = Vector2(1000.52, -26.0788)
 shape = SubResource("RectangleShape2D_4sa7a")
 
-[node name="Direita" type="StaticBody2D" parent="."]
+[node name="Direita" type="StaticBody2D" parent="." unique_id=1435790328]
 position = Vector2(1980.15, 63.3937)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Direita"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Direita" unique_id=201559766]
 position = Vector2(-45.1492, 669.606)
 shape = SubResource("RectangleShape2D_uhuug")
 
-[node name="Gamuto" type="CharacterBody2D" parent="."]
+[node name="Gamuto" type="CharacterBody2D" parent="." unique_id=1666611325]
 position = Vector2(-304, -574)
 script = ExtResource("5_tcfmc")
 
-[node name="Gamuto1" type="Sprite2D" parent="Gamuto"]
+[node name="Gamuto1" type="Sprite2D" parent="Gamuto" unique_id=581079038]
 position = Vector2(411, 847)
 texture = ExtResource("7_xeq6x")
 
-[node name="Gamuto0" type="Sprite2D" parent="Gamuto"]
+[node name="Gamuto0" type="Sprite2D" parent="Gamuto" unique_id=2132089326]
 position = Vector2(411, 847)
 texture = ExtResource("5_6fjpu")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamuto"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamuto" unique_id=1315743905]
 position = Vector2(411, 847)
 shape = SubResource("RectangleShape2D_bdo8l")
 disabled = true
 
-[node name="Area2D" type="Area2D" parent="Gamuto"]
+[node name="Area2D" type="Area2D" parent="Gamuto" unique_id=1159197762]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamuto/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamuto/Area2D" unique_id=1913868803]
 position = Vector2(411, 847)
 shape = SubResource("RectangleShape2D_bdo8l")
 
-[node name="Gamuto2" type="CharacterBody2D" parent="."]
+[node name="Gamuto2" type="CharacterBody2D" parent="." unique_id=1556225505]
 position = Vector2(1395, 84)
 script = ExtResource("6_qiipm")
 
-[node name="Gamuto1" type="Sprite2D" parent="Gamuto2"]
+[node name="Gamuto1" type="Sprite2D" parent="Gamuto2" unique_id=735262843]
 position = Vector2(411, 847)
 texture = ExtResource("7_xeq6x")
 
-[node name="Gamuto0" type="Sprite2D" parent="Gamuto2"]
+[node name="Gamuto0" type="Sprite2D" parent="Gamuto2" unique_id=1634764539]
 position = Vector2(411, 847)
 texture = ExtResource("5_6fjpu")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamuto2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamuto2" unique_id=399344017]
 position = Vector2(411, 847)
 shape = SubResource("RectangleShape2D_bdo8l")
 disabled = true
 
-[node name="Area2D" type="Area2D" parent="Gamuto2"]
+[node name="Area2D" type="Area2D" parent="Gamuto2" unique_id=230708516]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamuto2/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamuto2/Area2D" unique_id=751122000]
 position = Vector2(411, 847)
 shape = SubResource("RectangleShape2D_bdo8l")
 
-[node name="Gamuto3" type="CharacterBody2D" parent="."]
+[node name="Gamuto3" type="CharacterBody2D" parent="." unique_id=1282819185]
 position = Vector2(1292, 37)
 script = ExtResource("7_2b0kn")
 
-[node name="Gamuto1" type="Sprite2D" parent="Gamuto3"]
+[node name="Gamuto1" type="Sprite2D" parent="Gamuto3" unique_id=1335153722]
 position = Vector2(411, 847)
 texture = ExtResource("7_xeq6x")
 
-[node name="Gamuto0" type="Sprite2D" parent="Gamuto3"]
+[node name="Gamuto0" type="Sprite2D" parent="Gamuto3" unique_id=1026447375]
 position = Vector2(411, 847)
 texture = ExtResource("5_6fjpu")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamuto3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamuto3" unique_id=1792582694]
 position = Vector2(411, 847)
 shape = SubResource("RectangleShape2D_bdo8l")
 disabled = true
 
-[node name="Area2D" type="Area2D" parent="Gamuto3"]
+[node name="Area2D" type="Area2D" parent="Gamuto3" unique_id=1043173355]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamuto3/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamuto3/Area2D" unique_id=408710922]
 position = Vector2(411, 847)
 shape = SubResource("RectangleShape2D_bdo8l")
 
-[node name="Player_Piaui" type="CharacterBody2D" parent="."]
+[node name="Player_Piaui" type="CharacterBody2D" parent="." unique_id=2122235239]
 position = Vector2(262, 983)
 script = ExtResource("4_rb7vw")
 
-[node name="Piaui_sprite" type="Sprite2D" parent="Player_Piaui"]
+[node name="Piaui_sprite" type="Sprite2D" parent="Player_Piaui" unique_id=1544808930]
 visibility_layer = 2
 position = Vector2(-96.3, -171.3)
 scale = Vector2(0.161899, 0.161899)
 texture = ExtResource("4_ss1kd")
 
-[node name="Area2D" type="Area2D" parent="Player_Piaui"]
+[node name="Area2D" type="Area2D" parent="Player_Piaui" unique_id=1886358185]
 
-[node name="Piaui_colisao" type="CollisionPolygon2D" parent="Player_Piaui/Area2D"]
+[node name="Piaui_colisao" type="CollisionPolygon2D" parent="Player_Piaui/Area2D" unique_id=498539760]
 polygon = PackedVector2Array(31, -26, 35, -115, 36, -120, 34, -179, -74, -184, -73, -320, -168, -327, -169, -186, -226, -182, -229, -26)
 
-[node name="Piaui_colisao" type="CollisionPolygon2D" parent="Player_Piaui"]
+[node name="Piaui_colisao" type="CollisionPolygon2D" parent="Player_Piaui" unique_id=84405060]
 polygon = PackedVector2Array(31, -26, 35, -115, 36, -120, 34, -179, -74, -184, -73, -320, -168, -327, -169, -186, -226, -182, -229, -26)
 
-[node name="Piaui_sprite_vitoria" type="Sprite2D" parent="Player_Piaui"]
+[node name="Piaui_sprite_vitoria" type="Sprite2D" parent="Player_Piaui" unique_id=1720822439]
 visible = false
 position = Vector2(-96.125, -170.875)
 scale = Vector2(0.161397, 0.161397)
 texture = ExtResource("11_j0u24")
 
-[node name="Plataforma1" type="StaticBody2D" parent="."]
+[node name="Plataforma1" type="StaticBody2D" parent="." unique_id=1907840962]
 position = Vector2(1307, 824)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Plataforma1"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Plataforma1" unique_id=727354055]
 position = Vector2(-75, 15)
 polygon = PackedVector2Array(3, 32, 171, 8, 171, -16, 3, 8)
 
-[node name="Plataforma2" type="StaticBody2D" parent="."]
+[node name="Plataforma2" type="StaticBody2D" parent="." unique_id=1968118137]
 position = Vector2(2065.5, 662)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Plataforma2"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Plataforma2" unique_id=1114884644]
 position = Vector2(-98.9277, -29.6346)
 polygon = PackedVector2Array(-352.572, 16.6346, -304.572, 16.6346, -304.572, 8.63458, -80.5723, 8.63458, -80.5723, -15.3654, -320.572, -15.3654, -320.572, -7.36542, -352.572, -7.36542)
 
-[node name="Ela_e_tao_tudo" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("10_tnmcl")
+[node name="Ela_e_tao_tudo" type="AudioStreamPlayer" parent="." unique_id=1517559074]
+stream = ExtResource("11_rttrh")
 
-[node name="Yay" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("12_vgbtf")
+[node name="Yay" type="AudioStreamPlayer" parent="." unique_id=878824608]
+stream = ExtResource("12_psrey")
 volume_db = 10.0
 
 [connection signal="G1" from="Gamuto" to="." method="_on_gamuto_g_1"]

@@ -5,16 +5,16 @@ var cena_projetil = preload("res://microjogos/2023S1/projetoAnaBeatriz/cenas/sho
 @onready var shot = $"../Shot"
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if Input.is_action_pressed("direita"):
 		velocity.x = 600
 	elif Input.is_action_pressed("esquerda"):
 		velocity.x = -600
-	else :
+	else:
 		velocity.x = 0
-	var colidiu = move_and_slide()
+	move_and_slide()
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("acao"):
 		shot.play()
 		

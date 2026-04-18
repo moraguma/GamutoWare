@@ -5,7 +5,7 @@ signal G3
 func _ready():
 	velocity.y = 0.0001
 
-func _on_area_2d_body_entered(body):
+func _on_area_2d_body_entered(_body):
 	if velocity.y != 0:
 		$Gamuto0.visible = false
 		get_node("../Yay").play()
