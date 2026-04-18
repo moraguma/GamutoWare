@@ -1,11 +1,19 @@
 extends Sprite2D
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	
+var pos_almejada_2 = Vector2(1000, 554.932)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass 
+	position = lerp(position, pos_almejada_2, 0.1)
+
+
+func mover_para(nova_pos):
+	pos_almejada_2 = nova_pos
+
+
+func subir():
+	pos_almejada_2 = Vector2(position.x, 454.932)
+
+func descer():
+	pos_almejada_2 = Vector2(1000, 554.932)
