@@ -1,0 +1,30 @@
+[gd_resource type="VisualShader" load_steps=3 format=3 uid="uid://u41uelcg8ut7"]
+
+[ext_resource type="Texture2D" uid="uid://caj7xuxpao6ps" path="res://microjogos/2025S1/projeto_release_gamuto/recursos/imagens/vinhaTile2.png" id="1_bttc7"]
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_cbgpc"]
+texture = ExtResource("1_bttc7")
+
+[resource]
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_schlick_ggx;
+
+uniform sampler2D tex_frg_2;
+
+
+
+void fragment() {
+// Texture2D:2
+	vec4 n_out2p0 = texture(tex_frg_2, UV);
+
+
+// Output:0
+	ALBEDO = vec3(n_out2p0.xyz);
+
+
+}
+"
+graph_offset = Vector2(-52.838, 150.296)
+nodes/fragment/2/node = SubResource("VisualShaderNodeTexture_cbgpc")
+nodes/fragment/2/position = Vector2(-120, 160)
+nodes/fragment/connections = PackedInt32Array(2, 0, 0, 0)
