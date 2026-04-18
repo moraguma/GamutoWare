@@ -7,6 +7,7 @@
 
 [sub_resource type="FontFile" id="1"]
 fallbacks = Array[Font]([ExtResource("1")])
+disable_embedded_bitmaps = true
 cache/0/variation_coordinates = {}
 cache/0/face_index = 0
 cache/0/embolden = 0.0
@@ -53,9 +54,9 @@ tracks/0/path = NodePath("Gamux:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(),
-"points": PackedFloat32Array(),
-"times": PackedFloat32Array()
+"handle_modes": PackedInt32Array(2),
+"points": PackedFloat32Array(0, -0.0005, 0, 0.0005, 0),
+"times": PackedFloat32Array(0)
 }
 tracks/1/type = "bezier"
 tracks/1/imported = false
@@ -64,9 +65,9 @@ tracks/1/path = NodePath("Gamux:position:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"handle_modes": PackedInt32Array(),
-"points": PackedFloat32Array(),
-"times": PackedFloat32Array()
+"handle_modes": PackedInt32Array(2),
+"points": PackedFloat32Array(0, -0.0005, 0, 0.0005, 0),
+"times": PackedFloat32Array(0)
 }
 tracks/2/type = "bezier"
 tracks/2/imported = false
@@ -75,9 +76,9 @@ tracks/2/path = NodePath("Logo:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"handle_modes": PackedInt32Array(),
-"points": PackedFloat32Array(),
-"times": PackedFloat32Array()
+"handle_modes": PackedInt32Array(2),
+"points": PackedFloat32Array(0, -0.0005, 0, 0.0005, 0),
+"times": PackedFloat32Array(0)
 }
 tracks/3/type = "bezier"
 tracks/3/imported = false
@@ -86,9 +87,9 @@ tracks/3/path = NodePath("Logo:position:x")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"handle_modes": PackedInt32Array(),
-"points": PackedFloat32Array(),
-"times": PackedFloat32Array()
+"handle_modes": PackedInt32Array(2),
+"points": PackedFloat32Array(0, -0.0005, 0, 0.0005, 0),
+"times": PackedFloat32Array(0)
 }
 tracks/4/type = "bezier"
 tracks/4/imported = false
