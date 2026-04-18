@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="MicrogameAsset" format=3 uid="uid://b64k8vlr5bhmf"]
 
+[ext_resource type="PackedScene" uid="uid://dwppdyapv7xyi" path="res://microjogos/2026S1/projeto_rafael_mello/cenas/main.tscn" id="1_0a6g2"]
 [ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_guwbu"]
 
 [resource]
@@ -8,5 +9,6 @@ title_pt = &"TÍTULO DO JOGO"
 title_en = &"GAME TITLE"
 credits_pt = "Créditos do jogo"
 credits_en = "Game credits"
-start_message_pt = &"FAÇA ALGO!"
-start_message_en = &"DO SOMETHING!"
+start_message_pt = &"TENTE SOBREVIVER!"
+start_message_en = &"TRY TO SURVIVE!"
+main_scene = ExtResource("1_0a6g2")

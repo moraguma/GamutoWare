@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7n5viurxnhtk"
-path="res://.godot/imported/capa.png-82bac39d1eb6feefd6748ae0c7bf8da2.ctex"
+path="res://.godot/imported/capa.png-e21a572de86f3ae0f1fb1ea95e818e0c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2026S1/rafael_mello/capa.png"
-dest_files=["res://.godot/imported/capa.png-82bac39d1eb6feefd6748ae0c7bf8da2.ctex"]
+source_file="res://microjogos/2026S1/projeto_rafael_mello/capa.png"
+dest_files=["res://.godot/imported/capa.png-e21a572de86f3ae0f1fb1ea95e818e0c.ctex"]
 
 [params]
 

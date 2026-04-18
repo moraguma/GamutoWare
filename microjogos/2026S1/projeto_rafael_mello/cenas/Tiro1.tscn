@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bj8a30w4jl5vs"]
+
+[ext_resource type="Script" uid="uid://bk5aga8421oc1" path="res://microjogos/2026S1/projeto_rafael_mello/cenas/scripts/tiro_1.gd" id="1_7ve2q"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a0sra"]
+radius = 30.0
+
+[node name="Tiro1" type="Area2D" unique_id=1073928532]
+script = ExtResource("1_7ve2q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2038585133]
+shape = SubResource("CircleShape2D_a0sra")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1233239759]
+offset_left = -13.0
+offset_top = -12.0
+offset_right = 12.0
+offset_bottom = 13.0
+color = Color(1, 0, 0, 1)

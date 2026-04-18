@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://fdwiunndu87u"]
+
+[ext_resource type="Script" uid="uid://ct0ofcwt21jbp" path="res://microjogos/2026S1/projeto_rafael_mello/cenas/scripts/player.gd" id="1_4kis3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4kis3"]
+radius = 50.0
+
+[node name="Player" type="CharacterBody2D" unique_id=142243304]
+script = ExtResource("1_4kis3")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1156485027]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=964430082]
+shape = SubResource("CircleShape2D_4kis3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=147144953]
+shape = SubResource("CircleShape2D_4kis3")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1732068556]
+offset_left = -40.0
+offset_top = -40.0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

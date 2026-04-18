@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://uhnw27mxvhhf"]
+
+[ext_resource type="Script" uid="uid://drdpdug15ndak" path="res://microjogos/2026S1/projeto_rafael_mello/cenas/scripts/shooter_2.gd" id="1_8ow5e"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_woys4"]
+
+[node name="Shooter2" type="CharacterBody2D" unique_id=1017523246]
+script = ExtResource("1_8ow5e")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=695380255]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=24412909]
+shape = SubResource("CapsuleShape2D_woys4")
+
+[node name="Timer" type="Timer" parent="." unique_id=1497066099]
+wait_time = 0.05
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
