@@ -39,4 +39,3 @@ func _process(delta):
 # Um método genérico. Crie quantos métodos você precisar!
 func my_method():
 	pass
-
