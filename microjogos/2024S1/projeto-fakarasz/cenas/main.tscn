@@ -1,13 +1,13 @@
-[gd_scene load_steps=17 format=3]
+[gd_scene format=3 uid="uid://bgvt3afc6jqub"]
 
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto-fakarasz/cenas/scripts/main.gd" id="1_m2u1k"]
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-fakarasz/recursos/gol.png" id="1_u0vwt"]
-[ext_resource type="AudioStream" path="res://microjogos/2024S1/projeto-fakarasz/recursos/cheering.mp3" id="2_1k1yt"]
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto-fakarasz/cenas/Sprite2D4.gd" id="3_d1n5b"]
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-fakarasz/recursos/seta.png" id="3_kaemg"]
-[ext_resource type="Texture2D" path="res://icon.png" id="4_3x7q6"]
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto-fakarasz/cenas/AnimationPlayer.gd" id="4_ftoe5"]
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-fakarasz/recursos/bola.png" id="5_ppnya"]
+[ext_resource type="Script" uid="uid://blgfe6alr3yfm" path="res://microjogos/2024S1/projeto-fakarasz/cenas/scripts/main.gd" id="1_m2u1k"]
+[ext_resource type="Texture2D" uid="uid://di67cocvoahhu" path="res://microjogos/2024S1/projeto-fakarasz/recursos/gol.png" id="1_u0vwt"]
+[ext_resource type="AudioStream" uid="uid://b32ir4h8rpp6m" path="res://microjogos/2024S1/projeto-fakarasz/recursos/cheering.mp3" id="2_1k1yt"]
+[ext_resource type="Script" uid="uid://bdirr4odajunt" path="res://microjogos/2024S1/projeto-fakarasz/cenas/Sprite2D4.gd" id="3_d1n5b"]
+[ext_resource type="Texture2D" uid="uid://dqbyraxta0fon" path="res://microjogos/2024S1/projeto-fakarasz/recursos/seta.png" id="3_kaemg"]
+[ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="4_3x7q6"]
+[ext_resource type="Script" uid="uid://bqhw4asn1edbq" path="res://microjogos/2024S1/projeto-fakarasz/cenas/AnimationPlayer.gd" id="4_ftoe5"]
+[ext_resource type="Texture2D" uid="uid://dsluoulrnqwau" path="res://microjogos/2024S1/projeto-fakarasz/recursos/bola.png" id="5_ppnya"]
 
 [sub_resource type="Gradient" id="Gradient_ispyj"]
 offsets = PackedFloat32Array(0.510989)
@@ -52,69 +52,69 @@ height = 428.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_47hke"]
 size = Vector2(848, 190)
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=594124483]
 position = Vector2(827, 451)
 script = ExtResource("1_m2u1k")
 
-[node name="Music" type="Sprite2D" parent="."]
+[node name="Music" type="Sprite2D" parent="." unique_id=1411275981]
 position = Vector2(166, 88)
 scale = Vector2(33.168, 18.3867)
 texture = SubResource("GradientTexture2D_abbfw")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="Music"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="Music" unique_id=1767741163]
 stream = ExtResource("2_1k1yt")
 autoplay = true
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=168687006]
 position = Vector2(145, -315.5)
 scale = Vector2(1.48039, 1.07598)
 texture = ExtResource("1_u0vwt")
 
-[node name="Sprite2D9" type="Sprite2D" parent="."]
+[node name="Sprite2D9" type="Sprite2D" parent="." unique_id=297409766]
 position = Vector2(-290, -425)
 scale = Vector2(0.6875, 0.960937)
 texture = SubResource("GradientTexture2D_abbfw")
 
-[node name="Sprite2D10" type="Sprite2D" parent="."]
+[node name="Sprite2D10" type="Sprite2D" parent="." unique_id=890914988]
 position = Vector2(-237, -468)
 scale = Vector2(0.6875, 0.960937)
 texture = SubResource("GradientTexture2D_abbfw")
 
-[node name="Sprite2D3" type="Sprite2D" parent="."]
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=858027474]
 position = Vector2(1430.81, 45.7295)
 
-[node name="Line2D" type="Line2D" parent="."]
+[node name="Line2D" type="Line2D" parent="." unique_id=545786239]
 position = Vector2(-1771, 795)
 scale = Vector2(1.23357, 1.20368)
 points = PackedVector2Array(844.703, -1143.99, 845.052, -191.794, 2247.05, -191.794, 2247.14, -1207.96)
 width = 30.0
 
-[node name="Line2D" type="Line2D" parent="Line2D"]
+[node name="Line2D" type="Line2D" parent="Line2D" unique_id=702756325]
 position = Vector2(611.345, -330.116)
 scale = Vector2(0.606202, 0.731164)
 points = PackedVector2Array(844.971, -1209.7, 845.052, -191.794, 1547.53, -191.794, 2247.05, -191.794, 2247.05, -852.722, 2247.05, -1087.79)
 width = 30.0
 
-[node name="Bola" type="RigidBody2D" parent="."]
+[node name="Bola" type="RigidBody2D" parent="." unique_id=1411285544]
 z_index = 1
 position = Vector2(136, 488)
 gravity_scale = 0.0
 
-[node name="Sprite2D4" type="Area2D" parent="Bola"]
+[node name="Sprite2D4" type="Area2D" parent="Bola" unique_id=1755370959]
 script = ExtResource("3_d1n5b")
 
-[node name="Sprite2D" type="Sprite2D" parent="Bola/Sprite2D4"]
+[node name="Sprite2D" type="Sprite2D" parent="Bola/Sprite2D4" unique_id=1900547221]
 position = Vector2(-3.21865e-05, -5.126e-05)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("5_ppnya")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bola/Sprite2D4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bola/Sprite2D4" unique_id=80789390]
 shape = SubResource("CircleShape2D_xbn13")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bola"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bola" unique_id=357013075]
 shape = SubResource("CircleShape2D_xbn13")
 
-[node name="Seta" type="Sprite2D" parent="."]
+[node name="Seta" type="Sprite2D" parent="." unique_id=1981916877]
 position = Vector2(136, 478)
 rotation = 0.523599
 scale = Vector2(0.594875, 1.07562)
@@ -122,40 +122,38 @@ texture = ExtResource("3_kaemg")
 centered = false
 offset = Vector2(-550, -224)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Seta"]
-libraries = {
-"": SubResource("AnimationLibrary_rgfuy")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Seta" unique_id=887325865]
+libraries/ = SubResource("AnimationLibrary_rgfuy")
 speed_scale = 1.2
 script = ExtResource("4_ftoe5")
 
-[node name="Gamutos" type="Area2D" parent="."]
+[node name="Gamutos" type="Area2D" parent="." unique_id=392066228]
 position = Vector2(113.05, -47)
 
-[node name="Sprite2D6" type="Sprite2D" parent="Gamutos"]
+[node name="Sprite2D6" type="Sprite2D" parent="Gamutos" unique_id=824178292]
 position = Vector2(-138.05, -13)
 scale = Vector2(3, 3)
 texture = ExtResource("4_3x7q6")
 
-[node name="Sprite2D7" type="Sprite2D" parent="Gamutos"]
+[node name="Sprite2D7" type="Sprite2D" parent="Gamutos" unique_id=902643687]
 position = Vector2(-1.05005, -13)
 scale = Vector2(3, 3)
 texture = ExtResource("4_3x7q6")
 
-[node name="Sprite2D8" type="Sprite2D" parent="Gamutos"]
+[node name="Sprite2D8" type="Sprite2D" parent="Gamutos" unique_id=1517529106]
 position = Vector2(135.95, -13)
 scale = Vector2(3, 3)
 texture = ExtResource("4_3x7q6")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamutos"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamutos" unique_id=233042081]
 position = Vector2(-1.05005, -18)
 rotation = 1.57079
 shape = SubResource("CapsuleShape2D_y0hhe")
 
-[node name="Gol" type="Area2D" parent="."]
+[node name="Gol" type="Area2D" parent="." unique_id=328528200]
 position = Vector2(-1309, -265)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gol"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gol" unique_id=1850367185]
 position = Vector2(1452, -77)
 shape = SubResource("RectangleShape2D_47hke")
 

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cq24a0784fiwx"]
 
-[ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-estrela/cenas/lago.tscn" id="1_aomlo"]
+[ext_resource type="PackedScene" uid="uid://bwdv16u8atl4x" path="res://microjogos/2024S1/projeto-estrela/cenas/lago.tscn" id="1_aomlo"]
 [ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-estrela/cenas/scripts/PATO.tscn" id="2_lrswt"]
 [ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-estrela/cenas/scripts/patinho.tscn" id="3_h8exp"]
 [ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-estrela/cenas/scripts/obs1.tscn" id="4_kjds8"]

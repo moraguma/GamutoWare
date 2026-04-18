@@ -1,61 +1,61 @@
-[gd_scene load_steps=16 format=3]
+[gd_scene format=3 uid="uid://cf364o1h5q0qk"]
 
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/main.gd" id="1_1yj3m"]
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/Control.gd" id="1_8ao43"]
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/composer.gd" id="2_ch7fa"]
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/cursor_area.gd" id="3_lmjue"]
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/area_cell_0.gd" id="5_n4jon"]
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/status_checker.gd" id="5_vfi3m"]
-[ext_resource type="AudioStream" path="res://microjogos/2024S1/projeto_felipe_onorio/recursos/Track_2_(Party_Tonight)_shortened.mp3" id="6_1nsfs"]
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto_felipe_onorio/recursos/cobblestone_path.jpg" id="6_oscpn"]
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto_felipe_onorio/recursos/titulo.png" id="7_kmapp"]
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto_felipe_onorio/recursos/instructions.png" id="8_mf117"]
-[ext_resource type="SpriteFrames" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/flame_pixely.tres" id="9_n55ik"]
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/AudioStreamPlayer.gd" id="11_5i0dd"]
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto_felipe_onorio/recursos/themes/touch_screen_button.png" id="11_v661f"]
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto_felipe_onorio/recursos/placeholder_cursor_32x32 - Copy.png" id="12_ervd2"]
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/touch_screen_button_0.gd" id="13_ae67l"]
+[ext_resource type="Script" uid="uid://dtfxm0djtfm1p" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/main.gd" id="1_1yj3m"]
+[ext_resource type="Script" uid="uid://db0cvh5mlnm2" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/Control.gd" id="1_8ao43"]
+[ext_resource type="Script" uid="uid://8fuk67nugtnu" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/composer.gd" id="2_ch7fa"]
+[ext_resource type="Script" uid="uid://d30ma6ijjnmtc" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/cursor_area.gd" id="3_lmjue"]
+[ext_resource type="Script" uid="uid://cuvtyaiu7f78q" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/area_cell_0.gd" id="5_n4jon"]
+[ext_resource type="Script" uid="uid://d1cynhandwtvj" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/status_checker.gd" id="5_vfi3m"]
+[ext_resource type="AudioStream" uid="uid://6qu51xfbu5gm" path="res://microjogos/2024S1/projeto_felipe_onorio/recursos/Track_2_(Party_Tonight)_shortened.mp3" id="6_1nsfs"]
+[ext_resource type="Texture2D" uid="uid://ssb2yyob2j30" path="res://microjogos/2024S1/projeto_felipe_onorio/recursos/cobblestone_path.jpg" id="6_oscpn"]
+[ext_resource type="Texture2D" uid="uid://csfuxrvj5bd5c" path="res://microjogos/2024S1/projeto_felipe_onorio/recursos/titulo.png" id="7_kmapp"]
+[ext_resource type="Texture2D" uid="uid://bn7wtjhmwxbby" path="res://microjogos/2024S1/projeto_felipe_onorio/recursos/instructions.png" id="8_mf117"]
+[ext_resource type="SpriteFrames" uid="uid://bra6aicyrxshk" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/flame_pixely.tres" id="9_n55ik"]
+[ext_resource type="Script" uid="uid://di23ucmg633g" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/AudioStreamPlayer.gd" id="11_5i0dd"]
+[ext_resource type="Texture2D" uid="uid://l0t3wes4pt16" path="res://microjogos/2024S1/projeto_felipe_onorio/recursos/themes/touch_screen_button.png" id="11_v661f"]
+[ext_resource type="Texture2D" uid="uid://c4p0cmgm7pflk" path="res://microjogos/2024S1/projeto_felipe_onorio/recursos/placeholder_cursor_32x32 - Copy.png" id="12_ervd2"]
+[ext_resource type="Script" uid="uid://cl0nhqc4jyq73" path="res://microjogos/2024S1/projeto_felipe_onorio/cenas/touch_screen_button_0.gd" id="13_ae67l"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1437454391]
 script = ExtResource("1_1yj3m")
 
-[node name="interface_static_elements" type="Node" parent="."]
+[node name="interface_static_elements" type="Node" parent="." unique_id=1204846780]
 
-[node name="background" type="Sprite2D" parent="interface_static_elements"]
+[node name="background" type="Sprite2D" parent="interface_static_elements" unique_id=587277045]
 z_index = -2
 position = Vector2(954.656, 629.811)
 scale = Vector2(7.00613, 7.00614)
 texture = ExtResource("6_oscpn")
 
-[node name="title" type="Sprite2D" parent="interface_static_elements"]
+[node name="title" type="Sprite2D" parent="interface_static_elements" unique_id=794003698]
 position = Vector2(947, 200)
 scale = Vector2(7.3782, 7.3782)
 texture = ExtResource("7_kmapp")
 
-[node name="instructions" type="Sprite2D" parent="interface_static_elements"]
+[node name="instructions" type="Sprite2D" parent="interface_static_elements" unique_id=1898113664]
 position = Vector2(964, 287)
 scale = Vector2(4.6875, 4.6875)
 texture = ExtResource("8_mf117")
 
-[node name="win_animation" type="AnimatedSprite2D" parent="interface_static_elements"]
+[node name="win_animation" type="AnimatedSprite2D" parent="interface_static_elements" unique_id=1366123872]
 z_index = -1
 position = Vector2(957, 556)
 scale = Vector2(41.0625, 41.0625)
 sprite_frames = ExtResource("9_n55ik")
 speed_scale = 4.0
 
-[node name="audio_stream_player" type="AudioStreamPlayer" parent="interface_static_elements"]
+[node name="audio_stream_player" type="AudioStreamPlayer" parent="interface_static_elements" unique_id=2050799799]
 stream = ExtResource("6_1nsfs")
 script = ExtResource("11_5i0dd")
 
-[node name="composer" type="Node" parent="."]
+[node name="composer" type="Node" parent="." unique_id=1093874077]
 script = ExtResource("2_ch7fa")
 
-[node name="status_checker" type="Node2D" parent="."]
+[node name="status_checker" type="Node2D" parent="." unique_id=406709276]
 position = Vector2(0, -2)
 script = ExtResource("5_vfi3m")
 
-[node name="area_cell_0" type="Area2D" parent="status_checker" node_paths=PackedStringArray("right_neighbor", "down_neighbor")]
+[node name="area_cell_0" type="Area2D" parent="status_checker" unique_id=1397907126 node_paths=PackedStringArray("right_neighbor", "down_neighbor")]
 position = Vector2(724, 424)
 script = ExtResource("5_n4jon")
 right_neighbor = NodePath("../area_cell_1")
@@ -64,19 +64,19 @@ row = 0
 column = 0
 state = 1
 
-[node name="animations_0" type="AnimatedSprite2D" parent="status_checker/area_cell_0"]
+[node name="animations_0" type="AnimatedSprite2D" parent="status_checker/area_cell_0" unique_id=1945324702]
 position = Vector2(-2, -5)
 scale = Vector2(5, 5)
 speed_scale = 4.0
 
-[node name="touch_screen_button_0" type="TouchScreenButton" parent="status_checker/area_cell_0"]
+[node name="touch_screen_button_0" type="TouchScreenButton" parent="status_checker/area_cell_0" unique_id=786230712]
 position = Vector2(-83, -67)
 scale = Vector2(4.78125, 4.78125)
 texture_normal = ExtResource("11_v661f")
 texture_pressed = ExtResource("12_ervd2")
 script = ExtResource("13_ae67l")
 
-[node name="area_cell_1" type="Area2D" parent="status_checker" node_paths=PackedStringArray("right_neighbor", "left_neighbor", "down_neighbor")]
+[node name="area_cell_1" type="Area2D" parent="status_checker" unique_id=2023299461 node_paths=PackedStringArray("right_neighbor", "left_neighbor", "down_neighbor")]
 position = Vector2(915, 421)
 script = ExtResource("5_n4jon")
 right_neighbor = NodePath("../area_cell_2")
@@ -86,19 +86,19 @@ row = 0
 column = 1
 state = 2
 
-[node name="animations_1" type="AnimatedSprite2D" parent="status_checker/area_cell_1"]
+[node name="animations_1" type="AnimatedSprite2D" parent="status_checker/area_cell_1" unique_id=2038398366]
 position = Vector2(2, -2)
 scale = Vector2(5, 5)
 speed_scale = 4.0
 
-[node name="touch_screen_button_0" type="TouchScreenButton" parent="status_checker/area_cell_1"]
+[node name="touch_screen_button_0" type="TouchScreenButton" parent="status_checker/area_cell_1" unique_id=1396606011]
 position = Vector2(-83, -67)
 scale = Vector2(4.78125, 4.78125)
 texture_normal = ExtResource("11_v661f")
 texture_pressed = ExtResource("12_ervd2")
 script = ExtResource("13_ae67l")
 
-[node name="area_cell_2" type="Area2D" parent="status_checker" node_paths=PackedStringArray("left_neighbor", "down_neighbor")]
+[node name="area_cell_2" type="Area2D" parent="status_checker" unique_id=794270812 node_paths=PackedStringArray("left_neighbor", "down_neighbor")]
 position = Vector2(1097, 421)
 script = ExtResource("5_n4jon")
 left_neighbor = NodePath("../area_cell_1")
@@ -106,18 +106,18 @@ down_neighbor = NodePath("../area_cell_5")
 row = 0
 column = 2
 
-[node name="animations_2" type="AnimatedSprite2D" parent="status_checker/area_cell_2"]
+[node name="animations_2" type="AnimatedSprite2D" parent="status_checker/area_cell_2" unique_id=1739334257]
 scale = Vector2(5, 5)
 speed_scale = 4.0
 
-[node name="touch_screen_button_0" type="TouchScreenButton" parent="status_checker/area_cell_2"]
+[node name="touch_screen_button_0" type="TouchScreenButton" parent="status_checker/area_cell_2" unique_id=1847070979]
 position = Vector2(-83, -67)
 scale = Vector2(4.78125, 4.78125)
 texture_normal = ExtResource("11_v661f")
 texture_pressed = ExtResource("12_ervd2")
 script = ExtResource("13_ae67l")
 
-[node name="area_cell_3" type="Area2D" parent="status_checker" node_paths=PackedStringArray("right_neighbor", "up_neighbor", "down_neighbor")]
+[node name="area_cell_3" type="Area2D" parent="status_checker" unique_id=1991050621 node_paths=PackedStringArray("right_neighbor", "up_neighbor", "down_neighbor")]
 position = Vector2(726, 613)
 script = ExtResource("5_n4jon")
 right_neighbor = NodePath("../area_cell_4")
@@ -126,19 +126,19 @@ down_neighbor = NodePath("../area_cell_6")
 row = 1
 column = 0
 
-[node name="animations_3" type="AnimatedSprite2D" parent="status_checker/area_cell_3"]
+[node name="animations_3" type="AnimatedSprite2D" parent="status_checker/area_cell_3" unique_id=1438244436]
 position = Vector2(-5, -5)
 scale = Vector2(5, 5)
 speed_scale = 4.0
 
-[node name="touch_screen_button_0" type="TouchScreenButton" parent="status_checker/area_cell_3"]
+[node name="touch_screen_button_0" type="TouchScreenButton" parent="status_checker/area_cell_3" unique_id=661913209]
 position = Vector2(-83, -67)
 scale = Vector2(4.78125, 4.78125)
 texture_normal = ExtResource("11_v661f")
 texture_pressed = ExtResource("12_ervd2")
 script = ExtResource("13_ae67l")
 
-[node name="area_cell_4" type="Area2D" parent="status_checker" node_paths=PackedStringArray("right_neighbor", "left_neighbor", "up_neighbor", "down_neighbor")]
+[node name="area_cell_4" type="Area2D" parent="status_checker" unique_id=2115868178 node_paths=PackedStringArray("right_neighbor", "left_neighbor", "up_neighbor", "down_neighbor")]
 position = Vector2(917, 610)
 script = ExtResource("5_n4jon")
 right_neighbor = NodePath("../area_cell_5")
@@ -149,19 +149,19 @@ row = 1
 column = 1
 state = 1
 
-[node name="animations_4" type="AnimatedSprite2D" parent="status_checker/area_cell_4"]
+[node name="animations_4" type="AnimatedSprite2D" parent="status_checker/area_cell_4" unique_id=1605946229]
 position = Vector2(-6, -5)
 scale = Vector2(5, 5)
 speed_scale = 4.0
 
-[node name="touch_screen_button_0" type="TouchScreenButton" parent="status_checker/area_cell_4"]
+[node name="touch_screen_button_0" type="TouchScreenButton" parent="status_checker/area_cell_4" unique_id=894739264]
 position = Vector2(-83, -67)
 scale = Vector2(4.78125, 4.78125)
 texture_normal = ExtResource("11_v661f")
 texture_pressed = ExtResource("12_ervd2")
 script = ExtResource("13_ae67l")
 
-[node name="area_cell_5" type="Area2D" parent="status_checker" node_paths=PackedStringArray("left_neighbor", "up_neighbor", "down_neighbor")]
+[node name="area_cell_5" type="Area2D" parent="status_checker" unique_id=447964273 node_paths=PackedStringArray("left_neighbor", "up_neighbor", "down_neighbor")]
 position = Vector2(1099, 610)
 script = ExtResource("5_n4jon")
 left_neighbor = NodePath("../area_cell_4")
@@ -171,19 +171,19 @@ row = 1
 column = 2
 state = 2
 
-[node name="animations_5" type="AnimatedSprite2D" parent="status_checker/area_cell_5"]
+[node name="animations_5" type="AnimatedSprite2D" parent="status_checker/area_cell_5" unique_id=9363609]
 position = Vector2(0, 2)
 scale = Vector2(5, 5)
 speed_scale = 4.0
 
-[node name="touch_screen_button_0" type="TouchScreenButton" parent="status_checker/area_cell_5"]
+[node name="touch_screen_button_0" type="TouchScreenButton" parent="status_checker/area_cell_5" unique_id=623823272]
 position = Vector2(-83, -67)
 scale = Vector2(4.78125, 4.78125)
 texture_normal = ExtResource("11_v661f")
 texture_pressed = ExtResource("12_ervd2")
 script = ExtResource("13_ae67l")
 
-[node name="area_cell_6" type="Area2D" parent="status_checker" node_paths=PackedStringArray("right_neighbor", "up_neighbor")]
+[node name="area_cell_6" type="Area2D" parent="status_checker" unique_id=697479583 node_paths=PackedStringArray("right_neighbor", "up_neighbor")]
 position = Vector2(728, 802)
 script = ExtResource("5_n4jon")
 right_neighbor = NodePath("../area_cell_7")
@@ -192,19 +192,19 @@ row = 2
 column = 0
 state = 2
 
-[node name="animations_6" type="AnimatedSprite2D" parent="status_checker/area_cell_6"]
+[node name="animations_6" type="AnimatedSprite2D" parent="status_checker/area_cell_6" unique_id=1914986981]
 position = Vector2(-1, -3)
 scale = Vector2(5, 5)
 speed_scale = 4.0
 
-[node name="touch_screen_button_0" type="TouchScreenButton" parent="status_checker/area_cell_6"]
+[node name="touch_screen_button_0" type="TouchScreenButton" parent="status_checker/area_cell_6" unique_id=841768572]
 position = Vector2(-83, -67)
 scale = Vector2(4.78125, 4.78125)
 texture_normal = ExtResource("11_v661f")
 texture_pressed = ExtResource("12_ervd2")
 script = ExtResource("13_ae67l")
 
-[node name="area_cell_7" type="Area2D" parent="status_checker" node_paths=PackedStringArray("right_neighbor", "left_neighbor", "up_neighbor")]
+[node name="area_cell_7" type="Area2D" parent="status_checker" unique_id=1801352650 node_paths=PackedStringArray("right_neighbor", "left_neighbor", "up_neighbor")]
 position = Vector2(919, 799)
 script = ExtResource("5_n4jon")
 right_neighbor = NodePath("../area_cell_8")
@@ -213,19 +213,19 @@ up_neighbor = NodePath("../area_cell_4")
 row = 2
 column = 1
 
-[node name="animations_7" type="AnimatedSprite2D" parent="status_checker/area_cell_7"]
+[node name="animations_7" type="AnimatedSprite2D" parent="status_checker/area_cell_7" unique_id=1795578891]
 position = Vector2(2, 0)
 scale = Vector2(5, 5)
 speed_scale = 4.0
 
-[node name="touch_screen_button_0" type="TouchScreenButton" parent="status_checker/area_cell_7"]
+[node name="touch_screen_button_0" type="TouchScreenButton" parent="status_checker/area_cell_7" unique_id=1629783579]
 position = Vector2(-83, -67)
 scale = Vector2(4.78125, 4.78125)
 texture_normal = ExtResource("11_v661f")
 texture_pressed = ExtResource("12_ervd2")
 script = ExtResource("13_ae67l")
 
-[node name="area_cell_8" type="Area2D" parent="status_checker" node_paths=PackedStringArray("left_neighbor", "up_neighbor")]
+[node name="area_cell_8" type="Area2D" parent="status_checker" unique_id=1023588162 node_paths=PackedStringArray("left_neighbor", "up_neighbor")]
 position = Vector2(1101, 799)
 script = ExtResource("5_n4jon")
 left_neighbor = NodePath("../area_cell_7")
@@ -234,26 +234,26 @@ row = 2
 column = 2
 state = 1
 
-[node name="animations_8" type="AnimatedSprite2D" parent="status_checker/area_cell_8"]
+[node name="animations_8" type="AnimatedSprite2D" parent="status_checker/area_cell_8" unique_id=876039692]
 position = Vector2(-6, -5)
 scale = Vector2(5, 5)
 speed_scale = 4.0
 
-[node name="touch_screen_button_0" type="TouchScreenButton" parent="status_checker/area_cell_8"]
+[node name="touch_screen_button_0" type="TouchScreenButton" parent="status_checker/area_cell_8" unique_id=99825759]
 position = Vector2(-83, -67)
 scale = Vector2(4.78125, 4.78125)
 texture_normal = ExtResource("11_v661f")
 texture_pressed = ExtResource("12_ervd2")
 script = ExtResource("13_ae67l")
 
-[node name="cursor_area" type="Area2D" parent="."]
+[node name="cursor_area" type="Area2D" parent="." unique_id=838791964]
 position = Vector2(1380, 553)
 scale = Vector2(5, 5)
 script = ExtResource("3_lmjue")
 
-[node name="cursor_sprite" type="Sprite2D" parent="cursor_area"]
+[node name="cursor_sprite" type="Sprite2D" parent="cursor_area" unique_id=1999814063]
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=1486972710]
 layout_mode = 3
 anchors_preset = 10
 anchor_right = 1.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bmp04tx2qox2x"]
+[gd_scene format=3 uid="uid://bmp04tx2qox2x"]
 
 [ext_resource type="Script" uid="uid://c2dch4n8e0wey" path="res://microjogos/moraguma/soulchain/cenas/scripts/Hook.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://b54gki0ur20bq" path="res://microjogos/moraguma/soulchain/recursos/sprites/chain.png" id="2"]
@@ -60,7 +60,7 @@ _data = {
 &"idle": SubResource("3")
 }
 
-[node name="Hook" type="Sprite2D"]
+[node name="Hook" type="Sprite2D" unique_id=1497056307]
 z_index = 1
 texture = ExtResource("3")
 hframes = 6
@@ -68,12 +68,10 @@ vframes = 7
 frame = 19
 script = ExtResource("1")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_vl4xp")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1031045917]
+libraries/ = SubResource("AnimationLibrary_vl4xp")
 
-[node name="Chain" type="Line2D" parent="."]
+[node name="Chain" type="Line2D" parent="." unique_id=343804966]
 z_as_relative = false
 texture = ExtResource("2")
 texture_mode = 1

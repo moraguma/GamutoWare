@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bm21hluyfdqc2"]
+[gd_scene format=3 uid="uid://bm21hluyfdqc2"]
 
 [ext_resource type="Texture2D" uid="uid://iexmjotxl3pw" path="res://microjogos/moraguma/candle prick/recursos/sprites/candleoutline.png" id="1"]
 [ext_resource type="Script" uid="uid://cf18xs7o2jtxk" path="res://microjogos/moraguma/candle prick/cenas/scripts/WinningArea.gd" id="2"]
@@ -69,18 +69,17 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="WinningArea" type="Node2D"]
+[node name="WinningArea" type="Node2D" unique_id=599437017]
 script = ExtResource("2")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
-frames = SubResource("9")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=2027067095]
+sprite_frames = SubResource("9")
 frame = 3
-playing = true
 
-[node name="Arrow1" type="Sprite2D" parent="."]
+[node name="Arrow1" type="Sprite2D" parent="." unique_id=601871435]
 texture = ExtResource("3")
 
-[node name="Arrow2" type="Sprite2D" parent="."]
+[node name="Arrow2" type="Sprite2D" parent="." unique_id=39670924]
 texture = ExtResource("3")
 
-[node name="LightModule" parent="." instance=ExtResource("4")]
+[node name="LightModule" parent="." unique_id=1036929424 instance=ExtResource("4")]

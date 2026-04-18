@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://xtfvsj68ofq3"]
+[gd_scene format=3 uid="uid://xtfvsj68ofq3"]
 
 [ext_resource type="Texture2D" uid="uid://cd5huovw57d5r" path="res://microjogos/moraguma/hora_da_necromancia/recursos/sprites/head.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://ctlcgkr7lnhsq" path="res://microjogos/moraguma/hora_da_necromancia/recursos/sprites/cloak.png" id="2"]
@@ -386,6 +386,15 @@ fallbacks = Array[Font]([ExtResource("8")])
 subpixel_positioning = 0
 msdf_pixel_range = 14
 msdf_size = 128
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -429,22 +438,22 @@ default_font_size = 96
 RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
 RichTextLabel/constants/outline_size = 16
 
-[node name="Necromancia" type="Node2D"]
+[node name="Necromancia" type="Node2D" unique_id=925761749]
 script = ExtResource("7")
 
-[node name="Camera3D" type="Camera2D" parent="."]
+[node name="Camera3D" type="Camera2D" parent="." unique_id=371467368]
 position = Vector2(960, 540)
 
-[node name="BG" type="Sprite2D" parent="."]
+[node name="BG" type="Sprite2D" parent="." unique_id=254704806]
 position = Vector2(960, 540)
 texture = ExtResource("5")
 
-[node name="ParticulasCoracao" type="CPUParticles2D" parent="."]
+[node name="ParticulasCoracao" type="CPUParticles2D" parent="." unique_id=613864384]
 position = Vector2(960, 540)
 emitting = false
 amount = 16
-lifetime = 1.5
 texture = ExtResource("9")
+lifetime = 1.5
 emission_shape = 1
 emission_sphere_radius = 20.0
 direction = Vector2(0, -1)
@@ -453,30 +462,30 @@ gravity = Vector2(0, -500)
 initial_velocity_min = 200.0
 initial_velocity_max = 250.0
 
-[node name="Abelarde" type="Node2D" parent="."]
+[node name="Abelarde" type="Node2D" parent="." unique_id=917152481]
 
-[node name="Body" type="Sprite2D" parent="Abelarde"]
+[node name="Body" type="Sprite2D" parent="Abelarde" unique_id=1645919893]
 position = Vector2(960, 519)
-rotation = -0.0523599
+rotation = -0.05235988
 scale = Vector2(1.05, 1.05)
 texture = ExtResource("2")
 script = ExtResource("6")
 
-[node name="Head" type="Sprite2D" parent="Abelarde"]
+[node name="Head" type="Sprite2D" parent="Abelarde" unique_id=572256650]
 position = Vector2(0, -24)
-rotation = -0.0872665
+rotation = -0.08726646
 texture = ExtResource("1")
 centered = false
 script = ExtResource("6")
 
-[node name="Eye" type="Sprite2D" parent="Abelarde/Head"]
+[node name="Eye" type="Sprite2D" parent="Abelarde/Head" unique_id=1931612410]
 position = Vector2(0, -2)
 texture = ExtResource("4")
 centered = false
 script = ExtResource("6")
 trauma = 0.7
 
-[node name="HeartEye" type="Sprite2D" parent="Abelarde/Head"]
+[node name="HeartEye" type="Sprite2D" parent="Abelarde/Head" unique_id=1877350910]
 visible = false
 position = Vector2(0, -2)
 texture = ExtResource("3")
@@ -484,12 +493,10 @@ centered = false
 script = ExtResource("6")
 trauma = 1.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_q6pnd")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2097342113]
+libraries/ = SubResource("AnimationLibrary_q6pnd")
 
-[node name="T1" type="RichTextLabel" parent="."]
+[node name="T1" type="RichTextLabel" parent="." unique_id=507919510]
 clip_contents = false
 offset_left = 240.0
 offset_top = 540.0
@@ -499,7 +506,7 @@ theme = SubResource("6")
 bbcode_enabled = true
 text = "Fala ae ossudo!"
 
-[node name="T2" type="RichTextLabel" parent="."]
+[node name="T2" type="RichTextLabel" parent="." unique_id=1113836779]
 clip_contents = false
 offset_left = 240.0
 offset_top = 675.0
@@ -509,7 +516,7 @@ theme = SubResource("6")
 bbcode_enabled = true
 text = "Fala ae ossudo!"
 
-[node name="T3" type="RichTextLabel" parent="."]
+[node name="T3" type="RichTextLabel" parent="." unique_id=244576816]
 clip_contents = false
 offset_left = 240.0
 offset_top = 810.0
@@ -519,19 +526,19 @@ theme = SubResource("6")
 bbcode_enabled = true
 text = "Fala ae ossudo!"
 
-[node name="WinSound" type="AudioStreamPlayer" parent="."]
+[node name="WinSound" type="AudioStreamPlayer" parent="." unique_id=508096017]
 stream = ExtResource("11")
 
-[node name="LoseSound" type="AudioStreamPlayer" parent="."]
+[node name="LoseSound" type="AudioStreamPlayer" parent="." unique_id=419094795]
 stream = ExtResource("12")
 
-[node name="ChooseSound" type="AudioStreamPlayer" parent="."]
+[node name="ChooseSound" type="AudioStreamPlayer" parent="." unique_id=1687963794]
 stream = ExtResource("10")
 volume_db = -20.0
 
-[node name="WowSound" type="AudioStreamPlayer" parent="."]
+[node name="WowSound" type="AudioStreamPlayer" parent="." unique_id=104257745]
 stream = ExtResource("13")
 volume_db = 10.0
 
-[node name="Music" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=869725945]
 stream = ExtResource("14")

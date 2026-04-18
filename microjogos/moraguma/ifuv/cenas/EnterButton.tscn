@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cya84ntij2frm"]
+[gd_scene format=3 uid="uid://cya84ntij2frm"]
 
 [ext_resource type="Texture2D" uid="uid://c4wvqx8fvnd5h" path="res://microjogos/moraguma/ifuv/recursos/sprites/progress.png" id="1"]
 [ext_resource type="Script" uid="uid://c37idh03hpt1k" path="res://microjogos/moraguma/ifuv/cenas/scripts/EnterButton.gd" id="2"]
@@ -59,15 +59,20 @@ tracks/1/keys = {
 "values": [Vector2(0, 0), Vector2(0, 1), Vector2(0, 0)]
 }
 
-[node name="EnterButton" type="Sprite2D"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qeqfb"]
+_data = {
+&"RESET": SubResource("1"),
+&"press": SubResource("2")
+}
+
+[node name="EnterButton" type="Sprite2D" unique_id=2020556622]
 texture = ExtResource("3")
 hframes = 2
 frame = 1
 script = ExtResource("2")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/RESET = SubResource("1")
-anims/press = SubResource("2")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=196384970]
+libraries/ = SubResource("AnimationLibrary_qeqfb")
 
-[node name="Icon" type="Sprite2D" parent="."]
+[node name="Icon" type="Sprite2D" parent="." unique_id=1208127071]
 texture = ExtResource("1")
