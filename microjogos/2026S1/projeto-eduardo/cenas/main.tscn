@@ -1,4 +1,73 @@
 [gd_scene format=3 uid="uid://c1opor2rcp2hs"]
 
+[ext_resource type="Texture2D" uid="uid://doq1e3kjpj5tq" path="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/backgorund.webp" id="1_8e78m"]
+[ext_resource type="Script" uid="uid://bkqes02cu6a4h" path="res://microjogos/2026S1/projeto-eduardo/cenas/scripts/player.gd" id="2_vhlfe"]
+[ext_resource type="Texture2D" uid="uid://cus8ad0miinn4" path="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/personagem_temp.webp" id="3_gtvp5"]
+[ext_resource type="Texture2D" uid="uid://78pcdq7l0mad" path="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/container_temp.webp" id="4_21mrh"]
+[ext_resource type="Texture2D" uid="uid://ccub4vehscfga" path="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/virus_temp.webp" id="5_m70oi"]
+[ext_resource type="Texture2D" uid="uid://du6yixuxkvb3m" path="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/zumbi_temp.webp" id="6_4yxf1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_275yj"]
+size = Vector2(130, 207)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_doi7i"]
+size = Vector2(289, 197)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8e78m"]
+size = Vector2(227, 918)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4os24"]
+size = Vector2(118, 210)
+
 [node name="Main" type="Node2D" unique_id=1597121372]
 texture_filter = 1
+
+[node name="Backgorund" type="Sprite2D" parent="." unique_id=871043816]
+position = Vector2(958, 538.75006)
+scale = Vector2(4.88718, 4.884616)
+texture = ExtResource("1_8e78m")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1720369450]
+position = Vector2(730, 490)
+script = ExtResource("2_vhlfe")
+
+[node name="sprite player" type="Sprite2D" parent="Player" unique_id=1951027167]
+position = Vector2(0.99998474, -1.9999852)
+scale = Vector2(1.4010991, 1.2521368)
+texture = ExtResource("3_gtvp5")
+
+[node name="hitbox player" type="CollisionShape2D" parent="Player" unique_id=352802844]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_275yj")
+
+[node name="Caixa" type="StaticBody2D" parent="." unique_id=138071633]
+position = Vector2(1081, 514)
+
+[node name="sprite caixa" type="Sprite2D" parent="Caixa" unique_id=121578146]
+position = Vector2(-5, -7)
+texture = ExtResource("4_21mrh")
+
+[node name="hitbox caixa" type="CollisionShape2D" parent="Caixa" unique_id=1024467746]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_doi7i")
+
+[node name="virus do ib" type="Area2D" parent="." unique_id=1991314190]
+position = Vector2(8, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="virus do ib" unique_id=1664529236]
+position = Vector2(146, 545)
+shape = SubResource("RectangleShape2D_8e78m")
+
+[node name="sprite virus do ib" type="Sprite2D" parent="virus do ib" unique_id=235902542]
+position = Vector2(135.5, 539.5)
+scale = Vector2(0.9131945, 4.5854697)
+texture = ExtResource("5_m70oi")
+
+[node name="zumbi" type="CharacterBody2D" parent="." unique_id=73004937]
+position = Vector2(1552, 169)
+
+[node name="sprite zumbi" type="Sprite2D" parent="zumbi" unique_id=2041943081]
+texture = ExtResource("6_4yxf1")
+
+[node name="hitbox zumbi" type="CollisionShape2D" parent="zumbi" unique_id=1591633801]
+shape = SubResource("RectangleShape2D_4os24")
