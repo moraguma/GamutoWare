@@ -489,14 +489,14 @@ script = ExtResource("6")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Gamuturai"]
 libraries = {
-"": SubResource("AnimationLibrary_k7gop")
+&"": SubResource("AnimationLibrary_k7gop")
 }
 
 [node name="Folha" type="CPUParticles2D" parent="."]
 position = Vector2(2020, 540)
 amount = 32
-lifetime = 5.0
 texture = ExtResource("8")
+lifetime = 5.0
 emission_shape = 3
 emission_rect_extents = Vector2(1, 600)
 direction = Vector2(-1, 0)
@@ -512,8 +512,8 @@ scale_amount_max = 3.0
 [node name="Folha(amongus)" type="CPUParticles2D" parent="."]
 position = Vector2(2020, 540)
 amount = 4
-lifetime = 5.0
 texture = ExtResource("11_7ysg3")
+lifetime = 5.0
 emission_shape = 3
 emission_rect_extents = Vector2(1, 600)
 direction = Vector2(-1, 0)

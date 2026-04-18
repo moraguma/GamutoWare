@@ -1,11 +1,7 @@
 extends Node2D
 
 
-signal win
-signal lose
 
-const WIDTH = 1920
-const HEIGHT = 1080
 
 const Target = preload("res://microjogos/demo/tiro_ao_alvo/cenas/Alvo.tscn")
 const TOTAL_TARGETS = 4
@@ -28,12 +24,4 @@ func _ready():
 func register_hit():
 	hits += 1
 	if hits >= TOTAL_TARGETS:
-		register_win()
-
-
-func register_win():
-	emit_signal("win")
-
-func register_lose():
-	emit_signal("lose")
-
+		Minigames.register_win(self)

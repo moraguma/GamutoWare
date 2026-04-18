@@ -11,3 +11,4 @@ credits_en = "Game crédits"
 start_message_pt = &"FAÇA ALGO!"
 start_message_en = &"DO SOMETHING!"
 difficulty = 0
+screen_dimensions = Vector2i(1920, 1080)

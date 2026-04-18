@@ -1,14 +1,5 @@
 extends Node2D
 
-
-signal win
-signal lose
-
-
-const WIDTH = 160
-const HEIGHT = 90
-
-
 const CURSOR_LERP_WEIGHT = 0.3
 const PASSWORD_LENGTH = 3
 const MAX_LENGTH = 3
@@ -89,7 +80,7 @@ func erase():
 func enter():
 	if input == correct_password:
 		enabled = false
-		emit_signal("win")
+		Minigames.register_win(self)
 		
 		door_animation_player.play("close")
 	else:

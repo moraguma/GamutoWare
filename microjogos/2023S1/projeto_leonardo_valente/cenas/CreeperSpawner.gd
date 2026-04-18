@@ -22,10 +22,10 @@ func _timeout_explosao():
 		i.explode()
 	if(perdeu):
 		$"../Player".morrer()
-		$"..".register_lose()
+		Minigames.register_lose(self)
 		#print("morreu")
 	else:
-		$"..".register_win()
+		Minigames.register_win(self)
 		
 		#print("viveu")
 

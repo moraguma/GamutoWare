@@ -1,10 +1,23 @@
-[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=3 format=3]
+<<<<<<< HEAD
+<<<<<<< HEAD
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=3 format=3 uid="uid://2g1ukvwmscfq"]
 
-[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_rc2nu"]
-[ext_resource type="PackedScene" path="res://microjogos/godotware/Simon/Main.tscn" id="1_x3ipl"]
+=======
+[gd_resource type="Resource" script_class="MicrogameAsset" format=3 uid="uid://dp8y5s1m0sp4e"]
+
+[ext_resource type="Texture2D" uid="uid://jd6dmhpdjnje" path="res://microjogos/godotware/Simon/capa.png" id="1_pinp6"]
+>>>>>>> dcd945ec (Add missing cover to Simon Says microgame (godotware/Simon))
+=======
+[gd_resource type="Resource" script_class="MicrogameAsset" format=3 uid="uid://dp8y5s1m0sp4e"]
+
+[ext_resource type="Texture2D" uid="uid://jd6dmhpdjnje" path="res://microjogos/godotware/Simon/capa.png" id="1_pinp6"]
+>>>>>>> master
+[ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_rc2nu"]
+[ext_resource type="PackedScene" uid="uid://m56hivov4ion" path="res://microjogos/godotware/Simon/Main.tscn" id="1_x3ipl"]
 
 [resource]
 script = ExtResource("1_rc2nu")
+cover = ExtResource("1_pinp6")
 title_pt = &"Genius"
 title_en = &"Simon Says"
 credits_pt = "Criado por: Alec
@@ -25,3 +38,5 @@ start_message_pt = &"IMITE!"
 start_message_en = &"SIMON SAYS..."
 main_scene = ExtResource("1_x3ipl")
 difficulty = 0
+screen_dimensions = Vector2i(640, 360)
+

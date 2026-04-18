@@ -29,3 +29,4 @@ start_message_pt = &"FOGE!"
 start_message_en = &"GET OUT!"
 main_scene = ExtResource("2_tcnpy")
 difficulty = 0
+screen_dimensions = Vector2i(480,270)

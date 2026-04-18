@@ -28,8 +28,8 @@ func _process(_delta):
 
 func _physics_process(delta):
 	
-	var directionx = Input.get_axis("ui_left","ui_right")
-	var directiony = Input.get_axis("ui_up","ui_down")
+	var directionx = Input.get_axis("esquerda","direita")
+	var directiony = Input.get_axis("cima","baixo")
 	velocity.y = directiony * SPEED
 	velocity.x = directionx * SPEED
 	#velocity.y = move_toward(velocity.y, 0, SPEED)
@@ -41,7 +41,7 @@ func coletar(body):
 	$quack.play()
 	c=c+1
 	if c>=5:
-		get_parent().register_win() # Volta para o Node principal e chama a funcao register_win enviando o sinal para o GamutoWare
+		Minigames.register_win(self) 
 	return c
 	
 

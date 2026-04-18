@@ -25,7 +25,7 @@ func _physics_process(_delta):
 		if bike:
 			# if the bike hits you, you die.
 			print("lose")
-			emit_signal("lose")
+			Minigames.register_lose(self)
 			get_node("CollisionShape2D").disabled = true
 			get_node("Bike Bell").play()
 			active = false

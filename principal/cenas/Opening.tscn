@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b3q3an4syknyy"]
+[gd_scene format=3 uid="uid://b3q3an4syknyy"]
 
 [ext_resource type="FontFile" uid="uid://blcw2hkcbcxid" path="res://principal/recursos/fonts/stop_bullying/Stop Bullying.otf" id="1"]
 [ext_resource type="Texture2D" uid="uid://c2sgtas737d1o" path="res://principal/recursos/sprites/gamuxlogo.png" id="2"]
@@ -7,6 +7,15 @@
 
 [sub_resource type="FontFile" id="1"]
 fallbacks = Array[Font]([ExtResource("1")])
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -172,13 +181,13 @@ _data = {
 &"opening": SubResource("4")
 }
 
-[node name="Opening" type="Node2D"]
+[node name="Opening" type="Node2D" unique_id=1459238560]
 script = ExtResource("4")
 
-[node name="MoragumaContainer" type="Node2D" parent="."]
+[node name="MoragumaContainer" type="Node2D" parent="." unique_id=2107391730]
 position = Vector2(960, 614)
 
-[node name="Moraguma" type="RichTextLabel" parent="MoragumaContainer"]
+[node name="Moraguma" type="RichTextLabel" parent="MoragumaContainer" unique_id=229653021]
 offset_left = -960.0
 offset_top = -46.2065
 offset_right = 960.0
@@ -188,15 +197,13 @@ theme_override_font_sizes/normal_font_size = 64
 bbcode_enabled = true
 text = "[center][wave]@moraguma"
 
-[node name="Logo" type="Sprite2D" parent="."]
+[node name="Logo" type="Sprite2D" parent="." unique_id=244024972]
 texture = ExtResource("2")
 
-[node name="Gamux" type="Sprite2D" parent="."]
+[node name="Gamux" type="Sprite2D" parent="." unique_id=1870485260]
 texture = ExtResource("3")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_s2r1r")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=256948993]
+libraries/ = SubResource("AnimationLibrary_s2r1r")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=209788031]

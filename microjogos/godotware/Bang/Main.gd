@@ -1,13 +1,5 @@
 extends Node2D
 
-
-signal win
-signal lose
-
-
-const WIDTH = 640
-const HEIGHT = 360
-
 const SHOOT_TIME = 0.6
 const MIN_WAIT_TIME = 2
 const MAX_WAIT_TIME = 5
@@ -55,7 +47,7 @@ func _input(event):
 		
 		if set:
 			animated_sprite.set_animation("win")
-			emit_signal("win")
+			Minigames.register_win(self)
 		else:
 			animated_sprite.set_animation("dodge")
 			music.stop()

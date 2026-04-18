@@ -25,13 +25,13 @@ func _process(delta):
 	look_at(get_global_mouse_pos())
 	
 	# increase/decrease speed by acceleration depending on the keys pressed
-	if Input.is_key_pressed(KEY_W) or Input.is_action_pressed("ui_up"):
+	if Input.is_key_pressed(KEY_W) or Input.is_action_pressed("cima"):
 		speed.y -= ACC * delta
-	if Input.is_key_pressed(KEY_D) or Input.is_action_pressed("ui_right"):
+	if Input.is_key_pressed(KEY_D) or Input.is_action_pressed("direita"):
 		speed.x += ACC * delta
-	if Input.is_key_pressed(KEY_S) or Input.is_action_pressed("ui_down"):
+	if Input.is_key_pressed(KEY_S) or Input.is_action_pressed("baixo"):
 		speed.y += ACC * delta
-	if Input.is_key_pressed(KEY_A) or Input.is_action_pressed("ui_left"):
+	if Input.is_key_pressed(KEY_A) or Input.is_action_pressed("esquerda"):
 		speed.x -= ACC * delta
 
 	# if the ship is out of screen, kill it!

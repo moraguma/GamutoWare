@@ -1,6 +1,4 @@
 extends Node2D
-signal win
-signal lose
 
 var resp = ""
 var jogador = ""
@@ -105,10 +103,10 @@ func _process(delta):
 		
 		if resp == jogador:
 			jogo = "win"
-			win.emit()
+			Minigames.register_win(self)
 		else:
 			jogo ="lose"
-			lose.emit()
+			Minigames.register_lose(self)
 		
 	
 	

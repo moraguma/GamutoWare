@@ -6,11 +6,6 @@ const Car = preload("res://microjogos/demo/frogger/cenas/Car.tscn")
 
 const TURNS_PER_SPAWN = 3
 
-
-signal win
-signal lose
-
-
 const WIDTH = 256
 const HEIGHT = 144
 
@@ -64,11 +59,3 @@ func spawn_car_y(x_pos):
 	new_car.position = Vector2(x_pos, STEP_SIZE * 1.5 + STEP_SIZE * (randi() % ((HEIGHT - 3 * STEP_SIZE) / STEP_SIZE)))
 	
 	car_container.add_child(new_car)
-
-
-func register_win():
-	emit_signal("win")
-
-
-func register_lose():
-	emit_signal("lose")

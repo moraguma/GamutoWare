@@ -21,17 +21,17 @@ func _process(delta):
 			
 			if 880 < position.x and position.x< 1038: 
 				gamuturai_animation_player.play("win")
-				base.emit_signal("win")
+				Minigames.register_win(self)
 				
 				print("você é um tremendo batutinha")
 			elif 724 <= position.x and position.x <= 880 or 1038 <= position.x and position.x  <= 1210:
 				gamuturai_animation_player.play("half")
-				base.emit_signal("win")
+				Minigames.register_win(self)
 				
 				print("você é quase um batutinha")
 			else:
 				gamuturai_animation_player.play("lose")
-				base.emit_signal("lose")
+				Minigames.register_lose(self)
 				
 				print("você não é um batutinha")
 
