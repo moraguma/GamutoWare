@@ -1,13 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cf5b30dfvownl"]
-
-[sub_resource type="Resource" id="Resource_8q506"]
-metadata/__load_path__ = "res://minigames/Hammer/Main.gd"
-
-[sub_resource type="Resource" id="Resource_jihtd"]
-metadata/__load_path__ = "res://minigames/Hammer/wood-background.png"
-
-[sub_resource type="Resource" id="Resource_lhcmd"]
-metadata/__load_path__ = "res://minigames/Hammer/arrow.png"
+[gd_scene format=3 uid="uid://cf5b30dfvownl"]
 
 [sub_resource type="Animation" id="1"]
 length = 3.0
@@ -26,45 +17,23 @@ tracks/0/keys = {
 "values": [Vector2(20, 150), Vector2(620, 150), Vector2(20, 150)]
 }
 
-[sub_resource type="Resource" id="Resource_whthb"]
-metadata/__load_path__ = "res://minigames/Hammer/barred.png"
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8q506"]
+_data = {
+&"Move": SubResource("1")
+}
 
-[sub_resource type="Resource" id="Resource_6gqof"]
-metadata/__load_path__ = "res://minigames/Hammer/bargreen.png"
+[node name="Main" type="Node2D" unique_id=38968735]
 
-[node name="Main" type="Node2D"]
-script/script = SubResource("Resource_8q506")
-NAME = "Hammer"
-INSTRUCTION = "Hit the nail!"
-DURATION = 5
-TIMEOUT_WIN = false
-USE_KEYS_HUD = true
-USE_MOUSE_HUD = false
-
-[node name="background" type="Sprite2D" parent="."]
-texture = SubResource("Resource_jihtd")
+[node name="background" type="Sprite2D" parent="." unique_id=1943756577]
 centered = false
 
-[node name="arrow" type="Sprite2D" parent="."]
-transform/pos = Vector2(20, 150)
-texture = SubResource("Resource_lhcmd")
+[node name="arrow" type="Sprite2D" parent="." unique_id=1943455271]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="arrow"]
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
-anims/Move = SubResource("1")
-playback/active = true
-playback/speed = 1.0
-blend_times = []
-autoplay = ""
+[node name="AnimationPlayer" type="AnimationPlayer" parent="arrow" unique_id=1993062492]
+libraries/ = SubResource("AnimationLibrary_8q506")
 
-[node name="barred" type="Sprite2D" parent="."]
-transform/pos = Vector2(20, 180)
-texture = SubResource("Resource_whthb")
+[node name="barred" type="Sprite2D" parent="." unique_id=636319345]
 centered = false
 
-[node name="bargreen" type="Sprite2D" parent="."]
-transform/pos = Vector2(250, 180)
-texture = SubResource("Resource_6gqof")
+[node name="bargreen" type="Sprite2D" parent="." unique_id=1471217548]
 centered = false

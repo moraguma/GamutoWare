@@ -1,11 +1,11 @@
-[gd_scene load_steps=33 format=3 uid="uid://cxoiffe5hbttt"]
+[gd_scene format=3 uid="uid://cxoiffe5hbttt"]
 
 [ext_resource type="Script" uid="uid://cay6dx45gk4ar" path="res://microjogos/moraguma/candle prick/cenas/scripts/Game.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://ccmq78qsk4i1m" path="res://microjogos/moraguma/candle prick/recursos/sprites/tiles.png" id="2"]
 [ext_resource type="PackedScene" uid="uid://dv28f7nw1t7i1" path="res://microjogos/moraguma/candle prick/cenas/Player.tscn" id="3"]
 [ext_resource type="Script" uid="uid://by2u6ptr1gdw4" path="res://microjogos/moraguma/candle prick/cenas/scripts/Camera.gd" id="4"]
 [ext_resource type="PackedScene" uid="uid://cjme8wnqg17an" path="res://microjogos/moraguma/candle prick/cenas/Candle.tscn" id="5"]
-[ext_resource type="PackedScene" path="res://microjogos/moraguma/candle prick/cenas/WinningArea.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://bm21hluyfdqc2" path="res://microjogos/moraguma/candle prick/cenas/WinningArea.tscn" id="6"]
 [ext_resource type="PackedScene" uid="uid://dtj3lc878135i" path="res://microjogos/moraguma/candle prick/cenas/Flame.tscn" id="7"]
 [ext_resource type="Texture2D" uid="uid://dhqayss1khvwq" path="res://microjogos/moraguma/candle prick/recursos/sprites/decoration.png" id="8"]
 [ext_resource type="Texture2D" uid="uid://dw6oygeioj0or" path="res://microjogos/moraguma/candle prick/recursos/sprites/flame.png" id="9_lkuhy"]
@@ -426,46 +426,46 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Game" type="Node2D"]
+[node name="Game" type="Node2D" unique_id=818841649]
 texture_filter = 1
 script = ExtResource("1")
 
-[node name="Camera3D" type="Camera2D" parent="."]
+[node name="Camera3D" type="Camera2D" parent="." unique_id=1358541070]
 texture_filter = 1
 position = Vector2(120, 67.5)
 script = ExtResource("4")
 
-[node name="Tiles" type="TileMap" parent="."]
+[node name="Tiles" type="TileMap" parent="." unique_id=355812437]
 texture_filter = 1
 tile_set = SubResource("1")
 format = 2
 layer_0/tile_data = PackedInt32Array(-1, 13, 0, -65536, 13, 0, -65535, 13, 0, -65534, 13, 0, -65533, 13, 0, -65532, 13, 0, -65531, 13, 0, -65530, 13, 0, -65529, 13, 0, -65528, 13, 0, -65527, 13, 0, -65526, 13, 0, -65525, 13, 0, -65524, 13, 0, -65523, 13, 0, -65522, 13, 0, -65521, 13, 0, 65535, 13, 0, 0, 13, 0, 1, 13, 0, 2, 13, 0, 3, 13, 0, 4, 13, 0, 5, 13, 0, 6, 13, 0, 7, 13, 0, 8, 13, 0, 9, 13, 0, 10, 13, 0, 11, 13, 0, 12, 13, 0, 13, 13, 0, 14, 13, 0, 15, 13, 0, 131071, 13, 0, 65536, 13, 0, 65537, 13, 0, 65538, 13, 0, 65539, 13, 0, 65540, 13, 0, 65541, 13, 0, 65542, 13, 0, 65543, 9, 0, 65544, 13, 0, 65545, 13, 0, 65546, 13, 0, 65547, 13, 0, 65548, 13, 0, 65549, 13, 0, 65550, 13, 0, 65551, 13, 0, 196607, 13, 0, 131072, 13, 0, 131073, 13, 0, 131074, 13, 0, 131075, 13, 0, 131076, 13, 0, 131077, 13, 0, 131078, 13, 0, 131079, 8, 0, 131080, 13, 0, 131081, 13, 0, 131082, 13, 0, 131083, 13, 0, 131084, 13, 0, 131085, 13, 0, 131086, 13, 0, 131087, 13, 0, 262143, 13, 0, 196608, 13, 0, 196609, 13, 0, 196610, 13, 0, 196611, 13, 0, 196612, 13, 0, 196613, 13, 0, 196614, 13, 0, 196615, 9, 0, 196616, 14, 0, 196617, 14, 0, 196618, 13, 0, 196619, 13, 0, 196620, 13, 0, 196621, 13, 0, 196622, 13, 0, 196623, 13, 0, 327679, 13, 0, 262144, 13, 0, 262145, 13, 0, 262146, 13, 0, 262147, 13, 0, 262148, 13, 0, 262149, 13, 0, 262150, 11, 0, 262151, 10, 0, 262152, 11, 0, 262153, 15, 0, 262154, 14, 0, 262155, 13, 0, 262156, 13, 0, 262157, 13, 0, 262158, 13, 0, 262159, 13, 0, 393215, 13, 0, 327680, 13, 0, 327681, 13, 0, 327682, 8, 0, 327683, 9, 0, 327684, 8, 0, 327685, 9, 0, 327686, 10, 0, 327687, 11, 0, 327688, 10, 0, 327689, 9, 0, 327690, 8, 0, 327691, 9, 0, 327692, 8, 0, 327693, 13, 0, 327694, 13, 0, 327695, 13, 0, 458751, 14, 0, 393216, 14, 0, 393217, 13, 0, 393218, 13, 0, 393219, 12, 0, 393220, 13, 0, 393221, 12, 0, 393222, 11, 0, 393223, 10, 0, 393224, 11, 0, 393225, 12, 0, 393226, 13, 0, 393227, 12, 0, 393228, 13, 0, 393229, 13, 0, 393230, 13, 0, 393231, 13, 0, 524287, 15, 0, 458752, 15, 0, 458753, 14, 0, 458754, 14, 0, 458755, 14, 0, 458756, 13, 0, 458757, 13, 0, 458758, 12, 0, 458759, 13, 0, 458760, 12, 0, 458761, 13, 0, 458762, 13, 0, 458763, 13, 0, 458764, 14, 0, 458765, 14, 0, 458766, 14, 0, 458767, 14, 0, 589823, 15, 0, 524288, 15, 0, 524289, 15, 0, 524290, 15, 0, 524291, 15, 0, 524292, 14, 0, 524293, 14, 0, 524294, 13, 0, 524295, 13, 0, 524296, 13, 0, 524297, 13, 0, 524298, 14, 0, 524299, 14, 0, 524300, 15, 0, 524301, 15, 0, 524302, 15, 0, 524303, 15, 0)
 
-[node name="Decoration" type="TileMap" parent="."]
+[node name="Decoration" type="TileMap" parent="." unique_id=1724182499]
 texture_filter = 1
 tile_set = SubResource("2")
 format = 2
 layer_0/tile_data = PackedInt32Array(-65535, 6, 0, -65534, 6, 0, -65523, 6, 0, 1, 7, 0, 2, 6, 0, 13, 6, 0, 65538, 6, 0, 65549, 7, 0, 131074, 7, 0, 458753, 11, 0, 524289, 10, 0, 524302, 9, 0)
 
-[node name="WinningArea" parent="." instance=ExtResource("6")]
+[node name="WinningArea" parent="." unique_id=156400166 instance=ExtResource("6")]
 texture_filter = 1
 position = Vector2(120, 24)
 
-[node name="Player" parent="." instance=ExtResource("3")]
+[node name="Player" parent="." unique_id=1132715353 instance=ExtResource("3")]
 texture_filter = 1
 position = Vector2(120, 40)
 
-[node name="Candle" parent="." instance=ExtResource("5")]
+[node name="Candle" parent="." unique_id=1417342071 instance=ExtResource("5")]
 texture_filter = 1
 position = Vector2(120, 56)
 
-[node name="Flame" parent="." instance=ExtResource("7")]
+[node name="Flame" parent="." unique_id=700593850 instance=ExtResource("7")]
 texture_filter = 1
 position = Vector2(232, 123)
 sprite_frames = SubResource("7")
 frame = 4
 
-[node name="Flame2" parent="." instance=ExtResource("7")]
+[node name="Flame2" parent="." unique_id=717989781 instance=ExtResource("7")]
 texture_filter = 1
 position = Vector2(24, 110)
 sprite_frames = SubResource("7")

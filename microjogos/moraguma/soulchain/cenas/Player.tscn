@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cvpqefwhs586l"]
+[gd_scene format=3 uid="uid://cvpqefwhs586l"]
 
 [ext_resource type="AudioStream" uid="uid://bfvijijvatpy7" path="res://microjogos/moraguma/soulchain/recursos/sounds/sfx/landing.wav" id="1"]
 [ext_resource type="AudioStream" uid="uid://byruvwtu5laim" path="res://microjogos/moraguma/soulchain/recursos/sounds/sfx/death.wav" id="2"]
@@ -361,52 +361,50 @@ particles_anim_h_frames = 9
 particles_anim_v_frames = 1
 particles_anim_loop = false
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" unique_id=66450321]
 z_index = 1
 texture_filter = 1
 script = ExtResource("7")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=429975413]
 texture = ExtResource("8")
 hframes = 8
 vframes = 16
 frame = 17
 
-[node name="Hitbox" type="CollisionShape2D" parent="."]
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=271418249]
 position = Vector2(0, 1)
 shape = SubResource("13")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_dk34e")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=350930104]
+libraries/ = SubResource("AnimationLibrary_dk34e")
 script = ExtResource("6")
 
-[node name="DeathSound" type="AudioStreamPlayer" parent="."]
+[node name="DeathSound" type="AudioStreamPlayer" parent="." unique_id=1853427137]
 stream = ExtResource("2")
 
-[node name="FootstepSound" type="AudioStreamPlayer" parent="."]
+[node name="FootstepSound" type="AudioStreamPlayer" parent="." unique_id=1345787699]
 stream = ExtResource("4")
 volume_db = -15.0
 
-[node name="JumpSound" type="AudioStreamPlayer" parent="."]
+[node name="JumpSound" type="AudioStreamPlayer" parent="." unique_id=1906786382]
 stream = ExtResource("3")
 
-[node name="LandingSound" type="AudioStreamPlayer" parent="."]
+[node name="LandingSound" type="AudioStreamPlayer" parent="." unique_id=788807848]
 stream = ExtResource("1")
 volume_db = 12.0
 
-[node name="HitSound" type="AudioStreamPlayer" parent="."]
+[node name="HitSound" type="AudioStreamPlayer" parent="." unique_id=1625566206]
 stream = ExtResource("5")
 
-[node name="DeathParticles" type="CPUParticles2D" parent="."]
+[node name="DeathParticles" type="CPUParticles2D" parent="." unique_id=1737753655]
 material = SubResource("14")
 emitting = false
 amount = 16
+texture = ExtResource("10")
 lifetime = 5.0
 one_shot = true
 explosiveness = 1.0
-texture = ExtResource("10")
 spread = 180.0
 gravity = Vector2(0, 0)
 initial_velocity_min = 5.0

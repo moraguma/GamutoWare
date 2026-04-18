@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://djgr8pfav82d5"]
+[gd_scene format=3 uid="uid://djgr8pfav82d5"]
 
 [ext_resource type="Script" uid="uid://bhyew2sgyr8cq" path="res://microjogos/2025S1/paillo_dice/cenas/scripts/entidades.gd" id="1_6mo7f"]
 [ext_resource type="Texture2D" uid="uid://cd8e16xpqbk3t" path="res://microjogos/2025S1/paillo_dice/recursos/imagens/tabuleiro2.png" id="1_ieclo"]
@@ -163,67 +163,67 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=2041101235]
 texture_filter = 1
 script = ExtResource("1_mkbwt")
 
-[node name="Tabuleiro" type="AnimatedSprite2D" parent="."]
+[node name="Tabuleiro" type="AnimatedSprite2D" parent="." unique_id=1206027969]
 position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_etbqd")
 autoplay = "default"
 frame_progress = 0.463792
 
-[node name="dadometro" type="AnimatedSprite2D" parent="."]
+[node name="dadometro" type="AnimatedSprite2D" parent="." unique_id=1898538732]
 position = Vector2(281, 849)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_sl2b6")
 animation = &"rolls"
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Node2D" type="Node2D" parent="." unique_id=1306567090]
 script = ExtResource("1_6mo7f")
 
-[node name="Dado1" type="AnimatedSprite2D" parent="Node2D"]
+[node name="Dado1" type="AnimatedSprite2D" parent="Node2D" unique_id=820676825]
 position = Vector2(1151, 558)
 scale = Vector2(2.42143, 2.45)
 sprite_frames = SubResource("SpriteFrames_buvel")
 animation = &"values"
 script = ExtResource("16_hdkc0")
 
-[node name="Dado2" type="AnimatedSprite2D" parent="Node2D"]
+[node name="Dado2" type="AnimatedSprite2D" parent="Node2D" unique_id=1088495142]
 position = Vector2(779, 429)
 scale = Vector2(2.42143, 2.45)
 sprite_frames = SubResource("SpriteFrames_buvel")
 animation = &"values"
 script = ExtResource("16_hdkc0")
 
-[node name="Dado3" type="AnimatedSprite2D" parent="Node2D"]
+[node name="Dado3" type="AnimatedSprite2D" parent="Node2D" unique_id=1880244381]
 position = Vector2(902, 687)
 scale = Vector2(2.42143, 2.45)
 sprite_frames = SubResource("SpriteFrames_buvel")
 animation = &"values"
 script = ExtResource("16_hdkc0")
 
-[node name="Poison1" type="AnimatedSprite2D" parent="Node2D"]
+[node name="Poison1" type="AnimatedSprite2D" parent="Node2D" unique_id=1567043032]
 position = Vector2(1152, 686)
 scale = Vector2(2.3, 2.15714)
 sprite_frames = SubResource("SpriteFrames_2qa26")
 animation = &"poison"
 script = ExtResource("24_aho0k")
 
-[node name="Poison2" type="AnimatedSprite2D" parent="Node2D"]
+[node name="Poison2" type="AnimatedSprite2D" parent="Node2D" unique_id=204004680]
 position = Vector2(904, 815)
 scale = Vector2(2.3, 2.15714)
 sprite_frames = SubResource("SpriteFrames_2qa26")
 animation = &"poison"
 script = ExtResource("24_aho0k")
 
-[node name="Icon" type="Sprite2D" parent="Node2D" node_paths=PackedStringArray("dados")]
+[node name="Icon" type="Sprite2D" parent="Node2D" unique_id=198814821 node_paths=PackedStringArray("dados")]
 position = Vector2(645, 300)
 scale = Vector2(1.5, 1.372)
 texture = ExtResource("1_npcfk")
 script = ExtResource("3_qa4ji")
 dados = [NodePath("../Dado1"), NodePath("../Dado3"), NodePath("../Dado2")]
 
-[node name="Musica" type="AudioStreamPlayer" parent="."]
+[node name="Musica" type="AudioStreamPlayer" parent="." unique_id=1464474109]
 stream = ExtResource("31_etbqd")
 autoplay = true

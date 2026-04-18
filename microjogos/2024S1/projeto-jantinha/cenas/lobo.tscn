@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene format=3 uid="uid://bihgb5yw7qj0s"]
 
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-jantinha/recursos/lobo.png" id="1_i1rf2"]
+[ext_resource type="Texture2D" uid="uid://clxqlp1vp0abm" path="res://microjogos/2024S1/projeto-jantinha/recursos/lobo.png" id="1_i1rf2"]
 
 [sub_resource type="GDScript" id="GDScript_8spyn"]
 script/source = "extends CharacterBody2D
@@ -26,22 +26,22 @@ func _physics_process(delta):
 [sub_resource type="CircleShape2D" id="CircleShape2D_p711q"]
 radius = 106.075
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=717512943]
 
-[node name="CorpoLobo" type="CharacterBody2D" parent="."]
+[node name="CorpoLobo" type="CharacterBody2D" parent="." unique_id=783028666]
 script = SubResource("GDScript_8spyn")
 
-[node name="spritelobo" type="Sprite2D" parent="CorpoLobo"]
+[node name="spritelobo" type="Sprite2D" parent="CorpoLobo" unique_id=1378764323]
 texture_filter = 3
 position = Vector2(-37, 71)
 scale = Vector2(12.1541, 13.6306)
 texture = ExtResource("1_i1rf2")
 
-[node name="hitboxlobo" type="Area2D" parent="CorpoLobo"]
+[node name="hitboxlobo" type="Area2D" parent="CorpoLobo" unique_id=140913873]
 monitoring = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CorpoLobo/hitboxlobo"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CorpoLobo/hitboxlobo" unique_id=97041638]
 shape = SubResource("CircleShape2D_p711q")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CorpoLobo"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CorpoLobo" unique_id=1233685038]
 shape = SubResource("CircleShape2D_p711q")

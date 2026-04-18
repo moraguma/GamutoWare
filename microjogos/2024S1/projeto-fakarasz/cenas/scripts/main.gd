@@ -53,5 +53,3 @@ func _on_Gamutos_area_entered(area):
 func _on_Gol_area_entered(area):
 	area.queue_free()
 	Minigames.register_win(self)
-
-

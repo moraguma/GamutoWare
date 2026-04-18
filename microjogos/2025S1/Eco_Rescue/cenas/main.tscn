@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dh6netreo7fu4"]
+[gd_scene format=3 uid="uid://dh6netreo7fu4"]
 
 [ext_resource type="Script" uid="uid://cucfvuoi148np" path="res://microjogos/2025S1/Eco_Rescue/cenas/scripts/main.gd" id="1_eqogf"]
 [ext_resource type="Texture2D" uid="uid://d1yp8f1ecddb5" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/background.png" id="2_alim5"]
@@ -16,70 +16,70 @@ size = Vector2(372, 590)
 [sub_resource type="CircleShape2D" id="CircleShape2D_xllak"]
 radius = 73.8241
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1958833675]
 texture_filter = 1
 script = ExtResource("1_eqogf")
 
-[node name="fundo" type="Sprite2D" parent="."]
+[node name="fundo" type="Sprite2D" parent="." unique_id=1562542574]
 position = Vector2(960, 540)
 texture = ExtResource("2_alim5")
 
-[node name="Recycle-bins-trash-sorting" type="Sprite2D" parent="."]
+[node name="Recycle-bins-trash-sorting" type="Sprite2D" parent="." unique_id=178886863]
 position = Vector2(960, 826.15)
 texture = ExtResource("2_evdkg")
 
-[node name="Papel" type="Area2D" parent="."]
+[node name="Papel" type="Area2D" parent="." unique_id=1143740039]
 position = Vector2(240, 826.15)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Papel"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Papel" unique_id=108296427]
 shape = SubResource("RectangleShape2D_njsje")
 
-[node name="Metal" type="Area2D" parent="."]
+[node name="Metal" type="Area2D" parent="." unique_id=331111162]
 position = Vector2(720, 826.15)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Metal"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Metal" unique_id=1486298377]
 shape = SubResource("RectangleShape2D_njsje")
 
-[node name="Plastico" type="Area2D" parent="."]
+[node name="Plastico" type="Area2D" parent="." unique_id=538414169]
 position = Vector2(1200, 826.15)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Plastico"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plastico" unique_id=224501332]
 shape = SubResource("RectangleShape2D_njsje")
 
-[node name="Vidro" type="Area2D" parent="."]
+[node name="Vidro" type="Area2D" parent="." unique_id=1822515991]
 position = Vector2(1680, 826.15)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Vidro"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vidro" unique_id=1520517204]
 shape = SubResource("RectangleShape2D_njsje")
 
-[node name="Lixo" type="CharacterBody2D" parent="."]
+[node name="Lixo" type="CharacterBody2D" parent="." unique_id=865673713]
 position = Vector2(720, 199)
 script = ExtResource("3_2ok2m")
 
-[node name="Lata" type="Sprite2D" parent="Lixo"]
+[node name="Lata" type="Sprite2D" parent="Lixo" unique_id=1046592091]
 visible = false
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("18_05nxe")
 
-[node name="Sacola" type="Sprite2D" parent="Lixo"]
+[node name="Sacola" type="Sprite2D" parent="Lixo" unique_id=439139374]
 visible = false
 scale = Vector2(0.27, 0.27)
 texture = ExtResource("13_sg5d1")
 
-[node name="Garrafa" type="Sprite2D" parent="Lixo"]
+[node name="Garrafa" type="Sprite2D" parent="Lixo" unique_id=33016586]
 visible = false
 rotation = 0.453786
 scale = Vector2(0.215, 0.215)
 texture = ExtResource("6_kxpgf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Lixo"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lixo" unique_id=2591777]
 shape = SubResource("CircleShape2D_xllak")
 
-[node name="Win" type="AudioStreamPlayer" parent="."]
+[node name="Win" type="AudioStreamPlayer" parent="." unique_id=1571116507]
 stream = ExtResource("9_evdkg")
 volume_db = -10.0
 
-[node name="Lose" type="AudioStreamPlayer" parent="."]
+[node name="Lose" type="AudioStreamPlayer" parent="." unique_id=1297959746]
 stream = ExtResource("10_e86pc")
 
 [connection signal="body_entered" from="Papel" to="." method="_on_papel_body_entered"]

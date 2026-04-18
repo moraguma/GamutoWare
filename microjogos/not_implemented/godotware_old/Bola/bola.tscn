@@ -1,7 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://dd8a6pj61geh5"]
-
-[sub_resource type="Resource" id="Resource_kc6gl"]
-metadata/__load_path__ = "res://minigames/Bola/bola.gd"
+[gd_scene format=3 uid="uid://dd8a6pj61geh5"]
 
 [sub_resource type="SpriteFrames" id="1"]
 animations = [{
@@ -46,20 +43,14 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Bola" type="Area2D"]
-input/pickable = true
-gravity_direction = Vector2(0, 1)
+[node name="Bola" type="Area2D" unique_id=1580424520]
 gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-script/script = SubResource("Resource_kc6gl")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-frames = SubResource("1")
-animation = "Zero"
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1277016126]
+sprite_frames = SubResource("1")
+animation = &"Zero"
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=912518191]
 process_mode = 1
 wait_time = 2.0
 one_shot = true
-autostart = false

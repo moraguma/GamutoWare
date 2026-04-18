@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c50yxjlea2v3q"]
+[gd_scene format=3 uid="uid://c50yxjlea2v3q"]
 
 [ext_resource type="Script" uid="uid://sg3ote4s6qlw" path="res://microjogos/2024S1/gamufit/cenas/scripts/main.gd" id="1_nu282"]
 [ext_resource type="Texture2D" uid="uid://cg4byqfvvvlq2" path="res://microjogos/2024S1/gamufit/recursos/00026.jpg" id="1_rdm68"]
@@ -18,81 +18,81 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_65jwk"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1704961306]
 position = Vector2(0, 4)
 script = ExtResource("1_nu282")
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="." unique_id=465418522]
 position = Vector2(963.5, 535)
 scale = Vector2(0.530144, 0.52832)
 texture = ExtResource("1_rdm68")
 
-[node name="VerticalBar" type="Node2D" parent="."]
+[node name="VerticalBar" type="Node2D" parent="." unique_id=1065905771]
 position = Vector2(1744, 512)
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="VerticalBar"]
+[node name="Sprite2D" type="Sprite2D" parent="VerticalBar" unique_id=1909497835]
 texture = ExtResource("3_18jmg")
 
-[node name="SmallBar" type="Area2D" parent="."]
+[node name="SmallBar" type="Area2D" parent="." unique_id=2027906188]
 script = ExtResource("3_r1ism")
 
-[node name="Timer" type="Timer" parent="SmallBar"]
+[node name="Timer" type="Timer" parent="SmallBar" unique_id=478015152]
 wait_time = 4.0
 one_shot = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SmallBar"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SmallBar" unique_id=475668379]
 position = Vector2(1744, 377)
 scale = Vector2(11.315, 8.585)
 shape = SubResource("RectangleShape2D_ak12t")
 
-[node name="Sprite2D" type="Sprite2D" parent="SmallBar/CollisionShape2D"]
+[node name="Sprite2D" type="Sprite2D" parent="SmallBar/CollisionShape2D" unique_id=605326871]
 position = Vector2(-1.52588e-05, 0)
 scale = Vector2(0.0883783, 0.117065)
 texture = ExtResource("2_wwrcp")
 
-[node name="Gamuto(icon)" type="CharacterBody2D" parent="."]
+[node name="Gamuto(icon)" type="CharacterBody2D" parent="." unique_id=281580152]
 position = Vector2(1746, 795)
 script = ExtResource("4_cwnfb")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamuto(icon)"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gamuto(icon)" unique_id=1280567988]
 scale = Vector2(7.75477, 7.75477)
 shape = SubResource("CircleShape2D_nbtgq")
 
-[node name="Sprite2D" type="Sprite2D" parent="Gamuto(icon)/CollisionShape2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Gamuto(icon)/CollisionShape2D" unique_id=1568055710]
 position = Vector2(0, -2.16)
 scale = Vector2(0.034, 0.034)
 texture = ExtResource("6_gisyg")
 
-[node name="FloorBar" type="Node2D" parent="."]
+[node name="FloorBar" type="Node2D" parent="." unique_id=2013116767]
 position = Vector2(1741, 906)
 scale = Vector2(16.81, 1.11)
 metadata/_edit_group_ = true
 
-[node name="StaticBody2D" type="StaticBody2D" parent="FloorBar"]
+[node name="StaticBody2D" type="StaticBody2D" parent="FloorBar" unique_id=1729575674]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="FloorBar/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FloorBar/StaticBody2D" unique_id=108368768]
 shape = SubResource("RectangleShape2D_65jwk")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="FloorBar/StaticBody2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="FloorBar/StaticBody2D" unique_id=1119764134]
 position = Vector2(0, -724.825)
 shape = SubResource("RectangleShape2D_65jwk")
 
-[node name="Gahulk" type="Node2D" parent="."]
+[node name="Gahulk" type="Node2D" parent="." unique_id=1022905100]
 position = Vector2(801, 598)
 scale = Vector2(0.265, 0.265)
 script = ExtResource("7_y5gk5")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D-suffering" type="Sprite2D" parent="Gahulk"]
+[node name="Sprite2D-suffering" type="Sprite2D" parent="Gahulk" unique_id=889817643]
 texture = ExtResource("7_22wwl")
 
-[node name="Sprite2D-exercising" type="Sprite2D" parent="Gahulk"]
+[node name="Sprite2D-exercising" type="Sprite2D" parent="Gahulk" unique_id=490759869]
 visible = false
 texture = ExtResource("8_2ehty")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1130469308]
 stream = ExtResource("10_uqrkx")
 autoplay = true
 

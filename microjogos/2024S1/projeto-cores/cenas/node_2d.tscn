@@ -1,8 +1,8 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://bd2gs0813lhwo"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=680214135]
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=42155189]
 z_index = 1
 scale = Vector2(12, 12)
 polygon = PackedVector2Array(1, 1, -1, 1, -1, 1, -1, -1, 1, -1)

@@ -1,12 +1,12 @@
-[gd_scene load_steps=16 format=3]
+[gd_scene format=3 uid="uid://bp8rtu8d5mdjk"]
 
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/player.png" id="1_5mntg"]
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto-asteroids/cenas/scripts/player.gd" id="1_mgqdo"]
-[ext_resource type="PackedScene" path="res://microjogos/2024S1/projeto-asteroids/cenas/bullet.tscn" id="2_iw268"]
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto-asteroids/cenas/scripts/spriteplayer.gd" id="4_prepb"]
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/explosion_sprites.png" id="5_05mas"]
-[ext_resource type="AudioStream" path="res://microjogos/2024S1/projeto-asteroids/recursos/466866__mikee63__enhanced-blaster-2.ogg" id="6_vld3x"]
-[ext_resource type="AudioStream" path="res://microjogos/2024S1/projeto-asteroids/recursos/523091__magnuswaker__shotgun-blast-1.ogg" id="7_wco4p"]
+[ext_resource type="Texture2D" uid="uid://dcd4773grmog7" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/player.png" id="1_5mntg"]
+[ext_resource type="Script" uid="uid://do34h17kej7if" path="res://microjogos/2024S1/projeto-asteroids/cenas/scripts/player.gd" id="1_mgqdo"]
+[ext_resource type="PackedScene" uid="uid://djf7kbwp5qc0c" path="res://microjogos/2024S1/projeto-asteroids/cenas/bullet.tscn" id="2_iw268"]
+[ext_resource type="Script" uid="uid://cqc5eu0ps583d" path="res://microjogos/2024S1/projeto-asteroids/cenas/scripts/spriteplayer.gd" id="4_prepb"]
+[ext_resource type="Texture2D" uid="uid://8p120t3sf7wl" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/explosion_sprites.png" id="5_05mas"]
+[ext_resource type="AudioStream" uid="uid://0tf321pxpcpr" path="res://microjogos/2024S1/projeto-asteroids/recursos/466866__mikee63__enhanced-blaster-2.ogg" id="6_vld3x"]
+[ext_resource type="AudioStream" uid="uid://duxmmq4u5i32u" path="res://microjogos/2024S1/projeto-asteroids/recursos/523091__magnuswaker__shotgun-blast-1.ogg" id="7_wco4p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xov8t"]
 size = Vector2(42, 35)
@@ -61,31 +61,31 @@ animations = [{
 "speed": 7.0
 }]
 
-[node name="Base" type="Node2D"]
+[node name="Base" type="Node2D" unique_id=185379665]
 
-[node name="Player" type="Area2D" parent="."]
+[node name="Player" type="Area2D" parent="." unique_id=350821668]
 script = ExtResource("1_mgqdo")
 Bullet = ExtResource("2_iw268")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=93053157]
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_xov8t")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=2026967336]
 position = Vector2(16, -8)
 texture = ExtResource("1_5mntg")
 script = ExtResource("4_prepb")
 
-[node name="Muzzle" type="Marker2D" parent="Player"]
+[node name="Muzzle" type="Marker2D" parent="Player" unique_id=782529415]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=146704349]
 sprite_frames = SubResource("SpriteFrames_4rav7")
 animation = &"new_animation"
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="Player"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="Player" unique_id=1829450082]
 stream = ExtResource("6_vld3x")
 
-[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer" parent="Player"]
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer" parent="Player" unique_id=1828387174]
 stream = ExtResource("7_wco4p")
 
 [connection signal="body_entered" from="Player" to="Player/Sprite2D" method="_on_player_body_entered"]
