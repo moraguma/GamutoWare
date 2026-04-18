@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://dho7x5jlw0yng"]
+
+[ext_resource type="Texture2D" uid="uid://bsaa5xotr2t6g" path="res://microjogos/2025S1/projeto_milla/capa.png" id="1_hc4nf"]
+[ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_q5idk"]
+[ext_resource type="PackedScene" uid="uid://dwaeb23407t20" path="res://microjogos/2025S1/projeto_milla/cenas/main.tscn" id="2_uv50y"]
+
+[resource]
+script = ExtResource("1_q5idk")
+cover = ExtResource("1_hc4nf")
+title_pt = &"A Menina e as abóboras"
+title_en = &"The girl and the pumpkins"
+credits_pt = "Feito por: Mirella dos Santos Nascimento
+Descrição: As abóboras caem e vc tem que apertar as setas antes que elas chegem no chão.
+
+Audios:
+https://pixabay.com/sound-effects/technology-game-bonus-03-487857/
+https://pixabay.com/sound-effects/film-special-effects-error-mistake-sound-effect-incorrect-answer-437420/
+https://pixabay.com/sound-effects/nature-crows-387253/"
+credits_en = "Made by: Mirella dos Santos Nascimento
+Description: The pumpkins fall and you have to press the arrow keys before they hit the ground.
+
+Audios:
+https://pixabay.com/sound-effects/technology-game-bonus-03-487857/
+https://pixabay.com/sound-effects/film-special-effects-error-mistake-sound-effect-incorrect-answer-437420/
+https://pixabay.com/sound-effects/nature-crows-387253/"
+start_message_pt = &"Pegue as aboboras!"
+start_message_en = &"Get the pumpkins!"
+main_scene = ExtResource("2_uv50y")
+difficulty = 0

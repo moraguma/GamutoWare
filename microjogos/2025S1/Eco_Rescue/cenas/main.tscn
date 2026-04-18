@@ -1,0 +1,88 @@
+[gd_scene load_steps=12 format=3 uid="uid://dh6netreo7fu4"]
+
+[ext_resource type="Script" uid="uid://cucfvuoi148np" path="res://microjogos/2025S1/Eco_Rescue/cenas/scripts/main.gd" id="1_eqogf"]
+[ext_resource type="Texture2D" uid="uid://d1yp8f1ecddb5" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/background.png" id="2_alim5"]
+[ext_resource type="Texture2D" uid="uid://bv55ee5buuvk3" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/recycle-bins-trash-sorting.png" id="2_evdkg"]
+[ext_resource type="Script" uid="uid://c24j7f4q01cmh" path="res://microjogos/2025S1/Eco_Rescue/cenas/scripts/lixo.gd" id="3_2ok2m"]
+[ext_resource type="Texture2D" uid="uid://cgoceq7kvcjub" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/garrafa.png" id="6_kxpgf"]
+[ext_resource type="AudioStream" uid="uid://ccla3u7xwb6h3" path="res://microjogos/2025S1/Eco_Rescue/recursos/sons/venceu.wav" id="9_evdkg"]
+[ext_resource type="AudioStream" uid="uid://kpu0ex6vtww0" path="res://microjogos/2025S1/Eco_Rescue/recursos/sons/perdeu.wav" id="10_e86pc"]
+[ext_resource type="Texture2D" uid="uid://ibqe66v4sslb" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/sacola.png" id="13_sg5d1"]
+[ext_resource type="Texture2D" uid="uid://d2jlw6ph8sicw" path="res://microjogos/2025S1/Eco_Rescue/recursos/imagens/lata.png" id="18_05nxe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_njsje"]
+size = Vector2(372, 590)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xllak"]
+radius = 73.8241
+
+[node name="Main" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_eqogf")
+
+[node name="fundo" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_alim5")
+
+[node name="Recycle-bins-trash-sorting" type="Sprite2D" parent="."]
+position = Vector2(960, 826.15)
+texture = ExtResource("2_evdkg")
+
+[node name="Papel" type="Area2D" parent="."]
+position = Vector2(240, 826.15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Papel"]
+shape = SubResource("RectangleShape2D_njsje")
+
+[node name="Metal" type="Area2D" parent="."]
+position = Vector2(720, 826.15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Metal"]
+shape = SubResource("RectangleShape2D_njsje")
+
+[node name="Plastico" type="Area2D" parent="."]
+position = Vector2(1200, 826.15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plastico"]
+shape = SubResource("RectangleShape2D_njsje")
+
+[node name="Vidro" type="Area2D" parent="."]
+position = Vector2(1680, 826.15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vidro"]
+shape = SubResource("RectangleShape2D_njsje")
+
+[node name="Lixo" type="CharacterBody2D" parent="."]
+position = Vector2(720, 199)
+script = ExtResource("3_2ok2m")
+
+[node name="Lata" type="Sprite2D" parent="Lixo"]
+visible = false
+scale = Vector2(0.21, 0.21)
+texture = ExtResource("18_05nxe")
+
+[node name="Sacola" type="Sprite2D" parent="Lixo"]
+visible = false
+scale = Vector2(0.27, 0.27)
+texture = ExtResource("13_sg5d1")
+
+[node name="Garrafa" type="Sprite2D" parent="Lixo"]
+visible = false
+rotation = 0.453786
+scale = Vector2(0.215, 0.215)
+texture = ExtResource("6_kxpgf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lixo"]
+shape = SubResource("CircleShape2D_xllak")
+
+[node name="Win" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_evdkg")
+volume_db = -10.0
+
+[node name="Lose" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_e86pc")
+
+[connection signal="body_entered" from="Papel" to="." method="_on_papel_body_entered"]
+[connection signal="body_entered" from="Metal" to="." method="_on_metal_body_entered"]
+[connection signal="body_entered" from="Plastico" to="." method="_on_plastico_body_entered"]
+[connection signal="body_entered" from="Vidro" to="." method="_on_vidro_body_entered"]
