@@ -1,4 +1,98 @@
 [gd_scene format=3 uid="uid://crf67iwwewv6t"]
 
+[ext_resource type="Script" uid="uid://q4fsm1t62qym" path="res://microjogos/2026S1/projeto-jojodoidao/cenas/scripts/main.gd" id="1_uo0ms"]
+[ext_resource type="Texture2D" uid="uid://b33wmv78a2w4f" path="res://microjogos/2026S1/projeto-jojodoidao/recursos/imagens/Mesa.png" id="2_vqo3t"]
+[ext_resource type="Texture2D" uid="uid://b00aymefchyso" path="res://microjogos/2026S1/projeto-jojodoidao/recursos/imagens/bola.png" id="3_5w4rh"]
+[ext_resource type="Script" uid="uid://jiaarg6jyh5o" path="res://microjogos/2026S1/projeto-jojodoidao/cenas/bola_8.gd" id="3_t6tta"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5w4rh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5w4rh"]
+size = Vector2(278.85495, 20)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_60pnv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t6tta"]
+size = Vector2(23.816803, 284.88556)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_60pnv"]
+size = Vector2(274.31308, 20)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vqo3t"]
+friction = 0.2
+bounce = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k71sy"]
+radius = 25.495098
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_o1fue"]
+friction = 0.2
+bounce = 1.0
+
 [node name="Main" type="Node2D" unique_id=1597121372]
 texture_filter = 1
+script = ExtResource("1_uo0ms")
+
+[node name="Mesa" type="Node2D" parent="." unique_id=2033688722]
+
+[node name="Mesa" type="Sprite2D" parent="Mesa" unique_id=1510218305]
+position = Vector2(946, 732)
+rotation = -1.5707964
+scale = Vector2(2.1833332, 2.1833334)
+texture = ExtResource("2_vqo3t")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Mesa/Mesa" unique_id=1983013042]
+position = Vector2(2.2901044, 2.2901042)
+disable_mode = 1
+physics_material_override = SubResource("PhysicsMaterial_5w4rh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa/Mesa/StaticBody2D" unique_id=1199827686]
+position = Vector2(149.77098, -167.63358)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_5w4rh")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Mesa/Mesa" unique_id=1853909983]
+position = Vector2(5.9542084, 6.412201)
+disable_mode = 1
+physics_material_override = SubResource("PhysicsMaterial_60pnv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa/Mesa/StaticBody2D2" unique_id=595508936]
+position = Vector2(310.53436, -5.4961395)
+scale = Vector2(0.99999934, 0.99999976)
+shape = SubResource("RectangleShape2D_t6tta")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Mesa/Mesa" unique_id=994585325]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa/Mesa/StaticBody2D3" unique_id=63428679]
+position = Vector2(156.39316, 170.83966)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_60pnv")
+
+[node name="Bola 8" type="RigidBody2D" parent="." unique_id=1853483592]
+position = Vector2(946, 351)
+disable_mode = 2
+physics_material_override = SubResource("PhysicsMaterial_vqo3t")
+gravity_scale = 0.0
+script = ExtResource("3_t6tta")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bola 8" unique_id=392487183]
+shape = SubResource("CircleShape2D_k71sy")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bola 8" unique_id=1241160168]
+modulate = Color(0.1148968, 0.11489681, 0.1148968, 1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_5w4rh")
+
+[node name="Bola Branca" type="RigidBody2D" parent="." unique_id=87760290]
+position = Vector2(1229, 350)
+physics_material_override = SubResource("PhysicsMaterial_o1fue")
+gravity_scale = 0.0
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bola Branca" unique_id=2090764257]
+shape = SubResource("CircleShape2D_k71sy")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bola Branca" unique_id=287562473]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_5w4rh")

@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="MicrogameAsset" format=3 uid="uid://cvj43lqe6yxfn"]
 
+[ext_resource type="PackedScene" uid="uid://crf67iwwewv6t" path="res://microjogos/2026S1/projeto-jojodoidao/cenas/main.tscn" id="1_354r4"]
 [ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_lyelx"]
 
 [resource]
@@ -10,3 +11,4 @@ credits_pt = "Créditos do jogo"
 credits_en = "Game credits"
 start_message_pt = &"FAÇA ALGO!"
 start_message_en = &"DO SOMETHING!"
+main_scene = ExtResource("1_354r4")
