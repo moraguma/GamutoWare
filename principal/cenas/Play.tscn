@@ -1,19 +1,19 @@
-[gd_scene load_steps=8 format=3 uid="uid://1fpf5yybln37"]
+[gd_scene format=3 uid="uid://1fpf5yybln37"]
 
 [ext_resource type="Script" uid="uid://du0fi15vmv0gb" path="res://principal/cenas/scripts/Play.gd" id="1_qpmne"]
 [ext_resource type="PackedScene" uid="uid://breiq50cu5612" path="res://principal/cenas/BG.tscn" id="2_8138u"]
-[ext_resource type="Theme" uid="uid://dt5djib7huxvm" path="res://principal/recursos/themes/ButtonTheme.tres" id="6_wxsur"]
+[ext_resource type="Theme" path="res://principal/recursos/themes/ButtonTheme.tres" id="6_wxsur"]
 [ext_resource type="Script" uid="uid://i6y2mm407mm6" path="res://principal/cenas/scripts/TranslatableText.gd" id="7_hwa0h"]
 [ext_resource type="Script" uid="uid://d3d5dcab6cyxj" path="res://principal/cenas/scripts/PressableButton.gd" id="8_ttu2n"]
-[ext_resource type="Theme" uid="uid://v3d547aawndh" path="res://principal/recursos/themes/BodyTheme.tres" id="10_rybv5"]
+[ext_resource type="Theme" path="res://principal/recursos/themes/BodyTheme.tres" id="10_rybv5"]
 [ext_resource type="Script" uid="uid://blgobgb0ujtkr" path="res://principal/cenas/scripts/TransitionButton.gd" id="10_ukb4k"]
 
-[node name="Play" type="Node2D"]
+[node name="Play" type="Node2D" unique_id=922667731]
 script = ExtResource("1_qpmne")
 
-[node name="BG" parent="." instance=ExtResource("2_8138u")]
+[node name="BG" parent="." unique_id=1444726329 instance=ExtResource("2_8138u")]
 
-[node name="Play" type="Button" parent="."]
+[node name="Play" type="Button" parent="." unique_id=1175888135]
 offset_left = 1534.0
 offset_top = 16.0
 offset_right = 1918.0
@@ -24,7 +24,7 @@ flat = true
 script = ExtResource("8_ttu2n")
 translation_code = "play"
 
-[node name="Menu" type="Button" parent="."]
+[node name="Menu" type="Button" parent="." unique_id=575214103]
 offset_left = 16.0
 offset_top = 16.0
 offset_right = 400.0
@@ -36,7 +36,7 @@ script = ExtResource("10_ukb4k")
 path = "res://principal/cenas/Menu.tscn"
 translation_code = "back"
 
-[node name="Explanation" type="RichTextLabel" parent="."]
+[node name="Explanation" type="RichTextLabel" parent="." unique_id=495097967]
 clip_contents = false
 offset_top = 1011.0
 offset_right = 1920.0
@@ -49,7 +49,7 @@ script = ExtResource("7_hwa0h")
 translation_code = "play_explanation"
 center_text = true
 
-[node name="Checkboxes" type="HBoxContainer" parent="."]
+[node name="Checkboxes" type="HBoxContainer" parent="." unique_id=1615223562]
 offset_top = 293.0
 offset_right = 1920.0
 offset_bottom = 911.0
@@ -57,11 +57,11 @@ theme = ExtResource("6_wxsur")
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="Modifier" type="VBoxContainer" parent="Checkboxes"]
+[node name="Modifier" type="VBoxContainer" parent="Checkboxes" unique_id=220101490]
 custom_minimum_size = Vector2(610, 0)
 layout_mode = 2
 
-[node name="Modifiers" type="RichTextLabel" parent="Checkboxes/Modifier"]
+[node name="Modifiers" type="RichTextLabel" parent="Checkboxes/Modifier" unique_id=1617212066]
 clip_contents = false
 layout_mode = 2
 theme = ExtResource("6_wxsur")
@@ -72,14 +72,14 @@ script = ExtResource("7_hwa0h")
 translation_code = "modifiers"
 center_text = true
 
-[node name="Control" type="Control" parent="Checkboxes/Modifier"]
+[node name="Control" type="Control" parent="Checkboxes/Modifier" unique_id=2107843058]
 clip_contents = true
 custom_minimum_size = Vector2(0, 510)
 layout_mode = 2
 
-[node name="ModifierButtons" type="ScrollContainer" parent="Checkboxes/Modifier/Control"]
+[node name="ModifierButtons" type="ScrollContainer" parent="Checkboxes/Modifier/Control" unique_id=301055658]
 clip_contents = false
-layout_mode = 2
+layout_mode = 0
 offset_left = 20.0
 offset_top = 20.0
 offset_right = 580.0
@@ -88,15 +88,15 @@ theme = ExtResource("10_rybv5")
 follow_focus = true
 horizontal_scroll_mode = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Checkboxes/Modifier/Control/ModifierButtons"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Checkboxes/Modifier/Control/ModifierButtons" unique_id=827177162]
 layout_mode = 2
 theme = ExtResource("6_wxsur")
 
-[node name="Minigames" type="VBoxContainer" parent="Checkboxes"]
+[node name="Minigames" type="VBoxContainer" parent="Checkboxes" unique_id=1313267663]
 custom_minimum_size = Vector2(610, 0)
 layout_mode = 2
 
-[node name="Minigames" type="RichTextLabel" parent="Checkboxes/Minigames"]
+[node name="Minigames" type="RichTextLabel" parent="Checkboxes/Minigames" unique_id=69386728]
 clip_contents = false
 layout_mode = 2
 theme = ExtResource("6_wxsur")
@@ -107,14 +107,14 @@ script = ExtResource("7_hwa0h")
 translation_code = "minigames"
 center_text = true
 
-[node name="Control" type="Control" parent="Checkboxes/Minigames"]
+[node name="Control" type="Control" parent="Checkboxes/Minigames" unique_id=1130942776]
 clip_contents = true
 custom_minimum_size = Vector2(0, 510)
 layout_mode = 2
 
-[node name="MinigamesButtons" type="ScrollContainer" parent="Checkboxes/Minigames/Control"]
+[node name="MinigamesButtons" type="ScrollContainer" parent="Checkboxes/Minigames/Control" unique_id=179139886]
 clip_contents = false
-layout_mode = 2
+layout_mode = 0
 offset_left = 20.0
 offset_top = 20.0
 offset_right = 580.0
@@ -123,16 +123,16 @@ theme = ExtResource("10_rybv5")
 follow_focus = true
 horizontal_scroll_mode = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Checkboxes/Minigames/Control/MinigamesButtons"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Checkboxes/Minigames/Control/MinigamesButtons" unique_id=978490523]
 layout_mode = 2
 theme = ExtResource("6_wxsur")
 
-[node name="Filters" type="VBoxContainer" parent="Checkboxes"]
+[node name="Filters" type="VBoxContainer" parent="Checkboxes" unique_id=1500033907]
 custom_minimum_size = Vector2(610, 0)
 layout_mode = 2
 theme = ExtResource("6_wxsur")
 
-[node name="Filters" type="RichTextLabel" parent="Checkboxes/Filters"]
+[node name="Filters" type="RichTextLabel" parent="Checkboxes/Filters" unique_id=1458620613]
 clip_contents = false
 layout_mode = 2
 theme = ExtResource("6_wxsur")
@@ -145,14 +145,14 @@ script = ExtResource("7_hwa0h")
 translation_code = "filters"
 center_text = true
 
-[node name="Control" type="Control" parent="Checkboxes/Filters"]
+[node name="Control" type="Control" parent="Checkboxes/Filters" unique_id=433814741]
 clip_contents = true
 custom_minimum_size = Vector2(0, 510)
 layout_mode = 2
 
-[node name="FilterButtons" type="ScrollContainer" parent="Checkboxes/Filters/Control"]
+[node name="FilterButtons" type="ScrollContainer" parent="Checkboxes/Filters/Control" unique_id=610536284]
 clip_contents = false
-layout_mode = 2
+layout_mode = 0
 offset_left = 20.0
 offset_top = 20.0
 offset_right = 580.0
@@ -161,7 +161,7 @@ theme = ExtResource("10_rybv5")
 follow_focus = true
 horizontal_scroll_mode = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Checkboxes/Filters/Control/FilterButtons"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Checkboxes/Filters/Control/FilterButtons" unique_id=1618370558]
 layout_mode = 2
 theme = ExtResource("6_wxsur")
 

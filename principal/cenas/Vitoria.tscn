@@ -1,15 +1,15 @@
-[gd_scene load_steps=15 format=3 uid="uid://jg4fqkyuoonw"]
+[gd_scene format=3 uid="uid://jg4fqkyuoonw"]
 
 [ext_resource type="Texture2D" uid="uid://dogwrk2nqqk03" path="res://principal/recursos/sprites/excited.png" id="2"]
 [ext_resource type="Script" uid="uid://blgobgb0ujtkr" path="res://principal/cenas/scripts/TransitionButton.gd" id="3"]
 [ext_resource type="Texture2D" uid="uid://cs75vvw01oafl" path="res://principal/recursos/sprites/GMToutline.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://ja6urlsch5m7" path="res://principal/recursos/sprites/MenuBase.png" id="5"]
-[ext_resource type="Theme" uid="uid://cb4tlwb81nq48" path="res://principal/recursos/themes/TitleTheme.tres" id="5_nb20q"]
+[ext_resource type="Theme" path="res://principal/recursos/themes/TitleTheme.tres" id="5_nb20q"]
 [ext_resource type="Script" uid="uid://spvmw4ssh0xx" path="res://principal/cenas/scripts/AutoplayIdleAnimationPlayer.gd" id="6"]
 [ext_resource type="Script" uid="uid://i6y2mm407mm6" path="res://principal/cenas/scripts/TranslatableText.gd" id="7"]
 [ext_resource type="Script" uid="uid://dsgo12vxotenh" path="res://principal/cenas/scripts/ToTitle.gd" id="8"]
-[ext_resource type="Material" uid="uid://bfefepnpbds1x" path="res://principal/recursos/shaders/Diamond.tres" id="9"]
-[ext_resource type="Theme" uid="uid://dt5djib7huxvm" path="res://principal/recursos/themes/ButtonTheme.tres" id="9_ek2g8"]
+[ext_resource type="Material" uid="uid://c6u4pxpuxsmul" path="res://principal/recursos/shaders/Diamond.tres" id="9"]
+[ext_resource type="Theme" path="res://principal/recursos/themes/ButtonTheme.tres" id="9_ek2g8"]
 
 [sub_resource type="Curve" id="Curve_fdtmv"]
 _limits = [-360.0, 360.0, 0.0, 1.0]
@@ -73,20 +73,20 @@ _data = {
 &"idle": SubResource("Animation_itf0j")
 }
 
-[node name="Vitoria" type="Node2D"]
+[node name="Vitoria" type="Node2D" unique_id=1715551958]
 script = ExtResource("8")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=737637692]
 material = ExtResource("9")
 position = Vector2(960, 540)
 texture = ExtResource("5")
 
-[node name="GMTParticles" type="CPUParticles2D" parent="."]
+[node name="GMTParticles" type="CPUParticles2D" parent="." unique_id=1375840351]
 position = Vector2(128, -264)
 amount = 32
+texture = ExtResource("4")
 lifetime = 3.0
 preprocess = 3.0
-texture = ExtResource("4")
 emission_shape = 3
 emission_rect_extents = Vector2(1080, 540)
 direction = Vector2(1, 1)
@@ -94,7 +94,7 @@ gravity = Vector2(500, 500)
 angle_max = 1.0
 angle_curve = SubResource("Curve_fdtmv")
 
-[node name="Title" type="RichTextLabel" parent="."]
+[node name="Title" type="RichTextLabel" parent="." unique_id=1498480475]
 clip_contents = false
 offset_left = 264.0
 offset_top = 82.0
@@ -107,7 +107,7 @@ script = ExtResource("7")
 translation_code = "victory"
 center_text = true
 
-[node name="Mensagem" type="RichTextLabel" parent="."]
+[node name="Mensagem" type="RichTextLabel" parent="." unique_id=748019083]
 clip_contents = false
 offset_left = 254.0
 offset_top = 443.0
@@ -121,20 +121,18 @@ script = ExtResource("7")
 translation_code = "thanks"
 center_text = true
 
-[node name="Gamuto" type="Sprite2D" parent="."]
+[node name="Gamuto" type="Sprite2D" parent="." unique_id=1993139756]
 position = Vector2(960, 724)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("2")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Gamuto"]
-libraries = {
-"": SubResource("AnimationLibrary_eaanj")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Gamuto" unique_id=1660788785]
+libraries/ = SubResource("AnimationLibrary_eaanj")
 script = ExtResource("6")
 
-[node name="Buttons" type="Node2D" parent="."]
+[node name="Buttons" type="Node2D" parent="." unique_id=1003129348]
 
-[node name="Menu" type="Button" parent="Buttons"]
+[node name="Menu" type="Button" parent="Buttons" unique_id=1413095501]
 offset_top = 890.0
 offset_right = 1920.0
 offset_bottom = 992.0

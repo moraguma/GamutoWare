@@ -1,12 +1,12 @@
-[gd_scene load_steps=16 format=3 uid="uid://bhkyw6qpi38e6"]
+[gd_scene format=3 uid="uid://bhkyw6qpi38e6"]
 
 [ext_resource type="Script" uid="uid://blgobgb0ujtkr" path="res://principal/cenas/scripts/TransitionButton.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://breiq50cu5612" path="res://principal/cenas/BG.tscn" id="2_gn47d"]
 [ext_resource type="Script" uid="uid://i6y2mm407mm6" path="res://principal/cenas/scripts/TranslatableText.gd" id="5"]
-[ext_resource type="Theme" uid="uid://dt5djib7huxvm" path="res://principal/recursos/themes/ButtonTheme.tres" id="6"]
+[ext_resource type="Theme" path="res://principal/recursos/themes/ButtonTheme.tres" id="6"]
 [ext_resource type="PackedScene" uid="uid://dr5dxsgtiww88" path="res://principal/cenas/CreditosInfo.tscn" id="7_t6oxa"]
 [ext_resource type="PackedScene" uid="uid://dnhn2yadjkru6" path="res://principal/cenas/MinigameDisplay.tscn" id="8_rotds"]
-[ext_resource type="Theme" uid="uid://cb4tlwb81nq48" path="res://principal/recursos/themes/TitleTheme.tres" id="9"]
+[ext_resource type="Theme" path="res://principal/recursos/themes/TitleTheme.tres" id="9"]
 [ext_resource type="Texture2D" uid="uid://d1pcvjogk0whm" path="res://principal/recursos/sprites/GMTIconSpritesheet.png" id="9_vqk2p"]
 [ext_resource type="Script" uid="uid://cp1lvrreskaap" path="res://principal/cenas/scripts/CreditsWinDisplay.gd" id="10_mlycp"]
 [ext_resource type="Script" uid="uid://dyuwxnq6xo47r" path="res://principal/cenas/scripts/Creditos.gd" id="11"]
@@ -68,14 +68,14 @@ _data = {
 &"win": SubResource("Animation_lltom")
 }
 
-[node name="Credits" type="Node2D"]
+[node name="Credits" type="Node2D" unique_id=1764259788]
 script = ExtResource("11")
 
-[node name="BG" parent="." instance=ExtResource("2_gn47d")]
+[node name="BG" parent="." unique_id=1122273209 instance=ExtResource("2_gn47d")]
 
-[node name="Credits" type="Node2D" parent="."]
+[node name="Credits" type="Node2D" parent="." unique_id=629911941]
 
-[node name="Minigames" type="Control" parent="Credits"]
+[node name="Minigames" type="Control" parent="Credits" unique_id=1784536877]
 clip_contents = true
 layout_mode = 3
 anchors_preset = 0
@@ -83,7 +83,7 @@ offset_right = 1920.0
 offset_bottom = 1088.0
 mouse_filter = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Credits/Minigames"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Credits/Minigames" unique_id=1074271085]
 layout_mode = 0
 offset_left = 20.0
 offset_top = 20.0
@@ -91,7 +91,7 @@ offset_right = 1010.0
 offset_bottom = 1050.0
 theme_override_constants/separation = 10
 
-[node name="Title" type="RichTextLabel" parent="Credits/Minigames/VBoxContainer"]
+[node name="Title" type="RichTextLabel" parent="Credits/Minigames/VBoxContainer" unique_id=1986689224]
 clip_contents = false
 layout_mode = 2
 mouse_filter = 1
@@ -103,7 +103,7 @@ script = ExtResource("5")
 translation_code = "collection"
 center_text = true
 
-[node name="Minigames" type="ScrollContainer" parent="Credits/Minigames/VBoxContainer"]
+[node name="Minigames" type="ScrollContainer" parent="Credits/Minigames/VBoxContainer" unique_id=1409131337]
 custom_minimum_size = Vector2(0, 813)
 layout_mode = 2
 theme = ExtResource("6")
@@ -111,14 +111,14 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_88gp3")
 follow_focus = true
 horizontal_scroll_mode = 0
 
-[node name="GridContainer" type="GridContainer" parent="Credits/Minigames/VBoxContainer/Minigames"]
+[node name="GridContainer" type="GridContainer" parent="Credits/Minigames/VBoxContainer/Minigames" unique_id=808061156]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/h_separation = 40
 theme_override_constants/v_separation = 35
 columns = 2
 
-[node name="Menu" type="Button" parent="Credits/Minigames/VBoxContainer"]
+[node name="Menu" type="Button" parent="Credits/Minigames/VBoxContainer" unique_id=716955427]
 layout_mode = 2
 theme = ExtResource("6")
 text = "MENU"
@@ -127,13 +127,13 @@ script = ExtResource("2")
 path = "res://principal/cenas/Menu.tscn"
 translation_code = "back"
 
-[node name="CreditosInfo" parent="Credits" instance=ExtResource("7_t6oxa")]
+[node name="CreditosInfo" parent="Credits" unique_id=642086785 instance=ExtResource("7_t6oxa")]
 position = Vector2(1472, 540)
 
-[node name="MinigameDisplay" parent="." instance=ExtResource("8_rotds")]
+[node name="MinigameDisplay" parent="." unique_id=1637671421 instance=ExtResource("8_rotds")]
 z_index = 1
 
-[node name="WinDisplay" type="Sprite2D" parent="."]
+[node name="WinDisplay" type="Sprite2D" parent="." unique_id=938342569]
 visible = false
 z_index = 1
 position = Vector2(944, 480)
@@ -142,11 +142,9 @@ texture = ExtResource("9_vqk2p")
 hframes = 18
 script = ExtResource("10_mlycp")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="WinDisplay"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="WinDisplay" unique_id=119299957]
 root_node = NodePath("../..")
-libraries = {
-"": SubResource("AnimationLibrary_5cvp6")
-}
+libraries/ = SubResource("AnimationLibrary_5cvp6")
 
-[node name="Timer" type="Timer" parent="WinDisplay"]
+[node name="Timer" type="Timer" parent="WinDisplay" unique_id=1984982290]
 one_shot = true

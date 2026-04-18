@@ -8,7 +8,7 @@ func _ready():
 	position.y = 100
 	velocity.y = -200
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	if position.y <= -700:
 		velocity.y = 200
 	if position.y >= 90:
@@ -17,7 +17,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 
-func _on_area_2d_body_entered(body):
+func _on_area_2d_body_entered(_body):
 	if velocity.y !=0:
 		$Gamuto0.visible = false
 		get_node("../Yay").play()
