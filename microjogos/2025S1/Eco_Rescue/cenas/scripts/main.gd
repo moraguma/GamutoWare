@@ -1,9 +1,5 @@
 extends Node2D
 
-# Declaração dos sinais win e lose
-
-signal win
-signal lose
 
 
 
@@ -20,13 +16,13 @@ signal lose
 # Chame esta função para registrar que o jogador venceu o jogo
 func register_win():
 	$Win.play()
-	emit_signal("win")
+	Minigames.register_win(self)
 
 
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
 	$Lose.play()
-	emit_signal("lose")
+	Minigames.register_lose(self)
 
 
 func _on_vidro_body_entered(body: Node2D) -> void:

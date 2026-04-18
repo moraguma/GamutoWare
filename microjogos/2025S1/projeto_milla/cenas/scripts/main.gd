@@ -1,9 +1,5 @@
 extends Node2D
 
-# Declaração dos sinais win e lose
-
-signal win
-signal lose
 
 
 
@@ -30,9 +26,9 @@ func _ready() -> void:
 
 # Chame esta função para registrar que o jogador venceu o jogo
 func register_win():
-	emit_signal("win")
+	Minigames.register_win(self)
 
 
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
-	emit_signal("lose")
+	Minigames.register_lose(self)
