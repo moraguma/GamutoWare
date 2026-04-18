@@ -1,0 +1,2 @@
+Coloque suas cenas aqui! A cena que vai rodar no jogo deve necessariamente ser a Main.tscn
+	
