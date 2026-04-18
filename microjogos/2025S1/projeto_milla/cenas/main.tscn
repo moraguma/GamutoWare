@@ -1,0 +1,73 @@
+[gd_scene load_steps=12 format=3 uid="uid://dwaeb23407t20"]
+
+[ext_resource type="Script" uid="uid://tm4tow6nhklc" path="res://microjogos/2025S1/projeto_milla/cenas/scripts/main.gd" id="1_pvuji"]
+[ext_resource type="Texture2D" uid="uid://dfhoxrib3r64o" path="res://microjogos/2025S1/projeto_milla/recursos/imagens/background.png" id="2_ujrf2"]
+[ext_resource type="Texture2D" uid="uid://dnm0p6jqqd04c" path="res://microjogos/2025S1/projeto_milla/recursos/imagens/decoration.png" id="3_ujrf2"]
+[ext_resource type="Script" uid="uid://d2r7u4mhoobld" path="res://microjogos/2025S1/projeto_milla/cenas/scripts/abobora_spawner.gd" id="6_w265g"]
+[ext_resource type="AudioStream" uid="uid://ciag6s3dqlsg0" path="res://microjogos/2025S1/projeto_milla/recursos/sons/u_xg7ssi08yr-crows-387253.wav" id="7_ou6mn"]
+[ext_resource type="AudioStream" uid="uid://dnjp6tva860ml" path="res://microjogos/2025S1/projeto_milla/recursos/sons/universfield-game-bonus-03-487857.wav" id="7_r2k8h"]
+[ext_resource type="AudioStream" uid="uid://c7jdsnhegmxv8" path="res://microjogos/2025S1/projeto_milla/recursos/sons/lesiakower-error-mistake-sound-effect-incorrect-answer-437420.wav" id="8_hvgpo"]
+[ext_resource type="Texture2D" uid="uid://c6vc7k8shbfgx" path="res://microjogos/2025S1/projeto_milla/recursos/imagens/garota_0.png" id="8_r2k8h"]
+[ext_resource type="Texture2D" uid="uid://brotp5rphljhe" path="res://microjogos/2025S1/projeto_milla/recursos/imagens/garota_1.png" id="9_hvgpo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_up2ls"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_r2k8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_hvgpo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2l1n7"]
+size = Vector2(2462.5, 42)
+
+[node name="Main" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_pvuji")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_ujrf2")
+
+[node name="BG2" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("3_ujrf2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(0.60418, 0.645928)
+sprite_frames = SubResource("SpriteFrames_up2ls")
+autoplay = "default"
+frame_progress = 0.770195
+
+[node name="Chão" type="Area2D" parent="."]
+position = Vector2(960, 1080)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chão"]
+shape = SubResource("RectangleShape2D_2l1n7")
+
+[node name="Aboboras" type="Node2D" parent="."]
+script = ExtResource("6_w265g")
+
+[node name="Win" type="AudioStreamPlayer" parent="Aboboras"]
+stream = ExtResource("7_r2k8h")
+
+[node name="Lose" type="AudioStreamPlayer" parent="Aboboras"]
+stream = ExtResource("8_hvgpo")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.7
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_ou6mn")
+autoplay = true
+
+[connection signal="body_entered" from="Chão" to="Aboboras" method="_on_chão_body_entered"]
+[connection signal="timeout" from="Timer" to="Aboboras" method="_on_timer_timeout"]
