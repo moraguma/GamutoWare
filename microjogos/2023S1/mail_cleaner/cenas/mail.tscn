@@ -1,28 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://bd1wbmwy3cg7q"]
+[gd_scene format=3 uid="uid://bd1wbmwy3cg7q"]
 
 [ext_resource type="Texture2D" uid="uid://b3jshxfo4dx7r" path="res://microjogos/2023S1/mail_cleaner/recursos/sprites/mail_sprites.png" id="1_d0m1l"]
 [ext_resource type="Script" uid="uid://bwqm8pykiofxg" path="res://microjogos/2023S1/mail_cleaner/cenas/scripts/mail.gd" id="2_7nufu"]
 [ext_resource type="FontFile" uid="uid://dwdtev5v3ppou" path="res://principal/recursos/fonts/coolvetica/coolvetica rg it.otf" id="4_gtn7f"]
 
-[node name="Mail" type="Node2D"]
+[node name="Mail" type="Node2D" unique_id=912694597]
 texture_filter = 1
 script = ExtResource("2_7nufu")
 
-[node name="Back Sprite" type="Sprite2D" parent="."]
+[node name="Back Sprite" type="Sprite2D" parent="." unique_id=1610733015]
 scale = Vector2(15, 15)
 texture = ExtResource("1_d0m1l")
 offset = Vector2(13, 3)
 region_enabled = true
 region_rect = Rect2(0, 0, 26, 6)
 
-[node name="Icon" type="Sprite2D" parent="."]
+[node name="Icon" type="Sprite2D" parent="." unique_id=230531864]
 position = Vector2(45, 40)
 scale = Vector2(15, 15)
 texture = ExtResource("1_d0m1l")
 region_enabled = true
 region_rect = Rect2(27, 1, 4, 4)
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=1794729572]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -36,7 +36,7 @@ offset_bottom = 70.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Control" unique_id=366297241]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

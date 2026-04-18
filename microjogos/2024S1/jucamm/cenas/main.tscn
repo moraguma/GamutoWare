@@ -1,12 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://nqkgrj7fevfo"]
+[gd_scene format=3 uid="uid://nqkgrj7fevfo"]
 
 [ext_resource type="Script" uid="uid://dqt1r1j4jjoc5" path="res://microjogos/2024S1/jucamm/cenas/scripts/main.gd" id="1_y2abt"]
 [ext_resource type="Texture2D" uid="uid://c5mieq5qgp36a" path="res://microjogos/2024S1/jucamm/recursos/baetksj 3.jpg" id="3_7ccyx"]
 [ext_resource type="Script" uid="uid://byrwbmylxp8h7" path="res://microjogos/2024S1/jucamm/cenas/CollisionShape2D4.gd" id="3_47tr6"]
-[ext_resource type="PackedScene" path="res://microjogos/2024S1/jucamm/cenas/aaaaaaaaaaaaaaaaaaaaaaaaaa.tscn" id="5_5qhpv"]
+[ext_resource type="PackedScene" uid="uid://b3qhk3oqbon70" path="res://microjogos/2024S1/jucamm/cenas/aaaaaaaaaaaaaaaaaaaaaaaaaa.tscn" id="5_5qhpv"]
 [ext_resource type="Texture2D" uid="uid://bjwig3es408b7" path="res://microjogos/2024S1/jucamm/recursos/Screenshot 2024-03-23 at 19-37-28 concrete wall asset 2d - Pesquisa Google.png" id="5_js5d1"]
 [ext_resource type="Script" uid="uid://be1dc2p5bk8pr" path="res://microjogos/2024S1/jucamm/cenas/aaaaaaaaaaaaaaaaaaaaaaaaaa.gd" id="6_d21fv"]
-[ext_resource type="PackedScene" path="res://microjogos/2024S1/jucamm/cenas/barra_gelo.tscn" id="6_mosef"]
+[ext_resource type="PackedScene" uid="uid://jg6yjhg4ljr4" path="res://microjogos/2024S1/jucamm/cenas/barra_gelo.tscn" id="6_mosef"]
 [ext_resource type="Script" uid="uid://brhjw2okh0qsf" path="res://microjogos/2024S1/jucamm/cenas/barra_gelo.gd" id="7_u3jyc"]
 [ext_resource type="Texture2D" uid="uid://dgfliahx2awob" path="res://microjogos/2024S1/jucamm/recursos/espinhao.png" id="9_8wbuc"]
 [ext_resource type="AudioStream" uid="uid://btdotmh0rklui" path="res://microjogos/2024S1/jucamm/recursos/588617__urkki69__football-fans-chanting-in-brighton.ogg" id="10_cswbg"]
@@ -33,11 +33,11 @@ bounce = 1.0
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2okgj"]
 friction = 5.4
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=613347]
 position = Vector2(959, 542)
 script = ExtResource("1_y2abt")
 
-[node name="Fundo" type="Sprite2D" parent="."]
+[node name="Fundo" type="Sprite2D" parent="." unique_id=1507333838]
 light_mask = 524288
 visibility_layer = 524288
 z_index = -1
@@ -45,38 +45,38 @@ position = Vector2(-6.50983, 8.25)
 scale = Vector2(3.15526, 2.79774)
 texture = ExtResource("3_7ccyx")
 
-[node name="Limite area" type="StaticBody2D" parent="." groups=["area"]]
+[node name="Limite area" type="StaticBody2D" parent="." unique_id=1234346304 groups=["area"]]
 position = Vector2(3, 0)
 physics_material_override = SubResource("PhysicsMaterial_sxw3y")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Limite area"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limite area" unique_id=866661201]
 material = SubResource("CanvasItemMaterial_5n5m2")
 position = Vector2(0, 540)
 shape = SubResource("RectangleShape2D_1f4gc")
 debug_color = Color(1, 1, 1, 0.419608)
 
-[node name="Sprite2D" type="Sprite2D" parent="Limite area/CollisionShape2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Limite area/CollisionShape2D" unique_id=1284926532]
 z_index = 9
 position = Vector2(4.14648, -2)
 rotation = 1.57079
 scale = Vector2(0.0380482, 6.20968)
 texture = ExtResource("5_js5d1")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Limite area"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Limite area" unique_id=580480201]
 position = Vector2(941, -1182.22)
 scale = Vector2(1, 0.978798)
 shape = SubResource("RectangleShape2D_beppc")
 debug_color = Color(1, 1, 1, 0.419608)
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Limite area"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Limite area" unique_id=396370174]
 position = Vector2(-947, -1166)
 shape = SubResource("RectangleShape2D_fptwf")
 debug_color = Color(1, 1, 1, 0.419608)
 script = ExtResource("3_47tr6")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2030592870]
 
-[node name="Bola Basket" parent="." instance=ExtResource("6_mosef")]
+[node name="Bola Basket" parent="." unique_id=750898886 instance=ExtResource("6_mosef")]
 position = Vector2(-9, -607)
 scale = Vector2(1.021, 0.965739)
 input_pickable = true
@@ -87,7 +87,7 @@ can_sleep = false
 angular_velocity = 17.8024
 script = ExtResource("7_u3jyc")
 
-[node name="Jogador" parent="." instance=ExtResource("5_5qhpv")]
+[node name="Jogador" parent="." unique_id=1912950059 instance=ExtResource("5_5qhpv")]
 position = Vector2(-9, 267)
 mass = 1000.0
 physics_material_override = SubResource("PhysicsMaterial_2okgj")
@@ -96,328 +96,328 @@ inertia = 1000.0
 linear_velocity = Vector2(0, 0)
 script = ExtResource("6_d21fv")
 
-[node name="Espinhos" type="Sprite2D" parent="."]
+[node name="Espinhos" type="Sprite2D" parent="." unique_id=1484768032]
 position = Vector2(932, 604)
 rotation = -1.57079
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos" unique_id=1718025273]
 position = Vector2(22, 12.9999)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4" unique_id=308279395]
 position = Vector2(31, -0.000124292)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4" unique_id=1602307252]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=71664197]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=278570114]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=79551517]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1176987474]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=2119614625]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1627199933]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=746499374]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=31225620]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1901508093]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1820478726]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=122798072]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1403602502]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=901046761]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=579781954]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=407797514]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1402713139]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=2043678717]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1807283183]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1793789554]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1823730350]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1089373523]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1778718882]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=634826347]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=2115044807]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=643236472]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1870037436]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=925798966]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1950954463]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=899609324]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=2145933336]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=205872525]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=236765868]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=149933077]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1574274981]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1573057830]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1894342909]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D5" type="Sprite2D" parent="Espinhos"]
+[node name="Sprite2D5" type="Sprite2D" parent="Espinhos" unique_id=492872720]
 position = Vector2(1158, -1875)
 rotation = -3.14159
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5" unique_id=806763962]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4" unique_id=1816042436]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4" unique_id=683112264]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=118534651]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=249808775]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1379258817]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=151476043]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1923669175]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1995916708]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1273571274]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=585612043]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1995795848]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1522637182]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1149560889]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1078356642]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1570310852]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=368060788]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=2055822011]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1503180602]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=433000290]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1282719584]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1181926657]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1814256880]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1325240006]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1351789145]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=415387064]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1632557142]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1929311565]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1737662179]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1390462769]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=124592336]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=796686705]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=2060536561]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1915041149]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1736167994]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=630812284]
 position = Vector2(30.0001, -0.00696754)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1731508629]
 position = Vector2(30, 0.99283)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=1670922493]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="Espinhos/Sprite2D5/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4/Sprite2D4" unique_id=248605162]
 position = Vector2(30, 0)
 texture = ExtResource("9_8wbuc")
 
-[node name="Music" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1446672791]
 stream = ExtResource("10_cswbg")
 volume_db = -10.0

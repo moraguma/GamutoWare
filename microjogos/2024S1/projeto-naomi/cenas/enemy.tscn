@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene format=3 uid="uid://xu6ll1cp3i4s"]
 
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto-naomi/cenas/scripts/enemy.gd" id="1_qltfr"]
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-naomi/recursos/enemies.png" id="2_55gwo"]
+[ext_resource type="Script" uid="uid://chrslif7516fm" path="res://microjogos/2024S1/projeto-naomi/cenas/scripts/enemy.gd" id="1_qltfr"]
+[ext_resource type="Texture2D" uid="uid://bvks0p03n65t" path="res://microjogos/2024S1/projeto-naomi/recursos/enemies.png" id="2_55gwo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5au76"]
 atlas = ExtResource("2_55gwo")
@@ -43,27 +43,27 @@ height = 558.172
 radius = 28.0
 height = 256.0
 
-[node name="Enemy" type="CharacterBody2D"]
+[node name="Enemy" type="CharacterBody2D" unique_id=466308414]
 scale = Vector2(0.2, 0.2)
 script = ExtResource("1_qltfr")
 
-[node name="Texture" type="AnimatedSprite2D" parent="."]
+[node name="Texture" type="AnimatedSprite2D" parent="." unique_id=339632583]
 sprite_frames = SubResource("SpriteFrames_wu2u5")
 animation = &"run"
 autoplay = "idle"
 
-[node name="Hitbox" type="CollisionShape2D" parent="."]
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=261323288]
 position = Vector2(24, 281)
 rotation = 0.898845
 shape = SubResource("CapsuleShape2D_5vdh3")
 
-[node name="Detector" type="RayCast2D" parent="."]
+[node name="Detector" type="RayCast2D" parent="." unique_id=442867177]
 position = Vector2(265, 345)
 target_position = Vector2(80, 0)
 
-[node name="Hurtbox" type="Area2D" parent="."]
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1732707415]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=408848251]
 position = Vector2(110, 65)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_pcyv0")

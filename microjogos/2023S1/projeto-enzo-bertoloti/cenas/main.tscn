@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://de2sydr6owt3g"]
+[gd_scene format=3 uid="uid://de2sydr6owt3g"]
 
 [ext_resource type="Script" uid="uid://dj5oyccpj2myi" path="res://microjogos/2023S1/projeto-enzo-bertoloti/cenas/scripts/main.gd" id="1_wagij"]
 [ext_resource type="AudioStream" uid="uid://bd72kxib5swmd" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/Sons/Jesús Lastra - Slow Down.mp3" id="2_6sqmh"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1181708898]
 script = ExtResource("1_wagij")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=813945698]
 stream = ExtResource("2_6sqmh")

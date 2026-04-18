@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c8nyydvpcpkff"]
+[gd_scene format=3 uid="uid://c8nyydvpcpkff"]
 
 [ext_resource type="Script" uid="uid://bfru8pa5r11r8" path="res://microjogos/2023S1/projeto-viniwaki/cenas/fruit.gd" id="1_oy4q4"]
 [ext_resource type="Texture2D" uid="uid://cqmymveo2q7cg" path="res://microjogos/2023S1/projeto-viniwaki/recursos/maca0.png" id="2_namhp"]
@@ -63,25 +63,25 @@ animations = [{
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h3t2u"]
 load_path = "res://.godot/imported/kb-arrow.png-17172e2d73ec81053a6b7d9d98f42a23.ctex"
 
-[node name="fruit" type="RigidBody2D"]
+[node name="fruit" type="RigidBody2D" unique_id=204624168]
 gravity_scale = 2.0
 script = ExtResource("1_oy4q4")
 
-[node name="collision_shape" type="CollisionShape2D" parent="."]
+[node name="collision_shape" type="CollisionShape2D" parent="." unique_id=312182126]
 scale = Vector2(5, 5)
 shape = SubResource("CircleShape2D_0ensf")
 
-[node name="whole_sprite" type="AnimatedSprite2D" parent="."]
+[node name="whole_sprite" type="AnimatedSprite2D" parent="." unique_id=662061102]
 position = Vector2(0, -16)
 scale = Vector2(0.355, 0.355)
 sprite_frames = SubResource("SpriteFrames_4jsog")
 animation = &"watermelon"
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=260112824]
 position = Vector2(-4, -4)
 scale = Vector2(6.8, 6.8)
 
-[node name="arrow" type="Sprite2D" parent="."]
+[node name="arrow" type="Sprite2D" parent="." unique_id=1566977017]
 z_index = 1
 position = Vector2(200, 0)
 scale = Vector2(1.70312, 1.70312)

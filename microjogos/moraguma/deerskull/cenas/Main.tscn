@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ci10ibxytwob5"]
+[gd_scene format=3 uid="uid://ci10ibxytwob5"]
 
 [ext_resource type="Texture2D" uid="uid://ctrgtmrh5lpp6" path="res://microjogos/moraguma/deerskull/recursos/sprites/bg.png" id="1"]
 [ext_resource type="AudioStream" uid="uid://dkeg421ef3dsq" path="res://microjogos/moraguma/deerskull/recursos/sounds/music/music.ogg" id="2"]
@@ -8,22 +8,22 @@
 
 [sub_resource type="Curve2D" id="1"]
 
-[node name="Deerskull" type="Node2D"]
+[node name="Deerskull" type="Node2D" unique_id=161411042]
 texture_filter = 1
 script = ExtResource("3")
 
-[node name="Camera3D" type="Camera2D" parent="."]
+[node name="Camera3D" type="Camera2D" parent="." unique_id=1396145690]
 position = Vector2(160, 90)
 
-[node name="Player" parent="." instance=ExtResource("5")]
+[node name="Player" parent="." unique_id=1764523424 instance=ExtResource("5")]
 position = Vector2(156, 72)
 
-[node name="BG" type="Sprite2D" parent="."]
+[node name="BG" type="Sprite2D" parent="." unique_id=2146181000]
 position = Vector2(448, 52)
 texture = ExtResource("1")
 script = ExtResource("4")
 
-[node name="AmbientParticles" type="CPUParticles2D" parent="."]
+[node name="AmbientParticles" type="CPUParticles2D" parent="." unique_id=5972138]
 z_index = 3
 position = Vector2(320, 90)
 amount = 32
@@ -35,17 +35,17 @@ direction = Vector2(-1, 0)
 gravity = Vector2(-100, 0)
 color = Color(0.945098, 0.0823529, 0.447059, 1)
 
-[node name="SpawnPos" type="Path2D" parent="."]
+[node name="SpawnPos" type="Path2D" parent="." unique_id=1763744784]
 curve = SubResource("1")
 
-[node name="Walls" type="StaticBody2D" parent="."]
+[node name="Walls" type="StaticBody2D" parent="." unique_id=1843599433]
 
-[node name="WallHitbox" type="CollisionPolygon2D" parent="Walls"]
+[node name="WallHitbox" type="CollisionPolygon2D" parent="Walls" unique_id=729691601]
 polygon = PackedVector2Array(-8, -8, 328, -8, 328, 188, -8, 188, -8, -4, -12, -4, -12, 192, 332, 192, 332, -12, -8, -12)
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=1254991158]
 
-[node name="Music" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=756046594]
 stream = ExtResource("2")
 volume_db = 5.0
 

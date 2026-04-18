@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://n7g7kj0h3vxt"]
+[gd_scene format=3 uid="uid://n7g7kj0h3vxt"]
 
 [ext_resource type="Script" uid="uid://c33ikxlvg5bm4" path="res://microjogos/2023S1/projeto-esteche/cenas/Asteroide.gd" id="1_i0vci"]
 [ext_resource type="Texture2D" uid="uid://dq08qdq0vcaoa" path="res://microjogos/2023S1/projeto-esteche/recursos/sprites/Asteroid Brown.png" id="2_t2alo"]
@@ -7,18 +7,18 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_fw0la"]
 radius = 48.0
 
-[node name="Asteroide" type="Area2D"]
+[node name="Asteroide" type="Area2D" unique_id=363229584]
 script = ExtResource("1_i0vci")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=336307656]
 texture_filter = 1
 position = Vector2(0.999995, -3.5)
 scale = Vector2(0.7, 0.86875)
 texture = ExtResource("2_t2alo")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2104190571]
 shape = SubResource("CircleShape2D_fw0la")
 
-[node name="Collision" type="AudioStreamPlayer" parent="."]
+[node name="Collision" type="AudioStreamPlayer" parent="." unique_id=1846624659]
 stream = ExtResource("3_rku12")
 pitch_scale = 4.0

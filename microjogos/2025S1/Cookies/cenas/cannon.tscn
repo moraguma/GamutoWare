@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://46h8nsrltfop"]
+[gd_scene format=3 uid="uid://46h8nsrltfop"]
 
 [ext_resource type="Script" uid="uid://custh7oqim0sq" path="res://microjogos/2025S1/Cookies/cenas/scripts/turret.gd" id="1_3cvq0"]
 [ext_resource type="PackedScene" uid="uid://cp1xbchiwyprn" path="res://microjogos/2025S1/Cookies/cenas/cannon_bullet.tscn" id="2_3cvq0"]
@@ -80,6 +80,33 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_y5yi4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:material:shader_parameter/Enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.1, 0.1)]
+}
+
 [sub_resource type="Animation" id="Animation_evlve"]
 resource_name = "spawn"
 length = 0.5
@@ -108,40 +135,13 @@ tracks/1/keys = {
 "values": [Vector2(0.01, 0.01), Vector2(3, 3)]
 }
 
-[sub_resource type="Animation" id="Animation_y5yi4"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:material:shader_parameter/Enabled")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0.1, 0.1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oc1qj"]
 _data = {
 &"RESET": SubResource("Animation_y5yi4"),
 &"spawn": SubResource("Animation_evlve")
 }
 
-[node name="Cannon" type="CharacterBody2D"]
+[node name="Cannon" type="CharacterBody2D" unique_id=1858222474]
 texture_filter = 3
 scale = Vector2(0.00999999, 0.00999999)
 collision_layer = 0
@@ -149,10 +149,10 @@ collision_mask = 0
 script = ExtResource("1_3cvq0")
 bullet_scene = ExtResource("2_3cvq0")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1335025548]
 shape = SubResource("CircleShape2D_23q8m")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1504899597]
 material = SubResource("ShaderMaterial_yb16l")
 rotation = 1.5708
 scale = Vector2(0.1, 0.1)
@@ -161,17 +161,15 @@ animation = &"Shot"
 frame = 7
 frame_progress = 1.0
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=223635563]
 wait_time = 2.0
 autostart = true
 
-[node name="Marker2D" type="Marker2D" parent="."]
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1569139146]
 position = Vector2(138, 0)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_oc1qj")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=635171673]
+libraries/ = SubResource("AnimationLibrary_oc1qj")
 
 [connection signal="timeout" from="Timer" to="." method="shoot"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

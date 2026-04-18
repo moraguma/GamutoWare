@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://cqphd8ut3m756"]
+[gd_scene format=3 uid="uid://cqphd8ut3m756"]
 
 [ext_resource type="Script" uid="uid://cd2ka0s1cunw4" path="res://microjogos/2022S1/gamuturai/cenas/scripts/main.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://c6nfyxsgdqr8c" path="res://microjogos/2022S1/gamuturai/recursos/Barrinha.png" id="2"]
@@ -446,39 +446,39 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="SeuJogo2" type="Node2D"]
+[node name="SeuJogo2" type="Node2D" unique_id=2072701688]
 script = ExtResource("1")
 
-[node name="ShakeCamera2D" type="Camera2D" parent="."]
+[node name="ShakeCamera2D" type="Camera2D" parent="." unique_id=1981447777]
 anchor_mode = 0
 script = ExtResource("12")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=882120331]
 
-[node name="Background" type="AnimatedSprite2D" parent="."]
+[node name="Background" type="AnimatedSprite2D" parent="." unique_id=114320281]
 sprite_frames = SubResource("SpriteFrames_ggg6m")
 frame_progress = 0.484957
 centered = false
 
-[node name="Barrinha" type="Sprite2D" parent="."]
+[node name="Barrinha" type="Sprite2D" parent="." unique_id=646189239]
 texture_filter = 1
 position = Vector2(967, 213)
 scale = Vector2(8.991, 8.991)
 texture = ExtResource("2")
 
-[node name="BambuDoBalacobaco" type="Sprite2D" parent="."]
+[node name="BambuDoBalacobaco" type="Sprite2D" parent="." unique_id=856790742]
 position = Vector2(1398, 811)
 texture = ExtResource("10")
 script = ExtResource("6")
 
-[node name="Espada" type="Sprite2D" parent="."]
+[node name="Espada" type="Sprite2D" parent="." unique_id=1487173980]
 texture_filter = 1
 position = Vector2(959, 196)
 scale = Vector2(7.586, 7.586)
 texture = ExtResource("7_1p18t")
 script = ExtResource("4")
 
-[node name="Gamuturai" type="Sprite2D" parent="."]
+[node name="Gamuturai" type="Sprite2D" parent="." unique_id=971279288]
 texture_filter = 1
 position = Vector2(417, 770)
 scale = Vector2(6.787, 6.787)
@@ -487,12 +487,10 @@ hframes = 4
 vframes = 4
 script = ExtResource("6")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Gamuturai"]
-libraries = {
-&"": SubResource("AnimationLibrary_k7gop")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Gamuturai" unique_id=72415727]
+libraries/ = SubResource("AnimationLibrary_k7gop")
 
-[node name="Folha" type="CPUParticles2D" parent="."]
+[node name="Folha" type="CPUParticles2D" parent="." unique_id=900168518]
 position = Vector2(2020, 540)
 amount = 32
 texture = ExtResource("8")
@@ -509,7 +507,7 @@ angle_max = 100.0
 scale_amount_min = 3.0
 scale_amount_max = 3.0
 
-[node name="Folha(amongus)" type="CPUParticles2D" parent="."]
+[node name="Folha(amongus)" type="CPUParticles2D" parent="." unique_id=1744229105]
 position = Vector2(2020, 540)
 amount = 4
 texture = ExtResource("11_7ysg3")
@@ -526,19 +524,19 @@ angle_max = 100.0
 scale_amount_min = 3.0
 scale_amount_max = 3.0
 
-[node name="PandaDoBalacobaco" type="AnimatedSprite2D" parent="."]
+[node name="PandaDoBalacobaco" type="AnimatedSprite2D" parent="." unique_id=80725769]
 position = Vector2(966, -229)
 sprite_frames = SubResource("SpriteFrames_882d2")
 script = ExtResource("13")
 
-[node name="Musica" type="AudioStreamPlayer" parent="."]
+[node name="Musica" type="AudioStreamPlayer" parent="." unique_id=447572622]
 stream = ExtResource("17")
 
-[node name="Corte" type="AudioStreamPlayer" parent="."]
+[node name="Corte" type="AudioStreamPlayer" parent="." unique_id=781545860]
 stream = ExtResource("15")
 
-[node name="Morte" type="AudioStreamPlayer" parent="."]
+[node name="Morte" type="AudioStreamPlayer" parent="." unique_id=1180540046]
 stream = ExtResource("14")
 
-[node name="Panda" type="AudioStreamPlayer" parent="."]
+[node name="Panda" type="AudioStreamPlayer" parent="." unique_id=53840036]
 stream = ExtResource("16")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://csiisnal8j2bo"]
+[gd_scene format=3 uid="uid://csiisnal8j2bo"]
 
 [ext_resource type="Script" uid="uid://ct3k7rpxm8x2r" path="res://microjogos/2023S1/projeto-esteche/cenas/scripts/main.gd" id="1_mw6wy"]
 [ext_resource type="Texture2D" uid="uid://cbxgt72a3t7el" path="res://microjogos/2023S1/projeto-esteche/recursos/sprites/bg.png" id="2_yawj0"]
@@ -42,82 +42,82 @@ size = Vector2(104, 8)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_amtwy"]
 size = Vector2(1970, 20)
 
-[node name="Main2" type="Node2D"]
+[node name="Main2" type="Node2D" unique_id=389928409]
 script = ExtResource("1_mw6wy")
 
-[node name="Camera3D" type="Camera2D" parent="."]
+[node name="Camera3D" type="Camera2D" parent="." unique_id=396747063]
 anchor_mode = 0
 
-[node name="Bg" type="Sprite2D" parent="."]
+[node name="Bg" type="Sprite2D" parent="." unique_id=922479425]
 texture_filter = 1
 scale = Vector2(10, 10)
 texture = ExtResource("2_yawj0")
 centered = false
 
-[node name="PlataformaDireita" type="StaticBody2D" parent="."]
+[node name="PlataformaDireita" type="StaticBody2D" parent="." unique_id=173709497]
 script = ExtResource("3_xrdns")
 
-[node name="Sprite2D" type="Sprite2D" parent="PlataformaDireita"]
+[node name="Sprite2D" type="Sprite2D" parent="PlataformaDireita" unique_id=1228428665]
 position = Vector2(106.625, 832.125)
 scale = Vector2(0.43146, 0.4019)
 texture = ExtResource("4_72muy")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlataformaDireita"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlataformaDireita" unique_id=404349325]
 position = Vector2(148, 832)
 shape = SubResource("RectangleShape2D_wf0wd")
 
-[node name="PlataformaEsquerda" type="StaticBody2D" parent="."]
+[node name="PlataformaEsquerda" type="StaticBody2D" parent="." unique_id=1788615864]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlataformaEsquerda"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlataformaEsquerda" unique_id=1836902570]
 position = Vector2(1772, 712)
 shape = SubResource("RectangleShape2D_r2qju")
 
-[node name="Sprite2D" type="Sprite2D" parent="PlataformaEsquerda"]
+[node name="Sprite2D" type="Sprite2D" parent="PlataformaEsquerda" unique_id=1593392772]
 position = Vector2(1816, 712)
 scale = Vector2(0.405079, 0.352847)
 texture = ExtResource("5_507vn")
 
-[node name="Astronauta" type="CharacterBody2D" parent="."]
+[node name="Astronauta" type="CharacterBody2D" parent="." unique_id=2100289524]
 script = ExtResource("5_aybri")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Astronauta"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Astronauta" unique_id=909003028]
 position = Vector2(153.5, 751)
 shape = SubResource("RectangleShape2D_oj1ji")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Astronauta"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Astronauta" unique_id=794221711]
 texture_filter = 1
 position = Vector2(150, 751)
 scale = Vector2(5.40086, 5.46529)
 sprite_frames = SubResource("SpriteFrames_r6qcd")
 
-[node name="Asteroide" parent="." instance=ExtResource("8_yy8e7")]
+[node name="Asteroide" parent="." unique_id=1850503909 instance=ExtResource("8_yy8e7")]
 position = Vector2(495, 481)
 
-[node name="Asteroide2" parent="." instance=ExtResource("8_yy8e7")]
+[node name="Asteroide2" parent="." unique_id=1077679482 instance=ExtResource("8_yy8e7")]
 position = Vector2(770, 349)
 
-[node name="Asteroide3" parent="." instance=ExtResource("8_yy8e7")]
+[node name="Asteroide3" parent="." unique_id=1307129617 instance=ExtResource("8_yy8e7")]
 position = Vector2(1093, 536)
 
-[node name="Asteroide4" parent="." instance=ExtResource("8_yy8e7")]
+[node name="Asteroide4" parent="." unique_id=149463449 instance=ExtResource("8_yy8e7")]
 position = Vector2(1434, 522)
 
-[node name="areadevictoria" type="Area2D" parent="."]
+[node name="areadevictoria" type="Area2D" parent="." unique_id=1185071976]
 script = ExtResource("10_hryy6")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="areadevictoria"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="areadevictoria" unique_id=1075227281]
 position = Vector2(1776, 696)
 shape = SubResource("RectangleShape2D_51rqe")
 
-[node name="VictoryFanfare" type="AudioStreamPlayer" parent="areadevictoria"]
+[node name="VictoryFanfare" type="AudioStreamPlayer" parent="areadevictoria" unique_id=499315394]
 stream = ExtResource("11_kamy2")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=658684923]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=166542294]
 position = Vector2(975, 0)
 shape = SubResource("RectangleShape2D_amtwy")
 
-[node name="Music" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1005192650]
 stream = ExtResource("12_rid1j")
 autoplay = true

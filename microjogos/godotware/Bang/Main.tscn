@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c62qhhfmkvajw"]
+[gd_scene format=3 uid="uid://c62qhhfmkvajw"]
 
 [ext_resource type="Script" uid="uid://b202upkyvtcjw" path="res://microjogos/godotware/Bang/Main.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://4fhuta60norx" path="res://microjogos/godotware/Bang/bang_1.png" id="2"]
@@ -53,28 +53,28 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1160677066]
 script = ExtResource("1")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=202290033]
 position = Vector2(0, -20)
-frames = SubResource("1")
+sprite_frames = SubResource("1")
 centered = false
 
-[node name="WaitTimer" type="Timer" parent="."]
+[node name="WaitTimer" type="Timer" parent="." unique_id=538486836]
 one_shot = true
 
-[node name="ShootTimer" type="Timer" parent="."]
+[node name="ShootTimer" type="Timer" parent="." unique_id=840941877]
 one_shot = true
 
-[node name="EndTimer" type="Timer" parent="."]
+[node name="EndTimer" type="Timer" parent="." unique_id=288611828]
 one_shot = true
 
-[node name="Click" type="AudioStreamPlayer" parent="."]
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=946041119]
 stream = ExtResource("10")
 
-[node name="Music" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=90332797]
 stream = ExtResource("7")
 
-[node name="Shoot" type="AudioStreamPlayer" parent="."]
+[node name="Shoot" type="AudioStreamPlayer" parent="." unique_id=841121042]
 stream = ExtResource("8")

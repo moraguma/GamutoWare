@@ -39,4 +39,3 @@ func instanciar_obj():
 func _on_timer_timeout():
 	timer.start(2)
 	instanciar_obj()
-

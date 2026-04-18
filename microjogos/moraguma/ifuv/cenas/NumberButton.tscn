@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bjm26yvl38ria"]
+[gd_scene format=3 uid="uid://bjm26yvl38ria"]
 
 [ext_resource type="FontFile" uid="uid://censsrpbpgb4h" path="res://microjogos/moraguma/ifuv/recursos/fonts/Pixel Millennium.ttf" id="1"]
 [ext_resource type="Script" uid="uid://cr1g1ewn45w8d" path="res://microjogos/moraguma/ifuv/cenas/scripts/NumberButton.gd" id="2"]
@@ -94,6 +94,15 @@ fallbacks = Array[Font]([ExtResource("1"), ExtResource("1")])
 subpixel_positioning = 0
 msdf_pixel_range = 14
 msdf_size = 128
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -114,19 +123,17 @@ default_font = SubResource("14")
 RichTextLabel/colors/default_color = Color(0.121569, 0.0745098, 0.101961, 1)
 RichTextLabel/font_sizes/normal_font_size = 8
 
-[node name="NumberButton" type="Sprite2D"]
+[node name="NumberButton" type="Sprite2D" unique_id=1432329500]
 texture_filter = 1
 texture = ExtResource("3")
 hframes = 2
 frame = 1
 script = ExtResource("2")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_kx8rk")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=358916379]
+libraries/ = SubResource("AnimationLibrary_kx8rk")
 
-[node name="Display" type="RichTextLabel" parent="."]
+[node name="Display" type="RichTextLabel" parent="." unique_id=1733385238]
 offset_left = -7.0
 offset_top = -4.0
 offset_right = 9.0
