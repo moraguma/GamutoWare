@@ -1,11 +1,5 @@
 extends Node2D
 
-const WIDTH = 320
-const HEIGHT = 180
-
-signal win
-signal lose
-
 const COLOR_TOLERANCE = 0.5
 
 var rng = RandomNumberGenerator.new()
@@ -88,7 +82,7 @@ func put_color(i):
 	elif used==4:
 		$Cor5/Polygon2D.modulate = Color(c[i][0], c[i][1], c[i][2])
 		if tentativa==resp:
-			emit_signal("win")
+			Minigames.register_win(self)
 			$Sprite2D.modulate = Color((R0+R1)/2, (G0+G1)/2, (B0+B1)/2, 1)
 			$Polygon13.modulate = Color(0,0,0,0)
 			$Polygon14.modulate = Color(0,0,0,0)

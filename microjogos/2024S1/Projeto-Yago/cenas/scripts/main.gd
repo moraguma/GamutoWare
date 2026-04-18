@@ -2,15 +2,12 @@ extends Node2D
 
 @onready var player = $Player
 
-signal win
-signal lose
-
 # Estas constantes são usadas para determinar o tamanho da tela do seu jogo. Por padrão, definem uma
 # tela 1920x1080, que é padrão para monitores full HD. Caso você queira uma resolução menor para 
 # atingir uma estética mais pixelada, você pode mudar estes números para qualquer outra resolução 
 # 16:9
-const WIDTH = 1920
-const HEIGHT = 1080
+
+
 
 
 # --------------------------------------------------------------------------------------------------
@@ -32,7 +29,7 @@ func register_win():
 	#		NotificationCenter.notify("WIN!")
 	#	Global.LANGUAGE.PT:
 	#		NotificationCenter.notify("COMPRA COMPLETA!")
-	emit_signal("win")
+	Minigames.register_win(self)
 	remove_child($Player)
 
 # Chame esta função para registrar que o jogador perdeu o jogo
@@ -42,5 +39,5 @@ func register_lose():
 	#		NotificationCenter.notify("LOSE!")
 	#	Global.LANGUAGE.PT:
 	#		NotificationCenter.notify("PERDEU PLAYBOY!")
-	emit_signal("lose")
+	Minigames.register_lose(self)
 	remove_child($Player)

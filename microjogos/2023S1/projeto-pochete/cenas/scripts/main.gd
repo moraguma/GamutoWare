@@ -1,15 +1,11 @@
 extends Node2D
 
-# Declaração dos sinais win e lose
-signal win
-signal lose
-
 # Estas constantes são usadas para determinar o tamanho da tela do seu jogo. Por padrão, definem uma
 # tela 1920x1080, que é padrão para monitores full HD. Caso você queira uma resolução menor para 
 # atingir uma estética mais pixelada, você pode mudar estes números para qualquer outra resolução 
 # 16:9
-const WIDTH = 1920
-const HEIGHT = 1080
+
+
 
 var chosen_apples = []
 var won = false
@@ -77,25 +73,6 @@ func choose_apples():
 		apple.show()
 		chosen_apples.append(apple)
 
-# --------------------------------------------------------------------------------------------------
-# CONDIÇÕES DE VITÓRIA
-# --------------------------------------------------------------------------------------------------
-# Quando o jogo começa, ela assume que o jogador não conseguiu vencer o jogo ainda, ou seja, se não
-# acontecer nada, o jogador vai perder o jogo. A verificação se o jogador venceu o minigame é feita
-# com base na emissão dos sinais "win" e "lose". Se "win" foi o último sinal emitido, o jogador
-# vencerá o jogo, e se "lose" foi o último sinal emitido ou nenhum sinal foi emitido, o jogador
-# perderá o jogo
-
-
-# Chame esta função para registrar que o jogador venceu o jogo
-func register_win():
-	emit_signal("win")
-
-
-# Chame esta função para registrar que o jogador perdeu o jogo
-func register_lose():
-	emit_signal("lose")
-
 
 func _on_head_area_entered(area):
 	if area in chosen_apples + [final_apple]:
@@ -112,7 +89,7 @@ func _on_head_area_entered(area):
 				win = true
 				break
 		if win:
-			register_win()
+			Minigames.register_win(self)
 			won = true
 			won_i = len(head.tail_nodes)
 			#head.tail_nodes[-1].position = head.position

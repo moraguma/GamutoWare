@@ -34,7 +34,7 @@ func _physics_process(delta):
 		rotation = atan2(velocity.y, velocity.x)
 		var collided = move_and_collide(velocity*delta)
 		if(collided):
-			parent.register_lose()
+			Minigames.register_lose(self)
 			alive = false
 			get_node("Sprite2D").visible = false
 			get_node("Trail").emitting = false

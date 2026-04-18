@@ -30,6 +30,8 @@ var t: Tween
 func _ready() -> void:
 	timer.connect("timeout", free_microgame)
 	free_timer.connect("timeout", instant_free_microgame)
+	Minigames._win.connect(win_microgame)
+	Minigames._lose.connect(lose_microgame)
 
 
 func set_mask_center(pos):
@@ -47,12 +49,13 @@ func start_game(microgame):
 		print("Loading without previous request: "+microgame.main_scene.resource_path)
 		ResourceLoader.load_threaded_request(microgame.main_scene.resource_path)
 	current_microgame = ResourceLoader.load_threaded_get(microgame.main_scene.resource_path).instantiate()
-	current_microgame.connect("win", win_microgame)
-	current_microgame.connect("lose", lose_microgame)
 	
-	var convert_ratio = max(BASE_WIDTH/float(current_microgame.WIDTH),BASE_HEIGHT/float(current_microgame.HEIGHT))
+	var width: int = microgame.screen_dimensions.x
+	var height: int = microgame.screen_dimensions.y
+
+	var convert_ratio = max(BASE_WIDTH/float(width),BASE_HEIGHT/float(height))
 	
-	display.size = Vector2(current_microgame.WIDTH, current_microgame.HEIGHT)
+	display.size = microgame.screen_dimensions
 	display.scale=Vector2(convert_ratio,convert_ratio)
 	display.texture_filter = current_microgame.texture_filter
 	
@@ -106,9 +109,19 @@ func reset_tween():
 	t.set_trans(Tween.TRANS_CIRC)
 
 
-func win_microgame():
+func win_microgame(source: Node) -> void:
+	if source == null or current_microgame == null:
+		return
+	# Microgame cannot register win if source of win call is not a descendant of the current microgames main node
+	if source != current_microgame and not current_microgame.is_ancestor_of(source):
+		return
 	won = true
 
 
-func lose_microgame():
+func lose_microgame(source: Node):
+	if source == null or current_microgame == null:
+		return
+	# Microgame cannot register lose if source of win call is not a descendant of the current microgames main node
+	if source != current_microgame and not current_microgame.is_ancestor_of(source):
+		return
 	won = false

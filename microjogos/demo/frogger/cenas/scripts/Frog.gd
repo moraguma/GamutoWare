@@ -49,7 +49,7 @@ func _physics_process(delta):
 				yay.play()
 				
 				active = false
-				main.register_win()
+				Minigames.register_win(self)
 
 
 # Chamada quando entra em outra. Mata o jogador
@@ -60,4 +60,4 @@ func hit(area):
 	active = false
 	hide()
 	
-	main.register_lose()
+	Minigames.register_lose(self)

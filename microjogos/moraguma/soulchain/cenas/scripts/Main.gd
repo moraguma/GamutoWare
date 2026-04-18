@@ -1,14 +1,5 @@
 extends Node2D
 
-
-signal win
-signal lose
-
-
-const WIDTH = 384
-const HEIGHT = 216
-
-
 const MAX_PLAYER_MOVEMENT = Vector2(48, 0)
 const MAX_GOAL_MOVEMENT_1 = Vector2(0, -32)
 const MAX_GOAL_MOVEMENT_2 = Vector2(16, 16)
@@ -37,7 +28,4 @@ func _ready():
 
 
 func register_win(_body):
-	emit_signal("win")
-	
-func register_lose(_body):
-	emit_signal("lose")
+	Minigames.register_win(self)

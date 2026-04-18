@@ -41,7 +41,7 @@ func coletar(body):
 	$quack.play()
 	c=c+1
 	if c>=5:
-		get_parent().register_win() # Volta para o Node principal e chama a funcao register_win enviando o sinal para o GamutoWare
+		Minigames.register_win(self) 
 	return c
 	
 

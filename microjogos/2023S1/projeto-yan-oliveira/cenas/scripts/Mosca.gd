@@ -26,7 +26,7 @@ func tentar_deletar(area):
 	queue_free()
 	get_parent().mosca_morta += 1
 	if get_parent().mosca_morta == 3:
-		get_parent().register_win() 
+		Minigames.register_win(self) 
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,12 +1,8 @@
 extends Node2D
 
-# Declaração dos sinais win e lose
-signal win
-signal lose
-
 # 16:9
-const WIDTH = 1920
-const HEIGHT = 1080
+
+
 
 #---------------------------------------------------------------------------------------------------
 # VARIÁVEIS LOCAIS
@@ -55,7 +51,7 @@ func _process(delta):
 		mail_list.pop_at(0)
 	
 	if len(mail_list) == 0 and not lost:
-		register_win()
+		Minigames.register_win(self)
 
 # --------------------------------------------------------------------------------------------------
 # FUNÇÕES LOCAIS
@@ -89,15 +85,10 @@ func mail_fall(delta: float):
 # CONDIÇÕES DE VITÓRIA
 # --------------------------------------------------------------------------------------------------
 
-# Chame esta função para registrar que o jogador venceu o jogo
-func register_win():
-	emit_signal("win")
-
-
 # Chame esta função para registrar que o jogador perdeu o jogo
 func register_lose():
 	$Phone/BlueScreen.visible = true
 	$Music.playing = false
 	$Scratch.playing = true
 	GlobalCamera.add_trauma(0.75)
-	emit_signal("lose")
+	Minigames.register_lose(self)

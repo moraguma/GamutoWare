@@ -30,5 +30,5 @@ func _physics_process(delta):
 
 func _on_hurtbox_body_entered(body):
 	if body == get_parent().get_node("Enemy"):
-		emit_signal("lose")
+		Minigames.register_lose(self)
 		self.queue_free()

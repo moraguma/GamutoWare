@@ -1,4 +1,4 @@
 Coloque seus scripts aqui!
-register_win()
+Minigames.register_win(self)
 
 print("3")

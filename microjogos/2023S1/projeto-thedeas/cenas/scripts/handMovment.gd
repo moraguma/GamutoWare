@@ -64,7 +64,7 @@ func _on_area_2d_area_entered(area):
 	deathCounter += 1
 	
 	if deathCounter == 5: 
-		get_parent().register_win()
+		Minigames.register_win(self)
 	
 	area.queue_free()
 	
