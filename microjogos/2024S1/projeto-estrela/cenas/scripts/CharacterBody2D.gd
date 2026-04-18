@@ -44,5 +44,3 @@ func coletar(body):
 		Minigames.register_win(self) 
 	return c
 	
-
-
