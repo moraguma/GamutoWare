@@ -1,8 +1,10 @@
 extends CharacterBody2D
 
 const SPEED = 150.0
+
 const WIDTH = 1920
 const HEIGHT = 1080
+
 
 var target = Vector2(0,0)
 

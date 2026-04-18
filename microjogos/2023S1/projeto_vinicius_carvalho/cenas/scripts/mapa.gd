@@ -1,10 +1,7 @@
 extends Node2D
 
-const WIDTH = 1920
-const HEIGHT = 1080
 
-signal win
-signal lose
+
 
 var timer
 var timer_win
@@ -20,7 +17,7 @@ func _ready():
 	timer = $Timer
 	timer.start(0.5)
 	
-	register_win()
+	Minigames.register_win(self)
 
 	
 	
@@ -43,10 +40,3 @@ func _on_timer_timeout():
 	timer.start(2)
 	instanciar_obj()
 
-
-func register_win():
-	emit_signal("win")
-
-
-func register_lose():
-	emit_signal("lose")

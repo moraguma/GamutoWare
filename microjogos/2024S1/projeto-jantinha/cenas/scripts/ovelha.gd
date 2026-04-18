@@ -18,7 +18,7 @@ func _morrer():
 func _on_hitboxovelha_area_entered(area):
 	if area.name == "hitboxlobo" and not is_dead:
 		_morrer()
-		get_parent().get_parent().register_win()
+		Minigames.register_win(self)
 	pass # Replace with function body.
 
 func _on_sensacao_area_entered(area):

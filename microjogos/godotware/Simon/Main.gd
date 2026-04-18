@@ -1,13 +1,5 @@
 extends Node2D
 
-
-signal win
-signal lose
-
-
-const WIDTH = 640
-const HEIGHT = 360
-
 const TOTAL_COLORS = 4
 const WAIT_TIME = 0.5
 const START_EXTRA_TIME = 0.3
@@ -83,7 +75,7 @@ func button_click(color_code):
 		active = false
 		win_sound.play()
 		
-		emit_signal("win")
+		Minigames.register_win(self)
 
 
 func play_color(color_code):

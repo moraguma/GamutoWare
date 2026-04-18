@@ -13,6 +13,6 @@ func _process(delta):
 
 func _on_area_2d_body_entered(body):
 	print("colidiu")
-	get_parent().get_parent().register_win()
+	Minigames.register_win(self)
 	
 	pass # Replace with function body.

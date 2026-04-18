@@ -1,10 +1,7 @@
 extends Node2D
 
-signal win
-signal lose
- 
-const WIDTH = 1920
-const HEIGHT = 1080
+
+
 
 const MIN_X = 500
 const MAX_X = 1700
@@ -33,18 +30,10 @@ func _process(delta):
 func ganhar_ponto(body):
 	pontuacao += 1
 	if(pontuacao >= 3):
-		register_win()
+		Minigames.register_win(self)
 		$win.play()
 		$player.acabou = true
 	else:
 		$mordida.play()
 
-func register_win():
-	emit_signal("win") 
-
-func register_lose():
-	emit_signal("lose")
-
-
- 
 		

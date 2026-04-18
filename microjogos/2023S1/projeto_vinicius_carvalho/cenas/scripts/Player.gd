@@ -39,7 +39,7 @@ func _on_hitbox_body_entered(body):
 	death_s = $SomDeath
 	death_s.play()
 	timer = $Timer
-	get_parent().register_lose()
+	Minigames.register_lose(self)
 	timer.start(1)
 
 

@@ -17,7 +17,7 @@ func _on_body_shape_entered(body_rid, body, body_shape_index, local_shape_index)
 			anim.play("gone")
 			$"AudioStreamPlayer".play()
 			$"../Label".text = "SUCESSO!"
-			$"../".register_win()
+			Minigames.register_win(self)
 	
 func _on_animated_sprite_2d_animation_finished():
 	queue_free()

@@ -4,12 +4,7 @@ extends Node2D
 signal win
 signal lose
 
-# Estas constantes são usadas para determinar o tamanho da tela do seu jogo. Por padrão, definem uma
-# tela 1920x1080, que é padrão para monitores full HD. Caso você queira uma resolução menor para 
-# atingir uma estética mais pixelada, você pode mudar estes números para qualquer outra resolução 
-# 16:9
-const WIDTH = 1920
-const HEIGHT = 1080
+
 
 
 # --------------------------------------------------------------------------------------------------
@@ -32,7 +27,7 @@ func _physics_process(delta):
 # desde a última chamada desta função. O comando pass não faz nada
 func _process(delta):
 	#var direction = 0
-	#if Input.is_action_pressed("ui_left"):
+	#if Input.is_action_pressed("esquerda"):
 		#direction = -1
 	#$Cell_0.
 	pass

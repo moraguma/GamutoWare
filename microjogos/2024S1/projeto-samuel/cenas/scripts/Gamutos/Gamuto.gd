@@ -7,13 +7,13 @@ func _ready():
 	position.x = rng.randf_range(-500, 200)
 	velocity.x = 200
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if position.x >= 1600:
 		position.x = -500
 	
 	move_and_slide()
 
-func _on_area_2d_body_entered(body):
+func _on_area_2d_body_entered(_body):
 	if velocity.x != 0:
 		$Gamuto0.visible = false
 		get_node("../Yay").play()

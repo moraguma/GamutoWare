@@ -1,17 +1,5 @@
 extends Node2D
 
-
-signal win
-signal lose
-
-
-const HEIGHT = 180
-const WIDTH = 320
-
-
-
-
-
 const LINE_POINTS = [Vector2(-4, -4), Vector2(324, -4), Vector2(324, 184), Vector2(-4, 184), Vector2(-4, -3)]
 const FIRST_TIME = 1
 const SPAWN_TIME = 0.389
@@ -27,7 +15,7 @@ func _ready():
 	
 	music.play()
 	
-	call_deferred("emit_signal", "win")
+	Minigames.register_win(self)
 	
 	randomize()
 	
@@ -50,4 +38,4 @@ func spawn():
 func register_lose():
 	timer.stop()
 	
-	emit_signal("lose")
+	Minigames.register_lose(self)

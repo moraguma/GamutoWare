@@ -32,7 +32,7 @@ func _process(delta):
 		if not crowd_anim_played:
 			crowd_anim.play("crowd_shake")
 			crowd_anim_played = true
-			emit_signal("win")
+			Minigames.register_win(self)
 	if perdeu:
 		oh_no.play()
 		oh_no.visible = true

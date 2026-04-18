@@ -1,0 +1,119 @@
+[gd_scene load_steps=12 format=3 uid="uid://c1dssl3gprxqx"]
+
+[ext_resource type="Script" uid="uid://cc1qravq8w8jd" path="res://microjogos/2025S1/Drikista_Gamelab/cenas/scripts/scene.gd" id="1_fyw77"]
+[ext_resource type="PackedScene" uid="uid://u1sdttsqwxr7" path="res://microjogos/2025S1/Drikista_Gamelab/cenas/moving_insects_moskito.tscn" id="1_pnfsi"]
+[ext_resource type="PackedScene" uid="uid://cs0npkpprcrrh" path="res://microjogos/2025S1/Drikista_Gamelab/cenas/moving_insects_beetle.tscn" id="2_2ilom"]
+[ext_resource type="Texture2D" uid="uid://cwnjtucmdhpd0" path="res://microjogos/2025S1/Drikista_Gamelab/recursos/Sprites/background.png" id="2_2v8co"]
+[ext_resource type="PackedScene" uid="uid://ks30fbr2pbry" path="res://microjogos/2025S1/Drikista_Gamelab/cenas/moving_insects_moth.tscn" id="3_gn8ym"]
+[ext_resource type="Texture2D" uid="uid://dbm4b0m2dyyvs" path="res://microjogos/2025S1/Drikista_Gamelab/recursos/Sprites/arrow.png" id="4_ko4lu"]
+[ext_resource type="Texture2D" uid="uid://d2dgr6nfbtyv4" path="res://microjogos/2025S1/Drikista_Gamelab/recursos/Sprites/Gamuto Head.png" id="7_4u3ws"]
+[ext_resource type="AudioStream" uid="uid://cskwtmkw1aj7r" path="res://microjogos/2025S1/Drikista_Gamelab/recursos/sons/freesound_community-garden-sunny-day-54490.wav" id="8_45btp"]
+[ext_resource type="AudioStream" uid="uid://ctftvscx3d04o" path="res://microjogos/2025S1/Drikista_Gamelab/recursos/sons/universfield-slime-impact-352473.wav" id="9_a1pcq"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_2ilom"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nu0d0"]
+size = Vector2(57.3333, 34)
+
+[node name="Scene" type="Node2D"]
+texture_filter = 3
+script = ExtResource("1_fyw77")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(960, 540)
+scale = Vector2(5, 5)
+texture = ExtResource("2_2v8co")
+
+[node name="Plate_moth" type="Area2D" parent="."]
+
+[node name="spr_plate" type="Sprite2D" parent="Plate_moth"]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(960, 623)
+scale = Vector2(174, 104.4)
+texture = SubResource("CanvasTexture_2ilom")
+
+[node name="col_plate" type="CollisionShape2D" parent="Plate_moth"]
+position = Vector2(960, 623)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_nu0d0")
+
+[node name="Plate_beetle" type="Area2D" parent="."]
+
+[node name="spr_plate" type="Sprite2D" parent="Plate_beetle"]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(960, 449)
+scale = Vector2(174, 104.4)
+texture = SubResource("CanvasTexture_2ilom")
+
+[node name="col_plate" type="CollisionShape2D" parent="Plate_beetle"]
+position = Vector2(960, 449)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_nu0d0")
+
+[node name="Plate_moskito" type="Area2D" parent="."]
+
+[node name="spr_plate" type="Sprite2D" parent="Plate_moskito"]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(960, 275)
+scale = Vector2(174, 104.4)
+texture = SubResource("CanvasTexture_2ilom")
+
+[node name="col_plate" type="CollisionShape2D" parent="Plate_moskito"]
+position = Vector2(960, 275)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_nu0d0")
+
+[node name="arrow_left" type="Sprite2D" parent="."]
+modulate = Color(0.647011, 0.201286, 1, 1)
+texture_filter = 1
+position = Vector2(1500, 275)
+rotation = -1.5708
+scale = Vector2(3, 3)
+texture = ExtResource("4_ko4lu")
+
+[node name="arrow_up" type="Sprite2D" parent="."]
+modulate = Color(0.647011, 0.201286, 1, 1)
+texture_filter = 1
+position = Vector2(1500, 449)
+scale = Vector2(3, 3)
+texture = ExtResource("4_ko4lu")
+
+[node name="arrow_right" type="Sprite2D" parent="."]
+modulate = Color(0.647011, 0.201286, 1, 1)
+texture_filter = 1
+position = Vector2(1500, 623)
+rotation = 1.5708
+scale = Vector2(3, 3)
+texture = ExtResource("4_ko4lu")
+
+[node name="GamutoHead" type="Sprite2D" parent="."]
+position = Vector2(960, 946)
+rotation = -1.5708
+texture = ExtResource("7_4u3ws")
+
+[node name="moving_insects_moskito" parent="." instance=ExtResource("1_pnfsi")]
+position = Vector2(621, 275)
+scale = Vector2(3, 3)
+
+[node name="moving_insects_beetle" parent="." instance=ExtResource("2_2ilom")]
+position = Vector2(621, 449)
+scale = Vector2(3, 3)
+
+[node name="moving_insects_moth" parent="." instance=ExtResource("3_gn8ym")]
+position = Vector2(621, 623)
+scale = Vector2(3, 3)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_45btp")
+autoplay = true
+
+[node name="Colar" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_a1pcq")
+
+[connection signal="area_entered" from="Plate_moth" to="moving_insects_moth" method="_on_plate_moth_area_entered"]
+[connection signal="area_exited" from="Plate_moth" to="moving_insects_moth" method="_on_plate_moth_area_exited"]
+[connection signal="area_entered" from="Plate_beetle" to="moving_insects_beetle" method="_on_plate_beetle_area_entered"]
+[connection signal="area_exited" from="Plate_beetle" to="moving_insects_beetle" method="_on_plate_beetle_area_exited"]
+[connection signal="area_entered" from="Plate_moskito" to="moving_insects_moskito" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Plate_moskito" to="moving_insects_moskito" method="_on_plate_area_exited"]

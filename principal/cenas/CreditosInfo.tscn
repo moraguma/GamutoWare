@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dr5dxsgtiww88"]
+[gd_scene format=3 uid="uid://dr5dxsgtiww88"]
 
 [ext_resource type="Script" uid="uid://dtj51ypoahrvw" path="res://principal/cenas/scripts/CreditosInfo.gd" id="1_qcvn3"]
-[ext_resource type="Theme" uid="uid://v3d547aawndh" path="res://principal/recursos/themes/BodyTheme.tres" id="2_awnhk"]
+[ext_resource type="Theme" path="res://principal/recursos/themes/BodyTheme.tres" id="2_awnhk"]
 [ext_resource type="FontFile" uid="uid://cvvv4ta4o2y3l" path="res://principal/recursos/fonts/Delius_Unicase/DeliusUnicase-Bold.ttf" id="3_ga8lw"]
 
 [sub_resource type="Animation" id="Animation_6x85g"]
@@ -83,11 +83,11 @@ _data = {
 &"appear": SubResource("Animation_176od")
 }
 
-[node name="CreditosInfo" type="Node2D"]
+[node name="CreditosInfo" type="Node2D" unique_id=72121071]
 scale = Vector2(1e-05, 1e-05)
 script = ExtResource("1_qcvn3")
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=582892780]
 clip_contents = true
 layout_mode = 3
 anchors_preset = 8
@@ -103,20 +103,20 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_awnhk")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Control"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Control" unique_id=374917677]
 clip_contents = false
-layout_mode = 2
+layout_mode = 0
 offset_left = 32.0
 offset_top = 19.0
 offset_right = 765.0
 offset_bottom = 889.0
 theme = ExtResource("2_awnhk")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/ScrollContainer" unique_id=1838606791]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Header" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer"]
+[node name="Header" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer" unique_id=761302495]
 clip_contents = false
 layout_mode = 2
 theme = ExtResource("2_awnhk")
@@ -126,7 +126,7 @@ bbcode_enabled = true
 text = "[center][shake level=20]TITLE"
 fit_content = true
 
-[node name="Body" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer"]
+[node name="Body" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer" unique_id=1784108753]
 clip_contents = false
 layout_mode = 2
 theme = ExtResource("2_awnhk")
@@ -136,7 +136,5 @@ text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non diam
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non diam non sapien gravida auctor. Fusce facilisis vestibulum est. Phasellus molestie facilisis quam. Nam ac nulla neque. Sed vestibulum condimentum malesuada. Donec facilisis, neque quis lobortis lacinia, enim metus pellentesque ex, id vestibulum diam est id risus. Morbi leo nunc, rutrum ac turpis in, gravida blandit nunc. Suspendisse euismod viverra ex vel scelerisque. Duis quis felis massa. Quisque eget quam at risus facilisis auctor. Donec sit amet fermentum sapien, in congue ante. Vivamus in ligula nunc. Ut dapibus diam vel quam convallis, nec semper felis faucibus. Sed ac mauris dui. "
 fit_content = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_wyana")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1031904986]
+libraries/ = SubResource("AnimationLibrary_wyana")

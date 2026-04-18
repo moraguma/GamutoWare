@@ -72,7 +72,7 @@ func _mudar():
 		i = rnd
 	else:
 		if not missed:
-			get_parent().register_win()
+			Minigames.register_win(self)
 			win_sound.play()
 		else:
 			lose_sound.play()

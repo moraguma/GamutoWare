@@ -1,7 +1,7 @@
 extends "res://principal/cenas/scripts/PressableButton.gd"
 
 
-@export (String) var url
+@export var url: String
 
 
 func _pressed():

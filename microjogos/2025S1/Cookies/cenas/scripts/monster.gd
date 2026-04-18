@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 		$AnimatedSprite2D.frame = 1
 		velocity.y = 0
 		health = 500
-		get_parent().register_lose()
+		Minigames.register_lose(self)
 	move_and_slide()
 func hit(damage: float):
 	if health > 0:
@@ -25,4 +25,4 @@ func hit(damage: float):
 		$HealthBar.value = health
 		if health <= 0:
 			velocity.y = 300
-			get_parent().register_win()
+			Minigames.register_win(self)
