@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://oe5ivv5m376p"]
+[gd_scene format=3 uid="uid://oe5ivv5m376p"]
 
 [ext_resource type="Script" uid="uid://l6scn8xl1ipt" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/scripts/main.gd" id="1_luxrx"]
 [ext_resource type="Texture2D" uid="uid://boenun8pc8oc1" path="res://microjogos/2023S1/projeto-gabriel-morais/recursos/fundo.png" id="2_di1wt"]
@@ -19,70 +19,70 @@ size = Vector2(163.5, 74)
 radius = 73.0
 height = 150.0
 
-[node name="Newton\'s vengeance" type="Node2D"]
+[node name="Newton\'s vengeance" type="Node2D" unique_id=660102797]
 position = Vector2(1, 0)
 script = ExtResource("1_luxrx")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1287118981]
 offset_right = 1920.0
 offset_bottom = 1079.0
 texture = ExtResource("2_di1wt")
 expand_mode = 1
 
-[node name="newton" type="Sprite2D" parent="."]
+[node name="newton" type="Sprite2D" parent="." unique_id=88851515]
 position = Vector2(233, 830)
 scale = Vector2(1.94192, 2.17355)
 texture = ExtResource("3_va3ko")
 script = ExtResource("4_ym1hm")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1914059481]
 anchor_mode = 0
 
-[node name="pivo" type="Area2D" parent="Camera2D"]
+[node name="pivo" type="Area2D" parent="Camera2D" unique_id=271563870]
 position = Vector2(561, 846)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/pivo"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/pivo" unique_id=560128672]
 shape = SubResource("RectangleShape2D_tsw6s")
 
-[node name="Sprite2D" type="Sprite2D" parent="Camera2D/pivo"]
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D/pivo" unique_id=2009090587]
 position = Vector2(0, 147)
 scale = Vector2(1.42101, 2.10536)
 texture = ExtResource("4_hy8fn")
 
-[node name="Line2D" type="Line2D" parent="Camera2D"]
+[node name="Line2D" type="Line2D" parent="Camera2D" unique_id=2074866913]
 points = PackedVector2Array(487, 855, 1920, 1080)
 width = 30.0
 default_color = Color(0.639216, 0, 0.00784314, 1)
 script = ExtResource("6_jkosv")
 
-[node name="Line2D2" type="Line2D" parent="Camera2D"]
+[node name="Line2D2" type="Line2D" parent="Camera2D" unique_id=1616461633]
 points = PackedVector2Array(623, 859, 1920, 1080)
 width = 30.0
 default_color = Color(0.623529, 0, 0.00784314, 1)
 script = ExtResource("6_jkosv")
 
-[node name="pedra" type="CharacterBody2D" parent="Camera2D"]
+[node name="pedra" type="CharacterBody2D" parent="Camera2D" unique_id=904956140]
 position = Vector2(256, 544)
 script = ExtResource("7_xs1qc")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/pedra"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/pedra" unique_id=1578260737]
 shape = SubResource("CapsuleShape2D_tgoiv")
 
-[node name="Sprite2D" type="Sprite2D" parent="Camera2D/pedra"]
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D/pedra" unique_id=1643021080]
 texture_filter = 1
 position = Vector2(5.49999, 0)
 scale = Vector2(4.34375, 6.92969)
 texture = ExtResource("3_f6xe8")
 
-[node name="tiro" type="AudioStreamPlayer" parent="Camera2D/pedra"]
+[node name="tiro" type="AudioStreamPlayer" parent="Camera2D/pedra" unique_id=157509015]
 stream = ExtResource("8_gvspe")
 
-[node name="maca1" parent="Camera2D" instance=ExtResource("5_ccmg4")]
+[node name="maca1" parent="Camera2D" unique_id=1322211830 instance=ExtResource("5_ccmg4")]
 position = Vector2(1219, 256)
 
-[node name="maca2" parent="Camera2D" instance=ExtResource("5_ccmg4")]
+[node name="maca2" parent="Camera2D" unique_id=370576554 instance=ExtResource("5_ccmg4")]
 position = Vector2(1646, 343)
 
-[node name="backgroundmusic" type="AudioStreamPlayer" parent="."]
+[node name="backgroundmusic" type="AudioStreamPlayer" parent="." unique_id=1872871962]
 stream = ExtResource("11_0y8lc")
 autoplay = true

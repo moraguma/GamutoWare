@@ -53,4 +53,3 @@ func delete_enemy():
 	
 	if total_enemies == 0 and not morreu:
 		Minigames.register_win(self) 
-

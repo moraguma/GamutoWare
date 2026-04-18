@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dg5uxs8qt1qbc"]
+[gd_scene format=3 uid="uid://dg5uxs8qt1qbc"]
 
 [ext_resource type="Script" uid="uid://cncxcvvsupgya" path="res://microjogos/2023S1/projeto-brabesf/cenas/scripts/main.gd" id="1_fhjug"]
 [ext_resource type="Texture2D" uid="uid://dgkpur2irlsp4" path="res://microjogos/2023S1/projeto-brabesf/recursos/sprites/5586989.jpg" id="2_q1nam"]
@@ -19,205 +19,205 @@
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_elkgu"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1473223922]
 script = ExtResource("1_fhjug")
 
-[node name="Camera" type="Camera2D" parent="."]
+[node name="Camera" type="Camera2D" parent="." unique_id=966620151]
 position = Vector2(8, -7.62939e-06)
 scale = Vector2(35.0417, 24.3404)
 anchor_mode = 0
 
-[node name="Fundo" type="StaticBody2D" parent="."]
+[node name="Fundo" type="StaticBody2D" parent="." unique_id=950121253]
 position = Vector2(488, 504)
 scale = Vector2(2.027, 2.214)
 
-[node name="Sprite2D" type="Sprite2D" parent="Fundo"]
+[node name="Sprite2D" type="Sprite2D" parent="Fundo" unique_id=1409699909]
 position = Vector2(232.856, 18.0668)
 scale = Vector2(0.314721, 0.244246)
 texture = ExtResource("2_q1nam")
 
-[node name="Card11" type="StaticBody2D" parent="."]
+[node name="Card11" type="StaticBody2D" parent="." unique_id=1355710856]
 position = Vector2(608, 504)
 scale = Vector2(2.437, 2.624)
 
-[node name="back2D" type="Sprite2D" parent="Card11"]
+[node name="back2D" type="Sprite2D" parent="Card11" unique_id=2082210701]
 position = Vector2(-126.125, -82.8515)
 scale = Vector2(0.75, 0.711)
 texture = ExtResource("3_vc2bu")
 
-[node name="fruit2D" type="Sprite2D" parent="Card11"]
+[node name="fruit2D" type="Sprite2D" parent="Card11" unique_id=1317926505]
 position = Vector2(-124.744, -79.2683)
 scale = Vector2(0.326, 0.323)
 texture = ExtResource("4_u6h1q")
 
-[node name="Card12" type="StaticBody2D" parent="."]
+[node name="Card12" type="StaticBody2D" parent="." unique_id=275483958]
 position = Vector2(1048, 496)
 scale = Vector2(2.437, 2.624)
 
-[node name="back2D" type="Sprite2D" parent="Card12"]
+[node name="back2D" type="Sprite2D" parent="Card12" unique_id=405630883]
 position = Vector2(-126.125, -82.8515)
 scale = Vector2(0.75, 0.711)
 texture = ExtResource("3_vc2bu")
 
-[node name="fruit2D" type="Sprite2D" parent="Card12"]
+[node name="fruit2D" type="Sprite2D" parent="Card12" unique_id=1108815032]
 position = Vector2(-128, -80)
 scale = Vector2(0.25, 0.25)
 texture = SubResource("CompressedTexture2D_kxy71")
 
-[node name="Card13" type="StaticBody2D" parent="."]
+[node name="Card13" type="StaticBody2D" parent="." unique_id=1404019862]
 position = Vector2(1496, 504)
 scale = Vector2(2.437, 2.624)
 
-[node name="back2D" type="Sprite2D" parent="Card13"]
+[node name="back2D" type="Sprite2D" parent="Card13" unique_id=1109506545]
 position = Vector2(-126.125, -82.8515)
 scale = Vector2(0.75, 0.711)
 texture = ExtResource("3_vc2bu")
 
-[node name="fruit2D" type="Sprite2D" parent="Card13"]
+[node name="fruit2D" type="Sprite2D" parent="Card13" unique_id=1322153812]
 position = Vector2(-128, -80)
 scale = Vector2(0.33, 0.33)
 texture = SubResource("CompressedTexture2D_x8j7w")
 
-[node name="Card21" type="StaticBody2D" parent="."]
+[node name="Card21" type="StaticBody2D" parent="." unique_id=770569413]
 position = Vector2(600, 776)
 scale = Vector2(2.437, 2.624)
 
-[node name="back2D" type="Sprite2D" parent="Card21"]
+[node name="back2D" type="Sprite2D" parent="Card21" unique_id=644763030]
 position = Vector2(-126.125, -82.8515)
 scale = Vector2(0.75, 0.711)
 texture = ExtResource("3_vc2bu")
 
-[node name="fruit2D" type="Sprite2D" parent="Card21"]
+[node name="fruit2D" type="Sprite2D" parent="Card21" unique_id=40848323]
 position = Vector2(-128, -80)
 scale = Vector2(0.25, 0.25)
 texture = SubResource("CompressedTexture2D_kxy71")
 
-[node name="Card22" type="StaticBody2D" parent="."]
+[node name="Card22" type="StaticBody2D" parent="." unique_id=1953860899]
 position = Vector2(1048, 776)
 scale = Vector2(2.437, 2.624)
 
-[node name="back2D" type="Sprite2D" parent="Card22"]
+[node name="back2D" type="Sprite2D" parent="Card22" unique_id=1483432456]
 position = Vector2(-126.125, -82.8515)
 scale = Vector2(0.75, 0.711)
 texture = ExtResource("3_vc2bu")
 
-[node name="fruit2D" type="Sprite2D" parent="Card22"]
+[node name="fruit2D" type="Sprite2D" parent="Card22" unique_id=1100060435]
 position = Vector2(-128, -80)
 scale = Vector2(0.219, 0.219)
 texture = SubResource("CompressedTexture2D_42qcv")
 
-[node name="Card23" type="StaticBody2D" parent="."]
+[node name="Card23" type="StaticBody2D" parent="." unique_id=891267712]
 position = Vector2(1496, 776)
 scale = Vector2(2.437, 2.624)
 
-[node name="back2D" type="Sprite2D" parent="Card23"]
+[node name="back2D" type="Sprite2D" parent="Card23" unique_id=1562179061]
 position = Vector2(-126.125, -82.8515)
 scale = Vector2(0.75, 0.711)
 texture = ExtResource("3_vc2bu")
 
-[node name="fruit2D" type="Sprite2D" parent="Card23"]
+[node name="fruit2D" type="Sprite2D" parent="Card23" unique_id=1636171523]
 position = Vector2(-128, -80)
 scale = Vector2(0.33, 0.33)
 texture = SubResource("CompressedTexture2D_gdp0o")
 
-[node name="Card31" type="StaticBody2D" parent="."]
+[node name="Card31" type="StaticBody2D" parent="." unique_id=462441101]
 position = Vector2(608, 1072)
 scale = Vector2(2.437, 2.624)
 
-[node name="back2D" type="Sprite2D" parent="Card31"]
+[node name="back2D" type="Sprite2D" parent="Card31" unique_id=287063906]
 position = Vector2(-126.125, -82.8515)
 scale = Vector2(0.75, 0.711)
 texture = ExtResource("3_vc2bu")
 
-[node name="fruit2D" type="Sprite2D" parent="Card31"]
+[node name="fruit2D" type="Sprite2D" parent="Card31" unique_id=1492547186]
 position = Vector2(-128, -80)
 scale = Vector2(0.33, 0.33)
 texture = SubResource("CompressedTexture2D_ek8cn")
 
-[node name="Card32" type="StaticBody2D" parent="."]
+[node name="Card32" type="StaticBody2D" parent="." unique_id=590602529]
 position = Vector2(1032, 1072)
 scale = Vector2(2.437, 2.624)
 
-[node name="back2D" type="Sprite2D" parent="Card32"]
+[node name="back2D" type="Sprite2D" parent="Card32" unique_id=1792344935]
 position = Vector2(-126.125, -82.8515)
 scale = Vector2(0.75, 0.711)
 texture = ExtResource("3_vc2bu")
 
-[node name="fruit2D" type="Sprite2D" parent="Card32"]
+[node name="fruit2D" type="Sprite2D" parent="Card32" unique_id=729732939]
 position = Vector2(-128, -80)
 scale = Vector2(0.25, 0.25)
 texture = SubResource("CompressedTexture2D_kxy71")
 
-[node name="Card33" type="StaticBody2D" parent="."]
+[node name="Card33" type="StaticBody2D" parent="." unique_id=1499086255]
 position = Vector2(1496, 1072)
 scale = Vector2(2.437, 2.624)
 
-[node name="back2D" type="Sprite2D" parent="Card33"]
+[node name="back2D" type="Sprite2D" parent="Card33" unique_id=459666151]
 position = Vector2(-128, -80)
 scale = Vector2(0.75, 0.711)
 texture = ExtResource("3_vc2bu")
 
-[node name="fruit2D" type="Sprite2D" parent="Card33"]
+[node name="fruit2D" type="Sprite2D" parent="Card33" unique_id=2030339186]
 position = Vector2(-128, -80)
 scale = Vector2(0.25, 0.25)
 texture = SubResource("CompressedTexture2D_kxy71")
 
-[node name="Card14" type="StaticBody2D" parent="."]
+[node name="Card14" type="StaticBody2D" parent="." unique_id=637884261]
 position = Vector2(1928, 504)
 scale = Vector2(2.437, 2.624)
 
-[node name="back2D" type="Sprite2D" parent="Card14"]
+[node name="back2D" type="Sprite2D" parent="Card14" unique_id=1424992046]
 position = Vector2(-126.125, -82.8515)
 scale = Vector2(0.75, 0.711)
 texture = ExtResource("3_vc2bu")
 
-[node name="fruit2D" type="Sprite2D" parent="Card14"]
+[node name="fruit2D" type="Sprite2D" parent="Card14" unique_id=1539422818]
 position = Vector2(-130.241, -76.3638)
 scale = Vector2(0.0355759, 0.0282962)
 texture = SubResource("CompressedTexture2D_elkgu")
 
-[node name="Card24" type="StaticBody2D" parent="."]
+[node name="Card24" type="StaticBody2D" parent="." unique_id=182571522]
 position = Vector2(1928, 768)
 scale = Vector2(2.437, 2.624)
 
-[node name="back2D" type="Sprite2D" parent="Card24"]
+[node name="back2D" type="Sprite2D" parent="Card24" unique_id=465020439]
 position = Vector2(-126.125, -82.8515)
 scale = Vector2(0.75, 0.711)
 texture = ExtResource("3_vc2bu")
 
-[node name="fruit2D" type="Sprite2D" parent="Card24"]
+[node name="fruit2D" type="Sprite2D" parent="Card24" unique_id=1001282324]
 position = Vector2(-128, -80)
 scale = Vector2(0.25, 0.25)
 texture = SubResource("CompressedTexture2D_kxy71")
 
-[node name="Card34" type="StaticBody2D" parent="."]
+[node name="Card34" type="StaticBody2D" parent="." unique_id=1805011537]
 position = Vector2(1920, 1088)
 scale = Vector2(2.437, 2.624)
 
-[node name="back2D" type="Sprite2D" parent="Card34"]
+[node name="back2D" type="Sprite2D" parent="Card34" unique_id=450944696]
 position = Vector2(-126.125, -82.8515)
 scale = Vector2(0.75, 0.711)
 texture = ExtResource("3_vc2bu")
 
-[node name="fruit2D" type="Sprite2D" parent="Card34"]
+[node name="fruit2D" type="Sprite2D" parent="Card34" unique_id=1720496961]
 position = Vector2(-128, -80)
 scale = Vector2(0.33, 0.33)
 texture = SubResource("CompressedTexture2D_ek8cn")
 
-[node name="Player" type="CharacterBody2D" parent="."]
+[node name="Player" type="CharacterBody2D" parent="." unique_id=672325265]
 position = Vector2(1592, 864)
 scale = Vector2(2.027, 2.214)
 
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=614018035]
 texture = ExtResource("8_q2a2p")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=275203784]
 process_callback = 0
 wait_time = 3.0
 one_shot = true
 autostart = true
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=927129336]
 stream = ExtResource("6_g31jd")
 volume_db = 1.92
 

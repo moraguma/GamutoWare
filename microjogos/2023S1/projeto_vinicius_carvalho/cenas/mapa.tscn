@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b07e6j2l3hlm4"]
+[gd_scene format=3 uid="uid://b07e6j2l3hlm4"]
 
 [ext_resource type="Script" uid="uid://b12dtcn8bgxke" path="res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/scripts/mapa.gd" id="1_1u4qj"]
 [ext_resource type="PackedScene" uid="uid://drf41j4cno1to" path="res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/new_tilemap.tscn" id="4_172yr"]
@@ -14,42 +14,42 @@ size = Vector2(1936, 34)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_18q0r"]
 size = Vector2(1931, 53)
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=72395720]
 texture_filter = 1
 script = ExtResource("1_1u4qj")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1768045187]
 offset = Vector2(2.08165e-12, 2.08165e-12)
 anchor_mode = 0
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="TileMap" type="TileMap" parent="." unique_id=1934928079]
 tile_set = SubResource("TileSet_i2iot")
 format = 2
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("11_xlwkk")]
+[node name="CharacterBody2D" parent="." unique_id=1304369387 instance=ExtResource("11_xlwkk")]
 position = Vector2(8, 0)
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=63982626]
 process_callback = 0
 
-[node name="RigidBody2D" type="StaticBody2D" parent="."]
+[node name="RigidBody2D" type="StaticBody2D" parent="." unique_id=2143309312]
 collision_layer = 2
 
-[node name="ColisaoSup" type="CollisionShape2D" parent="RigidBody2D"]
+[node name="ColisaoSup" type="CollisionShape2D" parent="RigidBody2D" unique_id=1502229663]
 position = Vector2(958, 7)
 shape = SubResource("RectangleShape2D_sk5nb")
 
-[node name="ColisaoInf" type="CollisionShape2D" parent="RigidBody2D"]
+[node name="ColisaoInf" type="CollisionShape2D" parent="RigidBody2D" unique_id=1175978115]
 position = Vector2(949.5, 1058.5)
 shape = SubResource("RectangleShape2D_18q0r")
 
-[node name="som_cavern" type="AudioStreamPlayer" parent="."]
+[node name="som_cavern" type="AudioStreamPlayer" parent="." unique_id=1541983610]
 stream = ExtResource("13_v1qqu")
 
-[node name="no_superior" type="Node2D" parent="."]
+[node name="no_superior" type="Node2D" parent="." unique_id=941791640]
 
-[node name="NewTilemap" parent="." instance=ExtResource("4_172yr")]
+[node name="NewTilemap" parent="." unique_id=1648037733 instance=ExtResource("4_172yr")]
 
-[node name="Background" parent="." instance=ExtResource("5_g5ik7")]
+[node name="Background" parent="." unique_id=848532549 instance=ExtResource("5_g5ik7")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
