@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dsxm54jv86dym"]
+[gd_scene format=3 uid="uid://dsxm54jv86dym"]
 
 [ext_resource type="Texture2D" uid="uid://o8d1tbp23kxa" path="res://microjogos/2023S1/mail_cleaner/recursos/sprites/phone.png" id="1_e86lr"]
 [ext_resource type="Texture2D" uid="uid://cgls0fr8p4f3r" path="res://microjogos/2023S1/mail_cleaner/recursos/sprites/arrow_green.png" id="2_3lc3v"]
@@ -6,15 +6,15 @@
 [ext_resource type="Texture2D" uid="uid://dogaus8fp0we0" path="res://microjogos/2023S1/mail_cleaner/recursos/sprites/fingers.png" id="4_21rbh"]
 [ext_resource type="Texture2D" uid="uid://dyrysps2jgkwk" path="res://microjogos/2023S1/mail_cleaner/recursos/sprites/blue_screen.png" id="4_sl5mv"]
 
-[node name="Phone" type="Node2D"]
+[node name="Phone" type="Node2D" unique_id=90891391]
 
-[node name="Phone" type="Sprite2D" parent="."]
+[node name="Phone" type="Sprite2D" parent="." unique_id=1303293063]
 texture_filter = 1
 position = Vector2(240, 480)
 scale = Vector2(15, 15)
 texture = ExtResource("1_e86lr")
 
-[node name="Mask" type="Control" parent="."]
+[node name="Mask" type="Control" parent="." unique_id=161964874]
 clip_contents = true
 layout_mode = 3
 anchors_preset = 0
@@ -23,31 +23,31 @@ offset_top = 60.0
 offset_right = 435.0
 offset_bottom = 750.0
 
-[node name="MailSpawn" type="Node2D" parent="Mask"]
+[node name="MailSpawn" type="Node2D" parent="Mask" unique_id=2144940790]
 position = Vector2(0, 567)
 
-[node name="ArrowGreen" type="Sprite2D" parent="."]
+[node name="ArrowGreen" type="Sprite2D" parent="." unique_id=1676737514]
 modulate = Color(1, 1, 1, 0.588235)
 texture_filter = 1
 position = Vector2(120, 810)
 scale = Vector2(7.5, 7.5)
 texture = ExtResource("2_3lc3v")
 
-[node name="ArrowRed" type="Sprite2D" parent="."]
+[node name="ArrowRed" type="Sprite2D" parent="." unique_id=1961136405]
 modulate = Color(1, 1, 1, 0.588235)
 texture_filter = 1
 position = Vector2(360, 810)
 scale = Vector2(7.5, 7.5)
 texture = ExtResource("3_d6u0y")
 
-[node name="BlueScreen" type="Sprite2D" parent="."]
+[node name="BlueScreen" type="Sprite2D" parent="." unique_id=395711354]
 visible = false
 texture_filter = 1
 position = Vector2(240, 465)
 scale = Vector2(15, 15)
 texture = ExtResource("4_sl5mv")
 
-[node name="Fingers" type="Sprite2D" parent="."]
+[node name="Fingers" type="Sprite2D" parent="." unique_id=985173046]
 texture_filter = 1
 position = Vector2(240, 480)
 scale = Vector2(15, 15)

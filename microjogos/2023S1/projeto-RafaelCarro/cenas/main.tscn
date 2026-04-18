@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://c3yc65ma3hbqt"]
+[gd_scene format=3 uid="uid://c3yc65ma3hbqt"]
 
 [ext_resource type="Script" uid="uid://dkkagcvmbobck" path="res://microjogos/2023S1/projeto-RafaelCarro/cenas/scripts/main.gd" id="1_ajivd"]
 [ext_resource type="Texture2D" uid="uid://dou2slt085m1t" path="res://microjogos/2023S1/projeto-RafaelCarro/recursos/Background.jpg" id="2_fhmsf"]
@@ -99,140 +99,140 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=922103765]
 script = ExtResource("1_ajivd")
 
-[node name="Camera3D" type="Camera2D" parent="."]
+[node name="Camera3D" type="Camera2D" parent="." unique_id=798259229]
 anchor_mode = 0
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="." unique_id=1774396418]
 position = Vector2(960, 544)
 scale = Vector2(0.639746, 0.541642)
 texture = ExtResource("2_fhmsf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=597753814]
 position = Vector2(864, 464)
 rotation = 3.14159
 scale = Vector2(50.5089, 44.5743)
 shape = SubResource("CircleShape2D_gfpvk")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1226256172]
 position = Vector2(776, 688)
 rotation = 3.14159
 scale = Vector2(50.5089, 44.5743)
 shape = SubResource("CircleShape2D_gfpvk")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=1025071403]
 position = Vector2(1080, 448)
 rotation = 3.14159
 scale = Vector2(50.5089, 44.5743)
 shape = SubResource("CircleShape2D_gfpvk")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=1496251455]
 position = Vector2(1128, 672)
 rotation = 3.14159
 scale = Vector2(50.5089, 44.5743)
 shape = SubResource("CircleShape2D_gfpvk")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="." unique_id=581715901]
 position = Vector2(960, 984)
 scale = Vector2(90.7814, -29.2578)
 shape = SubResource("CircleShape2D_gfpvk")
 
-[node name="Drums" type="StaticBody2D" parent="."]
+[node name="Drums" type="StaticBody2D" parent="." unique_id=319612816]
 position = Vector2(960, 704)
 script = ExtResource("3_7u1li")
 
-[node name="Sprite2D" type="Sprite2D" parent="Drums"]
+[node name="Sprite2D" type="Sprite2D" parent="Drums" unique_id=930688424]
 position = Vector2(6.10352e-05, 6.10352e-05)
 scale = Vector2(2.73055, 2.73055)
 texture = ExtResource("3_lwjvg")
 
-[node name="LeftArrow" type="Area2D" parent="."]
+[node name="LeftArrow" type="Area2D" parent="." unique_id=633884134]
 position = Vector2(864, 448)
 script = ExtResource("5_ud78g")
 aim_pos = Vector2(864, 448)
 incoming_dir = Vector2(1, 0)
 action = "esquerda"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="LeftArrow"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="LeftArrow" unique_id=1392175470]
 sprite_frames = SubResource("SpriteFrames_vahqq")
 
-[node name="Area2D" type="Area2D" parent="LeftArrow"]
+[node name="Area2D" type="Area2D" parent="LeftArrow" unique_id=1647055384]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftArrow/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftArrow/Area2D" unique_id=704707755]
 position = Vector2(4, 4)
 shape = SubResource("RectangleShape2D_d7jb2")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="LeftArrow"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="LeftArrow" unique_id=45269977]
 stream = ExtResource("8_fwa2t")
 volume_db = 8.0
 pitch_scale = 2.0
 
-[node name="RightArrow" type="Area2D" parent="."]
+[node name="RightArrow" type="Area2D" parent="." unique_id=1997479580]
 position = Vector2(1086, 448)
 script = ExtResource("5_ud78g")
 aim_pos = Vector2(1086, 448)
 incoming_dir = Vector2(-1, 0)
 action = "direita"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RightArrow"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RightArrow" unique_id=1786323995]
 sprite_frames = SubResource("SpriteFrames_v3tr7")
 
-[node name="Area2D" type="Area2D" parent="RightArrow"]
+[node name="Area2D" type="Area2D" parent="RightArrow" unique_id=1811308536]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RightArrow/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightArrow/Area2D" unique_id=1725569721]
 position = Vector2(4, 4)
 shape = SubResource("RectangleShape2D_d7jb2")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="RightArrow"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="RightArrow" unique_id=2094216025]
 stream = ExtResource("8_fwa2t")
 volume_db = 8.0
 pitch_scale = 2.0
 
-[node name="UpArrow" type="Area2D" parent="."]
+[node name="UpArrow" type="Area2D" parent="." unique_id=1355625303]
 position = Vector2(1136, 663)
 script = ExtResource("5_ud78g")
 aim_pos = Vector2(1136, 663)
 incoming_dir = Vector2(0, -1)
 action = "cima"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="UpArrow"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="UpArrow" unique_id=930538288]
 sprite_frames = SubResource("SpriteFrames_p0gb5")
 
-[node name="Area2D" type="Area2D" parent="UpArrow"]
+[node name="Area2D" type="Area2D" parent="UpArrow" unique_id=908845647]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="UpArrow/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpArrow/Area2D" unique_id=1741161529]
 position = Vector2(4, 4)
 shape = SubResource("RectangleShape2D_d7jb2")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UpArrow"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UpArrow" unique_id=1182141496]
 stream = ExtResource("8_fwa2t")
 volume_db = 8.0
 pitch_scale = 2.0
 
-[node name="DownArrow" type="Area2D" parent="."]
+[node name="DownArrow" type="Area2D" parent="." unique_id=238608622]
 position = Vector2(774, 675)
 script = ExtResource("5_ud78g")
 aim_pos = Vector2(774, 675)
 incoming_dir = Vector2(0, 1)
 action = "baixo"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="DownArrow"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="DownArrow" unique_id=1434589288]
 sprite_frames = SubResource("SpriteFrames_2osqb")
 
-[node name="Area2D" type="Area2D" parent="DownArrow"]
+[node name="Area2D" type="Area2D" parent="DownArrow" unique_id=1290995705]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DownArrow/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DownArrow/Area2D" unique_id=556796676]
 position = Vector2(4, 4)
 shape = SubResource("RectangleShape2D_d7jb2")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DownArrow"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DownArrow" unique_id=1041219559]
 stream = ExtResource("8_fwa2t")
 volume_db = 8.0
 pitch_scale = 2.0
 
-[node name="SpaceKey" type="Area2D" parent="."]
+[node name="SpaceKey" type="Area2D" parent="." unique_id=1014392374]
 position = Vector2(960, 992)
 scale = Vector2(0.775271, 0.775271)
 script = ExtResource("5_ud78g")
@@ -240,40 +240,40 @@ aim_pos = Vector2(960, 992)
 incoming_dir = Vector2(0, 1)
 action = "acao"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SpaceKey"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SpaceKey" unique_id=39407746]
 sprite_frames = SubResource("SpriteFrames_ewgb8")
 
-[node name="Area2D" type="Area2D" parent="SpaceKey"]
+[node name="Area2D" type="Area2D" parent="SpaceKey" unique_id=133750660]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceKey/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceKey/Area2D" unique_id=261541701]
 position = Vector2(4, 4)
 shape = SubResource("RectangleShape2D_d7jb2")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SpaceKey"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SpaceKey" unique_id=1867373971]
 stream = ExtResource("8_fwa2t")
 volume_db = 8.0
 pitch_scale = 2.0
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1109841659]
 stream = ExtResource("20_6qcod")
 autoplay = true
 
-[node name="Hit1" type="AudioStreamPlayer" parent="."]
+[node name="Hit1" type="AudioStreamPlayer" parent="." unique_id=55365918]
 stream = ExtResource("22_4dela")
 volume_db = 8.0
 
-[node name="Hit2" type="AudioStreamPlayer" parent="."]
+[node name="Hit2" type="AudioStreamPlayer" parent="." unique_id=693476404]
 stream = ExtResource("23_82kqy")
 volume_db = 8.0
 
-[node name="Hit3" type="AudioStreamPlayer" parent="."]
+[node name="Hit3" type="AudioStreamPlayer" parent="." unique_id=979186971]
 stream = ExtResource("24_ytmu6")
 volume_db = 8.0
 
-[node name="Hit4" type="AudioStreamPlayer" parent="."]
+[node name="Hit4" type="AudioStreamPlayer" parent="." unique_id=1911256373]
 stream = ExtResource("25_80nfv")
 volume_db = 8.0
 
-[node name="Hit5" type="AudioStreamPlayer" parent="."]
+[node name="Hit5" type="AudioStreamPlayer" parent="." unique_id=1434891852]
 stream = ExtResource("23_hu1k1")
 volume_db = 8.0
