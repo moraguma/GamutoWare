@@ -5,9 +5,30 @@
 
 [resource]
 script = ExtResource("1_o5rwf")
-title_pt = &"TÍTULO DO JOGO"
-title_en = &"GAME TITLE"
-credits_pt = "Créditos do jogo"
+title_pt = &"ESCAPE DO IB"
+title_en = &"ESCAPE FROM IB"
+credits_pt = "sprite do player:
+https://opengameart.org/content/sword-girl-walking-and-fight-animation
+
+sprite da caixa:
+https://opengameart.org/content/2d-wooden-box
+
+sprite do virus:
+https://opengameart.org/content/virus-various-colors
+
+sprite do zumbi:
+https://opengameart.org/content/zombie-character
+
+background:
+https://agencia.fapesp.br/treinamento-tecnico-em-bioinformatica-no-instituto-de-biologia-da-unicamp/54890
+
+sound effect de vitoria:
+https://freesound.org/people/zut50/sounds/162395/
+
+musica de background:
+https://opengameart.org/content/awake-megawall-10
+
+Todos os outros assets foram feitos por mim, eduardo"
 credits_en = "Game credits"
 start_message_pt = &"ESCAPE!"
 start_message_en = &"ESCAPE!"
