@@ -1,16 +1,17 @@
-extends Area2D
+extends Node2D
 
-var SPEED = 180.0
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	var caixa = get_node("Caixa")
+	caixa.position.y = randf_range(400,800)
+	var zumbi = get_node('zumbi do ib')
+	zumbi.position.y = randf_range(200,1000)
+	var porta = get_node("porta do ib")
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	position.y += delta*SPEED
-	if position.y >= 1000:
-		SPEED *= -1
-	if position.y <= 200:
-		SPEED *= -1
+	
 	pass

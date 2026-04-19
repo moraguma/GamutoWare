@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cus8ad0miinn4"
-path="res://.godot/imported/personagem_temp.webp-055a363bf4b4d6d060df479edf1a3a0c.ctex"
+uid="uid://dlucbbubvnl88"
+path="res://.godot/imported/Red_Virus.png-032f9449a799be941f2562923f748b7d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/personagem_temp.webp"
-dest_files=["res://.godot/imported/personagem_temp.webp-055a363bf4b4d6d060df479edf1a3a0c.ctex"]
+source_file="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/Red_Virus.png"
+dest_files=["res://.godot/imported/Red_Virus.png-032f9449a799be941f2562923f748b7d.ctex"]
 
 [params]
 

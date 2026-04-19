@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://du6yixuxkvb3m"
-path="res://.godot/imported/zumbi_temp.webp-141d4705c4644ac535d8c0db1d2a33b0.ctex"
+uid="uid://ctrvehgyomb7s"
+path="res://.godot/imported/caixa.jpg-c6e7044c99c7a71072983c7a43a3a140.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/zumbi_temp.webp"
-dest_files=["res://.godot/imported/zumbi_temp.webp-141d4705c4644ac535d8c0db1d2a33b0.ctex"]
+source_file="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/caixa.jpg"
+dest_files=["res://.godot/imported/caixa.jpg-c6e7044c99c7a71072983c7a43a3a140.ctex"]
 
 [params]
 

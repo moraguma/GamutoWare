@@ -1,20 +1,23 @@
 [gd_scene format=3 uid="uid://c1opor2rcp2hs"]
 
 [ext_resource type="Texture2D" uid="uid://doq1e3kjpj5tq" path="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/backgorund.webp" id="1_8e78m"]
+[ext_resource type="Script" uid="uid://bocf34b2c6586" path="res://microjogos/2026S1/projeto-eduardo/cenas/main.gd" id="1_m70oi"]
 [ext_resource type="Script" uid="uid://bkqes02cu6a4h" path="res://microjogos/2026S1/projeto-eduardo/cenas/scripts/player.gd" id="2_vhlfe"]
-[ext_resource type="Texture2D" uid="uid://cus8ad0miinn4" path="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/personagem_temp.webp" id="3_gtvp5"]
-[ext_resource type="Texture2D" uid="uid://78pcdq7l0mad" path="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/container_temp.webp" id="4_21mrh"]
+[ext_resource type="Texture2D" uid="uid://ceu15d30qj7q5" path="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/player.jpg" id="3_21mrh"]
+[ext_resource type="Texture2D" uid="uid://ctrvehgyomb7s" path="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/caixa.jpg" id="5_4yxf1"]
 [ext_resource type="Script" uid="uid://c3dy6n3wcds7i" path="res://microjogos/2026S1/projeto-eduardo/cenas/virus_do_ib.gd" id="5_gtvp5"]
-[ext_resource type="Texture2D" uid="uid://ccub4vehscfga" path="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/virus_temp.webp" id="5_m70oi"]
-[ext_resource type="Texture2D" uid="uid://du6yixuxkvb3m" path="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/zumbi_temp.webp" id="6_4yxf1"]
+[ext_resource type="Texture2D" uid="uid://dlucbbubvnl88" path="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/Red_Virus.png" id="7_4yxf1"]
 [ext_resource type="Texture2D" uid="uid://dhdd8r8jwegt" path="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/saida_temp.webp" id="7_vhlfe"]
+[ext_resource type="Texture2D" uid="uid://cjbdtgs77cytl" path="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/__Zombie01_Idle_000.png" id="10_275yj"]
 [ext_resource type="Script" uid="uid://bq4psu4lqfdx3" path="res://microjogos/2026S1/projeto-eduardo/cenas/zumbi_do_ib.gd" id="10_doi7i"]
+[ext_resource type="AudioStream" uid="uid://bv54owo2m37qc" path="res://microjogos/2026S1/projeto-eduardo/recursos/sons/efeito morte.wav" id="11_4yxf1"]
+[ext_resource type="AudioStream" uid="uid://43fs7tebhkst" path="res://microjogos/2026S1/projeto-eduardo/recursos/sons/393402__stevedrums__group_yay_cheer.wav" id="12_275yj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_275yj"]
-size = Vector2(130, 207)
+size = Vector2(59, 225.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_doi7i"]
-size = Vector2(289, 197)
+size = Vector2(264, 179)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2urd"]
 size = Vector2(221, 1029)
@@ -27,6 +30,7 @@ size = Vector2(91, 196)
 
 [node name="Main" type="Node2D" unique_id=1597121372]
 texture_filter = 1
+script = ExtResource("1_m70oi")
 
 [node name="Backgorund" type="Sprite2D" parent="." unique_id=871043816]
 position = Vector2(958, 538.75006)
@@ -38,23 +42,22 @@ position = Vector2(730, 490)
 script = ExtResource("2_vhlfe")
 
 [node name="sprite player" type="Sprite2D" parent="Player" unique_id=1951027167]
-position = Vector2(0.99998474, -1.9999852)
-scale = Vector2(1.4010991, 1.2521368)
-texture = ExtResource("3_gtvp5")
+position = Vector2(8.000008, -11.000004)
+scale = Vector2(0.55200005, 1.1079999)
+texture = ExtResource("3_21mrh")
 
 [node name="hitbox player" type="CollisionShape2D" parent="Player" unique_id=352802844]
-position = Vector2(-2, 0)
+position = Vector2(6.5, -9.25)
 shape = SubResource("RectangleShape2D_275yj")
 
 [node name="Caixa" type="StaticBody2D" parent="." unique_id=138071633]
 position = Vector2(1081, 514)
 
 [node name="sprite caixa" type="Sprite2D" parent="Caixa" unique_id=121578146]
-position = Vector2(-5, -7)
-texture = ExtResource("4_21mrh")
+scale = Vector2(1.2923728, 1.3598726)
+texture = ExtResource("5_4yxf1")
 
 [node name="hitbox caixa" type="CollisionShape2D" parent="Caixa" unique_id=1024467746]
-position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_doi7i")
 
 [node name="virus do ib" type="Area2D" parent="." unique_id=1991314190]
@@ -62,8 +65,9 @@ position = Vector2(137, 536)
 script = ExtResource("5_gtvp5")
 
 [node name="sprite virus do ib" type="Sprite2D" parent="virus do ib" unique_id=235902542]
-scale = Vector2(0.9131945, 4.5854697)
-texture = ExtResource("5_m70oi")
+position = Vector2(15.499985, 11.000015)
+scale = Vector2(4.98, 21.199999)
+texture = ExtResource("7_4yxf1")
 
 [node name="hitbox virus do ib" type="CollisionShape2D" parent="virus do ib" unique_id=994393339]
 shape = SubResource("RectangleShape2D_g2urd")
@@ -83,10 +87,17 @@ position = Vector2(1536, 191)
 script = ExtResource("10_doi7i")
 
 [node name="sprite zumbi do ib" type="Sprite2D" parent="zumbi do ib" unique_id=322628504]
-texture = ExtResource("6_4yxf1")
+scale = Vector2(0.47592592, 0.48905107)
+texture = ExtResource("10_275yj")
 
 [node name="hitbox zumbi do ib" type="CollisionShape2D" parent="zumbi do ib" unique_id=1287417478]
 shape = SubResource("RectangleShape2D_gmugr")
+
+[node name="efeito_morte" type="AudioStreamPlayer" parent="." unique_id=565982983]
+stream = ExtResource("11_4yxf1")
+
+[node name="efeito_vitoria" type="AudioStreamPlayer" parent="." unique_id=1652006309]
+stream = ExtResource("12_275yj")
 
 [connection signal="body_entered" from="virus do ib" to="Player" method="_on_virus_do_ib_body_entered"]
 [connection signal="body_entered" from="porta do ib" to="Player" method="_on_porta_do_ib_body_entered"]
