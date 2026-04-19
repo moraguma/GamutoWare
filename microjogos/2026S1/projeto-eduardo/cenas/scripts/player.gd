@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
+const SPEED = 210.0
 const JUMP_VELOCITY = -400.0
 
 
@@ -28,3 +28,23 @@ func _physics_process(delta: float) -> void:
 		velocity.y = move_toward(velocity.y , 0 , SPEED)
 
 	move_and_slide()
+
+
+func _on_virus_do_ib_body_entered(body: Node2D) -> void:
+	if body == self:
+		
+		queue_free()
+	pass # Replace with function body.
+
+
+func _on_porta_do_ib_body_entered(body: Node2D) -> void:
+	if body == self:
+		queue_free()
+		Minigames.register_win(self)
+	pass # Replace with function body.
+
+
+func _on_zumbi_do_ib_body_entered(body: Node2D) -> void:
+	if body == self:
+		queue_free()
+	pass # Replace with function body.
