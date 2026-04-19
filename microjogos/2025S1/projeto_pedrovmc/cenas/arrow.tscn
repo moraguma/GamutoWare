@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccosrq4t17klw"]
+
+[ext_resource type="Texture2D" uid="uid://6tog3nshsqlu" path="res://microjogos/2025S1/projeto_pedrovmc/recursos/Tiny Swords (Update 010)/Factions/Knights/Troops/Archer/Arrow/Arrow.png" id="1_6m52h"]
+[ext_resource type="Script" uid="uid://bu1fhoc7cyyoo" path="res://microjogos/2025S1/projeto_pedrovmc/cenas/arrow.gd" id="1_oqhj4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qn4pi"]
+size = Vector2(61, 14)
+
+[node name="Arrow" type="Area2D"]
+collision_layer = 9
+script = ExtResource("1_oqhj4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_6m52h")
+region_enabled = true
+region_rect = Rect2(1, 28, 63, 14)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_qn4pi")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
