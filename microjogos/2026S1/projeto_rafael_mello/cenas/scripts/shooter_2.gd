@@ -2,8 +2,8 @@ extends CharacterBody2D
 
 var inter_time = 0;
 
-@export var stop_shoot = 1000;
-@export var return_shoot = 1000;
+@export var stop_shoot = 1000.0;
+@export var return_shoot = 1000.0;
 @export var Shoot_spd = 600;
 @export var Spd = 200;
 @export var Dir = Vector2.UP;
@@ -15,6 +15,8 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func _physics_process(delta: float) -> void:
+	$AnimatedSprite2D.play("default")
+	$AnimatedSprite2D.rotation = Dir.angle()
 	position = position + Dir.normalized()*Spd*delta
 	inter_time += delta
 	pass

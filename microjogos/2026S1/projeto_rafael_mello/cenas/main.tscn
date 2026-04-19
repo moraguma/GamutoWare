@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b6opw0wqgoi8w" path="res://microjogos/2026S1/projeto_rafael_mello/cenas/scripts/main.gd" id="1_mkukn"]
 [ext_resource type="PackedScene" uid="uid://fdwiunndu87u" path="res://microjogos/2026S1/projeto_rafael_mello/cenas/Player.tscn" id="1_qv6ic"]
-[ext_resource type="PackedScene" uid="uid://uhnw27mxvhhf" path="res://microjogos/2026S1/projeto_rafael_mello/cenas/Shooter2.tscn" id="5_swrxd"]
+[ext_resource type="Texture2D" uid="uid://bojujje45hfli" path="res://microjogos/2026S1/projeto_rafael_mello/recursos/imagens/back.png" id="2_fea4o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2c6h8"]
 size = Vector2(1920, 80)
@@ -14,9 +14,12 @@ size = Vector2(80, 1080)
 texture_filter = 1
 script = ExtResource("1_mkukn")
 
-[node name="Tiros" type="Node2D" parent="." unique_id=1513005384]
+[node name="Back" type="Sprite2D" parent="." unique_id=924871189]
+position = Vector2(960, 540)
+texture = ExtResource("2_fea4o")
 
-[node name="Inimigos" type="Node2D" parent="." unique_id=805067129]
+[node name="Tiros" type="Node2D" parent="." unique_id=389463105]
+position = Vector2(0, -2)
 
 [node name="Player" parent="." unique_id=2067177953 instance=ExtResource("1_qv6ic")]
 position = Vector2(960, 540)
@@ -39,28 +42,3 @@ shape = SubResource("RectangleShape2D_xesm0")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Paredes2" unique_id=1627805858]
 position = Vector2(1957, 540)
 shape = SubResource("RectangleShape2D_xesm0")
-
-[node name="Shooter2" parent="." unique_id=1017523246 instance=ExtResource("5_swrxd")]
-position = Vector2(1880, 1040)
-stop_shoot = 0
-return_shoot = 1
-
-[node name="Shooter3" parent="." unique_id=2010556799 instance=ExtResource("5_swrxd")]
-position = Vector2(42, 40)
-stop_shoot = 1
-return_shoot = 2
-Dir = Vector2(0, 1)
-
-[node name="Shooter4" parent="." unique_id=1360063638 instance=ExtResource("5_swrxd")]
-position = Vector2(42, 1040)
-stop_shoot = 2
-return_shoot = 3
-Spd = 400
-Dir = Vector2(1, 0)
-
-[node name="Shooter5" parent="." unique_id=215155682 instance=ExtResource("5_swrxd")]
-position = Vector2(1878, 42)
-stop_shoot = 2
-return_shoot = 3
-Spd = 300
-Dir = Vector2(-1, 0)
