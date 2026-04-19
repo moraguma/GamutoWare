@@ -7,7 +7,8 @@ func _ready() -> void:
 	caixa.position.y = randf_range(400,800)
 	var zumbi = get_node('zumbi do ib')
 	zumbi.position.y = randf_range(200,1000)
-	var porta = get_node("porta do ib")
+	var musica = get_node("musica_background")
+	musica.play()
 	pass # Replace with function body.
 
 

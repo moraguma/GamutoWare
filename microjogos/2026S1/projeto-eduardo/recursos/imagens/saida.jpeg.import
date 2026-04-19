@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccub4vehscfga"
-path="res://.godot/imported/virus_temp.webp-3dda9a87932642336dbb90d99a4b9b70.ctex"
+uid="uid://bqhla2gjyjyo4"
+path="res://.godot/imported/saida.jpeg-fd2efd36c52df62b2c55b54d77c67855.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/virus_temp.webp"
-dest_files=["res://.godot/imported/virus_temp.webp-3dda9a87932642336dbb90d99a4b9b70.ctex"]
+source_file="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/saida.jpeg"
+dest_files=["res://.godot/imported/saida.jpeg-fd2efd36c52df62b2c55b54d77c67855.ctex"]
 
 [params]
 

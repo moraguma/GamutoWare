@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://78pcdq7l0mad"
-path="res://.godot/imported/container_temp.webp-2b793939ca3f621128a920e8097cb052.ctex"
+uid="uid://cbovwrsw0j17o"
+path="res://.godot/imported/RTS_Crate.png-aeaa21645fd378807155e18d2833cbf6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/container_temp.webp"
-dest_files=["res://.godot/imported/container_temp.webp-2b793939ca3f621128a920e8097cb052.ctex"]
+source_file="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/RTS_Crate.png"
+dest_files=["res://.godot/imported/RTS_Crate.png-aeaa21645fd378807155e18d2833cbf6.ctex"]
 
 [params]
 
