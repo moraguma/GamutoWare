@@ -2,17 +2,20 @@ extends RigidBody2D
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+@export var progressebar: ProgressBar
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Input.is_action_just_released("acao"):
+		apply_impulse(Vector2.RIGHT.rotated(rotation) * 4.7 * progressebar.value)
+		
 
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body == self:
-		Minigames.register_win(self)
-		queue_free()
+
+
+func _on_body_entered(body: Node) -> void:
+	print("here")
+	queue_free()
 	pass # Replace with function body.

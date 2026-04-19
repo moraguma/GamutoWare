@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4taqkr3dwl2q"
-path="res://.godot/imported/Mesa.png-75bdb73be3964bb8a7f43d24fa660a1e.ctex"
+uid="uid://buwc2sy8ec6ai"
+path="res://.godot/imported/Taco.png-826913ac8c8318c9bd2edef3004f0008.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2026S1/projeto-jojodoidao/recursos/imagens/Mesa.png"
-dest_files=["res://.godot/imported/Mesa.png-75bdb73be3964bb8a7f43d24fa660a1e.ctex"]
+source_file="res://microjogos/2026S1/projeto-jojodoidao/recursos/imagens/Taco.png"
+dest_files=["res://.godot/imported/Taco.png-826913ac8c8318c9bd2edef3004f0008.ctex"]
 
 [params]
 
