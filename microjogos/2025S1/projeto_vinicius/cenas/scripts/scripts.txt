@@ -1,0 +1,13 @@
+Coloque seus scripts aqui!
+
+faixa dinâmica:
+	velocidade.y = -300
+se faixa colide painel:
+	velocidade.y *= -1
+
+se botao.acao pressionado:
+	velocidade.y = -300
+	
+velocidade.y = 800*delta
+
+se icone

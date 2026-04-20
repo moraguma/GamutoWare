@@ -1,0 +1,171 @@
+[gd_scene load_steps=19 format=3 uid="uid://cajuj4ydxnjt6"]
+
+[ext_resource type="Script" uid="uid://wd0ywtiug5e5" path="res://microjogos/2025S1/projeto_vinicius/cenas/scripts/main.gd" id="1_2ulkj"]
+[ext_resource type="Texture2D" uid="uid://bv87dj26ou83c" path="res://microjogos/2025S1/projeto_vinicius/recursos/imagens/(background-coffee)pixel-art-illustration-coffeeshop-background-pixelated-cafe-cozy-coffeeshop-cafe-background-pixelated-for-the-pixel-art-game-and-icon-for-website-and-video-game-old-school-retro-vector.jpg" id="1_3k5r5"]
+[ext_resource type="Texture2D" uid="uid://bew2mjcbtwxwo" path="res://microjogos/2025S1/projeto_vinicius/recursos/imagens/(New)CoffeCup.png" id="2_h0piw"]
+[ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="4_7km1m"]
+[ext_resource type="Script" uid="uid://bx1bqx3xxbaj7" path="res://microjogos/2025S1/projeto_vinicius/cenas/area_2d.gd" id="4_lk7k5"]
+[ext_resource type="Script" uid="uid://ni4tioo2ymci" path="res://microjogos/2025S1/projeto_vinicius/cenas/animation_player.gd" id="4_xxqph"]
+[ext_resource type="Script" uid="uid://ci5e4lmxdjdqo" path="res://microjogos/2025S1/projeto_vinicius/cenas/player.gd" id="5_lh3y2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7km1m"]
+
+[sub_resource type="Theme" id="Theme_xxqph"]
+Panel/styles/panel = SubResource("StyleBoxFlat_7km1m")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xxqph"]
+size = Vector2(300, 99)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lh3y2"]
+bg_color = Color(0.345098, 0.627451, 1, 1)
+
+[sub_resource type="Theme" id="Theme_lk7k5"]
+Panel/styles/panel = SubResource("StyleBoxFlat_lh3y2")
+
+[sub_resource type="Animation" id="Animation_uo3xi"]
+resource_name = "movimento barrinha"
+length = 6.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.46667, 2.23333, 4.56667, 5.2, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1614, 823), Vector2(1614, 627), Vector2(1614, 732), Vector2(1614, 346), Vector2(1614, 440), Vector2(1614, 639)]
+}
+
+[sub_resource type="Animation" id="Animation_pnjs0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1614, 135)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i2xq5"]
+_data = {
+&"RESET": SubResource("Animation_pnjs0"),
+&"movimento barrinha": SubResource("Animation_uo3xi")
+}
+
+[sub_resource type="Animation" id="Animation_lk7k5"]
+resource_name = "Coffee Cup"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uo3xi"]
+_data = {
+&"Coffee Cup": SubResource("Animation_lk7k5")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lk7k5"]
+size = Vector2(254, 44)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_2ulkj")
+
+[node name="(background-coffee)pixel-art-illustration-coffeeshop-background-pixelated-cafe-cozy-coffeeshop-cafe-background-pixelated-for-the-pixel-art-game-and-icon-for-website-and-video-game-old-school-retro-vector" type="Sprite2D" parent="."]
+editor_description = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vecteezy.com%2Fvector-art%2F36155331-pixel-art-illustration-coffeeshop-background-pixelated-cafe-cozy-coffeeshop-cafe-background-pixelated-for-the-pixel-art-game-and-icon-for-website-and-video-game-old-school-retro&psig=AOvVaw2j39hyLbEVPEhIn8GoIUgx&ust=1743976169640000&source=images&cd=vfe&opi=89978449&ved=2ahUKEwiW5vzR78GMAxV9N7kGHTj5CqMQjRx6BAgAEBk"
+z_index = -1
+position = Vector2(960, 540)
+scale = Vector2(1.22449, 1.10204)
+texture = ExtResource("1_3k5r5")
+
+[node name="CanvasLayer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 1644.0
+offset_top = 164.0
+offset_right = 1888.0
+offset_bottom = 976.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = SubResource("Theme_xxqph")
+
+[node name="Area2D" type="Area2D" parent="CanvasLayer"]
+position = Vector2(1614, 135)
+script = ExtResource("4_lk7k5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Area2D"]
+position = Vector2(149, 50.5)
+shape = SubResource("RectangleShape2D_xxqph")
+
+[node name="ColorRect" type="Panel" parent="CanvasLayer/Area2D"]
+custom_minimum_size = Vector2(300, 100)
+offset_left = -1.0
+offset_right = 300.0
+offset_bottom = 100.0
+size_flags_horizontal = 4
+theme = SubResource("Theme_lk7k5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+libraries = {
+&"": SubResource("AnimationLibrary_i2xq5")
+}
+script = ExtResource("4_xxqph")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1094, 616)
+scale = Vector2(4, 4)
+texture = ExtResource("2_h0piw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+&"": SubResource("AnimationLibrary_uo3xi")
+}
+
+[node name="Player" type="CharacterBody2D" parent="."]
+z_index = 1
+script = ExtResource("5_lh3y2")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player"]
+position = Vector2(1767, 903)
+polygon = PackedVector2Array(32, -32, 9.5, -32, 3.2, -28.5, -5.6, -32, -32, -32, -32, -12.6, -24, 26, -24, 32, 22.5, 32, 32, 3.6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+position = Vector2(1767, 903)
+texture = ExtResource("4_7km1m")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1764, 993)
+shape = SubResource("RectangleShape2D_lk7k5")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/StaticBody2D"]
+position = Vector2(1761, 141)
+shape = SubResource("RectangleShape2D_lk7k5")
+
+[connection signal="body_entered" from="CanvasLayer/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="CanvasLayer/Area2D" to="CanvasLayer/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="CanvasLayer/Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_exited" from="CanvasLayer/Area2D" to="CanvasLayer/Area2D" method="_on_body_exited"]
