@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2oahab3ot5ql"]
+
+[ext_resource type="Texture2D" uid="uid://dxy3gvgm3dijq" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/sombra.png" id="1_2gj1p"]
+[ext_resource type="Texture2D" uid="uid://dq8r1g3g2bu1" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/Tree.png" id="2_o3gwj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_anw0x"]
+radius = 12.0
+height = 46.0
+
+[node name="coluna" type="StaticBody2D"]
+position = Vector2(28, 28)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 50)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_anw0x")
+
+[node name="Sombra" type="Sprite2D" parent="."]
+position = Vector2(-4, 34)
+scale = Vector2(0.40625, 0.356505)
+texture = ExtResource("1_2gj1p")
+
+[node name="Tree" type="Sprite2D" parent="."]
+position = Vector2(0.999992, -1)
+scale = Vector2(0.321875, 0.34375)
+texture = ExtResource("2_o3gwj")
