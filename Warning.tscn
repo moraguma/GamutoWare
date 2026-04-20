@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7f8rq87i1c1b"]
+
+[ext_resource type="Texture2D" uid="uid://c80ywrgmsnorm" path="res://microjogos/2024S1/Projeto-Diego/recursos/pngwing.com.png" id="1_30ulk"]
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(928, 904)
+scale = Vector2(0.433333, 0.452)
+texture = ExtResource("1_30ulk")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]

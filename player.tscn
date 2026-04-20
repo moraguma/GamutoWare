@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7srpuxcvigir"]
+
+[ext_resource type="Texture2D" uid="uid://cxqssn80n6x0i" path="res://microjogos/2024S1/Projeto-Diego/recursos/pngegg.png" id="1_ua3se"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v08m2"]
+radius = 96.0
+height = 544.0
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(-88, 152)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ua3se")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 40)
+shape = SubResource("CapsuleShape2D_v08m2")
