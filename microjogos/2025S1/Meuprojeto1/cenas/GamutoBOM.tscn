@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://xurr7e0glgtg"]
+
+[ext_resource type="Texture2D" uid="uid://cp82h35txj5qh" path="res://microjogos/2025S1/Meuprojeto1/recursos/imagens/Gamutobem.png" id="1_4vij4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8p11p"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Gamutobem" type="Sprite2D" parent="."]
+scale = Vector2(1.32031, 1.30469)
+texture = ExtResource("1_4vij4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 4)
+scale = Vector2(7, 7)
+shape = SubResource("CircleShape2D_8p11p")
