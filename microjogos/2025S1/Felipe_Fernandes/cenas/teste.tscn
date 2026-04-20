@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dl3wacm0gtjvl"]
+
+[ext_resource type="PackedScene" uid="uid://d3r1ykj70r6po" path="res://microjogos/2025S1/Felipe_Fernandes/cenas/objects/action_button.tscn" id="1_dqf74"]
+
+[node name="Teste" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
+
+[node name="ActionButton" parent="." instance=ExtResource("1_dqf74")]
+visible = true
+key = "cima"

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://ci37cn34rw60s"]
+
+[ext_resource type="PackedScene" uid="uid://d3r1ykj70r6po" path="res://microjogos/2025S1/Felipe_Fernandes/cenas/objects/action_button.tscn" id="1_bpo1f"]
+
+[node name="Main" type="Node2D"]
+texture_filter = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(10, 10)
+
+[node name="ActionButton" parent="." instance=ExtResource("1_bpo1f")]

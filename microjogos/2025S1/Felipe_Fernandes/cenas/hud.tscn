@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://bw4aaf11s486i"]
+
+[ext_resource type="Texture2D" uid="uid://c54l15abrn77k" path="res://microjogos/2025S1/Felipe_Fernandes/recursos/imagens/bar_under.png" id="1_g4fv2"]
+[ext_resource type="Texture2D" uid="uid://dhrq0pl4l1lpc" path="res://microjogos/2025S1/Felipe_Fernandes/recursos/imagens/bar_outline.png" id="2_6epst"]
+[ext_resource type="Texture2D" uid="uid://ctyca48rft5rw" path="res://microjogos/2025S1/Felipe_Fernandes/recursos/imagens/bar_progress.png" id="3_1sysa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4fv2"]
+
+[sub_resource type="Theme" id="Theme_s7o2q"]
+ProgressBar/styles/background = SubResource("StyleBoxFlat_g4fv2")
+ProgressBar/styles/fill = null
+
+[node name="hud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1919.0
+offset_right = -1855.0
+offset_bottom = -810.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(4, 4)
+
+[node name="ProgressBar" type="TextureProgressBar" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+theme = SubResource("Theme_s7o2q")
+fill_mode = 2
+texture_under = ExtResource("1_g4fv2")
+texture_over = ExtResource("2_6epst")
+texture_progress = ExtResource("3_1sysa")

@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://d3r1ykj70r6po"]
+
+[ext_resource type="Texture2D" uid="uid://c53sxonmkp6dl" path="res://microjogos/2025S1/Felipe_Fernandes/recursos/imagens/button_icon.png" id="1_42hei"]
+[ext_resource type="Script" uid="uid://bpanxvt6ganmo" path="res://microjogos/2025S1/Felipe_Fernandes/cenas/scripts/action_button.gd" id="1_crxio"]
+[ext_resource type="Texture2D" uid="uid://dle821kgh1h56" path="res://microjogos/2025S1/Felipe_Fernandes/recursos/imagens/button_radius.png" id="2_4ki71"]
+[ext_resource type="AudioStream" uid="uid://k0pn57wiwl7n" path="res://microjogos/2025S1/Felipe_Fernandes/recursos/sons/mouse-click-117076.mp3" id="4_5788g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_42hei"]
+atlas = ExtResource("1_42hei")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ki71"]
+atlas = ExtResource("1_42hei")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_crxio"]
+atlas = ExtResource("1_42hei")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5788g"]
+atlas = ExtResource("1_42hei")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ki71"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_42hei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ki71")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_crxio")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5788g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.0
+}]
+
+[node name="ActionButton" type="Node2D"]
+visible = false
+script = ExtResource("1_crxio")
+
+[node name="icon" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4ki71")
+
+[node name="radius" type="Sprite2D" parent="."]
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("2_4ki71")
+
+[node name="radius_marking" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.196078)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_4ki71")
+
+[node name="vanishing_timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="click_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_5788g")
+
+[connection signal="timeout" from="vanishing_timer" to="." method="_on_vanishing_timer_timeout"]
