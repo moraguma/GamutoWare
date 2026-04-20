@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=4 uid="uid://20353fthsy75"]
+
+[ext_resource type="Texture2D" uid="uid://ducnd4vjxx5si" path="res://microjogos/2025S1/Bomb_Zone/recursos/TileSheet.png" id="1_mns5d"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_unap5"]
+texture = ExtResource("1_mns5d")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_o66v5"]
+tile_size = Vector2i(32, 32)
+sources/8 = SubResource("TileSetAtlasSource_unap5")
+tile_proxies/coords_level = [[1, Vector2i(0, 0)], [8, Vector2i(0, 0)], [2, Vector2i(0, 0)], [8, Vector2i(1, 0)], [3, Vector2i(0, 0)], [8, Vector2i(2, 0)], [4, Vector2i(0, 0)], [8, Vector2i(0, 1)], [5, Vector2i(0, 0)], [8, Vector2i(1, 1)], [6, Vector2i(0, 0)], [8, Vector2i(2, 1)], [7, Vector2i(0, 0)], [8, Vector2i(0, 2)]]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mns5d"]
+size = Vector2(224, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_unap5"]
+size = Vector2(34, 157)
+
+[node name="Background" type="TileMapLayer"]
+z_index = -1
+tile_map_data = PackedByteArray("AAAGAAIABQAAAAAAAAAAAP//CAAAAAAAAAABAP//CAABAAAAAAACAP//CAABAAAAAAADAP//CAABAAAAAAAEAP//CAABAAAAAAAFAP//CAABAAAAAAAGAP//CAABAAEAAAAAAP7/CAACAAAAAAAAAP3/CAAAAAEAAAAAAPz/CAAAAAEAAAAAAPv/CAAAAAEAAAAGAPv/CAAAAAEAAAAGAPz/CAAAAAEAAAAGAP3/CAAAAAEAAAAGAP7/CAACAAAAAAAAAPr/CAACAAEAAAAGAPr/CAACAAEAAAAGAPn/CAABAAEAAAAAAPn/CAAAAAAAAAABAPn/CAABAAAAAAACAPn/CAABAAAAAAADAPn/CAABAAAAAAAEAPn/CAABAAAAAAAFAPn/CAABAAAAAAABAPr/CAAAAAIAAAACAPv/CAAAAAIAAAACAPr/CAAAAAIAAAADAPr/CAAAAAIAAAADAPv/CAAAAAIAAAADAPz/CAAAAAIAAAADAP3/CAAAAAIAAAADAP7/CAAAAAIAAAAEAPr/CAAAAAIAAAAEAPv/CAAAAAIAAAAEAPz/CAAAAAIAAAAEAP3/CAAAAAIAAAAEAP7/CAAAAAIAAAAFAPr/CAAAAAIAAAAFAPv/CAAAAAIAAAAFAPz/CAAAAAIAAAAFAP3/CAAAAAIAAAAFAP7/CAAAAAIAAAABAPv/CAAAAAIAAAABAPz/CAAAAAIAAAACAPz/CAAAAAIAAAACAP3/CAAAAAIAAAABAP3/CAAAAAIAAAABAP7/CAAAAAIAAAACAP7/CAAAAAIAAAA=")
+tile_set = SubResource("TileSet_o66v5")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(112, -15)
+shape = SubResource("RectangleShape2D_mns5d")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(112, -208)
+shape = SubResource("RectangleShape2D_mns5d")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(16, -110.5)
+shape = SubResource("RectangleShape2D_unap5")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(208, -112)
+shape = SubResource("RectangleShape2D_unap5")

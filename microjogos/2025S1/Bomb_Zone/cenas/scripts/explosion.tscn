@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5q2v52chfcnx"]
+
+[ext_resource type="Script" uid="uid://du72ipff8af86" path="res://microjogos/2025S1/Bomb_Zone/cenas/scripts/explosion.gd" id="1_3dap2"]
+[ext_resource type="Texture2D" uid="uid://c0xomrri4s05h" path="res://microjogos/2025S1/Bomb_Zone/recursos/imagens/Explosion.png" id="1_npu4w"]
+[ext_resource type="AudioStream" uid="uid://c1d3fsvg5mi3s" path="res://microjogos/2025S1/Bomb_Zone/recursos/sons/explosion.wav" id="2_t1o7m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t1o7m"]
+size = Vector2(30, 30)
+
+[node name="Explosion" type="Area2D"]
+script = ExtResource("1_3dap2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_t1o7m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_npu4w")
+
+[node name="exSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_t1o7m")
+volume_db = 10.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
