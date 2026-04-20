@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=3 format=3 uid="uid://dsjcwjes41p04"]
+
+[ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_bxtq2"]
+[ext_resource type="PackedScene" uid="uid://bd7gl215ejusj" path="res://microjogos/2025S1/projeto_grabalos/cenas/main.tscn" id="1_e3x2a"]
+
+[resource]
+script = ExtResource("1_bxtq2")
+title_pt = &"Ritual Sapal"
+title_en = &"Frog Ritual"
+credits_pt = "Desenvolvimento e Arte: Gabriel Grabalos
+
+Jogo inspirado na minha obcessão por desenhar sapos."
+credits_en = "Art & development: Gabriel Grabalos
+
+Game inspired by my obcession on drawing frogs."
+start_message_pt = &"TERMINE O RITUAL"
+start_message_en = &"COMPLETE THE RITUAL"
+main_scene = ExtResource("1_e3x2a")
+difficulty = 0
