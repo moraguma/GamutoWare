@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://cgyqglwyvbssm"]
+
+[ext_resource type="Texture2D" uid="uid://ds8e6cgmur7vl" path="res://mafe.png" id="1_3rts3"]
+[ext_resource type="Texture2D" uid="uid://c6p3vqs3nmosf" path="res://mafe2.png" id="2_rfeqm"]
+[ext_resource type="Texture2D" uid="uid://bs310mhca2ljq" path="res://mafe3.png" id="3_v383p"]
+[ext_resource type="Texture2D" uid="uid://dxxhfwjrb7oe3" path="res://mafe4.png" id="4_gl4ap"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pag78"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3rts3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_rfeqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_v383p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gl4ap")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 1.0
+}]
+
+[node name="Mafe" type="AnimatedSprite2D"]
+position = Vector2(1010, 771)
+scale = Vector2(2.254, 2.062)
+sprite_frames = SubResource("SpriteFrames_pag78")
+animation = &"new_animation"
+frame = 1
+frame_progress = 0.846707

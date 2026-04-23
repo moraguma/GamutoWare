@@ -1,0 +1,121 @@
+[gd_scene load_steps=14 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-da-ana-luiza/cenas/scripts/main.gd" id="1_l1y0h"]
+[ext_resource type="Texture2D" uid="uid://cwe056qhc7fkw" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/FUNDO.png" id="2_h4vyi"]
+[ext_resource type="PackedScene" uid="uid://dscq1spuoqur0" path="res://microjogos/2024S1/projeto-da-ana-luiza/estrela_amarela.tscn" id="3_ffn2j"]
+[ext_resource type="Texture2D" uid="uid://hrqqldo5thlv" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/palco4.png" id="3_h0q5h"]
+[ext_resource type="PackedScene" uid="uid://bxp45krk5k6wt" path="res://microjogos/2024S1/projeto-da-ana-luiza/mafetotal.tscn" id="3_jer0v"]
+[ext_resource type="PackedScene" uid="uid://ba8qlexjua3t5" path="res://microjogos/2024S1/projeto-da-ana-luiza/cenas/area_2d.tscn" id="4_r3b78"]
+[ext_resource type="Texture2D" uid="uid://bqk72p0lqnmj6" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/plateia.png" id="4_wl3pf"]
+[ext_resource type="Texture2D" uid="uid://d0e6wuxscgwq1" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/holofote.png" id="5_joptk"]
+[ext_resource type="Script" path="res://microjogos/2024S1/projeto-da-ana-luiza/cenas/AnimatedSprite2D.gd" id="8_mo7d0"]
+[ext_resource type="AudioStream" uid="uid://dhigtx12xrm0q" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/Dancing Queen song.wav" id="9_y3kfu"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vcl64"]
+radius = 136.0
+height = 374.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7yrij"]
+size = Vector2(1974.5, 61.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wjpbq"]
+size = Vector2(65, 281.5)
+
+[node name="Palco" type="Node2D"]
+script = ExtResource("1_l1y0h")
+
+[node name="Timer6" type="Timer" parent="."]
+wait_time = 6.0
+one_shot = true
+autostart = true
+
+[node name="Timer5" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="Timer4" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+autostart = true
+
+[node name="Timer3" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -4.0
+offset_top = 8.0
+offset_right = 1938.0
+offset_bottom = 1889.0
+texture = ExtResource("2_h4vyi")
+expand_mode = 2
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(969, 511)
+scale = Vector2(0.1918, 0.2329)
+texture = ExtResource("3_h0q5h")
+
+[node name="EstrelaAmarela" parent="." instance=ExtResource("3_ffn2j")]
+position = Vector2(971, -3)
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(410.177, 691.18)
+scale = Vector2(0.739294, 0.70472)
+texture = ExtResource("5_joptk")
+flip_h = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1527, 691)
+scale = Vector2(0.727445, 0.700628)
+texture = ExtResource("5_joptk")
+
+[node name="Mafe" parent="." instance=ExtResource("3_jer0v")]
+position = Vector2(-1, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mafe"]
+position = Vector2(943, 678)
+shape = SubResource("CapsuleShape2D_vcl64")
+
+[node name="CharacterBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(943, 911)
+shape = SubResource("RectangleShape2D_7yrij")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(1940, 729.5)
+shape = SubResource("RectangleShape2D_wjpbq")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-16.5, 734.75)
+shape = SubResource("RectangleShape2D_wjpbq")
+
+[node name="AnimatedSprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(938, 710)
+scale = Vector2(2.02178, 1.84251)
+texture = ExtResource("4_wl3pf")
+script = ExtResource("8_mo7d0")
+
+[node name="Area2D" parent="CharacterBody2D" instance=ExtResource("4_r3b78")]
+position = Vector2(6, -40)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_y3kfu")
+autoplay = true
+
+[connection signal="timeout" from="Timer5" to="." method="_on_timer_5_timeout"]
+[connection signal="timeout" from="Timer4" to="." method="_on_timer_4_timeout"]
+[connection signal="timeout" from="Timer3" to="." method="_on_timer_3_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="timeout" from="Timer" to="." method="spawn_estrela"]
