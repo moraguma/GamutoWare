@@ -1,0 +1,288 @@
+[gd_scene load_steps=27 format=3 uid="uid://hssyta72u6rf"]
+
+[ext_resource type="Script" uid="uid://b1d21rsccuh44" path="res://microjogos/2025S1/SSAG/cenas/scripts/sala_principal.gd" id="1_bkrwu"]
+[ext_resource type="Texture2D" uid="uid://biu76x64ls5l8" path="res://microjogos/2025S1/SSAG/recursos/imagens/backgorundss.png" id="2_hkv0s"]
+[ext_resource type="Script" uid="uid://dwtsk8odrb0ia" path="res://microjogos/2025S1/SSAG/cenas/scripts/camera_2d.gd" id="3_lu3tb"]
+[ext_resource type="Texture2D" uid="uid://f4yqkgellvub" path="res://microjogos/2025S1/SSAG/recursos/imagens/tile_portalat.png" id="6_xufp0"]
+[ext_resource type="Texture2D" uid="uid://y23i2040avjy" path="res://microjogos/2025S1/SSAG/recursos/imagens/tile_porta.png" id="7_2t6n6"]
+[ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="7_lu3tb"]
+[ext_resource type="Texture2D" uid="uid://cjxofl8nnkose" path="res://microjogos/2025S1/SSAG/recursos/imagens/porta_frente.png" id="7_xufp0"]
+[ext_resource type="AudioStream" uid="uid://crrr37wsv714n" path="res://microjogos/2025S1/SSAG/recursos/sons/170141__timgormly__8-bit-bump.wav" id="8_2t6n6"]
+[ext_resource type="AudioStream" uid="uid://bwse77840pu1s" path="res://microjogos/2025S1/SSAG/recursos/sons/251936__dambient__8-bit-loop-halloween-walz-creepy-walz.ogg" id="9_hkv0s"]
+[ext_resource type="Script" uid="uid://cfnl4x2kfsckt" path="res://microjogos/2025S1/SSAG/cenas/scripts/label.gd" id="10_hkv0s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8u7u"]
+atlas = ExtResource("6_xufp0")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lu3tb"]
+atlas = ExtResource("6_xufp0")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xufp0"]
+atlas = ExtResource("6_xufp0")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2t6n6"]
+atlas = ExtResource("6_xufp0")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hkv0s"]
+atlas = ExtResource("6_xufp0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b6mr2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8u7u")
+}],
+"loop": false,
+"name": &"demonio_spawn",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lu3tb")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xufp0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2t6n6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hkv0s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2t6n6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xufp0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lu3tb")
+}],
+"loop": false,
+"name": &"porta_fechando",
+"speed": 12.0
+}]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f8u7u"]
+texture = ExtResource("7_2t6n6")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_b6mr2"]
+sources/0 = SubResource("TileSetAtlasSource_f8u7u")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6mr2"]
+atlas = ExtResource("7_xufp0")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbpkq"]
+atlas = ExtResource("7_xufp0")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4uf6"]
+atlas = ExtResource("7_xufp0")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_den6x"]
+atlas = ExtResource("7_xufp0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnhn4"]
+atlas = ExtResource("7_xufp0")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5dvu2"]
+atlas = ExtResource("7_xufp0")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yb4by"]
+atlas = ExtResource("7_xufp0")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hgek1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b6mr2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbpkq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4uf6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4uf6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4uf6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbpkq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b6mr2")
+}],
+"loop": true,
+"name": &"demonio_spawn",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_den6x")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bnhn4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5dvu2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yb4by")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5dvu2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bnhn4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_den6x")
+}],
+"loop": false,
+"name": &"porta_fechando",
+"speed": 12.0
+}]
+
+[node name="Sala-principal" type="Node2D"]
+position = Vector2(279, 1054)
+scale = Vector2(3.64112, 3.64112)
+script = ExtResource("1_bkrwu")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture_filter = 1
+position = Vector2(199.3, -140)
+scale = Vector2(3.37622, 3.08333)
+texture = ExtResource("2_hkv0s")
+
+[node name="Camera2D" type="Camera2D" parent="Area2D/Sprite2D"]
+script = ExtResource("3_lu3tb")
+
+[node name="porta-direita" type="Area2D" parent="."]
+position = Vector2(2, -51)
+
+[node name="portadir" type="AnimatedSprite2D" parent="porta-direita"]
+texture_filter = 1
+position = Vector2(355.75, -85.75)
+scale = Vector2(3.42188, 3.07813)
+sprite_frames = SubResource("SpriteFrames_b6mr2")
+animation = &"idle"
+flip_h = true
+
+[node name="porta-esquerda" type="Area2D" parent="."]
+position = Vector2(2, -51)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="porta-esquerda"]
+position = Vector2(335, -105.25)
+scale = Vector2(0.302632, 0.295709)
+tile_set = SubResource("TileSet_b6mr2")
+
+[node name="portaesq" type="AnimatedSprite2D" parent="porta-esquerda"]
+texture_filter = 1
+position = Vector2(39, -85)
+scale = Vector2(3.4375, 3.1875)
+sprite_frames = SubResource("SpriteFrames_b6mr2")
+animation = &"idle"
+
+[node name="porta-frente" type="Area2D" parent="."]
+
+[node name="portafrente" type="AnimatedSprite2D" parent="porta-frente"]
+texture_filter = 1
+position = Vector2(199, -179)
+scale = Vector2(3.625, 3.625)
+sprite_frames = SubResource("SpriteFrames_hgek1")
+animation = &"idle"
+
+[node name="Morte" type="Timer" parent="."]
+process_callback = 0
+wait_time = 2.0
+
+[node name="Timer2" type="Timer" parent="."]
+process_callback = 0
+wait_time = 1.5
+autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(215, -180)
+scale = Vector2(14.2031, 14.2031)
+texture = ExtResource("7_lu3tb")
+
+[node name="bump" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_2t6n6")
+volume_db = 0.991
+
+[node name="musica" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_hkv0s")
+volume_db = -2.971
+
+[node name="Label" type="Label" parent="."]
+offset_left = 46.0
+offset_top = -176.0
+offset_right = 354.0
+offset_bottom = -113.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 44
+text = "SOBREVIVA!!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("10_hkv0s")
+metadata/_edit_use_anchors_ = true
+
+[node name="GLOBAL" type="Timer" parent="."]
+process_callback = 0
+wait_time = 1.5
+autostart = true
+
+[node name="wincondition" type="Timer" parent="."]
+wait_time = 6.0
+autostart = true
+
+[node name="vidas" type="Label" parent="."]
+offset_left = -56.0
+offset_top = -276.0
+offset_right = 24.0
+offset_bottom = -242.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+text = "Vidas = 3"
+
+[connection signal="timeout" from="Morte" to="." method="on_morte"]
+[connection signal="timeout" from="Morte" to="Area2D/Sprite2D/Camera2D" method="morrido"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="GLOBAL" to="." method="testosd"]
+[connection signal="timeout" from="wincondition" to="." method="_on_wincondition_timeout"]
