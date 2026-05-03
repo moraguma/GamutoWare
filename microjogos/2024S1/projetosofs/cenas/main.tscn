@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bi0ahd7cv37i6"]
+
+[ext_resource type="Texture2D" uid="uid://2ns58gex8uke" path="res://microjogos/2024S1/projetosofs/cenas/Screenshot from 2024-03-23 20-34-16.png" id="1_fr4yv"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="ScreenshotFrom2024-03-2320-34-16" type="Sprite2D" parent="."]
+position = Vector2(960, 546.5)
+scale = Vector2(1.76243, 1.78664)
+texture = ExtResource("1_fr4yv")
