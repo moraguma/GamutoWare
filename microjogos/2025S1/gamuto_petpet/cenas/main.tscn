@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://bljjgqolr1tm3"]
+
+[ext_resource type="Script" uid="uid://d1dd7ckou11yk" path="res://microjogos/2025S1/gamuto_petpet/cenas/scripts/main.gd" id="1_0sc6v"]
+[ext_resource type="Texture2D" uid="uid://dog3lkdvesojw" path="res://microjogos/2025S1/gamuto_petpet/recursos/imagens/bg.png" id="1_7qddy"]
+[ext_resource type="Script" uid="uid://bwkj2x65owpoo" path="res://microjogos/2025S1/gamuto_petpet/cenas/scripts/mouse.gd" id="1_w0e6d"]
+[ext_resource type="Texture2D" uid="uid://db2mrbqo6tl8q" path="res://microjogos/2025S1/gamuto_petpet/recursos/imagens/maozinha.png" id="3_0sc6v"]
+[ext_resource type="PackedScene" uid="uid://bfwsayxbk75mm" path="res://microjogos/2025S1/gamuto_petpet/cenas/gamuto.tscn" id="3_crsyb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7qddy"]
+radius = 2.76713
+height = 7.40807
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_0sc6v")
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_7qddy")
+
+[node name="gamuto" parent="." instance=ExtResource("3_crsyb")]
+position = Vector2(1261, 395)
+scale = Vector2(0.845, 0.845)
+
+[node name="mouse" type="CharacterBody2D" parent="."]
+position = Vector2(972, 535)
+scale = Vector2(0.63, 0.63)
+script = ExtResource("1_w0e6d")
+speed = 500.0
+
+[node name="Sprite2D" type="Sprite2D" parent="mouse"]
+texture = ExtResource("3_0sc6v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mouse"]
+rotation = -3.14159
+scale = Vector2(59.7255, -45.8959)
+shape = SubResource("CapsuleShape2D_7qddy")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 34.0
+offset_right = 523.0
+offset_bottom = 106.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 46
+text = "cafuné [espaço]"
+
+[connection signal="body_entered" from="gamuto" to="mouse" method="_on_gamuto_body_entered"]
+[connection signal="body_exited" from="gamuto" to="mouse" method="_on_gamuto_body_exited"]
