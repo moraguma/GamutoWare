@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dhsdkm5unb16"]
+[gd_scene format=3 uid="uid://dhsdkm5unb16"]
 
 [ext_resource type="Script" uid="uid://63oacrlf2s5s" path="res://microjogos/2023S1/projeto-thedeas/cenas/main.gd" id="1_reqd2"]
 [ext_resource type="Texture2D" uid="uid://dmfv2vlqeqb7c" path="res://microjogos/2023S1/projeto-thedeas/recursos/BackGround.png" id="2_b25e2"]
@@ -53,22 +53,22 @@ size = Vector2(137.079, 31.3033)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i5e3k"]
 size = Vector2(145.337, 40.6944)
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=3588734]
 position = Vector2(0, -8)
 script = ExtResource("1_reqd2")
 
-[node name="BackGround" type="Sprite2D" parent="."]
+[node name="BackGround" type="Sprite2D" parent="." unique_id=1608424116]
 position = Vector2(960.889, 547.5)
 scale = Vector2(2.40222, 2.40222)
 texture = ExtResource("2_b25e2")
 
-[node name="LeafsParticles" type="CPUParticles2D" parent="."]
+[node name="LeafsParticles" type="CPUParticles2D" parent="." unique_id=1782163945]
 position = Vector2(-200, -656)
 amount = 70
+texture = ExtResource("4_yaape")
 lifetime = 5.0
 preprocess = 3.0
 speed_scale = 0.6
-texture = ExtResource("4_yaape")
 emission_shape = 3
 emission_rect_extents = Vector2(1080, 540)
 direction = Vector2(1, 1)
@@ -76,59 +76,59 @@ gravity = Vector2(500, 500)
 angle_max = 1.0
 angle_curve = SubResource("5")
 
-[node name="GodDeathAnimation" type="AnimatedSprite2D" parent="."]
+[node name="GodDeathAnimation" type="AnimatedSprite2D" parent="." unique_id=674322959]
 position = Vector2(955.667, 551)
 scale = Vector2(2.38667, 2.38667)
 sprite_frames = SubResource("SpriteFrames_nhdfs")
 animation = &"Arms"
 frame_progress = 0.897983
 
-[node name="Monge" parent="." instance=ExtResource("5_8fl8s")]
+[node name="Monge" parent="." unique_id=2144328047 instance=ExtResource("5_8fl8s")]
 position = Vector2(1344, 808)
 
-[node name="Monge2" parent="." instance=ExtResource("5_8fl8s")]
+[node name="Monge2" parent="." unique_id=354975183 instance=ExtResource("5_8fl8s")]
 position = Vector2(960, 816)
 
-[node name="Monge3" parent="." instance=ExtResource("5_8fl8s")]
+[node name="Monge3" parent="." unique_id=847761579 instance=ExtResource("5_8fl8s")]
 position = Vector2(1712, 808)
 
-[node name="Monge4" parent="." instance=ExtResource("5_8fl8s")]
+[node name="Monge4" parent="." unique_id=1396539322 instance=ExtResource("5_8fl8s")]
 position = Vector2(576, 800)
 
-[node name="Monge5" parent="." instance=ExtResource("5_8fl8s")]
+[node name="Monge5" parent="." unique_id=142248233 instance=ExtResource("5_8fl8s")]
 position = Vector2(216, 808)
 
-[node name="DeathGod" type="CharacterBody2D" parent="."]
+[node name="DeathGod" type="CharacterBody2D" parent="." unique_id=1178417817]
 position = Vector2(1920, 480)
 scale = Vector2(1.21098, 1.27782)
 script = ExtResource("9_cvxqj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathGod"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathGod" unique_id=537996061]
 position = Vector2(26.4248, -12.5213)
 shape = SubResource("RectangleShape2D_ysb81")
 
-[node name="Sprite2D" type="Sprite2D" parent="DeathGod/CollisionShape2D"]
+[node name="Sprite2D" type="Sprite2D" parent="DeathGod/CollisionShape2D" unique_id=365041689]
 position = Vector2(0.000183105, 6.26068)
 scale = Vector2(2.02315, 2.13214)
 texture = ExtResource("5_xchyn")
 
-[node name="Area2D" type="Area2D" parent="DeathGod"]
+[node name="Area2D" type="Area2D" parent="DeathGod" unique_id=989521558]
 position = Vector2(6.10352e-05, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathGod/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathGod/Area2D" unique_id=1926751202]
 position = Vector2(26.4248, -43.8246)
 shape = SubResource("RectangleShape2D_i5e3k")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=960107111]
 wait_time = 6.0
 one_shot = true
 autostart = true
 
-[node name="SmashSound" type="AudioStreamPlayer" parent="."]
+[node name="SmashSound" type="AudioStreamPlayer" parent="." unique_id=2014089553]
 stream = ExtResource("9_1tq5x")
 volume_db = -8.0
 
-[node name="BackSound" type="AudioStreamPlayer" parent="."]
+[node name="BackSound" type="AudioStreamPlayer" parent="." unique_id=380568591]
 stream = ExtResource("10_p7615")
 autoplay = true
 

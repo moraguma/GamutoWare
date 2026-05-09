@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://po8vn66jxlsb"]
+[gd_scene format=3 uid="uid://po8vn66jxlsb"]
 
 [ext_resource type="Script" uid="uid://cb7glxd8xuiu4" path="res://microjogos/2023S1/projeto-tiagoperrupato/cenas/scripts/main.gd" id="1_hgnl4"]
 [ext_resource type="Texture2D" uid="uid://d0l14csrhiv4l" path="res://microjogos/2023S1/projeto-tiagoperrupato/recursos/rua.png" id="2_1u4oe"]
@@ -47,34 +47,34 @@ size = Vector2(360, 152)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xrxgi"]
 size = Vector2(776, 192)
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1323271360]
 position = Vector2(960, 544)
 script = ExtResource("1_hgnl4")
 
-[node name="Camera" type="Camera2D" parent="."]
+[node name="Camera" type="Camera2D" parent="." unique_id=1335641069]
 metadata/_edit_lock_ = true
 
-[node name="Rua" type="Sprite2D" parent="."]
+[node name="Rua" type="Sprite2D" parent="." unique_id=1658730632]
 texture = ExtResource("2_1u4oe")
 metadata/_edit_lock_ = true
 
-[node name="Jogador" type="CharacterBody2D" parent="."]
+[node name="Jogador" type="CharacterBody2D" parent="." unique_id=822474809]
 position = Vector2(-784, -8)
 script = ExtResource("3_exa5e")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Jogador"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jogador" unique_id=787232072]
 position = Vector2(3, 0.5)
 shape = SubResource("RectangleShape2D_hune0")
 metadata/_edit_lock_ = true
 
-[node name="FotoCarro" type="Sprite2D" parent="Jogador"]
+[node name="FotoCarro" type="Sprite2D" parent="Jogador" unique_id=1061444227]
 position = Vector2(6.10352e-05, 0)
 rotation = 3.14159
 scale = Vector2(0.703676, 0.763366)
 texture = ExtResource("4_orguo")
 metadata/_edit_lock_ = true
 
-[node name="Explosao" type="Sprite2D" parent="Jogador"]
+[node name="Explosao" type="Sprite2D" parent="Jogador" unique_id=1114825229]
 visible = false
 scale = Vector2(7.5, 6.75)
 texture = ExtResource("5_ficf5")
@@ -82,128 +82,128 @@ hframes = 6
 frame = 2
 metadata/_edit_lock_ = true
 
-[node name="BordaSuperior" type="StaticBody2D" parent="."]
+[node name="BordaSuperior" type="StaticBody2D" parent="." unique_id=1275699776]
 position = Vector2(0, -488)
 metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BordaSuperior"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BordaSuperior" unique_id=1603319449]
 shape = SubResource("RectangleShape2D_7k7nf")
 metadata/_edit_lock_ = true
 
-[node name="Borda Inferior" type="StaticBody2D" parent="."]
+[node name="Borda Inferior" type="StaticBody2D" parent="." unique_id=572945275]
 position = Vector2(8, 488)
 metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Borda Inferior"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borda Inferior" unique_id=844487375]
 shape = SubResource("RectangleShape2D_r2wdw")
 metadata/_edit_lock_ = true
 
-[node name="Carro1" type="CharacterBody2D" parent="." groups=["Veiculos"]]
+[node name="Carro1" type="CharacterBody2D" parent="." unique_id=787710266 groups=["Veiculos"]]
 position = Vector2(1208, -8)
 rotation = 1.5708
 script = ExtResource("5_kapmk")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Carro1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carro1" unique_id=2070826088]
 position = Vector2(4, -8)
 shape = SubResource("RectangleShape2D_0mymo")
 metadata/_edit_lock_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Carro1"]
+[node name="Sprite2D" type="Sprite2D" parent="Carro1" unique_id=858232016]
 rotation = 4.71239
 scale = Vector2(0.910152, 0.910152)
 texture = ExtResource("4_v7l48")
 metadata/_edit_lock_ = true
 
-[node name="Carro3" type="CharacterBody2D" parent="." groups=["Veiculos"]]
+[node name="Carro3" type="CharacterBody2D" parent="." unique_id=278089321 groups=["Veiculos"]]
 position = Vector2(4472, -248)
 script = ExtResource("5_kapmk")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Carro3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carro3" unique_id=643586663]
 shape = SubResource("RectangleShape2D_ntidd")
 metadata/_edit_lock_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Carro3"]
+[node name="Sprite2D" type="Sprite2D" parent="Carro3" unique_id=933953442]
 rotation = 4.71239
 scale = Vector2(4.69045, 4.87373)
 texture = ExtResource("5_al4rc")
 metadata/_edit_lock_ = true
 
-[node name="Carro4" type="CharacterBody2D" parent="." groups=["Veiculos"]]
+[node name="Carro4" type="CharacterBody2D" parent="." unique_id=1694953186 groups=["Veiculos"]]
 position = Vector2(2208, 256)
 script = ExtResource("5_kapmk")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Carro4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carro4" unique_id=1856875956]
 shape = SubResource("RectangleShape2D_vdcth")
 metadata/_edit_lock_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Carro4"]
+[node name="Sprite2D" type="Sprite2D" parent="Carro4" unique_id=1643958762]
 rotation = 4.71239
 scale = Vector2(6.70164, 5.978)
 texture = ExtResource("9_ipvil")
 metadata/_edit_lock_ = true
 
-[node name="Carro2" type="CharacterBody2D" parent="." groups=["Veiculos"]]
+[node name="Carro2" type="CharacterBody2D" parent="." unique_id=258582753 groups=["Veiculos"]]
 position = Vector2(2176, -248)
 script = ExtResource("5_kapmk")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Carro2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carro2" unique_id=60648062]
 shape = SubResource("RectangleShape2D_mj80g")
 metadata/_edit_lock_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Carro2"]
+[node name="Sprite2D" type="Sprite2D" parent="Carro2" unique_id=1202360883]
 rotation = -3.14159
 scale = Vector2(1.26998, 1.26998)
 texture = ExtResource("10_td3ja")
 metadata/_edit_lock_ = true
 
-[node name="Carro5" type="CharacterBody2D" parent="." groups=["Veiculos"]]
+[node name="Carro5" type="CharacterBody2D" parent="." unique_id=1501941877 groups=["Veiculos"]]
 position = Vector2(3448, -16)
 script = ExtResource("5_kapmk")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Carro5"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carro5" unique_id=446155187]
 position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_vl0cq")
 metadata/_edit_lock_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Carro5"]
+[node name="Sprite2D" type="Sprite2D" parent="Carro5" unique_id=1873902767]
 position = Vector2(0, 5.72205e-06)
 rotation = -1.5708
 scale = Vector2(-7.6784, 9.11891)
 texture = ExtResource("11_iie22")
 metadata/_edit_lock_ = true
 
-[node name="Carro6" type="CharacterBody2D" parent="." groups=["Veiculos"]]
+[node name="Carro6" type="CharacterBody2D" parent="." unique_id=1353127357 groups=["Veiculos"]]
 position = Vector2(2888, -264)
 script = ExtResource("5_kapmk")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Carro6"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carro6" unique_id=292969386]
 shape = SubResource("RectangleShape2D_h2jgb")
 metadata/_edit_lock_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Carro6"]
+[node name="Sprite2D" type="Sprite2D" parent="Carro6" unique_id=672751412]
 rotation = -1.5708
 scale = Vector2(6.13383, 5.57862)
 texture = ExtResource("12_d0bag")
 metadata/_edit_lock_ = true
 
-[node name="Carro7" type="CharacterBody2D" parent="." groups=["Veiculos"]]
+[node name="Carro7" type="CharacterBody2D" parent="." unique_id=2144027981 groups=["Veiculos"]]
 position = Vector2(4800, 256)
 script = ExtResource("5_kapmk")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Carro7"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carro7" unique_id=2103145977]
 position = Vector2(4, 0)
 shape = SubResource("RectangleShape2D_xrxgi")
 metadata/_edit_lock_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Carro7"]
+[node name="Sprite2D" type="Sprite2D" parent="Carro7" unique_id=348665602]
 rotation = -1.5708
 scale = Vector2(6.11851, 7.34376)
 texture = ExtResource("13_ljev4")
 metadata/_edit_lock_ = true
 
-[node name="Musica-Trafico" type="AudioStreamPlayer" parent="."]
+[node name="Musica-Trafico" type="AudioStreamPlayer" parent="." unique_id=331819591]
 stream = ExtResource("13_3d6um")
 script = ExtResource("14_7qofw")
 
-[node name="Musica-Explosao" type="AudioStreamPlayer" parent="."]
+[node name="Musica-Explosao" type="AudioStreamPlayer" parent="." unique_id=65110592]
 stream = ExtResource("15_trkbh")

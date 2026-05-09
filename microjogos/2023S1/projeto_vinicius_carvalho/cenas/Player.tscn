@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cxx5cafpq3hq5"]
+[gd_scene format=3 uid="uid://cxx5cafpq3hq5"]
 
 [ext_resource type="Script" uid="uid://or7afe61yxa2" path="res://microjogos/2023S1/projeto_vinicius_carvalho/cenas/scripts/Player.gd" id="1_inn2u"]
 [ext_resource type="Texture2D" uid="uid://bgifxsftfv8yd" path="res://microjogos/2023S1/projeto_vinicius_carvalho/Player/Sprites_do_morcego/Flying (46x30).png" id="2_tniwm"]
@@ -111,22 +111,22 @@ animations = [{
 radius = 14.0
 height = 28.0
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=95485178]
 texture_filter = 1
 script = ExtResource("1_inn2u")
 
-[node name="Hitbox" type="Area2D" parent="."]
+[node name="Hitbox" type="Area2D" parent="." unique_id=1433301944]
 position = Vector2(105, 121)
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1587975964]
 position = Vector2(271, 301)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_5omdq")
 debug_color = Color(0.635294, 0.294118, 0.52549, 1)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1941460729]
 texture_filter = 1
 position = Vector2(375.5, 423.25)
 scale = Vector2(3.19565, 3.48333)
@@ -135,21 +135,21 @@ animation = &"Fly"
 frame_progress = 0.550123
 flip_h = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1131640651]
 visibility_layer = 3
 position = Vector2(377, 421)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_masu5")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=736476794]
 
-[node name="SomDeath" type="AudioStreamPlayer" parent="."]
+[node name="SomDeath" type="AudioStreamPlayer" parent="." unique_id=663678688]
 stream = ExtResource("4_td4oj")
 
-[node name="Som_asa" type="AudioStreamPlayer" parent="."]
+[node name="Som_asa" type="AudioStreamPlayer" parent="." unique_id=1111962795]
 stream = ExtResource("4_vmcn3")
 
-[node name="Timer2" type="Timer" parent="."]
+[node name="Timer2" type="Timer" parent="." unique_id=1601157460]
 
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

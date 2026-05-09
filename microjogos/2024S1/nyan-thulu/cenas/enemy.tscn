@@ -1,20 +1,20 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene format=3 uid="uid://bpqibhrab88xq"]
 
-[ext_resource type="Script" path="res://microjogos/2024S1/nyan-thulu/cenas/scripts/enemy.gd" id="1_n4wmv"]
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/nyan-thulu/recursos/cookie.png" id="2_vy4kf"]
+[ext_resource type="Script" uid="uid://khgdbcm368vn" path="res://microjogos/2024S1/nyan-thulu/cenas/scripts/enemy.gd" id="1_n4wmv"]
+[ext_resource type="Texture2D" uid="uid://ipl4yhmn4615" path="res://microjogos/2024S1/nyan-thulu/recursos/cookie.png" id="2_vy4kf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o1j4h"]
 radius = 72.0278
 
-[node name="Enemy" type="CharacterBody2D"]
+[node name="Enemy" type="CharacterBody2D" unique_id=1044204716]
 script = ExtResource("1_n4wmv")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1661742766]
 position = Vector2(0.999999, 7.75)
 scale = Vector2(0.352, 0.306316)
 texture = ExtResource("2_vy4kf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=826913437]
 position = Vector2(3.05176e-05, 0.749969)
 shape = SubResource("CircleShape2D_o1j4h")
 

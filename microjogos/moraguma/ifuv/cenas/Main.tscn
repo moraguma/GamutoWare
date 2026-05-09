@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://cukdi0t5sqxm8"]
+[gd_scene format=3 uid="uid://cukdi0t5sqxm8"]
 
 [ext_resource type="Texture2D" uid="uid://bmnffsuvmvut8" path="res://microjogos/moraguma/ifuv/recursos/sprites/closewall.png" id="1"]
 [ext_resource type="AudioStream" uid="uid://baxuq5bxfupah" path="res://microjogos/moraguma/ifuv/recursos/sounds/sfx/door.wav" id="2"]
@@ -244,6 +244,15 @@ fallbacks = Array[Font]([ExtResource("18")])
 subpixel_positioning = 0
 msdf_pixel_range = 14
 msdf_size = 128
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -269,6 +278,15 @@ fallbacks = Array[Font]([ExtResource("18")])
 subpixel_positioning = 0
 msdf_pixel_range = 14
 msdf_size = 128
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -280,72 +298,68 @@ cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 default_font = SubResource("16")
 RichTextLabel/colors/default_color = Color(0.368627, 0.294118, 0.25098, 1)
 
-[node name="IFUV" type="Node2D"]
+[node name="IFUV" type="Node2D" unique_id=609470613]
 texture_filter = 1
 script = ExtResource("6")
 
-[node name="Camera3D" type="Camera2D" parent="."]
+[node name="Camera3D" type="Camera2D" parent="." unique_id=1885393887]
 position = Vector2(80, 45)
 
-[node name="BG" type="Sprite2D" parent="."]
+[node name="BG" type="Sprite2D" parent="." unique_id=1108039861]
 position = Vector2(80, 45)
 texture = ExtResource("3")
 
-[node name="Monster" type="Sprite2D" parent="."]
+[node name="Monster" type="Sprite2D" parent="." unique_id=923011669]
 position = Vector2(76, 65)
 texture = ExtResource("4")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Monster"]
-libraries = {
-"": SubResource("AnimationLibrary_os2gd")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Monster" unique_id=224795124]
+libraries/ = SubResource("AnimationLibrary_os2gd")
 
-[node name="Door" type="Sprite2D" parent="."]
+[node name="Door" type="Sprite2D" parent="." unique_id=336470043]
 position = Vector2(80, 45)
 texture = ExtResource("5")
 hframes = 4
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Door"]
-libraries = {
-"": SubResource("AnimationLibrary_t6uk2")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Door" unique_id=1125346797]
+libraries/ = SubResource("AnimationLibrary_t6uk2")
 
-[node name="FG" type="Sprite2D" parent="."]
+[node name="FG" type="Sprite2D" parent="." unique_id=1339415503]
 position = Vector2(80, 45)
 texture = ExtResource("1")
 
-[node name="Pad" type="Sprite2D" parent="."]
+[node name="Pad" type="Sprite2D" parent="." unique_id=1843355797]
 position = Vector2(133, 56)
 texture = ExtResource("13")
 script = ExtResource("19")
 
-[node name="1" parent="Pad" instance=ExtResource("14")]
+[node name="1" parent="Pad" unique_id=1829867344 instance=ExtResource("14")]
 position = Vector2(-14, -11)
 number = 1
 right_path = "../2"
 down_path = "../4"
 
-[node name="2" parent="Pad" instance=ExtResource("14")]
+[node name="2" parent="Pad" unique_id=477288526 instance=ExtResource("14")]
 position = Vector2(0, -11)
 number = 2
 right_path = "../3"
 down_path = "../5"
 left_path = "../1"
 
-[node name="3" parent="Pad" instance=ExtResource("14")]
+[node name="3" parent="Pad" unique_id=620670008 instance=ExtResource("14")]
 position = Vector2(14, -11)
 number = 3
 down_path = "../6"
 left_path = "../2"
 
-[node name="4" parent="Pad" instance=ExtResource("14")]
+[node name="4" parent="Pad" unique_id=170939185 instance=ExtResource("14")]
 position = Vector2(-14, 2)
 number = 4
 up_path = "../1"
 right_path = "../5"
 down_path = "../7"
 
-[node name="5" parent="Pad" instance=ExtResource("14")]
+[node name="5" parent="Pad" unique_id=330274328 instance=ExtResource("14")]
 position = Vector2(0, 2)
 number = 5
 up_path = "../2"
@@ -353,21 +367,21 @@ right_path = "../6"
 down_path = "../8"
 left_path = "../4"
 
-[node name="6" parent="Pad" instance=ExtResource("14")]
+[node name="6" parent="Pad" unique_id=721921799 instance=ExtResource("14")]
 position = Vector2(14, 2)
 number = 6
 up_path = "../3"
 down_path = "../9"
 left_path = "../5"
 
-[node name="7" parent="Pad" instance=ExtResource("14")]
+[node name="7" parent="Pad" unique_id=477356799 instance=ExtResource("14")]
 position = Vector2(-14, 15)
 number = 7
 up_path = "../4"
 right_path = "../8"
 down_path = "../Erase"
 
-[node name="8" parent="Pad" instance=ExtResource("14")]
+[node name="8" parent="Pad" unique_id=893902117 instance=ExtResource("14")]
 position = Vector2(0, 15)
 number = 8
 up_path = "../5"
@@ -375,35 +389,35 @@ right_path = "../9"
 down_path = "../0"
 left_path = "../7"
 
-[node name="9" parent="Pad" instance=ExtResource("14")]
+[node name="9" parent="Pad" unique_id=1052917658 instance=ExtResource("14")]
 position = Vector2(14, 15)
 number = 9
 up_path = "../6"
 down_path = "../Enter"
 left_path = "../8"
 
-[node name="0" parent="Pad" instance=ExtResource("14")]
+[node name="0" parent="Pad" unique_id=696802870 instance=ExtResource("14")]
 position = Vector2(0, 28)
 up_path = "../8"
 right_path = "../Enter"
 left_path = "../Erase"
 
-[node name="Erase" parent="Pad" instance=ExtResource("16")]
+[node name="Erase" parent="Pad" unique_id=970604997 instance=ExtResource("16")]
 position = Vector2(-14, 28)
 up_path = "../7"
 right_path = "../0"
 
-[node name="Enter" parent="Pad" instance=ExtResource("15")]
+[node name="Enter" parent="Pad" unique_id=1313295641 instance=ExtResource("15")]
 position = Vector2(14, 28)
 up_path = "../9"
 left_path = "../0"
 
-[node name="Cursor" type="AnimatedSprite2D" parent="Pad"]
+[node name="Cursor" type="AnimatedSprite2D" parent="Pad" unique_id=582982193]
 position = Vector2(0, -11)
 sprite_frames = SubResource("11")
 frame = 1
 
-[node name="Display" type="RichTextLabel" parent="Pad"]
+[node name="Display" type="RichTextLabel" parent="Pad" unique_id=1621638372]
 offset_left = -7.0
 offset_top = -31.0
 offset_right = 9.0
@@ -411,12 +425,12 @@ offset_bottom = -20.0
 theme = SubResource("13")
 bbcode_enabled = true
 
-[node name="Paper" type="Sprite2D" parent="."]
+[node name="Paper" type="Sprite2D" parent="." unique_id=1164745891]
 position = Vector2(29, 71)
 texture = ExtResource("21")
 script = ExtResource("20")
 
-[node name="Password" type="RichTextLabel" parent="Paper"]
+[node name="Password" type="RichTextLabel" parent="Paper" unique_id=972935375]
 offset_left = -12.0
 offset_top = -7.0
 offset_right = 44.0
@@ -426,34 +440,34 @@ bbcode_enabled = true
 text = "1234
 "
 
-[node name="DoorCloseSound" type="AudioStreamPlayer" parent="."]
+[node name="DoorCloseSound" type="AudioStreamPlayer" parent="." unique_id=1761838962]
 stream = ExtResource("2")
 volume_db = 10.0
 
-[node name="ErrorSound" type="AudioStreamPlayer" parent="."]
+[node name="ErrorSound" type="AudioStreamPlayer" parent="." unique_id=917975105]
 stream = ExtResource("12")
 volume_db = 10.0
 
-[node name="Key1" type="AudioStreamPlayer" parent="."]
+[node name="Key1" type="AudioStreamPlayer" parent="." unique_id=852377044]
 stream = ExtResource("9")
 volume_db = 10.0
 
-[node name="Key2" type="AudioStreamPlayer" parent="."]
+[node name="Key2" type="AudioStreamPlayer" parent="." unique_id=756638551]
 stream = ExtResource("10")
 volume_db = 10.0
 
-[node name="Key3" type="AudioStreamPlayer" parent="."]
+[node name="Key3" type="AudioStreamPlayer" parent="." unique_id=67790207]
 stream = ExtResource("7")
 volume_db = 10.0
 
-[node name="Key4" type="AudioStreamPlayer" parent="."]
+[node name="Key4" type="AudioStreamPlayer" parent="." unique_id=1537543422]
 stream = ExtResource("8")
 volume_db = 10.0
 
-[node name="Key5" type="AudioStreamPlayer" parent="."]
+[node name="Key5" type="AudioStreamPlayer" parent="." unique_id=1039674853]
 stream = ExtResource("11")
 volume_db = 10.0
 
-[node name="Music" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=2101612664]
 stream = ExtResource("22")
 volume_db = 10.0

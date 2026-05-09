@@ -1,9 +1,9 @@
-[gd_scene load_steps=13 format=3]
+[gd_scene format=3 uid="uid://c5s48feje1a2c"]
 
-[ext_resource type="Script" path="res://microjogos/2024S1/projeto-asteroids/cenas/scripts/asteroid.gd" id="1_pfnyl"]
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/asteroid.png" id="2_4rixu"]
-[ext_resource type="Texture2D" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/explosion_sprites.png" id="3_evv60"]
-[ext_resource type="AudioStream" path="res://microjogos/2024S1/projeto-asteroids/recursos/523091__magnuswaker__shotgun-blast-1.ogg" id="4_w1su8"]
+[ext_resource type="Script" uid="uid://bxy5b8qh5u3rp" path="res://microjogos/2024S1/projeto-asteroids/cenas/scripts/asteroid.gd" id="1_pfnyl"]
+[ext_resource type="Texture2D" uid="uid://2jvx43tddngu" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/asteroid.png" id="2_4rixu"]
+[ext_resource type="Texture2D" uid="uid://8p120t3sf7wl" path="res://microjogos/2024S1/projeto-asteroids/recursos/sprites/explosion_sprites.png" id="3_evv60"]
+[ext_resource type="AudioStream" uid="uid://duxmmq4u5i32u" path="res://microjogos/2024S1/projeto-asteroids/recursos/523091__magnuswaker__shotgun-blast-1.ogg" id="4_w1su8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u2c7u"]
 radius = 23.3238
@@ -58,23 +58,23 @@ animations = [{
 "speed": 7.0
 }]
 
-[node name="Asteroid" type="RigidBody2D"]
+[node name="Asteroid" type="RigidBody2D" unique_id=426459574]
 gravity_scale = 0.0
 script = ExtResource("1_pfnyl")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1999486597]
 position = Vector2(-1, 9)
 texture = ExtResource("2_4rixu")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1305849264]
 scale = Vector2(3, 3)
 shape = SubResource("CircleShape2D_u2c7u")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1745820611]
 sprite_frames = SubResource("SpriteFrames_wbfm7")
 animation = &"new_animation"
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="." unique_id=1860924175]
 stream = ExtResource("4_w1su8")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

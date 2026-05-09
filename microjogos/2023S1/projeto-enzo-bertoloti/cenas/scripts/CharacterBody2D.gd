@@ -49,4 +49,3 @@ func _on_espinhos_body_entered(body):
 		print("Voce perdeu!")
 		jogo_acabou = true
 		som_morte.play()
-

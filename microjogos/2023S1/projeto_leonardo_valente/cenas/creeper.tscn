@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://rvadjogfn0mw"]
+[gd_scene format=3 uid="uid://rvadjogfn0mw"]
 
 [ext_resource type="Script" uid="uid://pdjehth7sx8c" path="res://microjogos/2023S1/projeto_leonardo_valente/cenas/Creeper.gd" id="1_ohosw"]
 [ext_resource type="Texture2D" uid="uid://dcssfmuy5n8mt" path="res://microjogos/2023S1/projeto_leonardo_valente/recursos/Spritesheet Creeper.png" id="2_apqto"]
@@ -100,16 +100,16 @@ _data = {
 &"Ignited": SubResource("Animation_2vhoe")
 }
 
-[node name="Creeper" type="CharacterBody2D"]
+[node name="Creeper" type="CharacterBody2D" unique_id=1735168352]
 script = ExtResource("1_ohosw")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=404379079]
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=773947550]
 shape = SubResource("CircleShape2D_hpjfv")
 
-[node name="SpriteCreeper" type="Sprite2D" parent="."]
+[node name="SpriteCreeper" type="Sprite2D" parent="." unique_id=1282247013]
 texture_filter = 1
 position = Vector2(1.52588e-05, 3.05176e-05)
 scale = Vector2(13.13, 13.13)
@@ -118,11 +118,9 @@ hframes = 3
 vframes = 2
 frame = 5
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "Explosion"
-libraries = {
-"": SubResource("AnimationLibrary_yprj4")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1291819080]
+libraries/ = SubResource("AnimationLibrary_yprj4")
+autoplay = &"Explosion"
 
 [connection signal="body_entered" from="Area2D" to="." method="entrou"]
 [connection signal="body_exited" from="Area2D" to="." method="saiu"]

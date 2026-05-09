@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cg2kpxdcc4kav"]
+[gd_scene format=3 uid="uid://cg2kpxdcc4kav"]
 
 [ext_resource type="Script" uid="uid://chbnqdvld8lt8" path="res://microjogos/not_implemented/teste/moveGamutoDemo/scripts/Player.gd" id="1_txxh0"]
 [ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="2"]
@@ -6,12 +6,12 @@
 [sub_resource type="CircleShape2D" id="4"]
 radius = 59.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" unique_id=121291730]
 script = ExtResource("1_txxh0")
 
-[node name="Hitbox" type="CollisionShape2D" parent="."]
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=1248959680]
 shape = SubResource("4")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2031304413]
 scale = Vector2(2, 2)
 texture = ExtResource("2")

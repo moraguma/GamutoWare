@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b20fpbexpeu5g"]
+[gd_scene format=3 uid="uid://b20fpbexpeu5g"]
 
 [ext_resource type="Script" uid="uid://beg1sd1kmws0u" path="res://microjogos/2025S1/projeto_milla/cenas/scripts/abobora.gd" id="1_iigmm"]
 [ext_resource type="Texture2D" uid="uid://fc80mine21r6" path="res://microjogos/2025S1/projeto_milla/recursos/imagens/abobora_baixo.png" id="1_nmapu"]
@@ -65,19 +65,17 @@ _data = {
 &"errou": SubResource("Animation_iigmm")
 }
 
-[node name="Abobora" type="CharacterBody2D"]
+[node name="Abobora" type="CharacterBody2D" unique_id=652214870]
 script = ExtResource("1_iigmm")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=2036743673]
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_ury2a")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1181312246]
 position = Vector2(-2.715e-05, 7.50001)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_iigmm")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_x06wy")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=708279579]
+libraries/ = SubResource("AnimationLibrary_x06wy")

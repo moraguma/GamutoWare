@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://mqowq5d2yjbd"]
+[gd_scene format=3 uid="uid://mqowq5d2yjbd"]
 
 [ext_resource type="Script" uid="uid://btjpjuayq24og" path="res://microjogos/2023S1/projeto-gabriel-morais/cenas/scripts/maca_1.gd" id="1_6v8b2"]
 [ext_resource type="Texture2D" uid="uid://du67ks0qtxx8s" path="res://microjogos/2023S1/projeto-gabriel-morais/recursos/maca.png" id="2_qfwst"]
@@ -23,18 +23,18 @@ func _process(delta):
 
 "
 
-[node name="maca1" type="Area2D"]
+[node name="maca1" type="Area2D" unique_id=1707852623]
 position = Vector2(1333, 330)
 script = ExtResource("1_6v8b2")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1983682770]
 texture_filter = 1
 position = Vector2(-9.49999, -22)
 scale = Vector2(0.57, 0.58)
 texture = ExtResource("2_qfwst")
 script = ExtResource("3_yu5ds")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1071516678]
 position = Vector2(0, -11)
 shape = SubResource("CircleShape2D_1m63x")
 script = SubResource("GDScript_gc3q5")
