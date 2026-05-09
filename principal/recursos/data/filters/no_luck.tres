@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MicrogamePack" format=3 uid="uid://cm4ukf6h1pahp"]
+[gd_resource type="Resource" script_class="MicrogamePack" format=3 uid="uid://dtvfpnoqkpyug"]
 
 [ext_resource type="Script" uid="uid://cv53qaorwqxj0" path="res://principal/recursos/data/MicrogamePack.gd" id="1_n40q0"]
 [ext_resource type="Resource" path="res://microjogos/2024S1/projeto-andre/microgame.tres" id="1_niuy8"]
