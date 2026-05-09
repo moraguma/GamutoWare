@@ -14,6 +14,7 @@ extends Resource
 	"infinite": "Infinito",
 
 	"test": "Test",
+	"class_of_2026": "Turma de 2026",
 	"class_of_2025": "Turma de 2025",
 	"class_of_2024": "Turma de 2024",
 	"class_of_2023": "Turma de 2023",
