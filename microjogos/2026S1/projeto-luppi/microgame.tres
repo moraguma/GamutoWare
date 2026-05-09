@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" format=3 uid="uid://ce08h5rllkkrl"]
+
+[ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_4705b"]
+[ext_resource type="PackedScene" uid="uid://csoob0qvet75i" path="res://microjogos/2026S1/projeto-luppi/cenas/main.tscn" id="1_h0eb8"]
+
+[resource]
+script = ExtResource("1_4705b")
+title_pt = &"TÍTULO DO JOGO"
+title_en = &"GAME TITLE"
+credits_pt = "Créditos do jogo"
+credits_en = "Game credits"
+start_message_pt = &"FAÇA ALGO!"
+start_message_en = &"DO SOMETHING!"
+main_scene = ExtResource("1_h0eb8")
