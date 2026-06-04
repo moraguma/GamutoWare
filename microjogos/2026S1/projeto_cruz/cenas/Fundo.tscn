@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bq1arpwxo0qvw"]
+
+[ext_resource type="Texture2D" uid="uid://uoawqjdi880i" path="res://microjogos/2026S1/projeto_cruz/recursos/imagens/Sprite_fundo.png" id="1_gvb6d"]
+
+[sub_resource type="GDScript" id="GDScript_gvb6d"]
+script/source = "extends Sprite2D
+
+func _process(delta):
+	region_rect.position.x += 5
+"
+
+[node name="Fundo" type="Node2D" unique_id=539732057]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=89774972]
+texture_repeat = 2
+texture = ExtResource("1_gvb6d")
+region_enabled = true
+region_rect = Rect2(0, 0, 1001.44934, 576)
+script = SubResource("GDScript_gvb6d")
