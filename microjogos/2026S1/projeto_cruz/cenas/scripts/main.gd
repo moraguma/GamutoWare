@@ -1,28 +1,37 @@
 extends Node2D
-# --------------------------------------------------------------------------------------------------
-# FUNÇÕES PADRÃO
-# --------------------------------------------------------------------------------------------------
 
-# Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
+@export var mob_scene1: PackedScene
+@export var mob_scene2: PackedScene
+
 func _ready():
-	pass
+	$EsqueletoTimer.wait_time = 1.5
+	$EsqueletoTimer.start()
 
-# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
-# a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
-# a última chamada desta função. O comando pass não faz nada
-func _physics_process(delta):
-	pass
+	$FlechaTimer.wait_time = 1.5
+	$FlechaTimer.start()
+	Minigames.register_win(self)
 
-# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a renderização, 
-# como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
-# desde a última chamada desta função. O comando pass não faz nada
-func _process(delta):
-	pass
+func _on_esqueleto_timer_timeout():
+	var mob = mob_scene1.instantiate()
 
-# --------------------------------------------------------------------------------------------------
-# SUAS FUNÇÕES
-# --------------------------------------------------------------------------------------------------
+	# Choose a random location on Path2D.
+	var mob_spawn_location = $EsqueletoPath/LocalGeracaoEsqueleto
+	mob_spawn_location.progress_ratio = randf()
 
-# Um método genérico. Crie quantos métodos você precisar!
-func my_method():
-	pass
+	# Set the mob's position to the random location.
+	mob.position = mob_spawn_location.position
+
+	# Spawn the mob by adding it to the Main scene.
+	add_child(mob)
+
+
+func _on_flecha_timer_timeout():
+	
+	var mob = mob_scene2.instantiate()
+	
+	var mob_spawn_location = $FlechaPath/LocalGeracaoFlecha
+	mob_spawn_location.progress_ratio = [0.0, 1.0].pick_random()
+	
+	mob.position = mob_spawn_location.position
+	
+	add_child(mob)

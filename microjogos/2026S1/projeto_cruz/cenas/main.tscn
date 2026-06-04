@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://qgvnwn6baueq"]
 
-[ext_resource type="Script" uid="uid://did10b74ftdix" path="res://microjogos/2026S1/projeto_cruz/cenas/main.gd" id="1_7pukw"]
+[ext_resource type="Script" uid="uid://did10b74ftdix" path="res://microjogos/2026S1/projeto_cruz/cenas/scripts/main.gd" id="1_7pukw"]
 [ext_resource type="PackedScene" uid="uid://dajt08c77afje" path="res://microjogos/2026S1/projeto_cruz/cenas/GamutoKnight.tscn" id="2_thase"]
-[ext_resource type="PackedScene" uid="uid://c3ct4eifuwnj0" path="res://microjogos/2026S1/projeto_cruz/cenas/Camera.tscn" id="3_uvs1o"]
+[ext_resource type="PackedScene" path="res://microjogos/2026S1/projeto_cruz/cenas/Camera.tscn" id="3_uvs1o"]
 [ext_resource type="PackedScene" uid="uid://pwpddfupbrb0" path="res://microjogos/2026S1/projeto_cruz/cenas/Esqueleto.tscn" id="4_thase"]
 [ext_resource type="PackedScene" uid="uid://bymono0272xw" path="res://microjogos/2026S1/projeto_cruz/cenas/Flecha.tscn" id="5_uvs1o"]
 [ext_resource type="PackedScene" uid="uid://bq1arpwxo0qvw" path="res://microjogos/2026S1/projeto_cruz/cenas/Fundo.tscn" id="6_7pukw"]
 [ext_resource type="PackedScene" uid="uid://tj4a3qta71if" path="res://microjogos/2026S1/projeto_cruz/cenas/Chão.tscn" id="6_jx8q8"]
-[ext_resource type="AudioStream" uid="uid://dtndqv6ntm56y" path="res://microjogos/2026S1/projeto_cruz/recursos/sons/BeepBox-Song.wav" id="8_uuiyg"]
+[ext_resource type="AudioStream" uid="uid://bndyrnb1n2njt" path="res://microjogos/2026S1/projeto_cruz/recursos/sons/audiomass-output.mp3" id="8_uuiyg"]
 
 [sub_resource type="Curve2D" id="Curve2D_uuiyg"]
 _data = {
