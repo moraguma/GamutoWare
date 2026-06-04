@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dt3xqkwb7b2gt"]
+
+[ext_resource type="Script" uid="uid://su4d03rwumjh" path="res://microjogos/2026S1/projeto-yuji/cenas/scripts/player.gd" id="1_c6w80"]
+[ext_resource type="Texture2D" uid="uid://fau0p7mj63rj" path="res://microjogos/2026S1/projeto-yuji/New Piskel (1).png" id="2_ncgum"]
+[ext_resource type="Script" uid="uid://3aljkrdi4g0i" path="res://microjogos/2026S1/projeto-yuji/cenas/scripts/collision_shape_2d.gd" id="3_uh1io"]
+[ext_resource type="Script" uid="uid://5pinn3icutq5" path="res://microjogos/2026S1/projeto-yuji/cenas/scripts/area_2d.gd" id="4_tkd13"]
+
+[sub_resource type="GDScript" id="GDScript_ncgum"]
+script/source = "extends Sprite2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uh1io"]
+size = Vector2(11.960001, 6.94)
+
+[node name="Player" type="CharacterBody2D" unique_id=1577112350]
+position = Vector2(24, 19)
+scale = Vector2(2, 2)
+script = ExtResource("1_c6w80")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=671395866]
+scale = Vector2(2, 2)
+texture = ExtResource("2_ncgum")
+region_enabled = true
+region_rect = Rect2(12, 12, 12, 7)
+script = SubResource("GDScript_ncgum")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2081496403]
+position = Vector2(3.8146973e-06, 0)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_uh1io")
+script = ExtResource("3_uh1io")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1413634854]
+script = ExtResource("4_tkd13")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=457028411]
+position = Vector2(3.8146973e-06, 0)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_uh1io")
+script = ExtResource("3_uh1io")

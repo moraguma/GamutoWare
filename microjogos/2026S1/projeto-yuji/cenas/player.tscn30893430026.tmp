@@ -1,0 +1,133 @@
+[gd_scene format=3 uid="uid://dt3xqkwb7b2gt"]
+
+[ext_resource type="Script" uid="uid://su4d03rwumjh" path="res://microjogos/2026S1/projeto-yuji/cenas/scripts/player.gd" id="1_c6w80"]
+[ext_resource type="Texture2D" uid="uid://7tb302qjqrls" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/New Piskel (5).png" id="2_ncgum"]
+[ext_resource type="Texture2D" uid="uid://yg5pqfaqlsxd" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-1.png" id="3_txs4x"]
+[ext_resource type="Texture2D" uid="uid://bgbwyohhh72ry" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-2.png" id="4_r2iro"]
+[ext_resource type="Texture2D" uid="uid://b573ehix0rw0c" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-3.png" id="5_8g5u2"]
+[ext_resource type="Texture2D" uid="uid://mmmyy0tb241v" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-4.png" id="6_0ye00"]
+[ext_resource type="Texture2D" uid="uid://c6dbwpv2yo41v" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-5.png" id="7_k0iw7"]
+[ext_resource type="Texture2D" uid="uid://dr0futx3dmuvf" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-6.png" id="8_dj7nv"]
+[ext_resource type="Texture2D" uid="uid://61hwjmu7gqdl" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-7.png" id="9_cr6o8"]
+[ext_resource type="Texture2D" uid="uid://bvl44tsb2x6kl" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-8.png" id="10_ae0af"]
+
+[sub_resource type="GDScript" id="GDScript_ncgum"]
+script/source = "extends Sprite2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="Animation" id="Animation_uh1io"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_ncgum"]
+resource_name = "new_animation"
+length = 0.9
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uh1io"]
+_data = {
+&"RESET": SubResource("Animation_uh1io"),
+&"new_animation": SubResource("Animation_ncgum")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tkd13"]
+size = Vector2(3, 3.25)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g6ler"]
+animations = [{
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("3_txs4x")
+}, {
+"duration": 0.3,
+"texture": ExtResource("4_r2iro")
+}, {
+"duration": 0.3,
+"texture": ExtResource("5_8g5u2")
+}, {
+"duration": 0.3,
+"texture": ExtResource("6_0ye00")
+}, {
+"duration": 0.3,
+"texture": ExtResource("7_k0iw7")
+}, {
+"duration": 0.3,
+"texture": ExtResource("8_dj7nv")
+}, {
+"duration": 0.3,
+"texture": ExtResource("9_cr6o8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ae0af")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="Area2D" unique_id=355280363]
+script = ExtResource("1_c6w80")
+
+[node name="Baixo" type="Sprite2D" parent="." unique_id=1757249924]
+texture_filter = 1
+texture = ExtResource("2_ncgum")
+hframes = 3
+vframes = 4
+script = SubResource("GDScript_ncgum")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Baixo" unique_id=1036349857]
+libraries/ = SubResource("AnimationLibrary_uh1io")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1453900307]
+rotation = -1.5707964
+shape = SubResource("RectangleShape2D_tkd13")
+one_way_collision_margin = 0.0
+
+[node name="Timer" type="Timer" parent="." unique_id=1177446446]
+wait_time = 6.0
+one_shot = true
+autostart = true
+
+[node name="explosão" type="AnimatedSprite2D" parent="." unique_id=1190309340]
+visible = false
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_g6ler")
+frame_progress = 0.8061272
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cne3anoktmyn"]
+
+[ext_resource type="PackedScene" uid="uid://dt3xqkwb7b2gt" path="res://microjogos/2026S1/projeto-yuji/cenas/player.tscn" id="1_dhann"]
+[ext_resource type="Script" uid="uid://ds2brchvsyhhk" path="res://microjogos/2026S1/projeto-yuji/cenas/scripts/main.gd" id="1_ogkyw"]
+[ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="2_csufg"]
+
+[node name="Main" type="Node2D" unique_id=1597121372]
+texture_filter = 1
+script = ExtResource("1_ogkyw")
+
+[node name="Player" parent="." unique_id=1577112350 instance=ExtResource("1_dhann")]
+position = Vector2(129, 64)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1634727001]
+position = Vector2(1565, 292)
+scale = Vector2(4, 4)
+texture = ExtResource("2_csufg")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=821559332]
+position = Vector2(357, 295.00003)
+scale = Vector2(4, 4)
+texture = ExtResource("2_csufg")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1210714922]
+position = Vector2(363, 808)
+scale = Vector2(4, 4)
+texture = ExtResource("2_csufg")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=341754250]
+position = Vector2(1578, 790)
+scale = Vector2(4, 4)
+texture = ExtResource("2_csufg")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=1596674478]
+position = Vector2(974, 519)
+scale = Vector2(4, 4)
+texture = ExtResource("2_csufg")

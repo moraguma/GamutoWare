@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://ce51o7rxxw6jw"]
+
+[ext_resource type="Script" uid="uid://b115mb3ql80fd" path="res://microjogos/2026S1/projeto-yuji/cenas/scripts/trilha.gd" id="1_5402k"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cr45j"]
+load_path = "res://.godot/imported/New Piskel (1).png-48d9e7e57b9671d37399e09e22e34c42.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cr45j"]
+size = Vector2(5, 5)
+
+[node name="Area2D" type="StaticBody2D" unique_id=640367009]
+script = ExtResource("1_5402k")
+
+[node name="Trilha" type="Sprite2D" parent="." unique_id=757935497]
+self_modulate = Color(11.505208, 0.1942505, 12.15244, 1)
+texture_filter = 1
+position = Vector2(1.1920929e-07, 1.1920929e-07)
+scale = Vector2(2, 2)
+texture = SubResource("CompressedTexture2D_cr45j")
+region_enabled = true
+region_rect = Rect2(7, 12, 12, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1788498303]
+shape = SubResource("RectangleShape2D_cr45j")

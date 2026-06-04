@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://4hxh42t7fno5"]
+
+[ext_resource type="AudioStream" uid="uid://bkqain0lwgs0s" path="res://microjogos/2026S1/projeto-yuji/recursos/tron fake.wav" id="1_oo8ow"]
+
+[node name="Musica" type="AudioStreamPlayer" unique_id=849752496]
+stream = ExtResource("1_oo8ow")
+autoplay = true
