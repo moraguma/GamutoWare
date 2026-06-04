@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://cdhvl35umnn5n"]
+
+[ext_resource type="Texture2D" uid="uid://bmwtj361sglux" path="res://microjogos/2026S1/projeto_luis/capa.png" id="1_n22cp"]
+[ext_resource type="Texture2D" uid="uid://dx0kujyj1obyg" path="res://microjogos/2026S1/projeto_luis/recursos/imagens/5b07ea98-floresta-amazonica.jpg" id="2_ht0mv"]
+[ext_resource type="Script" uid="uid://q21jldxbtpyj" path="res://microjogos/2026S1/projeto_luis/cenas/scripts/camera.gd" id="3_n22cp"]
+[ext_resource type="Script" uid="uid://bfodjcrmdnwj0" path="res://microjogos/2026S1/projeto_luis/cenas/scripts/guia.gd" id="4_e7oaw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ht0mv"]
+radius = 106.036865
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e7oaw"]
+size = Vector2(126, 84)
+
+[node name="Main" type="Node2D" unique_id=1597121372]
+texture_filter = 1
+
+[node name="Cenário" type="Sprite2D" parent="." unique_id=1250824695]
+modulate = Color(0.6064002, 1.0039686, 1.0039686, 0.9647059)
+position = Vector2(962.00006, 543)
+scale = Vector2(1.5330677, 1.2990432)
+texture = ExtResource("2_ht0mv")
+
+[node name="Comandos" type="Sprite2D" parent="Cenário" unique_id=424030946]
+position = Vector2(-1.304616, 314.84717)
+scale = Vector2(1, 0.16019027)
+texture = ExtResource("1_n22cp")
+
+[node name="Guia" type="Sprite2D" parent="." unique_id=370122066]
+top_level = true
+position = Vector2(216.00003, 999.99994)
+rotation = -0.34692082
+scale = Vector2(1.1806701, 1.4280782)
+texture = ExtResource("1_n22cp")
+script = ExtResource("4_e7oaw")
+
+[node name="Sombra" type="Sprite2D" parent="Guia" unique_id=1841240774]
+modulate = Color(0.24313726, 0.93333334, 0.89411765, 1)
+position = Vector2(4.2095203, -59.054424)
+scale = Vector2(0.77268285, 0.54006904)
+texture = ExtResource("1_n22cp")
+
+[node name="Passaros" type="Area2D" parent="." unique_id=201661618]
+scale = Vector2(0.15089104, 0.20503844)
+
+[node name="Passaro1" type="CollisionShape2D" parent="Passaros" unique_id=1361217925]
+position = Vector2(2067.7173, 1131.4951)
+shape = SubResource("CircleShape2D_ht0mv")
+
+[node name="Passaro2" type="CollisionShape2D" parent="Passaros" unique_id=940138437]
+position = Vector2(10815.752, 4564.9976)
+shape = SubResource("CircleShape2D_ht0mv")
+
+[node name="Passaro3" type="CollisionShape2D" parent="Passaros" unique_id=1322485318]
+position = Vector2(11239.899, 1170.5122)
+shape = SubResource("CircleShape2D_ht0mv")
+
+[node name="Passaro4" type="CollisionShape2D" parent="Passaros" unique_id=1621614079]
+position = Vector2(4771.6553, 3550.5535)
+shape = SubResource("CircleShape2D_ht0mv")
+
+[node name="Passaro5" type="CollisionShape2D" parent="Passaros" unique_id=82202790]
+position = Vector2(6998.4277, 1560.6829)
+shape = SubResource("CircleShape2D_ht0mv")
+
+[node name="Câmera" type="Area2D" parent="." unique_id=1456411817]
+script = ExtResource("3_n22cp")
+
+[node name="Grid" type="Sprite2D" parent="Câmera" unique_id=500028777]
+modulate = Color(1, 1, 1, 0.58431375)
+scale = Vector2(0.8847223, 0.56666666)
+texture = ExtResource("1_n22cp")
+
+[node name="Hitbox" type="CollisionShape2D" parent="Câmera" unique_id=252082103]
+shape = SubResource("RectangleShape2D_e7oaw")
