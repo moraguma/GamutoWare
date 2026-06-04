@@ -1,10 +1,12 @@
 [gd_resource type="Resource" script_class="MicrogameAsset" format=3 uid="uid://b8juwph41hfwl"]
 
 [ext_resource type="PackedScene" uid="uid://c1opor2rcp2hs" path="res://microjogos/2026S1/projeto-eduardo/cenas/main.tscn" id="1_4hri7"]
+[ext_resource type="Texture2D" uid="uid://4h5upb7xo11k" path="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/New Piskel-1.png (1).png" id="1_jaj11"]
 [ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_o5rwf"]
 
 [resource]
 script = ExtResource("1_o5rwf")
+cover = ExtResource("1_jaj11")
 title_pt = &"ESCAPE DO IB"
 title_en = &"ESCAPE FROM IB"
 credits_pt = "sprite do player:
