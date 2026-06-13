@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddmfj5utogpt7"
-path="res://.godot/imported/Screenshot From 2026-04-19 17-07-37(3).png-8bd40aafd85d908b4f40a9363ba1a640.ctex"
+uid="uid://drhwaigdd4dlg"
+path="res://.godot/imported/jpg.jpg-8ba23d91918f49bf976dd1cf01cba6bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2026S1/ProjetoBebeTunado/recursos/Screenshot From 2026-04-19 17-07-37(3).png"
-dest_files=["res://.godot/imported/Screenshot From 2026-04-19 17-07-37(3).png-8bd40aafd85d908b4f40a9363ba1a640.ctex"]
+source_file="res://microjogos/2026S1/ProjetoBebeTunado/recursos/imagens/jpg.jpg"
+dest_files=["res://.godot/imported/jpg.jpg-8ba23d91918f49bf976dd1cf01cba6bf.ctex"]
 
 [params]
 

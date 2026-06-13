@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://xy1x1vjysn0t"
-path="res://.godot/imported/BeepBox-Song.wav-a1e923b5b2f3de85c93da9b671d142c2.sample"
+path="res://.godot/imported/BeepBox-Song.wav-32bab954a25b48793580a353728b502f.sample"
 
 [deps]
 
-source_file="res://microjogos/2026S1/ProjetoBebeTunado/recursos/BeepBox-Song.wav"
-dest_files=["res://.godot/imported/BeepBox-Song.wav-a1e923b5b2f3de85c93da9b671d142c2.sample"]
+source_file="res://microjogos/2026S1/ProjetoBebeTunado/recursos/sons/BeepBox-Song.wav"
+dest_files=["res://.godot/imported/BeepBox-Song.wav-32bab954a25b48793580a353728b502f.sample"]
 
 [params]
 

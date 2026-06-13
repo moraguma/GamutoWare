@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drhwaigdd4dlg"
-path="res://.godot/imported/jpg.jpg-461796b27183cbc7d9167c7e067d952d.ctex"
+uid="uid://b2ysumh83g4u7"
+path="res://.godot/imported/bixo baixo.png-7f734934ce9c7f2c91b1454b3c068256.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2026S1/ProjetoBebeTunado/recursos/jpg.jpg"
-dest_files=["res://.godot/imported/jpg.jpg-461796b27183cbc7d9167c7e067d952d.ctex"]
+source_file="res://microjogos/2026S1/ProjetoBebeTunado/recursos/imagens/bixo baixo.png"
+dest_files=["res://.godot/imported/bixo baixo.png-7f734934ce9c7f2c91b1454b3c068256.ctex"]
 
 [params]
 

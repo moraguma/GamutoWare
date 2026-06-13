@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n6ja63c03xv4"
-path="res://.godot/imported/bixo alto.png-549c5c0a0b8d1b4370302b4db62e8c74.ctex"
+uid="uid://pmoc2bbvmftw"
+path="res://.godot/imported/bixo direita.png-1749d53c5cd92c54be07d2b8b479c3f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2026S1/ProjetoBebeTunado/recursos/bixo alto.png"
-dest_files=["res://.godot/imported/bixo alto.png-549c5c0a0b8d1b4370302b4db62e8c74.ctex"]
+source_file="res://microjogos/2026S1/ProjetoBebeTunado/recursos/imagens/bixo direita.png"
+dest_files=["res://.godot/imported/bixo direita.png-1749d53c5cd92c54be07d2b8b479c3f9.ctex"]
 
 [params]
 

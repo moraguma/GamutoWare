@@ -6,7 +6,7 @@ const SPEED = 2000.0
 @onready var animacao = $"../AnimatedSprite2D"
 
 func _physics_process(_delta):
-	var direcao = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	var direcao = Input.get_vector("esquerda", "direita", "cima", "baixo")
 	
 	velocity = direcao * SPEED
 
@@ -17,7 +17,7 @@ func _physics_process(_delta):
 	elif direcao.y > 0:
 		animacao.play("baixo")
 	elif direcao.y < 0:
-		animacao.play("cima")			
+		animacao.play("cima")
 
 
 	move_and_slide()

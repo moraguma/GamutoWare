@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4ahc5jhp8mhm"
-path="res://.godot/imported/100Nossão.png-340110cac6f310b0829907fa57a9329a.ctex"
+uid="uid://4kjl6plrabap"
+path="res://.godot/imported/Caneco Comp.png-98e09f0d3ab8a3b652a2aba1c72b937f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2026S1/ProjetoBebeTunado/recursos/100Nossão.png"
-dest_files=["res://.godot/imported/100Nossão.png-340110cac6f310b0829907fa57a9329a.ctex"]
+source_file="res://microjogos/2026S1/ProjetoBebeTunado/recursos/imagens/Caneco Comp.png"
+dest_files=["res://.godot/imported/Caneco Comp.png-98e09f0d3ab8a3b652a2aba1c72b937f.ctex"]
 
 [params]
 
