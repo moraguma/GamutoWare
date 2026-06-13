@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://cg1x0slxhvmt4"]
+
+[ext_resource type="Script" uid="uid://penya35pt6c8" path="res://microjogos/2026S1/ProjetoBebeTunado/cenas/scripts/main.gd" id="1_0a6co"]
+[ext_resource type="Texture2D" uid="uid://b4ahc5jhp8mhm" path="res://microjogos/2026S1/ProjetoBebeTunado/recursos/100Nossão.png" id="1_811ur"]
+[ext_resource type="Texture2D" uid="uid://drhwaigdd4dlg" path="res://microjogos/2026S1/ProjetoBebeTunado/recursos/jpg.jpg" id="2_0aswd"]
+[ext_resource type="Texture2D" uid="uid://d31rduhoerk3j" path="res://microjogos/2026S1/ProjetoBebeTunado/recursos/plataforma.jpg" id="2_0005r"]
+[ext_resource type="Texture2D" uid="uid://n6ja63c03xv4" path="res://microjogos/2026S1/ProjetoBebeTunado/recursos/bixo alto.png" id="2_xqwtv"]
+[ext_resource type="Texture2D" uid="uid://b2ysumh83g4u7" path="res://microjogos/2026S1/ProjetoBebeTunado/recursos/bixo baixo.png" id="3_0a6co"]
+[ext_resource type="Texture2D" uid="uid://4kjl6plrabap" path="res://microjogos/2026S1/ProjetoBebeTunado/recursos/Caneco Comp.png" id="3_j6ni7"]
+[ext_resource type="Texture2D" uid="uid://pmoc2bbvmftw" path="res://microjogos/2026S1/ProjetoBebeTunado/recursos/bixo direita.png" id="4_0aswd"]
+[ext_resource type="Texture2D" uid="uid://b63n0xqbl4clu" path="res://microjogos/2026S1/ProjetoBebeTunado/recursos/bixo esquerda.png" id="5_0bmvt"]
+[ext_resource type="Script" uid="uid://dimnx0o8lia24" path="res://microjogos/2026S1/ProjetoBebeTunado/cenas/character_body_2d.gd" id="8_5ftd5"]
+[ext_resource type="Texture2D" uid="uid://dkwj25rnk7qd5" path="res://microjogos/2026S1/ProjetoBebeTunado/recursos/T1B logo.png" id="11_0bmvt"]
+[ext_resource type="AudioStream" uid="uid://xy1x1vjysn0t" path="res://microjogos/2026S1/ProjetoBebeTunado/recursos/BeepBox-Song.wav" id="12_5ftd5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ypfwo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_0a6co")
+}],
+"loop": true,
+"name": &"baixo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xqwtv")
+}],
+"loop": true,
+"name": &"cima",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_0aswd")
+}],
+"loop": true,
+"name": &"direita",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_0bmvt")
+}],
+"loop": true,
+"name": &"esquerda",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oabe2"]
+
+[node name="Main" type="Node2D" unique_id=1597121372]
+texture_filter = 1
+position = Vector2(868, 616)
+script = ExtResource("1_0a6co")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1807675400]
+offset_left = -982.0
+offset_top = -669.0
+offset_right = 1112.0
+offset_bottom = 770.0
+texture = ExtResource("2_0aswd")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D 100Nossão" type="Sprite2D" parent="." unique_id=1274542613]
+position = Vector2(782, -54)
+scale = Vector2(1.5990416, 1.3253164)
+texture = ExtResource("1_811ur")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1245349297]
+position = Vector2(226.99998, -56)
+scale = Vector2(0.9335443, 0.8343511)
+sprite_frames = SubResource("SpriteFrames_ypfwo")
+animation = &"baixo"
+
+[node name="Sprite2D Caixote" type="Sprite2D" parent="." unique_id=771949676]
+position = Vector2(-488.62503, -101.74997)
+scale = Vector2(0.8714549, 0.69389033)
+texture = ExtResource("2_0005r")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D Caixote" unique_id=1359235763]
+disable_mode = 1
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D Caixote/StaticBody2D" unique_id=1935284499]
+position = Vector2(8.032541, -11.529192)
+scale = Vector2(0.9961578, 1.022981)
+build_mode = 1
+polygon = PackedVector2Array(-130.64032, 78.67438, 67.76373, 85.33948, 63.288452, -76.28934, -182.85187, -71.29051, -183.41467, 185.38037, 167.71167, 190.3149, 170.69519, -166.26826, -270.86578, -171.2671, -272.87, 269.52463, 266.34717, 261.6361, 256.40765, -285.30164, -347.41614, -282.67212, -360.3714, 380.27042, 388.49213, 390.26807, 375.68152, -366.8164, -372.2649, -361.55737, -360.55478, -293.02515, -349.901, -285.30164, -369.78003, 351.03937, -372.2649, 398.37054, -360.3714, -292.90527, 331.80524, -282.9076, 334.78876, 318.61816, -308.15973, 306.95425, -308.15973, -204.59264, 214.16486, -222.19342, 184.12103, 216.97531, -214.1789, 223.64043, -209.70355, -114.61369, 96.10718, -107.94859, 91.6319, 121.99756, -138.09912, 118.66501)
+
+[node name="Sprite2D Caneco" type="Sprite2D" parent="Sprite2D Caixote" unique_id=1814063401]
+position = Vector2(-21.89795, -1.3147888)
+scale = Vector2(0.6546678, 0.60790884)
+texture = ExtResource("3_j6ni7")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D Caixote/Sprite2D Caneco" unique_id=838078447]
+position = Vector2(30.365093, 34.604004)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D Caixote/Sprite2D Caneco/Area2D" unique_id=1978774433]
+polygon = PackedVector2Array(-75.912476, 90.83545, -75.912476, -190.3219, 83.50366, -190.3219, 83.50366, 77.85895)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1837768174]
+position = Vector2(-775.625, -337.74997)
+script = ExtResource("8_5ftd5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1895859655]
+position = Vector2(4, 1)
+shape = SubResource("CircleShape2D_oabe2")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=233357057]
+position = Vector2(5.000183, -2)
+scale = Vector2(0.19089457, 0.13987342)
+texture = ExtResource("1_811ur")
+
+[node name="Timer" type="Timer" parent="." unique_id=357257554]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Timer" unique_id=1210232226]
+offset_left = 315.0
+offset_top = 43.0
+offset_right = 1805.0
+offset_bottom = 245.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 25
+bbcode_enabled = true
+text = "[font_size=70][wave amp=50.0 freq=5.0 connected][pulse freq=1.0 color=#fffff111]Leve o 100Nossão até a festa da AAACEC!!! "
+tab_size = 24
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=98312113]
+position = Vector2(-813.00006, -341)
+scale = Vector2(0.16606241, 0.14185393)
+texture = ExtResource("11_0bmvt")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2105427738]
+stream = ExtResource("12_5ftd5")
+
+[connection signal="body_entered" from="Sprite2D Caixote/Sprite2D Caneco/Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
