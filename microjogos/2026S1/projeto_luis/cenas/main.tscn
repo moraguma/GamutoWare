@@ -63,7 +63,7 @@ shader_parameter/fade_cutoff = 1.0
 shader_parameter/fade_intensity = 1.00000004424012
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e7oaw"]
-size = Vector2(106, 73)
+size = Vector2(150, 115)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e8ny7"]
 size = Vector2(80, 17)
@@ -203,7 +203,7 @@ offset_bottom = -47.31694
 scale = Vector2(3.66, 3.66)
 
 [node name="Hitbox" type="CollisionShape2D" parent="Camera" unique_id=252082103]
-position = Vector2(0, 14.5)
+position = Vector2(0, 15.5)
 shape = SubResource("RectangleShape2D_e7oaw")
 
 [node name="Hitarea" type="CollisionShape2D" parent="Camera" unique_id=1102457591]

@@ -7,8 +7,8 @@
 [resource]
 script = ExtResource("1_0j4ru")
 cover = ExtResource("1_iq8vk")
-title_pt = &"TÍTULO DO JOGO"
-title_en = &"GAME TITLE"
+title_pt = &"PASSARINHAR"
+title_en = &"BIRDWATCHING"
 credits_pt = "Luis Terasawa
 
 Som
