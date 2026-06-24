@@ -12,4 +12,4 @@ func _process(delta: float) -> void:
 		frame = 7
 		gamuto.hide()
 		gamuto.pode_mexer = false
-		get_parent().get_parent().register_lose()
+		Minigames.register_lose(self)

@@ -1,0 +1,229 @@
+[gd_scene load_steps=14 format=3 uid="uid://v8jttrvrrsx5"]
+
+[ext_resource type="Script" uid="uid://cl80xo4slqne2" path="res://microjogos/2025S1/projeto-plataformer/cenas/scripts/player.gd" id="1_e7yq2"]
+[ext_resource type="Texture2D" uid="uid://drf3l66xobgo8" path="res://microjogos/2025S1/projeto-plataformer/recursos/imagens/character.png" id="1_qwkws"]
+[ext_resource type="AudioStream" uid="uid://bnbn7bpq3cvjc" path="res://microjogos/2025S1/projeto-plataformer/recursos/sons/footstep00_YuwILDIo.wav" id="2_vs5jv"]
+[ext_resource type="AudioStream" uid="uid://c0ag7pvrktk5l" path="res://microjogos/2025S1/projeto-plataformer/recursos/sons/jump.wav" id="3_dd7ri"]
+[ext_resource type="AudioStream" uid="uid://bqrqxgxmfs7of" path="res://microjogos/2025S1/projeto-plataformer/recursos/sons/3yell1.wav" id="5_ikhs2"]
+[ext_resource type="AudioStream" uid="uid://dlcjnyivr0v1i" path="res://microjogos/2025S1/projeto-plataformer/recursos/sons/driken5482-retro-coin-4-236671.wav" id="7_puq8g"]
+
+[sub_resource type="Animation" id="Animation_vs5jv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -0.595)]
+}
+
+[sub_resource type="Animation" id="Animation_ikhs2"]
+resource_name = "fall"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.201327),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [18, 19]
+}
+
+[sub_resource type="Animation" id="Animation_e7yq2"]
+resource_name = "idle"
+length = 1.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -0.675)]
+}
+
+[sub_resource type="Animation" id="Animation_0bja4"]
+resource_name = "jump"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [16, 17]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Jump:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:offset")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.0666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(0, -0.675), Vector2(0, 7.11)]
+}
+
+[sub_resource type="Animation" id="Animation_qwkws"]
+resource_name = "run"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [8, 9, 10, 11, 12, 13, 14, 15]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Steps_sound:stream")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("2_vs5jv"), ExtResource("2_vs5jv")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/Steps_sound:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:offset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -0.595)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0bja4"]
+_data = {
+&"RESET": SubResource("Animation_vs5jv"),
+&"fall": SubResource("Animation_ikhs2"),
+&"idle": SubResource("Animation_e7yq2"),
+&"jump": SubResource("Animation_0bja4"),
+&"run": SubResource("Animation_qwkws")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ikhs2"]
+radius = 30.0
+height = 126.0
+
+[node name="Personagem" type="CharacterBody2D" node_paths=PackedStringArray("animation_player", "sprite", "landing_sound") groups=["player"]]
+z_index = 9
+script = ExtResource("1_e7yq2")
+animation_player = NodePath("AnimationPlayer")
+sprite = NodePath("Sprite2D")
+landing_sound = NodePath("")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_0bja4")
+}
+autoplay = "idle"
+speed_scale = 1.5
+
+[node name="Steps_sound" type="AudioStreamPlayer" parent="AnimationPlayer"]
+stream = ExtResource("2_vs5jv")
+volume_db = -6.592
+
+[node name="Jump" type="AudioStreamPlayer" parent="AnimationPlayer"]
+stream = ExtResource("3_dd7ri")
+volume_db = 7.648
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 3
+scale = Vector2(4, 4)
+texture = ExtResource("1_qwkws")
+offset = Vector2(0, -0.595)
+hframes = 8
+vframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 9
+texture_filter = 1
+position = Vector2(0, 12)
+shape = SubResource("CapsuleShape2D_ikhs2")
+
+[node name="Falling" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ikhs2")
+volume_db = -10.0
+
+[node name="CollectItem" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_puq8g")

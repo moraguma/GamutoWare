@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://bhyew2sgyr8cq" path="res://microjogos/2025S1/paillo_dice/cenas/scripts/entidades.gd" id="1_6mo7f"]
 [ext_resource type="Texture2D" uid="uid://cd8e16xpqbk3t" path="res://microjogos/2025S1/paillo_dice/recursos/imagens/tabuleiro2.png" id="1_ieclo"]
-[ext_resource type="Script" uid="uid://b4es8881cyhmm" path="res://microjogos/2025S1/paillo_dice/cenas/scripts/main.gd" id="1_mkbwt"]
 [ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="1_npcfk"]
 [ext_resource type="Texture2D" uid="uid://bglu5tqyqovn8" path="res://microjogos/2025S1/paillo_dice/recursos/imagens/tabuleiro1.png" id="2_33gw0"]
 [ext_resource type="Script" uid="uid://dkitpcp7xinue" path="res://microjogos/2025S1/paillo_dice/cenas/scripts/icon.gd" id="3_qa4ji"]
@@ -165,7 +164,6 @@ animations = [{
 
 [node name="Main" type="Node2D" unique_id=2041101235]
 texture_filter = 1
-script = ExtResource("1_mkbwt")
 
 [node name="Tabuleiro" type="AnimatedSprite2D" parent="." unique_id=1206027969]
 position = Vector2(960, 540)

@@ -4,15 +4,22 @@
 [ext_resource type="Script" uid="uid://cv53qaorwqxj0" path="res://principal/recursos/data/MicrogamePack.gd" id="1_vkav3"]
 [ext_resource type="Resource" uid="uid://cv2ggbltl0rvv" path="res://microjogos/2025S1/Cookies/microgame.tres" id="2_6j4tg"]
 [ext_resource type="Resource" uid="uid://dtasbdcsjjurw" path="res://microjogos/2025S1/Drikista_Gamelab/microgame.tres" id="3_0c0hk"]
-[ext_resource type="Resource" uid="uid://c5xnjw2bm6nyk" path="res://microjogos/2025S1/paillo_dice/microgame.tres" id="3_jq0e5"]
+[ext_resource type="Resource" uid="uid://3ydj7ylv57in" path="res://microjogos/2025S1/gamuto_snap/microgame.tres" id="3_ksjuv"]
 [ext_resource type="Resource" uid="uid://cu42mp8vwfc81" path="res://microjogos/2025S1/Eco_Rescue/microgame.tres" id="4_cfomu"]
+[ext_resource type="Resource" uid="uid://yfrxbxxvypy8" path="res://microjogos/2025S1/changefast/microgame.tres" id="4_exxtp"]
 [ext_resource type="Resource" uid="uid://dlpkjlx141r5w" path="res://microjogos/2025S1/fast_food_pocao/microgame.tres" id="5_5ybxb"]
+[ext_resource type="Resource" uid="uid://i758xdawps43" path="res://microjogos/2025S1/musicas_da_comp/microgame.tres" id="5_exxtp"]
 [ext_resource type="Resource" uid="uid://d4m72pf20pb5p" path="res://microjogos/2025S1/Gamuto_Maestro_Davi/microgame.tres" id="6_i8mff"]
 [ext_resource type="Resource" uid="uid://cxdumqr3o4e3m" path="res://microjogos/2025S1/project_so_ze/microgame.tres" id="8_knsxo"]
 [ext_resource type="Resource" uid="uid://dho7x5jlw0yng" path="res://microjogos/2025S1/projeto_milla/microgame.tres" id="9_vk6rl"]
 [ext_resource type="Resource" uid="uid://xb2s14l0sc2o" path="res://microjogos/2025S1/projeto_release_gamuto/microgame.tres" id="10_tp4tl"]
+[ext_resource type="Resource" uid="uid://bnq2mrjwe1iby" path="res://microjogos/2025S1/HImeCaking/microgame.tres" id="11_cfomu"]
+[ext_resource type="Resource" uid="uid://c5xnjw2bm6nyk" path="res://microjogos/2025S1/paillo_dice/microgame.tres" id="14_rqvvb"]
+[ext_resource type="Resource" uid="uid://dc60w8q85u5ju" path="res://microjogos/2025S1/gamuto_petpet/microgame.tres" id="15_bnaah"]
+[ext_resource type="Resource" uid="uid://bbcyaujubd754" path="res://microjogos/2025S1/Yhago_Gamelab/microgame.tres" id="16_5oplm"]
+[ext_resource type="Resource" uid="uid://ja0w4c01roxa" path="res://microjogos/2025S1/projeto-plataformer/microgame.tres" id="17_gplyr"]
 
 [resource]
 script = ExtResource("1_vkav3")
 pack_name = &"Class of 2025"
-microgames = Array[ExtResource("1_2q322")]([ExtResource("2_6j4tg"), ExtResource("3_0c0hk"), ExtResource("4_cfomu"), ExtResource("5_5ybxb"), ExtResource("6_i8mff"), ExtResource("3_jq0e5"), ExtResource("8_knsxo"), ExtResource("9_vk6rl"), ExtResource("10_tp4tl")])
+microgames = Array[ExtResource("1_2q322")]([ExtResource("2_6j4tg"), ExtResource("3_0c0hk"), ExtResource("4_cfomu"), ExtResource("5_5ybxb"), ExtResource("6_i8mff"), ExtResource("8_knsxo"), ExtResource("9_vk6rl"), ExtResource("10_tp4tl"), ExtResource("3_ksjuv"), ExtResource("4_exxtp"), ExtResource("5_exxtp"), ExtResource("11_cfomu"), ExtResource("14_rqvvb"), ExtResource("15_bnaah"), ExtResource("16_5oplm"), ExtResource("17_gplyr")])

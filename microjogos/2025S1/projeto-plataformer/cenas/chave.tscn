@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dmvafb620rp2r"]
+
+[ext_resource type="Script" uid="uid://bemyaemsc28bw" path="res://microjogos/2025S1/projeto-plataformer/cenas/scripts/estrela.gd" id="1_odtpv"]
+[ext_resource type="Texture2D" uid="uid://34j4m5mnjmc6" path="res://microjogos/2025S1/projeto-plataformer/recursos/imagens/Dungeon Tile Set.png" id="2_hh71w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_odtpv"]
+size = Vector2(19, 8)
+
+[node name="Chave" type="Area2D" unique_id=503146003]
+script = ExtResource("1_odtpv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=716639055]
+texture_filter = 1
+position = Vector2(1, -3)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_hh71w")
+hframes = 15
+vframes = 18
+frame = 146
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=100373189]
+z_index = 1
+shape = SubResource("RectangleShape2D_odtpv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
