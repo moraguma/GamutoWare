@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://dscq1spuoqur0"]
+
+[ext_resource type="Script" uid="uid://btadh6b4sdnc0" path="res://microjogos/2024S1/projeto-da-ana-luiza/cenas/scripts/estrela_amarela.gd" id="1_oxbpl"]
+[ext_resource type="Texture2D" uid="uid://befan316pn2nm" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/estrela_amarela.png" id="2_0lmnm"]
+[ext_resource type="Texture2D" uid="uid://by2ykc65w1cmp" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/estrela_particles.png" id="2_j7vbq"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3eqwi"]
+rough = true
+bounce = 5.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0lmnm"]
+size = Vector2(64, 64)
+
+[node name="EstrelaAmarela" type="RigidBody2D" groups=["star"]]
+collision_layer = 2
+collision_mask = 2
+physics_material_override = SubResource("PhysicsMaterial_3eqwi")
+script = ExtResource("1_oxbpl")
+
+[node name="Head" type="Sprite2D" parent="."]
+texture_filter = 3
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("2_0lmnm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0lmnm")
+
+[node name="Pivot" type="Node2D" parent="."]
+
+[node name="EstrelaParticles" type="Sprite2D" parent="Pivot"]
+texture_filter = 3
+position = Vector2(1, -61)
+scale = Vector2(4.375, 4.375)
+texture = ExtResource("2_j7vbq")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
