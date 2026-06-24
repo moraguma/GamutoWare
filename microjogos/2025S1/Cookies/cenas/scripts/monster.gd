@@ -5,9 +5,9 @@ var health = 500
 func _ready() -> void:
 	velocity.y = -300
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if health > 0 and velocity.y > -300:
-		velocity.y -= 20
+		velocity.y -= 1800 * delta
 		if velocity.y >= 300:
 			velocity.y = 300
 		
