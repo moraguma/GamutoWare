@@ -13,8 +13,11 @@
 [ext_resource type="Resource" uid="uid://xb2s14l0sc2o" path="res://microjogos/2025S1/projeto_release_gamuto/microgame.tres" id="10_tp4tl"]
 [ext_resource type="Resource" uid="uid://bnq2mrjwe1iby" path="res://microjogos/2025S1/HImeCaking/microgame.tres" id="11_cfomu"]
 [ext_resource type="Resource" uid="uid://ja0w4c01roxa" path="res://microjogos/2025S1/projeto-plataformer/microgame.tres" id="3_jq0e5"]
+[ext_resource type="Resource" uid="uid://3ydj7ylv57in" path="res://microjogos/2025S1/gamuto_snap/microgame.tres" id="3_ksjuv"]
+[ext_resource type="Resource" uid="uid://yfrxbxxvypy8" path="res://microjogos/2025S1/changefast/microgame.tres" id="4_exxtp"]
+[ext_resource type="Resource" uid="uid://i758xdawps43" path="res://microjogos/2025S1/musicas_da_comp/microgame.tres" id="5_exxtp"]
 
 [resource]
 script = ExtResource("1_vkav3")
 pack_name = &"Class of 2025"
-microgames = Array[ExtResource("1_2q322")]([ExtResource("2_6j4tg"), ExtResource("3_0c0hk"), ExtResource("4_cfomu"), ExtResource("5_5ybxb"), ExtResource("6_i8mff"), ExtResource("3_jq0e5"), ExtResource("8_knsxo"), ExtResource("9_vk6rl"), ExtResource("10_tp4tl"), ExtResource("11_cfomu"), ExtResource("3_jq0e5")])
+microgames = Array[ExtResource("1_2q322")]([ExtResource("2_6j4tg"), ExtResource("3_0c0hk"), ExtResource("4_cfomu"), ExtResource("5_5ybxb"), ExtResource("6_i8mff"), ExtResource("3_jq0e5"), ExtResource("8_knsxo"), ExtResource("9_vk6rl"), ExtResource("10_tp4tl"), ExtResource("3_jq0e5"), ExtResource("3_ksjuv"), ExtResource("4_exxtp"), ExtResource("5_exxtp"), ExtResource("11_cfomu"), ExtResource("3_jq0e5")])
