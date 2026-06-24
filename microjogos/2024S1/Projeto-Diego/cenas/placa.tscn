@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://cjfyn2wkfw6k"]
+
+[ext_resource type="Texture2D" uid="uid://88xg7vuuo6ox" path="res://microjogos/2024S1/projeto-diego/recursos/Race-Track-Tile-Set-PNG/stop.png" id="1_4l0v6"]
+[ext_resource type="Script" uid="uid://ufoh6xttq6v7" path="res://microjogos/2024S1/projeto-diego/cenas/scripts/placa.gd" id="1_6y2o3"]
+
+[sub_resource type="Gradient" id="Gradient_4l0v6"]
+offsets = PackedFloat32Array(0, 0.526749, 1)
+colors = PackedColorArray(0.485703, 0.485704, 0.485703, 1, 1, 1, 1, 1, 0.450648, 0.450648, 0.450648, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_6y2o3"]
+gradient = SubResource("Gradient_4l0v6")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6y2o3"]
+size = Vector2(122, 96)
+
+[node name="Placa" type="Area2D" groups=["placa"]]
+script = ExtResource("1_6y2o3")
+
+[node name="Stop" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.603922)
+position = Vector2(0, -3.8147e-06)
+scale = Vector2(0.0635417, 0.022)
+texture = ExtResource("1_4l0v6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stop"]
+position = Vector2(0, 2636.36)
+scale = Vector2(1.10656, 3363.64)
+texture = SubResource("GradientTexture1D_6y2o3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_6y2o3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MicrogamePack" load_steps=26 format=3 uid="uid://vmwc6qdl8m68"]
+[gd_resource type="Resource" script_class="MicrogamePack" load_steps=27 format=3 uid="uid://vmwc6qdl8m68"]
 
 [ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_2q322"]
 [ext_resource type="Resource" uid="uid://dvnwqsssiem4k" path="res://microjogos/2024S1/gamufit/microgame.tres" id="1_e6uyl"]
@@ -25,8 +25,9 @@
 [ext_resource type="Resource" path="res://microjogos/2024S1/Projeto-Yago/microgame.tres" id="21_coska"]
 [ext_resource type="Resource" path="res://microjogos/2024S1/projeto_felipe_onorio/microgame.tres" id="22_th4lo"]
 [ext_resource type="Resource" path="res://microjogos/2024S1/ShootGamuto/microgame.tres" id="23_i0spc"]
+[ext_resource type="Resource" uid="uid://cdiln5a3lfg1f" path="res://microjogos/2024S1/projeto-diego/microgame.tres" id="25_3xv73"]
 
 [resource]
 script = ExtResource("1_vkav3")
 pack_name = &"Class of 2024"
-microgames = Array[ExtResource("1_2q322")]([ExtResource("1_e6uyl"), ExtResource("2_3ia0r"), ExtResource("3_j1wcf"), ExtResource("4_4seuy"), ExtResource("6_7gh2d"), ExtResource("7_a18t2"), ExtResource("8_j6ccu"), ExtResource("9_qmm7k"), ExtResource("10_xujri"), ExtResource("11_bygbd"), ExtResource("12_hpcrb"), ExtResource("13_qebww"), ExtResource("14_plspg"), ExtResource("15_aaipd"), ExtResource("16_0u8tk"), ExtResource("17_uvyas"), ExtResource("18_uc1bj"), ExtResource("19_dfb3f"), ExtResource("20_lgru5"), ExtResource("21_coska"), ExtResource("22_th4lo"), ExtResource("23_i0spc"), ExtResource("5_ea52p")])
+microgames = Array[ExtResource("1_2q322")]([ExtResource("1_e6uyl"), ExtResource("2_3ia0r"), ExtResource("3_j1wcf"), ExtResource("4_4seuy"), ExtResource("6_7gh2d"), ExtResource("7_a18t2"), ExtResource("8_j6ccu"), ExtResource("9_qmm7k"), ExtResource("10_xujri"), ExtResource("11_bygbd"), ExtResource("12_hpcrb"), ExtResource("13_qebww"), ExtResource("14_plspg"), ExtResource("15_aaipd"), ExtResource("16_0u8tk"), ExtResource("17_uvyas"), ExtResource("18_uc1bj"), ExtResource("19_dfb3f"), ExtResource("20_lgru5"), ExtResource("21_coska"), ExtResource("22_th4lo"), ExtResource("23_i0spc"), ExtResource("5_ea52p"), ExtResource("25_3xv73")])

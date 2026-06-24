@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://cb437rf6exyb5"]
+
+[ext_resource type="Script" uid="uid://b2hn0naanwy0w" path="res://microjogos/2024S1/projeto-diego/cenas/scripts/Carro.gd" id="1_ww71i"]
+[ext_resource type="Texture2D" uid="uid://dgf8am6blglal" path="res://microjogos/2024S1/projeto-diego/recursos/Race-Track-Tile-Set-PNG/carro.svg" id="2_nki7e"]
+[ext_resource type="AudioStream" uid="uid://dg3mhdswb0kdi" path="res://microjogos/2024S1/projeto-diego/recursos/sounds/237375__squareal__car-crash.wav" id="3_5ounl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_esr1p"]
+size = Vector2(267, 126)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_87to2"]
+size = Vector2(20, 108)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fm2b8"]
+size = Vector2(104, 16)
+
+[node name="Carro" type="CharacterBody2D" groups=["carro"]]
+script = ExtResource("1_ww71i")
+
+[node name="carro_sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_nki7e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-11.5, 0)
+shape = SubResource("RectangleShape2D_esr1p")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-149, 0)
+scale = Vector2(0.399999, 1)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(135, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_87to2")
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(135, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(72, 0)
+shape = SubResource("RectangleShape2D_fm2b8")
+
+[node name="237375SquarealCar-crash" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_5ounl")
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
