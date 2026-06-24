@@ -26,6 +26,7 @@
 [ext_resource type="Resource" uid="uid://ffpy4gbqfpx8" path="res://microjogos/2023S1/projeto-repasch/microgame.tres" id="23_35dyv"]
 [ext_resource type="Resource" uid="uid://wr8bw6qev2l3" path="res://microjogos/2023S1/projeto-evandro-loyolla/microgame.tres" id="23_35dyv"]
 [ext_resource type="Resource" uid="uid://l1t8cmdsnjh7" path="res://microjogos/2023S1/projeto_luiscolosimo/microgame.tres" id="23_35dyv"]
+[ext_resource type="Resource" uid="uid://coy3wtdgjafg0" path="res://microjogos/2023S1/projeto-gabriel-thiago/microgame.tres" id="23_35dyv"]
 
 [resource]
 script = ExtResource("1_0pwo5")
