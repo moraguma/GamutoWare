@@ -1,20 +1,20 @@
-[gd_scene format=4 uid="uid://ccl1dwd8qstfd"]
+[gd_scene format=4 uid="uid://bmxhieubn35fu"]
 
-[ext_resource type="PackedScene" uid="uid://lks4d5w1sw20" path="res://microjogos/2024S1/quimica-quiz/cenas/coffee.tscn" id="1_7styq"]
-[ext_resource type="Texture2D" uid="uid://db8hkumlo2xpb" path="res://microjogos/2024S1/quimica-quiz/recursos/assets/Cave Tileset/Brown_Tile_Terrain (16 x 16).png" id="1_jw8ra"]
-[ext_resource type="Texture2D" uid="uid://ba5rov8xf0a40" path="res://microjogos/2024S1/quimica-quiz/recursos/assets/Cave Tileset/_Complete_static_BG_(288 x 208).png" id="3_38oc6"]
-[ext_resource type="Texture2D" uid="uid://dn8ilv77ju3nc" path="res://microjogos/2024S1/quimica-quiz/recursos/assets/Cave Tileset/Scaffolding_and_BG_Parts (16 x 16).png" id="4_5x1qx"]
-[ext_resource type="Texture2D" uid="uid://c0m8orcbqobhf" path="res://microjogos/2024S1/quimica-quiz/recursos/assets/2 - Autumn Forest/Autumn_entities (16 x 16).png" id="6_3xsa3"]
-[ext_resource type="Texture2D" uid="uid://c022mj6oy8mp5" path="res://microjogos/2024S1/quimica-quiz/recursos/assets/2 - Autumn Forest/Background parts/6 - Distant_trees.png" id="9_8yttp"]
-[ext_resource type="Texture2D" uid="uid://bikv45ojlxgvy" path="res://microjogos/2024S1/quimica-quiz/recursos/assets/2 - Autumn Forest/Background parts/4 - Tree_row_BG_1.png" id="11_h2g0h"]
-[ext_resource type="FontFile" uid="uid://dulih7ioh6u7q" path="res://microjogos/2024S1/quimica-quiz/recursos/fonts/at01.ttf" id="12_4msae"]
-[ext_resource type="Texture2D" uid="uid://8bnns342qywb" path="res://microjogos/2024S1/quimica-quiz/recursos/assets/2 - Autumn Forest/Background parts/3 - Bottom_leaf_piles.png" id="12_ihidi"]
-[ext_resource type="Texture2D" uid="uid://7d37xys4782n" path="res://microjogos/2024S1/quimica-quiz/recursos/assets/2 - Autumn Forest/Background parts/2 - Trees.png" id="13_425nd"]
-[ext_resource type="PackedScene" uid="uid://cxgkm31jwmyw3" path="res://microjogos/2024S1/quimica-quiz/cenas/player.tscn" id="13_j7cmr"]
-[ext_resource type="Script" uid="uid://c13f3h2jks12v" path="res://microjogos/2024S1/quimica-quiz/cenas/scripts/label.gd" id="13_p746h"]
-[ext_resource type="Texture2D" uid="uid://cqtoh0beloey7" path="res://microjogos/2024S1/quimica-quiz/recursos/assets/2 - Autumn Forest/Background parts/1 - Leaf_top.png" id="14_iyjdg"]
-[ext_resource type="AudioStream" uid="uid://cpujvvbgieaah" path="res://microjogos/2024S1/quimica-quiz/recursos/sounds/audiopapkin-forest-ambience-morningspring-localization-poland-4-296923.wav" id="15_1ljhs"]
-[ext_resource type="AudioStream" uid="uid://c4hstxtsp3qmb" path="res://microjogos/2024S1/quimica-quiz/recursos/sounds/lucadialessandro-chill-chords-143504.wav" id="16_f7dxa"]
+[ext_resource type="Texture2D" uid="uid://c022mj6oy8mp5" path="res://microjogos/2024S1/quimica-quiz/recursos/assets/2 - Autumn Forest/Background parts/6 - Distant_trees.png" id="1_ujuev"]
+[ext_resource type="Texture2D" uid="uid://bikv45ojlxgvy" path="res://microjogos/2024S1/quimica-quiz/recursos/assets/2 - Autumn Forest/Background parts/4 - Tree_row_BG_1.png" id="2_a1ob3"]
+[ext_resource type="Texture2D" uid="uid://8bnns342qywb" path="res://microjogos/2024S1/quimica-quiz/recursos/assets/2 - Autumn Forest/Background parts/3 - Bottom_leaf_piles.png" id="3_fqni3"]
+[ext_resource type="Texture2D" uid="uid://cqtoh0beloey7" path="res://microjogos/2024S1/quimica-quiz/recursos/assets/2 - Autumn Forest/Background parts/1 - Leaf_top.png" id="4_0av0p"]
+[ext_resource type="Texture2D" uid="uid://db8hkumlo2xpb" path="res://microjogos/2024S1/quimica-quiz/recursos/assets/Cave Tileset/Brown_Tile_Terrain (16 x 16).png" id="5_foc83"]
+[ext_resource type="Texture2D" uid="uid://ba5rov8xf0a40" path="res://microjogos/2024S1/quimica-quiz/recursos/assets/Cave Tileset/_Complete_static_BG_(288 x 208).png" id="6_au352"]
+[ext_resource type="Texture2D" uid="uid://dn8ilv77ju3nc" path="res://microjogos/2024S1/quimica-quiz/recursos/assets/Cave Tileset/Scaffolding_and_BG_Parts (16 x 16).png" id="7_3xhg4"]
+[ext_resource type="Texture2D" uid="uid://7d37xys4782n" path="res://microjogos/2024S1/quimica-quiz/recursos/assets/2 - Autumn Forest/Background parts/2 - Trees.png" id="8_4qf67"]
+[ext_resource type="Texture2D" uid="uid://c0m8orcbqobhf" path="res://microjogos/2024S1/quimica-quiz/recursos/assets/2 - Autumn Forest/Autumn_entities (16 x 16).png" id="9_bdldw"]
+[ext_resource type="PackedScene" uid="uid://cxgkm31jwmyw3" path="res://microjogos/2024S1/quimica-quiz/cenas/player.tscn" id="10_lmc85"]
+[ext_resource type="FontFile" uid="uid://dulih7ioh6u7q" path="res://microjogos/2024S1/quimica-quiz/recursos/fonts/at01.ttf" id="11_3j2gi"]
+[ext_resource type="Script" uid="uid://c13f3h2jks12v" path="res://microjogos/2024S1/quimica-quiz/cenas/scripts/label.gd" id="12_tytmq"]
+[ext_resource type="PackedScene" uid="uid://lks4d5w1sw20" path="res://microjogos/2024S1/quimica-quiz/cenas/coffee.tscn" id="13_g875o"]
+[ext_resource type="AudioStream" uid="uid://cpujvvbgieaah" path="res://microjogos/2024S1/quimica-quiz/recursos/sounds/audiopapkin-forest-ambience-morningspring-localization-poland-4-296923.wav" id="14_6606n"]
+[ext_resource type="AudioStream" uid="uid://c4hstxtsp3qmb" path="res://microjogos/2024S1/quimica-quiz/recursos/sounds/lucadialessandro-chill-chords-143504.wav" id="15_mxe1a"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_exunn"]
 tile_data = PackedInt32Array(0, 65539, 4)
@@ -26,7 +26,7 @@ tile_data = PackedInt32Array(0, 262147, 4)
 tile_data = PackedInt32Array(0, 786435, 7)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c0epd"]
-texture = ExtResource("1_jw8ra")
+texture = ExtResource("5_foc83")
 1:1/0 = 0
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:1/0 = 0
@@ -247,7 +247,7 @@ texture = ExtResource("1_jw8ra")
 31:20/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8h4id"]
-texture = ExtResource("3_38oc6")
+texture = ExtResource("6_au352")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -472,7 +472,7 @@ texture = ExtResource("3_38oc6")
 17:12/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vm0vg"]
-texture = ExtResource("4_5x1qx")
+texture = ExtResource("7_3xhg4")
 9:1/0 = 0
 11:1/0 = 0
 13:1/0 = 0
@@ -518,7 +518,7 @@ texture = ExtResource("4_5x1qx")
 4:10/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_07v6g"]
-texture = ExtResource("13_425nd")
+texture = ExtResource("8_4qf67")
 14:3/0 = 0
 4:3/size_in_atlas = Vector2i(3, 10)
 4:3/next_alternative_id = 2
@@ -536,7 +536,7 @@ texture = ExtResource("13_425nd")
 2:3/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_exe4w"]
-texture = ExtResource("6_3xsa3")
+texture = ExtResource("9_bdldw")
 5:1/0 = 0
 6:1/0 = 0
 7:1/0 = 0
@@ -581,7 +581,7 @@ pattern_1 = SubResource("TileMapPattern_3ie43")
 pattern_2 = SubResource("TileMapPattern_xh42i")
 
 [sub_resource type="LabelSettings" id="LabelSettings_2hkmi"]
-font = ExtResource("12_4msae")
+font = ExtResource("11_3j2gi")
 font_size = 358
 font_color = Color(0.588235, 0.239216, 0.12549, 1)
 
@@ -596,7 +596,7 @@ motion_mirroring = Vector2(432, 0)
 [node name="fundo" type="Sprite2D" parent="BG/06" unique_id=46520630]
 texture_filter = 3
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("9_8yttp")
+texture = ExtResource("1_ujuev")
 centered = false
 
 [node name="04" type="ParallaxLayer" parent="BG" unique_id=523074694]
@@ -606,7 +606,7 @@ motion_mirroring = Vector2(345.6, 0)
 texture_filter = 3
 position = Vector2(0, 108.145)
 scale = Vector2(1.2, 1.2)
-texture = ExtResource("11_h2g0h")
+texture = ExtResource("2_a1ob3")
 centered = false
 
 [node name="03" type="ParallaxLayer" parent="BG" unique_id=2046976584]
@@ -616,7 +616,7 @@ motion_mirroring = Vector2(288, 0)
 [node name="baixoteto" type="Sprite2D" parent="BG/03" unique_id=1408020399]
 texture_filter = 3
 position = Vector2(0, 157)
-texture = ExtResource("12_ihidi")
+texture = ExtResource("3_fqni3")
 centered = false
 
 [node name="01" type="ParallaxLayer" parent="BG" unique_id=1467228434]
@@ -625,7 +625,7 @@ scale = Vector2(1.125, 0.875)
 motion_mirroring = Vector2(256, 0)
 
 [node name="cimateto" type="Sprite2D" parent="BG/01" unique_id=629411754]
-texture = ExtResource("14_iyjdg")
+texture = ExtResource("4_0av0p")
 centered = false
 
 [node name="level" type="Node2D" parent="." unique_id=785028802]
@@ -646,7 +646,7 @@ use_parent_material = true
 tile_map_data = PackedByteArray("AAD//wIAAgAKAAgAAAD//wYAAgAKAAgAAAD//wcAAgAKAAgAAAD//woAAgAHAAkAAAD//w0AAwANAAMAAAD//xAAAgAHAAkAAAD//xYAAgARAAcAAAD//xoAAgAKAAgAAAAAAAkAAgAKAAgAAAAAABMAAwABAAQAAAABABMABgABAAUAAAABABQAAwAGAAMAAAABABUAAwAGAAMAAAABABgAAwAVAAMAAAACABEABgAKAAMAAAACABQAAwAGAAMAAAACABUAAwAGAAMAAAACABoAAgAHAAkAAAADABAABgABAAEAAAADABEABgALAAMAAAADABUAAwAGAAMAAAAEABEABgALAAMAAAAEABgAAgAKAAgAAAAEABoAAgAHAAkAAAAFABUABgADAAUAAAAFABkAAgAHAAkAAAAGABUABgADAAUAAAAGABcAAgAKAAgAAAAGABoAAgARAAcAAAAHAAcAAwAHAAoAAAAHABUAAwAGAAMAAAAHABgAAgARAAcAAAAIABQABgABAAUAAAAIABUAAwAGAAMAAAAIABsAAgAHAAkAAAAJAAYABgABAAEAAAAJABMABgABAAEAAAAJABQABgAKAAMAAAAJABYAAgAHAAkAAAAJABkAAwARAAMAAAAKAAcAAwAGAAMAAAAKAA4ABgAJAAMAAAAKABMABgABAAEAAAAKABQABgAKAAMAAAALAA4ABgAKAAMAAAALABMABgABAAEAAAALABQABgALAAMAAAAMAA4ABgALAAMAAAAMABQABgABAAUAAAAMABgAAgAKAAgAAAAMABoAAgACAAoAAAANAA4ABgALAAMAAAANABQABgADAAUAAAANABcAAgAKAAgAAAANABkAAgACAAoAAAAOAA4ABgAMAAMAAAAOABQABgADAAUAAAAOABsAAgAHAAkAAAAPABcAAgACAAoAAAAPABoAAgACAAoAAAAQAA4AAwAHAAoAAAAQABYAAgARAAcAAAAQABcAAgAKAAgAAAARAAMAAwAHAAoAAAASABUABgABAAUAAAATAAMAAwAGAAMAAAATABUABgADAAUAAAATABkAAwAVAAMAAAAUAAMAAwAGAAMAAAAUABUABgADAAUAAAAVABkAAgAHAAkAAAAWAAMABgADAAUAAAAWABUABgADAAUAAAAWABsAAgAHAAkAAAAXAAMABgABAAUAAAAXABcAAgACAAoAAAAYAAIABgABAAEAAAAYABgAAgARAAcAAAAYABoAAgACAAoAAAAaABMAAwABAAQAAAAaABcAAgARAAcAAAAbAA4ABgADAAUAAAAbABcAAgAHAAkAAAAbABoAAwARAAMAAAAcAA0ABgABAAEAAAAdAAcAAwAEAAoAAAAdAA0ABgABAAEAAAAdABMABgABAAEAAAAdABgAAgACAAoAAAAeABMABgABAAEAAAAeABsAAgAHAAkAAAAfAAYABgABAAEAAAAfABQABgABAAUAAAAfABsAAgAHAAkAAAAgAAcAAwAHAAoAAAAgABgAAgACAAoAAAAhABoAAgACAAoAAAAiABEAAwAKAAoAAAAjABEABgABAAUAAAAjABgAAwAVAAMAAAAkABEAAwAGAAMAAAAkABQABgABAAUAAAAkABUABgAKAAMAAAAlABEABgADAAUAAAAlABQAAwAGAAMAAAAlABUABgALAAMAAAAlABoAAgACAAoAAAAlABsAAgAHAAkAAAAmABQAAwAGAAMAAAAmABUABgAKAAMAAAAnABMABgABAAUAAAAnABQAAwAGAAMAAAAnABUABgALAAMAAAAnABsAAgARAAcAAAAoAAcAAgAHAAkAAAAoABMAAgAHAAkAAAAoABgAAgAHAAkAAAAoABoAAgARAAcAAAApAAQAAgAKAAgAAAApAAgAAgAHAAkAAAApAA0AAgAHAAkAAAApAA4AAgAHAAkAAAApABEAAgARAAcAAAApABUAAgAHAAkAAAApABcAAgAHAAkAAAA=")
 tile_set = SubResource("TileSet_8pbo7")
 
-[node name="player" parent="." unique_id=251874063 instance=ExtResource("13_j7cmr")]
+[node name="player" parent="." unique_id=251874063 instance=ExtResource("10_lmc85")]
 position = Vector2(323, 341)
 
 [node name="Label" type="Label" parent="." unique_id=356875522]
@@ -660,15 +660,15 @@ size_flags_horizontal = 4
 text = "PEGUE O CAFE"
 label_settings = SubResource("LabelSettings_2hkmi")
 horizontal_alignment = 1
-script = ExtResource("13_p746h")
+script = ExtResource("12_tytmq")
 
-[node name="coffee" parent="." unique_id=1868308734 instance=ExtResource("1_7styq")]
+[node name="coffee" parent="." unique_id=1868308734 instance=ExtResource("13_g875o")]
 position = Vector2(327, 142)
 
 [node name="Ambience" type="AudioStreamPlayer" parent="." unique_id=1477630744]
-stream = ExtResource("15_1ljhs")
+stream = ExtResource("14_6606n")
 autoplay = true
 
 [node name="BGM" type="AudioStreamPlayer" parent="." unique_id=1733188359]
-stream = ExtResource("16_f7dxa")
+stream = ExtResource("15_mxe1a")
 autoplay = true

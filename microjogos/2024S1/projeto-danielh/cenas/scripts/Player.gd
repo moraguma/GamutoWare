@@ -36,7 +36,7 @@ func _physics_process(_delta):
 		
 	move_and_slide()
 
-func _on_area_2d_body_entered(body):
+func _on_area_2d_body_entered(_body):
 	Minigames.register_win(self)
 	
 
