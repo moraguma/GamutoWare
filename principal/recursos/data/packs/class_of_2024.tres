@@ -25,6 +25,7 @@
 [ext_resource type="Resource" path="res://microjogos/2024S1/Projeto-Yago/microgame.tres" id="21_coska"]
 [ext_resource type="Resource" path="res://microjogos/2024S1/projeto_felipe_onorio/microgame.tres" id="22_th4lo"]
 [ext_resource type="Resource" path="res://microjogos/2024S1/ShootGamuto/microgame.tres" id="23_i0spc"]
+[ext_resource type="Resource" uid="uid://ke0fsgamiisy" path="res://microjogos/2024S1/projeto-da-ana-luiza/microgame.tres" id="25_3xv73"]
 [ext_resource type="Resource" uid="uid://u02jnqnw7kw3" path="res://microjogos/2024S1/quimica-quiz/microgame.tres" id="25_3xv73"]
 [ext_resource type="Resource" uid="uid://dyl645rldetcf" path="res://microjogos/2024S1/projeto-do-Glaymar_A/microgame.tres" id="25_3xv73"]
 [ext_resource type="Resource" uid="uid://bxkinolqejvnj" path="res://microjogos/2024S1/projeto-de-gsscala/microgame.tres" id="25_3xv73"]
