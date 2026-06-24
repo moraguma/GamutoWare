@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://deg0v3upu07xf"]
+
+[ext_resource type="Script" uid="uid://b0jgldkcj5sgj" path="res://microjogos/2024S1/projeto-do-Glaymar_A/cenas/scripts/inimigo.gd" id="1_ratjc"]
+[ext_resource type="Texture2D" uid="uid://b24foufi834mf" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/sprites/slime.png" id="2_cd747"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cdqa1"]
+radius = 17.0
+height = 48.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cdqa1"]
+radius = 31.0161
+
+[node name="Inimigo" type="CharacterBody2D" groups=["inimigo"]]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_ratjc")
+
+[node name="Slime" type="Sprite2D" parent="."]
+z_index = -1
+texture_filter = 3
+scale = Vector2(3.84615, 3.84615)
+texture = ExtResource("2_cd747")
+
+[node name="Hurtbox" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_cdqa1")
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CircleShape2D_cdqa1")
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
