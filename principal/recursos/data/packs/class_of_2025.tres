@@ -17,6 +17,7 @@
 [ext_resource type="Resource" uid="uid://yfrxbxxvypy8" path="res://microjogos/2025S1/changefast/microgame.tres" id="4_exxtp"]
 [ext_resource type="Resource" uid="uid://i758xdawps43" path="res://microjogos/2025S1/musicas_da_comp/microgame.tres" id="5_exxtp"]
 [ext_resource type="Resource" uid="uid://dc60w8q85u5ju" path="res://microjogos/2025S1/gamuto_petpet/microgame.tres" id="3_jq0e5"]
+[ext_resource type="Resource" uid="uid://bbcyaujubd754" path="res://microjogos/2025S1/Yhago_Gamelab/microgame.tres" id="3_jq0e5"]
 
 [resource]
 script = ExtResource("1_vkav3")
