@@ -1,0 +1,54 @@
+[gd_scene load_steps=13 format=3 uid="uid://d1gunhxurm3j6"]
+
+[ext_resource type="Script" uid="uid://dxqkwdhb3tb66" path="res://microjogos/2024S1/projeto-do-Glaymar_A/cenas/scripts/arma.gd" id="1_f4wxo"]
+[ext_resource type="Texture2D" uid="uid://02uvoafk3bjy" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/sprites/Gun.png" id="2_lgl81"]
+[ext_resource type="AudioStream" uid="uid://dkpkyoc4n4lm6" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/sounds/u_f09vejvoga-gun-shot-0.wav" id="3_jlu6i"]
+[ext_resource type="AudioStream" uid="uid://c6ifnn8gxflqu" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/sounds/u_f09vejvoga-gun-shot-1.wav" id="4_te5n0"]
+[ext_resource type="AudioStream" uid="uid://c2m8uetds4bgq" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/sounds/u_f09vejvoga-gun-shot-2.wav" id="5_bv5fa"]
+[ext_resource type="AudioStream" uid="uid://dwsax1utwdino" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/sounds/u_f09vejvoga-gun-shot-3.wav" id="6_h8vo0"]
+[ext_resource type="AudioStream" uid="uid://qxrslcxq5ys1" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/sounds/u_f09vejvoga-gun-shot-4.wav" id="7_vhgqq"]
+[ext_resource type="AudioStream" uid="uid://c4cjdb52o3nwd" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/sounds/u_f09vejvoga-gun-shot-5.wav" id="8_ax7xj"]
+[ext_resource type="AudioStream" uid="uid://dy1scdckpi8vn" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/sounds/u_f09vejvoga-gun-shot-6.wav" id="9_gainj"]
+[ext_resource type="AudioStream" uid="uid://bprqdskbqbtjt" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/sounds/u_f09vejvoga-gun-shot-7.wav" id="10_05xht"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6cuxg"]
+radius = 445.702
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_otmsb"]
+streams_count = 8
+stream_0/stream = ExtResource("3_jlu6i")
+stream_1/stream = ExtResource("4_te5n0")
+stream_2/stream = ExtResource("5_bv5fa")
+stream_3/stream = ExtResource("6_h8vo0")
+stream_4/stream = ExtResource("7_vhgqq")
+stream_5/stream = ExtResource("8_ax7xj")
+stream_6/stream = ExtResource("9_gainj")
+stream_7/stream = ExtResource("10_05xht")
+
+[node name="Arma" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_f4wxo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6cuxg")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="Gun" type="Sprite2D" parent="Marker2D"]
+texture_filter = 3
+position = Vector2(20, -3)
+texture = ExtResource("2_lgl81")
+
+[node name="mira" type="Marker2D" parent="Marker2D/Gun"]
+unique_name_in_owner = true
+position = Vector2(19.904, -1.57742)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.32
+autostart = true
+
+[node name="Shot" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_otmsb")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
