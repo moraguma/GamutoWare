@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqirf5cg3y2i6"]
+
+[ext_resource type="Script" uid="uid://coytbgm4l88em" path="res://microjogos/2023S1/projeto-evandro-loyolla/cenas/scripts/player.gd" id="1_hubgn"]
+[ext_resource type="Texture2D" uid="uid://fway453iu7l2" path="res://microjogos/2023S1/projeto-evandro-loyolla/recursos/icon.png" id="2_43wml"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hubgn"]
+size = Vector2(96, 90)
+
+[node name="Player" type="CharacterBody2D"]
+z_index = 1
+motion_mode = 1
+script = ExtResource("1_hubgn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 3
+scale = Vector2(2, 2)
+texture = ExtResource("2_43wml")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_hubgn")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="Camera2D" type="Camera2D" parent="."]
