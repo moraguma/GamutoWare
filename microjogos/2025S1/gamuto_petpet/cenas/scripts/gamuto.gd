@@ -20,6 +20,3 @@ func randomize_position():
 	var random_y = randf_range(min_y, max_y)
 	
 	position = Vector2(random_x, random_y)
-
-func _process(delta: float) -> void:
-	pass

@@ -18,6 +18,3 @@ func _process(delta: float) -> void:
 				frame = dado.frame
 		else:
 			play("not_here")
-#	for dado in dados:
-#		if icon == dado:
-			

@@ -115,8 +115,8 @@ func pergunta_pressed(pergunta) -> void:
 	$PanelContainer.queue_free()
 	if(musica_Escolhida.get(pergunta_escolhida)[0] == pergunta.text) || pergunta.text == "O Saia" || pergunta.text == "*respira*":
 		$VDC_Feliz.visible = true
-		emit_signal("win")
+		Minigames.register_win(self)
 	else:
 		$VDC_Triste.visible = true
-		emit_signal("lose")
+		Minigames.register_lose(self)
 		

@@ -1,15 +1,5 @@
 extends Node2D
 
-
-signal win
-signal lose
-
-const WIDTH = 1920
-const HEIGHT = 1080
-
-var winnable = true
-var losable = true
-
 @onready var anim_balde: AnimatedSprite2D = $AnimBalde
 @onready var anim_vara: AnimatedSprite2D = $AnimVara
 
@@ -61,12 +51,12 @@ func _on_peixe_timer_timeout() -> void:
 	p_posi_now.y = randf_range(p_posi_inic.y, p_posi_max.y)
 
 
-func _on_peixe_area_entered(area: Area2D) -> void:
-	emit_signal("win")
+func _on_peixe_area_entered(_area: Area2D) -> void:
+	Minigames.register_win(self)
 	anim_vara.play("puxando")
 	anim_vara.position.y -= 180
 
-func _on_peixe_area_exited(area: Area2D) -> void:
-	emit_signal("lose")
+func _on_peixe_area_exited(_area: Area2D) -> void:
+	Minigames.register_lose(self)
 	anim_vara.play("default")
 	anim_vara.position = v_posi_inic

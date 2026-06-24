@@ -3,11 +3,8 @@ extends CharacterBody2D
 @export var speed : float
 #var velocity = Vector2()  # Vetor de velocidade
 var poder_petar : bool = false
-# Função _ready, que é chamada quando o node é inicializado
-func _ready():
-	pass
 
-func _process(delta):
+func _process(_delta):
 	velocity = Vector2.ZERO  # Inicializa a velocidade
 	if Input.get_axis("esquerda", "direita") < 0:  # Movimento para a esquerda
 		velocity.x = -speed
@@ -17,29 +14,19 @@ func _process(delta):
 		velocity.y = -speed
 	elif Input.get_axis("cima", "baixo") > 0:  # Movimento para baixo
 		velocity.y = speed
-		
-	
 
-		
 	if Input.is_action_just_pressed("acao"):
 		$maoA.visible = false
 		$maoF.visible = true
 		if poder_petar:
-			print("foi uma metida satisfatória")
-			emit_signal("win")
-			get_parent().register_win()
-	move_and_slide()
+			Minigames.register_win(self)
 	if Input.is_action_just_released("acao"):
 		$maoF.visible = false
 		$maoA.visible = true
-		
+	move_and_slide()
 	
-	
-	
-func _on_gamuto_body_entered(body: Node2D) -> void:
+func _on_gamuto_body_entered(_body: Node2D) -> void:
 		poder_petar = true
-		print("meteu dentro")
 
-func _on_gamuto_body_exited(body: Node2D) -> void:
+func _on_gamuto_body_exited(_body: Node2D) -> void:
 	poder_petar = false
-	print("desmeteu")

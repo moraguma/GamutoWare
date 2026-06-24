@@ -16,7 +16,7 @@ var pode_mexer = true
 func _ready():
 	dadometro = get_node("../../dadometro")
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if not pode_mexer: return
 	posx()
 	posy()
@@ -41,7 +41,7 @@ func _process(delta: float) -> void:
 		dadometro.hide()
 	if len(dados) == 0:
 		dadometro.hide()
-		get_parent().get_parent().register_win()
+		Minigames.register_win(self)
 		pode_mexer = false
 
 
