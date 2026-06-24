@@ -1,0 +1,230 @@
+[gd_scene format=3 uid="uid://d4lxsuq673buh"]
+
+[ext_resource type="Script" uid="uid://d2yx11vmrf8pm" path="res://microjogos/2025S1/HImeCaking/cenas/scripts/main.gd" id="1_bxhja"]
+[ext_resource type="Texture2D" uid="uid://cjkgsbcoj7pl0" path="res://microjogos/2025S1/HImeCaking/recursos/imagens/backgnd.png" id="2_y2xn1"]
+[ext_resource type="Texture2D" uid="uid://6o81rf7iimdw" path="res://microjogos/2025S1/HImeCaking/recursos/imagens/PLATE.png" id="3_2lbov"]
+[ext_resource type="Texture2D" uid="uid://deomoqmhowetx" path="res://microjogos/2025S1/HImeCaking/recursos/imagens/hime.png" id="4_ynlla"]
+[ext_resource type="Texture2D" uid="uid://pdcjax42ga8" path="res://microjogos/2025S1/HImeCaking/recursos/imagens/cake.png" id="5_vecsg"]
+[ext_resource type="Texture2D" uid="uid://dbqpqeoxc0n3x" path="res://microjogos/2025S1/HImeCaking/recursos/imagens/arrows.png" id="6_hqb4f"]
+[ext_resource type="Texture2D" uid="uid://tbh28osop6rw" path="res://microjogos/2025S1/HImeCaking/recursos/imagens/downspoon.png" id="7_c4tn1"]
+[ext_resource type="AudioStream" uid="uid://c5dnr3lv76hfv" path="res://microjogos/2025S1/HImeCaking/recursos/sons/bgm.wav" id="8_brkcf"]
+[ext_resource type="AudioStream" uid="uid://dvr5xthmtwpve" path="res://microjogos/2025S1/HImeCaking/recursos/sons/cute.mp3" id="9_ukf6o"]
+[ext_resource type="AudioStream" uid="uid://i0xtc600d53l" path="res://microjogos/2025S1/HImeCaking/recursos/sons/no.mp3" id="10_38b7s"]
+[ext_resource type="AudioStream" uid="uid://copdvb3s2abtq" path="res://microjogos/2025S1/HImeCaking/recursos/sons/win.wav" id="11_21xpp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wll86"]
+atlas = ExtResource("4_ynlla")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjliw"]
+atlas = ExtResource("4_ynlla")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_76s0e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wll86")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yjliw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wll86")
+}],
+"loop": false,
+"name": &"open_mouth",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtti3"]
+atlas = ExtResource("5_vecsg")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nbl63"]
+atlas = ExtResource("5_vecsg")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wuq6"]
+atlas = ExtResource("5_vecsg")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_emgw2"]
+atlas = ExtResource("5_vecsg")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_je0mm"]
+atlas = ExtResource("5_vecsg")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8wuq6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtti3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nbl63")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8wuq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_emgw2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_je0mm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_oqbrg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteSpoon:rotation")
+tracks/0/interp = 4
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.35619]
+}
+
+[sub_resource type="Animation" id="Animation_wll86"]
+resource_name = "eat"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteSpoon:rotation")
+tracks/0/interp = 4
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [2.35619, 3.92699, 2.35619]
+}
+
+[sub_resource type="Animation" id="Animation_dfnaw"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteSpoon:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.35619]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yjliw"]
+_data = {
+&"RESET": SubResource("Animation_oqbrg"),
+&"eat": SubResource("Animation_wll86"),
+&"idle": SubResource("Animation_dfnaw")
+}
+
+[node name="Main" type="Node2D" unique_id=1260878038 node_paths=PackedStringArray("arrow_nodes")]
+texture_filter = 1
+script = ExtResource("1_bxhja")
+arrow_nodes = [NodePath("arrows/SpriteArrowUp"), NodePath("arrows/SpriteArrowDown"), NodePath("arrows/SpriteArrowLeft"), NodePath("arrows/SpriteArrowRight")]
+
+[node name="background" type="Sprite2D" parent="." unique_id=953167915]
+texture_filter = 1
+position = Vector2(960, 540)
+scale = Vector2(0.969697, 1)
+texture = ExtResource("2_y2xn1")
+
+[node name="plate" type="Sprite2D" parent="." unique_id=1200881768]
+position = Vector2(499, 607)
+scale = Vector2(14.9844, 14.375)
+texture = ExtResource("3_2lbov")
+
+[node name="SpriteChar" type="AnimatedSprite2D" parent="." unique_id=623036638]
+position = Vector2(532, 406)
+scale = Vector2(10.7656, 11.9453)
+sprite_frames = SubResource("SpriteFrames_76s0e")
+animation = &"open_mouth"
+speed_scale = 2.0
+
+[node name="Cake" type="AnimatedSprite2D" parent="." unique_id=1952816634]
+position = Vector2(482.75, 806.375)
+scale = Vector2(8.58594, 7.48047)
+sprite_frames = SubResource("SpriteFrames_8wuq6")
+
+[node name="arrows" type="Node2D" parent="." unique_id=265676332]
+
+[node name="SpriteArrowUp" type="Sprite2D" parent="arrows" unique_id=1491392657]
+position = Vector2(997, 865.25)
+scale = Vector2(3.8125, 3.82031)
+texture = ExtResource("6_hqb4f")
+hframes = 2
+vframes = 2
+
+[node name="SpriteArrowDown" type="Sprite2D" parent="arrows" unique_id=681184222]
+position = Vector2(1251, 857)
+scale = Vector2(3.90625, 3.40625)
+texture = ExtResource("6_hqb4f")
+hframes = 2
+vframes = 2
+frame = 1
+
+[node name="SpriteArrowLeft" type="Sprite2D" parent="arrows" unique_id=265672816]
+position = Vector2(1519, 852)
+scale = Vector2(4, 3.53906)
+texture = ExtResource("6_hqb4f")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="SpriteArrowRight" type="Sprite2D" parent="arrows" unique_id=1006054306]
+position = Vector2(1791.75, 845.5)
+scale = Vector2(3.89844, 3.73437)
+texture = ExtResource("6_hqb4f")
+hframes = 2
+vframes = 2
+frame = 3
+
+[node name="Label" type="Label" parent="." unique_id=831366716]
+offset_left = 610.0
+offset_top = 271.0
+offset_right = 2131.0
+offset_bottom = 783.0
+theme_override_font_sizes/font_size = 100
+text = "i love cake
+❤"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="SpriteSpoon" type="Sprite2D" parent="." unique_id=53059566]
+position = Vector2(720, 626)
+rotation = 2.35619
+scale = Vector2(8.24507, 8.82958)
+texture = ExtResource("7_c4tn1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpriteSpoon" unique_id=487253423]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_yjliw")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=443332974]
+stream = ExtResource("8_brkcf")
+autoplay = true
+
+[node name="correct_sound" type="AudioStreamPlayer" parent="." unique_id=1621812825]
+stream = ExtResource("9_ukf6o")
+
+[node name="wrong_sound" type="AudioStreamPlayer" parent="." unique_id=1077517001]
+stream = ExtResource("10_38b7s")
+
+[node name="win_sound" type="AudioStreamPlayer" parent="." unique_id=467815177]
+stream = ExtResource("11_21xpp")
