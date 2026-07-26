@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://did10b74ftdix" path="res://microjogos/2026S1/projeto_cruz/cenas/scripts/main.gd" id="1_7pukw"]
 [ext_resource type="PackedScene" uid="uid://dajt08c77afje" path="res://microjogos/2026S1/projeto_cruz/cenas/GamutoKnight.tscn" id="2_thase"]
-[ext_resource type="PackedScene" path="res://microjogos/2026S1/projeto_cruz/cenas/Camera.tscn" id="3_uvs1o"]
 [ext_resource type="PackedScene" uid="uid://pwpddfupbrb0" path="res://microjogos/2026S1/projeto_cruz/cenas/Esqueleto.tscn" id="4_thase"]
 [ext_resource type="PackedScene" uid="uid://bymono0272xw" path="res://microjogos/2026S1/projeto_cruz/cenas/Flecha.tscn" id="5_uvs1o"]
 [ext_resource type="PackedScene" uid="uid://bq1arpwxo0qvw" path="res://microjogos/2026S1/projeto_cruz/cenas/Fundo.tscn" id="6_7pukw"]
@@ -32,10 +31,6 @@ mob_scene2 = ExtResource("5_uvs1o")
 z_index = 1
 position = Vector2(409, 258)
 scale = Vector2(1.5, 1.5)
-
-[node name="Camera" parent="." unique_id=219678133 instance=ExtResource("3_uvs1o")]
-z_index = 3
-position = Vector2(420, 220)
 
 [node name="Chão" parent="." unique_id=1421735648 instance=ExtResource("6_jx8q8")]
 z_index = 1
@@ -69,6 +64,9 @@ scale = Vector2(1.92, 1.92)
 stream = ExtResource("8_uuiyg")
 volume_db = 8.455
 autoplay = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1778211566]
+offset = Vector2(400, 230)
 
 [connection signal="timeout" from="EsqueletoTimer" to="." method="_on_esqueleto_timer_timeout"]
 [connection signal="timeout" from="FlechaTimer" to="." method="_on_flecha_timer_timeout"]

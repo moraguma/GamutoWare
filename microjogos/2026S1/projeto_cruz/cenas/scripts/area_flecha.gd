@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var velocidade: float = 700.0
+@export var velocidade: float = 1200.0
 
 func _ready():
 	var notifier = VisibleOnScreenNotifier2D.new()

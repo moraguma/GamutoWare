@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const GRAVITY = 1500.0
-const JUMP_VELOCITY = 800.0
+const GRAVITY = 3000
+const JUMP_VELOCITY = 1200
 
 const CENA_ESPADA = preload("res://microjogos/2026S1/projeto_cruz/cenas/Espada.tscn")
 
