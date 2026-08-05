@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://dajt08c77afje"]
 
 [ext_resource type="Script" uid="uid://cobax3asc0fj5" path="res://microjogos/2026S1/projeto_cruz/cenas/scripts/GamutoKnight.gd" id="1_xdoox"]
+[ext_resource type="AudioStream" uid="uid://b0ls24lnempkg" path="res://microjogos/2026S1/projeto_cruz/recursos/sons/ataque.mp3" id="2_lwphy"]
 [ext_resource type="Texture2D" uid="uid://dgphbgqitdhkf" path="res://microjogos/2026S1/projeto_cruz/recursos/imagens/Sprite_Cavaleiro.png" id="2_xdoox"]
+[ext_resource type="AudioStream" uid="uid://bsq6odejfi0nv" path="res://microjogos/2026S1/projeto_cruz/recursos/sons/pulo.mp3" id="3_58ack"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5kprm"]
 size = Vector2(131, 307)
@@ -16,6 +18,12 @@ size = Vector2(130, 49)
 
 [node name="GamutoKnight" type="CharacterBody2D" parent="." unique_id=1702339089]
 script = ExtResource("1_xdoox")
+
+[node name="SomAtaque" type="AudioStreamPlayer" parent="GamutoKnight" unique_id=1777751121]
+stream = ExtResource("2_lwphy")
+
+[node name="SomPulo" type="AudioStreamPlayer" parent="GamutoKnight" unique_id=258497055]
+stream = ExtResource("3_58ack")
 
 [node name="Area_Knight" type="Area2D" parent="GamutoKnight" unique_id=1615445652 groups=["Player"]]
 

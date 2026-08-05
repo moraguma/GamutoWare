@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bymono0272xw" path="res://microjogos/2026S1/projeto_cruz/cenas/Flecha.tscn" id="5_uvs1o"]
 [ext_resource type="PackedScene" uid="uid://bq1arpwxo0qvw" path="res://microjogos/2026S1/projeto_cruz/cenas/Fundo.tscn" id="6_7pukw"]
 [ext_resource type="PackedScene" uid="uid://tj4a3qta71if" path="res://microjogos/2026S1/projeto_cruz/cenas/Chão.tscn" id="6_jx8q8"]
-[ext_resource type="AudioStream" uid="uid://bndyrnb1n2njt" path="res://microjogos/2026S1/projeto_cruz/recursos/sons/audiomass-output.mp3" id="8_uuiyg"]
+[ext_resource type="AudioStream" uid="uid://bndyrnb1n2njt" path="res://microjogos/2026S1/projeto_cruz/recursos/sons/bgmusic.mp3" id="8_uuiyg"]
 
 [sub_resource type="Curve2D" id="Curve2D_uuiyg"]
 _data = {
@@ -29,11 +29,13 @@ mob_scene2 = ExtResource("5_uvs1o")
 
 [node name="GamutoKnight" parent="." unique_id=522217128 instance=ExtResource("2_thase")]
 z_index = 1
+z_as_relative = false
 position = Vector2(409, 258)
 scale = Vector2(1.5, 1.5)
 
 [node name="Chão" parent="." unique_id=1421735648 instance=ExtResource("6_jx8q8")]
 z_index = 1
+z_as_relative = false
 position = Vector2(419.99994, 410)
 scale = Vector2(2.55, 2.55)
 

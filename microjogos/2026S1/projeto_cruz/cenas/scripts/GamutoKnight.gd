@@ -30,6 +30,7 @@ func atacar():
 	nova_espada.position = Vector2(200 * direcao, altura_ataque) 
 	
 	add_child(nova_espada)
+	$SomAtaque.play()
 
 func abaixar(bool):
 	sprite_normal.visible = !bool
@@ -50,6 +51,7 @@ func _physics_process(delta):
 
 	if Input.is_action_just_pressed("cima") and is_on_floor():
 		velocity.y = -JUMP_VELOCITY
+		$SomPulo.play()
 	
 	move_and_slide()
 
