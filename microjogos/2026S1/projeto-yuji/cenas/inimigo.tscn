@@ -1,0 +1,138 @@
+[gd_scene format=3 uid="uid://dmxak7biceqge"]
+
+[ext_resource type="Texture2D" uid="uid://bgfs4uub0ha4u" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/enemy_spritesheet.png" id="1_gfghk"]
+[ext_resource type="Script" uid="uid://ce72l0a07s7yo" path="res://microjogos/2026S1/projeto-yuji/cenas/scripts/inimigo.gd" id="1_t0sve"]
+[ext_resource type="Texture2D" uid="uid://cx31dlilxdksr" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/spritesheet.png" id="3_nss1g"]
+[ext_resource type="AudioStream" uid="uid://ch5cqkm8fcpdl" path="res://microjogos/2026S1/projeto-yuji/recursos/sons/explosion.wav" id="11_88upy"]
+
+[sub_resource type="Animation" id="Animation_t0sve"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_an7v3"]
+resource_name = "inimigo"
+length = 0.9
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nss1g"]
+_data = {
+&"RESET": SubResource("Animation_t0sve"),
+&"inimigo": SubResource("Animation_an7v3")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wb5ku"]
+size = Vector2(12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bk5yo"]
+atlas = ExtResource("3_nss1g")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w45lj"]
+atlas = ExtResource("3_nss1g")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_py2ap"]
+atlas = ExtResource("3_nss1g")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b48hd"]
+atlas = ExtResource("3_nss1g")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwetm"]
+atlas = ExtResource("3_nss1g")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_txs4x"]
+atlas = ExtResource("3_nss1g")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2iro"]
+atlas = ExtResource("3_nss1g")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8g5u2"]
+atlas = ExtResource("3_nss1g")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wb5ku"]
+animations = [{
+"frames": [{
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_bk5yo")
+}, {
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_w45lj")
+}, {
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_py2ap")
+}, {
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_b48hd")
+}, {
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_fwetm")
+}, {
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_txs4x")
+}, {
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_r2iro")
+}, {
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_8g5u2")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Inimigo" type="CharacterBody2D" unique_id=1647211980]
+script = ExtResource("1_t0sve")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1580106725]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("1_gfghk")
+hframes = 3
+vframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D" unique_id=935051936]
+libraries/ = SubResource("AnimationLibrary_nss1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1074331823]
+shape = SubResource("RectangleShape2D_wb5ku")
+
+[node name="Explosao" type="AnimatedSprite2D" parent="." unique_id=996924852]
+visible = false
+z_index = 1
+texture_filter = 1
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_wb5ku")
+
+[node name="SomExplosao" type="AudioStreamPlayer" parent="." unique_id=521734867]
+stream = ExtResource("11_88upy")

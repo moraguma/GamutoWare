@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://dt3xqkwb7b2gt"]
+
+[ext_resource type="Script" uid="uid://su4d03rwumjh" path="res://microjogos/2026S1/projeto-yuji/cenas/scripts/player.gd" id="1_c6w80"]
+[ext_resource type="Texture2D" uid="uid://7tb302qjqrls" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/player_spritesheet.png" id="2_ncgum"]
+[ext_resource type="Texture2D" uid="uid://cx31dlilxdksr" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/spritesheet.png" id="3_tkd13"]
+[ext_resource type="AudioStream" uid="uid://ch5cqkm8fcpdl" path="res://microjogos/2026S1/projeto-yuji/recursos/sons/explosion.wav" id="11_r2iro"]
+
+[sub_resource type="Animation" id="Animation_uh1io"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_ncgum"]
+resource_name = "new_animation"
+length = 0.9
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uh1io"]
+_data = {
+&"RESET": SubResource("Animation_uh1io"),
+&"new_animation": SubResource("Animation_ncgum")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tkd13"]
+size = Vector2(12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bk5yo"]
+atlas = ExtResource("3_tkd13")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w45lj"]
+atlas = ExtResource("3_tkd13")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_py2ap"]
+atlas = ExtResource("3_tkd13")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b48hd"]
+atlas = ExtResource("3_tkd13")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwetm"]
+atlas = ExtResource("3_tkd13")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_txs4x"]
+atlas = ExtResource("3_tkd13")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2iro"]
+atlas = ExtResource("3_tkd13")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8g5u2"]
+atlas = ExtResource("3_tkd13")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g6ler"]
+animations = [{
+"frames": [{
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_bk5yo")
+}, {
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_w45lj")
+}, {
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_py2ap")
+}, {
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_b48hd")
+}, {
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_fwetm")
+}, {
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_txs4x")
+}, {
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_r2iro")
+}, {
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_8g5u2")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D" unique_id=855687607]
+z_index = 2
+script = ExtResource("1_c6w80")
+
+[node name="Baixo" type="Sprite2D" parent="." unique_id=1757249924]
+z_index = 2
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("2_ncgum")
+hframes = 3
+vframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Baixo" unique_id=1036349857]
+libraries/ = SubResource("AnimationLibrary_uh1io")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1453900307]
+shape = SubResource("RectangleShape2D_tkd13")
+one_way_collision_margin = 0.0
+
+[node name="Timer" type="Timer" parent="." unique_id=1177446446]
+wait_time = 6.0
+one_shot = true
+autostart = true
+
+[node name="Explosao" type="AnimatedSprite2D" parent="." unique_id=1190309340]
+visible = false
+z_index = 1
+texture_filter = 1
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_g6ler")
+frame_progress = 1.0
+
+[node name="SomExplosao" type="AudioStreamPlayer" parent="." unique_id=1592427938]
+stream = ExtResource("11_r2iro")

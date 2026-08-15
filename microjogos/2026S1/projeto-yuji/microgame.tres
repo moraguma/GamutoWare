@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" format=3 uid="uid://chs7dnnygrku0"]
+
+[ext_resource type="PackedScene" uid="uid://cne3anoktmyn" path="res://microjogos/2026S1/projeto-yuji/cenas/main.tscn" id="1_bnnsr"]
+[ext_resource type="Texture2D" uid="uid://cawlb6ttokci2" path="res://microjogos/2026S1/projeto-yuji/capa.png" id="1_hhw1t"]
+[ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_ra0m3"]
+
+[resource]
+script = ExtResource("1_ra0m3")
+cover = ExtResource("1_hhw1t")
+title_pt = &"NORT"
+title_en = &"NORT"
+credits_pt = "https://ansimuz.itch.io/explosion-animations-pack?download#google_vignette - animação da explosão dos personagens
+
+https://opengameart.org/content/explosion-0 - sfx explosão"
+credits_en = "https://ansimuz.itch.io/explosion-animations-pack?download#google_vignette - characters explosion animation
+
+https://opengameart.org/content/explosion-0 - explosion sfx"
+start_message_pt = &"NÃO EXPLODA!"
+start_message_en = &"DON\'T BLOW UP!!"
+main_scene = ExtResource("1_bnnsr")
