@@ -97,7 +97,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4kis3"]
-radius = 50.0
+radius = 25.019993
 
 [node name="Player" type="CharacterBody2D" unique_id=142243304]
 script = ExtResource("1_4kis3")
@@ -125,7 +125,8 @@ frame_progress = 0.43639818
 
 [node name="Capacete" type="Sprite2D" parent="." unique_id=1467711490]
 texture_filter = 1
-scale = Vector2(2.2, 2.2)
+position = Vector2(-1.4000008, 0.099998854)
+scale = Vector2(2.1416667, 2.2041667)
 texture = ExtResource("3_rgqen")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1156485027]
@@ -134,6 +135,7 @@ texture = ExtResource("3_rgqen")
 shape = SubResource("CircleShape2D_4kis3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=147144953]
+position = Vector2(1, 0)
 shape = SubResource("CircleShape2D_4kis3")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
