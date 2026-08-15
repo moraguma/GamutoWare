@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://c1opor2rcp2hs"]
+
+[ext_resource type="Texture2D" uid="uid://doq1e3kjpj5tq" path="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/backgorund.webp" id="1_8e78m"]
+[ext_resource type="Script" uid="uid://bkqes02cu6a4h" path="res://microjogos/2026S1/projeto-eduardo/cenas/scripts/player.gd" id="2_vhlfe"]
+[ext_resource type="Texture2D" uid="uid://cad6xdo1urnkq" path="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/player.png" id="4_doi7i"]
+[ext_resource type="Texture2D" uid="uid://cbovwrsw0j17o" path="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/RTS_Crate.png" id="5_4os24"]
+[ext_resource type="Script" uid="uid://c3dy6n3wcds7i" path="res://microjogos/2026S1/projeto-eduardo/cenas/scripts/virus_do_ib.gd" id="5_gtvp5"]
+[ext_resource type="Texture2D" uid="uid://dlucbbubvnl88" path="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/Red_Virus.png" id="7_4yxf1"]
+[ext_resource type="Texture2D" uid="uid://bqhla2gjyjyo4" path="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/saida.jpeg" id="8_doi7i"]
+[ext_resource type="Texture2D" uid="uid://cjbdtgs77cytl" path="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/__Zombie01_Idle_000.png" id="10_275yj"]
+[ext_resource type="Script" uid="uid://bq4psu4lqfdx3" path="res://microjogos/2026S1/projeto-eduardo/cenas/scripts/zumbi_do_ib.gd" id="10_doi7i"]
+[ext_resource type="AudioStream" uid="uid://bv54owo2m37qc" path="res://microjogos/2026S1/projeto-eduardo/recursos/sons/efeito morte.wav" id="11_4yxf1"]
+[ext_resource type="AudioStream" uid="uid://43fs7tebhkst" path="res://microjogos/2026S1/projeto-eduardo/recursos/sons/393402__stevedrums__group_yay_cheer.wav" id="12_275yj"]
+[ext_resource type="AudioStream" uid="uid://cuh6ww2bw01qd" path="res://microjogos/2026S1/projeto-eduardo/recursos/sons/awake10_megaWall.mp3" id="13_doi7i"]
+
+[sub_resource type="GDScript" id="GDScript_275yj"]
+script/source = "extends Node2D
+func _ready() -> void:
+	var caixa = get_node(\"Caixa\")
+	caixa.position.y = randf_range(400,800)
+	var zumbi = get_node('zumbi do ib')
+	zumbi.position.y = randf_range(200,1000)
+	var musica = get_node(\"musica_background\")
+	musica.play()
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	
+	pass
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_275yj"]
+size = Vector2(59, 225.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_doi7i"]
+size = Vector2(264, 179)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2urd"]
+size = Vector2(221, 1029)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gtvp5"]
+size = Vector2(141, 220)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gmugr"]
+size = Vector2(91, 196)
+
+[node name="Main" type="Node2D" unique_id=1597121372]
+texture_filter = 1
+script = SubResource("GDScript_275yj")
+
+[node name="Backgorund" type="Sprite2D" parent="." unique_id=871043816]
+position = Vector2(958, 538.75006)
+scale = Vector2(4.88718, 4.884616)
+texture = ExtResource("1_8e78m")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1720369450]
+position = Vector2(730, 490)
+script = ExtResource("2_vhlfe")
+
+[node name="sprite player" type="Sprite2D" parent="Player" unique_id=1951027167]
+position = Vector2(9.500036, -7.500025)
+scale = Vector2(1.1500006, 2.3699996)
+texture = ExtResource("4_doi7i")
+
+[node name="hitbox player" type="CollisionShape2D" parent="Player" unique_id=352802844]
+position = Vector2(6.5, -9.25)
+shape = SubResource("RectangleShape2D_275yj")
+
+[node name="Caixa" type="StaticBody2D" parent="." unique_id=138071633]
+position = Vector2(1081, 514)
+
+[node name="sprite caixa" type="Sprite2D" parent="Caixa" unique_id=121578146]
+position = Vector2(9.499968, -3.0000076)
+scale = Vector2(0.673828, 0.53515625)
+texture = ExtResource("5_4os24")
+
+[node name="hitbox caixa" type="CollisionShape2D" parent="Caixa" unique_id=1024467746]
+shape = SubResource("RectangleShape2D_doi7i")
+
+[node name="virus do ib" type="Area2D" parent="." unique_id=1991314190]
+position = Vector2(137, 536)
+script = ExtResource("5_gtvp5")
+
+[node name="sprite virus do ib" type="Sprite2D" parent="virus do ib" unique_id=235902542]
+position = Vector2(15.499985, 11.000015)
+scale = Vector2(4.98, 21.199999)
+texture = ExtResource("7_4yxf1")
+
+[node name="hitbox virus do ib" type="CollisionShape2D" parent="virus do ib" unique_id=994393339]
+shape = SubResource("RectangleShape2D_g2urd")
+
+[node name="porta do ib" type="Area2D" parent="." unique_id=787826152]
+position = Vector2(1763, 728)
+
+[node name="sprite porta do ib" type="Sprite2D" parent="porta do ib" unique_id=2032411163]
+position = Vector2(9.500097, -1.9999771)
+scale = Vector2(0.17583345, 0.175)
+texture = ExtResource("8_doi7i")
+
+[node name="hitbox porta do ib" type="CollisionShape2D" parent="porta do ib" unique_id=2112153277]
+shape = SubResource("RectangleShape2D_gtvp5")
+
+[node name="zumbi do ib" type="Area2D" parent="." unique_id=516299828]
+position = Vector2(1536, 191)
+script = ExtResource("10_doi7i")
+
+[node name="sprite zumbi do ib" type="Sprite2D" parent="zumbi do ib" unique_id=322628504]
+scale = Vector2(0.47592592, 0.48905107)
+texture = ExtResource("10_275yj")
+
+[node name="hitbox zumbi do ib" type="CollisionShape2D" parent="zumbi do ib" unique_id=1287417478]
+shape = SubResource("RectangleShape2D_gmugr")
+
+[node name="efeito_morte" type="AudioStreamPlayer" parent="." unique_id=565982983]
+stream = ExtResource("11_4yxf1")
+
+[node name="efeito_vitoria" type="AudioStreamPlayer" parent="." unique_id=1652006309]
+stream = ExtResource("12_275yj")
+
+[node name="musica_background" type="AudioStreamPlayer" parent="." unique_id=780879539]
+stream = ExtResource("13_doi7i")
+
+[connection signal="body_entered" from="virus do ib" to="Player" method="_on_virus_do_ib_body_entered"]
+[connection signal="body_entered" from="porta do ib" to="Player" method="_on_porta_do_ib_body_entered"]
+[connection signal="body_entered" from="zumbi do ib" to="Player" method="_on_zumbi_do_ib_body_entered"]
