@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fau0p7mj63rj"
-path="res://.godot/imported/New Piskel (1).png-48d9e7e57b9671d37399e09e22e34c42.ctex"
+uid="uid://7tb302qjqrls"
+path="res://.godot/imported/player_spritesheet.png-0e67b6980e277add7f2eaa6ac351ab5d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2026S1/projeto-yuji/New Piskel (1).png"
-dest_files=["res://.godot/imported/New Piskel (1).png-48d9e7e57b9671d37399e09e22e34c42.ctex"]
+source_file="res://microjogos/2026S1/projeto-yuji/recursos/imagens/player_spritesheet.png"
+dest_files=["res://.godot/imported/player_spritesheet.png-0e67b6980e277add7f2eaa6ac351ab5d.ctex"]
 
 [params]
 

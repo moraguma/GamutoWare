@@ -1,15 +1,14 @@
 extends StaticBody2D
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$CollisionShape2D.set_deferred("disabled", true)
+	$CollisionShape2D.shape = SegmentShape2D.new()
 
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-
-func _process(delta: float) -> void:
-	await 0.1
-	$CollisionShape2D.set_deferred("disabled", false)
+func setup_trail(pos:Vector2):
+	$CollisionShape2D.shape.a = pos
+	$Trilha.points[0] = pos
+	$CollisionShape2D.shape.b = pos
+	$Trilha.points[1] = pos
 	
+func update_trail(pos:Vector2):
+	$CollisionShape2D.shape.b = pos
+	$Trilha.points[1] = pos

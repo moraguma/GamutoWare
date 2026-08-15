@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://d0v6y5bo3l61o"]
-
-[ext_resource type="AudioStream" uid="uid://ch5cqkm8fcpdl" path="res://microjogos/2026S1/projeto-yuji/recursos/sons/explosion.wav" id="1_idyv6"]
-
-[node name="Explosao" type="AudioStreamPlayer" unique_id=454672596]
-stream = ExtResource("1_idyv6")

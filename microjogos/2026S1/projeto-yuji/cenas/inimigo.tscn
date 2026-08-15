@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://dmxak7biceqge"]
 
-[ext_resource type="Texture2D" uid="uid://bgfs4uub0ha4u" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/New Piskel (6).png" id="1_gfghk"]
+[ext_resource type="Texture2D" uid="uid://bgfs4uub0ha4u" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/enemy_spritesheet.png" id="1_gfghk"]
 [ext_resource type="Script" uid="uid://ce72l0a07s7yo" path="res://microjogos/2026S1/projeto-yuji/cenas/scripts/inimigo.gd" id="1_t0sve"]
-[ext_resource type="PackedScene" uid="uid://d0v6y5bo3l61o" path="res://microjogos/2026S1/projeto-yuji/cenas/explosao.tscn" id="3_an7v3"]
 [ext_resource type="Texture2D" uid="uid://yg5pqfaqlsxd" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-1.png" id="4_88upy"]
 [ext_resource type="Texture2D" uid="uid://bgbwyohhh72ry" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-2.png" id="5_cx0vw"]
 [ext_resource type="Texture2D" uid="uid://b573ehix0rw0c" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-3.png" id="6_yej5q"]
@@ -11,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dr0futx3dmuvf" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-6.png" id="9_glm68"]
 [ext_resource type="Texture2D" uid="uid://61hwjmu7gqdl" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-7.png" id="10_bdhf3"]
 [ext_resource type="Texture2D" uid="uid://bvl44tsb2x6kl" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-8.png" id="11_5t18j"]
+[ext_resource type="AudioStream" uid="uid://ch5cqkm8fcpdl" path="res://microjogos/2026S1/projeto-yuji/recursos/sons/explosion.wav" id="11_88upy"]
 
 [sub_resource type="Animation" id="Animation_t0sve"]
 length = 0.001
@@ -52,7 +52,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wb5ku"]
-size = Vector2(4, 4)
+size = Vector2(12, 12)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2x8av"]
 animations = [{
@@ -86,11 +86,12 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Inimigo" type="Area2D" unique_id=1856240823]
+[node name="Inimigo" type="CharacterBody2D" unique_id=1647211980]
 script = ExtResource("1_t0sve")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1580106725]
 texture_filter = 1
+scale = Vector2(4, 4)
 texture = ExtResource("1_gfghk")
 hframes = 3
 vframes = 4
@@ -101,9 +102,11 @@ libraries/ = SubResource("AnimationLibrary_nss1g")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1074331823]
 shape = SubResource("RectangleShape2D_wb5ku")
 
-[node name="Explosao" parent="." unique_id=454672596 instance=ExtResource("3_an7v3")]
-
-[node name="explosão" type="AnimatedSprite2D" parent="." unique_id=2079084871]
+[node name="Explosao" type="AnimatedSprite2D" parent="." unique_id=2079084871]
 visible = false
 texture_filter = 1
+scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_2x8av")
+
+[node name="SomExplosao" type="AudioStreamPlayer" parent="." unique_id=521734867]
+stream = ExtResource("11_88upy")

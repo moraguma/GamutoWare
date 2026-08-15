@@ -1,69 +1,68 @@
-extends Area2D
+extends CharacterBody2D
 
-var tile_size = 16
-var dir_atual 
-var pos = [1792,952]
-var pos_trilha = [pos[0], pos[1]]
+var speed = 1000
+var dir_atual = Vector2.LEFT
+var dir_anterior = Vector2.DOWN
 var morreu = false
-@onready var trilha = preload("res://microjogos/2026S1/projeto-yuji/cenas/trilha.tscn")
+var posicao_anterior
+var trilha
+var houve_teleport = false
+
+
+@onready var cena_trilha = preload("res://microjogos/2026S1/projeto-yuji/cenas/trilha.tscn")
 @onready var anim = $Sprite2D/AnimationPlayer
-@onready var animated_sprite_2D = $"explosão"
-@onready var sfx_player = $Explosao
+@onready var explosao = $Explosao
+@onready var sfx_explosao = $SomExplosao
+
 func _ready():
-	dir_atual = "esquerda"
-	$Sprite2D/AnimationPlayer.play("inimigo")
-	self.position = Vector2(pos[0], pos[1])
+	anim.play("inimigo")
+	posicao_anterior = global_position - dir_atual * speed
+	adicionar_nova_trilha(posicao_anterior)
 	
 func _physics_process(delta: float) -> void:
 	if morreu:
 		return
-	monitoring = true
-	var trilha_novo
-	if dir_atual == "direita":
-		pos[0] +=tile_size
-		if pos[0] >1920:
-			pos[0] -=1920
-			pos_trilha[0] -=1920
-		pos_trilha[0] += tile_size
-	elif dir_atual == "esquerda":
-		pos[0] -=tile_size
-		if pos[0]<0:
-			pos[0] +=1920
-			pos_trilha[0] +=1920
-		pos_trilha[0] -= tile_size
-	elif dir_atual == "cima":
-		pos[1] -=tile_size
-		if pos[1]<0:
-			pos[1] +=1080
-			pos_trilha[1] +=1080
-		pos_trilha[1] -= tile_size
-	elif dir_atual == "baixo":
-		pos[1] +=tile_size
-		if pos[1]>1080:
-			pos[1] -=1080
-			pos_trilha[1] -=1080
-		pos_trilha[1] += tile_size
-	if Input.is_action_just_pressed("direita") and dir_atual != "baixo":
-		dir_atual = "cima"
-		set_rotation_degrees(0)
-	elif Input.is_action_just_pressed("esquerda") and dir_atual != "cima":
-		dir_atual = "baixo"
-	elif Input.is_action_just_pressed("cima") and dir_atual != "direita":
-		dir_atual = "esquerda"
-	elif Input.is_action_just_pressed("baixo") and dir_atual != "esquerda":
-		dir_atual = "direita"
-
-	self.position = Vector2(pos[0], pos[1])
 	
-	trilha_novo = trilha.instantiate()
-	trilha_novo.modulate = Color(255,0,0)
-	trilha_novo.position = Vector2(pos_trilha[0], pos_trilha[1])
-	get_parent().add_child(trilha_novo)
-	var lista = get_overlapping_bodies()
-	if lista != [] and not morreu:
-		morreu = true
-		$Sprite2D.visible = false
-		$"explosão".visible = true
-		animated_sprite_2D.play("default")
-		sfx_player.play()
-		return
+	if dir_atual != dir_anterior:
+		adicionar_nova_trilha(posicao_anterior)
+		
+	dir_anterior = dir_atual
+	if Input.is_action_just_pressed("direita") and dir_atual.y == 0:
+		dir_atual = Vector2.LEFT
+	elif Input.is_action_just_pressed("esquerda") and dir_atual.y == 0:
+		dir_atual = Vector2.DOWN
+	elif Input.is_action_just_pressed("cima") and dir_atual.x == 0:
+		dir_atual = Vector2.LEFT
+	elif Input.is_action_just_pressed("baixo") and dir_atual.x == 0:
+		dir_atual = Vector2.RIGHT
+		
+	posicao_anterior = global_position
+	velocity = dir_atual * speed
+	var colision = move_and_collide(velocity * delta)
+	if colision:
+		wall_colision()
+	#Força a criacao de uma nova linha quando ha o teleport
+	houve_teleport = false
+	if global_position.x > 1920 or global_position.x < 0 or global_position.y > 1080 or global_position.y < 0:
+		houve_teleport = true
+		
+	global_position.x = (int(global_position.x) + 1920) % 1920
+	global_position.y = (int(global_position.y) + 1080) % 1080
+	if houve_teleport:
+		adicionar_nova_trilha(global_position - dir_atual * speed)
+	else:
+		trilha.update_trail(posicao_anterior)
+
+func adicionar_nova_trilha(pos):
+	trilha = cena_trilha.instantiate()
+	trilha.get_child(0).default_color = Color(255, 0, 0)
+	get_parent().add_child(trilha)
+	trilha.setup_trail(pos)
+	
+
+func wall_colision() -> void:
+	$Sprite2D.visible = false
+	explosao.visible = true
+	explosao.play("default")
+	sfx_explosao.play()
+	morreu = true
