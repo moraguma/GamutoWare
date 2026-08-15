@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://qgvnwn6baueq"]
+
+[ext_resource type="Script" uid="uid://did10b74ftdix" path="res://microjogos/2026S1/projeto_cruz/cenas/scripts/main.gd" id="1_7pukw"]
+[ext_resource type="PackedScene" uid="uid://dajt08c77afje" path="res://microjogos/2026S1/projeto_cruz/cenas/GamutoKnight.tscn" id="2_thase"]
+[ext_resource type="PackedScene" uid="uid://pwpddfupbrb0" path="res://microjogos/2026S1/projeto_cruz/cenas/Esqueleto.tscn" id="4_thase"]
+[ext_resource type="PackedScene" uid="uid://bymono0272xw" path="res://microjogos/2026S1/projeto_cruz/cenas/Flecha.tscn" id="5_uvs1o"]
+[ext_resource type="PackedScene" uid="uid://bq1arpwxo0qvw" path="res://microjogos/2026S1/projeto_cruz/cenas/Fundo.tscn" id="6_7pukw"]
+[ext_resource type="PackedScene" uid="uid://tj4a3qta71if" path="res://microjogos/2026S1/projeto_cruz/cenas/Chão.tscn" id="6_jx8q8"]
+[ext_resource type="AudioStream" uid="uid://bndyrnb1n2njt" path="res://microjogos/2026S1/projeto_cruz/recursos/sons/bgmusic.mp3" id="8_uuiyg"]
+
+[sub_resource type="Curve2D" id="Curve2D_uuiyg"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1457, 314, 0, 0, 0, 0, 1497, 314)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_7pukw"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -687, 130, 0, 0, 0, 0, -687, 434)
+}
+point_count = 2
+
+[node name="Main" type="Node2D" unique_id=1597121372]
+texture_filter = 1
+position = Vector2(551, 302)
+script = ExtResource("1_7pukw")
+mob_scene1 = ExtResource("4_thase")
+mob_scene2 = ExtResource("5_uvs1o")
+
+[node name="GamutoKnight" parent="." unique_id=522217128 instance=ExtResource("2_thase")]
+z_index = 1
+z_as_relative = false
+position = Vector2(409, 258)
+scale = Vector2(1.5, 1.5)
+
+[node name="Chão" parent="." unique_id=1421735648 instance=ExtResource("6_jx8q8")]
+z_index = 1
+z_as_relative = false
+position = Vector2(419.99994, 410)
+scale = Vector2(2.55, 2.55)
+
+[node name="EsqueletoPath" type="Path2D" parent="." unique_id=2060658545]
+curve = SubResource("Curve2D_uuiyg")
+
+[node name="LocalGeracaoEsqueleto" type="PathFollow2D" parent="EsqueletoPath" unique_id=835425726]
+position = Vector2(1457, 314)
+
+[node name="EsqueletoTimer" type="Timer" parent="." unique_id=999742590]
+
+[node name="FlechaPath" type="Path2D" parent="." unique_id=1134126160]
+curve = SubResource("Curve2D_7pukw")
+
+[node name="LocalGeracaoFlecha" type="PathFollow2D" parent="FlechaPath" unique_id=364957318]
+position = Vector2(-687, 130)
+rotation = 1.5707964
+
+[node name="FlechaTimer" type="Timer" parent="." unique_id=631099481]
+
+[node name="Fundo" parent="." unique_id=539732057 instance=ExtResource("6_7pukw")]
+z_index = -1
+z_as_relative = false
+position = Vector2(409, 234)
+scale = Vector2(1.92, 1.92)
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=636187758]
+stream = ExtResource("8_uuiyg")
+volume_db = 8.455
+autoplay = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1778211566]
+offset = Vector2(400, 230)
+
+[connection signal="timeout" from="EsqueletoTimer" to="." method="_on_esqueleto_timer_timeout"]
+[connection signal="timeout" from="FlechaTimer" to="." method="_on_flecha_timer_timeout"]

@@ -47,6 +47,12 @@ enabled=PackedStringArray()
 
 import/blender/enabled=false
 
+[global_group]
+
+Esqueletos=""
+Flechas=""
+Player=""
+
 [input]
 
 ui_accept={
