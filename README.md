@@ -4,7 +4,7 @@
 
 Gamutoware is a collection of short, simple, and creative minigames built by many people. It was created by Gamux - a student collective focused on video game development, research, and culture - to teach students the fundamentals of the Godot game engine. Each year, a course is given and each student is tasked with creating a new minigame for Gamutoware. This is the repository used during the lessons.
 
-Though development mostly happens at the start of the year, contributions, be they new minigames or improvements to the game's core, are accepted throughout the whole year. If you want to contribute, feel free to open a pull request. Reading the [wiki](https://github.com/moraguma/GamutoWare/wiki) may help you understand how the game works.
+Though development mostly happens at the start of the year, contributions, be they new minigames or improvements to the game's core, are accepted throughout the whole year. If you want to contribute, feel free to open a pull request. Reading the [wiki](https://github.com/GamuxUnicamp/GamutoWare/wiki) may help you understand how the game works.
 
 The slides (in Portuguese) used in the lectures given in 2023 can be found [here](https://drive.google.com/drive/folders/1hAMGlnixH01gWt_WVX6mnZm703ESttDf?usp=sharing).
 
