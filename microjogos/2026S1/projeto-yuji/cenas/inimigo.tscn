@@ -2,14 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bgfs4uub0ha4u" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/enemy_spritesheet.png" id="1_gfghk"]
 [ext_resource type="Script" uid="uid://ce72l0a07s7yo" path="res://microjogos/2026S1/projeto-yuji/cenas/scripts/inimigo.gd" id="1_t0sve"]
-[ext_resource type="Texture2D" uid="uid://yg5pqfaqlsxd" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-1.png" id="4_88upy"]
-[ext_resource type="Texture2D" uid="uid://bgbwyohhh72ry" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-2.png" id="5_cx0vw"]
-[ext_resource type="Texture2D" uid="uid://b573ehix0rw0c" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-3.png" id="6_yej5q"]
-[ext_resource type="Texture2D" uid="uid://mmmyy0tb241v" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-4.png" id="7_yri7k"]
-[ext_resource type="Texture2D" uid="uid://c6dbwpv2yo41v" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-5.png" id="8_qv83l"]
-[ext_resource type="Texture2D" uid="uid://dr0futx3dmuvf" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-6.png" id="9_glm68"]
-[ext_resource type="Texture2D" uid="uid://61hwjmu7gqdl" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-7.png" id="10_bdhf3"]
-[ext_resource type="Texture2D" uid="uid://bvl44tsb2x6kl" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-8.png" id="11_5t18j"]
+[ext_resource type="Texture2D" uid="uid://cx31dlilxdksr" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/spritesheet.png" id="3_nss1g"]
 [ext_resource type="AudioStream" uid="uid://ch5cqkm8fcpdl" path="res://microjogos/2026S1/projeto-yuji/recursos/sons/explosion.wav" id="11_88upy"]
 
 [sub_resource type="Animation" id="Animation_t0sve"]
@@ -54,32 +47,64 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wb5ku"]
 size = Vector2(12, 12)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_2x8av"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_bk5yo"]
+atlas = ExtResource("3_nss1g")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w45lj"]
+atlas = ExtResource("3_nss1g")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_py2ap"]
+atlas = ExtResource("3_nss1g")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b48hd"]
+atlas = ExtResource("3_nss1g")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwetm"]
+atlas = ExtResource("3_nss1g")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_txs4x"]
+atlas = ExtResource("3_nss1g")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2iro"]
+atlas = ExtResource("3_nss1g")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8g5u2"]
+atlas = ExtResource("3_nss1g")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wb5ku"]
 animations = [{
 "frames": [{
 "duration": 0.3,
-"texture": ExtResource("4_88upy")
+"texture": SubResource("AtlasTexture_bk5yo")
 }, {
 "duration": 0.3,
-"texture": ExtResource("5_cx0vw")
+"texture": SubResource("AtlasTexture_w45lj")
 }, {
 "duration": 0.3,
-"texture": ExtResource("6_yej5q")
+"texture": SubResource("AtlasTexture_py2ap")
 }, {
 "duration": 0.3,
-"texture": ExtResource("7_yri7k")
+"texture": SubResource("AtlasTexture_b48hd")
 }, {
 "duration": 0.3,
-"texture": ExtResource("8_qv83l")
+"texture": SubResource("AtlasTexture_fwetm")
 }, {
 "duration": 0.3,
-"texture": ExtResource("9_glm68")
+"texture": SubResource("AtlasTexture_txs4x")
 }, {
 "duration": 0.3,
-"texture": ExtResource("10_bdhf3")
+"texture": SubResource("AtlasTexture_r2iro")
 }, {
-"duration": 1.0,
-"texture": ExtResource("11_5t18j")
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_8g5u2")
 }],
 "loop": false,
 "name": &"default",
@@ -102,11 +127,12 @@ libraries/ = SubResource("AnimationLibrary_nss1g")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1074331823]
 shape = SubResource("RectangleShape2D_wb5ku")
 
-[node name="Explosao" type="AnimatedSprite2D" parent="." unique_id=2079084871]
+[node name="Explosao" type="AnimatedSprite2D" parent="." unique_id=996924852]
 visible = false
+z_index = 1
 texture_filter = 1
 scale = Vector2(4, 4)
-sprite_frames = SubResource("SpriteFrames_2x8av")
+sprite_frames = SubResource("SpriteFrames_wb5ku")
 
 [node name="SomExplosao" type="AudioStreamPlayer" parent="." unique_id=521734867]
 stream = ExtResource("11_88upy")

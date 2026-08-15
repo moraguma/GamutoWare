@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://61hwjmu7gqdl"
-path="res://.godot/imported/explosion-7.png-125224ede5ccd2ddd3c3e305b2101fbd.ctex"
+uid="uid://cx31dlilxdksr"
+path="res://.godot/imported/spritesheet.png-89000236e37698ecdb1850a7f6e39b6a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-7.png"
-dest_files=["res://.godot/imported/explosion-7.png-125224ede5ccd2ddd3c3e305b2101fbd.ctex"]
+source_file="res://microjogos/2026S1/projeto-yuji/recursos/imagens/spritesheet.png"
+dest_files=["res://.godot/imported/spritesheet.png-89000236e37698ecdb1850a7f6e39b6a.ctex"]
 
 [params]
 

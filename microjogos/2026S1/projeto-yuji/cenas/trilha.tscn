@@ -2,24 +2,15 @@
 
 [ext_resource type="Script" uid="uid://b115mb3ql80fd" path="res://microjogos/2026S1/projeto-yuji/cenas/scripts/trilha.gd" id="1_5402k"]
 
-[sub_resource type="Gradient" id="Gradient_cr45j"]
-offsets = PackedFloat32Array(0.51532036)
-colors = PackedColorArray(1, 1, 1, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_5402k"]
-gradient = SubResource("Gradient_cr45j")
-
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_cr45j"]
 
 [node name="Area2D" type="StaticBody2D" unique_id=640367009]
 script = ExtResource("1_5402k")
 
 [node name="Trilha" type="Line2D" parent="." unique_id=362965706]
-modulate = Color(0.94509804, 0, 1, 1)
 points = PackedVector2Array(0, 0, 0, 0)
 width = 12.0
-default_color = Color(0.94509804, 0, 1, 1)
-texture = SubResource("GradientTexture1D_5402k")
+default_color = Color(5.2943824e-06, 0.736006, 0.7206311, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1788498303]
 shape = SubResource("SegmentShape2D_cr45j")

@@ -2,14 +2,7 @@
 
 [ext_resource type="Script" uid="uid://su4d03rwumjh" path="res://microjogos/2026S1/projeto-yuji/cenas/scripts/player.gd" id="1_c6w80"]
 [ext_resource type="Texture2D" uid="uid://7tb302qjqrls" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/player_spritesheet.png" id="2_ncgum"]
-[ext_resource type="Texture2D" uid="uid://yg5pqfaqlsxd" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-1.png" id="3_txs4x"]
-[ext_resource type="Texture2D" uid="uid://bgbwyohhh72ry" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-2.png" id="4_r2iro"]
-[ext_resource type="Texture2D" uid="uid://b573ehix0rw0c" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-3.png" id="5_8g5u2"]
-[ext_resource type="Texture2D" uid="uid://mmmyy0tb241v" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-4.png" id="6_0ye00"]
-[ext_resource type="Texture2D" uid="uid://c6dbwpv2yo41v" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-5.png" id="7_k0iw7"]
-[ext_resource type="Texture2D" uid="uid://dr0futx3dmuvf" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-6.png" id="8_dj7nv"]
-[ext_resource type="Texture2D" uid="uid://61hwjmu7gqdl" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-7.png" id="9_cr6o8"]
-[ext_resource type="Texture2D" uid="uid://bvl44tsb2x6kl" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/explosion-8.png" id="10_ae0af"]
+[ext_resource type="Texture2D" uid="uid://cx31dlilxdksr" path="res://microjogos/2026S1/projeto-yuji/recursos/imagens/spritesheet.png" id="3_tkd13"]
 [ext_resource type="AudioStream" uid="uid://ch5cqkm8fcpdl" path="res://microjogos/2026S1/projeto-yuji/recursos/sons/explosion.wav" id="11_r2iro"]
 
 [sub_resource type="Animation" id="Animation_uh1io"]
@@ -54,32 +47,64 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tkd13"]
 size = Vector2(12, 12)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_bk5yo"]
+atlas = ExtResource("3_tkd13")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w45lj"]
+atlas = ExtResource("3_tkd13")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_py2ap"]
+atlas = ExtResource("3_tkd13")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b48hd"]
+atlas = ExtResource("3_tkd13")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwetm"]
+atlas = ExtResource("3_tkd13")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_txs4x"]
+atlas = ExtResource("3_tkd13")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2iro"]
+atlas = ExtResource("3_tkd13")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8g5u2"]
+atlas = ExtResource("3_tkd13")
+region = Rect2(96, 32, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_g6ler"]
 animations = [{
 "frames": [{
 "duration": 0.3,
-"texture": ExtResource("3_txs4x")
+"texture": SubResource("AtlasTexture_bk5yo")
 }, {
 "duration": 0.3,
-"texture": ExtResource("4_r2iro")
+"texture": SubResource("AtlasTexture_w45lj")
 }, {
 "duration": 0.3,
-"texture": ExtResource("5_8g5u2")
+"texture": SubResource("AtlasTexture_py2ap")
 }, {
 "duration": 0.3,
-"texture": ExtResource("6_0ye00")
+"texture": SubResource("AtlasTexture_b48hd")
 }, {
 "duration": 0.3,
-"texture": ExtResource("7_k0iw7")
+"texture": SubResource("AtlasTexture_fwetm")
 }, {
 "duration": 0.3,
-"texture": ExtResource("8_dj7nv")
+"texture": SubResource("AtlasTexture_txs4x")
 }, {
 "duration": 0.3,
-"texture": ExtResource("9_cr6o8")
+"texture": SubResource("AtlasTexture_r2iro")
 }, {
-"duration": 1.0,
-"texture": ExtResource("10_ae0af")
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_8g5u2")
 }],
 "loop": false,
 "name": &"default",
@@ -116,7 +141,6 @@ z_index = 1
 texture_filter = 1
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_g6ler")
-frame = 7
 frame_progress = 1.0
 
 [node name="SomExplosao" type="AudioStreamPlayer" parent="." unique_id=1592427938]
