@@ -1,28 +1,15 @@
 extends Node2D
-# --------------------------------------------------------------------------------------------------
-# FUNÇÕES PADRÃO
-# --------------------------------------------------------------------------------------------------
+func _ready() -> void:
+	var caixa = get_node("Caixa")
+	caixa.position.y = randf_range(400,800)
+	var zumbi = get_node('zumbi do ib')
+	zumbi.position.y = randf_range(200,1000)
+	var musica = get_node("musica_background")
+	musica.play()
+	pass # Replace with function body.
 
-# Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
-func _ready():
-	pass
 
-# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
-# a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
-# a última chamada desta função. O comando pass não faz nada
-func _physics_process(delta):
-	pass
-
-# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a renderização, 
-# como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
-# desde a última chamada desta função. O comando pass não faz nada
-func _process(delta):
-	pass
-
-# --------------------------------------------------------------------------------------------------
-# SUAS FUNÇÕES
-# --------------------------------------------------------------------------------------------------
-
-# Um método genérico. Crie quantos métodos você precisar!
-func my_method():
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	
 	pass

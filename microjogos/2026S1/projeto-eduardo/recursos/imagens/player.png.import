@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vtim5xpble7t"
-path="res://.godot/imported/Captura de tela 2026-04-19 172410.png-0bf9d8daa59b4c200ddf9089bc326f5f.ctex"
+uid="uid://cad6xdo1urnkq"
+path="res://.godot/imported/player.png-fc3522fa7a0047afb510877183e1406e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/Captura de tela 2026-04-19 172410.png"
-dest_files=["res://.godot/imported/Captura de tela 2026-04-19 172410.png-0bf9d8daa59b4c200ddf9089bc326f5f.ctex"]
+source_file="res://microjogos/2026S1/projeto-eduardo/recursos/imagens/player.png"
+dest_files=["res://.godot/imported/player.png-fc3522fa7a0047afb510877183e1406e.ctex"]
 
 [params]
 
