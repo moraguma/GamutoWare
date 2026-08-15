@@ -60,4 +60,3 @@ func _process(delta):
 			print('[Player_seta] LancheNaMao =', LancheNaMao)
 			print('[Display/Pedido] Pedido = ', pedido)
 			print('-----')
-
