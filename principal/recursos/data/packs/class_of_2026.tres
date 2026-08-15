@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="MicrogamePack" format=3 uid="uid://clmk7as27rlw5"]
 
 [ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_xkemv"]
-[ext_resource type="Resource" uid="uid://b8juwph41hfwl" path="res://microjogos/2026S1/projeto-eduardo/microgame.tres" id="2_jn2wo"]
+[ext_resource type="Resource" uid="uid://bgsxotmjqvxi8" path="res://microjogos/2026S1/ProjetoBebeTunado/microgame.tres" id="2_jn2wo"]
 [ext_resource type="Script" uid="uid://cv53qaorwqxj0" path="res://principal/recursos/data/MicrogamePack.gd" id="11_i5jit"]
 
 [resource]

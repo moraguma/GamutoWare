@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" format=3 uid="uid://dr6mqimob56np"]
+
+[ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_0j4ru"]
+[ext_resource type="PackedScene" uid="uid://cdhvl35umnn5n" path="res://microjogos/2026S1/projeto_luis/cenas/main.tscn" id="1_6b2ja"]
+[ext_resource type="Texture2D" uid="uid://bmwtj361sglux" path="res://microjogos/2026S1/projeto_luis/capa.png" id="1_iq8vk"]
+
+[resource]
+script = ExtResource("1_0j4ru")
+cover = ExtResource("1_iq8vk")
+title_pt = &"PASSARINHAR"
+title_en = &"BIRDWATCHING"
+credits_pt = "Luis Terasawa
+
+Som
+Câmera: https://freesound.org/people/Tonik1105/sounds/520684/
+Pássaros: https://freesound.org/people/tsidilin/sounds/456208/"
+credits_en = "Luis Terasawa
+
+Sound
+Camera: https://freesound.org/people/Tonik1105/sounds/520684/
+Birds: https://freesound.org/people/tsidilin/sounds/456208/"
+start_message_pt = &"FOTOGRAFE!"
+start_message_en = &"TAKE PICTURES!"
+main_scene = ExtResource("1_6b2ja")

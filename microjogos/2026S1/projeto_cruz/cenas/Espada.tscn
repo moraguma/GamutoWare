@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://l3ulejco47xf"]
+
+[ext_resource type="Texture2D" uid="uid://cerrkuc3s83ai" path="res://microjogos/2026S1/projeto_cruz/recursos/imagens/Spirte_slash.png" id="1_dtdc8"]
+[ext_resource type="Script" uid="uid://e5b01ax74kfy" path="res://microjogos/2026S1/projeto_cruz/cenas/scripts/area_espada.gd" id="2_54q0f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xgrfn"]
+size = Vector2(168, 438)
+
+[node name="Espada" type="Node2D" unique_id=1733873935]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1544234971]
+script = ExtResource("2_54q0f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=11034316]
+position = Vector2(-25, -1)
+shape = SubResource("RectangleShape2D_xgrfn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=6602024]
+scale = Vector2(8.2, 8.2)
+texture = ExtResource("1_dtdc8")
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
