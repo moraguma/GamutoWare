@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://bj8a30w4jl5vs"]
+
+[ext_resource type="Script" uid="uid://bk5aga8421oc1" path="res://microjogos/2026S1/projeto_rafael_mello/cenas/scripts/tiro_1.gd" id="1_7ve2q"]
+[ext_resource type="Texture2D" uid="uid://b1ermcvhdofp8" path="res://microjogos/2026S1/projeto_rafael_mello/recursos/imagens/shoot_sprite.png" id="2_s0qbb"]
+[ext_resource type="Shader" uid="uid://27pqd2oyrbvf" path="res://microjogos/2026S1/projeto_rafael_mello/recursos/fire_shader.gdshader" id="2_u1aar"]
+[ext_resource type="Texture2D" uid="uid://dj07dmv6skfh7" path="res://microjogos/2026S1/projeto_rafael_mello/recursos/imagens/capacete_sprite.png" id="4_xu8if"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a0sra"]
+radius = 30.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jjjco"]
+shader = ExtResource("2_u1aar")
+shader_parameter/amount = 10.0
+shader_parameter/texture_details = Vector4(0, 0, 1, 1)
+shader_parameter/image_details = Vector2(1, 1)
+shader_parameter/colour_1 = Color(1, 1, 1, 1)
+shader_parameter/colour_2 = Color(1, 0, 0, 1)
+shader_parameter/id = 0.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5gpm"]
+atlas = ExtResource("2_s0qbb")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lqua3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c5gpm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r2wvl"]
+shader = ExtResource("2_u1aar")
+shader_parameter/amount = 10.0
+shader_parameter/texture_details = Vector4(0, 0, 1, 1)
+shader_parameter/image_details = Vector2(1, 1)
+shader_parameter/colour_1 = Color(1, 0, 0, 1)
+shader_parameter/colour_2 = Color(1, 0.38431373, 0, 1)
+shader_parameter/id = 1.0
+
+[node name="Tiro1" type="Area2D" unique_id=1073928532]
+script = ExtResource("1_7ve2q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2038585133]
+shape = SubResource("CircleShape2D_a0sra")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1366202048]
+texture_filter = 1
+material = SubResource("ShaderMaterial_jjjco")
+sprite_frames = SubResource("SpriteFrames_lqua3")
+frame_progress = 0.36013806
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1815314503]
+material = SubResource("ShaderMaterial_r2wvl")
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_xu8if")
