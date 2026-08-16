@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://dtx380t8rauxk"]
+
+[ext_resource type="Texture2D" uid="uid://b4ufd1ht433cr" path="res://microjogos/2026S1/projeto_rafael_mello/recursos/imagens/EXPLOSION_ANIMATION.png" id="1_mtb1l"]
+[ext_resource type="Script" uid="uid://dty4fkvslunp7" path="res://microjogos/2026S1/projeto_rafael_mello/cenas/scripts/explosao.gd" id="2_ban6c"]
+[ext_resource type="AudioStream" uid="uid://d173o0xy1mgrb" path="res://microjogos/2022S1/race/recursos/explosion.wav" id="3_ban6c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2cvis"]
+atlas = ExtResource("1_mtb1l")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqib0"]
+atlas = ExtResource("1_mtb1l")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_or8bi"]
+atlas = ExtResource("1_mtb1l")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbs7w"]
+atlas = ExtResource("1_mtb1l")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r27xr"]
+atlas = ExtResource("1_mtb1l")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o43qq"]
+atlas = ExtResource("1_mtb1l")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mchwc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2cvis")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqib0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_or8bi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbs7w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r27xr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o43qq")
+}],
+"loop": false,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="Explosao" type="AnimatedSprite2D" unique_id=1004333484]
+texture_filter = 1
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_mchwc")
+frame_progress = 0.60306513
+script = ExtResource("2_ban6c")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=619143734]
+stream = ExtResource("3_ban6c")
+autoplay = true
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]
