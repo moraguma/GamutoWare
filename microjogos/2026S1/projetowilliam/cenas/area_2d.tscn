@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://e3mr7l7axqt"]
+
+[sub_resource type="GDScript" id="GDScript_syhq2"]
+script/source = "extends Area2D
+
+var speed = -300
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+	
+	
+
+func _physics_process(delta: float) -> void:
+	position.y += speed * delta
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0tau8"]
+
+[node name="Area2D" type="Area2D" unique_id=893151447]
+script = SubResource("GDScript_syhq2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2062923439]
+position = Vector2(28, -28)
+shape = SubResource("CircleShape2D_0tau8")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1243527244]
+offset_left = -5.0
+offset_top = -77.0
+offset_right = 65.0
+offset_bottom = -1.0

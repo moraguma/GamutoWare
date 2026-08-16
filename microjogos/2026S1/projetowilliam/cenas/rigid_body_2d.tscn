@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dvv13o4lqgx50"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0tau8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0tau8"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v6th6"]
+load_path = "res://.godot/imported/obj_crate002.png-9b471197eedb213dfacefbb295a909e4.ctex"
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=804181768]
+physics_material_override = SubResource("PhysicsMaterial_0tau8")
+gravity_scale = -1.124
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=826484476]
+shape = SubResource("RectangleShape2D_0tau8")
+
+[node name="ColorRect" type="Sprite2D" parent="." unique_id=1862221]
+texture = SubResource("CompressedTexture2D_v6th6")
