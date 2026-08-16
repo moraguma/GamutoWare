@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cxgkm31jwmyw3"]
+[gd_scene format=3 uid="uid://cxgkm31jwmyw3"]
 
 [ext_resource type="Script" uid="uid://cx2jehmbf4ux4" path="res://microjogos/2024S1/quimica-quiz/cenas/scripts/player.gd" id="1_v25qy"]
 [ext_resource type="Texture2D" uid="uid://0lg272wtt7c5" path="res://microjogos/2024S1/quimica-quiz/recursos/assets/3 - Big Red/Idle_(32 x 32).png" id="2_gluh7"]
@@ -103,16 +103,16 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_5fgry"]
 radius = 7.0
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" unique_id=1271920629]
 script = ExtResource("1_v25qy")
 metadata/_edit_group_ = true
 
-[node name="anim" type="AnimatedSprite2D" parent="."]
+[node name="anim" type="AnimatedSprite2D" parent="." unique_id=2077843556]
 texture_filter = 3
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_n6q6x")
 animation = &"idle"
 autoplay = "idle"
 
-[node name="collision" type="CollisionShape2D" parent="."]
+[node name="collision" type="CollisionShape2D" parent="." unique_id=677971449]
 shape = SubResource("CircleShape2D_5fgry")

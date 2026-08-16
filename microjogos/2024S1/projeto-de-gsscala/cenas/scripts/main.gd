@@ -1,11 +1,5 @@
 extends Node2D
 
-signal win
-signal lose
-
-const WIDTH = 1920
-const HEIGHT = 1080
-
 var index = 0
 var combo_list = ["UD","UL","UR","UA","DL","DR","DA","LR","LA","RA"]
 var input_string = ""
@@ -18,8 +12,8 @@ func _ready():
 	update_animations()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	if index > 7:
+func _process(_delta):
+	if index > 6:
 		return
 	input_string = ""
 	if Input.is_action_pressed("cima"): input_string += 'U' 
@@ -34,8 +28,8 @@ func _process(delta):
 		$"boss".play("hit")
 		$AudioStreamPlayer2.play()
 		#increase panning speed
-		if index > 7:
-			register_win()
+		if index > 6:
+			Minigames.register_win(self)
 			$AudioStreamPlayer3.play()
 			$"boss".play("death")
 			$"arrow_left".play("false")
@@ -45,15 +39,6 @@ func _process(delta):
 			$"action".play("false")
 		else:
 			update_animations()
-
-
-
-func register_win():
-	emit_signal("win")
-
-
-func register_lose():
-	emit_signal("lose")
 	
 func update_animations():
 	if "L" in combo_list[index]:

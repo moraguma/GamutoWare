@@ -15,6 +15,7 @@ script = ExtResource("1_rw4ml")
 metadata/_edit_horizontal_guides_ = [-53.0]
 
 [node name="Policias" type="Node2D" parent="." unique_id=1074020167]
+position = Vector2(-500, 0)
 script = ExtResource("3_86nno")
 
 [node name="CarroPolicia" parent="Policias" unique_id=450514800 instance=ExtResource("103_2jaq6")]

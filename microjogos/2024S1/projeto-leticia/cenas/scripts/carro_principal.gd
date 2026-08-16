@@ -4,7 +4,7 @@ signal lose
 var esta_em_cima = true
 var is_lose = false
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("cima") and not is_lose:
 		if not esta_em_cima:
 			position.y -= 150
@@ -16,6 +16,6 @@ func _process(delta):
 			z_index = 1
 			esta_em_cima = false
 
-func _on_body_entered(body):
+func _on_body_entered(_body):
 	is_lose = true
 	lose.emit()

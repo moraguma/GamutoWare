@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://kf7dv2a352d8"]
+
+[ext_resource type="Script" uid="uid://v3gsxdydbc3q" path="res://microjogos/2024S1/projeto-da-ana-luiza/cenas/scripts/main.gd" id="1_ydbqf"]
+[ext_resource type="Texture2D" uid="uid://cwe056qhc7fkw" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/FUNDO.png" id="2_teetv"]
+[ext_resource type="Texture2D" uid="uid://cbo4w7a2r7xv7" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/Palco.png" id="3_nbcoa"]
+[ext_resource type="Texture2D" uid="uid://d0e6wuxscgwq1" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/holofote.png" id="4_70n8c"]
+[ext_resource type="PackedScene" uid="uid://bxp45krk5k6wt" path="res://microjogos/2024S1/projeto-da-ana-luiza/cenas/mafetotal.tscn" id="5_50ps1"]
+[ext_resource type="Texture2D" uid="uid://bqk72p0lqnmj6" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/plateia.png" id="6_5ego4"]
+[ext_resource type="AudioStream" uid="uid://dhigtx12xrm0q" path="res://microjogos/2024S1/projeto-da-ana-luiza/recursos/Dancing Queen song.wav" id="7_bjcqg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lehno"]
+size = Vector2(1920, 50)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lehno"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7yrij"]
+size = Vector2(1920, 256)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wjpbq"]
+size = Vector2(60, 700)
+
+[sub_resource type="Animation" id="Animation_d0rvo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(938, 710)]
+}
+
+[sub_resource type="Animation" id="Animation_lehno"]
+resource_name = "move"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(938, 710), Vector2(938, 690), Vector2(938, 710)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2y5b8"]
+_data = {
+&"RESET": SubResource("Animation_d0rvo"),
+&"move": SubResource("Animation_lehno")
+}
+
+[node name="Palco" type="Node2D" unique_id=117818462]
+script = ExtResource("1_ydbqf")
+
+[node name="Background" type="Node2D" parent="." unique_id=268780132]
+
+[node name="Background" type="Sprite2D" parent="Background" unique_id=330030479]
+texture_filter = 3
+scale = Vector2(1.92, 1.078)
+texture = ExtResource("2_teetv")
+centered = false
+
+[node name="Palco" type="Sprite2D" parent="Background" unique_id=663667818]
+texture_filter = 3
+position = Vector2(960, 549)
+scale = Vector2(10, 10)
+texture = ExtResource("3_nbcoa")
+
+[node name="L_Lamp" type="Sprite2D" parent="Background" unique_id=192083950]
+texture_filter = 3
+position = Vector2(410.177, 691.18)
+scale = Vector2(0.739294, 0.70472)
+texture = ExtResource("4_70n8c")
+flip_h = true
+
+[node name="R_Lamp" type="Sprite2D" parent="Background" unique_id=726367210]
+position = Vector2(1527, 691)
+scale = Vector2(0.727445, 0.700628)
+texture = ExtResource("4_70n8c")
+
+[node name="Mafe" parent="." unique_id=1846447690 instance=ExtResource("5_50ps1")]
+position = Vector2(960, 800)
+
+[node name="Deadzone" type="Area2D" parent="." unique_id=2088902900]
+position = Vector2(960, 800)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deadzone" unique_id=43241257]
+shape = SubResource("RectangleShape2D_lehno")
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=1229954584]
+physics_material_override = SubResource("PhysicsMaterial_lehno")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls" unique_id=895201179]
+position = Vector2(960, 953)
+shape = SubResource("RectangleShape2D_7yrij")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls" unique_id=266484660]
+position = Vector2(1920, 500)
+shape = SubResource("RectangleShape2D_wjpbq")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls" unique_id=1193444251]
+position = Vector2(0, 500)
+shape = SubResource("RectangleShape2D_wjpbq")
+
+[node name="Plateia" type="Sprite2D" parent="." unique_id=1330329440]
+position = Vector2(938, 710)
+scale = Vector2(2.02178, 1.84251)
+texture = ExtResource("6_5ego4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Plateia" unique_id=1422486431]
+libraries/ = SubResource("AnimationLibrary_2y5b8")
+autoplay = &"move"
+
+[node name="Timer" type="Timer" parent="." unique_id=2094884872]
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1353362155]
+stream = ExtResource("7_bjcqg")
+autoplay = true
+
+[connection signal="body_entered" from="Deadzone" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="spawn_estrela"]
