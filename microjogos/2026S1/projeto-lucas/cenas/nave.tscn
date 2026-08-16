@@ -1,0 +1,199 @@
+[gd_scene format=3 uid="uid://wsioy633wf24"]
+
+[ext_resource type="Script" uid="uid://dckv6nj1rcrr5" path="res://microjogos/2026S1/projeto-lucas/cenas/scripts/nave.gd" id="1_7xgnn"]
+[ext_resource type="Texture2D" uid="uid://dp5t6ykdkfc3k" path="res://microjogos/2026S1/projeto-lucas/recursos/imagens/ship.png" id="1_ff7sh"]
+[ext_resource type="AudioStream" uid="uid://b68xkygjg7fxb" path="res://microjogos/2026S1/projeto-lucas/recursos/sons/somNave.mp3" id="3_dcxtq"]
+[ext_resource type="Texture2D" uid="uid://cca64ijh8oiqc" path="res://microjogos/2026S1/projeto-lucas/recursos/imagens/Pixel Explosion Effects Pack 01 v1_1/SpaceExplosion/Spritesheet/SpaceExplosion_spritesheet.png" id="3_lewy3"]
+[ext_resource type="AudioStream" uid="uid://b6yjchbq64rov" path="res://microjogos/2026S1/projeto-lucas/recursos/sons/explosion.wav" id="4_vaogk"]
+
+[sub_resource type="Animation" id="Animation_7xgnn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="Animation" id="Animation_dcxtq"]
+resource_name = "acelerado"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_vaogk"]
+resource_name = "parado"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+
+[sub_resource type="Animation" id="Animation_lewy3"]
+resource_name = "win_rotation"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.03333333, 0.06666667, 0.1, 0.13333334, 0.16666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [3, 4, 5, 6, 7, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vaogk"]
+_data = {
+&"RESET": SubResource("Animation_7xgnn"),
+&"acelerado": SubResource("Animation_dcxtq"),
+&"parado": SubResource("Animation_vaogk"),
+&"win_rotation": SubResource("Animation_lewy3")
+}
+
+[sub_resource type="Gradient" id="Gradient_7xgnn"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="Animation" id="Animation_i85yw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_ca8my"]
+resource_name = "explodir"
+length = 0.35
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666667, 0.1, 0.13333334, 0.16666667, 0.2, 0.23333333, 0.26666668, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 1, 2, 3, 4, 5, 6, 8, 9]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jdaff"]
+_data = {
+&"RESET": SubResource("Animation_i85yw"),
+&"explodir": SubResource("Animation_ca8my")
+}
+
+[sub_resource type="Curve" id="Curve_vaogk"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_lewy3"]
+offsets = PackedFloat32Array(0, 0.242424, 0.643939, 1)
+colors = PackedColorArray(1, 0, 0, 1, 1, 0.896484, 0, 1, 1, 0.93375, 0.36, 1, 1, 0.935764, 0.421875, 0)
+
+[node name="Nave" type="CharacterBody2D" unique_id=1611160911]
+script = ExtResource("1_7xgnn")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=33833964]
+visible = false
+position = Vector2(8.940697e-08, -4)
+scale = Vector2(0.90000004, 1.2)
+polygon = PackedVector2Array(-9.934108e-08, -10.833334, 10, -1.6666665, 10, 10, -10, 10, -10, -1.6666665)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1674343361]
+texture_filter = 1
+scale = Vector2(1.3541666, 1.3541666)
+texture = ExtResource("1_ff7sh")
+hframes = 4
+vframes = 2
+frame = 2
+region_rect = Rect2(33, 0, 14, 24)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D" unique_id=1945986939]
+libraries/ = SubResource("AnimationLibrary_vaogk")
+
+[node name="ExplosionParticles" type="CPUParticles2D" parent="." unique_id=1340625500]
+z_index = 2
+emitting = false
+amount = 128
+lifetime = 6.0
+one_shot = true
+explosiveness = 1.0
+emission_shape = 2
+emission_sphere_radius = 1.0
+direction = Vector2(0, 0)
+spread = 50.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 80.0
+initial_velocity_max = 130.0
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+color = Color(0.38431373, 0.38431373, 0.38431373, 1)
+color_ramp = SubResource("Gradient_7xgnn")
+
+[node name="ExplosionSprite" type="Sprite2D" parent="." unique_id=1336189011]
+visible = false
+scale = Vector2(0.3828125, 0.3828125)
+texture = ExtResource("3_lewy3")
+hframes = 10
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ExplosionSprite" unique_id=480538612]
+libraries/ = SubResource("AnimationLibrary_jdaff")
+
+[node name="Trail" type="CPUParticles2D" parent="." unique_id=17821467]
+position = Vector2(0, 10)
+amount = 15
+lifetime = 0.5
+emission_shape = 3
+emission_rect_extents = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 24.0
+initial_velocity_max = 25.0
+scale_amount_min = 3.0
+scale_amount_max = 4.0
+scale_amount_curve = SubResource("Curve_vaogk")
+color_ramp = SubResource("Gradient_lewy3")
+
+[node name="AudioPropulsao" type="AudioStreamPlayer" parent="." unique_id=960280666]
+stream = ExtResource("3_dcxtq")
+volume_db = 10.0
+
+[node name="AudioExplosao" type="AudioStreamPlayer" parent="." unique_id=302656096]
+stream = ExtResource("4_vaogk")
+volume_db = 24.0
