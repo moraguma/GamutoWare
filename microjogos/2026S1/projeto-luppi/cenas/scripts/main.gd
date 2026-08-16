@@ -1,28 +1,32 @@
 extends Node2D
-# --------------------------------------------------------------------------------------------------
-# FUNÇÕES PADRÃO
-# --------------------------------------------------------------------------------------------------
 
-# Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
-func _ready():
-	pass
+@export var dinheiro_colocado = false
+@export var ra_colocado = false
+var ganhou = false
 
-# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
-# a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
-# a última chamada desta função. O comando pass não faz nada
-func _physics_process(delta):
-	pass
+func _on_cartão_movendo_ra_ativado() -> void:
+	if dinheiro_colocado:
+		Minigames.register_win(self)
+		#$VitoriaPorra.visible = true
+		ganhou = true
+	ra_colocado = true
+	
 
-# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a renderização, 
-# como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
-# desde a última chamada desta função. O comando pass não faz nada
-func _process(delta):
-	pass
+func _on_cartão_movendo_ra_desativo() -> void:
+	if ganhou:
+		return
+	Minigames.register_lose(self)
+	ra_colocado = false
 
-# --------------------------------------------------------------------------------------------------
-# SUAS FUNÇÕES
-# --------------------------------------------------------------------------------------------------
+func _on_dinheiro_movendo_dinheiro_ativado() -> void:
+	if ra_colocado:
+		Minigames.register_win(self)
+		$VitoriaPorra.visible = true
+		ganhou = true
+	dinheiro_colocado = true
 
-# Um método genérico. Crie quantos métodos você precisar!
-func my_method():
-	pass
+func _on_dinheiro_movendo_dinheiro_desativo() -> void:
+	if ganhou:
+		return
+	Minigames.register_lose(self)
+	dinheiro_colocado = false

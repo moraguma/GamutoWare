@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doyh66c3e0p43"
-path="res://.godot/imported/dinheiro movendo.png-fb0df1336dea3171a748eca569af0cc8.ctex"
+uid="uid://dorilj76nuvhj"
+path="res://.godot/imported/ra_movendo.png-a80b3f07bdad877dd82532bbda420a85.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2026S1/projeto-luppi/recursos/imagens/dinheiro movendo.png"
-dest_files=["res://.godot/imported/dinheiro movendo.png-fb0df1336dea3171a748eca569af0cc8.ctex"]
+source_file="res://microjogos/2026S1/projeto-luppi/recursos/imagens/ra_movendo.png"
+dest_files=["res://.godot/imported/ra_movendo.png-a80b3f07bdad877dd82532bbda420a85.ctex"]
 
 [params]
 
