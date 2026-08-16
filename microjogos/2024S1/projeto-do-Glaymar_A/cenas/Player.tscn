@@ -1,0 +1,144 @@
+[gd_scene load_steps=11 format=3 uid="uid://dt7ewgrxnk86g"]
+
+[ext_resource type="Script" uid="uid://b3bnyiue4rga8" path="res://microjogos/2024S1/projeto-do-Glaymar_A/cenas/scripts/CharacterBody2D.gd" id="1_6jrih"]
+[ext_resource type="Texture2D" uid="uid://3dyh7wv3c65q" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/sprites/persona.png" id="2_6e7nt"]
+[ext_resource type="Texture2D" uid="uid://dxy3gvgm3dijq" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/sprites/sombra.png" id="2_a54cd"]
+[ext_resource type="PackedScene" uid="uid://d1gunhxurm3j6" path="res://microjogos/2024S1/projeto-do-Glaymar_A/cenas/arma.tscn" id="3_bxmo8"]
+[ext_resource type="AudioStream" uid="uid://dktmq71h2few3" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/sounds/stepir44-hurt-sound-435314.wav" id="5_k58nf"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mnbm7"]
+radius = 12.0
+height = 32.0
+
+[sub_resource type="Animation" id="Animation_k58nf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Persona:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -33)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Persona:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Arma:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(9, -17)]
+}
+
+[sub_resource type="Animation" id="Animation_2uhfe"]
+resource_name = "death"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Persona:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -1.5708]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Persona:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -33), Vector2(-33, -7.115)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Arma:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.366667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(9, -17), Vector2(19.4, 9.315)]
+}
+
+[sub_resource type="Animation" id="Animation_mnbm7"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Persona:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -33), Vector2(0, -32), Vector2(0, -33)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s1ieg"]
+_data = {
+&"RESET": SubResource("Animation_k58nf"),
+&"death": SubResource("Animation_2uhfe"),
+&"idle": SubResource("Animation_mnbm7")
+}
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+z_index = 1
+script = ExtResource("1_6jrih")
+
+[node name="Sombra" type="Sprite2D" parent="."]
+texture_filter = 3
+scale = Vector2(1.945, 1.945)
+texture = ExtResource("2_a54cd")
+
+[node name="Persona" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(0, -33)
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("2_6e7nt")
+
+[node name="Hurtbox" type="CollisionShape2D" parent="."]
+position = Vector2(0, -12)
+shape = SubResource("CapsuleShape2D_mnbm7")
+
+[node name="Arma" parent="." instance=ExtResource("3_bxmo8")]
+position = Vector2(9, -17)
+rotation = 0.0120305
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_s1ieg")
+}
+autoplay = "idle"
+
+[node name="Hurt" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_k58nf")

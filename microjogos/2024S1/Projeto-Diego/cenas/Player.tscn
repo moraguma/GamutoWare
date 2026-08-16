@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3sl5fdttf5ub"]
+
+[ext_resource type="Script" uid="uid://b5yt3ba52u6mk" path="res://microjogos/2024S1/projeto-diego/cenas/scripts/player.gd" id="1_cyqef"]
+[ext_resource type="Texture2D" uid="uid://b66e5nnnnmg11" path="res://icon.png" id="1_h8oak"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qa6tp"]
+radius = 23.0
+height = 46.0
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1_cyqef")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_qa6tp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(0, -6)
+texture = ExtResource("1_h8oak")

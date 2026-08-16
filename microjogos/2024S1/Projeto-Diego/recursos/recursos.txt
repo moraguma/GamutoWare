@@ -1,0 +1,1 @@
+Guarde os recursos - como imagens, sons e fontes - que seu jogo vai usar aqui. É recomendado criar subpastas pra organizar melhor seus arquivos dependendo do tipo ou propósito
