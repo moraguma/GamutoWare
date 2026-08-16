@@ -3,63 +3,40 @@
 [ext_resource type="Script" uid="uid://q4fsm1t62qym" path="res://microjogos/2026S1/projeto-jojodoidao/cenas/scripts/main.gd" id="1_uo0ms"]
 [ext_resource type="Texture2D" uid="uid://4taqkr3dwl2q" path="res://microjogos/2026S1/projeto-jojodoidao/recursos/imagens/Mesa.png" id="2_vqo3t"]
 [ext_resource type="Texture2D" uid="uid://b00aymefchyso" path="res://microjogos/2026S1/projeto-jojodoidao/recursos/imagens/bola.png" id="3_5w4rh"]
-[ext_resource type="Script" uid="uid://dbyn15bjeulh3" path="res://microjogos/2026S1/projeto-jojodoidao/cenas/bola_8.gd" id="3_t6tta"]
 [ext_resource type="Script" uid="uid://jiaarg6jyh5o" path="res://microjogos/2026S1/projeto-jojodoidao/cenas/Taco.gd" id="4_t6tta"]
-[ext_resource type="Script" uid="uid://c2i1ir0jb8a3y" path="res://microjogos/2026S1/projeto-jojodoidao/cenas/bola_branca.gd" id="5_o1fue"]
 [ext_resource type="Texture2D" uid="uid://buwc2sy8ec6ai" path="res://microjogos/2026S1/projeto-jojodoidao/recursos/imagens/Taco.png" id="5_t6tta"]
 [ext_resource type="Script" uid="uid://cp05mq32qjcxy" path="res://microjogos/2026S1/projeto-jojodoidao/cenas/progress_bar.gd" id="6_60pnv"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5w4rh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5w4rh"]
-size = Vector2(125.13011, 476.9312)
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_t6tta"]
+size = Vector2(134.50027, 1080.0002)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_js2oc"]
-size = Vector2(125.13011, 559.6337)
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_b5pa8"]
+size = Vector2(68, 674.4085)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nbw4a"]
-size = Vector2(125.13011, 567.4882)
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_60pnv"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_t6tta"]
-size = Vector2(127.10762, 495.89587)
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_foa4d"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_60pnv"]
-size = Vector2(734.0454, 109.6695)
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qw8y7"]
-bounce = 0.5
-absorbent = true
+size = Vector2(1919.5657, 55.372025)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s8kbk"]
-size = Vector2(754.7535, 122.72658)
+size = Vector2(754.7535, 71.36329)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5w4rh"]
-radius = 89.41974
+radius = 73.109505
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vqo3t"]
-friction = 0.35
-bounce = 0.6
+friction = 0.05
+bounce = 0.9
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k71sy"]
 radius = 25.0
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_o1fue"]
-friction = 0.35
-bounce = 0.6
-
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_nbw4a"]
-bounce = 1.0
+friction = 0.1
+bounce = 0.4
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o1fue"]
-size = Vector2(106.84335, 47.3674)
+size = Vector2(34.99627, 57.188225)
 
 [node name="Main" type="Node2D" unique_id=1597121372]
 texture_filter = 1
@@ -68,110 +45,77 @@ script = ExtResource("1_uo0ms")
 [node name="Mesa" type="Node2D" parent="." unique_id=2033688722]
 
 [node name="Mesa" type="Sprite2D" parent="Mesa" unique_id=1510218305]
-position = Vector2(958, 548)
-rotation = 1.5707964
-scale = Vector2(0.75521356, 1.0185235)
 texture = ExtResource("2_vqo3t")
+centered = false
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Mesa/Mesa" unique_id=1983013042]
-position = Vector2(2.2901044, 2.2901042)
 disable_mode = 1
 physics_material_override = SubResource("PhysicsMaterial_5w4rh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa/Mesa/StaticBody2D" unique_id=1199827686]
-position = Vector2(-522.66394, -398.7901)
+position = Vector2(1852.25, 540)
 scale = Vector2(0.9999998, 0.9999999)
 shape = SubResource("RectangleShape2D_5w4rh")
 
-[node name="StaticBody2D5" type="StaticBody2D" parent="Mesa/Mesa" unique_id=165323425]
-position = Vector2(2.2901044, 2.2901042)
-disable_mode = 1
-physics_material_override = SubResource("PhysicsMaterial_t6tta")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa/Mesa/StaticBody2D5" unique_id=1068864930]
-position = Vector2(491.9497, 318.8004)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Mesa/Mesa/StaticBody2D" unique_id=1068864930]
+position = Vector2(1751, 540.7958)
 scale = Vector2(0.9999998, 0.9999999)
 shape = SubResource("RectangleShape2D_js2oc")
 
-[node name="StaticBody2D4" type="StaticBody2D" parent="Mesa/Mesa" unique_id=1893073318]
-position = Vector2(2.2901044, 2.2901042)
-disable_mode = 1
-physics_material_override = SubResource("PhysicsMaterial_b5pa8")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa/Mesa/StaticBody2D4" unique_id=532290215]
-position = Vector2(-512.7329, 306.03693)
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Mesa/Mesa/StaticBody2D" unique_id=532290215]
+position = Vector2(957.7826, 29.313992)
 scale = Vector2(0.9999998, 0.9999999)
 shape = SubResource("RectangleShape2D_nbw4a")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="Mesa/Mesa" unique_id=1853909983]
-position = Vector2(5.9542084, 6.412201)
-disable_mode = 1
-physics_material_override = SubResource("PhysicsMaterial_60pnv")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa/Mesa/StaticBody2D2" unique_id=595508936]
-position = Vector2(487.9458, -401.10117)
-scale = Vector2(0.99999934, 0.99999976)
-shape = SubResource("RectangleShape2D_t6tta")
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="Mesa/Mesa" unique_id=994585325]
-position = Vector2(-5.949851, 0.037573256)
-physics_material_override = SubResource("PhysicsMaterial_foa4d")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa/Mesa/StaticBody2D3" unique_id=63428679]
-position = Vector2(-1.0853271, -788.2871)
-scale = Vector2(0.9999998, 0.99999976)
-shape = SubResource("RectangleShape2D_60pnv")
-
-[node name="StaticBody2D6" type="StaticBody2D" parent="Mesa/Mesa" unique_id=1206897811]
-position = Vector2(-5.949851, 0.037573256)
-physics_material_override = SubResource("PhysicsMaterial_qw8y7")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa/Mesa/StaticBody2D6" unique_id=1292426697]
-position = Vector2(-2.6481934, 745.68713)
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Mesa/Mesa/StaticBody2D" unique_id=1292426697]
+position = Vector2(1239, 93.31836)
 scale = Vector2(0.9999998, 0.99999976)
 shape = SubResource("RectangleShape2D_s8kbk")
 
 [node name="Area2D" type="Area2D" parent="Mesa/Mesa" unique_id=2109215575]
+position = Vector2(1722, 91)
 disable_mode = 2
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa/Mesa/Area2D" unique_id=1472391206]
-position = Vector2(-494.5534, -743.1952)
 shape = SubResource("CircleShape2D_5w4rh")
 
-[node name="Bola 8" type="RigidBody2D" parent="." unique_id=1853483592]
+[node name="Bola8" type="RigidBody2D" parent="." unique_id=1853483592]
 position = Vector2(1617, 291)
 disable_mode = 2
 physics_material_override = SubResource("PhysicsMaterial_vqo3t")
 gravity_scale = 0.0
-script = ExtResource("3_t6tta")
+linear_damp = 1.0
+angular_damp = 1.0
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bola 8" unique_id=392487183]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bola8" unique_id=392487183]
 shape = SubResource("CircleShape2D_k71sy")
 
-[node name="Sprite2D" type="Sprite2D" parent="Bola 8" unique_id=1241160168]
+[node name="Sprite2D" type="Sprite2D" parent="Bola8" unique_id=1241160168]
 modulate = Color(0.1148968, 0.11489681, 0.1148968, 1)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_5w4rh")
 
-[node name="Bola Branca" type="RigidBody2D" parent="." unique_id=87760290]
+[node name="BolaBranca" type="RigidBody2D" parent="." unique_id=87760290]
 position = Vector2(1457, 451)
-mass = 1.8
-physics_material_override = SubResource("PhysicsMaterial_o1fue")
+physics_material_override = SubResource("PhysicsMaterial_vqo3t")
 gravity_scale = 0.0
-script = ExtResource("5_o1fue")
+linear_damp = 1.0
+angular_damp = 1.0
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bola Branca" unique_id=2090764257]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BolaBranca" unique_id=2090764257]
 shape = SubResource("CircleShape2D_k71sy")
 
-[node name="Sprite2D" type="Sprite2D" parent="Bola Branca" unique_id=287562473]
+[node name="Sprite2D" type="Sprite2D" parent="BolaBranca" unique_id=287562473]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_5w4rh")
 
 [node name="Taco" type="RigidBody2D" parent="." unique_id=1317704625 node_paths=PackedStringArray("progressebar")]
-position = Vector2(1387, 521)
-rotation = -0.7853982
+position = Vector2(1368, 535)
+rotation = -1.5707964
+mass = 4.0
 physics_material_override = SubResource("PhysicsMaterial_nbw4a")
 gravity_scale = 0.0
 contact_monitor = true
@@ -181,7 +125,7 @@ progressebar = NodePath("../ProgressBar")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Taco" unique_id=446375913]
-position = Vector2(-344, 90)
+position = Vector2(-382, 89.999985)
 texture = ExtResource("5_t6tta")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Taco" unique_id=1425888270]
@@ -197,6 +141,4 @@ fill_mode = 3
 script = ExtResource("6_60pnv")
 
 [connection signal="body_entered" from="Mesa/Mesa/Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="Mesa/Mesa/Area2D" to="Bola 8" method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="Mesa/Mesa/Area2D" to="Bola Branca" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Taco" to="Taco" method="_on_body_entered"]

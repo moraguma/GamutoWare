@@ -3,19 +3,16 @@ extends RigidBody2D
 
 # Called when the node enters the scene tree for the first time.
 @export var progressebar: ProgressBar
-	
+var input_rotacao: float = 0.0
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
+	input_rotacao = Input.get_axis("esquerda", "direita")
+	angular_velocity = -input_rotacao * 2.0 
 	if Input.is_action_just_released("acao"):
-		apply_impulse(Vector2.RIGHT.rotated(rotation) * 4.7 * progressebar.value)
-		
-
-
+		apply_impulse(Vector2.RIGHT.rotated(rotation) * progressebar.value * 15)
 
 
 func _on_body_entered(body: Node) -> void:
-	print("here")
 	queue_free()
-	pass # Replace with function body.
