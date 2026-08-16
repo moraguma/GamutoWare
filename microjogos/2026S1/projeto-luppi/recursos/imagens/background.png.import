@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwal7l7b8jwaf"
-path="res://.godot/imported/sucesso dinheiro(1).png-9d27e6b45d555c18536052f9ed435a0b.ctex"
+uid="uid://dbgfrnbo0wewa"
+path="res://.godot/imported/background.png-aa79c89b4c7bf7c7369b9af17ec3951b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2026S1/projeto-luppi/recursos/imagens/sucesso dinheiro(1).png"
-dest_files=["res://.godot/imported/sucesso dinheiro(1).png-9d27e6b45d555c18536052f9ed435a0b.ctex"]
+source_file="res://microjogos/2026S1/projeto-luppi/recursos/imagens/background.png"
+dest_files=["res://.godot/imported/background.png-aa79c89b4c7bf7c7369b9af17ec3951b.ctex"]
 
 [params]
 

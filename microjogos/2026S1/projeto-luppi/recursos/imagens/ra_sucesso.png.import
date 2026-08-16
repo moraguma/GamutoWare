@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgoeexnqlnk4g"
-path="res://.godot/imported/sucesso RA(1).png-639d5809d3176b296938ca7cd30ee21f.ctex"
+path="res://.godot/imported/ra_sucesso.png-8a5b8b8d0dcc7b786b6568e0af38a334.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2026S1/projeto-luppi/recursos/imagens/sucesso RA(1).png"
-dest_files=["res://.godot/imported/sucesso RA(1).png-639d5809d3176b296938ca7cd30ee21f.ctex"]
+source_file="res://microjogos/2026S1/projeto-luppi/recursos/imagens/ra_sucesso.png"
+dest_files=["res://.godot/imported/ra_sucesso.png-8a5b8b8d0dcc7b786b6568e0af38a334.ctex"]
 
 [params]
 

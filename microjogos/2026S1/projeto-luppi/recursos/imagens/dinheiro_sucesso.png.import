@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbgfrnbo0wewa"
-path="res://.godot/imported/fundo com instrução.png-5a87cb1365b057736d0eab46fa75e909.ctex"
+uid="uid://bwal7l7b8jwaf"
+path="res://.godot/imported/dinheiro_sucesso.png-250a83a39f62e8d6e94fb24d6e818d73.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2026S1/projeto-luppi/recursos/imagens/fundo com instrução.png"
-dest_files=["res://.godot/imported/fundo com instrução.png-5a87cb1365b057736d0eab46fa75e909.ctex"]
+source_file="res://microjogos/2026S1/projeto-luppi/recursos/imagens/dinheiro_sucesso.png"
+dest_files=["res://.godot/imported/dinheiro_sucesso.png-250a83a39f62e8d6e94fb24d6e818d73.ctex"]
 
 [params]
 
