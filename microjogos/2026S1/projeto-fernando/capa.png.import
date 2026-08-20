@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci1y7qu48v2as"
-path="res://.godot/imported/items(1).png-9471c6d56283c043e6211baa12a7a40c.ctex"
+uid="uid://db6jwx4rxigtx"
+path="res://.godot/imported/capa.png-05a43a2664de37276d403b3beb297107.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2026S1/projeto-fernando/recursos/imagens/items(1).png"
-dest_files=["res://.godot/imported/items(1).png-9471c6d56283c043e6211baa12a7a40c.ctex"]
+source_file="res://microjogos/2026S1/projeto-fernando/capa.png"
+dest_files=["res://.godot/imported/capa.png-05a43a2664de37276d403b3beb297107.ctex"]
 
 [params]
 

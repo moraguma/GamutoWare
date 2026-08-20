@@ -1,6 +1,8 @@
 extends RichTextLabel
-@export var final_text = ""
-var count = 0
 
 func _on_timer_timeout() -> void:
-	count+=1 # Replace with function body.
+	visible_characters +=1
+
+func mostrar_texto(_text):
+	text = _text
+	visible_characters = 0

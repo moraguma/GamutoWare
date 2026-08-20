@@ -2,24 +2,17 @@
 
 [ext_resource type="Script" uid="uid://d3v67h0r733tq" path="res://microjogos/2026S1/projeto-fernando/scripts/main.gd" id="1_2nv8j"]
 [ext_resource type="Texture2D" uid="uid://bvu5rbnklwmsl" path="res://microjogos/2026S1/projeto-fernando/recursos/imagens/parallax-forest-preview.png" id="2_2nv8j"]
-[ext_resource type="Texture2D" uid="uid://bgis4ipxnau6c" path="res://microjogos/2026S1/projeto-fernando/recursos/imagens/items (Edited).png" id="4_v4ray"]
 [ext_resource type="Texture2D" uid="uid://ca0rybt4ku15g" path="res://microjogos/2026S1/projeto-fernando/recursos/imagens/ui.png" id="5_nsriw"]
 [ext_resource type="Theme" uid="uid://dsx8e01kxsx2n" path="res://microjogos/2026S1/projeto-fernando/recursos/temas/maintheme.tres" id="6_5j1hl"]
-[ext_resource type="Texture2D" uid="uid://ci1y7qu48v2as" path="res://microjogos/2026S1/projeto-fernando/recursos/imagens/items(1).png" id="8_essho"]
 [ext_resource type="Script" uid="uid://ba3jhhj8hlmux" path="res://microjogos/2026S1/projeto-fernando/scripts/acoes.gd" id="8_p81kg"]
-[ext_resource type="Texture2D" uid="uid://byqdybw66ehy6" path="res://microjogos/2026S1/projeto-fernando/recursos/imagens/a_shield_round.png" id="10_owqo2"]
-[ext_resource type="Texture2D" uid="uid://s4edvl45vfab" path="res://microjogos/2026S1/projeto-fernando/recursos/imagens/pumpking.png" id="10_rp2af"]
-[ext_resource type="Texture2D" uid="uid://dwo34hxbvlbta" path="res://microjogos/2026S1/projeto-fernando/recursos/imagens/emotes.png" id="12_5j1hl"]
-[ext_resource type="Texture2D" uid="uid://bt31nihjb8wdp" path="res://microjogos/2026S1/projeto-fernando/recursos/imagens/pixel_icons_by_oceansdream.png" id="13_o4s5y"]
+[ext_resource type="Texture2D" uid="uid://byqdybw66ehy6" path="res://microjogos/2026S1/projeto-fernando/recursos/imagens/itens.png" id="10_owqo2"]
+[ext_resource type="PackedScene" uid="uid://dq8rwyp03wwt7" path="res://microjogos/2026S1/projeto-fernando/cenas/abobora.tscn" id="14_0uqlv"]
+[ext_resource type="PackedScene" uid="uid://7fme7dae7svc" path="res://microjogos/2026S1/projeto-fernando/cenas/princesa.tscn" id="16_owqo2"]
 [ext_resource type="PackedScene" uid="uid://2burywqtw22k" path="res://microjogos/2026S1/projeto-fernando/cenas/fantasma.tscn" id="17_2nv8j"]
 [ext_resource type="Script" uid="uid://b1kquiclc54wf" path="res://microjogos/2026S1/projeto-fernando/scripts/espada.gd" id="17_7tafy"]
-[ext_resource type="Script" uid="uid://daedq6nmfis0a" path="res://microjogos/2026S1/projeto-fernando/scripts/abobora.gd" id="18_v88r0"]
-[ext_resource type="Script" uid="uid://bxjg6aubrvwy5" path="res://microjogos/2026S1/projeto-fernando/scripts/fantasma.gd" id="20_b8abg"]
 [ext_resource type="Texture2D" uid="uid://bjovclhrnwg3q" path="res://microjogos/2026S1/projeto-fernando/recursos/imagens/Slash.png" id="20_q7f1o"]
-[ext_resource type="Script" uid="uid://bbslhxw62cr47" path="res://microjogos/2026S1/projeto-fernando/scripts/princesa.gd" id="22_4780t"]
 [ext_resource type="Script" uid="uid://kladx7bjypx5" path="res://microjogos/2026S1/projeto-fernando/scripts/dialogo.gd" id="23_2nv8j"]
 [ext_resource type="AudioStream" uid="uid://cua547u02ulqj" path="res://microjogos/2026S1/projeto-fernando/recursos/sons/BeepBox-Song.wav" id="24_6shl3"]
-[ext_resource type="Texture2D" uid="uid://bmbd8gfm2xc40" path="res://microjogos/2026S1/projeto-fernando/recursos/imagens/canned_food_3.png" id="24_p81kg"]
 
 [sub_resource type="Image" id="Image_2nv8j"]
 data = {
@@ -170,125 +163,11 @@ Button/fonts/font = SubResource("FontFile_p81kg")
 Button/font_sizes/font_size = 104
 Button/fonts/font = SubResource("FontFile_p81kg")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_v4ray"]
-atlas = ExtResource("10_rp2af")
-region = Rect2(0, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nsriw"]
-atlas = ExtResource("10_rp2af")
-region = Rect2(64, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5j1hl"]
-atlas = ExtResource("10_rp2af")
-region = Rect2(128, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o4s5y"]
-atlas = ExtResource("10_rp2af")
-region = Rect2(192, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_essho"]
-atlas = ExtResource("10_rp2af")
-region = Rect2(256, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0uqlv"]
-atlas = ExtResource("10_rp2af")
-region = Rect2(320, 64, 64, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_owqo2"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_v4ray")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nsriw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5j1hl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_o4s5y")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_essho")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0uqlv")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6shl3"]
-size = Vector2(32.368935, 38.818283)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xkw5n"]
-load_path = "res://.godot/imported/SaraFullSheet.png-acae9eb36e1df1439036c36acfb06fcc.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1etpa"]
-atlas = SubResource("CompressedTexture2D_xkw5n")
-region = Rect2(256, 1280, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_v88r0"]
-atlas = SubResource("CompressedTexture2D_xkw5n")
-region = Rect2(256, 1280, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b8abg"]
-atlas = SubResource("CompressedTexture2D_xkw5n")
-region = Rect2(192, 1280, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4780t"]
-atlas = SubResource("CompressedTexture2D_xkw5n")
-region = Rect2(128, 1280, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_v306t"]
-atlas = SubResource("CompressedTexture2D_xkw5n")
-region = Rect2(64, 1280, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_w85kc"]
-atlas = SubResource("CompressedTexture2D_xkw5n")
-region = Rect2(0, 1280, 64, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_20k8o"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1etpa")
-}],
-"loop": true,
-"name": &"levantando",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_v88r0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_b8abg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4780t")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_v306t")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_w85kc")
-}],
-"loop": false,
-"name": &"parada",
-"speed": 5.0
-}]
-
 [sub_resource type="Theme" id="Theme_p81kg"]
 RichTextLabel/colors/font_outline_color = Color(1, 1, 1, 1)
 RichTextLabel/font_sizes/bold_font_size = 104
 RichTextLabel/font_sizes/normal_font_size = 104
 RichTextLabel/fonts/normal_font = SubResource("FontFile_p81kg")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_p81kg"]
-size = Vector2(269.5, 274.5)
 
 [node name="Main" type="Node2D" unique_id=1597121372]
 texture_filter = 1
@@ -305,18 +184,19 @@ scale = Vector2(5.076087, 4.8625)
 texture = ExtResource("5_nsriw")
 
 [node name="Efeito_espada" type="Sprite2D" parent="." unique_id=255033914]
+visible = false
 position = Vector2(1319.0001, 823)
 scale = Vector2(0.64889705, 0.33763838)
 texture = ExtResource("20_q7f1o")
 script = ExtResource("17_7tafy")
 
 [node name="Espada" type="Sprite2D" parent="." unique_id=160341129]
-position = Vector2(1394, 909.00006)
+position = Vector2(1461, 949)
 rotation = 0.49218288
-scale = Vector2(10.5256605, 11.716057)
-texture = ExtResource("4_v4ray")
+scale = Vector2(6.944302, 7.7296653)
+texture = ExtResource("10_owqo2")
 hframes = 3
-vframes = 10
+vframes = 2
 
 [node name="Botoes" type="Node2D" parent="." unique_id=1063452088]
 script = ExtResource("8_p81kg")
@@ -331,26 +211,28 @@ text = "Atacar"
 flat = true
 
 [node name="Ataque" type="Sprite2D" parent="Botoes" unique_id=1410532573]
-position = Vector2(262, 931.00006)
-rotation = 0.29496068
-scale = Vector2(3.6718752, 3.2031245)
-texture = ExtResource("8_essho")
-hframes = 10
-vframes = 10
+position = Vector2(269, 925)
+scale = Vector2(1.105, 1.105)
+texture = ExtResource("10_owqo2")
+hframes = 3
+vframes = 2
 
 [node name="Defender" type="Button" parent="Botoes" unique_id=1476280485]
-offset_left = 293.0
-offset_top = 870.0
-offset_right = 561.0
-offset_bottom = 982.0
+offset_left = 301.0
+offset_top = 868.0
+offset_right = 569.0
+offset_bottom = 980.0
 theme = SubResource("Theme_xkw5n")
 text = "Defender"
 flat = true
 
 [node name="Defenda" type="Sprite2D" parent="Botoes" unique_id=1388707605]
 position = Vector2(608, 931.99994)
-scale = Vector2(1.8046875, 1.7031249)
+scale = Vector2(2.035, 2.035)
 texture = ExtResource("10_owqo2")
+hframes = 3
+vframes = 2
+frame = 1
 
 [node name="Conversar" type="Button" parent="Botoes" unique_id=961991902]
 offset_left = 579.0
@@ -363,9 +245,11 @@ flat = true
 
 [node name="Conversa" type="Sprite2D" parent="Botoes" unique_id=1179904294]
 position = Vector2(1007, 934)
-scale = Vector2(5.8403277, 4.3883266)
-texture = ExtResource("12_5j1hl")
-region_enabled = true
+scale = Vector2(1.72, 1.72)
+texture = ExtResource("10_owqo2")
+hframes = 3
+vframes = 2
+frame = 2
 region_rect = Rect2(58.82335, -2.402687, 24.215942, 21.732254)
 
 [node name="Item" type="Button" parent="Botoes" unique_id=1907148918]
@@ -379,12 +263,15 @@ flat = true
 
 [node name="Item_imagem" type="Sprite2D" parent="Botoes" unique_id=96678312]
 position = Vector2(1243, 926)
-scale = Vector2(4.8194427, 3.3583918)
-texture = ExtResource("13_o4s5y")
-region_enabled = true
+scale = Vector2(1.5625, 1.5625)
+texture = ExtResource("10_owqo2")
+hframes = 3
+vframes = 2
+frame = 3
 region_rect = Rect2(2.388321, 95.58824, 18.627655, 23.707916)
 
 [node name="Sal" type="Button" parent="." unique_id=1190945290]
+visible = false
 offset_left = 63.0
 offset_top = 847.0
 offset_right = 218.0
@@ -394,34 +281,25 @@ text = "Sal"
 flat = true
 
 [node name="Saleiro" type="Sprite2D" parent="." unique_id=1739812344]
-position = Vector2(253, 923.99994)
-scale = Vector2(4.382812, 5.0390625)
-texture = ExtResource("24_p81kg")
+visible = false
+position = Vector2(244.99998, 927.99994)
+scale = Vector2(1.16, 1.16)
+texture = ExtResource("10_owqo2")
+hframes = 3
+vframes = 2
+frame = 4
 
-[node name="Abobora" type="AnimatedSprite2D" parent="." unique_id=501978521]
+[node name="Abobora" parent="." unique_id=1644468800 instance=ExtResource("14_0uqlv")]
 position = Vector2(1762, 744)
-scale = Vector2(7.242187, 6.835937)
-sprite_frames = SubResource("SpriteFrames_owqo2")
-frame_progress = 0.78119457
-script = ExtResource("18_v88r0")
-
-[node name="Area2D" type="Area2D" parent="Abobora" unique_id=1377974642]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Abobora/Area2D" unique_id=1569131109]
-position = Vector2(-0.27616262, -0.585145)
-shape = SubResource("RectangleShape2D_6shl3")
+autoplay = "default"
 
 [node name="Fantasma" parent="." unique_id=1861338011 instance=ExtResource("17_2nv8j")]
 position = Vector2(1758, 767)
-script = ExtResource("20_b8abg")
+autoplay = "default"
 
-[node name="Princesa" type="AnimatedSprite2D" parent="." unique_id=355174160]
+[node name="Princesa" parent="." unique_id=720970978 instance=ExtResource("16_owqo2")]
+texture_filter = 1
 position = Vector2(926, 660.00006)
-scale = Vector2(9.671874, 7.3476567)
-sprite_frames = SubResource("SpriteFrames_20k8o")
-animation = &"parada"
-autoplay = "levantando"
-script = ExtResource("22_4780t")
 
 [node name="Dialogo" type="RichTextLabel" parent="." unique_id=84515714]
 offset_left = 567.0
@@ -436,17 +314,11 @@ script = ExtResource("23_2nv8j")
 
 [node name="Timer" type="Timer" parent="Dialogo" unique_id=603965764]
 wait_time = 0.051
-
-[node name="Area2D" type="Area2D" parent="." unique_id=974844384]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=189624731]
-position = Vector2(938.25, 755.25)
-shape = SubResource("RectangleShape2D_p81kg")
+autostart = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="." unique_id=564369435]
 stream = ExtResource("24_6shl3")
 volume_db = 4.245
 autoplay = true
 
-[connection signal="timeout" from="Dialogo/Timer" to="." method="_on_timer_timeout"]
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="Dialogo/Timer" to="Dialogo" method="_on_timer_timeout"]

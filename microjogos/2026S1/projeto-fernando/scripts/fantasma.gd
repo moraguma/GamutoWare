@@ -1,14 +1,13 @@
 extends AnimatedSprite2D
-# Called when the node enters the scene tree for the first time.
-const SPEED = 120
-@onready var fantasma_giro=0
+var speed = 120
+@onready var fantasma_giro = false
 
 func _physics_process(delta: float) -> void:
-	if fantasma_giro == 0:
-		position.x-=SPEED*delta
+	if fantasma_giro == false:
+		position.x-=speed*delta
 	else:
-		const SPEED = 360
-		position.x +=SPEED*delta
-		position.y -=SPEED*delta
+		speed = 360
+		position.x +=speed*delta
+		position.y -=speed*delta
 		rotation_degrees += 20000*delta
 		$Area2D.collision_layer = 0

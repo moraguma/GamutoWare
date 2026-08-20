@@ -1,14 +1,13 @@
 extends AnimatedSprite2D
-const SPEED = 120
+var speed = 120
+@onready var abobora_giro = false
 
 func _physics_process(delta: float) -> void:
-	var voar = get_parent().blade
-	if voar == 0:
-		position.x-=SPEED*delta
+	if abobora_giro == false:
+		position.x-=speed*delta
 	else:
-		const SPEED = 300
-		position.x +=SPEED*delta
-		position.y -=SPEED*delta
+		speed = 360
+		position.x +=speed*delta
+		position.y -=speed*delta
 		rotation_degrees += 20000*delta
-
-	
+		$Area2D.collision_layer = 0

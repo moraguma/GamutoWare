@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://2burywqtw22k"]
 
 [ext_resource type="Texture2D" uid="uid://crvg7h61o78of" path="res://microjogos/2026S1/projeto-fernando/recursos/imagens/ghost.png" id="1_5h46u"]
-[ext_resource type="Script" path="res://microjogos/2026S1/projeto-fernando/cenas/animated_sprite_2d_2.gd" id="2_c483d"]
+[ext_resource type="Script" uid="uid://bxjg6aubrvwy5" path="res://microjogos/2026S1/projeto-fernando/scripts/fantasma.gd" id="2_c483d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xkw5n"]
 atlas = ExtResource("1_5h46u")
@@ -48,7 +48,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_6shl3")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
@@ -57,6 +57,7 @@ animations = [{
 size = Vector2(28.775883, 31.831076)
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" unique_id=1861338011]
+texture_filter = 1
 scale = Vector2(6.414063, 6.335937)
 sprite_frames = SubResource("SpriteFrames_1etpa")
 frame_progress = 0.810797
