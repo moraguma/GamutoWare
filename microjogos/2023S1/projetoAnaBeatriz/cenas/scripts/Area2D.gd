@@ -2,7 +2,7 @@ extends Area2D
 
 
 const SPEED = 200
-@export var vida = 1
+@export var vida = 3
 
 
 func _physics_process(delta):

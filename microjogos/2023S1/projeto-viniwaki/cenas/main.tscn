@@ -36,7 +36,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("6_sbtm5")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
@@ -64,9 +64,8 @@ stereo = true
 script = ExtResource("1_cnk73")
 
 [node name="bg" type="Sprite2D" parent="." unique_id=1329444818]
-position = Vector2(964, 544)
-scale = Vector2(0.759375, 0.69)
 texture = ExtResource("2_srmpp")
+centered = false
 
 [node name="Timer" type="Timer" parent="." unique_id=992115136]
 wait_time = 1.2

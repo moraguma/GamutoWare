@@ -37,7 +37,7 @@ func get_arrow():
 # 2. left certo
 # 3. left errado
 var i = 0
-func _process(delta):
+func _process(_delta):
 	var dir = " "
 	if Input.is_action_just_pressed("cima"):
 		dir = "up"
@@ -65,7 +65,7 @@ func _process(delta):
 					arrow_nodes[i].frame = 3
 		
 		if dir == sequence[i]:
-			$Label.text = "Got it!"
+			$Label.got_it()
 			$correct_sound.play()
 			spoon.play("eat")
 			hime_eat.play("open_mouth")
@@ -77,7 +77,7 @@ func _process(delta):
 				register_win()
 
 		elif dir != sequence[i]:
-			$Label.text = "Try Again"
+			$Label.try_again()
 			$wrong_sound.play()
 			
 			i = 0
