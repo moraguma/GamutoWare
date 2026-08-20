@@ -1,0 +1,10 @@
+[gd_resource type="Theme" format=3 uid="uid://dsx8e01kxsx2n"]
+
+[ext_resource type="FontFile" uid="uid://bxhjum8jmkeb2" path="res://microjogos/2026S1/projeto-fernando/recursos/imagens/advanced_pixel-7.ttf" id="1_lf8u0"]
+
+[resource]
+Button/colors/font_color = Color(1, 0.9, 0.9, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/constants/h_separation = 4
+Button/font_sizes/font_size = 104
+Button/fonts/font = ExtResource("1_lf8u0")

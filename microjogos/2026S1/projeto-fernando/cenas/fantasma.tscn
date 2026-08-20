@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://2burywqtw22k"]
+
+[ext_resource type="Texture2D" uid="uid://crvg7h61o78of" path="res://microjogos/2026S1/projeto-fernando/recursos/imagens/ghost.png" id="1_5h46u"]
+[ext_resource type="Script" uid="uid://bxjg6aubrvwy5" path="res://microjogos/2026S1/projeto-fernando/scripts/fantasma.gd" id="2_c483d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xkw5n"]
+atlas = ExtResource("1_5h46u")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7f1o"]
+atlas = ExtResource("1_5h46u")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7tafy"]
+atlas = ExtResource("1_5h46u")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nv8j"]
+atlas = ExtResource("1_5h46u")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p81kg"]
+atlas = ExtResource("1_5h46u")
+region = Rect2(256, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6shl3"]
+atlas = ExtResource("1_5h46u")
+region = Rect2(320, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1etpa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xkw5n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q7f1o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7tafy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nv8j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p81kg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6shl3")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x3k4p"]
+size = Vector2(28.775883, 31.831076)
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" unique_id=1861338011]
+texture_filter = 1
+scale = Vector2(6.414063, 6.335937)
+sprite_frames = SubResource("SpriteFrames_1etpa")
+frame_progress = 0.810797
+script = ExtResource("2_c483d")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=291344169]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=395199056]
+position = Vector2(1.2028011, -5.0252767)
+shape = SubResource("RectangleShape2D_x3k4p")

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bymono0272xw"]
+
+[ext_resource type="Texture2D" uid="uid://btsnqfxt6x2ck" path="res://microjogos/2026S1/projeto_cruz/recursos/imagens/Sprite_flecha.png" id="1_b8hl3"]
+[ext_resource type="Script" uid="uid://bpb7mfnyjb3mi" path="res://microjogos/2026S1/projeto_cruz/cenas/scripts/area_flecha.gd" id="1_xbs1r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1wekn"]
+size = Vector2(248, 44)
+
+[node name="Flecha" type="Node2D" unique_id=1085362720 groups=["Flechas"]]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=463669444 groups=["Flechas"]]
+script = ExtResource("1_xbs1r")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=2062128203]
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("1_b8hl3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=729203004]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_1wekn")

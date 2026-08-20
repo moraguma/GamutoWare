@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cghatwqvfws6c"]
+
+[ext_resource type="Script" uid="uid://cxi84drvunpjo" path="res://microjogos/2026S1/projeto_saul/cenas/scripts/planet.gd" id="1_pebsp"]
+[ext_resource type="Texture2D" uid="uid://db3dktnb21msl" path="res://microjogos/2026S1/projeto_saul/recursos/imagens/planeta-imagen.png" id="2_e2lif"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pebsp"]
+radius = 53.600372
+
+[node name="Planet" type="CharacterBody2D" unique_id=760807799]
+script = ExtResource("1_pebsp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2135825969]
+shape = SubResource("CircleShape2D_pebsp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1921598763]
+scale = Vector2(1.90625, 1.90625)
+texture = ExtResource("2_e2lif")

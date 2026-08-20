@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dvv13o4lqgx50"]
+
+[ext_resource type="Texture2D" uid="uid://dnjgpmitwpnv8" path="res://microjogos/2026S1/projetowilliam/recursos/imagens/FreeArt_boxe&amp;crates1/spritesheet.png" id="1_3wlb0"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0tau8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0tau8"]
+
+[node name="Box" type="RigidBody2D" unique_id=804181768]
+physics_material_override = SubResource("PhysicsMaterial_0tau8")
+gravity_scale = -1.124
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=826484476]
+shape = SubResource("RectangleShape2D_0tau8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1862221]
+texture = ExtResource("1_3wlb0")
+hframes = 5
+vframes = 2

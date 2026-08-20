@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dwppdyapv7xyi"]
+
+[ext_resource type="Script" uid="uid://b6opw0wqgoi8w" path="res://microjogos/2026S1/projeto_rafael_mello/cenas/scripts/main.gd" id="1_mkukn"]
+[ext_resource type="PackedScene" uid="uid://fdwiunndu87u" path="res://microjogos/2026S1/projeto_rafael_mello/cenas/Player.tscn" id="1_qv6ic"]
+[ext_resource type="Texture2D" uid="uid://bojujje45hfli" path="res://microjogos/2026S1/projeto_rafael_mello/recursos/imagens/back.png" id="2_fea4o"]
+[ext_resource type="AudioStream" uid="uid://b2rmjuyb3jcl7" path="res://microjogos/2026S1/projeto_rafael_mello/recursos/sons/bullet_hell.mp3" id="4_8x55o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2c6h8"]
+size = Vector2(1920, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xesm0"]
+size = Vector2(80, 1080)
+
+[node name="Main" type="Node2D" unique_id=1597121372]
+texture_filter = 1
+script = ExtResource("1_mkukn")
+
+[node name="Back" type="Sprite2D" parent="." unique_id=924871189]
+position = Vector2(960, 540)
+texture = ExtResource("2_fea4o")
+
+[node name="Tiros" type="Node2D" parent="." unique_id=389463105]
+position = Vector2(0, -2)
+
+[node name="Player" parent="." unique_id=2067177953 instance=ExtResource("1_qv6ic")]
+position = Vector2(960, 540)
+spd = 500
+
+[node name="Paredes2" type="StaticBody2D" parent="." unique_id=1814633556]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes2" unique_id=1130412541]
+position = Vector2(960, -40)
+shape = SubResource("RectangleShape2D_2c6h8")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Paredes2" unique_id=876381595]
+position = Vector2(960, 1120)
+shape = SubResource("RectangleShape2D_2c6h8")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Paredes2" unique_id=399040674]
+position = Vector2(-40, 540)
+shape = SubResource("RectangleShape2D_xesm0")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Paredes2" unique_id=1627805858]
+position = Vector2(1957, 540)
+shape = SubResource("RectangleShape2D_xesm0")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1203652855]
+stream = ExtResource("4_8x55o")
+autoplay = true

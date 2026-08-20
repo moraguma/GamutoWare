@@ -1,0 +1,169 @@
+[gd_scene format=3 uid="uid://csoob0qvet75i"]
+
+[ext_resource type="Script" uid="uid://drqhlmyxtc5x1" path="res://microjogos/2026S1/projeto-luppi/cenas/scripts/main.gd" id="1_lkudt"]
+[ext_resource type="Texture2D" uid="uid://dbgfrnbo0wewa" path="res://microjogos/2026S1/projeto-luppi/recursos/imagens/background.png" id="2_12wx1"]
+[ext_resource type="Texture2D" uid="uid://doyh66c3e0p43" path="res://microjogos/2026S1/projeto-luppi/recursos/imagens/dinheiro_movendo.png" id="2_b6vnn"]
+[ext_resource type="Script" uid="uid://y37eulu0vlwy" path="res://microjogos/2026S1/projeto-luppi/cenas/scripts/dinheiro_movendo.gd" id="3_12wx1"]
+[ext_resource type="Script" uid="uid://1ofdj46xxaea" path="res://microjogos/2026S1/projeto-luppi/cenas/scripts/cartão_movendo.gd" id="4_tc0jp"]
+[ext_resource type="Texture2D" uid="uid://bwal7l7b8jwaf" path="res://microjogos/2026S1/projeto-luppi/recursos/imagens/dinheiro_sucesso.png" id="5_ajtg6"]
+[ext_resource type="Texture2D" uid="uid://dorilj76nuvhj" path="res://microjogos/2026S1/projeto-luppi/recursos/imagens/ra_movendo.png" id="8_20cn3"]
+[ext_resource type="AudioStream" uid="uid://c3686t8j6kk3q" path="res://microjogos/2026S1/projeto-luppi/recursos/sons/sucesso.mp3" id="8_snmlw"]
+[ext_resource type="Texture2D" uid="uid://c7dp844c66406" path="res://microjogos/2026S1/projeto-luppi/recursos/imagens/vitoria porra.png" id="9_ajtg6"]
+[ext_resource type="Texture2D" uid="uid://dgoeexnqlnk4g" path="res://microjogos/2026S1/projeto-luppi/recursos/imagens/ra_sucesso.png" id="9_upc8x"]
+[ext_resource type="AudioStream" uid="uid://dy0k41iribbk1" path="res://microjogos/2026S1/projeto-luppi/recursos/sons/freesound-community-large-crowded-room-voices-14616_SQQt2zFj.mp3" id="11_20cn3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_30qwi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_b6vnn")
+}],
+"loop": true,
+"name": &"movendo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ajtg6")
+}],
+"loop": true,
+"name": &"sucesso",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lkudt"]
+size = Vector2(173, 382)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4gysv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_20cn3")
+}],
+"loop": true,
+"name": &"movendo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_upc8x")
+}],
+"loop": true,
+"name": &"sucesso",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0ljy"]
+size = Vector2(170, 248)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_12wx1"]
+size = Vector2(190.5, 53)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_snmlw"]
+size = Vector2(176, 84)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_lkudt"]
+b = Vector2(250, 0)
+
+[node name="Main" type="Node2D" unique_id=1597121372]
+texture_filter = 1
+script = ExtResource("1_lkudt")
+
+[node name="Fundo" type="Sprite2D" parent="." unique_id=832741019]
+scale = Vector2(0.46857393, 0.46857393)
+texture = ExtResource("2_12wx1")
+centered = false
+
+[node name="DinheiroMovendo" type="CharacterBody2D" parent="." unique_id=1301446887 groups=["dinheiro"]]
+position = Vector2(918, 684)
+script = ExtResource("3_12wx1")
+metadata/_edit_group_ = true
+
+[node name="DinheiroMovendo" type="AnimatedSprite2D" parent="DinheiroMovendo" unique_id=1654668254]
+position = Vector2(137, 344.99994)
+scale = Vector2(0.544, 0.544)
+sprite_frames = SubResource("SpriteFrames_30qwi")
+animation = &"movendo"
+autoplay = "movendo"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DinheiroMovendo" unique_id=136559137]
+position = Vector2(78, 139)
+rotation = 0.12391838
+shape = SubResource("RectangleShape2D_lkudt")
+
+[node name="Sucesso" type="AudioStreamPlayer" parent="DinheiroMovendo" unique_id=283124267]
+stream = ExtResource("8_snmlw")
+
+[node name="CartaoMovendo" type="CharacterBody2D" parent="." unique_id=1249410799 groups=["ra"]]
+position = Vector2(2, -54)
+script = ExtResource("4_tc0jp")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="CartaoMovendo" unique_id=728252109]
+position = Vector2(1363.175, 1132.725)
+scale = Vector2(0.55, 0.55)
+sprite_frames = SubResource("SpriteFrames_4gysv")
+animation = &"movendo"
+autoplay = "movendo"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CartaoMovendo" unique_id=705794628]
+position = Vector2(1281.175, 916.725)
+shape = SubResource("RectangleShape2D_v0ljy")
+
+[node name="Sucesso" type="AudioStreamPlayer" parent="CartaoMovendo" unique_id=48705061]
+stream = ExtResource("8_snmlw")
+
+[node name="LeitorDeDinheiro" type="Area2D" parent="." unique_id=407327153]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeitorDeDinheiro" unique_id=219737998]
+position = Vector2(723.25, 282.5)
+shape = SubResource("RectangleShape2D_12wx1")
+
+[node name="LeitorDeCartao" type="Area2D" parent="." unique_id=1733744506]
+position = Vector2(1284, 601)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeitorDeCartao" unique_id=66139529]
+position = Vector2(0, 29)
+shape = SubResource("RectangleShape2D_snmlw")
+
+[node name="LimiteLeitorDeCartao" type="StaticBody2D" parent="." unique_id=1484524773]
+position = Vector2(1160, 532)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LimiteLeitorDeCartao" unique_id=782206380]
+shape = SubResource("SegmentShape2D_lkudt")
+
+[node name="LimiteLeitorDeDinheiro" type="StaticBody2D" parent="." unique_id=1898726388]
+position = Vector2(621, 224)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LimiteLeitorDeDinheiro" unique_id=1694317608]
+shape = SubResource("SegmentShape2D_lkudt")
+
+[node name="LimiteCartaoMovendo" type="StaticBody2D" parent="." unique_id=297385405]
+position = Vector2(1162, 1068)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LimiteCartaoMovendo" unique_id=1999458674]
+shape = SubResource("SegmentShape2D_lkudt")
+
+[node name="VitoriaPorra" type="Sprite2D" parent="." unique_id=1516154688]
+visible = false
+position = Vector2(1019, 539.00006)
+scale = Vector2(0.4035829, 0.40358293)
+texture = ExtResource("9_ajtg6")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=503761617]
+stream = ExtResource("11_20cn3")
+autoplay = true
+
+[connection signal="dinheiro_ativado" from="DinheiroMovendo" to="." method="_on_dinheiro_movendo_dinheiro_ativado"]
+[connection signal="dinheiro_desativo" from="DinheiroMovendo" to="." method="_on_dinheiro_movendo_dinheiro_desativo"]
+[connection signal="ra_ativado" from="CartaoMovendo" to="." method="_on_cartão_movendo_ra_ativado"]
+[connection signal="ra_desativo" from="CartaoMovendo" to="." method="_on_cartão_movendo_ra_desativo"]
+[connection signal="body_entered" from="LeitorDeDinheiro" to="DinheiroMovendo" method="_on_leitor_de_cédula_body_entered"]
+[connection signal="body_exited" from="LeitorDeDinheiro" to="DinheiroMovendo" method="_on_leitor_de_cédula_body_exited"]
+[connection signal="body_entered" from="LeitorDeCartao" to="CartaoMovendo" method="_on_leitor_de_cartão_body_entered"]
+[connection signal="body_exited" from="LeitorDeCartao" to="CartaoMovendo" method="_on_leitor_de_cartão_body_exited"]
