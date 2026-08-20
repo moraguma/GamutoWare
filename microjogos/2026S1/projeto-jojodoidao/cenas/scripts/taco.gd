@@ -15,4 +15,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node) -> void:
-	queue_free()
+	apply_impulse(Vector2.LEFT.rotated(rotation) * progressebar.value * 10)
+	collision_layer = 0
+	$Sombra.visible = true
+	$AudioStreamPlayer.play()
