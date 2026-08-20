@@ -1,28 +1,17 @@
 extends Node2D
-# --------------------------------------------------------------------------------------------------
-# FUNÇÕES PADRÃO
-# --------------------------------------------------------------------------------------------------
+@export var rigid_body_2d_scene: PackedScene
 
-# Esta função é chamada assim que esta cena é instanciada, ou seja, assim que seu minigame inicia
-func _ready():
-	pass
-
-# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a física, como
-# a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou desde
-# a última chamada desta função. O comando pass não faz nada
-func _physics_process(delta):
-	pass
-
-# Esta função é chamada uma vez por frame e é otimizada para cálculos relacionados a renderização, 
-# como a movimentação de um personagem. O parâmetro delta indica a quantidade de tempo que passou 
-# desde a última chamada desta função. O comando pass não faz nada
-func _process(delta):
-	pass
-
-# --------------------------------------------------------------------------------------------------
-# SUAS FUNÇÕES
-# --------------------------------------------------------------------------------------------------
-
-# Um método genérico. Crie quantos métodos você precisar!
-func my_method():
-	pass
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	Minigames.register_win(self)
+	var screen_size = get_viewport_rect().size
+	
+	while true:
+		var box = rigid_body_2d_scene.instantiate()
+		box.position.x = randf_range(0, screen_size.x)
+		var sprite_node : Sprite2D = box.get_node("Sprite2D")
+		sprite_node.frame = randi_range(0, 9)
+		box.position.y = screen_size.y + 100
+		add_child(box)
+		
+		await get_tree().create_timer(0.2).timeout

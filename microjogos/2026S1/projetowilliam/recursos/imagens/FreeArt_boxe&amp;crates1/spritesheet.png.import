@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drfp380ys127h"
-path="res://.godot/imported/obj_crate002.png-9b471197eedb213dfacefbb295a909e4.ctex"
+uid="uid://dnjgpmitwpnv8"
+path="res://.godot/imported/spritesheet.png-f4e1d212d2e25058d125ff0e895b104d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2026S1/projetowilliam/recursos/imagens/FreeArt_boxe&amp;crates1/obj_crate002.png"
-dest_files=["res://.godot/imported/obj_crate002.png-9b471197eedb213dfacefbb295a909e4.ctex"]
+source_file="res://microjogos/2026S1/projetowilliam/recursos/imagens/FreeArt_boxe&amp;crates1/spritesheet.png"
+dest_files=["res://.godot/imported/spritesheet.png-f4e1d212d2e25058d125ff0e895b104d.ctex"]
 
 [params]
 
