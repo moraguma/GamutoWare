@@ -27,9 +27,10 @@
 [ext_resource type="Resource" uid="uid://bxkinolqejvnj" path="res://microjogos/2024S1/projeto-de-gsscala/microgame.tres" id="25_3xv73"]
 [ext_resource type="Resource" uid="uid://dyl645rldetcf" path="res://microjogos/2024S1/projeto-do-Glaymar_A/microgame.tres" id="26_p1uuu"]
 [ext_resource type="Resource" uid="uid://ke0fsgamiisy" path="res://microjogos/2024S1/projeto-da-ana-luiza/microgame.tres" id="27_ynrhd"]
+[ext_resource type="Resource" uid="uid://cdiln5a3lfg1f" path="res://microjogos/2024S1/Projeto-Diego/microgame.tres" id="28_gaktl"]
 [ext_resource type="Resource" uid="uid://u02jnqnw7kw3" path="res://microjogos/2024S1/quimica-quiz/microgame.tres" id="28_ynrhd"]
 
 [resource]
 script = ExtResource("1_vkav3")
 pack_name = &"Class of 2024"
-microgames = Array[ExtResource("1_2q322")]([ExtResource("2_3ia0r"), ExtResource("3_j1wcf"), ExtResource("4_4seuy"), ExtResource("6_7gh2d"), ExtResource("7_a18t2"), ExtResource("8_j6ccu"), ExtResource("9_qmm7k"), ExtResource("10_xujri"), ExtResource("11_bygbd"), ExtResource("12_hpcrb"), ExtResource("13_qebww"), ExtResource("14_plspg"), ExtResource("15_aaipd"), ExtResource("16_0u8tk"), ExtResource("17_uvyas"), ExtResource("18_uc1bj"), ExtResource("19_dfb3f"), ExtResource("20_lgru5"), ExtResource("21_coska"), ExtResource("22_th4lo"), ExtResource("23_i0spc"), ExtResource("5_ea52p"), ExtResource("28_ynrhd"), ExtResource("26_p1uuu"), ExtResource("25_3xv73"), ExtResource("27_ynrhd")])
+microgames = Array[ExtResource("1_2q322")]([ExtResource("2_3ia0r"), ExtResource("3_j1wcf"), ExtResource("4_4seuy"), ExtResource("6_7gh2d"), ExtResource("7_a18t2"), ExtResource("8_j6ccu"), ExtResource("9_qmm7k"), ExtResource("10_xujri"), ExtResource("11_bygbd"), ExtResource("12_hpcrb"), ExtResource("13_qebww"), ExtResource("14_plspg"), ExtResource("15_aaipd"), ExtResource("16_0u8tk"), ExtResource("17_uvyas"), ExtResource("18_uc1bj"), ExtResource("19_dfb3f"), ExtResource("20_lgru5"), ExtResource("21_coska"), ExtResource("22_th4lo"), ExtResource("23_i0spc"), ExtResource("5_ea52p"), ExtResource("28_ynrhd"), ExtResource("26_p1uuu"), ExtResource("25_3xv73"), ExtResource("27_ynrhd"), ExtResource("28_gaktl")])

@@ -73,5 +73,6 @@ libraries/ = SubResource("AnimationLibrary_vl4xp")
 
 [node name="Chain" type="Line2D" parent="." unique_id=343804966]
 z_as_relative = false
+texture_repeat = 2
 texture = ExtResource("2")
 texture_mode = 1

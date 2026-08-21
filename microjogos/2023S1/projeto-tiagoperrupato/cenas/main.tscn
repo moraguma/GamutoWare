@@ -109,12 +109,14 @@ shape = SubResource("RectangleShape2D_0mymo")
 metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Carro1" unique_id=858232016]
+texture_filter = 1
 rotation = 4.71239
 scale = Vector2(0.910152, 0.910152)
 texture = ExtResource("4_v7l48")
 metadata/_edit_lock_ = true
 
 [node name="Carro3" type="CharacterBody2D" parent="." unique_id=278089321 groups=["Veiculos"]]
+texture_filter = 1
 position = Vector2(4472, -248)
 script = ExtResource("5_kapmk")
 
@@ -137,6 +139,7 @@ shape = SubResource("RectangleShape2D_vdcth")
 metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Carro4" unique_id=1643958762]
+texture_filter = 1
 rotation = 4.71239
 scale = Vector2(6.70164, 5.978)
 texture = ExtResource("9_ipvil")
@@ -157,6 +160,7 @@ texture = ExtResource("10_td3ja")
 metadata/_edit_lock_ = true
 
 [node name="Carro5" type="CharacterBody2D" parent="." unique_id=1501941877 groups=["Veiculos"]]
+texture_filter = 1
 position = Vector2(3448, -16)
 script = ExtResource("5_kapmk")
 
@@ -173,6 +177,7 @@ texture = ExtResource("11_iie22")
 metadata/_edit_lock_ = true
 
 [node name="Carro6" type="CharacterBody2D" parent="." unique_id=1353127357 groups=["Veiculos"]]
+texture_filter = 1
 position = Vector2(2888, -264)
 script = ExtResource("5_kapmk")
 
@@ -187,6 +192,7 @@ texture = ExtResource("12_d0bag")
 metadata/_edit_lock_ = true
 
 [node name="Carro7" type="CharacterBody2D" parent="." unique_id=2144027981 groups=["Veiculos"]]
+texture_filter = 1
 position = Vector2(4800, 256)
 script = ExtResource("5_kapmk")
 
