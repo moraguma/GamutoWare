@@ -1,0 +1,168 @@
+[gd_scene load_steps=18 format=3 uid="uid://bgmkhysifpd0v"]
+
+[ext_resource type="Script" uid="uid://b7fd0jij0dlo0" path="res://microjogos/2023S1/projeto-gabriel-thiago/cenas/scripts/main.gd" id="1_t115o"]
+[ext_resource type="Texture2D" uid="uid://b0iihu1ksrv0h" path="res://microjogos/2023S1/projeto-gabriel-thiago/recursos/bg.png" id="2_5oi6b"]
+[ext_resource type="Texture2D" uid="uid://dpurvvi16n3he" path="res://microjogos/2023S1/projeto-gabriel-thiago/recursos/gol.png" id="3_eas3m"]
+[ext_resource type="Script" uid="uid://bai8vh01fkw2q" path="res://microjogos/2023S1/projeto-gabriel-thiago/cenas/scripts/mira.gd" id="4_gwpxb"]
+[ext_resource type="Texture2D" uid="uid://7ww15f6fooqn" path="res://microjogos/2023S1/projeto-gabriel-thiago/recursos/mira.png" id="4_r2nd0"]
+[ext_resource type="Texture2D" uid="uid://dhwk81b4kqh4s" path="res://microjogos/2023S1/projeto-gabriel-thiago/recursos/Alvo.png" id="5_tcs7e"]
+[ext_resource type="Texture2D" uid="uid://od3rn7ismgg6" path="res://microjogos/2023S1/projeto-gabriel-thiago/recursos/bola.png" id="6_kwu5m"]
+[ext_resource type="Script" uid="uid://be7c1btc4sn5b" path="res://microjogos/2023S1/projeto-gabriel-thiago/cenas/scripts/alvo.gd" id="7_0mdnu"]
+[ext_resource type="Script" uid="uid://b23f0bkttjiwg" path="res://microjogos/2023S1/projeto-gabriel-thiago/cenas/scripts/bola.gd" id="7_keca1"]
+[ext_resource type="PackedScene" uid="uid://4a8sqqgp1gx6" path="res://principal/cenas/autoloads/NotificationCenter.tscn" id="10_l6u6n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b6aj7"]
+size = Vector2(758, 256)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u10hv"]
+radius = 31.6372
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xmxhb"]
+radius = 70.0
+
+[sub_resource type="Animation" id="Animation_svgvd"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Spritebola:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(6.10771, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Spritebola:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(5.64, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_yqhhf"]
+resource_name = "chutei"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="Animation" id="Animation_mf3j8"]
+resource_name = "idle"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Spritebola:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(6.10771, -0.25, 0, 0.25, 0, 6.10771, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Spritebola:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(5.64, -0.25, 0, 0.25, 0, 5.64, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gmjl0"]
+_data = {
+&"RESET": SubResource("Animation_svgvd"),
+&"chutei": SubResource("Animation_yqhhf"),
+&"idle": SubResource("Animation_mf3j8")
+}
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_t115o")
+metadata/_edit_vertical_guides_ = [0.0, -270.0]
+metadata/_edit_horizontal_guides_ = [682.0]
+
+[node name="Fundo" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(960, 540)
+scale = Vector2(15, 8.4375)
+texture = ExtResource("2_5oi6b")
+
+[node name="gol" type="Area2D" parent="."]
+position = Vector2(960, 600)
+
+[node name="SpriteGol" type="Sprite2D" parent="gol"]
+texture_filter = 3
+scale = Vector2(0.645847, 0.43345)
+texture = ExtResource("3_eas3m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gol"]
+shape = SubResource("RectangleShape2D_b6aj7")
+
+[node name="mira" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(960, 600)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("4_r2nd0")
+script = ExtResource("4_gwpxb")
+
+[node name="alvo" type="Area2D" parent="."]
+script = ExtResource("7_0mdnu")
+
+[node name="Spritealvo" type="Sprite2D" parent="alvo"]
+scale = Vector2(0.13991, 0.135303)
+texture = ExtResource("5_tcs7e")
+
+[node name="CollisionAlvo" type="CollisionShape2D" parent="alvo"]
+shape = SubResource("CircleShape2D_u10hv")
+
+[node name="bola" type="CharacterBody2D" parent="."]
+texture_filter = 3
+position = Vector2(983.45, 931.76)
+script = ExtResource("7_keca1")
+
+[node name="Spritebola" type="Sprite2D" parent="bola"]
+position = Vector2(4, 0)
+scale = Vector2(6.10771, 5.64)
+texture = ExtResource("6_kwu5m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bola"]
+shape = SubResource("CircleShape2D_xmxhb")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="bola"]
+libraries = {
+&"": SubResource("AnimationLibrary_gmjl0")
+}
+
+[node name="NotificationCenter" parent="." instance=ExtResource("10_l6u6n")]
+
+[connection signal="body_entered" from="alvo" to="bola" method="_atingiu_alvo"]
+[connection signal="animation_finished" from="bola/AnimationPlayer" to="bola" method="_chute_finalizado"]

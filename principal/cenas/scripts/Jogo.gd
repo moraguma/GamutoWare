@@ -27,7 +27,7 @@ var total_microgames
 # var icon_dict = {}
 # var microgame_dict = {}
 
-var total_lives = 3
+var total_lives = 30
 var score = 0
 
 var difficulty_level = 0

@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://byy1uildj3qlc"]
+
+[ext_resource type="Script" uid="uid://dmwmle1cf2c8b" path="res://microjogos/2023S1/projeto_luiscolosimo/cenas/scripts/main.gd" id="1"]
+[ext_resource type="Script" uid="uid://cxqdy2h0a8wof" path="res://microjogos/2023S1/projeto_luiscolosimo/cenas/scripts/child.gd" id="4_pr0bi"]
+[ext_resource type="Script" uid="uid://b1cmsggk4uyc" path="res://microjogos/2023S1/projeto_luiscolosimo/cenas/scripts/Mira.gd" id="4_r5nct"]
+[ext_resource type="Texture2D" uid="uid://cpg8tbco0w1vu" path="res://microjogos/2023S1/projeto_luiscolosimo/recursos/character/child-feliz.png" id="5_oga73"]
+[ext_resource type="Texture2D" uid="uid://cpmtgkkxxq46d" path="res://microjogos/2023S1/projeto_luiscolosimo/recursos/character/child1.png" id="5_xappj"]
+[ext_resource type="Texture2D" uid="uid://bbifbfygrl3ck" path="res://microjogos/2023S1/projeto_luiscolosimo/recursos/dedo.png" id="6_rsfoc"]
+[ext_resource type="Texture2D" uid="uid://bt3ua0mlh0uei" path="res://microjogos/2023S1/projeto_luiscolosimo/recursos/casa/pedra1.png" id="8_8ymq0"]
+[ext_resource type="Texture2D" uid="uid://dk40vxf34co6l" path="res://microjogos/2023S1/projeto_luiscolosimo/recursos/casa/background.png" id="8_l8pfv"]
+[ext_resource type="Texture2D" uid="uid://dtae61v0j12cy" path="res://microjogos/2023S1/projeto_luiscolosimo/recursos/casa/planta1.png" id="9_npe7l"]
+[ext_resource type="Texture2D" uid="uid://cvrwgkoawfjct" path="res://microjogos/2023S1/projeto_luiscolosimo/recursos/casa/cerca1.png" id="10_3isog"]
+[ext_resource type="AudioStream" uid="uid://bkjq1nj3l6fuj" path="res://microjogos/2023S1/projeto_luiscolosimo/recursos/musica/bgm.wav" id="11_oga73"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4i6xm"]
+radius = 31.0
+height = 92.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u5dvy"]
+radius = 11.0
+
+[node name="Main" type="Node2D" unique_id=428140650]
+script = ExtResource("1")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=474819752]
+position = Vector2(448, 608)
+scale = Vector2(2.55438, 2.55438)
+texture = ExtResource("8_l8pfv")
+
+[node name="Cria" type="Area2D" parent="." unique_id=773569851]
+script = ExtResource("4_pr0bi")
+
+[node name="Hide" type="Sprite2D" parent="Cria" unique_id=1144334002]
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("5_xappj")
+
+[node name="Show" type="Sprite2D" parent="Cria" unique_id=1000711658]
+visible = false
+z_index = 1
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("5_oga73")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cria" unique_id=1282851423]
+shape = SubResource("CapsuleShape2D_4i6xm")
+
+[node name="Mira" type="CharacterBody2D" parent="." unique_id=1858898724]
+z_index = 1
+position = Vector2(960, 540)
+script = ExtResource("4_r5nct")
+
+[node name="Sprite2D" type="Sprite2D" parent="Mira" unique_id=449698056]
+position = Vector2(24, -27.9999)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("6_rsfoc")
+
+[node name="Hitbox" type="CollisionShape2D" parent="Mira" unique_id=1742801112]
+position = Vector2(3, -2)
+shape = SubResource("CircleShape2D_u5dvy")
+
+[node name="locais" type="Node2D" parent="." unique_id=1530197076]
+
+[node name="loc1" type="Marker2D" parent="locais" unique_id=1059459006]
+z_index = 1
+position = Vector2(477, 913)
+
+[node name="loc2" type="Marker2D" parent="locais" unique_id=1146616976]
+z_index = 1
+position = Vector2(1067, 982)
+
+[node name="loc3" type="Marker2D" parent="locais" unique_id=897797855]
+z_index = 1
+position = Vector2(1142, 770)
+
+[node name="mundo" type="Node2D" parent="." unique_id=1533181514]
+
+[node name="Sprite2D" type="Sprite2D" parent="mundo" unique_id=174906952]
+position = Vector2(475.5, 926.5)
+scale = Vector2(2.57407, 2.56667)
+texture = ExtResource("8_8ymq0")
+
+[node name="Sprite2D2" type="Sprite2D" parent="mundo" unique_id=29742769]
+position = Vector2(1039, 1021)
+scale = Vector2(2.57407, 2.56667)
+texture = ExtResource("9_npe7l")
+
+[node name="Sprite2D3" type="Sprite2D" parent="mundo" unique_id=1972380785]
+position = Vector2(1110, 787)
+scale = Vector2(2.57407, 2.56667)
+texture = ExtResource("10_3isog")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=519189842]
+stream = ExtResource("11_oga73")
+autoplay = true
+
+[connection signal="body_entered" from="Cria" to="Cria" method="_on_cursor_entered"]
+[connection signal="body_exited" from="Cria" to="Cria" method="_on_cursor_exited"]

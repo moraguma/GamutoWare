@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" format=3 uid="uid://u02jnqnw7kw3"]
+
+[ext_resource type="Texture2D" uid="uid://dn48hu2xy6wev" path="res://microjogos/2024S1/quimica-quiz/capa.png" id="1_2rj7q"]
+[ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_q3nob"]
+[ext_resource type="PackedScene" uid="uid://ccl1dwd8qstfd" path="res://microjogos/2024S1/quimica-quiz/cenas/main.tscn" id="2_2rj7q"]
+
+[resource]
+script = ExtResource("1_q3nob")
+cover = ExtResource("1_2rj7q")
+title_pt = &"Pegue o café"
+title_en = &"Get the coffee"
+credits_pt = "Criado por: Larissa S.
+
+Assets: GrafxKid's 
+Fundo: https://grafxkid.itch.io/seasonal-tilesets
+Fundo: https://grafxkid.itch.io/cave-tileset
+Personagem: https://grafxkid.itch.io/sprite-pack-5
+Café: https://yaninyunus.itch.io/16x16-specialtycoffee
+Particulas: https://grafxkid.itch.io/mini-fx-items-ui
+Fonte: https://grafxkid.itch.io/at01https://grafxkid.itch.io/at01"
+start_message_en = &"GET THE COFFE"
+main_scene = ExtResource("2_2rj7q")
+screen_dimensions = Vector2i(640, 360)

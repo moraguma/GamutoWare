@@ -19,8 +19,9 @@ func _ready():
 
 func _process(delta):
 	if player:
-		chain.points[1] = player.position - position
-
+		var new_points = chain.points
+		new_points[1] = player.position - position
+		chain.points = new_points
 
 func _physics_process(delta):
 	if not stuck:

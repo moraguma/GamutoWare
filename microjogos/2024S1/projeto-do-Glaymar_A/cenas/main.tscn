@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://x00xd6jc5a1o"]
+
+[ext_resource type="Script" uid="uid://bpfumcx1027mv" path="res://microjogos/2024S1/projeto-do-Glaymar_A/cenas/scripts/main.gd" id="1_q024n"]
+[ext_resource type="PackedScene" uid="uid://dt7ewgrxnk86g" path="res://microjogos/2024S1/projeto-do-Glaymar_A/cenas/Player.tscn" id="2_otir0"]
+[ext_resource type="PackedScene" uid="uid://deg0v3upu07xf" path="res://microjogos/2024S1/projeto-do-Glaymar_A/cenas/inimigo.tscn" id="3_ou3xb"]
+[ext_resource type="PackedScene" uid="uid://d2oahab3ot5ql" path="res://microjogos/2024S1/projeto-do-Glaymar_A/cenas/coluna.tscn" id="4_fwhmm"]
+[ext_resource type="AudioStream" uid="uid://fr4hbjxvo2i3" path="res://microjogos/2024S1/projeto-do-Glaymar_A/recursos/sounds/g32gamesonscratch-grudge-revised-409696.wav" id="5_fk6mk"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_q024n")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -30
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+z_index = -2
+anchors_preset = -1
+anchor_right = 0.356771
+anchor_bottom = 0.172222
+offset_left = 3.0
+offset_right = 1241.0
+offset_bottom = 897.0
+color = Color(0.444343, 0.360522, 0.622573, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Player" parent="." instance=ExtResource("2_otir0")]
+position = Vector2(851, 720)
+
+[node name="Inimigo" parent="." instance=ExtResource("3_ou3xb")]
+position = Vector2(162, 579)
+
+[node name="Inimigo4" parent="." instance=ExtResource("3_ou3xb")]
+position = Vector2(1344, 141)
+
+[node name="Inimigo2" parent="." instance=ExtResource("3_ou3xb")]
+position = Vector2(580, 177)
+
+[node name="Inimigo3" parent="." instance=ExtResource("3_ou3xb")]
+position = Vector2(1725, 484)
+
+[node name="Trees" type="Node2D" parent="."]
+position = Vector2(516, 330)
+
+[node name="coluna" parent="Trees" instance=ExtResource("4_fwhmm")]
+position = Vector2(-3, 2)
+
+[node name="coluna2" parent="Trees" instance=ExtResource("4_fwhmm")]
+position = Vector2(-439, 1)
+
+[node name="coluna3" parent="Trees" instance=ExtResource("4_fwhmm")]
+position = Vector2(-370, -122)
+
+[node name="coluna4" parent="Trees" instance=ExtResource("4_fwhmm")]
+position = Vector2(-275, 90)
+
+[node name="coluna5" parent="Trees" instance=ExtResource("4_fwhmm")]
+position = Vector2(-124, -175)
+
+[node name="coluna6" parent="Trees" instance=ExtResource("4_fwhmm")]
+position = Vector2(469, -189)
+
+[node name="coluna7" parent="Trees" instance=ExtResource("4_fwhmm")]
+position = Vector2(203, -111)
+
+[node name="coluna8" parent="Trees" instance=ExtResource("4_fwhmm")]
+position = Vector2(-69, 363)
+
+[node name="coluna9" parent="Trees" instance=ExtResource("4_fwhmm")]
+position = Vector2(445, 134)
+
+[node name="coluna13" parent="Trees" instance=ExtResource("4_fwhmm")]
+position = Vector2(716, 458)
+
+[node name="coluna15" parent="Trees" instance=ExtResource("4_fwhmm")]
+position = Vector2(897, 330)
+
+[node name="coluna16" parent="Trees" instance=ExtResource("4_fwhmm")]
+position = Vector2(1173, 337)
+
+[node name="coluna17" parent="Trees" instance=ExtResource("4_fwhmm")]
+position = Vector2(866, 556)
+
+[node name="coluna18" parent="Trees" instance=ExtResource("4_fwhmm")]
+position = Vector2(455, 487)
+
+[node name="coluna19" parent="Trees" instance=ExtResource("4_fwhmm")]
+position = Vector2(1100, -81)
+
+[node name="coluna14" parent="Trees" instance=ExtResource("4_fwhmm")]
+position = Vector2(496, 54)
+
+[node name="coluna11" parent="Trees" instance=ExtResource("4_fwhmm")]
+position = Vector2(712, -1)
+
+[node name="coluna12" parent="Trees" instance=ExtResource("4_fwhmm")]
+position = Vector2(954, 87)
+
+[node name="coluna10" parent="Trees" instance=ExtResource("4_fwhmm")]
+position = Vector2(126, 163)
+
+[node name="coluna20" parent="Trees" instance=ExtResource("4_fwhmm")]
+position = Vector2(1212, 512)
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_fk6mk")
+autoplay = true

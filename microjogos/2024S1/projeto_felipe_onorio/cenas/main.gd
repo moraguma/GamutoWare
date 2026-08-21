@@ -1,14 +1,5 @@
 extends Node2D
 
-
-
-
-signal right_pressed
-signal down_pressed
-signal up_pressed
-signal left_pressed
-signal space_pressed
-
 var node_to_be_consumed_1: Node2D
 var node_to_be_consumed_2: Node2D
 var node_to_be_consumed_string_1: String = ""
