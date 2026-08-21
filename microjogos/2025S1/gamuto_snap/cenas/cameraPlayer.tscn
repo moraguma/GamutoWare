@@ -1,0 +1,89 @@
+[gd_scene load_steps=13 format=3 uid="uid://bukwvlpdiph3y"]
+
+[ext_resource type="Script" uid="uid://t5asnuie65sg" path="res://microjogos/2025S1/gamuto_snap/cenas/scripts/camera_player.gd" id="1_0sfhs"]
+[ext_resource type="Shader" uid="uid://c2v64lofhiawv" path="res://microjogos/2025S1/gamuto_snap/cenas/shaders/cameraPlayer.gdshader" id="2_hogq1"]
+[ext_resource type="Texture2D" uid="uid://54t0uw7tu616" path="res://microjogos/2025S1/gamuto_snap/recursos/imagens/cam_overlay_sheet.png" id="3_oirir"]
+[ext_resource type="AudioStream" uid="uid://bqwfuk7ncsmn4" path="res://microjogos/2025S1/gamuto_snap/recursos/sons/photo_sound.ogg" id="4_0qtja"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vk3ex"]
+shader = ExtResource("2_hogq1")
+shader_parameter/flash = 0.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84n45"]
+atlas = ExtResource("3_oirir")
+region = Rect2(0, 0, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qtja"]
+atlas = ExtResource("3_oirir")
+region = Rect2(1920, 0, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oirir"]
+atlas = ExtResource("3_oirir")
+region = Rect2(3840, 0, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vk3ex"]
+atlas = ExtResource("3_oirir")
+region = Rect2(5760, 0, 1920, 1080)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_seflk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84n45")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qtja")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oirir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vk3ex")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0sfhs"]
+size = Vector2(700, 250)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0sfhs"]
+radius = 68.0661
+
+[node name="CameraPlayer" type="CharacterBody2D"]
+script = ExtResource("1_0sfhs")
+speed = 400
+
+[node name="playerAnimatedSprite" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_vk3ex")
+scale = Vector2(0.667, 0.667)
+sprite_frames = SubResource("SpriteFrames_seflk")
+autoplay = "default"
+frame = 2
+frame_progress = 0.409853
+
+[node name="playerCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0sfhs")
+debug_color = Color(0, 0.6, 0.701961, 0.176471)
+
+[node name="playerArea2D" type="Area2D" parent="."]
+
+[node name="areaCollision" type="CollisionShape2D" parent="playerArea2D"]
+shape = SubResource("CircleShape2D_0sfhs")
+
+[node name="playerCamera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
+process_callback = 0
+position_smoothing_enabled = true
+
+[node name="flashSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_0qtja")
+
+[node name="timers" type="Node" parent="."]
+
+[node name="snap_timer" type="Timer" parent="timers"]
+
+[connection signal="area_entered" from="playerArea2D" to="." method="_on_player_area_2d_area_entered"]
+[connection signal="area_exited" from="playerArea2D" to="." method="_on_player_area_2d_area_exited"]
+[connection signal="timeout" from="timers/snap_timer" to="." method="_on_snap_timer_timeout"]

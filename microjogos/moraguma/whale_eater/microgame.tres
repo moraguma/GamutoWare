@@ -1,8 +1,8 @@
-[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3]
+[gd_resource type="Resource" script_class="MicrogameAsset" format=3 uid="uid://ceootnkwmn0bf"]
 
-[ext_resource type="Script" path="res://principal/microgame_asset.gd" id="1_fpgvh"]
-[ext_resource type="Texture2D" path="res://microjogos/moraguma/whale_eater/capa.png" id="1_q6egc"]
-[ext_resource type="PackedScene" path="res://microjogos/moraguma/whale_eater/cenas/Main.tscn" id="2_tcnpy"]
+[ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_fpgvh"]
+[ext_resource type="Texture2D" uid="uid://daj3amx0ak4do" path="res://microjogos/moraguma/whale_eater/capa.png" id="1_q6egc"]
+[ext_resource type="PackedScene" uid="uid://dvwoaxdlv7rpl" path="res://microjogos/moraguma/whale_eater/cenas/Main.tscn" id="2_tcnpy"]
 
 [resource]
 script = ExtResource("1_fpgvh")
@@ -28,5 +28,4 @@ SFX: https://beepyeah.itch.io/8-bit-sfx-pack"
 start_message_pt = &"FOGE!"
 start_message_en = &"GET OUT!"
 main_scene = ExtResource("2_tcnpy")
-difficulty = 0
-screen_dimensions = Vector2i(480,270)
+screen_dimensions = Vector2i(480, 270)

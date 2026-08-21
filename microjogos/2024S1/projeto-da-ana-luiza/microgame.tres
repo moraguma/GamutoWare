@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" format=3 uid="uid://ke0fsgamiisy"]
+
+[ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_cjlgc"]
+[ext_resource type="Texture2D" uid="uid://bkvcg7ivmjl0d" path="res://microjogos/2024S1/projeto-da-ana-luiza/capa.png" id="1_qigsg"]
+[ext_resource type="PackedScene" uid="uid://kf7dv2a352d8" path="res://microjogos/2024S1/projeto-da-ana-luiza/cenas/main.tscn" id="2_qigsg"]
+
+[resource]
+script = ExtResource("1_cjlgc")
+cover = ExtResource("1_qigsg")
+title_pt = &"Dancing Queen"
+title_en = &"Dancing Queen"
+credits_pt = "Criado por: Criado por: Ana Luiza, Paula e P3
+
+Assets autorais
+Audio: 
+https://pixabay.com/sound-effects/film-special-effects-soft-treble-fast-collect-fade-out-ending-sound-effect-416828/"
+credits_en = "Made by: Ana Luiza, Paula e P3
+
+Authoral assets
+Audio coin: 
+https://pixabay.com/sound-effects/film-special-effects-soft-treble-fast-collect-fade-out-ending-sound-effect-416828/"
+start_message_pt = &"PEGUE!"
+start_message_en = &"CATCH!"
+main_scene = ExtResource("2_qigsg")

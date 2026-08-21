@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://bljjgqolr1tm3"]
+
+[ext_resource type="Texture2D" uid="uid://dog3lkdvesojw" path="res://microjogos/2025S1/gamuto_petpet/recursos/imagens/bg.png" id="1_7qddy"]
+[ext_resource type="Script" uid="uid://bwkj2x65owpoo" path="res://microjogos/2025S1/gamuto_petpet/cenas/scripts/mouse.gd" id="1_w0e6d"]
+[ext_resource type="Texture2D" uid="uid://db2mrbqo6tl8q" path="res://microjogos/2025S1/gamuto_petpet/recursos/imagens/maozinha.png" id="3_0sc6v"]
+[ext_resource type="PackedScene" uid="uid://bfwsayxbk75mm" path="res://microjogos/2025S1/gamuto_petpet/cenas/gamuto.tscn" id="3_crsyb"]
+[ext_resource type="Texture2D" uid="uid://dq5vvfmibjw6k" path="res://microjogos/2025S1/gamuto_petpet/recursos/imagens/maozinhafechada.png" id="6_7qddy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7qddy"]
+radius = 2.76713
+height = 7.40807
+
+[node name="main" type="Node2D" unique_id=141789635]
+
+[node name="Bg" type="Sprite2D" parent="." unique_id=964673889]
+position = Vector2(960, 540)
+texture = ExtResource("1_7qddy")
+
+[node name="gamuto" parent="." unique_id=70897922 instance=ExtResource("3_crsyb")]
+position = Vector2(1261, 395)
+scale = Vector2(0.845, 0.845)
+
+[node name="mouse" type="CharacterBody2D" parent="." unique_id=1862979069]
+position = Vector2(972, 535)
+scale = Vector2(0.63, 0.63)
+script = ExtResource("1_w0e6d")
+speed = 500.0
+
+[node name="maoA" type="Sprite2D" parent="mouse" unique_id=1534674637]
+texture = ExtResource("3_0sc6v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mouse" unique_id=207237176]
+rotation = -3.14159
+scale = Vector2(59.7255, -45.8959)
+shape = SubResource("CapsuleShape2D_7qddy")
+
+[node name="maoF" type="Sprite2D" parent="mouse" unique_id=205984340]
+visible = false
+texture = ExtResource("6_7qddy")
+
+[node name="Control" type="Control" parent="." unique_id=1261550402]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control" unique_id=780613014]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 34.0
+offset_right = 523.0
+offset_bottom = 106.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 46
+text = "cafuné [espaço]"
+
+[connection signal="body_entered" from="gamuto" to="mouse" method="_on_gamuto_body_entered"]
+[connection signal="body_exited" from="gamuto" to="mouse" method="_on_gamuto_body_exited"]

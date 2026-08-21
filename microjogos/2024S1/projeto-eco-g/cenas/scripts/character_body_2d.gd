@@ -22,7 +22,7 @@ func get_input():
 		velocity = transform.y
 		vision = 0
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if !is_dead: 
 		get_input()
 		animated_gamuto.rotation = vision * rotation_speed

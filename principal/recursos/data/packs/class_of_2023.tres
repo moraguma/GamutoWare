@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MicrogamePack" load_steps=24 format=3 uid="uid://dlwrs2qpel6ga"]
+[gd_resource type="Resource" script_class="MicrogamePack" format=3 uid="uid://dlwrs2qpel6ga"]
 
 [ext_resource type="Script" uid="uid://cv53qaorwqxj0" path="res://principal/recursos/data/MicrogamePack.gd" id="1_0pwo5"]
 [ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_dpsfb"]
@@ -23,8 +23,12 @@
 [ext_resource type="Resource" path="res://microjogos/2023S1/projeto_alexia/microgame.tres" id="19_rpkjd"]
 [ext_resource type="Resource" path="res://microjogos/2023S1/projeto_leonardo_valente/microgame.tres" id="20_bg7mp"]
 [ext_resource type="Resource" uid="uid://bdqllmd3pmqm3" path="res://microjogos/2023S1/projeto_vinicius_carvalho/microgame.tres" id="21_luyy0"]
+[ext_resource type="Resource" uid="uid://coy3wtdgjafg0" path="res://microjogos/2023S1/projeto-gabriel-thiago/microgame.tres" id="23_35dyv"]
+[ext_resource type="Resource" uid="uid://wr8bw6qev2l3" path="res://microjogos/2023S1/projeto-evandro-loyolla/microgame.tres" id="23_i0s5r"]
+[ext_resource type="Resource" uid="uid://ffpy4gbqfpx8" path="res://microjogos/2023S1/projeto-repasch/microgame.tres" id="25_x2ft3"]
+[ext_resource type="Resource" uid="uid://l1t8cmdsnjh7" path="res://microjogos/2023S1/projeto_luiscolosimo/microgame.tres" id="26_cc1tl"]
 
 [resource]
 script = ExtResource("1_0pwo5")
 pack_name = &"Class of 2023"
-microgames = Array[ExtResource("1_dpsfb")]([ExtResource("1_xe7pf"), ExtResource("2_jwl4o"), ExtResource("3_8x7eb"), ExtResource("4_bxq8x"), ExtResource("5_5p1an"), ExtResource("6_hhlnd"), ExtResource("7_hvc6b"), ExtResource("8_s7i8d"), ExtResource("9_wscca"), ExtResource("10_q1qi2"), ExtResource("11_xldpy"), ExtResource("12_3sb4r"), ExtResource("13_4dspy"), ExtResource("15_y12lx"), ExtResource("16_tlaue"), ExtResource("17_mdomj"), ExtResource("18_pxq1y"), ExtResource("19_rpkjd"), ExtResource("20_bg7mp"), ExtResource("21_luyy0"), ExtResource("14_qhakr")])
+microgames = Array[ExtResource("1_dpsfb")]([ExtResource("1_xe7pf"), ExtResource("2_jwl4o"), ExtResource("3_8x7eb"), ExtResource("4_bxq8x"), ExtResource("5_5p1an"), ExtResource("6_hhlnd"), ExtResource("7_hvc6b"), ExtResource("8_s7i8d"), ExtResource("9_wscca"), ExtResource("10_q1qi2"), ExtResource("11_xldpy"), ExtResource("12_3sb4r"), ExtResource("13_4dspy"), ExtResource("15_y12lx"), ExtResource("16_tlaue"), ExtResource("17_mdomj"), ExtResource("18_pxq1y"), ExtResource("19_rpkjd"), ExtResource("20_bg7mp"), ExtResource("21_luyy0"), ExtResource("14_qhakr"), ExtResource("23_i0s5r"), ExtResource("23_35dyv"), ExtResource("25_x2ft3"), ExtResource("26_cc1tl")])

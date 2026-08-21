@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" load_steps=4 format=3 uid="uid://ja0w4c01roxa"]
+
+[ext_resource type="PackedScene" uid="uid://bk7nlchnxeavs" path="res://microjogos/2025S1/projeto-plataformer/cenas/main.tscn" id="1_7l7aa"]
+[ext_resource type="Texture2D" uid="uid://cfj0cyi2bkg84" path="res://microjogos/2025S1/projeto-plataformer/capa.png" id="1_l6lkd"]
+[ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_v6eee"]
+
+[resource]
+script = ExtResource("1_v6eee")
+cover = ExtResource("1_l6lkd")
+title_pt = &"Starry Knight"
+title_en = &"Starry Knight"
+credits_pt = "Desenvolvido por: Ricardo Emanuel
+Assets do cenário: David G CC0
+https://incolgames.itch.io/dungeon-platformer-tile-set-pixel-art
+Assets do cavalheiro: Mattz Art CC0
+https://xzany.itch.io/free-knight-2d-pixel-art
+Efeito vitória: spuispuin CC-BY 4.0
+https://opengameart.org/users/spuispuin
+Efeito de passos: Kenney CC0
+https://opengameart.org/content/50-rpg-sound-effects
+Efeito de grito durante queda: HaelDB https://opengameart.org/users/haeldb CC0 e OGA-BY 3.0
+https://opengameart.org/content/male-gruntyelling-sounds
+Efeito coleta da chave
+https://pixabay.com/sound-effects/film-special-effects-retro-coin-4-236671/
+Efeito porta destrancada
+https://pixabay.com/sound-effects/household-opening-door-411632/
+Efeito pulo
+https://pixabay.com/sound-effects/film-special-effects-jump-landing-30946/
+Musica:
+https://pixabay.com/sound-effects/musical-lonely-castle-29059/"
+credits_en = "Developed by: Ricardo Emanuel
+Dungeon Assets: David G CC0
+https://incolgames.itch.io/dungeon-platformer-tile-set-pixel-art
+Knight Assets: Mattz Art CC0
+https://xzany.itch.io/free-knight-2d-pixel-art
+Victory effect: spuispuin CC-BY 4.0
+https://opengameart.org/users/spuispuin
+Steps effect: Kenney CC0
+https://opengameart.org/content/50-rpg-sound-effects
+Screaming effect when falling: HaelDB https://opengameart.org/users/haeldb CC0 e OGA-BY 3.0
+https://opengameart.org/content/male-gruntyelling-sounds
+Key collection effect
+https://pixabay.com/sound-effects/film-special-effects-retro-coin-4-236671/
+Unlocked door effect
+https://pixabay.com/sound-effects/household-opening-door-411632/
+Jump effect
+https://pixabay.com/sound-effects/film-special-effects-jump-landing-30946/
+Music:
+https://pixabay.com/sound-effects/musical-lonely-castle-29059/"
+start_message_pt = &"AVENTURE-SE!"
+start_message_en = &"EXPLORE!"
+main_scene = ExtResource("1_7l7aa")
+difficulty = 8

@@ -1,0 +1,96 @@
+[gd_scene load_steps=8 format=3 uid="uid://b4ck6qiv563g1"]
+
+[ext_resource type="Script" uid="uid://cu6nner3sauov" path="res://microjogos/2025S1/projeto-plataformer/cenas/scripts/porta.gd" id="1_lfaey"]
+[ext_resource type="Texture2D" uid="uid://34j4m5mnjmc6" path="res://microjogos/2025S1/projeto-plataformer/recursos/imagens/Dungeon Tile Set.png" id="1_ocft2"]
+[ext_resource type="AudioStream" uid="uid://chlv18m12xkm0" path="res://microjogos/2025S1/projeto-plataformer/recursos/sons/soundreality-opening-door-411632.wav" id="4_vqdc8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ocft2"]
+size = Vector2(16, 31)
+
+[sub_resource type="Animation" id="Animation_vqdc8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [88, 88]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Open:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_8ig7a"]
+resource_name = "open_door"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0001, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [87, 88, 87]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Open:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_es11u"]
+_data = {
+&"RESET": SubResource("Animation_vqdc8"),
+&"open_door": SubResource("Animation_8ig7a")
+}
+
+[node name="Porta" type="Area2D"]
+script = ExtResource("1_lfaey")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -8)
+texture = ExtResource("1_ocft2")
+hframes = 15
+vframes = 9
+frame = 88
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
+position = Vector2(0, -7.5)
+shape = SubResource("RectangleShape2D_ocft2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_es11u")
+}
+
+[node name="Open" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_vqdc8")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="finished" from="Open" to="." method="_on_open_finished"]

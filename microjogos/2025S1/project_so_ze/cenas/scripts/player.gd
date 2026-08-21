@@ -39,14 +39,14 @@ func lose() -> void:
 	get_node("Fail").show()
 	timer.stop()
 	$LoseSound.play()
-	get_parent().register_lose()
+	Minigames.register_lose(self)
 
 func win() -> void:
 	won = true
 	get_node("TranformationParts").hide()
 	get_node("Transformation").show()
 	get_node("TranformationParts/Transform/AudioStreamPlayer").play()
-	get_parent().register_win()
+	Minigames.register_win(self)
 	
 func _input(event: InputEvent) -> void:
 	if not fail and not won and event.is_action_pressed("acao"):

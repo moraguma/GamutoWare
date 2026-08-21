@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://bvfmhfa5w11ii"]
+
+[ext_resource type="Script" uid="uid://bmr76yqoy6naf" path="res://microjogos/2023S1/projeto-repasch/cenas/scripts/CharacterBody2D.gd" id="1_wsy62"]
+[ext_resource type="Texture2D" uid="uid://7wx81h4e83ke" path="res://microjogos/2023S1/projeto-repasch/recursos/BearSprites.png" id="2_rxoup"]
+[ext_resource type="Texture2D" uid="uid://wkgyjleyqief" path="res://microjogos/2023S1/projeto-repasch/recursos/01_dish.png" id="4_rxoup"]
+[ext_resource type="AudioStream" uid="uid://ceudmjispmm4y" path="res://microjogos/2023S1/projeto-repasch/recursos/audio/nahtt-eat-323883.wav" id="5_bfs8s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4gnyf"]
+radius = 83.7593
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wsy62"]
+radius = 117.507
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=2042761210]
+script = ExtResource("1_wsy62")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1523593183]
+texture_filter = 3
+position = Vector2(6, 15)
+scale = Vector2(8.038, 8.038)
+texture = ExtResource("2_rxoup")
+hframes = 2
+vframes = 5
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1410692478]
+scale = Vector2(0.8, 0.8)
+shape = SubResource("CircleShape2D_4gnyf")
+debug_color = Color(0.176471, 0.211765, 0.529412, 0.419608)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=799818249]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2123011420]
+scale = Vector2(0.8, 0.8)
+shape = SubResource("CircleShape2D_wsy62")
+debug_color = Color(0.176471, 0.211765, 0.529412, 0.419608)
+
+[node name="Dishes" type="Node2D" parent="." unique_id=853730397]
+
+[node name="Dish1" type="Sprite2D" parent="Dishes" unique_id=750155855]
+visible = false
+texture_filter = 3
+position = Vector2(-1, 43)
+scale = Vector2(3.7, 3.7)
+texture = ExtResource("4_rxoup")
+
+[node name="Dish2" type="Sprite2D" parent="Dishes" unique_id=1366656028]
+visible = false
+texture_filter = 3
+position = Vector2(0, 35)
+scale = Vector2(3.65, 3.65)
+texture = ExtResource("4_rxoup")
+
+[node name="Dish3" type="Sprite2D" parent="Dishes" unique_id=751362120]
+visible = false
+texture_filter = 3
+position = Vector2(-1, 27)
+scale = Vector2(3.6, 3.6)
+texture = ExtResource("4_rxoup")
+
+[node name="Eat" type="AudioStreamPlayer" parent="." unique_id=45662917]
+stream = ExtResource("5_bfs8s")
+
+[node name="Timer" type="Timer" parent="." unique_id=618157472]
+one_shot = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

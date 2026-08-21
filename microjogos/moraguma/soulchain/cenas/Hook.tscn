@@ -62,6 +62,7 @@ _data = {
 
 [node name="Hook" type="Sprite2D" unique_id=1497056307]
 z_index = 1
+texture_filter = 1
 texture = ExtResource("3")
 hframes = 6
 vframes = 7
@@ -73,5 +74,7 @@ libraries/ = SubResource("AnimationLibrary_vl4xp")
 
 [node name="Chain" type="Line2D" parent="." unique_id=343804966]
 z_as_relative = false
+texture_filter = 1
+texture_repeat = 2
 texture = ExtResource("2")
 texture_mode = 1

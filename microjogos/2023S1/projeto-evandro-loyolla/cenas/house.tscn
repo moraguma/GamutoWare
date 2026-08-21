@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://8q04okkwiaa2"]
+
+[ext_resource type="Script" uid="uid://d008x43tahqfs" path="res://microjogos/2023S1/projeto-evandro-loyolla/cenas/scripts/house.gd" id="1_68un4"]
+[ext_resource type="Texture2D" uid="uid://bly1sryrhcrqu" path="res://microjogos/2023S1/projeto-evandro-loyolla/recursos/kenney_desert-shooter-pack_1.0/Tiles/BrickHouse.png" id="1_lw05y"]
+[ext_resource type="AudioStream" uid="uid://dswcyg6irgda5" path="res://microjogos/2023S1/projeto-evandro-loyolla/recursos/sounds/open_door.wav" id="3_2ycrn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lw05y"]
+size = Vector2(88, 96)
+
+[node name="House" type="Area2D"]
+script = ExtResource("1_68un4")
+
+[node name="BrickHouse" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(24, -24)
+texture = ExtResource("1_lw05y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(24, -24)
+shape = SubResource("RectangleShape2D_lw05y")
+
+[node name="Open" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_2ycrn")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
