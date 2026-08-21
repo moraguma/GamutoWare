@@ -5,10 +5,11 @@ func _ready() -> void:
 	$Trilha.points = [Vector2.ZERO, Vector2.ZERO]
 func setup_trail(pos:Vector2):
 	$CollisionShape2D.shape.a = pos
-	$Trilha.points[0] = pos
+	$Trilha.points = [pos, pos]
 	$CollisionShape2D.shape.b = pos
-	$Trilha.points[1] = pos
 	
 func update_trail(pos:Vector2):
 	$CollisionShape2D.shape.b = pos
-	$Trilha.points[1] = pos
+	var new_points = $Trilha.points
+	new_points[1] = pos
+	$Trilha.points = new_points

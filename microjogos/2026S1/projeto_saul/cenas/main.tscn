@@ -1,16 +1,13 @@
 [gd_scene format=3 uid="uid://btodg32h2j7ry"]
 
-[ext_resource type="Script" uid="uid://bf005734uqfpn" path="res://microjogos/2026S1/projeto_saul/cenas/scripts/character_body_2d.gd" id="1_1mje1"]
-[ext_resource type="Script" uid="uid://c3ji15qv043vt" path="res://microjogos/2026S1/projeto_saul/cenas/scripts/main.gd" id="1_v1koa"]
+[ext_resource type="Script" uid="uid://bf005734uqfpn" path="res://microjogos/2026S1/projeto_saul/cenas/scripts/alien.gd" id="1_1mje1"]
 [ext_resource type="Texture2D" uid="uid://baitp1n2r2nc1" path="res://microjogos/2026S1/projeto_saul/recursos/imagens/Sprite-ovni123.png" id="3_jtksr"]
 [ext_resource type="Script" uid="uid://cxi84drvunpjo" path="res://microjogos/2026S1/projeto_saul/cenas/scripts/planet.gd" id="4_jtksr"]
 [ext_resource type="Texture2D" uid="uid://ds8klsbwup05l" path="res://microjogos/2026S1/projeto_saul/recursos/imagens/planeta-subestatico-6.png" id="5_n6yvp"]
 [ext_resource type="Texture2D" uid="uid://nmrqndtsuonb" path="res://microjogos/2026S1/projeto_saul/recursos/imagens/planeta-subanimado-6.png" id="5_tq0yn"]
 [ext_resource type="PackedScene" uid="uid://c27om8u673xto" path="res://microjogos/2026S1/projeto_saul/cenas/cohete.tscn" id="7_n6yvp"]
-[ext_resource type="Script" uid="uid://dbdiwiu2vwl4" path="res://microjogos/2026S1/projeto_saul/cenas/fuego.gd" id="8_mcgew"]
 [ext_resource type="Texture2D" uid="uid://ccwx63cersude" path="res://microjogos/2026S1/projeto_saul/recursos/imagens/fogo-1.png" id="9_7ufil"]
 [ext_resource type="AudioStream" uid="uid://dxbx2hsf0whpx" path="res://microjogos/2026S1/projeto_saul/recursos/sons/653724__josefpres__8-bit-game-loop-003-only-organ-short-120-bpm.wav" id="9_tq0yn"]
-[ext_resource type="Script" uid="uid://dhkvls7dk15pj" path="res://microjogos/2026S1/projeto_saul/cenas/estrella.gd" id="10_i2bga"]
 [ext_resource type="Texture2D" uid="uid://dqpl0uuqc4mjs" path="res://microjogos/2026S1/projeto_saul/recursos/imagens/estrella.png" id="11_hgrjq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eaye2"]
@@ -56,7 +53,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ehwhp")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }, {
@@ -70,12 +67,12 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cpofn")
 }],
-"loop": true,
+"loop": 1,
 "name": &"fuego",
 "speed": 5.0
 }, {
 "frames": [],
-"loop": true,
+"loop": 1,
 "name": &"nueva_animacion",
 "speed": 5.0
 }]
@@ -152,7 +149,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_858el")
 }],
-"loop": false,
+"loop": 0,
 "name": &"sub_animado",
 "speed": 5.0
 }, {
@@ -175,7 +172,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cmtrk")
 }],
-"loop": true,
+"loop": 1,
 "name": &"sub_estatico",
 "speed": 5.0
 }]
@@ -270,7 +267,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_csavc")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
@@ -334,21 +331,17 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_rhdd4")
 }],
-"loop": false,
+"loop": 0,
 "name": &"default",
 "speed": 20.0
 }]
 
 [node name="Main" type="Node2D" unique_id=1597121372]
 texture_filter = 1
-position = Vector2(0, -2)
-script = ExtResource("1_v1koa")
 
-[node name="Alien" type="CharacterBody2D" parent="." unique_id=618130479 node_paths=PackedStringArray("planet", "tiempo")]
+[node name="Alien" type="CharacterBody2D" parent="." unique_id=618130479]
 position = Vector2(960, 540)
 script = ExtResource("1_1mje1")
-planet = NodePath("../Planeta")
-tiempo = NodePath("../Timer")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Alien" unique_id=770826470]
 position = Vector2(0, -480)
@@ -362,20 +355,19 @@ position = Vector2(0, -480)
 shape = SubResource("CircleShape2D_v1koa")
 
 [node name="Timer" type="Timer" parent="." unique_id=1328198618]
-wait_time = 2.547
-one_shot = true
+wait_time = 0.5
 autostart = true
 
-[node name="Planeta" type="CharacterBody2D" parent="." unique_id=760807799]
+[node name="Planeta" type="Node2D" parent="." unique_id=953793504]
 position = Vector2(960, 540)
-collision_layer = 0
-collision_mask = 0
 script = ExtResource("4_jtksr")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Planeta" unique_id=697749723]
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_858el")
 animation = &"sub_animado"
+frame = 5
+frame_progress = 1.0
 
 [node name="a1" type="Path2D" parent="Planeta" unique_id=291186141]
 position = Vector2(1.9716187, 0)
@@ -476,23 +468,16 @@ curve = SubResource("Curve2D_1qgog")
 position = Vector2(69.754944, 151)
 rotation = 2.682131
 
-[node name="Fuego" type="RigidBody2D" parent="." unique_id=165061281]
-position = Vector2(195, 528)
-script = ExtResource("8_mcgew")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Fuego" unique_id=1155082295]
-position = Vector2(128, -210)
+[node name="Fuego" type="AnimatedSprite2D" parent="." unique_id=1155082295]
+visible = false
+position = Vector2(323, 318)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_o06x1")
 frame = 1
 frame_progress = 0.5519579
 
-[node name="estrella" type="RigidBody2D" parent="." unique_id=429297067]
-visible = false
+[node name="estrella" type="AnimatedSprite2D" parent="." unique_id=247390301]
 position = Vector2(335, 833)
-script = ExtResource("10_i2bga")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="estrella" unique_id=247390301]
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_uxgk4")
 frame = 7
@@ -503,4 +488,5 @@ stream = ExtResource("9_tq0yn")
 volume_db = 3.649
 autoplay = true
 
+[connection signal="timeout" from="Timer" to="Planeta" method="_on_timer_timeout"]
 [connection signal="animation_finished" from="Planeta/Sprite2D" to="Planeta" method="_on_sprite_2d_animation_finished"]

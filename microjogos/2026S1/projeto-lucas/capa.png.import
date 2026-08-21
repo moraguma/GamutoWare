@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dofhgw06mkmdq"
-path="res://.godot/imported/SpaceExplosion_05.png-0eb335bdc23c9e1952369d2512558124.ctex"
+uid="uid://v6fleifiw748"
+path="res://.godot/imported/capa.png-21f98daeb7ddb7acc6e5b95fe3955a7e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microjogos/2026S1/projeto-lucas/recursos/imagens/Pixel Explosion Effects Pack 01 v1_1/SpaceExplosion/Frames/SpaceExplosion_05.png"
-dest_files=["res://.godot/imported/SpaceExplosion_05.png-0eb335bdc23c9e1952369d2512558124.ctex"]
+source_file="res://microjogos/2026S1/projeto-lucas/capa.png"
+dest_files=["res://.godot/imported/capa.png-21f98daeb7ddb7acc6e5b95fe3955a7e.ctex"]
 
 [params]
 

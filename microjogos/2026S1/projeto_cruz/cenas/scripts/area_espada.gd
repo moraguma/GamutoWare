@@ -1,12 +1,9 @@
 extends Area2D
 
-@export var duracao_ataque: float = 0.3
+func _on_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Esqueletos"):
+		body.queue_free()
 
-func _ready():
 
-	await get_tree().create_timer(duracao_ataque).timeout
+func _on_timer_timeout() -> void:
 	queue_free()
-
-func _on_area_entered(area: Area2D):
-	if area.is_in_group("Esqueletos"):
-		area.get_parent().queue_free()

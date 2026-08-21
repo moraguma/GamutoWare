@@ -8,8 +8,7 @@ func _ready():
 	
 	$Back.position.x == randi() % 101 - 50
 	$Back.position.y == randi() % 101 - 50
-	var id = 2
-	#randi() % 4
+	var id = randi() % 4
 	
 	if id == 0:
 		instantiate_shooter2(Vector2(1880, 1040), Vector2(0,-1)	, 200, 600, 0, 1)

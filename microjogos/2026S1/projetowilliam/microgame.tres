@@ -7,8 +7,8 @@
 [resource]
 script = ExtResource("1_nu8eq")
 cover = ExtResource("1_fk7ji")
-title_pt = &"TÍTULO DO JOGO"
-title_en = &"GAME TITLE"
+title_pt = &"Entrega Extraviada"
+title_en = &"Lost Delivery"
 credits_pt = "William Dos Santos Junqueira
 https://free-game-assets.itch.io/ocean-and-clouds-free-pixel-art-backgrounds
 https://creazilla.com/media/clipart/1999256/brown-storage-box

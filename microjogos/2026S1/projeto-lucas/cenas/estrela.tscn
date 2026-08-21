@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://6trid32v1xtw"]
 
 [ext_resource type="Texture2D" uid="uid://jewvnwwqut8l" path="res://microjogos/2026S1/projeto-lucas/recursos/imagens/ice_sparkles.png" id="1_7bh1v"]
-[ext_resource type="Script" uid="uid://bybards6xlqe1" path="res://microjogos/2026S1/projeto-lucas/cenas/estrela.gd" id="2_hwvuo"]
+[ext_resource type="Script" uid="uid://bybards6xlqe1" path="res://microjogos/2026S1/projeto-lucas/cenas/scripts/estrela.gd" id="2_hwvuo"]
+
 
 [sub_resource type="Animation" id="Animation_yq08k"]
 length = 0.001

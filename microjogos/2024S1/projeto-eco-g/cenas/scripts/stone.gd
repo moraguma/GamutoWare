@@ -9,5 +9,3 @@ func _on_timer_timeout():
 func detected():
 	$Line2D.width = 10.0
 	$Timer.start()
-
-

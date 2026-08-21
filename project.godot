@@ -15,8 +15,8 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="GamutoWare"
-run/main_scene="uid://cdhvl35umnn5n"
-config/features=PackedStringArray("4.6")
+run/main_scene="uid://b3q3an4syknyy"
+config/features=PackedStringArray("4.7")
 config/icon="res://icon.png"
 
 [autoload]

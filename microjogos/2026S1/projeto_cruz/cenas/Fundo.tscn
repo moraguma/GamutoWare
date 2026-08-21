@@ -5,7 +5,6 @@
 [node name="Fundo" type="Node2D" unique_id=539732057]
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1700042368]
-scroll_scale = Vector2(0.3, 1)
 repeat_size = Vector2(1000, 0)
 autoscroll = Vector2(-100, 0)
 repeat_times = 3
@@ -13,5 +12,5 @@ repeat_times = 3
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=89774972]
 texture_repeat = 2
 texture = ExtResource("1_gvb6d")
-region_enabled = true
+centered = false
 region_rect = Rect2(0, 0, 1001.44934, 576)

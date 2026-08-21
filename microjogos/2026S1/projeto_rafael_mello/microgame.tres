@@ -8,7 +8,7 @@
 script = ExtResource("1_guwbu")
 cover = ExtResource("1_tn5ot")
 title_pt = &"Gamuto vai morrer"
-title_en = &"Gamuto must die"
+title_en = &"Gamuto will die"
 credits_pt = "Rafael Mello Almeida
 Plano de fundo: https://opengameart.org/content/space-background-1
 Inimigos: https://opengameart.org/content/animated-spaceships

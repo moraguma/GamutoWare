@@ -1,10 +1,21 @@
 [gd_resource type="Resource" script_class="MicrogamePack" format=3 uid="uid://clmk7as27rlw5"]
 
 [ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_xkemv"]
+[ext_resource type="Resource" uid="uid://b8juwph41hfwl" path="res://microjogos/2026S1/projeto-eduardo/microgame.tres" id="2_8htdc"]
 [ext_resource type="Resource" uid="uid://bgsxotmjqvxi8" path="res://microjogos/2026S1/ProjetoBebeTunado/microgame.tres" id="2_jn2wo"]
+[ext_resource type="Resource" uid="uid://b6prloihbogft" path="res://microjogos/2026S1/projeto-fernando/microgame.tres" id="3_a4vrp"]
+[ext_resource type="Resource" uid="uid://cvj43lqe6yxfn" path="res://microjogos/2026S1/projeto-jojodoidao/microgame.tres" id="4_luqer"]
+[ext_resource type="Resource" uid="uid://c4ownnyjnsmuv" path="res://microjogos/2026S1/projeto-lucas/microgame.tres" id="5_w2qe0"]
+[ext_resource type="Resource" uid="uid://ce08h5rllkkrl" path="res://microjogos/2026S1/projeto-luppi/microgame.tres" id="6_jcm47"]
+[ext_resource type="Resource" uid="uid://chs7dnnygrku0" path="res://microjogos/2026S1/projeto-yuji/microgame.tres" id="7_e572l"]
+[ext_resource type="Resource" uid="uid://b0obsnltt2nqv" path="res://microjogos/2026S1/projetowilliam/microgame.tres" id="9_wa14h"]
+[ext_resource type="Resource" uid="uid://dywwt71n5ao5f" path="res://microjogos/2026S1/projeto_cruz/microgame.tres" id="10_i5jit"]
+[ext_resource type="Resource" uid="uid://dr6mqimob56np" path="res://microjogos/2026S1/projeto_luis/microgame.tres" id="11_04sne"]
 [ext_resource type="Script" uid="uid://cv53qaorwqxj0" path="res://principal/recursos/data/MicrogamePack.gd" id="11_i5jit"]
+[ext_resource type="Resource" uid="uid://b64k8vlr5bhmf" path="res://microjogos/2026S1/projeto_rafael_mello/microgame.tres" id="12_rpexw"]
+[ext_resource type="Resource" uid="uid://dfcvm83xsjkbq" path="res://microjogos/2026S1/projeto_saul/microgame.tres" id="13_tflas"]
 
 [resource]
 script = ExtResource("11_i5jit")
 pack_name = &"Class of 2026"
-microgames = Array[ExtResource("1_xkemv")]([ExtResource("2_jn2wo")])
+microgames = Array[ExtResource("1_xkemv")]([ExtResource("2_8htdc"), ExtResource("3_a4vrp"), ExtResource("4_luqer"), ExtResource("5_w2qe0"), ExtResource("6_jcm47"), ExtResource("7_e572l"), ExtResource("2_jn2wo"), ExtResource("9_wa14h"), ExtResource("11_04sne"), ExtResource("12_rpexw"), ExtResource("13_tflas"), ExtResource("10_i5jit")])

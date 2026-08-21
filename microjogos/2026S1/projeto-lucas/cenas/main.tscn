@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dbci7wckhm2cq"]
 
 [ext_resource type="Texture2D" uid="uid://purhsxawrhnf" path="res://microjogos/2026S1/projeto-lucas/recursos/imagens/Moon_Phases_128x128/Moon_Phase_1.png" id="1_8gt0s"]
-[ext_resource type="Script" uid="uid://co6xb7o6cvsh7" path="res://microjogos/2026S1/projeto-lucas/cenas/main.gd" id="1_aslmi"]
+[ext_resource type="Script" uid="uid://co6xb7o6cvsh7" path="res://microjogos/2026S1/projeto-lucas/cenas/scripts/main.gd" id="1_aslmi"]
 [ext_resource type="PackedScene" uid="uid://wsioy633wf24" path="res://microjogos/2026S1/projeto-lucas/cenas/nave.tscn" id="2_1lqsv"]
 [ext_resource type="Texture2D" uid="uid://ddfn827lxe0sp" path="res://microjogos/2026S1/projeto-lucas/recursos/imagens/flag-a.png" id="4_aslmi"]
 [ext_resource type="PackedScene" uid="uid://6trid32v1xtw" path="res://microjogos/2026S1/projeto-lucas/cenas/estrela.tscn" id="4_jmy3m"]

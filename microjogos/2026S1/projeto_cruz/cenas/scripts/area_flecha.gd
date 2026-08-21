@@ -1,11 +1,17 @@
-extends Area2D
+extends CharacterBody2D
 
-@export var velocidade: float = 1200.0
+func _ready() -> void:
+	velocity.x = 1200
+	
+func _physics_process(_delta):
+	move_and_slide()
 
-func _ready():
-	var notifier = VisibleOnScreenNotifier2D.new()
-	notifier.screen_exited.connect(queue_free)
-	add_child(notifier)
+func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
+	queue_free()
 
-func _physics_process(delta):
-	position.x += velocidade * delta
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		Minigames.register_lose(self)
+	body.queue_free()
+	queue_free()
