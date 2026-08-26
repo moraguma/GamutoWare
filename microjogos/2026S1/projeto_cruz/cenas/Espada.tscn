@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dx5yq4c3p7pmo"]
+
+[ext_resource type="Script" uid="uid://e5b01ax74kfy" path="res://microjogos/2026S1/projeto_cruz/cenas/scripts/area_espada.gd" id="1_jm4ug"]
+[ext_resource type="Texture2D" uid="uid://cerrkuc3s83ai" path="res://microjogos/2026S1/projeto_cruz/recursos/imagens/Spirte_slash.png" id="2_04va8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xgrfn"]
+size = Vector2(168, 438)
+
+[node name="Espada" type="Area2D" unique_id=179218161]
+script = ExtResource("1_jm4ug")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1251482275]
+position = Vector2(-25, -1)
+shape = SubResource("RectangleShape2D_xgrfn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2037958150]
+scale = Vector2(8.2, 8.2)
+texture = ExtResource("2_04va8")
+
+[node name="Timer" type="Timer" parent="." unique_id=1891354797]
+wait_time = 0.3
+one_shot = true
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

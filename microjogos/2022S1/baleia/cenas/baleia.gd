@@ -7,7 +7,6 @@ var time = 0
 @onready var background = get_node("background")
 @onready var baleia_animacao = get_node("baleia_animacao")
 @onready var baleia_morta = get_node("baleia_morta")
-@onready var base = get_parent()
 var vivo = true
 
 func _ready():	
@@ -18,12 +17,12 @@ func _on_Terra_body_entered(body):
 	baleia_animacao.visible = false
 	baleia_morta.visible = true
 	vivo = false
-	base.emit_signal("win")
+	Minigames.register_win(self)
 
 func _on_agua_body_entered(body):
 	AguaSound.play()
 	hide()
-	base.emit_signal("lose")
+	Minigames.register_lose(self)
 	
 
 func _physics_process(delta):

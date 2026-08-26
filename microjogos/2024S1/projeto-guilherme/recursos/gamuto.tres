@@ -21,7 +21,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tv7q6")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }, {
@@ -29,7 +29,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_vuyk1")
 }],
-"loop": true,
+"loop": 1,
 "name": &"derrota",
 "speed": 5.0
 }, {
@@ -37,7 +37,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("3_8u5s5")
 }],
-"loop": true,
+"loop": 1,
 "name": &"vitoria",
 "speed": 5.0
 }]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dqwdde2v241xr"]
 
-[ext_resource type="Script" uid="uid://cfwiss4fjoor0" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/player.gd" id="1_1ywkb"]
+[ext_resource type="Script" uid="uid://cfwiss4fjoor0" path="res://microjogos/2023S1/projetoAnaBeatriz/cenas/scripts/player.gd" id="1_1ywkb"]
 [ext_resource type="Texture2D" uid="uid://cywen6tasoke4" path="res://microjogos/2023S1/projetoAnaBeatriz/recursos/SpaceShip.png" id="2_87uws"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_68caw"]

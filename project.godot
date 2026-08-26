@@ -15,8 +15,8 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="GamutoWare"
-run/main_scene="res://principal/cenas/Opening.tscn"
-config/features=PackedStringArray("4.6")
+run/main_scene="uid://b3q3an4syknyy"
+config/features=PackedStringArray("4.7")
 config/icon="res://icon.png"
 
 [autoload]
@@ -46,6 +46,12 @@ enabled=PackedStringArray()
 [filesystem]
 
 import/blender/enabled=false
+
+[global_group]
+
+Esqueletos=""
+Flechas=""
+Player=""
 
 [input]
 
@@ -171,6 +177,7 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
 environment/defaults/default_environment="res://default_env.tres"

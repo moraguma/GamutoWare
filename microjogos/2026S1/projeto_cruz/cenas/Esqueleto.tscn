@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://pwpddfupbrb0"]
+
+[ext_resource type="Texture2D" uid="uid://cdx1w3kydgoya" path="res://microjogos/2026S1/projeto_cruz/recursos/imagens/Sprite_esqueleto.png" id="2_20apj"]
+[ext_resource type="Script" uid="uid://5p5g4qq15q1t" path="res://microjogos/2026S1/projeto_cruz/cenas/scripts/esqueleto.gd" id="2_s2n8v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s2n8v"]
+size = Vector2(94, 356)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qh0wq"]
+size = Vector2(31, 178)
+
+[node name="Esqueleto" type="CharacterBody2D" unique_id=200358909 groups=["Esqueletos"]]
+script = ExtResource("2_s2n8v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1452442819]
+position = Vector2(0, -178)
+shape = SubResource("RectangleShape2D_s2n8v")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1313187036]
+z_index = 1
+position = Vector2(0.99999905, -176)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_20apj")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=283803317]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=872752610]
+position = Vector2(-138, -273)
+rotation = -0.11519173
+shape = SubResource("RectangleShape2D_qh0wq")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

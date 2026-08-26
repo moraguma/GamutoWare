@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" format=3 uid="uid://dywwt71n5ao5f"]
+
+[ext_resource type="Texture2D" uid="uid://dmy8uc6p0h2w7" path="res://microjogos/2026S1/projeto_cruz/capa.png" id="1_kd0im"]
+[ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_w63b8"]
+[ext_resource type="PackedScene" uid="uid://cps047jqun6vp" path="res://microjogos/2026S1/projeto_cruz/cenas/main.tscn" id="2_kd0im"]
+
+[resource]
+script = ExtResource("1_w63b8")
+cover = ExtResource("1_kd0im")
+title_pt = &"Cavaleiro Gamuto"
+title_en = &"Gamuto Knight"
+credits_pt = "Eu fiz todos os assets!!"
+credits_en = "I made all the assets!!"
+start_message_pt = &"Sobreviva"
+start_message_en = &"Survive"
+main_scene = ExtResource("2_kd0im")

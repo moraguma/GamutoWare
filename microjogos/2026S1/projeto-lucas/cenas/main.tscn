@@ -1,0 +1,205 @@
+[gd_scene format=3 uid="uid://dbci7wckhm2cq"]
+
+[ext_resource type="Texture2D" uid="uid://purhsxawrhnf" path="res://microjogos/2026S1/projeto-lucas/recursos/imagens/Moon_Phases_128x128/Moon_Phase_1.png" id="1_8gt0s"]
+[ext_resource type="Script" uid="uid://co6xb7o6cvsh7" path="res://microjogos/2026S1/projeto-lucas/cenas/scripts/main.gd" id="1_aslmi"]
+[ext_resource type="PackedScene" uid="uid://wsioy633wf24" path="res://microjogos/2026S1/projeto-lucas/cenas/nave.tscn" id="2_1lqsv"]
+[ext_resource type="Texture2D" uid="uid://ddfn827lxe0sp" path="res://microjogos/2026S1/projeto-lucas/recursos/imagens/flag-a.png" id="4_aslmi"]
+[ext_resource type="PackedScene" uid="uid://6trid32v1xtw" path="res://microjogos/2026S1/projeto-lucas/cenas/estrela.tscn" id="4_jmy3m"]
+[ext_resource type="AudioStream" uid="uid://dx4b2vl6h5uix" path="res://microjogos/2026S1/projeto-lucas/recursos/sons/retro-game-music.mp3" id="6_yj6of"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jmy3m"]
+radius = 151.21178
+
+[sub_resource type="Animation" id="Animation_aslmi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_yj6of"]
+resource_name = "balangar"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 0.26666668, 0.36666667, 0.46666667, 0.56666666, 0.6666667, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ufkkx"]
+_data = {
+&"RESET": SubResource("Animation_aslmi"),
+&"balangar": SubResource("Animation_yj6of")
+}
+
+[node name="Main" type="Node2D" unique_id=1597121372]
+texture_filter = 1
+script = ExtResource("1_aslmi")
+
+[node name="Lua" type="StaticBody2D" parent="." unique_id=1529448306]
+position = Vector2(934, 564)
+
+[node name="Sprite2D" type="Sprite2D" parent="Lua" unique_id=325458057]
+z_index = 1
+texture_filter = 1
+scale = Vector2(2.3828125, 2.3828125)
+texture = ExtResource("1_8gt0s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lua" unique_id=93705795]
+visible = false
+shape = SubResource("CircleShape2D_jmy3m")
+
+[node name="Nave" parent="." unique_id=1611160911 instance=ExtResource("2_1lqsv")]
+position = Vector2(414.99997, 570.99994)
+scale = Vector2(1.54, 1.54)
+
+[node name="Bandeira" type="Sprite2D" parent="." unique_id=1465916520]
+position = Vector2(-15.5, -23.25)
+scale = Vector2(1.9375, 1.9375)
+texture = ExtResource("4_aslmi")
+hframes = 4
+vframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Bandeira" unique_id=160480402]
+libraries/ = SubResource("AnimationLibrary_ufkkx")
+
+[node name="Background" type="Node" parent="." unique_id=1307754991]
+
+[node name="Estrela" parent="Background" unique_id=1483693403 instance=ExtResource("4_jmy3m")]
+position = Vector2(192.99998, 83)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela2" parent="Background" unique_id=2064070046 instance=ExtResource("4_jmy3m")]
+position = Vector2(1159.9999, 433)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela3" parent="Background" unique_id=82367131 instance=ExtResource("4_jmy3m")]
+position = Vector2(962.99994, 157)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela4" parent="Background" unique_id=326374014 instance=ExtResource("4_jmy3m")]
+position = Vector2(118.00002, 273)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela5" parent="Background" unique_id=389972028 instance=ExtResource("4_jmy3m")]
+position = Vector2(482, 511)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela6" parent="Background" unique_id=434739782 instance=ExtResource("4_jmy3m")]
+position = Vector2(753.99994, 123)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela7" parent="Background" unique_id=1609575400 instance=ExtResource("4_jmy3m")]
+position = Vector2(1385, 601)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela14" parent="Background" unique_id=1557847694 instance=ExtResource("4_jmy3m")]
+position = Vector2(1383, 867)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela15" parent="Background" unique_id=1617623951 instance=ExtResource("4_jmy3m")]
+position = Vector2(1246, 681.99994)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela21" parent="Background" unique_id=672885060 instance=ExtResource("4_jmy3m")]
+position = Vector2(148.00012, 925.99994)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela22" parent="Background" unique_id=647764351 instance=ExtResource("4_jmy3m")]
+position = Vector2(333.00006, 936.99994)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela23" parent="Background" unique_id=1753061632 instance=ExtResource("4_jmy3m")]
+position = Vector2(519.00006, 728.99994)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela24" parent="Background" unique_id=1931866047 instance=ExtResource("4_jmy3m")]
+position = Vector2(586.00006, 915.99994)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela25" parent="Background" unique_id=1785876714 instance=ExtResource("4_jmy3m")]
+position = Vector2(716.00006, 728.99994)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela26" parent="Background" unique_id=1656212710 instance=ExtResource("4_jmy3m")]
+position = Vector2(892, 874.99994)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela27" parent="Background" unique_id=926040936 instance=ExtResource("4_jmy3m")]
+position = Vector2(1149, 955.99994)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela28" parent="Background" unique_id=263566029 instance=ExtResource("4_jmy3m")]
+position = Vector2(1134, 754.99994)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela16" parent="Background" unique_id=1820567633 instance=ExtResource("4_jmy3m")]
+position = Vector2(1608, 772)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela29" parent="Background" unique_id=1900157901 instance=ExtResource("4_jmy3m")]
+position = Vector2(1582, 943)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela30" parent="Background" unique_id=156174974 instance=ExtResource("4_jmy3m")]
+position = Vector2(1794, 924)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela17" parent="Background" unique_id=203232144 instance=ExtResource("4_jmy3m")]
+position = Vector2(1801, 206)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela18" parent="Background" unique_id=1511232252 instance=ExtResource("4_jmy3m")]
+position = Vector2(1535, 166)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela19" parent="Background" unique_id=651321467 instance=ExtResource("4_jmy3m")]
+position = Vector2(1584, 331)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela20" parent="Background" unique_id=825460789 instance=ExtResource("4_jmy3m")]
+position = Vector2(1614, 504)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela8" parent="Background" unique_id=1315349795 instance=ExtResource("4_jmy3m")]
+position = Vector2(1395, 359)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela9" parent="Background" unique_id=248234236 instance=ExtResource("4_jmy3m")]
+position = Vector2(1243, 120.99999)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela10" parent="Background" unique_id=319316245 instance=ExtResource("4_jmy3m")]
+position = Vector2(765.00006, 352)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela11" parent="Background" unique_id=563317462 instance=ExtResource("4_jmy3m")]
+position = Vector2(205.00012, 465)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela12" parent="Background" unique_id=2131958357 instance=ExtResource("4_jmy3m")]
+position = Vector2(254.00009, 731)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="Estrela13" parent="Background" unique_id=196660684 instance=ExtResource("4_jmy3m")]
+position = Vector2(430.0001, 261)
+scale = Vector2(4.625, 4.3096595)
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=2120894341]
+stream = ExtResource("6_yj6of")
+volume_db = -5.0

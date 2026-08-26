@@ -1,0 +1,167 @@
+[gd_scene format=3 uid="uid://crf67iwwewv6t"]
+
+[ext_resource type="Script" uid="uid://q4fsm1t62qym" path="res://microjogos/2026S1/projeto-jojodoidao/cenas/scripts/main.gd" id="1_uo0ms"]
+[ext_resource type="Texture2D" uid="uid://4taqkr3dwl2q" path="res://microjogos/2026S1/projeto-jojodoidao/recursos/imagens/Mesa.png" id="2_vqo3t"]
+[ext_resource type="Texture2D" uid="uid://b00aymefchyso" path="res://microjogos/2026S1/projeto-jojodoidao/recursos/imagens/bola.png" id="3_5w4rh"]
+[ext_resource type="Script" uid="uid://dbyn15bjeulh3" path="res://microjogos/2026S1/projeto-jojodoidao/cenas/scripts/bola_8.gd" id="3_b5pa8"]
+[ext_resource type="AudioStream" uid="uid://dlyjr2hw7jbnb" path="res://microjogos/2026S1/projeto-jojodoidao/recursos/sons/ball_hit.wav" id="4_o1fue"]
+[ext_resource type="Script" uid="uid://jiaarg6jyh5o" path="res://microjogos/2026S1/projeto-jojodoidao/cenas/scripts/taco.gd" id="4_t6tta"]
+[ext_resource type="Texture2D" uid="uid://buwc2sy8ec6ai" path="res://microjogos/2026S1/projeto-jojodoidao/recursos/imagens/Taco.png" id="5_t6tta"]
+[ext_resource type="Script" uid="uid://cp05mq32qjcxy" path="res://microjogos/2026S1/projeto-jojodoidao/cenas/scripts/progress_bar.gd" id="6_60pnv"]
+[ext_resource type="AudioStream" uid="uid://bb43xkorfti40" path="res://microjogos/2026S1/projeto-jojodoidao/recursos/sons/taco_hit.wav" id="7_b5pa8"]
+[ext_resource type="AudioStream" uid="uid://cskgxp8iugmdh" path="res://microjogos/2026S1/projeto-jojodoidao/recursos/sons/background_sound.wav" id="10_nbw4a"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5w4rh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5w4rh"]
+size = Vector2(134.50027, 1080.0002)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_js2oc"]
+size = Vector2(68, 674.4085)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nbw4a"]
+size = Vector2(1919.5657, 55.372025)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s8kbk"]
+size = Vector2(754.7535, 71.36329)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5w4rh"]
+radius = 73.109505
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vqo3t"]
+friction = 0.05
+bounce = 0.9
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k71sy"]
+radius = 25.0
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_nbw4a"]
+friction = 0.1
+bounce = 0.4
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o1fue"]
+size = Vector2(34.99627, 57.188225)
+
+[node name="Main" type="Node2D" unique_id=1597121372]
+script = ExtResource("1_uo0ms")
+
+[node name="Mesa" type="Node2D" parent="." unique_id=2033688722]
+
+[node name="Mesa" type="Sprite2D" parent="Mesa" unique_id=1510218305]
+texture = ExtResource("2_vqo3t")
+centered = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Mesa/Mesa" unique_id=1983013042]
+disable_mode = 1
+physics_material_override = SubResource("PhysicsMaterial_5w4rh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa/Mesa/StaticBody2D" unique_id=1199827686]
+position = Vector2(1852.25, 540)
+scale = Vector2(0.9999998, 0.9999999)
+shape = SubResource("RectangleShape2D_5w4rh")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Mesa/Mesa/StaticBody2D" unique_id=1068864930]
+position = Vector2(1751, 540.7958)
+scale = Vector2(0.9999998, 0.9999999)
+shape = SubResource("RectangleShape2D_js2oc")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Mesa/Mesa/StaticBody2D" unique_id=532290215]
+position = Vector2(957.7826, 29.313992)
+scale = Vector2(0.9999998, 0.9999999)
+shape = SubResource("RectangleShape2D_nbw4a")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Mesa/Mesa/StaticBody2D" unique_id=1292426697]
+position = Vector2(1239, 93.31836)
+scale = Vector2(0.9999998, 0.99999976)
+shape = SubResource("RectangleShape2D_s8kbk")
+
+[node name="Area2D" type="Area2D" parent="Mesa/Mesa" unique_id=2109215575]
+position = Vector2(1722, 91)
+disable_mode = 2
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa/Mesa/Area2D" unique_id=1472391206]
+shape = SubResource("CircleShape2D_5w4rh")
+
+[node name="Bola8" type="RigidBody2D" parent="." unique_id=1853483592]
+position = Vector2(1617, 291)
+disable_mode = 2
+physics_material_override = SubResource("PhysicsMaterial_vqo3t")
+gravity_scale = 0.0
+contact_monitor = true
+max_contacts_reported = 1
+linear_damp = 1.0
+angular_damp = 1.0
+script = ExtResource("3_b5pa8")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bola8" unique_id=392487183]
+shape = SubResource("CircleShape2D_k71sy")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bola8" unique_id=1241160168]
+modulate = Color(0.1148968, 0.11489681, 0.1148968, 1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_5w4rh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Bola8" unique_id=851230319]
+stream = ExtResource("4_o1fue")
+
+[node name="BolaBranca" type="RigidBody2D" parent="." unique_id=87760290]
+position = Vector2(1457, 451)
+physics_material_override = SubResource("PhysicsMaterial_vqo3t")
+gravity_scale = 0.0
+linear_damp = 1.0
+angular_damp = 1.0
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BolaBranca" unique_id=2090764257]
+shape = SubResource("CircleShape2D_k71sy")
+
+[node name="Sprite2D" type="Sprite2D" parent="BolaBranca" unique_id=287562473]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_5w4rh")
+
+[node name="Taco" type="RigidBody2D" parent="." unique_id=1317704625 node_paths=PackedStringArray("progressebar")]
+position = Vector2(1368, 535)
+rotation = -1.5707964
+mass = 4.0
+physics_material_override = SubResource("PhysicsMaterial_nbw4a")
+gravity_scale = 0.0
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("4_t6tta")
+progressebar = NodePath("../ProgressBar")
+metadata/_edit_group_ = true
+
+[node name="Sombra" type="Sprite2D" parent="Taco" unique_id=1870365732]
+visible = false
+modulate = Color(0, 0, 0, 0.3372549)
+position = Vector2(-361.79, 113.335)
+texture = ExtResource("5_t6tta")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taco" unique_id=446375913]
+position = Vector2(-382, 89.999985)
+texture = ExtResource("5_t6tta")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taco" unique_id=1425888270]
+shape = SubResource("RectangleShape2D_o1fue")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Taco" unique_id=298321954]
+stream = ExtResource("7_b5pa8")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=267593653]
+offset_left = 1261.0
+offset_top = 296.0
+offset_right = 1359.0
+offset_bottom = 467.0
+step = 0.1
+fill_mode = 3
+script = ExtResource("6_60pnv")
+
+[node name="BackgroundSound" type="AudioStreamPlayer" parent="." unique_id=885716760]
+stream = ExtResource("10_nbw4a")
+autoplay = true
+
+[connection signal="body_entered" from="Mesa/Mesa/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Bola8" to="Bola8" method="_on_body_entered"]
+[connection signal="body_entered" from="Taco" to="Taco" method="_on_body_entered"]

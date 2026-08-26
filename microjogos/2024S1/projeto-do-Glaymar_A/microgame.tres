@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="MicrogameAsset" format=3 uid="uid://dyl645rldetcf"]
+
+[ext_resource type="Script" uid="uid://bus1nknp6xsc0" path="res://principal/microgame_asset.gd" id="1_30pac"]
+[ext_resource type="Texture2D" uid="uid://dhw6fo6kik8rc" path="res://microjogos/2024S1/projeto-do-Glaymar_A/capa.png" id="1_iqsi1"]
+[ext_resource type="PackedScene" uid="uid://x00xd6jc5a1o" path="res://microjogos/2024S1/projeto-do-Glaymar_A/cenas/main.tscn" id="2_iqsi1"]
+
+[resource]
+script = ExtResource("1_30pac")
+cover = ExtResource("1_iqsi1")
+title_pt = &"VdeG"
+title_en = &"VdeG"
+credits_pt = "Criado por: Glaymar A. de França
+
+Assets autorais"
+credits_en = "Made by: Glaymar A. de França
+Authoral assets"
+start_message_pt = &"SOBREVIVA!"
+start_message_en = &"SURVIVE!"
+main_scene = ExtResource("2_iqsi1")

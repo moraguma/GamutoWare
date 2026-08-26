@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://dttishp72v4tr"]
+
+[ext_resource type="Script" uid="uid://cdu7ly6kcn1oo" path="res://microjogos/2026S1/projetowilliam/cenas/scripts/player.gd" id="1_1pmi0"]
+[ext_resource type="PackedScene" uid="uid://dvv13o4lqgx50" path="res://microjogos/2026S1/projetowilliam/cenas/box.tscn" id="1_g6yof"]
+[ext_resource type="Texture2D" uid="uid://ddr3ma0bxq3br" path="res://microjogos/2026S1/projetowilliam/recursos/imagens/pixelated-sunset-behind-the-clouds-game-background/Ocean_5/1.png" id="3_4hvea"]
+[ext_resource type="Texture2D" uid="uid://cjm4xusj7ml0g" path="res://microjogos/2026S1/projetowilliam/recursos/imagens/pixelated-sunset-behind-the-clouds-game-background/Ocean_5/4.png" id="6_g6yof"]
+[ext_resource type="Texture2D" uid="uid://dogwrk2nqqk03" path="res://principal/recursos/sprites/excited.png" id="6_k5qxn"]
+[ext_resource type="Texture2D" uid="uid://dyjsm2tt5h8yk" path="res://microjogos/2026S1/projetowilliam/recursos/imagens/pixelated-sunset-behind-the-clouds-game-background/Ocean_5/3.png" id="6_ojupi"]
+[ext_resource type="AudioStream" uid="uid://2si7ck571f8" path="res://microjogos/2026S1/projetowilliam/recursos/sons/falling.mp3" id="10_ijapd"]
+
+[sub_resource type="GDScript" id="GDScript_ojupi"]
+script/source = "extends Node2D
+@export var rigid_body_2d_scene: PackedScene
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	Minigames.register_win(self)
+	var screen_size = get_viewport_rect().size
+	
+	while true:
+		var box = rigid_body_2d_scene.instantiate()
+		box.position.x = randf_range(0, screen_size.x)
+		var sprite_node : Sprite2D = box.get_node(\"Sprite2D\")
+		sprite_node.frame = randi_range(0, 9)
+		box.position.y = screen_size.y + 100
+		add_child(box)
+		
+		await get_tree().create_timer(0.2).timeout
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ost38"]
+radius = 54.405884
+
+[node name="Main" type="Node2D" unique_id=1597121372]
+texture_filter = 1
+script = SubResource("GDScript_ojupi")
+rigid_body_2d_scene = ExtResource("1_g6yof")
+
+[node name="Parallax2D4" type="Parallax2D" parent="." unique_id=1253825491]
+autoscroll = Vector2(0, -5)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Parallax2D4" unique_id=164430862]
+scale = Vector2(3.3333335, 3.3364193)
+texture = ExtResource("3_4hvea")
+centered = false
+
+[node name="Parallax2D3" type="Parallax2D" parent="." unique_id=1395296161]
+autoscroll = Vector2(0, -5)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D3" unique_id=395247481]
+position = Vector2(960.00006, 388.00003)
+scale = Vector2(3.34, 3.34)
+texture = ExtResource("6_g6yof")
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1928217105]
+repeat_size = Vector2(989.25, 0)
+autoscroll = Vector2(0, -20)
+repeat_times = 2
+
+[node name="Sprite2D3" type="Sprite2D" parent="Parallax2D2" unique_id=901501542]
+position = Vector2(581, 731)
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("6_ojupi")
+centered = false
+flip_v = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D2" unique_id=172650036]
+position = Vector2(0, 445.00003)
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("6_ojupi")
+centered = false
+
+[node name="Parallax2D5" type="Parallax2D" parent="." unique_id=774418884]
+repeat_size = Vector2(989.25, 0)
+autoscroll = Vector2(0, -15)
+repeat_times = 2
+
+[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D5" unique_id=1586901431]
+position = Vector2(192.95, 628.045)
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("6_ojupi")
+centered = false
+flip_h = true
+
+[node name="Sprite2D3" type="Sprite2D" parent="Parallax2D5" unique_id=1272173920]
+position = Vector2(419, 973)
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("6_ojupi")
+centered = false
+flip_v = true
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1417177734]
+autoscroll = Vector2(0, -10)
+repeat_times = 2
+
+[node name="Sprite2D3" type="Sprite2D" parent="Parallax2D" unique_id=41720894]
+position = Vector2(0, 691)
+scale = Vector2(3.436565, 1.8976254)
+texture = ExtResource("6_ojupi")
+centered = false
+
+[node name="Sprite2D4" type="Sprite2D" parent="Parallax2D" unique_id=838420468]
+position = Vector2(0, 1113)
+scale = Vector2(3.436565, 1.8976254)
+texture = ExtResource("6_ojupi")
+centered = false
+flip_h = true
+flip_v = true
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=287094752]
+position = Vector2(-1, -1)
+script = ExtResource("1_1pmi0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=25214885]
+position = Vector2(981, 89)
+shape = SubResource("CircleShape2D_ost38")
+
+[node name="ColorRect" type="Sprite2D" parent="Player" unique_id=1306072140]
+position = Vector2(982, 88.00001)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_k5qxn")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1351498580]
+stream = ExtResource("10_ijapd")
+volume_db = 0.912
+autoplay = true

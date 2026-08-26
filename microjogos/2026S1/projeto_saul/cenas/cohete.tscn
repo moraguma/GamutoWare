@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://c27om8u673xto"]
+
+[ext_resource type="Script" uid="uid://cv60atc40to4h" path="res://microjogos/2026S1/projeto_saul/cenas/scripts/cohete.gd" id="1_fvxos"]
+[ext_resource type="Texture2D" uid="uid://ccwx63cersude" path="res://microjogos/2026S1/projeto_saul/recursos/imagens/fogo-1.png" id="2_besp0"]
+[ext_resource type="Texture2D" uid="uid://bslcyx1fqat26" path="res://microjogos/2026S1/projeto_saul/recursos/imagens/foguete-2.png" id="2_rb3pb"]
+[ext_resource type="AudioStream" uid="uid://o0uy0s4wfxbu" path="res://microjogos/2026S1/projeto_saul/recursos/sons/277213__thedweebman__8-bit-hit.wav" id="4_besp0"]
+
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ut87e"]
+atlas = ExtResource("2_besp0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6qon7"]
+atlas = ExtResource("2_besp0")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovj4j"]
+atlas = ExtResource("2_besp0")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpofn"]
+atlas = ExtResource("2_rb3pb")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4n3d"]
+atlas = ExtResource("2_rb3pb")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r1nir"]
+atlas = ExtResource("2_rb3pb")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vt1ff"]
+atlas = ExtResource("2_rb3pb")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrnqj"]
+atlas = ExtResource("2_rb3pb")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0o8gj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ut87e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6qon7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ovj4j")
+}],
+"loop": true,
+"name": &"fueguito",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpofn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4n3d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r1nir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vt1ff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lrnqj")
+}],
+"loop": false,
+"name": &"ignicion",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r1nir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vt1ff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lrnqj")
+}],
+"loop": true,
+"name": &"vuelo",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a55d8"]
+height = 60.0
+
+[node name="Cohete" type="PathFollow2D" unique_id=1870410137]
+loop = false
+script = ExtResource("1_fvxos")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=96325145]
+texture_filter = 1
+rotation = 1.5707964
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_0o8gj")
+animation = &"ignicion"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=777381043]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=318984521]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_a55d8")
+
+[node name="hit" type="AudioStreamPlayer2D" parent="." unique_id=1652322485]
+stream = ExtResource("4_besp0")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

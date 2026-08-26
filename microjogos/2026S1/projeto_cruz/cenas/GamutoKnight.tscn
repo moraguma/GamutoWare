@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dajt08c77afje"]
+
+[ext_resource type="Script" uid="uid://cobax3asc0fj5" path="res://microjogos/2026S1/projeto_cruz/cenas/scripts/GamutoKnight.gd" id="1_xdoox"]
+[ext_resource type="AudioStream" uid="uid://b0ls24lnempkg" path="res://microjogos/2026S1/projeto_cruz/recursos/sons/ataque.mp3" id="2_lwphy"]
+[ext_resource type="Texture2D" uid="uid://dgphbgqitdhkf" path="res://microjogos/2026S1/projeto_cruz/recursos/imagens/Sprite_Cavaleiro.png" id="2_xdoox"]
+[ext_resource type="AudioStream" uid="uid://bsq6odejfi0nv" path="res://microjogos/2026S1/projeto_cruz/recursos/sons/pulo.mp3" id="3_58ack"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5kprm"]
+size = Vector2(78, 265.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lwphy"]
+size = Vector2(100, 197.25)
+
+[node name="GamutoKnight" type="CharacterBody2D" unique_id=1083636365 groups=["Player"]]
+script = ExtResource("1_xdoox")
+
+[node name="sprite_abaixado" type="Sprite2D" parent="." unique_id=1658864606]
+visible = false
+position = Vector2(5, -116)
+rotation = -3.1415925
+scale = Vector2(0.72, -0.52)
+texture = ExtResource("2_xdoox")
+metadata/_edit_lock_ = true
+
+[node name="sprite_normal" type="Sprite2D" parent="." unique_id=1933053021]
+position = Vector2(5.9999995, -154)
+rotation = -3.1415925
+scale = Vector2(0.71999955, -0.7200006)
+texture = ExtResource("2_xdoox")
+
+[node name="hitbox_normal" type="CollisionShape2D" parent="." unique_id=1334820613]
+position = Vector2(0, -133.25)
+shape = SubResource("RectangleShape2D_5kprm")
+
+[node name="hitbox_abaixado" type="CollisionShape2D" parent="." unique_id=1946579252]
+visible = false
+position = Vector2(0, -98.375)
+shape = SubResource("RectangleShape2D_lwphy")
+
+[node name="SomAtaque" type="AudioStreamPlayer" parent="." unique_id=1777751121]
+stream = ExtResource("2_lwphy")
+
+[node name="SomPulo" type="AudioStreamPlayer" parent="." unique_id=258497055]
+stream = ExtResource("3_58ack")

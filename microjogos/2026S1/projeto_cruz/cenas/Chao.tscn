@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://tj4a3qta71if"]
+
+[ext_resource type="Texture2D" uid="uid://d1oagkdm4shny" path="res://microjogos/2026S1/projeto_cruz/recursos/imagens/Sprite_chão.png" id="1_y424q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dyxy3"]
+size = Vector2(3118, 63)
+
+[node name="Chao" type="Node2D" unique_id=1421735648]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1947941204]
+repeat_size = Vector2(1350, 0)
+autoscroll = Vector2(-300, 0)
+repeat_times = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=23966010]
+z_index = -1
+texture_repeat = 2
+position = Vector2(1145, 496)
+scale = Vector2(9, 9)
+texture = ExtResource("1_y424q")
+centered = false
+region_rect = Rect2(0, 0, 150, 100)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1952874738]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1200993247]
+position = Vector2(1559, 1029)
+shape = SubResource("RectangleShape2D_dyxy3")

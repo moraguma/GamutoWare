@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://6trid32v1xtw"]
+
+[ext_resource type="Texture2D" uid="uid://jewvnwwqut8l" path="res://microjogos/2026S1/projeto-lucas/recursos/imagens/ice_sparkles.png" id="1_7bh1v"]
+[ext_resource type="Script" uid="uid://bybards6xlqe1" path="res://microjogos/2026S1/projeto-lucas/cenas/scripts/estrela.gd" id="2_hwvuo"]
+
+
+[sub_resource type="Animation" id="Animation_yq08k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_drhj7"]
+resource_name = "pisca-pisca"
+length = 3.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.099999994, 2.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.7529412)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y1fil"]
+_data = {
+&"RESET": SubResource("Animation_yq08k"),
+&"pisca-pisca": SubResource("Animation_drhj7")
+}
+
+[node name="Estrela" type="Sprite2D" unique_id=2064070046]
+texture_filter = 1
+texture = ExtResource("1_7bh1v")
+hframes = 8
+vframes = 4
+script = ExtResource("2_hwvuo")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2076763331]
+libraries/ = SubResource("AnimationLibrary_y1fil")

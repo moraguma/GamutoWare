@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bq1arpwxo0qvw"]
+
+[ext_resource type="Texture2D" uid="uid://uoawqjdi880i" path="res://microjogos/2026S1/projeto_cruz/recursos/imagens/Sprite_fundo.png" id="1_gvb6d"]
+
+[node name="Fundo" type="Node2D" unique_id=539732057]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1700042368]
+repeat_size = Vector2(1000, 0)
+autoscroll = Vector2(-100, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=89774972]
+texture_repeat = 2
+texture = ExtResource("1_gvb6d")
+centered = false
+region_rect = Rect2(0, 0, 1001.44934, 576)

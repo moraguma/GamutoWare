@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://d0g1o0e2rnhx1"]
+
+[ext_resource type="Script" uid="uid://bgavgpjjldnsg" path="res://microjogos/2023S1/projeto-enzo-bertoloti/cenas/scripts/CharacterBody2D.gd" id="1_qc170"]
+[ext_resource type="Texture2D" uid="uid://c80aeiwc24s6a" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/player.png" id="2_5amh4"]
+[ext_resource type="AudioStream" uid="uid://cybxjnaru36rm" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/Sons/pulo.wav" id="3_4ulv1"]
+[ext_resource type="AudioStream" uid="uid://dy2dhshmjh5pp" path="res://microjogos/2023S1/projeto-enzo-bertoloti/recursos/Sons/SFX_Explosion_01.wav" id="4_cymne"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fdhyd"]
+size = Vector2(64, 54)
+
+[node name="Player" type="CharacterBody2D" unique_id=939303297]
+floor_constant_speed = true
+script = ExtResource("1_qc170")
+metadata/_edit_group_ = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1875512230]
+position = Vector2(8, -104)
+position_smoothing_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1769186730]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_fdhyd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=444573820]
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("2_5amh4")
+
+[node name="Pulo" type="AudioStreamPlayer" parent="." unique_id=1060022470]
+stream = ExtResource("3_4ulv1")
+
+[node name="Morte" type="AudioStreamPlayer" parent="." unique_id=1188298585]
+stream = ExtResource("4_cymne")

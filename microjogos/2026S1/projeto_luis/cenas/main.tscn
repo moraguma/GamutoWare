@@ -1,0 +1,250 @@
+[gd_scene format=3 uid="uid://cdhvl35umnn5n"]
+
+[ext_resource type="Script" uid="uid://dqmbh3ms1eie0" path="res://microjogos/2026S1/projeto_luis/cenas/scripts/main.gd" id="1_e7oaw"]
+[ext_resource type="Texture2D" uid="uid://c06ikxx8ik28w" path="res://microjogos/2026S1/projeto_luis/recursos/imagens/FundoPassaros1.png" id="2_e8ny7"]
+[ext_resource type="Script" uid="uid://bs3y5aupumo5o" path="res://microjogos/2026S1/projeto_luis/cenas/scripts/fundo.gd" id="2_r44ko"]
+[ext_resource type="FontFile" uid="uid://bgxvie8ana3ir" path="res://microjogos/2026S1/projeto_luis/recursos/fontes/The Wildeast.ttf" id="3_m06cb"]
+[ext_resource type="Script" uid="uid://q21jldxbtpyj" path="res://microjogos/2026S1/projeto_luis/cenas/scripts/camera.gd" id="3_n22cp"]
+[ext_resource type="Texture2D" uid="uid://ek3gsqhvs0x3" path="res://microjogos/2026S1/projeto_luis/recursos/imagens/FundoPassaros2png.png" id="3_r44ko"]
+[ext_resource type="Texture2D" uid="uid://b0uteb8qpbcw6" path="res://microjogos/2026S1/projeto_luis/recursos/imagens/Passaro1.png" id="5_e8ny7"]
+[ext_resource type="Texture2D" uid="uid://yxddr8l0sg4a" path="res://microjogos/2026S1/projeto_luis/recursos/imagens/grid_camera.svg" id="6_l2o4q"]
+[ext_resource type="Shader" uid="uid://dyj2jg463f32a" path="res://microjogos/2026S1/projeto_luis/recursos/blur.gdshader" id="7_e8ny7"]
+[ext_resource type="Script" uid="uid://cn3co3ac0jvsu" path="res://microjogos/2026S1/projeto_luis/cenas/scripts/slider.gd" id="7_l2o4q"]
+[ext_resource type="AudioStream" uid="uid://u3sm8uqsollt" path="res://microjogos/2026S1/projeto_luis/recursos/sons/camera.wav" id="10_q1f63"]
+[ext_resource type="AudioStream" uid="uid://b1bydj1ucevqp" path="res://microjogos/2026S1/projeto_luis/recursos/sons/passaros.wav" id="11_34tag"]
+
+[sub_resource type="Animation" id="Animation_r44ko"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cenário2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_q1f63"]
+resource_name = "fundo"
+length = 2.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cenário2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_34tag"]
+_data = {
+&"RESET": SubResource("Animation_r44ko"),
+&"fundo": SubResource("Animation_q1f63")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ht0mv"]
+radius = 159.05566
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_34tag"]
+shader = ExtResource("7_e8ny7")
+shader_parameter/blur_radius = 8
+shader_parameter/blur_scale = 6.9250003289375
+shader_parameter/darkness = 1.0000000475
+shader_parameter/fade_direction = 2
+shader_parameter/fade_cutoff = 1.0
+shader_parameter/fade_intensity = 1.00000004424012
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e7oaw"]
+size = Vector2(150, 115)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e8ny7"]
+size = Vector2(80, 17)
+
+[sub_resource type="Animation" id="Animation_ht0mv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Flash:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_e7oaw"]
+resource_name = "fade"
+length = 0.6333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Flash:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.5058824), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m06cb"]
+_data = {
+&"RESET": SubResource("Animation_ht0mv"),
+&"fade": SubResource("Animation_e7oaw")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m06cb"]
+size = Vector2(15, 50)
+
+[node name="Main" type="Node2D" unique_id=1597121372]
+texture_filter = 1
+script = ExtResource("1_e7oaw")
+
+[node name="Fundo" type="Node2D" parent="." unique_id=937481662]
+script = ExtResource("2_r44ko")
+
+[node name="Cenário1" type="Sprite2D" parent="Fundo" unique_id=1250824695]
+modulate = Color(1.0039686, 1.0039686, 1.0039686, 1)
+position = Vector2(959.9999, 540.00006)
+scale = Vector2(0.50000006, 0.5)
+texture = ExtResource("2_e8ny7")
+
+[node name="Cenário2" type="Sprite2D" parent="Fundo" unique_id=586892512]
+modulate = Color(1.0039686, 1.0039686, 1.0039686, 1)
+position = Vector2(959.9999, 540.00006)
+scale = Vector2(0.50000006, 0.5)
+texture = ExtResource("3_r44ko")
+
+[node name="Fundo" type="AnimationPlayer" parent="Fundo" unique_id=242812564]
+libraries/ = SubResource("AnimationLibrary_34tag")
+
+[node name="Comandos" type="Label" parent="Fundo" unique_id=1455113733]
+modulate = Color(0.9998334, 0.99999946, 0.8780745, 1)
+z_index = 20
+offset_left = 48.0
+offset_top = 32.0
+offset_right = 436.0
+offset_bottom = 197.0
+theme_override_fonts/font = ExtResource("3_m06cb")
+theme_override_font_sizes/font_size = 60
+text = "Mover [setas]  
+Tirar foto [espaço]"
+
+[node name="Guia" type="Node2D" parent="." unique_id=1808727145]
+top_level = true
+
+[node name="Sombra" type="Sprite2D" parent="Guia" unique_id=1841240774]
+position = Vector2(960.00006, 540.00006)
+scale = Vector2(0.49999997, 0.5)
+texture = ExtResource("5_e8ny7")
+
+[node name="Passaros" type="Node2D" parent="." unique_id=1109845739]
+scale = Vector2(0.15089104, 0.20503844)
+
+[node name="Passaro1" type="Area2D" parent="Passaros" unique_id=201661618]
+position = Vector2(2770.211, 1609.4542)
+metadata/_edit_group_ = true
+
+[node name="Passaro1" type="CollisionShape2D" parent="Passaros/Passaro1" unique_id=1361217925]
+position = Vector2(4.196167e-05, -1.5258789e-05)
+shape = SubResource("CircleShape2D_ht0mv")
+
+[node name="Passaro2" type="Area2D" parent="Passaros" unique_id=1245241170]
+position = Vector2(5162.666, 4428.438)
+metadata/_edit_group_ = true
+
+[node name="Passaro2" type="CollisionShape2D" parent="Passaros/Passaro2" unique_id=940138437]
+position = Vector2(-0.00045776367, -0.00032043457)
+shape = SubResource("CircleShape2D_ht0mv")
+
+[node name="Passaro3" type="Area2D" parent="Passaros" unique_id=1807470534]
+position = Vector2(7581.63, 1068.0924)
+metadata/_edit_group_ = true
+
+[node name="Passaro3" type="CollisionShape2D" parent="Passaros/Passaro3" unique_id=1322485318]
+shape = SubResource("CircleShape2D_ht0mv")
+
+[node name="Passaro4" type="Area2D" parent="Passaros" unique_id=364953123]
+position = Vector2(9450.528, 4457.7007)
+rotation = -0.0038082893
+metadata/_edit_group_ = true
+
+[node name="Passaro4" type="CollisionShape2D" parent="Passaros/Passaro4" unique_id=1621614079]
+shape = SubResource("CircleShape2D_ht0mv")
+
+[node name="Passaro5" type="Area2D" parent="Passaros" unique_id=1216449181]
+position = Vector2(10901.906, 960.7954)
+metadata/_edit_group_ = true
+
+[node name="Passaro5" type="CollisionShape2D" parent="Passaros/Passaro5" unique_id=82202790]
+shape = SubResource("CircleShape2D_ht0mv")
+
+[node name="Camera" type="Area2D" parent="." unique_id=1456411817]
+script = ExtResource("3_n22cp")
+
+[node name="Blur" type="ColorRect" parent="Camera" unique_id=268505669]
+material = SubResource("ShaderMaterial_34tag")
+offset_left = -209.0
+offset_top = -122.99999
+offset_right = -94.519135
+offset_bottom = -47.31694
+scale = Vector2(3.66, 3.66)
+
+[node name="Hitbox" type="CollisionShape2D" parent="Camera" unique_id=252082103]
+position = Vector2(0, 15.5)
+shape = SubResource("RectangleShape2D_e7oaw")
+
+[node name="Hitarea" type="CollisionShape2D" parent="Camera" unique_id=1102457591]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(0, -148.5)
+shape = SubResource("RectangleShape2D_e8ny7")
+
+[node name="Grid" type="Sprite2D" parent="Camera" unique_id=500028777]
+position = Vector2(7.6293945e-06, 1.9073486e-06)
+texture = ExtResource("6_l2o4q")
+
+[node name="Fade" type="AnimationPlayer" parent="Camera" unique_id=1938551132]
+libraries/ = SubResource("AnimationLibrary_m06cb")
+
+[node name="Flash" type="ColorRect" parent="Camera" unique_id=2076576455]
+offset_left = -209.0
+offset_top = -123.0
+offset_right = 210.0
+offset_bottom = 154.0
+color = Color(1, 1, 1, 0)
+
+[node name="Slider" type="Area2D" parent="Camera" unique_id=1112283984]
+script = ExtResource("7_l2o4q")
+metadata/_edit_group_ = true
+
+[node name="Hit_slider" type="CollisionShape2D" parent="Camera/Slider" unique_id=55671718]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_m06cb")
+
+[node name="Seta" type="ColorRect" parent="Camera/Slider" unique_id=1726714805]
+offset_left = -8.0
+offset_top = -32.0
+offset_right = 8.0
+
+[node name="SomCamera" type="AudioStreamPlayer" parent="." unique_id=858568680]
+stream = ExtResource("10_q1f63")
+volume_db = 24.0
+
+[node name="SomPassaros" type="AudioStreamPlayer" parent="." unique_id=183993759]
+stream = ExtResource("11_34tag")
+autoplay = true

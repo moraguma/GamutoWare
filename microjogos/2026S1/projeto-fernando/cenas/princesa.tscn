@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://7fme7dae7svc"]
+
+[ext_resource type="Script" uid="uid://bbslhxw62cr47" path="res://microjogos/2026S1/projeto-fernando/scripts/princesa.gd" id="1_ir4ld"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xkw5n"]
+load_path = "res://.godot/imported/SaraFullSheet.png-acae9eb36e1df1439036c36acfb06fcc.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v88r0"]
+atlas = SubResource("CompressedTexture2D_xkw5n")
+region = Rect2(256, 1280, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8abg"]
+atlas = SubResource("CompressedTexture2D_xkw5n")
+region = Rect2(192, 1280, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4780t"]
+atlas = SubResource("CompressedTexture2D_xkw5n")
+region = Rect2(128, 1280, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v306t"]
+atlas = SubResource("CompressedTexture2D_xkw5n")
+region = Rect2(64, 1280, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w85kc"]
+atlas = SubResource("CompressedTexture2D_xkw5n")
+region = Rect2(0, 1280, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1etpa"]
+atlas = SubResource("CompressedTexture2D_xkw5n")
+region = Rect2(256, 1280, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_20k8o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v88r0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8abg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4780t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v306t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w85kc")
+}],
+"loop": 0,
+"name": &"levantando",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1etpa")
+}],
+"loop": 2,
+"name": &"parada",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p81kg"]
+size = Vector2(269.5, 274.5)
+
+[node name="Princesa" type="AnimatedSprite2D" unique_id=720970978]
+scale = Vector2(9.671874, 7.3476567)
+sprite_frames = SubResource("SpriteFrames_20k8o")
+animation = &"parada"
+autoplay = "parada"
+script = ExtResource("1_ir4ld")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1469724797]
+position = Vector2(-95.74153, -89.82456)
+scale = Vector2(0.10339258, 0.1360978)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1206405280]
+position = Vector2(938.25, 755.25)
+shape = SubResource("RectangleShape2D_p81kg")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

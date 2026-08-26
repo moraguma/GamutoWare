@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://bnvrhxe5qgcom"]
+
+[ext_resource type="Script" uid="uid://bprec2y7wsddd" path="res://microjogos/2023S1/projeto-repasch/cenas/scripts/main.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://cy1witbvivusi" path="res://microjogos/2023S1/projeto-repasch/recursos/ShopBG_1920x1080px.png" id="2_y44f2"]
+[ext_resource type="PackedScene" uid="uid://bvfmhfa5w11ii" path="res://microjogos/2023S1/projeto-repasch/cenas/character.tscn" id="3_y44f2"]
+[ext_resource type="AudioStream" uid="uid://biqpr1y5bdjhc" path="res://microjogos/2023S1/projeto-repasch/recursos/audio/lofi_music_library-coffee-lofi-chill-lofi-ambient-458901.wav" id="5_s1mlw"]
+[ext_resource type="FontFile" uid="uid://cvvv4ta4o2y3l" path="res://principal/recursos/fonts/Delius_Unicase/DeliusUnicase-Bold.ttf" id="6_7c7dm"]
+[ext_resource type="Script" uid="uid://1rv5uobtiapg" path="res://microjogos/2023S1/projeto-repasch/cenas/scripts/spawn.gd" id="7_8y1mx"]
+[ext_resource type="Texture2D" uid="uid://d35sdhkcqnewf" path="res://microjogos/2023S1/projeto-repasch/recursos/space_bar.png" id="7_vjo6a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p2lsa"]
+size = Vector2(20, 1080)
+
+[node name="Main" type="Node2D" unique_id=990679118]
+rotation = 0.00103196
+script = ExtResource("1")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1851340317]
+show_behind_parent = true
+z_index = -5
+texture = ExtResource("2_y44f2")
+centered = false
+
+[node name="CharacterBody2D" parent="." unique_id=984178472 instance=ExtResource("3_y44f2")]
+position = Vector2(190.911, 882.803)
+
+[node name="LeftWall" type="StaticBody2D" parent="." unique_id=507718526]
+position = Vector2(0, 540)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall" unique_id=1631377571]
+shape = SubResource("RectangleShape2D_p2lsa")
+
+[node name="RightWall" type="StaticBody2D" parent="." unique_id=854025839]
+position = Vector2(1920, 540)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall" unique_id=1857917032]
+shape = SubResource("RectangleShape2D_p2lsa")
+
+[node name="Spawner" type="Node2D" parent="." unique_id=501342257]
+script = ExtResource("7_8y1mx")
+
+[node name="Timer" type="Timer" parent="Spawner" unique_id=13913766]
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1026714262]
+stream = ExtResource("5_s1mlw")
+autoplay = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1293088039]
+offset_left = 128.01541
+offset_top = 14.867901
+offset_right = 325.3329
+offset_bottom = 71.64555
+theme_override_colors/default_color = Color(0.2509804, 0.13333334, 0.019607844, 1)
+theme_override_fonts/normal_font = ExtResource("6_7c7dm")
+theme_override_font_sizes/normal_font_size = 37
+bbcode_enabled = true
+text = "[wave amp=30 freq=10] Dash [/wave]"
+
+[node name="SpaceBar" type="Sprite2D" parent="." unique_id=1862771071]
+position = Vector2(79.044334, 42.91846)
+scale = Vector2(0.44591376, 0.44591376)
+texture = ExtResource("7_vjo6a")
+
+[connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_timer_timeout"]

@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://cxgkm31jwmyw3"]
+
+[ext_resource type="Script" uid="uid://cx2jehmbf4ux4" path="res://microjogos/2024S1/quimica-quiz/cenas/scripts/player.gd" id="1_v25qy"]
+[ext_resource type="Texture2D" uid="uid://0lg272wtt7c5" path="res://microjogos/2024S1/quimica-quiz/recursos/assets/3 - Big Red/Idle_(32 x 32).png" id="2_gluh7"]
+[ext_resource type="Texture2D" uid="uid://beyddrkm5nfx7" path="res://microjogos/2024S1/quimica-quiz/recursos/assets/3 - Big Red/Jumping_&_Falling_(32 x 32).png" id="3_kf4g5"]
+[ext_resource type="Texture2D" uid="uid://8q4ijknlh81w" path="res://microjogos/2024S1/quimica-quiz/recursos/assets/3 - Big Red/Running_(32 x 32).png" id="4_2hpsd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4laaw"]
+atlas = ExtResource("2_gluh7")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_esg6v"]
+atlas = ExtResource("2_gluh7")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikssd"]
+atlas = ExtResource("2_gluh7")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4t5fe"]
+atlas = ExtResource("2_gluh7")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k1p8o"]
+atlas = ExtResource("2_gluh7")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3p3l"]
+atlas = ExtResource("2_gluh7")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b62k0"]
+atlas = ExtResource("3_kf4g5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iptf5"]
+atlas = ExtResource("3_kf4g5")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_myw1f"]
+atlas = ExtResource("4_2hpsd")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qldr6"]
+atlas = ExtResource("4_2hpsd")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_edanh"]
+atlas = ExtResource("4_2hpsd")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n6q6x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4laaw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_esg6v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikssd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4t5fe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k1p8o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w3p3l")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b62k0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iptf5")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_myw1f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qldr6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_edanh")
+}],
+"loop": true,
+"name": &"run",
+"speed": 9.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5fgry"]
+radius = 7.0
+
+[node name="player" type="CharacterBody2D" unique_id=1271920629]
+script = ExtResource("1_v25qy")
+metadata/_edit_group_ = true
+
+[node name="anim" type="AnimatedSprite2D" parent="." unique_id=2077843556]
+texture_filter = 3
+position = Vector2(0, -6)
+sprite_frames = SubResource("SpriteFrames_n6q6x")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="collision" type="CollisionShape2D" parent="." unique_id=677971449]
+shape = SubResource("CircleShape2D_5fgry")

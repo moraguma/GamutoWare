@@ -15,26 +15,29 @@
 [ext_resource type="Texture2D" uid="uid://bp5ex36ka7p1w" path="res://microjogos/godotware/Simon/whitebg.png" id="13"]
 
 [node name="Main" type="Node2D" unique_id=1645532463]
-position = Vector2(0, -10)
+scale = Vector2(3, 3)
 script = ExtResource("1")
 
 [node name="Timer" type="Timer" parent="." unique_id=1281780250]
 
 [node name="BG" type="Sprite2D" parent="." unique_id=1326970254]
+scale = Vector2(1, 0.9)
 texture = ExtResource("13")
 centered = false
 
 [node name="Green" type="Sprite2D" parent="." unique_id=575592495]
-position = Vector2(0, -10)
+scale = Vector2(1, 0.9)
 texture = ExtResource("2")
 centered = false
 
 [node name="Arrow" type="Sprite2D" parent="Green" unique_id=1189300851]
 position = Vector2(160, 100)
+scale = Vector2(1, 1.1)
 texture = ExtResource("10")
 
 [node name="Red" type="Sprite2D" parent="." unique_id=1871188293]
-position = Vector2(320, -10)
+position = Vector2(320, 0)
+scale = Vector2(1, 0.9)
 texture = ExtResource("12")
 centered = false
 
@@ -44,23 +47,26 @@ rotation = 1.5708
 texture = ExtResource("10")
 
 [node name="Blue" type="Sprite2D" parent="." unique_id=1979523817]
-position = Vector2(0, 190)
+position = Vector2(0, 180)
+scale = Vector2(1, 0.9)
 texture = ExtResource("7")
 centered = false
 
 [node name="Arrow" type="Sprite2D" parent="Blue" unique_id=2048380756]
-position = Vector2(160, 80)
+position = Vector2(160, 100)
 rotation = 4.71239
 texture = ExtResource("10")
 
 [node name="Yellow" type="Sprite2D" parent="." unique_id=2122681960]
-position = Vector2(320, 190)
+position = Vector2(320, 180)
+scale = Vector2(1, 0.9)
 texture = ExtResource("9")
 centered = false
 
 [node name="Arrow" type="Sprite2D" parent="Yellow" unique_id=2129347198]
-position = Vector2(160, 80)
+position = Vector2(160, 100)
 rotation = 3.14159
+scale = Vector2(1, 1.1)
 texture = ExtResource("10")
 
 [node name="GreenSound" type="AudioStreamPlayer" parent="." unique_id=1507420428]
