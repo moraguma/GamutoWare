@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://dq8rwyp03wwt7"]
+
+[ext_resource type="Texture2D" uid="uid://s4edvl45vfab" path="res://microjogos/2026S1/projeto-fernando/recursos/imagens/pumpking.png" id="1_8h5c6"]
+[ext_resource type="Script" uid="uid://daedq6nmfis0a" path="res://microjogos/2026S1/projeto-fernando/scripts/abobora.gd" id="2_kns6j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4ray"]
+atlas = ExtResource("1_8h5c6")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nsriw"]
+atlas = ExtResource("1_8h5c6")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5j1hl"]
+atlas = ExtResource("1_8h5c6")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4s5y"]
+atlas = ExtResource("1_8h5c6")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_essho"]
+atlas = ExtResource("1_8h5c6")
+region = Rect2(256, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0uqlv"]
+atlas = ExtResource("1_8h5c6")
+region = Rect2(320, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_owqo2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v4ray")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nsriw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5j1hl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4s5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_essho")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0uqlv")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6shl3"]
+size = Vector2(32.368935, 38.818283)
+
+[node name="Abobora" type="AnimatedSprite2D" unique_id=1644468800]
+texture_filter = 1
+scale = Vector2(7.242187, 6.835937)
+sprite_frames = SubResource("SpriteFrames_owqo2")
+frame_progress = 0.78119457
+script = ExtResource("2_kns6j")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1598021617]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=24122492]
+position = Vector2(-0.27616262, -0.585145)
+shape = SubResource("RectangleShape2D_6shl3")
